@@ -23,7 +23,7 @@
   * https://gitcode.com/BoostKit/tensorflow
 * [TensorFlow serving](https://github.com/tensorflow/serving)扩展
   * https://gitcode.com/BoostKit/tensorflow-serving
-* [TVM扩展](https://github.com/apache/tvm)扩展
+* [TVM](https://github.com/apache/tvm)扩展
   * https://gitee.com/openeuler/sra_tvm_adapter
 * [oneDNN](https://github.com/uxlfoundation/oneDNN)扩展
   * https://gitee.com/openeuler/kail_dnn_adapter
