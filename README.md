@@ -1,39 +1,39 @@
-# SRA
+# BoostSRA鲲鹏搜推广使能套件
+鲲鹏BoostKit搜推广使能套件旨在为互联网搜索、推荐、广告业务场景提供基于鲲鹏平台的应用层加速能力，组件涵盖召回场景核心检索算法、排序场景模型推理软件框架优化。
 
-#### 介绍
-{**以下是 Gitee 平台说明，您可以替换此简介**
-Gitee 是 OSCHINA 推出的基于 Git 的代码托管平台（同时支持 SVN）。专为开发者提供稳定、高效、安全的云端软件开发协作平台
-无论是个人、团队、或是企业，都能够用 Gitee 实现代码托管、项目管理、协作开发。企业项目请看 [https://gitee.com/enterprises](https://gitee.com/enterprises)}
+## 社区
+鲲鹏社区搜推广首页
+* https://kunpeng-beta.rnd.huawei.com/developer/boostkit/sra
+## 召回算法
+* KBest召回算法[待开源]
+* KScaNN召回算法[待开源]
+* KRL检索算子库[待开源]
+* KVecTurbo召回向量检索算法库加速组件
+  * https://gitcode.com/BoostKit/KVecTurbo
 
-#### 软件架构
-软件架构说明
+## 召回算法扩展
+*  Pfordelta扩展
+   * https://gitcode.com/BoostKit/KNewPfordelta
 
+## 排序推理
+* KDNN算子库[待开源]
+  * https://gitcode.com/BoostKit/DNN
 
-#### 安装教程
+## 排序推理扩展 
+* [TensorFlow](https://github.com/tensorflow/tensorflow)扩展
+  * https://gitcode.com/BoostKit/tensorflow
+* [TensorFlow serving](https://github.com/tensorflow/serving)扩展
+  * https://gitcode.com/BoostKit/tensorflow-serving
+* [TVM扩展](https://github.com/apache/tvm)扩展
+  * https://gitee.com/openeuler/sra_tvm_adapter
+* [oneDNN](https://github.com/uxlfoundation/oneDNN)扩展
+  * https://gitee.com/openeuler/kail_dnn_adapter
 
-1.  xxxx
-2.  xxxx
-3.  xxxx
+## 工具
+### Benchmark
+* 搜推模型推理性能Benchmark
+  * https://gitee.com/openeuler/sra_benchmark
 
-#### 使用说明
-
-1.  xxxx
-2.  xxxx
-3.  xxxx
-
-#### 参与贡献
-
-1.  Fork 本仓库
-2.  新建 Feat_xxx 分支
-3.  提交代码
-4.  新建 Pull Request
-
-
-#### 特技
-
-1.  使用 Readme\_XXX.md 来支持不同的语言，例如 Readme\_en.md, Readme\_zh.md
-2.  Gitee 官方博客 [blog.gitee.com](https://blog.gitee.com)
-3.  你可以 [https://gitee.com/explore](https://gitee.com/explore) 这个地址来了解 Gitee 上的优秀开源项目
-4.  [GVP](https://gitee.com/gvp) 全称是 Gitee 最有价值开源项目，是综合评定出的优秀开源项目
-5.  Gitee 官方提供的使用手册 [https://gitee.com/help](https://gitee.com/help)
-6.  Gitee 封面人物是一档用来展示 Gitee 会员风采的栏目 [https://gitee.com/gitee-stars/](https://gitee.com/gitee-stars/)
+## 文档
+* 鲲鹏BoostKit搜推广文档
+  * https://www.hikunpeng.com/document/detail/zh/SRA/overview/kunpengsra.html
