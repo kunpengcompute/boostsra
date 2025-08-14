@@ -17,7 +17,6 @@
 
 ## 排序推理
 * KDNN算子库[待开源]
-  * https://gitcode.com/BoostKit/DNN
 
 ## 排序推理扩展 
 * [TensorFlow](https://github.com/tensorflow/tensorflow)扩展
