@@ -1,9 +1,11 @@
 # BoostSRA鲲鹏搜推广使能套件
 鲲鹏BoostKit搜推广使能套件旨在为互联网搜索、推荐、广告业务场景提供基于鲲鹏平台的应用层加速能力，组件涵盖召回场景核心检索算法、排序场景模型推理软件框架优化。
+## 架构图
+![image.png](https://raw.gitcode.com/user-images/assets/7311696/0c8234a0-c9ff-4d1a-9c79-42ce9488cd09/image.png 'image.png')
 
 ## 社区
 * 鲲鹏社区搜推广首页
-  * https://kunpeng-beta.rnd.huawei.com/developer/boostkit/sra
+  * https://www.hikunpeng.com/developer/boostkit/sra
 ## 召回算法
 * KBest召回算法
   * Kunpeng Blazing-fast embedding similarity search thruster，是鲲鹏自研的高性能图检索算法，专为大规模嵌入相似性搜索场景设计。
@@ -51,3 +53,9 @@
 ## 文档
 * 鲲鹏BoostKit搜推广使能套件特性列表
   * https://www.hikunpeng.com/document/detail/zh/SRA/overview/kunpengsra.html
+
+## 讨论
+如果发现问题，请接入链接进行讨论：https://gitcode.com/BoostKit/BoostSRA/discussions
+
+## 许可协议
+通过下载并使用此源码及其附带的软件，您即同意遵守软件许可协议中的条款和条件。
