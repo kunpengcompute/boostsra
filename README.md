@@ -2,8 +2,8 @@
 鲲鹏BoostKit搜推广使能套件旨在为互联网搜索、推荐、广告业务场景提供基于鲲鹏平台的应用层加速能力，组件涵盖召回场景核心检索算法、排序场景模型推理软件框架优化。
 
 ## 社区
-鲲鹏社区搜推广首页
-* https://kunpeng-beta.rnd.huawei.com/developer/boostkit/sra
+* 鲲鹏社区搜推广首页
+  * https://kunpeng-beta.rnd.huawei.com/developer/boostkit/sra
 ## 召回算法
 * KBest召回算法
   * Kunpeng Blazing-fast embedding similarity search thruster，是鲲鹏自研的高性能图检索算法，专为大规模嵌入相似性搜索场景设计。
@@ -20,7 +20,7 @@
 
 ## 召回算法扩展
 *  [Pfordelta](https://github.com/diegocaro/compression)扩展
-  * 基于鲲鹏SIMD指令集的召回场景倒排索引PForDelta解压缩加速优化。
+   * 基于鲲鹏SIMD指令集的召回场景倒排索引PForDelta解压缩加速优化。
    * https://gitcode.com/BoostKit/knewpfordelta
 
 ## 排序推理
@@ -29,16 +29,16 @@
   * [待开源]
 
 ## 排序推理扩展 
-* [TensorFlow](https://github.com/tensorflow/tensorflow)扩展
+* [TensorFlow](https://github.com/tensorflow/tensorflow) 扩展
   * TensorFlow框架鲲鹏亲和优化，包含TF原生算子优化等特性。
   * https://gitcode.com/BoostKit/tensorflow
-* [TensorFlow serving](https://github.com/tensorflow/serving)扩展
+* [TensorFlow serving](https://github.com/tensorflow/serving) 扩展
   * TensorFlow serving框架鲲鹏亲和优化，包含线程调度优化等特性。
   * https://gitcode.com/BoostKit/tensorflow-serving
-* [TVM](https://github.com/apache/tvm)扩展
+* [TVM](https://github.com/apache/tvm) 扩展
   * TVM框架鲲鹏亲和优化，包含softmax算子优化等特性。
   * https://gitee.com/openeuler/sra_tvm_adapter
-* [oneDNN](https://github.com/uxlfoundation/oneDNN)扩展
+* [oneDNN](https://github.com/uxlfoundation/oneDNN) 扩展
   * KDNN算子库通过插件化形式对接开源oneDNN库提供完整能力
   * https://gitee.com/openeuler/kail_dnn_adapter
 
