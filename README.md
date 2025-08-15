@@ -1,7 +1,7 @@
 # BoostSRA鲲鹏搜推广使能套件
 鲲鹏BoostKit搜推广使能套件旨在为互联网搜索、推荐、广告业务场景提供基于鲲鹏平台的应用层加速能力，组件涵盖召回场景核心检索算法、排序场景模型推理软件框架优化。
 ## 架构图
-![image.png](https://raw.gitcode.com/user-images/assets/7311696/0c8234a0-c9ff-4d1a-9c79-42ce9488cd09/image.png 'image.png')
+![image.png](https://raw.gitcode.com/user-images/assets/7311696/d58030cc-4e12-4ffc-b802-70a75114db65/image.png 'image.png')
 
 ## 社区
 * 鲲鹏社区搜推广首页
