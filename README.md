@@ -18,7 +18,7 @@
   * [待开源]
 * KVecTurbo召回向量检索加速组件
   * KVecTurbo是鲲鹏自研的向量检索加速组件，可对接openGauss向量数据库使用。KVecTurbo通过将高维向量量化压缩，快速获取query的近邻，同时使用SIMD指令集加速距离计算，用于多维向量最近邻搜索。
-  * https://gitcode.com/BoostKit/kvecturbo
+  * https://gitcode.com/boostkit/kvecturbo
 
 ## 召回算法扩展
 *  [Pfordelta](https://github.com/diegocaro/compression)扩展
