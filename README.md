@@ -23,7 +23,7 @@
 ## 召回算法扩展
 *  [Pfordelta](https://github.com/diegocaro/compression)扩展
    * 基于鲲鹏SIMD指令集的召回场景倒排索引PForDelta解压缩加速优化。
-   * https://gitcode.com/BoostKit/knewpfordelta
+   * https://gitcode.com/boostkit/knewpfordelta
 
 ## 排序推理
 * KDNN算子库
@@ -33,10 +33,10 @@
 ## 排序推理扩展 
 * [TensorFlow](https://github.com/tensorflow/tensorflow) 扩展
   * TensorFlow框架鲲鹏亲和优化，包含TF原生算子优化等特性。
-  * https://gitcode.com/BoostKit/tensorflow
+  * https://gitcode.com/boostkit/tensorflow
 * [TensorFlow serving](https://github.com/tensorflow/serving) 扩展
   * TensorFlow serving框架鲲鹏亲和优化，包含线程调度优化等特性。
-  * https://gitcode.com/BoostKit/tensorflow-serving
+  * https://gitcode.com/boostkit/tensorflow-serving
 * [TVM](https://github.com/apache/tvm) 扩展
   * TVM框架鲲鹏亲和优化，包含softmax算子优化等特性。
   * https://gitee.com/openeuler/sra_tvm_adapter
@@ -47,7 +47,7 @@
 ## 工具
 ### Benchmark
 * 搜推模型推理性能Benchmark
-  * 包含DFLRM、WideDeep等多个模型的排序推理性能Benchmark
+  * 包含DLRM、Wide & Deep等多个模型的排序推理性能Benchmark
   * https://gitee.com/openeuler/sra_benchmark
 
 ## 文档
@@ -55,7 +55,7 @@
   * https://www.hikunpeng.com/document/detail/zh/SRA/overview/kunpengsra.html
 
 ## 讨论
-如果发现问题，请接入链接进行讨论：https://gitcode.com/BoostKit/BoostSRA/discussions
+如果发现问题，请进入[讨论](https://gitcode.com/BoostKit/BoostSRA/discussions)与我们联系。
 
 ## 许可协议
-通过下载并使用此源码及其附带的软件，您即同意遵守软件许可协议中的条款和条件。
+使用本领域源码及其附带软件，即视为您已阅读、理解并同意相关软件许可协议条款与条件的约束。
