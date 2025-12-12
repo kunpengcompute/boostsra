@@ -29,6 +29,9 @@
 * KDNN算子库
   * Kunpeng Deep Neural Network Library，鲲鹏深度神经网络算子库，结合鲲鹏处理器微架构特性，通过向量化、汇编、算法优化等手段，提升DNN核心算子性能。
   * [待开源]
+* ANNC编译器
+  * ANNC（Accelerated Neural Network Compiler）是专注于加速神经网络计算的编译器，聚焦于通过计算图优化，高性能融合算子生成和对接技术以及高效代码生成和优化能力，加速推荐和大模型的推理性能，支持主流开源推理框架接入。
+  * https://gitee.com/src-openeuler/ANNC
 
 ## 排序推理扩展 
 * [TensorFlow](https://github.com/tensorflow/tensorflow) 扩展
