@@ -25,11 +25,11 @@
    * 基于鲲鹏SIMD指令集的召回场景倒排索引PForDelta解压缩加速优化。
    * https://gitcode.com/boostkit/knewpfordelta
 *  [hnswlib](https://github.com/nmslib/hnswlib)扩展
-  * hnswlib召回算法鲲鹏亲和优化，包含通过向量化技术实现FP16高效支持，应用了预取与指令重排等优化策略。
-  * https://gitcode.com/boostkit/hnswlib
+   * hnswlib召回算法鲲鹏亲和优化，包含通过向量化技术实现FP16高效支持，应用了预取与指令重排等优化策略。
+   * https://gitcode.com/boostkit/hnswlib
 *  [Faiss](https://github.com/facebookresearch/faiss/releases/tag/v1.8.0)扩展
-  * Faiss检索引擎鲲鹏亲和优化，包含向量化、维度交织查表累加及向量过滤压缩等关键技术。
-  * https://gitcode.com/boostkit/faiss
+   * Faiss检索引擎鲲鹏亲和优化，包含向量化、维度交织查表累加及向量过滤压缩等关键技术。
+   * https://gitcode.com/boostkit/faiss
 
 ## 排序推理
 * KDNN算子库
