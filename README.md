@@ -19,17 +19,17 @@
 * KVecTurbo召回向量检索加速组件
   * KVecTurbo是鲲鹏自研的向量检索加速组件，可对接openGauss向量数据库使用。KVecTurbo通过将高维向量量化压缩，快速获取query的近邻，同时使用SIMD指令集加速距离计算，用于多维向量最近邻搜索。
   * https://gitcode.com/boostkit/kvecturbo
-* hnswlib召回算法
-  * hnswlib是基于Hierarchical Navigable Small World（分层可导航小世界）图的高效检索算法。华为在开源hnswlib算法库基础上，面向ARM架构进行了深度优化，优化点包括：通过向量化技术实现FP16高效支持，应用了预取与指令重排等优化策略。
-  * https://gitcode.com/boostkit/hnswlib
-* Faiss召回算法引擎
-  * 基于开源Faiss算法库，通过向量化、维度交织查表累加及向量过滤压缩等关键技术，对IVFFlat、IVFPQ、HNSW、PQFS及IVFPQFS等多种索引算法进行了深度优化，显著提升了其在相似性搜索与聚类方面的性能与效率。
-  * https://gitcode.com/boostkit/faiss
 
 ## 召回算法扩展
 *  [Pfordelta](https://github.com/diegocaro/compression)扩展
    * 基于鲲鹏SIMD指令集的召回场景倒排索引PForDelta解压缩加速优化。
    * https://gitcode.com/boostkit/knewpfordelta
+*  [hnswlib](https://github.com/nmslib/hnswlib)扩展
+  * hnswlib召回算法鲲鹏亲和优化，包含通过向量化技术实现FP16高效支持，应用了预取与指令重排等优化策略。
+  * https://gitcode.com/boostkit/hnswlib
+*  [Faiss](https://github.com/facebookresearch/faiss/releases/tag/v1.8.0)扩展
+  * Faiss检索引擎鲲鹏亲和优化，包含向量化、维度交织查表累加及向量过滤压缩等关键技术。
+  * https://gitcode.com/boostkit/faiss
 
 ## 排序推理
 * KDNN算子库
