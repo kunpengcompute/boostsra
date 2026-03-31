@@ -30,12 +30,12 @@
 *  [Faiss](https://github.com/facebookresearch/faiss/releases/tag/v1.8.0)扩展
    * Faiss检索引擎鲲鹏亲和优化，包含向量化、维度交织查表累加及向量过滤压缩等关键技术。
    * https://gitcode.com/boostkit/faiss
-*  [RaBitQ](https://gitcode.com/boostkit/rabitq)扩展
+*  [RaBitQ](https://github.com/gaoj0017/RaBitQ)扩展
    * RaBitQ算法扩展至ARM64（AArch64）架构，引入FP16精度优化、NEON SIMD向量化、汇编级LUT加速、SOAR溢出向量分配、ML自适应nprobe等多项性能优化。
    * https://gitcode.com/boostkit/rabitq
 
 ## 在线推理扩展
-*  [Embeddinglookup](https://gitcode.com/boostkit/monolith)扩展
+*  [Embeddinglookup](https://github.com/bytedance/monolith)扩展
    * 通过编译选项调优、自旋锁优化、内存对齐优化及 ARM SIMD 向量化改造等关键技术，降低实时推荐系统核心模块查表延迟。
    * https://gitcode.com/boostkit/monolith
 
@@ -60,7 +60,7 @@
 * [oneDNN](https://github.com/uxlfoundation/oneDNN) 扩展
   * KDNN算子库通过插件化形式对接开源oneDNN库提供完整能力。
   * https://gitee.com/openeuler/kail_dnn_adapter
-* [TensorRT-LLM](https://gitcode.com/boostkit/tensorrt-llm) 扩展
+* [TensorRT-LLM](https://github.com/NVIDIA/TensorRT-LLM) 扩展
   * 包含算子优化、访存优化、参数配置等特性。
   * https://gitcode.com/boostkit/tensorrt-llm
 

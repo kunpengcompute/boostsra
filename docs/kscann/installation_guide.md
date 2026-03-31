@@ -73,7 +73,7 @@ KScaNN依赖基于鲲鹏优化的开源ScaNN以提供完整的功能。因此安
 
     ```bash
     mkdir /path/to/kscann-build && cd /path/to/kscann-build
-    git clone --branch v2.2.0 --single-branch https://atomgit.com/openeuler/sra_scann_adapter.git
+    git clone --branch v2.2.1 --single-branch https://atomgit.com/openeuler/sra_scann_adapter.git
     ```
 
 2. 获取google-research的开源代码，其中包含ScaNN v1.2.10代码。假设代码存放于“/path/to/kscann-build”。
