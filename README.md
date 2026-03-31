@@ -7,16 +7,16 @@
 * 鲲鹏社区搜推广首页
   * https://www.hikunpeng.com/developer/boostkit/sra
 ## 召回算法
-* KBest召回算法
+* [KBest](./docs/kbest/README.md)召回算法
   * Kunpeng Blazing-fast embedding similarity search thruster，是鲲鹏自研的高性能图检索算法，专为大规模嵌入相似性搜索场景设计。
   * [待开源]
-* KScaNN召回算法
+* [KScaNN](./docs/kscann/README.md)召回算法
   * Kunpeng Scalable Nearest Neighbors，鲲鹏向量检索算法，基于倒排索引，结合鲲鹏架构深度优化索引布局和算法流程，充分挖掘芯片潜力形成的向量检索算法。
   * [待开源]
-* KRL检索算子库
+* [KRL](./docs/krl/README.md)检索算子库
   * Kunpeng Retrieval Library，鲲鹏检索算子库，基于鲲鹏平台优化的用于加速向量检索的算子库，KRL可通过替换算子的形式对faiss原生的HNSW、PQFS、IVFPQ和IVFPQFS等算法进行加速。
   * [待开源]
-* KVecTurbo召回向量检索加速组件
+* [KVecTurbo](https://gitcode.com/boostkit/kvecturbo)召回向量检索加速组件
   * KVecTurbo是鲲鹏自研的向量检索加速组件，可对接openGauss向量数据库使用。KVecTurbo通过将高维向量量化压缩，快速获取query的近邻，同时使用SIMD指令集加速距离计算，用于多维向量最近邻搜索。
   * https://gitcode.com/boostkit/kvecturbo
 
@@ -30,12 +30,12 @@
 *  [Faiss](https://github.com/facebookresearch/faiss/releases/tag/v1.8.0)扩展
    * Faiss检索引擎鲲鹏亲和优化，包含向量化、维度交织查表累加及向量过滤压缩等关键技术。
    * https://gitcode.com/boostkit/faiss
-*  [RaBitQ](https://gitcode.com/boostkit/rabitq)扩展
+*  [RaBitQ](https://github.com/gaoj0017/RaBitQ)扩展
    * RaBitQ算法扩展至ARM64（AArch64）架构，引入FP16精度优化、NEON SIMD向量化、汇编级LUT加速、SOAR溢出向量分配、ML自适应nprobe等多项性能优化。
    * https://gitcode.com/boostkit/rabitq
 
 ## 在线推理扩展
-*  [Embeddinglookup](https://gitcode.com/boostkit/monolith)扩展
+*  [Embeddinglookup](https://github.com/bytedance/monolith)扩展
    * 通过编译选项调优、自旋锁优化、内存对齐优化及 ARM SIMD 向量化改造等关键技术，降低实时推荐系统核心模块查表延迟。
    * https://gitcode.com/boostkit/monolith
 
@@ -59,8 +59,8 @@
   * https://gitee.com/openeuler/sra_tvm_adapter
 * [oneDNN](https://github.com/uxlfoundation/oneDNN) 扩展
   * KDNN算子库通过插件化形式对接开源oneDNN库提供完整能力。
-  * https://gitcode.com/openeuler/kail_dnn_adapter
-* [TensorRT-LLM](https://gitcode.com/boostkit/tensorrt-llm) 扩展
+  * https://gitee.com/openeuler/kail_dnn_adapter
+* [TensorRT-LLM](https://github.com/NVIDIA/TensorRT-LLM) 扩展
   * 包含算子优化、访存优化、参数配置等特性。
   * https://gitcode.com/boostkit/tensorrt-llm
 
