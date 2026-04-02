@@ -14,7 +14,7 @@ KScaNN适用于鲲鹏920 7282C处理器与鲲鹏950 7592C处理器，支持NEON�
 
 ## 版本说明
 
-关于KScaNN的版本更新情况请参见[《KScaNN版本说明书》](./release_notes.md)。
+关于KScaNN的版本更新情况请参见[《版本说明书》](./release_notes.md)。
 
 ## 学习文档
 

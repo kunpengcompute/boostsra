@@ -59,7 +59,7 @@ KDNN主要在以下场景中使用：
 
 ## 版本说明
 
-关于KDNN的版本更新情况请参见《<a href="release_notes.md">KDNN 版本说明书</a>》。
+关于KDNN的版本更新情况请参见《<a href="release_notes.md">版本说明书</a>》。
 
 ## 兼容性信息
 
