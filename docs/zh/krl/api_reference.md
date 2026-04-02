@@ -5962,6 +5962,7 @@ cleanup:
 ```
 
 ### krl\_IP\_table\_lookup\_fast\_scan\_bs96
+
 **接口定义<a name="section172317194488"></a>**
 
 int krl\_IP\_table\_lookup\_fast\_scan\_bs96\(int nsq, const uint8\_t\* codes, const uint8\_t\* LUT, uint16\_t\* dis, uint16\_t threshold, uint32\_t\* lt\_mask, size\_t codes\_size, size\_t LUT\_size, size\_t dis\_size, size\_t lt\_mask\_size\);

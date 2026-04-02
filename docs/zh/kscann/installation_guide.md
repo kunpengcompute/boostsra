@@ -244,7 +244,7 @@ KScaNN依赖基于鲲鹏优化的开源ScaNN以提供完整的功能。因此安
         >- --build\_scann\_cc\_neon：构建NEON指令版本的完整的ScaNN的动态库文件。
         >- --build\_scann\_cc\_sve\_milvus：构建适用于Milvus场景的SVE指令版本的完整的ScaNN的动态库文件。
         >- --build\_scann\_cc\_neon\_milvus：构建适用于Milvus场景的构建NEON指令版本的完整的ScaNN的动态库文件。
-
+        >
         >若环境搭建过程中提示“unable to find valid certification path to requested target”，请参见《ScaNN 移植指南》中的[编译ScaNN过程中提示找不到证书路径的解决办法](https://www.hikunpeng.com/document/detail/zh/SRA/ecosystemEnable/ScaNN/kunpengscann_02_0014.html)章节解决。
 
 10. 安装whl。

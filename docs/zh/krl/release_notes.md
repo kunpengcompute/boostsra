@@ -98,6 +98,7 @@
 </table>
 
 ## 版本使用注意事项
+
 ### 使用注意事项
 
 请参见[《KRL 安装指南》](./installation_guide.md)。
