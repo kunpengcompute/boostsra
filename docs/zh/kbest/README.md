@@ -13,7 +13,7 @@ KBest（Kunpeng Blazing-fast embedding similarity search thruster）鲲鹏召回
 
 ## 版本说明
 
-关于KBest算法的版本更新情况请参见[《KBest版本说明书》](./release_notes.md)。
+关于KBest算法的版本更新情况请参见[《版本说明书》](./release_notes.md)。
 
 ## 学习文档
 
