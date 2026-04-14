@@ -14,9 +14,9 @@
 
 | 算法名称 | 描述 | 仓库路径 |
 | :---| :--- | :--- |
-| KBest召回算法 | Kunpeng Blazing-fast embedding similarity search thruster，是鲲鹏自研的高性能图检索算法，专为大规模嵌入相似性搜索场景设计。 | [KBest文档](./docs/kbest/README.md)<br>**仅提供文档仓路径，代码仓待开源。** |
-| KScaNN召回算法 | Kunpeng Scalable Nearest Neighbors，鲲鹏向量检索算法，基于倒排索引，结合鲲鹏架构深度优化索引布局和算法流程，充分挖掘芯片潜力形成的向量检索算法。 | [KScaNN文档](./docs/kscann/README.md) <br>**仅提供文档仓路径，代码仓待开源。** |
-| KRL鲲鹏检索算子库 | Kunpeng Retrieval Library，鲲鹏检索算子库，基于鲲鹏平台优化的用于加速向量检索的算子库，KRL可通过替换算子的形式对faiss原生的HNSW、PQFS、IVFPQ和IVFPQFS等算法进行加速。 | [KRL文档](./docs/krl/README.md)<br>**仅提供文档仓路径，代码仓待开源。** |
+| KBest召回算法 | Kunpeng Blazing-fast embedding similarity search thruster，是鲲鹏自研的高性能图检索算法，专为大规模嵌入相似性搜索场景设计。 | [KBest文档](./docs/zh/kbest/README.md)<br>**仅提供文档仓路径，代码仓待开源。** |
+| KScaNN召回算法 | Kunpeng Scalable Nearest Neighbors，鲲鹏向量检索算法，基于倒排索引，结合鲲鹏架构深度优化索引布局和算法流程，充分挖掘芯片潜力形成的向量检索算法。 | [KScaNN文档](./docs/zh/kscann/README.md) <br>**仅提供文档仓路径，代码仓待开源。** |
+| KRL鲲鹏检索算子库 | Kunpeng Retrieval Library，鲲鹏检索算子库，基于鲲鹏平台优化的用于加速向量检索的算子库，KRL可通过替换算子的形式对faiss原生的HNSW、PQFS、IVFPQ和IVFPQFS等算法进行加速。 | [KRL文档](./docs/zh/krl/README.md)<br>**仅提供文档仓路径，代码仓待开源。** |
 | KVecTurbo召回向量检索加速组件 | KVecTurbo是鲲鹏自研的向量检索加速组件，可对接openGauss向量数据库使用。KVecTurbo通过将高维向量量化压缩，快速获取query的近邻，同时使用SIMD指令集加速距离计算，用于多维向量最近邻搜索。 |[KVecTurbo](https://gitcode.com/boostkit/kvecturbo) |
 
 
@@ -39,7 +39,7 @@
 
 | 算法名称 | 描述 | 仓库路径 |
 | :---| :--- | :--- |
-| KDNN算子库 | Kunpeng Deep Neural Network Library，鲲鹏深度神经网络算子库，结合鲲鹏处理器微架构特性，通过向量化、汇编、算法优化等手段，提升DNN核心算子性能。 | [KDNN文档](docs/kdnn/README.md) <br> **仅提供文档仓路径，代码仓待开源。** |
+| KDNN算子库 | Kunpeng Deep Neural Network Library，鲲鹏深度神经网络算子库，结合鲲鹏处理器微架构特性，通过向量化、汇编、算法优化等手段，提升DNN核心算子性能。 | [KDNN文档](docs/zh/kdnn/README.md) <br> **仅提供文档仓路径，代码仓待开源。** |
 | ANNC编译器 | ANNC（Accelerated Neural Network Compiler）是专注于加速神经网络计算的编译器，聚焦于通过计算图优化，高性能融合算子生成和对接技术以及高效代码生成和优化能力，加速推荐和大模型的推理性能，支持主流开源推理框架接入。 | [ANNC编译器仓](https://gitee.com/src-openeuler/ANNC) |
 
 ## 排序推理扩展 

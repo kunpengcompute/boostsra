@@ -101,7 +101,7 @@
 
 ### 使用注意事项
 
-请参见[《KRL 安装指南》](./installation_guide.md)。
+请参见[《KRL 用户指南》](./user_guide.md)。
 
 ## V25.3.0
 
@@ -217,4 +217,4 @@
 
 ### 获取文档的方法
 
-您可以通过访问[开源仓](https://gitcode.com/boostkit/krl)浏览和获取相关文档。
+您可以通过访问[开源仓](https://gitcode.com/boostkit/boostsra/blob/master/docs/zh/krl/README.md)浏览和获取相关文档。

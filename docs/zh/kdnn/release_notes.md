@@ -370,4 +370,4 @@
 
 ### 获取文档的方法
 
-您可以通过访问[开源仓](https://gitcode.com/boostkit/kdnn)浏览和获取相关文档。
+您可以通过访问[开源仓](https://gitcode.com/boostkit/boostsra/blob/master/docs/zh/kdnn/README.md)浏览和获取相关文档。

@@ -357,4 +357,4 @@ KBest本次未更新，代码尚未开源，请您通过《KBest安装指南》�
 
 ### 获取文档的方法<a name="ZH-CN_TOPIC_0000002518393680"></a>
 
-您可以通过访问[开源仓](https://gitcode.com/boostkit/kbest)浏览和获取相关文档。
+您可以通过访问[开源仓](https://gitcode.com/boostkit/boostsra/blob/master/docs/zh/kbest/README.md)浏览和获取相关文档。
