@@ -142,6 +142,43 @@
 
 无
 
+## V1.1.0
+
+### 更新说明
+
+**新增特性<a name="section11862976"></a>**
+
+<a name="table41916134"></a>
+<table><thead align="left"><tr id="row28804035"><th class="cellrowborder" valign="top" width="15.07%" id="mcps1.1.4.1.1"><p id="p4697042"><a name="p4697042"></a><a name="p4697042"></a>算法名称</p>
+</th>
+<th class="cellrowborder" valign="top" width="84.93%" id="mcps1.1.4.1.2"><p id="p44916037"><a name="p44916037"></a><a name="p44916037"></a>更新说明</p>
+</th>
+</tr>
+</thead>
+<tbody><tr id="row84721825542"><td class="cellrowborder" valign="top" width="15.07%" headers="mcps1.1.4.1.1 "><p id="p1682142025413"><a name="p1682142025413"></a><a name="p1682142025413"></a>KRL</p>
+</td>
+<td class="cellrowborder" valign="top" width="84.93%" headers="mcps1.1.4.1.2 "><p id="p515310015518"><a name="p515310015518"></a><a name="p515310015518"></a>新增4bit查表累和算子和FP16部分IP/L2距离计算算子的SVE2实现。</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+**修改特性<a name="section16450949161513"></a>**
+
+无
+
+**删除特性<a name="section9218125814160"></a>**
+
+无
+
+### 已解决的问题
+
+无
+
+### 遗留问题
+
+无
+
 ## V1.0.0
 
 ### 更新说明
