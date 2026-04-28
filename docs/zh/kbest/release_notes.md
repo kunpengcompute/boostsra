@@ -28,57 +28,60 @@
 **表 1** KBest已验证环境<a id="KBest已验证环境"></a>
 
 <a name="table59918346913"></a>
-<table><thead align="left"><tr id="zh-cn_topic_0000002483307829_row1169294312212"><th class="cellrowborder" valign="top" width="21.81%" id="mcps1.2.6.1.1"><p id="zh-cn_topic_0000002483307829_p12692144313211"><a name="zh-cn_topic_0000002483307829_p12692144313211"></a><a name="zh-cn_topic_0000002483307829_p12692144313211"></a>操作系统</p>
+<table><thead align="left"><tr id="row1169294312212"><th class="cellrowborder" valign="top" width="20%" id="mcps1.2.6.1.1"><p id="p12692144313211"><a name="p12692144313211"></a><a name="p12692144313211"></a>操作系统</p>
 </th>
-<th class="cellrowborder" valign="top" width="19.91%" id="mcps1.2.6.1.2"><p id="zh-cn_topic_0000002483307829_p06926438214"><a name="zh-cn_topic_0000002483307829_p06926438214"></a><a name="zh-cn_topic_0000002483307829_p06926438214"></a>CPU类型</p>
+<th class="cellrowborder" valign="top" width="20%" id="mcps1.2.6.1.2"><p id="p06926438214"><a name="p06926438214"></a><a name="p06926438214"></a>CPU类型</p>
 </th>
-<th class="cellrowborder" valign="top" width="13.69%" id="mcps1.2.6.1.3"><p id="zh-cn_topic_0000002483307829_p269284310216"><a name="zh-cn_topic_0000002483307829_p269284310216"></a><a name="zh-cn_topic_0000002483307829_p269284310216"></a>内存</p>
+<th class="cellrowborder" valign="top" width="15%" id="mcps1.2.6.1.3"><p id="p269284310216"><a name="p269284310216"></a><a name="p269284310216"></a>内存</p>
 </th>
-<th class="cellrowborder" valign="top" width="17.330000000000002%" id="mcps1.2.6.1.4"><p id="zh-cn_topic_0000002483307829_p196922434215"><a name="zh-cn_topic_0000002483307829_p196922434215"></a><a name="zh-cn_topic_0000002483307829_p196922434215"></a>编译器</p>
+<th class="cellrowborder" valign="top" width="15%" id="mcps1.2.6.1.4"><p id="p196922434215"><a name="p196922434215"></a><a name="p196922434215"></a>编译器</p>
 </th>
-<th class="cellrowborder" valign="top" width="27.26%" id="mcps1.2.6.1.5"><p id="zh-cn_topic_0000002483307829_p1769219435210"><a name="zh-cn_topic_0000002483307829_p1769219435210"></a><a name="zh-cn_topic_0000002483307829_p1769219435210"></a>其他</p>
+<th class="cellrowborder" valign="top" width="30%" id="mcps1.2.6.1.5"><p id="p1769219435210"><a name="p1769219435210"></a><a name="p1769219435210"></a>其他</p>
 </th>
 </tr>
 </thead>
-<tbody><tr id="zh-cn_topic_0000002483307829_row13692643162117"><td class="cellrowborder" rowspan="2" valign="top" width="21.81%" headers="mcps1.2.6.1.1 "><p id="zh-cn_topic_0000002483307829_p4692104312120"><a name="zh-cn_topic_0000002483307829_p4692104312120"></a><a name="zh-cn_topic_0000002483307829_p4692104312120"></a>openEuler 22.03 LTS SP3</p>
+<tbody><tr id="row13692643162117"><td class="cellrowborder" valign="top" width="20%" headers="mcps1.2.6.1.1 "><p id="p4692104312120"><a name="p4692104312120"></a><a name="p4692104312120"></a>openEuler 22.03 LTS SP3</p>
 </td>
-<td class="cellrowborder" valign="top" width="19.91%" headers="mcps1.2.6.1.2 "><p id="zh-cn_topic_0000002483307829_p9692124320219"><a name="zh-cn_topic_0000002483307829_p9692124320219"></a><a name="zh-cn_topic_0000002483307829_p9692124320219"></a>鲲鹏920 7282C处理器</p>
+<td class="cellrowborder" valign="top" width="20%" headers="mcps1.2.6.1.2 "><p id="p9692124320219"><a name="p9692124320219"></a><a name="p9692124320219"></a>鲲鹏920 7282C处理器</p>
 </td>
-<td class="cellrowborder" valign="top" width="13.69%" headers="mcps1.2.6.1.3 "><p id="zh-cn_topic_0000002483307829_p2692443182119"><a name="zh-cn_topic_0000002483307829_p2692443182119"></a><a name="zh-cn_topic_0000002483307829_p2692443182119"></a>16 * 32GB</p>
+<td class="cellrowborder" valign="top" width="15%" headers="mcps1.2.6.1.3 "><p id="p2692443182119"><a name="p2692443182119"></a><a name="p2692443182119"></a>16*32GB</p>
 </td>
-<td class="cellrowborder" valign="top" width="17.330000000000002%" headers="mcps1.2.6.1.4 "><p id="zh-cn_topic_0000002483307829_p1269354352117"><a name="zh-cn_topic_0000002483307829_p1269354352117"></a><a name="zh-cn_topic_0000002483307829_p1269354352117"></a>GCC 12.3.1</p>
+<td class="cellrowborder" valign="top" width="15%" headers="mcps1.2.6.1.4 "><p id="p1269354352117"><a name="p1269354352117"></a><a name="p1269354352117"></a>GCC 12.3.1</p>
 </td>
-<td class="cellrowborder" valign="top" width="27.26%" headers="mcps1.2.6.1.5 "><a name="zh-cn_topic_0000002483307829_ul46932043172116"></a><a name="zh-cn_topic_0000002483307829_ul46932043172116"></a><ul id="zh-cn_topic_0000002483307829_ul46932043172116"><li>CMake&gt;=3.22.0</li><li>GLIBCXX&gt;=3.4.29</li><li>Python 3.9.x</li></ul>
-</td>
-</tr>
-<tr id="zh-cn_topic_0000002483307829_row1032642113386"><td class="cellrowborder" valign="top" headers="mcps1.2.6.1.1 "><p id="p14764191691020"><a name="p14764191691020"></a><a name="p14764191691020"></a>鲲鹏920 7282C处理器</p>
-</td>
-<td class="cellrowborder" valign="top" headers="mcps1.2.6.1.2 "><p id="p1336952461014"><a name="p1336952461014"></a><a name="p1336952461014"></a>16 * 32GB</p>
-</td>
-<td class="cellrowborder" valign="top" headers="mcps1.2.6.1.3 "><p id="zh-cn_topic_0000002483307829_p3686322143815"><a name="zh-cn_topic_0000002483307829_p3686322143815"></a><a name="zh-cn_topic_0000002483307829_p3686322143815"></a>GCC 10.3.1</p>
-</td>
-<td class="cellrowborder" valign="top" headers="mcps1.2.6.1.4 "><a name="zh-cn_topic_0000002483307829_ul1968672223815"></a><a name="zh-cn_topic_0000002483307829_ul1968672223815"></a><ul id="zh-cn_topic_0000002483307829_ul1968672223815"><li>CMake&gt;=3.22.0</li><li>GLIBCXX&gt;=3.4.28</li><li>Python 3.9.x</li></ul>
+<td class="cellrowborder" valign="top" width="30%" headers="mcps1.2.6.1.5 "><a name="ul46932043172116"></a><a name="ul46932043172116"></a><ul id="ul46932043172116"><li>CMake&gt;=3.22.0</li><li>GLIBCXX&gt;=3.4.29</li><li>Python 3.9.x</li></ul>
 </td>
 </tr>
-<tr id="zh-cn_topic_0000002483307829_row94251327203812"><td class="cellrowborder" valign="top" width="21.81%" headers="mcps1.2.6.1.1 "><p id="zh-cn_topic_0000002483307829_p6751171816390"><a name="zh-cn_topic_0000002483307829_p6751171816390"></a><a name="zh-cn_topic_0000002483307829_p6751171816390"></a>openEuler 24.03 LTS SP1</p>
+<tr id="row1032642113386"><td class="cellrowborder" valign="top" width="20%" headers="mcps1.2.6.1.1 "><p id="p1599891016456"><a name="p1599891016456"></a><a name="p1599891016456"></a>openEuler 22.03 LTS SP3</p>
 </td>
-<td class="cellrowborder" valign="top" width="19.91%" headers="mcps1.2.6.1.2 "><p id="p2118151771019"><a name="p2118151771019"></a><a name="p2118151771019"></a>鲲鹏920 7282C处理器</p>
+<td class="cellrowborder" valign="top" width="20%" headers="mcps1.2.6.1.2 "><p id="p383962264515"><a name="p383962264515"></a><a name="p383962264515"></a>鲲鹏920 7282C处理器</p>
 </td>
-<td class="cellrowborder" valign="top" width="13.69%" headers="mcps1.2.6.1.3 "><p id="p15370172411020"><a name="p15370172411020"></a><a name="p15370172411020"></a>16 * 32GB</p>
+<td class="cellrowborder" valign="top" width="15%" headers="mcps1.2.6.1.3 "><p id="p129975359453"><a name="p129975359453"></a><a name="p129975359453"></a>16*32GB</p>
 </td>
-<td class="cellrowborder" valign="top" width="17.330000000000002%" headers="mcps1.2.6.1.4 "><p id="zh-cn_topic_0000002483307829_p382782815383"><a name="zh-cn_topic_0000002483307829_p382782815383"></a><a name="zh-cn_topic_0000002483307829_p382782815383"></a>GCC 12.3.1</p>
+<td class="cellrowborder" valign="top" width="15%" headers="mcps1.2.6.1.4 "><p id="p3686322143815"><a name="p3686322143815"></a><a name="p3686322143815"></a>GCC 10.3.1</p>
 </td>
-<td class="cellrowborder" valign="top" width="27.26%" headers="mcps1.2.6.1.5 "><a name="zh-cn_topic_0000002483307829_ul382832843816"></a><a name="zh-cn_topic_0000002483307829_ul382832843816"></a><ul id="zh-cn_topic_0000002483307829_ul382832843816"><li>CMake&gt;=3.22.0</li><li>GLIBCXX&gt;=3.4.29</li><li>Python 3.9.x</li></ul>
+<td class="cellrowborder" valign="top" width="30%" headers="mcps1.2.6.1.5 "><a name="ul1968672223815"></a><a name="ul1968672223815"></a><ul id="ul1968672223815"><li>CMake&gt;=3.22.0</li><li>GLIBCXX&gt;=3.4.28</li><li>Python 3.9.x</li></ul>
 </td>
-<tbody><tr id="zh-cn_topic_0000002483307829_row7960171410516"><td class="cellrowborder" valign="top" width="20.86%" headers="mcps1.2.6.1.1 "><p id="zh-cn_topic_0000002483307829_p89601314753"><a name="zh-cn_topic_0000002483307829_p89601314753"></a><a name="zh-cn_topic_0000002483307829_p89601314753"></a>openEuler 24.03 LTS SP3</p>
+</tr>
+<tr id="row94251327203812"><td class="cellrowborder" valign="top" width="20%" headers="mcps1.2.6.1.1 "><p id="p6751171816390"><a name="p6751171816390"></a><a name="p6751171816390"></a>openEuler 24.03 LTS SP1</p>
 </td>
-<td class="cellrowborder" valign="top" width="20.150000000000002%" headers="mcps1.2.6.1.2 "><p id="zh-cn_topic_0000002483307829_p129602141518"><a name="zh-cn_topic_0000002483307829_p129602141518"></a><a name="zh-cn_topic_0000002483307829_p129602141518"></a>鲲鹏950 7592C处理器</p>
+<td class="cellrowborder" valign="top" width="20%" headers="mcps1.2.6.1.2 "><p id="p14840522154517"><a name="p14840522154517"></a><a name="p14840522154517"></a>鲲鹏920 7282C处理器</p>
 </td>
-<td class="cellrowborder" valign="top" width="13.86%" headers="mcps1.2.6.1.3 "><p id="zh-cn_topic_0000002483307829_p1960514556"><a name="zh-cn_topic_0000002483307829_p1960514556"></a><a name="zh-cn_topic_0000002483307829_p1960514556"></a>24 * 64GB</p>
+<td class="cellrowborder" valign="top" width="15%" headers="mcps1.2.6.1.3 "><p id="p14997183511454"><a name="p14997183511454"></a><a name="p14997183511454"></a>16*32GB</p>
 </td>
-<td class="cellrowborder" valign="top" width="17.549999999999997%" headers="mcps1.2.6.1.4 "><p id="zh-cn_topic_0000002483307829_p8960151411513"><a name="zh-cn_topic_0000002483307829_p8960151411513"></a><a name="zh-cn_topic_0000002483307829_p8960151411513"></a>GCC 12.3.1</p>
+<td class="cellrowborder" valign="top" width="15%" headers="mcps1.2.6.1.4 "><p id="p382782815383"><a name="p382782815383"></a><a name="p382782815383"></a>GCC 12.3.1</p>
 </td>
-<td class="cellrowborder" valign="top" width="27.58%" headers="mcps1.2.6.1.5 "><a name="zh-cn_topic_0000002483307829_ul19960214955"></a><a name="zh-cn_topic_0000002483307829_ul19960214955"></a><ul id="zh-cn_topic_0000002483307829_ul19960214955"><li>CMake&gt;=3.22.0</li><li>GLIBCXX&gt;=3.4.29</li><li>Python 3.9.x</li></ul>
+<td class="cellrowborder" valign="top" width="30%" headers="mcps1.2.6.1.5 "><a name="ul382832843816"></a><a name="ul382832843816"></a><ul id="ul382832843816"><li>CMake&gt;=3.22.0</li><li>GLIBCXX&gt;=3.4.29</li><li>Python 3.9.x</li></ul>
+</td>
+</tr>
+<tr id="row7960171410516"><td class="cellrowborder" valign="top" width="20%" headers="mcps1.2.6.1.1 "><p id="p89601314753"><a name="p89601314753"></a><a name="p89601314753"></a>openEuler 24.03 LTS SP3</p>
+</td>
+<td class="cellrowborder" valign="top" width="20%" headers="mcps1.2.6.1.2 "><p id="p129602141518"><a name="p129602141518"></a><a name="p129602141518"></a>鲲鹏950 7592C处理器</p>
+</td>
+<td class="cellrowborder" valign="top" width="15%" headers="mcps1.2.6.1.3 "><p id="p1960514556"><a name="p1960514556"></a><a name="p1960514556"></a>24*64GB</p>
+</td>
+<td class="cellrowborder" valign="top" width="15%" headers="mcps1.2.6.1.4 "><p id="p8960151411513"><a name="p8960151411513"></a><a name="p8960151411513"></a>GCC 12.3.1</p>
+</td>
+<td class="cellrowborder" valign="top" width="30%" headers="mcps1.2.6.1.5 "><a name="ul19960214955"></a><a name="ul19960214955"></a><ul id="ul19960214955"><li>CMake&gt;=3.22.0</li><li>GLIBCXX&gt;=3.4.29</li><li>Python 3.9.x</li></ul>
 </td>
 </tr>
 </tbody>
@@ -141,7 +144,7 @@
 
 ### 使用注意事项
 
-请参见《[KBest安装指南](./installation_guide.md)》。
+请参见《[安装指南](./installation_guide.md)》。
 
 ## V25.3.0
 
@@ -149,7 +152,7 @@
 
 **新增特性<a name="section11862975"></a>**
 
-KBest新增鲲鹏950 7592C服务器兼容。
+KBest新增鲲鹏950 7592C处理器兼容。
 
 **修改特性<a name="section16450949161512"></a>**
 
@@ -317,35 +320,35 @@ KBest本次未更新，代码尚未开源，请您通过《KBest安装指南》�
 </th>
 </tr>
 </thead>
-<tbody><tr id="row19094280"><td class="cellrowborder" valign="top" width="45.019999999999996%" headers="mcps1.1.4.1.1 "><p id="p1341193722116"><a name="p1341193722116"></a><a name="p1341193722116"></a>《KBest 版本说明书》</p>
+<tbody><tr id="row19094280"><td class="cellrowborder" valign="top" width="45.019999999999996%" headers="mcps1.1.4.1.1 "><p id="p1341193722116"><a name="p1341193722116"></a><a name="p1341193722116"></a>《版本说明书》</p>
 </td>
 <td class="cellrowborder" valign="top" width="38.019999999999996%" headers="mcps1.1.4.1.2 "><p id="p2042183752117"><a name="p2042183752117"></a><a name="p2042183752117"></a>本文档提供KBest的版本发布信息。</p>
 </td>
 <td class="cellrowborder" valign="top" width="16.96%" headers="mcps1.1.4.1.3 "><p id="p1528591452515"><a name="p1528591452515"></a><a name="p1528591452515"></a>开源仓</p>
 </td>
 </tr>
-<tr id="row1269982415251"><td class="cellrowborder" valign="top" width="45.019999999999996%" headers="mcps1.1.4.1.1 "><p id="p55571628142511"><a name="p55571628142511"></a><a name="p55571628142511"></a>《KBest 快速入门》</p>
+<tr id="row1269982415251"><td class="cellrowborder" valign="top" width="45.019999999999996%" headers="mcps1.1.4.1.1 "><p id="p55571628142511"><a name="p55571628142511"></a><a name="p55571628142511"></a>《快速入门》</p>
 </td>
 <td class="cellrowborder" valign="top" width="38.019999999999996%" headers="mcps1.1.4.1.2 "><p id="p105571728182516"><a name="p105571728182516"></a><a name="p105571728182516"></a>本文档提供KBest快速上手指导。</p>
 </td>
 <td class="cellrowborder" valign="top" width="16.96%" headers="mcps1.1.4.1.3 "><p id="p555716285258"><a name="p555716285258"></a><a name="p555716285258"></a>开源仓</p>
 </td>
 </tr>
-<tr id="row1941037152117"><td class="cellrowborder" valign="top" width="45.019999999999996%" headers="mcps1.1.4.1.1 "><p id="p5143115122016"><a name="p5143115122016"></a><a name="p5143115122016"></a>《KBest 安装指南》</p>
+<tr id="row1941037152117"><td class="cellrowborder" valign="top" width="45.019999999999996%" headers="mcps1.1.4.1.1 "><p id="p5143115122016"><a name="p5143115122016"></a><a name="p5143115122016"></a>《安装指南》</p>
 </td>
 <td class="cellrowborder" valign="top" width="38.019999999999996%" headers="mcps1.1.4.1.2 "><p id="p1914345202019"><a name="p1914345202019"></a><a name="p1914345202019"></a>本文档提供KBest安装、部署指导。</p>
 </td>
 <td class="cellrowborder" valign="top" width="16.96%" headers="mcps1.1.4.1.3 "><p id="p102851314202514"><a name="p102851314202514"></a><a name="p102851314202514"></a>开源仓</p>
 </td>
 </tr>
-<tr id="row5905441132519"><td class="cellrowborder" valign="top" width="45.019999999999996%" headers="mcps1.1.4.1.1 "><p id="p106411642142518"><a name="p106411642142518"></a><a name="p106411642142518"></a>《KBest 最佳实践》</p>
+<tr id="row5905441132519"><td class="cellrowborder" valign="top" width="45.019999999999996%" headers="mcps1.1.4.1.1 "><p id="p106411642142518"><a name="p106411642142518"></a><a name="p106411642142518"></a>《 最佳实践》</p>
 </td>
 <td class="cellrowborder" valign="top" width="38.019999999999996%" headers="mcps1.1.4.1.2 "><p id="p1664115429257"><a name="p1664115429257"></a><a name="p1664115429257"></a>本文档提供KBest典型场景使用实践。</p>
 </td>
 <td class="cellrowborder" valign="top" width="16.96%" headers="mcps1.1.4.1.3 "><p id="p1564174242516"><a name="p1564174242516"></a><a name="p1564174242516"></a>开源仓</p>
 </td>
 </tr>
-<tr id="row1883793117585"><td class="cellrowborder" valign="top" width="45.019999999999996%" headers="mcps1.1.4.1.1 "><p id="p0672183518583"><a name="p0672183518583"></a><a name="p0672183518583"></a>《KBest API参考》</p>
+<tr id="row1883793117585"><td class="cellrowborder" valign="top" width="45.019999999999996%" headers="mcps1.1.4.1.1 "><p id="p0672183518583"><a name="p0672183518583"></a><a name="p0672183518583"></a>《API参考》</p>
 </td>
 <td class="cellrowborder" valign="top" width="38.019999999999996%" headers="mcps1.1.4.1.2 "><p id="p967215353582"><a name="p967215353582"></a><a name="p967215353582"></a>本文档提供KBest对外提供的API接口详细说明。</p>
 </td>

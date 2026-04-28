@@ -39,8 +39,6 @@
 
 ## 安装KScaNN
 
-### RPM安装
-
 本节提供RPM包安装KRL方法。请参照本节内容对KRL进行安装和安装后验证。若操作过程中使用了RPM包管理工具支持但本文档中未说明的参数，可能会引入未定义行为，请谨慎操作。
 
 1. 从GitCode获取KScaNN软件包[BoostKit-boostsra-kscann\_2.2.0.zip](https://gitcode.com/boostkit/boostsra/releases/download/v1.1.0/BoostKit-boostsra-kscann_2.2.0.zip)，解压后得到二进制RPM包。
@@ -59,7 +57,7 @@
     rpm -ivh boostsra-kscann-xxxx.aarch64.rpm
     ```
 
-    安装结束后，自动追加环境变量LD\_LIBRARY\_PATH到“/etc/profile“中，即KScaNN的动态库文件与静态库文件所在目录“/usr/local/sra\_kscann/lib/“与“/usr/local/sra\_kscann/lib/sve“。
+    安装结束后，自动追加环境变量LD\_LIBRARY\_PATH到“/etc/profile”中，即KScaNN的动态库文件与静态库文件所在目录“/usr/local/sra\_kscann/lib/”与“/usr/local/sra\_kscann/lib/sve”。
 
     上述命令中涉及的 **_xxxx_** 代表版本号。
 
@@ -69,7 +67,7 @@ KScaNN依赖基于鲲鹏优化的开源ScaNN以提供完整的功能。因此安
 
 **操作步骤<a name="section106931822175410"></a>**
 
-1. 从[GitCode](https://atomgit.com/openeuler/sra_scann_adapter.git)仓下载基于鲲鹏优化的开源ScaNN源代码，标签为**v2.2.1**。保存在编译机器可访问的路径中，假设位于“/path/to/kscann-build“。
+1. 从[GitCode](https://atomgit.com/openeuler/sra_scann_adapter.git)仓下载基于鲲鹏优化的开源ScaNN源代码，标签为**v2.2.1**。保存在编译机器可访问的路径中，假设位于“/path/to/kscann-build”。
 
     ```bash
     mkdir /path/to/kscann-build && cd /path/to/kscann-build
@@ -107,7 +105,7 @@ KScaNN依赖基于鲲鹏优化的开源ScaNN以提供完整的功能。因此安
         rpm -ivh boostkit-ksl-xxxx.aarch64.rpm
         ```
 
-        安装结束后，自动追加环境变量LD\_LIBRARY\_PATH到“/etc/profile“中，即AVX2KI的动态库文件所在目录“/usr/local/ksl/lib“。
+        安装结束后，自动追加环境变量LD\_LIBRARY\_PATH到“/etc/profile”中，即AVX2KI的动态库文件所在目录“/usr/local/ksl/lib”。
 
         上述命令中的 **xxxx** 代表版本号。
 
@@ -117,7 +115,7 @@ KScaNN依赖基于鲲鹏优化的开源ScaNN以提供完整的功能。因此安
         source /etc/profile
         ```
 
-    6. 查看环境变量LD\_LIBRARY\_PATH是否包含AVX2KI的安装路径“/usr/local/ksl/lib“。
+    6. 查看环境变量LD\_LIBRARY\_PATH是否包含AVX2KI的安装路径“/usr/local/ksl/lib”。
 
         ```bash
         env | grep LD_LIBRARY_PATH
@@ -125,7 +123,7 @@ KScaNN依赖基于鲲鹏优化的开源ScaNN以提供完整的功能。因此安
 
         如果变量包含安装路径，说明安装成功。
 
-        安装成功后在安装路径（默认路径是“/usr/local/ksl“）下生成相应文件，其中，“include“文件夹包含AVX2KI的头文件，“lib“文件夹包含了AVX2KI的动态库文件。
+        安装成功后在安装路径（默认路径是“/usr/local/ksl”）下生成相应文件，其中，“include”文件夹包含AVX2KI的头文件，“lib”文件夹包含了AVX2KI的动态库文件。
 
 5. 安装OpenJDK 11。
 
@@ -148,7 +146,7 @@ KScaNN依赖基于鲲鹏优化的开源ScaNN以提供完整的功能。因此安
     >find / -name java
     >```
     >
-    >找到安装目录后，配置环境变量，假设安装目录为“/usr/lib/jvm/java-11-openjdk-11.0.23.9-2.oe2203sp3.aarch64“。
+    >找到安装目录后，配置环境变量，假设安装目录为“/usr/lib/jvm/java-11-openjdk-11.0.23.9-2.oe2203sp3.aarch64”。
     >
     >```bash
     >export JAVA_HOME=/usr/lib/jvm/java-11-openjdk-11.0.23.9-2.oe2203sp3.aarch64
@@ -156,7 +154,7 @@ KScaNN依赖基于鲲鹏优化的开源ScaNN以提供完整的功能。因此安
     >```
 
 6. 安装Bazel 5.4.0。
-    1. 下载Bazel 5.4.0源码，假设路径为“/path/to/bazel“。
+    1. 下载Bazel 5.4.0源码，假设路径为“/path/to/bazel”。
 
         ```bash
         wget https://github.com/bazelbuild/bazel/releases/download/5.4.0/bazel-5.4.0-dist.zip --no-check-certificate
@@ -170,7 +168,7 @@ KScaNN依赖基于鲲鹏优化的开源ScaNN以提供完整的功能。因此安
         env EXTRA_BAZEL_ARGS="--tool_java_runtime_version=local_jdk" bash ./compile.sh
         ```
 
-    3. 构建成功后，生成的可执行文件bazel在“/path/to/bazel/bazel-5.4.0/output“路径中，将该路径配置在环境变量PATH中，以便后续编译ScaNN使用。
+    3. 构建成功后，生成的可执行文件bazel在“/path/to/bazel/bazel-5.4.0/output”路径中，将该路径配置在环境变量PATH中，以便后续编译ScaNN使用。
 
         ```bash
         export PATH=/path/to/bazel/bazel-5.4.0/output:$PATH
@@ -204,7 +202,7 @@ KScaNN依赖基于鲲鹏优化的开源ScaNN以提供完整的功能。因此安
     yum install python python3-devel python3-pip rsync libomp libuuid-devel
     ```
 
-    确保KScaNN位于“/usr/local/sra\_recall/lib/kscann“，AVX2KI位于“/usr/local/ksl/lib“。
+    确保KScaNN位于“/usr/local/sra\_recall/lib/kscann”，AVX2KI位于“/usr/local/ksl/lib”。
 
 9. 开始编译。
 
@@ -227,14 +225,14 @@ KScaNN依赖基于鲲鹏优化的开源ScaNN以提供完整的功能。因此安
         sh project.sh --build_whl
         ```
 
-    4. 构建完的Python安装包scann-1.2.10-cp39-cp39-linux\_aarch64.whl位于“/path/to/kscann-build/scann“下。
+    4. 构建完的Python安装包scann-1.2.10-cp39-cp39-linux\_aarch64.whl位于“/path/to/kscann-build/scann”下。
     5. 运行以下指令以开始ScaNN的动态库文件的构建。
 
         ```bash
         sh project.sh --build_scann_cc_sve
         ```
 
-        构建完的动态库文件libscann\_cc.so位于“/path/to/kscann-build/scann“下。
+        构建完的动态库文件libscann\_cc.so位于“/path/to/kscann-build/scann”下。
 
         >![](public_sys-resources/icon-note.gif) **说明：** 
         >project.sh中包含以下编译选项，可根据需求进行选择：
@@ -261,7 +259,7 @@ KScaNN依赖基于鲲鹏优化的开源ScaNN以提供完整的功能。因此安
 
     如果输出包含Name: scann Version: 1.2.10，则已安装成功。
 
-## 卸载KScaNN
+## （可选）卸载KScaNN
 
 **RPM包卸载<a name="section118069490504"></a>**
 
@@ -273,8 +271,8 @@ KScaNN依赖基于鲲鹏优化的开源ScaNN以提供完整的功能。因此安
     rpm -e boostsra-kscann
     ```
 
-2. 确认安装目录“/usr/local/sra\_kscann“被删除。
-3. 确认“/etc/profile“文件中无“/usr/local/sra\_kscann“相关环境变量。
+2. 确认安装目录“/usr/local/sra\_kscann”被删除。
+3. 确认“/etc/profile”文件中无“/usr/local/sra\_kscann”相关环境变量。
 
 **whl卸载<a name="section58079490509"></a>**
 

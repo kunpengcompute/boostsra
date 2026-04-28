@@ -6,7 +6,7 @@
 
 **获取测试代码<a name="section25419211384"></a>**
 
-请从[GitCode](https://atomgit.com/openeuler/sra_scann_adapter.git)获取的源代码中的测试框架代码，标签为**v2.2.1**。假设源代码位于“/path/to/scann/sra\_scann\_adapter“，测试框架代码位于“/path/to/scann/sra\_scann\_adapter/ann-benchmarks“下。获取数据集。
+请从[GitCode](https://atomgit.com/openeuler/sra_scann_adapter.git)获取的源代码中的测试框架代码，标签为**v2.2.1**。假设源代码位于“/path/to/scann/sra\_scann\_adapter”，测试框架代码位于“/path/to/scann/sra\_scann\_adapter/ann-benchmarks”下。获取数据集。
 
 ```bash
 cd /path/to/scann/sra_scann_adapter/ann-benchmarks
@@ -28,7 +28,7 @@ wget http://ann-benchmarks.com/sift-128-euclidean.hdf5 --no-check-certificate
 
 **测试步骤<a name="section25072475424"></a>**
 
-1. 请确保参考[《KScaNN 安装指南》](./installation_guide.md)已安装scann-1.2.10-cp39-cp39-linux\_aarch64.whl。
+1. 请确保参考《[安装指南](./installation_guide.md)》已安装scann-1.2.10-cp39-cp39-linux\_aarch64.whl。
 2. 安装ann-benchmarks所需依赖。
 
     ```bash
@@ -53,7 +53,7 @@ wget http://ann-benchmarks.com/sift-128-euclidean.hdf5 --no-check-certificate
 
 **获取数据集和测试代码<a name="section155352047153818"></a>**
 
-请从[GitCode](https://atomgit.com/openeuler/sra_scann_adapter.git)获取的源代码中测试框架代码，假设源代码位于“/path/to/scann/sra\_scann\_adapter“，测试框架代码位于“/path/to/scann/sra\_scann\_adapter/ann-benchmarks“下。
+请从[GitCode](https://atomgit.com/openeuler/sra_scann_adapter.git)获取的源代码中测试框架代码，假设源代码位于“/path/to/scann/sra\_scann\_adapter”，测试框架代码位于“/path/to/scann/sra\_scann\_adapter/ann-benchmarks”下。
 
 获取数据集。
 
@@ -163,7 +163,7 @@ project.sh                                                          // 编译脚
 
     >![](public_sys-resources/icon-note.gif) **说明：** 
     >测试过程中，数据集相关参数（如索引构建、搜索策略等）由配置文件统一控制，配置文件路径为：
-    >./algorithms/scann/cpp\_test/config-\*.config，（“\*“为通配符，涵盖所有以config-开头、.config结尾的配置文件，如config-deep-image-96-angular.config等。）
+    >./algorithms/scann/cpp\_test/config-\*.config，（ \*为通配符，涵盖所有以config-开头、.config结尾的配置文件，如config-deep-image-96-angular.config等。）
     >通过调整配置文件中的 index\_save\_or\_load 参数，可控制测试过程中索引的处理模式，具体说明如下：
     >- save：从头构建搜索索引，并将索引保存至指定路径，便于后续直接加载使用。
     >- load：跳过索引构建步骤，直接从指定路径读取已保存的索引文件进行搜索，适用于验证索引复用场景。

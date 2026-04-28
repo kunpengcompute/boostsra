@@ -12,7 +12,7 @@
 </tr>
 <tr id="row24726251"><th class="firstcol" valign="top" width="42.17%" id="mcps1.1.3.2.1"><p id="p56669300"><a name="p56669300"></a><a name="p56669300"></a>产品版本</p>
 </th>
-<td class="cellrowborder" valign="top" width="57.830000000000005%" headers="mcps1.1.3.2.1 "><p id="p13967181113316"><a name="p13967181113316"></a><a name="p13967181113316"></a><span id="text03501914183312"><a name="text03501914183312"></a><a name="text03501914183312"></a>26.0.0</span></p>
+<td class="cellrowborder" valign="top" width="57.830000000000005%" headers="mcps1.1.3.2.1 "><p id="p13967181113316"><a name="p13967181113316"></a><a name="p13967181113316"></a><span id="text03501914183312"><a name="text03501914183312"></a><a name="text03501914183312"></a>26.0.RC1</span></p>
 </td>
 </tr>
 <tr id="row1930811171892"><th class="firstcol" valign="top" width="42.17%" id="mcps1.1.3.3.1"><p id="p2030912172097"><a name="p2030912172097"></a><a name="p2030912172097"></a>软件名称</p>
@@ -312,7 +312,7 @@
   <tbody>
     <tr id="row1341193722116">
       <td class="cellrowborder" valign="top" width="45.02%" headers="mcps1.1.4.1.1">
-        <p><a href="./release_notes.md">版本说明书</a></p>
+        <p>版本说明书</p>
       </td>
       <td class="cellrowborder" valign="top" width="38.02%" headers="mcps1.1.4.1.2">
         <p>本文档提供KDNN的版本发布信息。</p>
@@ -323,7 +323,7 @@
     </tr>
     <tr id="row20256161544411">
       <td class="cellrowborder" valign="top" width="45.02%" headers="mcps1.1.4.1.1">
-        <p><a href="./quick_start.md">KDNN 快速入门</a></p>
+        <p>快速入门</p>
       </td>
       <td class="cellrowborder" valign="top" width="38.02%" headers="mcps1.1.4.1.2">
         <p>提供KDNN快速入门指导。</p>
@@ -334,7 +334,7 @@
     </tr>
     <tr id="row1941037152117">
       <td class="cellrowborder" valign="top" width="45.02%" headers="mcps1.1.4.1.1">
-        <p><a href="./installation_guide.md">KDNN 安装指南</a></p>
+        <p>安装指南</p>
       </td>
       <td class="cellrowborder" valign="top" width="38.02%" headers="mcps1.1.4.1.2">
         <p>本文档提供KDNN安装部署等开发指导。</p>
@@ -345,7 +345,7 @@
     </tr>
     <tr id="row29615193441">
       <td class="cellrowborder" valign="top" width="45.02%" headers="mcps1.1.4.1.1">
-        <p><a href="./api_reference.md">KDNN API参考</a></p>
+        <p>API参考</p>
       </td>
       <td class="cellrowborder" valign="top" width="38.02%" headers="mcps1.1.4.1.2">
         <p>提供KDNN提供的API接口定义、接口说明、接口调用示例等。</p>
@@ -356,7 +356,7 @@
     </tr>
     <tr id="row181851121164416">
       <td class="cellrowborder" valign="top" width="45.02%" headers="mcps1.1.4.1.1">
-        <p><a href="./best_practices.md">KDNN 最佳实践</a></p>
+        <p>最佳实践</p>
       </td>
       <td class="cellrowborder" valign="top" width="38.02%" headers="mcps1.1.4.1.2">
         <p>提供KDNN使用的实践案例。</p>

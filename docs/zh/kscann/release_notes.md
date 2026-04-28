@@ -28,52 +28,36 @@
 **表 1** KScaNN已验证环境<a id="KScaNN已验证环境"></a>
 
 <a name="table59918346913"></a>
-<table><thead align="left"><tr id="zh-cn_topic_0000002483307829_row1169294312212"><th class="cellrowborder" valign="top" width="21.8%" id="mcps1.2.6.1.1"><p id="zh-cn_topic_0000002483307829_p12692144313211"><a name="zh-cn_topic_0000002483307829_p12692144313211"></a><a name="zh-cn_topic_0000002483307829_p12692144313211"></a>操作系统</p>
-</th>
-<th class="cellrowborder" valign="top" width="19.91%" id="mcps1.2.6.1.2"><p id="zh-cn_topic_0000002483307829_p06926438214"><a name="zh-cn_topic_0000002483307829_p06926438214"></a><a name="zh-cn_topic_0000002483307829_p06926438214"></a>CPU类型</p>
-</th>
-<th class="cellrowborder" valign="top" width="13.700000000000001%" id="mcps1.2.6.1.3"><p id="zh-cn_topic_0000002483307829_p269284310216"><a name="zh-cn_topic_0000002483307829_p269284310216"></a><a name="zh-cn_topic_0000002483307829_p269284310216"></a>内存</p>
-</th>
-<th class="cellrowborder" valign="top" width="17.34%" id="mcps1.2.6.1.4"><p id="zh-cn_topic_0000002483307829_p196922434215"><a name="zh-cn_topic_0000002483307829_p196922434215"></a><a name="zh-cn_topic_0000002483307829_p196922434215"></a>编译器</p>
-</th>
-<th class="cellrowborder" valign="top" width="27.250000000000004%" id="mcps1.2.6.1.5"><p id="zh-cn_topic_0000002483307829_p1769219435210"><a name="zh-cn_topic_0000002483307829_p1769219435210"></a><a name="zh-cn_topic_0000002483307829_p1769219435210"></a>其他</p>
-</th>
+<table><thead align="left"><tr>
+<th class="cellrowborder" valign="top" width="20%" id="mcps1.2.6.1.1"><p>操作系统</p></th>
+<th class="cellrowborder" valign="top" width="18%" id="mcps1.2.6.1.2"><p>CPU类型</p></th>
+<th class="cellrowborder" valign="top" width="12%" id="mcps1.2.6.1.3"><p>内存</p></th>
+<th class="cellrowborder" valign="top" width="15%" id="mcps1.2.6.1.4"><p>编译器</p></th>
+<th class="cellrowborder" valign="top" width="35%" id="mcps1.2.6.1.5"><p>其他</p></th>
+</tr></thead>
+<tbody>
+<tr>
+<td class="cellrowborder" valign="top" width="20%" headers="mcps1.2.6.1.1 "><p>openEuler 22.03 LTS SP3</p></td>
+<td class="cellrowborder" valign="top" width="18%" headers="mcps1.2.6.1.2 "><p>鲲鹏920 7282C处理器</p></td>
+<td class="cellrowborder" valign="top" width="12%" headers="mcps1.2.6.1.3 "><p>16 * 32GB</p></td>
+<td class="cellrowborder" valign="top" width="15%" headers="mcps1.2.6.1.4 "><p>GCC 12.3.1</p></td>
+<td class="cellrowborder" valign="top" width="35%" headers="mcps1.2.6.1.5 "><ul><li>CMake>=3.22.0</li><li>GLIBCXX>=3.4.29</li><li>Python 3.9.x</li></ul></td>
 </tr>
-</thead>
-<tbody><tr id="zh-cn_topic_0000002483307829_row169344315213"><td class="cellrowborder" valign="top" width="21.8%" headers="mcps1.2.6.1.1 "><p id="zh-cn_topic_0000002483307829_p149010194428"><a name="zh-cn_topic_0000002483307829_p149010194428"></a><a name="zh-cn_topic_0000002483307829_p149010194428"></a>openEuler 22.03 LTS SP3</p>
-</td>
-<td class="cellrowborder" valign="top" width="19.91%" headers="mcps1.2.6.1.2 "><p id="zh-cn_topic_0000002483307829_p135202347415"><a name="zh-cn_topic_0000002483307829_p135202347415"></a><a name="zh-cn_topic_0000002483307829_p135202347415"></a>鲲鹏920 7282C处理器</p>
-</td>
-<td class="cellrowborder" valign="top" width="13.700000000000001%" headers="mcps1.2.6.1.3 "><p id="zh-cn_topic_0000002483307829_p79961551194517"><a name="zh-cn_topic_0000002483307829_p79961551194517"></a><a name="zh-cn_topic_0000002483307829_p79961551194517"></a>16 * 32GB</p>
-</td>
-<td class="cellrowborder" valign="top" width="17.34%" headers="mcps1.2.6.1.4 "><p id="zh-cn_topic_0000002483307829_p1290141917424"><a name="zh-cn_topic_0000002483307829_p1290141917424"></a><a name="zh-cn_topic_0000002483307829_p1290141917424"></a>GCC 12.3.1</p>
-</td>
-<td class="cellrowborder" valign="top" width="27.250000000000004%" headers="mcps1.2.6.1.5 "><a name="zh-cn_topic_0000002483307829_ul4911219184216"></a><a name="zh-cn_topic_0000002483307829_ul4911219184216"></a><ul id="zh-cn_topic_0000002483307829_ul4911219184216"><li>CMake&gt;=3.22.0</li><li>GLIBCXX&gt;=3.4.29</li><li>Python 3.9.x</li></ul>
-</td>
+<tr>
+<td class="cellrowborder" valign="top" width="20%" headers="mcps1.2.6.1.1 "><p>openEuler 22.03 LTS SP3</p></td>
+<td class="cellrowborder" valign="top" width="18%" headers="mcps1.2.6.1.2 "><p>鲲鹏920 7282C处理器</p></td>
+<td class="cellrowborder" valign="top" width="12%" headers="mcps1.2.6.1.3 "><p>16 * 32GB</p></td>
+<td class="cellrowborder" valign="top" width="15%" headers="mcps1.2.6.1.4 "><p>GCC 10.3.1</p></td>
+<td class="cellrowborder" valign="top" width="35%" headers="mcps1.2.6.1.5 "><ul><li>CMake>=3.22.0</li><li>GLIBCXX>=3.4.28</li><li>Python 3.9.x</li></ul></td>
 </tr>
-<tr id="zh-cn_topic_0000002483307829_row181811714214"><td class="cellrowborder" valign="top" width="21.8%" headers="mcps1.2.6.1.1 "><p id="p575574814317"><a name="p575574814317"></a><a name="p575574814317"></a>openEuler 22.03 LTS SP3</p>
-</td>
-<td class="cellrowborder" valign="top" width="19.91%" headers="mcps1.2.6.1.2 "><p id="p4371843154314"><a name="p4371843154314"></a><a name="p4371843154314"></a>鲲鹏920 7282C处理器</p>
-</td>
-<td class="cellrowborder" valign="top" width="13.700000000000001%" headers="mcps1.2.6.1.3 "><p id="p17897637144312"><a name="p17897637144312"></a><a name="p17897637144312"></a>16 * 32GB</p>
-</td>
-<td class="cellrowborder" valign="top" width="17.34%" headers="mcps1.2.6.1.4 "><p id="zh-cn_topic_0000002483307829_p15911719134216"><a name="zh-cn_topic_0000002483307829_p15911719134216"></a><a name="zh-cn_topic_0000002483307829_p15911719134216"></a>GCC 10.3.1</p>
-</td>
-<td class="cellrowborder" valign="top" width="27.250000000000004%" headers="mcps1.2.6.1.5 "><a name="zh-cn_topic_0000002483307829_ul491101924211"></a><a name="zh-cn_topic_0000002483307829_ul491101924211"></a><ul id="zh-cn_topic_0000002483307829_ul491101924211"><li>CMake&gt;=3.22.0</li><li>GLIBCXX&gt;=3.4.28</li><li>Python 3.9.x</li></ul>
-</td>
-<tbody><tr id="zh-cn_topic_0000002483307829_row179603146519"><td class="cellrowborder" valign="top" width="20.86%" headers="mcps1.2.6.1.1 "><p id="zh-cn_topic_0000002483307829_p896011141252"><a name="zh-cn_topic_0000002483307829_p896011141252"></a><a name="zh-cn_topic_0000002483307829_p896011141252"></a>openEuler 24.03 LTS SP3</p>
-</td>
-<td class="cellrowborder" valign="top" width="20.150000000000002%" headers="mcps1.2.6.1.2 "><p id="zh-cn_topic_0000002483307829_p1496010143513"><a name="zh-cn_topic_0000002483307829_p1496010143513"></a><a name="zh-cn_topic_0000002483307829_p1496010143513"></a>鲲鹏950 7592C处理器</p>
-</td>
-<td class="cellrowborder" valign="top" width="13.86%" headers="mcps1.2.6.1.3 "><p id="zh-cn_topic_0000002483307829_p1960114954"><a name="zh-cn_topic_0000002483307829_p1960114954"></a><a name="zh-cn_topic_0000002483307829_p1960114954"></a>24 * 64GB</p>
-</td>
-<td class="cellrowborder" valign="top" width="17.549999999999997%" headers="mcps1.2.6.1.4 "><p id="zh-cn_topic_0000002483307829_p18960141416512"><a name="zh-cn_topic_0000002483307829_p18960141416512"></a><a name="zh-cn_topic_0000002483307829_p18960141416512"></a>GCC 12.3.1</p>
-</td>
-<td class="cellrowborder" valign="top" width="27.58%" headers="mcps1.2.6.1.5 "><a name="zh-cn_topic_0000002483307829_ul1796010142515"></a><a name="zh-cn_topic_0000002483307829_ul1796010142515"></a><ul id="zh-cn_topic_0000002483307829_ul1796010142515"><li>CMake&gt;=3.22.0</li><li>GLIBCXX&gt;=3.4.29</li><li>Python 3.9.x</li></ul>
-</td>
+<tr>
+<td class="cellrowborder" valign="top" width="20%" headers="mcps1.2.6.1.1 "><p>openEuler 24.03 LTS SP3</p></td>
+<td class="cellrowborder" valign="top" width="18%" headers="mcps1.2.6.1.2 "><p>鲲鹏950 7592C处理器</p></td>
+<td class="cellrowborder" valign="top" width="12%" headers="mcps1.2.6.1.3 "><p>24 * 64GB</p></td>
+<td class="cellrowborder" valign="top" width="15%" headers="mcps1.2.6.1.4 "><p>GCC 12.3.1</p></td>
+<td class="cellrowborder" valign="top" width="35%" headers="mcps1.2.6.1.5 "><ul><li>CMake>=3.22.0</li><li>GLIBCXX>=3.4.29</li><li>Python 3.9.x</li></ul></td>
 </tr>
-</tbody>
-</table>
+</tbody></table>
 
 ### 病毒扫描结果
 
@@ -132,7 +116,7 @@
 
 ### 使用注意事项
 
-请参见[《KScaNN 安装指南》](./installation_guide.md)。
+请参见《[安装指南](./installation_guide.md)》。
 
 ## V25.3.0
 
@@ -140,7 +124,7 @@
 
 **新增特性<a name="section11862975"></a>**
 
-KScaNN新增鲲鹏950 7592C服务器兼容。
+KScaNN新增鲲鹏950 7592C处理器兼容。
 
 **修改特性<a name="section16450949161512"></a>**
 
@@ -270,27 +254,27 @@ KScaNN子库本次未更新。
 </thead>
 <tbody>
 <tr id="row19094280">
-<td class="cellrowborder" valign="top" width="40.510000000000005%" headers="mcps1.1.4.1.1"><p id="p1341193722116"><a href="./release_notes.md">《KScaNN 版本说明书》</a></p></td>
+<td class="cellrowborder" valign="top" width="40.510000000000005%" headers="mcps1.1.4.1.1"><p id="p1341193722116">《版本说明书》</p></td>
 <td class="cellrowborder" valign="top" width="42.53%" headers="mcps1.1.4.1.2"><p id="p2042183752117">提供KScaNN的版本发布信息。</p></td>
 <td class="cellrowborder" valign="top" width="16.96%" headers="mcps1.1.4.1.3"><p id="p186757126467">开源仓</p></td>
 </tr>
 <tr id="row1738718548466">
-<td class="cellrowborder" valign="top" width="40.510000000000005%" headers="mcps1.1.4.1.1"><p id="p1045512617409"><a href="./quick_start.md">《KScaNN 快速入门》</a></p></td>
+<td class="cellrowborder" valign="top" width="40.510000000000005%" headers="mcps1.1.4.1.1"><p id="p1045512617409">《快速入门》</p></td>
 <td class="cellrowborder" valign="top" width="42.53%" headers="mcps1.1.4.1.2"><p id="p15918183742018">提供KScaNN的快速入门指导。</p></td>
 <td class="cellrowborder" valign="top" width="16.96%" headers="mcps1.1.4.1.3"><p id="p1074017515408">开源仓</p></td>
 </tr>
 <tr id="row1941037152117">
-<td class="cellrowborder" valign="top" width="40.510000000000005%" headers="mcps1.1.4.1.1"><p id="p5143115122016"><a href="./installation_guide.md">《KScaNN 安装指南》</a></p></td>
+<td class="cellrowborder" valign="top" width="40.510000000000005%" headers="mcps1.1.4.1.1"><p id="p5143115122016">《安装指南》</p></td>
 <td class="cellrowborder" valign="top" width="42.53%" headers="mcps1.1.4.1.2"><p id="p1914345202019">提供KScaNN安装、部署与开发指导。</p></td>
 <td class="cellrowborder" valign="top" width="16.96%" headers="mcps1.1.4.1.3"><p id="p156741124468">开源仓</p></td>
 </tr>
 <tr id="row1429811819511">
-<td class="cellrowborder" valign="top" width="40.510000000000005%" headers="mcps1.1.4.1.1"><p id="p22461231050"><a href="./best_practices.md">《KScaNN 最佳实践》</a></p></td>
+<td class="cellrowborder" valign="top" width="40.510000000000005%" headers="mcps1.1.4.1.1"><p id="p22461231050">《最佳实践》</p></td>
 <td class="cellrowborder" valign="top" width="42.53%" headers="mcps1.1.4.1.2"><p id="p1657712287211">提供KScaNN的使用实践案例。</p></td>
 <td class="cellrowborder" valign="top" width="16.96%" headers="mcps1.1.4.1.3"><p id="p02981815514">开源仓</p></td>
 </tr>
 <tr id="row294512514462">
-<td class="cellrowborder" valign="top" width="40.510000000000005%" headers="mcps1.1.4.1.1"><p id="p16281135814010"><a href="./api_reference.md">《KScaNN API参考》</a></p></td>
+<td class="cellrowborder" valign="top" width="40.510000000000005%" headers="mcps1.1.4.1.1"><p id="p16281135814010">《API参考》</p></td>
 <td class="cellrowborder" valign="top" width="42.53%" headers="mcps1.1.4.1.2"><p id="p991893772013">提供KScaNN的API接口定义和接口说明。</p></td>
 <td class="cellrowborder" valign="top" width="16.96%" headers="mcps1.1.4.1.3"><p id="p7835129124011">开源仓</p></td>
 </tr>

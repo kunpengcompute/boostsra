@@ -46,8 +46,6 @@
 
 ## 安装KRL
 
-### RPM安装
-
 本节提供RPM包安装KRL方法。请参照本节内容对KRL进行安装和安装后验证。若操作过程中使用了RPM包管理工具支持但本文档中未说明的参数，可能会引入未定义行为，请谨慎操作。
 
 1. 从GitCode仓获取对应的鲲鹏检索算子库软件安装包[BoostKit-boostsra-krl\_1.1.0.zip](https://gitcode.com/boostkit/boostsra/releases/download/v1.1.0/BoostKit-SRA_KRL-1.1.0.zip)，用户解压zip文件后可获取RPM安装包。
@@ -68,7 +66,7 @@
     rpm -ivh boostsra-krl-xxxx.aarch64.rpm
     ```
 
-    安装结束后，自动追加环境变量LD\_LIBRARY\_PATH到“/etc/profile“中，即KRL的动态库文件所在目录“/usr/local/sra\_krl/lib“。
+    安装结束后，自动追加环境变量LD\_LIBRARY\_PATH到“/etc/profile”中，即KRL的动态库文件所在目录“/usr/local/sra\_krl/lib”。
 
     上述命令中涉及的 **_xxxx_** 代表版本号。
 
@@ -78,7 +76,7 @@
     source /etc/profile
     ```
 
-4. 查看环境变量LD\_LIBRARY\_PATH是否包含KRL的安装路径“/usr/local/sra\_krl/lib“。
+4. 查看环境变量LD\_LIBRARY\_PATH是否包含KRL的安装路径“/usr/local/sra\_krl/lib”。
 
     ```bash
     env | grep LD_LIBRARY_PATH
@@ -86,7 +84,7 @@
 
     如果变量包含安装路径，说明安装成功。
 
-    安装成功后在安装路径（默认路径是“/usr/local/sra\_krl“）下生成相应文件，其中，“include“文件夹包含KRL的头文件，“lib“文件夹包含了KRL的动态库文件。
+    安装成功后在安装路径（默认路径是“/usr/local/sra\_krl”）下生成相应文件，其中，“include”文件夹包含KRL的头文件，“lib”文件夹包含了KRL的动态库文件。
 
 ## 卸载KRL
 
@@ -100,14 +98,14 @@
     rpm -e boostkit-sra_krl
     ```
 
-2. 确认安装目录“/usr/local/sra\_krl“被删除。
-3. 确认“/etc/profile“文件中无“/usr/local/sra\_krl“相关环境变量。
+2. 确认安装目录“/usr/local/sra\_krl”被删除。
+3. 确认“/etc/profile”文件中无“/usr/local/sra\_krl”相关环境变量。
 
 ## Faiss使能KRL
 
 Faiss可对接KRL增强HNSW、PQFS、IVFPQ、IVFPQFS、IVFFLAT算法性能。用户需获取开源Faiss 1.8.0版本代码，合入使能KRL补丁后编译，最后得到KRL性能增强后的动态库文件。
 
-1. 从[GitHub仓](https://github.com/facebookresearch/faiss.git)下载开源Faiss源代码，标签为**v1.8.0**。保存在编译机器可访问的路径中，假设位于“/path/to/faiss-1.8.0“。
+1. 从[GitHub仓](https://github.com/facebookresearch/faiss.git)下载开源Faiss源代码，标签为**v1.8.0**。保存在编译机器可访问的路径中，假设位于“/path/to/faiss-1.8.0”。
 
     ```bash
     git clone --branch v1.8.0 --single-branch https://github.com/facebookresearch/faiss.git
@@ -121,7 +119,7 @@ Faiss可对接KRL增强HNSW、PQFS、IVFPQ、IVFPQFS、IVFFLAT算法性能。用
     export LD_LIBRARY_PATH=/opt/openEuler/gcc-toolset-12/root/usr/lib64/:$LD_LIBRARY_PATH
     ```
 
-3. <a name="li84129301112"></a>Faiss依赖数学库，从[Github仓](https://github.com/OpenMathLib/OpenBLAS.git)下载开源OpenBLAS源代码，标签为**v0.3.29**。保存在编译机器可访问的路径中，假设位于“/path/to/OpenBLAS-0.3.29“。
+3. <a name="li84129301112"></a>Faiss依赖数学库，从[Github仓](https://github.com/OpenMathLib/OpenBLAS.git)下载开源OpenBLAS源代码，标签为**v0.3.29**。保存在编译机器可访问的路径中，假设位于“/path/to/OpenBLAS-0.3.29”。
 
     ```bash
     git clone --branch v0.3.29 --single-branch https://github.com/OpenMathLib/OpenBLAS.git
@@ -136,9 +134,9 @@ Faiss可对接KRL增强HNSW、PQFS、IVFPQ、IVFPQFS、IVFFLAT算法性能。用
     ```
 
     >![](public_sys-resources/icon-note.gif) **说明：** 
-    >可通过**make install PREFIX=/path/to/openblas/install**设置“/path/to/openblas/install“以指定安装路径，默认安装路径为“/opt/OpenBLAS“。
+    >可通过**make install PREFIX=/path/to/openblas/install**设置“/path/to/openblas/install”以指定安装路径，默认安装路径为“/opt/OpenBLAS”。
 
-5. 解压BoostKit-boostsra-krl\_1.0.0.zip后可获取到使能KRL所需补丁文件0001-faiss-1.8.0-add-krl.patch；若您通过源码编译安装，则补丁文件位于“/path/to/krl“。安装补丁文件。
+5. 解压BoostKit-boostsra-krl\_1.0.0.zip后可获取到使能KRL所需补丁文件0001-faiss-1.8.0-add-krl.patch；若您通过源码编译安装，则补丁文件位于“/path/to/krl”。安装补丁文件。
 
     ```bash
     cd /path/to/faiss-1.8.0/faiss
@@ -163,17 +161,17 @@ Faiss可对接KRL增强HNSW、PQFS、IVFPQ、IVFPQFS、IVFFLAT算法性能。用
     ```
 
     >![](public_sys-resources/icon-note.gif) **说明：** 
-    >- **KRL_PATH**设置为“/usr/local/sra_krl“。
-    >- 可通过在编译时添加编译选项 **-DCMAKE\_INSTALL\_PREFIX=/path/to/faiss/install**设置“/path/to/faiss/install“以指定安装路径，默认安装路径为“/usr/local“。
+    >- **KRL_PATH**设置为“/usr/local/sra_krl”。
+    >- 可通过在编译时添加编译选项 **-DCMAKE\_INSTALL\_PREFIX=/path/to/faiss/install**设置“/path/to/faiss/install”以指定安装路径，默认安装路径为“/usr/local”。
     >- 编译选项 **-DMKL\_LIBRARIES**需指定为步骤[3](#li84129301112)中OpenBLAS的安装路径。
 
 ## 性能测试
 
-本章节提供的示例以使用sift-128-euclidean.hdf5数据集，Faiss（IVFPQ）算法，线程数32为例。使用前请参见[《KRL安装指南》](./installation_guide.md)完成KRL安装与Faiss使能KRL。
+本章节提供的示例以使用sift-128-euclidean.hdf5数据集，Faiss（IVFPQ）算法，线程数32为例。
 
 **获取数据集与测试程序<a name="section5300679419"></a>**
 
-1. 获取[测试程序](https://atomgit.com/openeuler/sra_test.git)。分支为**v2.0.0**，假设程序运行的目录为“/path/to/sra\_test“，完整的目录结构应如下所示：
+1. 获取[测试程序](https://atomgit.com/openeuler/sra_test.git)。分支为**v2.0.0**，假设程序运行的目录为“/path/to/sra\_test”，完整的目录结构应如下所示：
 
     ```text
     ├── configs                                                   // 存放对应算法和数据集配置文件
@@ -199,7 +197,7 @@ Faiss可对接KRL增强HNSW、PQFS、IVFPQ、IVFPQFS、IVFFLAT算法性能。用
     └── ivfpq_test                                                // 编译后生成的可执行文件
     ```
 
-2. <a name="li1673311431218"></a>获取数据集，存放于“/path/to/sra\_test/data“。
+2. <a name="li1673311431218"></a>获取数据集，存放于“/path/to/sra\_test/data”。
 
     ```bash
     cd /path/to/sra_test
@@ -216,7 +214,7 @@ Faiss可对接KRL增强HNSW、PQFS、IVFPQ、IVFPQFS、IVFFLAT算法性能。用
     yum install hdf5 hdf5-devel numactl numactl-devel
     ```
 
-2. 编译可执行文件。根据命令行提示输入Faiss安装路径及其他所需依赖所在路径。在提示“Enter extra compile defines“时输入“-I/path/to/krl/out/include/ -L/path/to/krl/out/lib/ -lkrl“，其中“/path/to/krl/out“为KRL的安装路径。
+2. 编译可执行文件。根据命令行提示输入Faiss安装路径及其他所需依赖所在路径。在提示“Enter extra compile defines”时输入“-I/path/to/krl/out/include/ -L/path/to/krl/out/lib/ -lkrl”，其中“/path/to/krl/out”为KRL的安装路径。
 
     ```bash
     cd /path/to/sra_test
@@ -231,22 +229,22 @@ Faiss可对接KRL增强HNSW、PQFS、IVFPQ、IVFPQFS、IVFFLAT算法性能。用
     >- IVFPQFS算法：**make ivfpqfs\_test**
     >- IVFFLAT算法：**make ivfflat\_test**
 
-3. 若是第一次执行，确保ivfpq\_sift-128-euclidean.config文件中的“save\_or\_load“为“save“；后续执行时可改为“load“，使用构建好的图索引或检索器查询。
+3. 若是第一次执行，确保ivfpq\_sift-128-euclidean.config文件中的“save\_or\_load”为“save”；后续执行时可改为“load”，使用构建好的图索引或检索器查询。
 4. 运行可执行文件。将OpenBLAS、Faiss与KRL动态库路径添加至环境变量。
 
     ```bash
     numactl -C 0-31 -m 0 ./ivfpq_test ivfpq sift-128-euclidean
     ```
 
-运行结果如下所示：
+   优化前运行结果如[**图 1** 优化前运行结果](#优化前运行结果)所示。
 
-<table>
-  <tr>
-    <td><img src="figures/quick_start-origin运行结果.jpg" alt="origin运行结果" width="500"/></td>
-    <td><img src="figures/quick_start-运行结果.jpg" alt="quick_start-运行结果" width="500"/></td>
-  </tr>
-  <tr>
-    <td align="center">优化前</td>
-    <td align="center">优化后</td>
-  </tr>
-</table>
+   **图 1** 优化前运行结果<a name="fig9931619182"></a><a id="优化前运行结果"></a>
+
+   ![](./figures/quick_start-origin运行结果.jpg "优化前运行结果")
+
+   优化后结果如[**图 2** 优化后运行结果](#优化后运行结果)所示。
+
+   **图 2** 优化后运行结果<a name="fig9931619182"></a><a id="优化后运行结果"></a>
+
+   ![](./figures/quick_start-运行结果.jpg "优化后运行结果")
+

@@ -39,7 +39,7 @@
     export CPLUS_INCLUDE_PATH=/usr/include/python3.9:$CPLUS_INCLUDE_PATH
     ```
 
-    上述配置环境变量命令中的路径“/usr/include/python3.9“为Python.h所在目录，用户操作过程中请以实际编译环境中的路径为准。
+    上述配置环境变量命令中的路径“/usr/include/python3.9”为Python.h所在目录，用户操作过程中请以实际编译环境中的路径为准。
 
 6. 准备KDNN头文件和静态库。
 
@@ -69,7 +69,7 @@
     bazel --output_user_root=../output build -c opt --define=enable_kdnn=true //tensorflow/tools/pip_package:build_pip_package
     ```
 
-    其中“../output“为指定的构建输出目录。
+    其中“../output”为指定的构建输出目录。
 
 10. 安装pip包。
 
@@ -84,7 +84,7 @@
 
 **适配步骤<a name="section39201312169"></a>**
 
-1. 获取oneDNN适配代码。假设“/path/to“   为当前拉取代码路径。
+1. 获取oneDNN适配代码。假设“/path/to”为当前拉取代码路径。
 
     ```bash
     git clone -b v3.1.0 https://gitcode.com/openeuler/kail_dnn_adapter.git
@@ -95,7 +95,7 @@
     patch -p1 < ../0001-kdnn-adapter.patch
     ```
 
-2. 进入“/path/to/kail\_dnn\_adapter“目录，编译oneDNN。
+2. 进入“/path/to/kail\_dnn\_adapter“”录，编译oneDNN。
 
     - 鲲鹏920 7280Z处理器
 
@@ -104,7 +104,7 @@
         sh build.sh --use_static_kdnn=off
         ```
 
-        选项“--use\_static\_kdnn=on/off“指定编译时使用KDNN静态库或者动态库，默认为“off“。
+        选项“--use\_static\_kdnn=on/off”指定编译时使用KDNN静态库或者动态库，默认为“off”。
 
     - 鲲鹏920新型号处理器（以毕昇编译器为例）
 
@@ -115,23 +115,23 @@
 
     编译产物路径。
 
-    libdnnl.so路径为：“out/oneDNN-open/build/src/“
+    libdnnl.so路径为：“out/oneDNN-open/build/src/”
 
     其依赖库的路径如下：
 
-    - ACL库相关so路径：“out/ComputeLibrary-23.11/build/“
-    - AI库相关so路径：“/usr/local/kdnn/lib/omp/libkdnn.so“
+    - ACL库相关so路径：“out/ComputeLibrary-23.11/build/”
+    - AI库相关so路径：“/usr/local/kdnn/lib/omp/libkdnn.so”
 
     单独链接libdnnl.so可以得到oneDNN v3.4.0的全部接口功能。
 
     >![](public_sys-resources/icon-note.gif) **说明：** 
-    >编译命令中，“--compiler=clang“表示使用毕昇编译器，默认使用GCC。
+    >编译命令中，“--compiler=clang”表示使用毕昇编译器，默认使用GCC。
 
 **适配后验证<a name="section193111321616"></a>**
 
 编译完成后，使用软件自带的测试用例运行和验证是否适配成功。
 
-1. 进入“/path/to/kail\_dnn\_adapter/out/llt/scripts“目录。
+1. 进入“/path/to/kail\_dnn\_adapter/out/llt/scripts”目录。
 
     ```bash
     cd /path/to/kail_dnn_adapter/out/llt/scripts

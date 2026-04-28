@@ -68,8 +68,6 @@
 
 ## 安装KBest
 
-### RPM安装
-
 本节提供RPM包安装KBest方法。请参照本节内容对KBest进行安装和验证。若操作过程中使用了RPM包管理工具支持，但本文档中未说明的参数，可能会引入未定义行为，请谨慎操作。
 
 **安装步骤<a name="section349212333315"></a>**
@@ -91,7 +89,7 @@
     rpm -ivh boostsra-kbest-xxxx.aarch64.rpm
     ```
 
-    安装结束后，自动追加环境变量LD\_LIBRARY\_PATH到“/etc/profile“中，即KBest的动态库文件所在目录“/usr/local/sra\_kbest/lib“。
+    安装结束后，自动追加环境变量LD\_LIBRARY\_PATH到“/etc/profile”中，即KBest的动态库文件所在目录“/usr/local/sra\_kbest/lib”。
 
     上述命令中涉及的 **_xxxx_** 代表版本号。
 
@@ -111,7 +109,7 @@
     source /etc/profile
     ```
 
-2. 查看环境变量LD\_LIBRARY\_PATH是否包含KBest的安装路径“/usr/local/sra\_kbest/lib“。
+2. 查看环境变量LD\_LIBRARY\_PATH是否包含KBest的安装路径“/usr/local/sra\_kbest/lib”。
 
     ```bash
     env | grep LD_LIBRARY_PATH
@@ -119,7 +117,7 @@
 
     如果变量包含安装路径，说明安装成功。
 
-    安装成功后在安装路径（默认路径是“/usr/local/sra\_kbest“）下生成相应文件，其中，“include“文件夹包含KBest的头文件，“lib“文件夹包含了KBest的动态库文件。
+    安装成功后在安装路径（默认路径是“/usr/local/sra\_kbest”）下生成相应文件，其中，“include”文件夹包含KBest的头文件，“lib”文件夹包含了KBest的动态库文件。
 
 3. 执行**pip** **show**命令确认kbest== **_xxxx_** 已安装。
 
@@ -129,7 +127,7 @@
 
     如果输出包含Name: kbest Version:  **_xxxx_**，则已安装成功。
 
-## 卸载KBest
+## （可选）卸载KBest
 
 **RPM包卸载<a name="section154931433123117"></a>**
 
@@ -141,8 +139,8 @@
     rpm -e boostsra-kbest
     ```
 
-2. 确认安装目录“/usr/local/sra\_kbest“被删除。
-3. 确认“/etc/profile“文件中无“/usr/local/sra\_kbest“相关环境变量。
+2. 确认安装目录“/usr/local/sra\_kbest”被删除。
+3. 确认“/etc/profile”文件中无“/usr/local/sra\_kbest”相关环境变量。
 
 **whl卸载<a name="section7493143393110"></a>**
 
