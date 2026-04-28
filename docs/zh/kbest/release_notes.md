@@ -141,7 +141,7 @@
 
 ### 使用注意事项
 
-请参见《[KBest安装指南](./installation_guide.md)》。
+请参见《[安装指南](./installation_guide.md)》。
 
 ## V25.3.0
 
@@ -149,7 +149,7 @@
 
 **新增特性<a name="section11862975"></a>**
 
-KBest新增鲲鹏950 7592C服务器兼容。
+KBest新增鲲鹏950 7592C处理器兼容。
 
 **修改特性<a name="section16450949161512"></a>**
 
@@ -317,35 +317,35 @@ KBest本次未更新，代码尚未开源，请您通过《KBest安装指南》�
 </th>
 </tr>
 </thead>
-<tbody><tr id="row19094280"><td class="cellrowborder" valign="top" width="45.019999999999996%" headers="mcps1.1.4.1.1 "><p id="p1341193722116"><a name="p1341193722116"></a><a name="p1341193722116"></a>《KBest 版本说明书》</p>
+<tbody><tr id="row19094280"><td class="cellrowborder" valign="top" width="45.019999999999996%" headers="mcps1.1.4.1.1 "><p id="p1341193722116"><a name="p1341193722116"></a><a name="p1341193722116"></a>《版本说明书》</p>
 </td>
 <td class="cellrowborder" valign="top" width="38.019999999999996%" headers="mcps1.1.4.1.2 "><p id="p2042183752117"><a name="p2042183752117"></a><a name="p2042183752117"></a>本文档提供KBest的版本发布信息。</p>
 </td>
 <td class="cellrowborder" valign="top" width="16.96%" headers="mcps1.1.4.1.3 "><p id="p1528591452515"><a name="p1528591452515"></a><a name="p1528591452515"></a>开源仓</p>
 </td>
 </tr>
-<tr id="row1269982415251"><td class="cellrowborder" valign="top" width="45.019999999999996%" headers="mcps1.1.4.1.1 "><p id="p55571628142511"><a name="p55571628142511"></a><a name="p55571628142511"></a>《KBest 快速入门》</p>
+<tr id="row1269982415251"><td class="cellrowborder" valign="top" width="45.019999999999996%" headers="mcps1.1.4.1.1 "><p id="p55571628142511"><a name="p55571628142511"></a><a name="p55571628142511"></a>《快速入门》</p>
 </td>
 <td class="cellrowborder" valign="top" width="38.019999999999996%" headers="mcps1.1.4.1.2 "><p id="p105571728182516"><a name="p105571728182516"></a><a name="p105571728182516"></a>本文档提供KBest快速上手指导。</p>
 </td>
 <td class="cellrowborder" valign="top" width="16.96%" headers="mcps1.1.4.1.3 "><p id="p555716285258"><a name="p555716285258"></a><a name="p555716285258"></a>开源仓</p>
 </td>
 </tr>
-<tr id="row1941037152117"><td class="cellrowborder" valign="top" width="45.019999999999996%" headers="mcps1.1.4.1.1 "><p id="p5143115122016"><a name="p5143115122016"></a><a name="p5143115122016"></a>《KBest 安装指南》</p>
+<tr id="row1941037152117"><td class="cellrowborder" valign="top" width="45.019999999999996%" headers="mcps1.1.4.1.1 "><p id="p5143115122016"><a name="p5143115122016"></a><a name="p5143115122016"></a>《安装指南》</p>
 </td>
 <td class="cellrowborder" valign="top" width="38.019999999999996%" headers="mcps1.1.4.1.2 "><p id="p1914345202019"><a name="p1914345202019"></a><a name="p1914345202019"></a>本文档提供KBest安装、部署指导。</p>
 </td>
 <td class="cellrowborder" valign="top" width="16.96%" headers="mcps1.1.4.1.3 "><p id="p102851314202514"><a name="p102851314202514"></a><a name="p102851314202514"></a>开源仓</p>
 </td>
 </tr>
-<tr id="row5905441132519"><td class="cellrowborder" valign="top" width="45.019999999999996%" headers="mcps1.1.4.1.1 "><p id="p106411642142518"><a name="p106411642142518"></a><a name="p106411642142518"></a>《KBest 最佳实践》</p>
+<tr id="row5905441132519"><td class="cellrowborder" valign="top" width="45.019999999999996%" headers="mcps1.1.4.1.1 "><p id="p106411642142518"><a name="p106411642142518"></a><a name="p106411642142518"></a>《 最佳实践》</p>
 </td>
 <td class="cellrowborder" valign="top" width="38.019999999999996%" headers="mcps1.1.4.1.2 "><p id="p1664115429257"><a name="p1664115429257"></a><a name="p1664115429257"></a>本文档提供KBest典型场景使用实践。</p>
 </td>
 <td class="cellrowborder" valign="top" width="16.96%" headers="mcps1.1.4.1.3 "><p id="p1564174242516"><a name="p1564174242516"></a><a name="p1564174242516"></a>开源仓</p>
 </td>
 </tr>
-<tr id="row1883793117585"><td class="cellrowborder" valign="top" width="45.019999999999996%" headers="mcps1.1.4.1.1 "><p id="p0672183518583"><a name="p0672183518583"></a><a name="p0672183518583"></a>《KBest API参考》</p>
+<tr id="row1883793117585"><td class="cellrowborder" valign="top" width="45.019999999999996%" headers="mcps1.1.4.1.1 "><p id="p0672183518583"><a name="p0672183518583"></a><a name="p0672183518583"></a>《API参考》</p>
 </td>
 <td class="cellrowborder" valign="top" width="38.019999999999996%" headers="mcps1.1.4.1.2 "><p id="p967215353582"><a name="p967215353582"></a><a name="p967215353582"></a>本文档提供KBest对外提供的API接口详细说明。</p>
 </td>

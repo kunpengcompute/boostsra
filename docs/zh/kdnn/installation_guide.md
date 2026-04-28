@@ -93,13 +93,13 @@
 **方法2：永久配置网络代理<a name="section49515065317"></a>**
 
 1. 修改profile文件。
-    1. 打开“/etc/profile“文件。
+    1. 打开“/etc/profile”文件。
 
         ```bash
         vi /etc/profile
         ```
 
-    2. 按“i“进入编辑模式，在“/etc/profile“文件中增加以下内容。
+    2. 按“i”进入编辑模式，在“/etc/profile”文件中增加以下内容。
 
         其中，用户名、密码、代理IP地址和代理端口请根据实际情况填写。
 
@@ -109,7 +109,7 @@
         export no_proxy=127.0.0.1,localhost,local,.local
         ```
 
-    3. 按“Esc“键，输入**:wq!**，按“Enter“保存并退出编辑。
+    3. 按“Esc”键，输入 **:wq!**，按“Enter”保存并退出编辑。
     4. 使代理生效。
 
         ```bash
@@ -138,11 +138,13 @@
 
 3. 安装编译器GCC 10.3.1或者GCC 12.3.1或者毕昇4.2.0。
 
-## 获取软件包
+## 安装KDNN
 
-安装KDNN之前请先从官网地址获取软件包，再进行软件包校验，确保与网站上的原始软件包一致。
+本文提供RPM包安装KDNN的方法，请参照本节内容对KDNN进行安装和验证。若使用了RPM包管理工具支持但本文档中未说明的参数，可能会引入未定义行为，因此请谨慎操作。
 
-1. 从鲲鹏社区获取对应的软件数字证书和软件安装包，用户解压zip文件后可获取RPM安装包。
+### 安装步骤
+
+1. 从GitCode开源仓获取对应的软件安装包，用户解压zip文件后可获取RPM安装包。
 
     **表 1** KDNN软件包获取列表<a id="KDNN软件包获取列表"></a>
 
@@ -157,49 +159,31 @@
     </thead>
     <tbody><tr id="zh-cn_topic_0000001784526702_row692mcpsimp"><td class="cellrowborder" valign="top" width="28.96%" headers="mcps1.2.4.1.1 "><p id="zh-cn_topic_0000001784526702_p694mcpsimp"><a name="zh-cn_topic_0000001784526702_p694mcpsimp"></a><a name="zh-cn_topic_0000001784526702_p694mcpsimp"></a>KDNN软件包（GCC版本）</p>
     </td>
-    <td class="cellrowborder" valign="top" width="32.04%" headers="mcps1.2.4.1.2 "><p id="zh-cn_topic_0000001784526702_p696mcpsimp"><a name="zh-cn_topic_0000001784526702_p696mcpsimp"></a><a name="zh-cn_topic_0000001784526702_p696mcpsimp"></a>BoostKit-boostcore-kdnn.3.1.0.zip<sup id="sup81399218186"><a name="sup81399218186"></a><a name="sup81399218186"></a>a</sup></p>
+    <td class="cellrowborder" valign="top" width="32.04%" headers="mcps1.2.4.1.2 "><p id="zh-cn_topic_0000001784526702_p696mcpsimp"><a name="zh-cn_topic_0000001784526702_p696mcpsimp"></a><a name="zh-cn_topic_0000001784526702_p696mcpsimp"></a>BoostKit-boostcore-kdnn.3.1.0.zip</p>
     </td>
     <td class="cellrowborder" valign="top" width="39%" headers="mcps1.2.4.1.3 "><p id="p125955276200"><a name="p125955276200"></a><a name="p125955276200"></a><a href="https://gitcode.com/boostkit/boostsra/releases/download/v1.2.0/BoostKit-boostcore-kdnn_3.1.0.zip" target="_blank" rel="noopener noreferrer">获取链接</a></p>
     </td>
     </tr>
     <tr id="row1487285541019"><td class="cellrowborder" valign="top" width="28.96%" headers="mcps1.2.4.1.1 "><p id="zh-cn_topic_0000001784526702_p708mcpsimp"><a name="zh-cn_topic_0000001784526702_p708mcpsimp"></a><a name="zh-cn_topic_0000001784526702_p708mcpsimp"></a>KDNN软件包（毕昇编译器版本）</p>
     </td>
-    <td class="cellrowborder" valign="top" width="32.04%" headers="mcps1.2.4.1.2 "><p id="zh-cn_topic_0000001784526702_p711mcpsimp"><a name="zh-cn_topic_0000001784526702_p711mcpsimp"></a><a name="zh-cn_topic_0000001784526702_p711mcpsimp"></a>BoostKit-boostcore-kdnn.3.0.0_bisheng.zip<sup id="sup195471318183"><a name="sup195471318183"></a><a name="sup195471318183"></a>a</sup></p>
+    <td class="cellrowborder" valign="top" width="32.04%" headers="mcps1.2.4.1.2 "><p id="zh-cn_topic_0000001784526702_p711mcpsimp"><a name="zh-cn_topic_0000001784526702_p711mcpsimp"></a><a name="zh-cn_topic_0000001784526702_p711mcpsimp"></a>BoostKit-boostcore-kdnn.3.0.0_bisheng.zip</p>
     </td>
     <td class="cellrowborder" valign="top" width="39%" headers="mcps1.2.4.1.3 "><p id="p141301730112014"><a name="p141301730112014"></a><a name="p141301730112014"></a><a href="https://gitcode.com/boostkit/boostsra/releases/download/v1.1.0/BoostKit-boostcore-kdnn_3.0.0_bisheng.zip" target="_blank" rel="noopener noreferrer">获取链接</a></p>
     </td>
     </tr>
-    <tr id="row1660012761511"><td class="cellrowborder" colspan="3" valign="top" headers="mcps1.2.4.1.1 mcps1.2.4.1.2 mcps1.2.4.1.3 "><p id="p1238171011299"><a name="p1238171011299"></a><a name="p1238171011299"></a>a：<span id="zh-cn_topic_0000001784116274_ph22354711282"><a name="zh-cn_topic_0000001784116274_ph22354711282"></a><a name="zh-cn_topic_0000001784116274_ph22354711282"></a>使用软件包前请先阅读<span id="zh-cn_topic_0000001784116274_zh-cn_topic_0000001784116274_ph16146198202211"><a name="zh-cn_topic_0000001784116274_zh-cn_topic_0000001784116274_ph16146198202211"></a><a name="zh-cn_topic_0000001784116274_zh-cn_topic_0000001784116274_ph16146198202211"></a>《<a href="https://www.hikunpeng.com/zh/legal/developer/boostkit/software/protocol" target="_blank" rel="noopener noreferrer">鲲鹏应用使能套件BoostKit用户许可协议 2.0</a>》</span>，如确认继续使用，则默认同意协议的条款和条件。</span></p>
-    </td>
-    </tr>
     </tbody>
     </table>
-
-2. <a name="zh-cn_topic_0000001784526702_li178091993411"></a>从[华为企业业务网站](https://support.huawei.com/enterprise/zh/tool/pgp-verify-TL1000000054)获取校验工具和校验方法。
-3. 参见[2](#zh-cn_topic_0000001784526702_li178091993411)中下载的《OpenPGP签名验证指南》进行软件包完整性检查。
-
-## 如何使用KDNN
-
-### 安装KDNN
-
-本文提供RPM包安装KDNN的方法，请参照本节内容对KDNN进行安装和验证。若使用了RPM包管理工具支持但本文档中未说明的参数，可能会引入未定义行为，因此请谨慎操作。
-
-**安装步骤<a name="section39201312169"></a>**
-
-1. 按照[获取软件包](#获取软件包)获取到KDNN软件包，解压后得到二进制RPM包。
 2. 安装KDNN。
 
     ```bash
     rpm -ivh boostcore-kdnn-xxxx.aarch64.rpm
     ```
 
-    安装结束后，AI库的头文件和静态库、动态库文件目录分别为“/usr/local/kdnn/include“和“/usr/local/kdnn/lib/threadpool“、“/usr/local/kdnn/lib/omp“。
+    安装结束后，AI库的头文件和静态库、动态库文件目录分别为“/usr/local/kdnn/include”和“/usr/local/kdnn/lib/threadpool”、“/usr/local/kdnn/lib/omp”。
 
-    上述命令中涉及的**_xxxx_**代表版本号。
+    上述命令中涉及的 **_xxxx_** 代表版本号。
 
-**安装后验证<a name="section193111321616"></a>**
-
-**验证KDNN**
+### 验证KDNN
 
 1. 执行**source**命令或重新登录终端让环境变量生效。
 
@@ -207,7 +191,7 @@
     source /etc/profile
     ```
 
-2. 查看环境变量LD\_LIBRARY\_PATH是否包含KDNN动态库的安装路径“/usr/local/kdnn/lib/omp“。
+2. 查看环境变量LD\_LIBRARY\_PATH是否包含KDNN动态库的安装路径“/usr/local/kdnn/lib/omp”。
 
     ```bash
     env | grep LD_LIBRARY_PATH
@@ -215,11 +199,11 @@
 
     如果变量包含安装路径，说明安装成功。
 
-    安装成功后在安装路径（默认路径是“/usr/local/kdnn“）下生成相应文件，其中，include文件夹包含子库的头文件，lib文件夹包含了KDNN库的静态库、动态库文件。
+    安装成功后在安装路径（默认路径是“/usr/local/kdnn”）下生成相应文件，其中，include文件夹包含子库的头文件，lib文件夹包含了KDNN库的静态库、动态库文件。
 
-**验证KDNN\_EXT**
+### 验证KDNN\_EXT
 
-1. 设置“PYTHONPATH“环境变量。
+1. 设置“PYTHONPATH”环境变量。
     - 使用单线程版本：
 
         ```bash
@@ -247,7 +231,7 @@
 
     如果回显中没有报错信息，说明KDNN\_EXT已经安装成功。
 
-### 卸载KDNN
+## （可选）卸载KDNN
 
 若不再需要使用KDNN，可卸载KDNN。若操作过程中使用了RPM包管理工具支持但本文档中未说明的参数，可能会引入未定义行为，请谨慎操作。
 
@@ -257,4 +241,4 @@
     rpm -e boostcore-kdnn
     ```
 
-2. 确认安装目录“/usr/local/kdnn“被删除。
+2. 确认安装目录“/usr/local/kdnn”被删除。

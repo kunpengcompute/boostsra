@@ -5,13 +5,13 @@
 - \[2026.03.30\]：KDNN新增基于MMLA指令的s8/u8数据类型MatMul实现；支持Post-ops（后处理操作）；支持FusedMatMul融合算子。
 - \[2025.12.30\]：KDNN新增MatMul的NEON实现，新增支持MatMul的自定义线程池模式，新增Group Normalization、SparseGemm深度神经网络算子的鲲鹏平台支持。
 - \[2025.06.30\]：KDNN新增Pool、Batch Normalization、Local Response Normalization、Reduction、PReLU、Binary、RNN深度神经网络算子的鲲鹏平台支持。新增支持鲲鹏920新型号处理器。
-- \[2024.12.30\]：KDNN新增reorder、resampling、concat、shuffle 4个深度神经网络算子的鲲鹏平台支持。
+- \[2024.12.30\]：KDNN新增reorder、resampling、concat、shuffle 4个深度神经网络算子的鲲鹏平台支持。KDNN\_EXT新增random_choice、softmax算子的鲲鹏平台支持。
 
 ## 项目介绍
 
-KDNN（Kunpeng Deep Neural Network Library）是华为提供的基于鲲鹏平台优化的高性能神经网络算子库，包含KDNN和KDNN\_EXT（Kunpeng Deep Neural Network Extension Library，鲲鹏深度神经网络算子扩展库），主要由C/C++、汇编语言实现。KDNN\_EXT扩展算子包括softmax、random\_choice等。KDNN的组成如[表1](#table113613052017)所示。
+KAIL（Kunpeng AI Library，鲲鹏AI算子库）是华为提供的基于鲲鹏平台优化的高性能AI算子库，包含KDNN（Kunpeng Deep Neural Network Library，鲲鹏深度神经网络算子库）和KDNN_EXT（Kunpeng Deep Neural Network Extension Library，鲲鹏深度神经网络算子扩展库）。主要由C/C++、汇编语言实现。KDNN\_EXT扩展算子包括softmax、random\_choice等。KAIL的组成如[表1](#table113613052017)所示。
 
-**表 1**  KDNN组成部分
+**表 1**  KAIL组成部分
 
 <a name="table113613052017"></a>
 <table><thead align="left"><tr id="row237018052015"><th class="cellrowborder" valign="top" width="12%" id="mcps1.2.5.1.1"><p id="p13701307204"><a name="p13701307204"></a><a name="p13701307204"></a>序号</p>
@@ -128,45 +128,33 @@ KDNN主要在以下场景中使用：
 ## 学习文档
 
 <a name="table11320174415582"></a>
-<table><thead align="left"><tr id="row532024445820"><th class="cellrowborder" valign="top" width="14.8014801480148%" id="mcps1.1.4.1.1"><p id="p10320944115815"><a name="p10320944115815"></a><a name="p10320944115815"></a>学习资源类别</p>
-</th>
-<th class="cellrowborder" valign="top" width="28.012801280128013%" id="mcps1.1.4.1.2"><p id="p14321184425814"><a name="p14321184425814"></a><a name="p14321184425814"></a>学习资源名称</p>
+<table><thead align="left"><tr id="row532024445820"><th class="cellrowborder" valign="top" width="28.012801280128013%" id="mcps1.1.4.1.2"><p id="p14321184425814"><a name="p14321184425814"></a><a name="p14321184425814"></a>学习资源名称</p>
 </th>
 <th class="cellrowborder" valign="top" width="57.18571857185718%" id="mcps1.1.4.1.3"><p id="p1932112447589"><a name="p1932112447589"></a><a name="p1932112447589"></a>学习资源简介</p>
 </th>
 </tr>
 </thead>
-<tbody><tr id="row183211844195812"><td class="cellrowborder" valign="top" width="14.8014801480148%" headers="mcps1.1.4.1.1 "><p id="p77463013710"><a name="p77463013710"></a><a name="p77463013710"></a>文档</p>
-</td>
-<td class="cellrowborder" valign="top" width="28.012801280128013%" headers="mcps1.1.4.1.2 "><p id="p132119442580"><a name="p132119442580"></a><a name="p132119442580"></a><a href="release_notes.md">版本说明书</a></p>
+<tbody><tr id="row183211844195812"><td class="cellrowborder" valign="top" width="28.012801280128013%" headers="mcps1.1.4.1.2 "><p id="p132119442580"><a name="p132119442580"></a><a name="p132119442580"></a><a href="release_notes.md">版本说明书</a></p>
 </td>
 <td class="cellrowborder" valign="top" width="57.18571857185718%" headers="mcps1.1.4.1.3 "><p id="p13321194412589"><a name="p13321194412589"></a><a name="p13321194412589"></a>提供KDNN每个发布版本的基础信息和特性更新信息。</p>
 </td>
 </tr>
-<tr id="row4533125512117"><td class="cellrowborder" valign="top" width="14.8014801480148%" headers="mcps1.1.4.1.1 "><p id="p19321184415819"><a name="p19321184415819"></a><a name="p19321184415819"></a>文档</p>
-</td>
-<td class="cellrowborder" valign="top" width="28.012801280128013%" headers="mcps1.1.4.1.2 "><p id="p032144418580"><a name="p032144418580"></a><a name="p032144418580"></a><a href="quick_start.md">快速入门</a></p>
+<tr id="row4533125512117"><td class="cellrowborder" valign="top" width="28.012801280128013%" headers="mcps1.1.4.1.2 "><p id="p032144418580"><a name="p032144418580"></a><a name="p032144418580"></a><a href="quick_start.md">快速入门</a></p>
 </td>
 <td class="cellrowborder" valign="top" width="57.18571857185718%" headers="mcps1.1.4.1.3 "><p id="p83216449586"><a name="p83216449586"></a><a name="p83216449586"></a>提供KDNN快速入门指导。</p>
 </td>
 </tr>
-<tr id="row6321164455815"><td class="cellrowborder" valign="top" width="14.8014801480148%" headers="mcps1.1.4.1.1 "><p id="p9991857717"><a name="p9991857717"></a><a name="p9991857717"></a>文档</p>
-</td>
-<td class="cellrowborder" valign="top" width="28.012801280128013%" headers="mcps1.1.4.1.2 "><p id="p14321104418585"><a name="p14321104418585"></a><a name="p14321104418585"></a><a href="installation_guide.md">安装指南</a></p>
+<tr id="row6321164455815"><td class="cellrowborder" valign="top" width="28.012801280128013%" headers="mcps1.1.4.1.2 "><p id="p14321104418585"><a name="p14321104418585"></a><a name="p14321104418585"></a><a href="installation_guide.md">安装指南</a></p>
 </td>
 <td class="cellrowborder" valign="top" width="57.18571857185718%" headers="mcps1.1.4.1.3 "><p id="p1332134420587"><a name="p1332134420587"></a><a name="p1332134420587"></a>提供KDNN编译安装的详细指导。</p>
 </td>
 </tr>
-<tr id="row13219448585"><td class="cellrowborder" valign="top" width="14.8014801480148%" headers="mcps1.1.4.1.1 "><p id="p131000513714"><a name="p131000513714"></a><a name="p131000513714"></a>文档</p>
-</td>
-<td class="cellrowborder" valign="top" width="28.012801280128013%" headers="mcps1.1.4.1.2 "><p id="p5321124418587"><a name="p5321124418587"></a><a name="p5321124418587"></a><a href="api_reference.md">API参考</a></p>
+<tr id="row13219448585"><td class="cellrowborder" valign="top" width="28.012801280128013%" headers="mcps1.1.4.1.2 "><p id="p5321124418587"><a name="p5321124418587"></a><a name="p5321124418587"></a><a href="api_reference.md">API参考</a></p>
 </td>
 <td class="cellrowborder" valign="top" width="57.18571857185718%" headers="mcps1.1.4.1.3 "><p id="p53214445588"><a name="p53214445588"></a><a name="p53214445588"></a>提供KDNN提供的API接口定义、接口说明、接口调用示例等。</p>
 </td>
 </tr>
-<tr id="row1632118447589"><td class="cellrowborder" valign="top" width="14.8014801480148%" headers="mcps1.1.4.1.1 "><p id="p1510111511718"><a name="p1510111511718"></a><a name="p1510111511718"></a>文档</p>
-</td>
-<td class="cellrowborder" valign="top" width="28.012801280128013%" headers="mcps1.1.4.1.2 "><p id="p183213445582"><a name="p183213445582"></a><a name="p183213445582"></a><a href="best_practices.md">最佳实践</a></p>
+<tr id="row1632118447589"><td class="cellrowborder" valign="top" width="28.012801280128013%" headers="mcps1.1.4.1.2 "><p id="p183213445582"><a name="p183213445582"></a><a name="p183213445582"></a><a href="best_practices.md">最佳实践</a></p>
 </td>
 <td class="cellrowborder" valign="top" width="57.18571857185718%" headers="mcps1.1.4.1.3 "><p id="p232174455818"><a name="p232174455818"></a><a name="p232174455818"></a>提供KDNN使用的实践案例。</p>
 </td>

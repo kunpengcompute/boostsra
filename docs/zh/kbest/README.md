@@ -2,7 +2,7 @@
 
 ## 最新消息
 
-- \[2025.12.30\]：KBest新增鲲鹏950 7592C服务器兼容。
+- \[2025.12.30\]：KBest新增鲲鹏950 7592C处理器兼容。
 - \[2025.06.30\]：KBest算法性能优化，新增SetEarlyStoppingParams接口，Add接口和构造函数KBest。
 - \[2025.03.30\]：KBest新增SaveGraph/LoadGraph接口、Serialize/Deserialize接口、BuildSearcher及GetNTotal和GetDim接口，并且修改Add、Save和Load接口，目前已对接Milvus使用。
 - \[2024.12.30\]：新增鲲鹏自研的高效的图检索算法KBest（Kunpeng Blazing-fast embedding similarity search thruster）。
@@ -13,41 +13,35 @@ KBest（Kunpeng Blazing-fast embedding similarity search thruster）鲲鹏召回
 
 ## 版本说明
 
-关于KBest算法的版本更新情况请参见[《版本说明书》](./release_notes.md)。
+关于KBest算法的版本更新情况请参见《[版本说明书](./release_notes.md)》。
 
 ## 学习文档
 
 <table>
 <thead align="left">
 <tr id="row532024445820">
-<th class="cellrowborder" valign="top" width="14.8014801480148%" id="mcps1.1.4.1.1"><p id="p10320944115815">学习资源类别</p></th>
 <th class="cellrowborder" valign="top" width="28.012801280128013%" id="mcps1.1.4.1.2"><p id="p14321184425814">学习资源名称</p></th>
 <th class="cellrowborder" valign="top" width="57.18571857185718%" id="mcps1.1.4.1.3"><p id="p1932112447589">学习资源简介</p></th>
 </tr>
 </thead>
 <tbody>
 <tr id="row183211844195812">
-<td class="cellrowborder" valign="top" width="14.8014801480148%" headers="mcps1.1.4.1.1"><p id="p77463013710">文档</p></td>
 <td class="cellrowborder" valign="top" width="28.012801280128013%" headers="mcps1.1.4.1.2"><p id="p132119442580"><a href="./release_notes.md">版本说明书</a></p></td>
 <td class="cellrowborder" valign="top" width="57.18571857185718%" headers="mcps1.1.4.1.3"><p id="p13321194412589">提供KBest每个发布版本的基础信息和特性更新信息。</p></td>
 </tr>
 <tr id="row18632162163420">
-<td class="cellrowborder" valign="top" width="14.8014801480148%" headers="mcps1.1.4.1.1"><p id="p186331521183417">文档</p></td>
 <td class="cellrowborder" valign="top" width="28.012801280128013%" headers="mcps1.1.4.1.2"><p id="p863317218347"><a href="./quick_start.md">快速入门</a></p></td>
 <td class="cellrowborder" valign="top" width="57.18571857185718%" headers="mcps1.1.4.1.3"><p id="p26331921183410">提供KBest快速上手使用指导。</p></td>
 </tr>
 <tr id="row6321164455815">
-<td class="cellrowborder" valign="top" width="14.8014801480148%" headers="mcps1.1.4.1.1"><p id="p9991857717">文档</p></td>
 <td class="cellrowborder" valign="top" width="28.012801280128013%" headers="mcps1.1.4.1.2"><p id="p14321104418585"><a href="./installation_guide.md">安装指南</a></p></td>
 <td class="cellrowborder" valign="top" width="57.18571857185718%" headers="mcps1.1.4.1.3"><p id="p1332134420587">提供KBest编译安装的详细指导。</p></td>
 </tr>
 <tr id="row13219448585">
-<td class="cellrowborder" valign="top" width="14.8014801480148%" headers="mcps1.1.4.1.1"><p id="p131000513714">文档</p></td>
 <td class="cellrowborder" valign="top" width="28.012801280128013%" headers="mcps1.1.4.1.2"><p id="p5321124418587"><a href="./best_practices.md">最佳实践</a></p></td>
 <td class="cellrowborder" valign="top" width="57.18571857185718%" headers="mcps1.1.4.1.3"><p id="p232174455818">提供KBest使用的实践案例。</p></td>
 </tr>
 <tr id="row1632118447589">
-<td class="cellrowborder" valign="top" width="14.8014801480148%" headers="mcps1.1.4.1.1"><p id="p1510111511718">文档</p></td>
 <td class="cellrowborder" valign="top" width="28.012801280128013%" headers="mcps1.1.4.1.2"><p id="p183213445582"><a href="./api_reference.md">API参考</a></p></td>
 <td class="cellrowborder" valign="top" width="57.18571857185718%" headers="mcps1.1.4.1.3"><p id="p53214445588">提供KBest提供的API接口定义、接口说明、接口调用示例等。</p></td>
 </tr>

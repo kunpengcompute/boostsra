@@ -6,7 +6,7 @@
 
 **获取数据集与测试程序<a name="section5124167418"></a>**
 
-1. 获取[测试程序](https://atomgit.com/openeuler/sra_test.git)。分支为**v2.0.0**，假设程序运行的目录为“/path/to/sra\_test“，完整的目录结构应如下所示。
+1. 获取[测试程序](https://atomgit.com/openeuler/sra_test.git)。分支为**v2.0.0**，假设程序运行的目录为“/path/to/sra\_test”，完整的目录结构应如下所示。
 
     ```text
     ├── configs                                                   // 存放对应算法和数据集配置文件
@@ -32,7 +32,7 @@
     └── kbest_test                                                // 编译后生成的可执行文件
     ```
 
-2. <a name="li1673311431218"></a>获取数据集，存放于“/path/to/sra\_test/data“。
+2. <a name="li1673311431218"></a>获取数据集，存放于“/path/to/sra\_test/data”。
 
     ```bash
     cd /path/to/sra_test
@@ -56,7 +56,7 @@
     make kbest_test
     ```
 
-4. 若是第一次执行，确保kbest\_sift-128-euclidean.config文件中的“save\_or\_load“为“save“；后续执行时可改为“load“，使用构建好的图索引查询。
+4. 若是第一次执行，确保kbest\_sift-128-euclidean.config文件中的“save\_or\_load”为“save”；后续执行时可改为“load”，使用构建好的图索引查询。
 5. 运行可执行文件。
 
     ```bash
