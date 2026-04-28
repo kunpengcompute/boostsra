@@ -234,13 +234,8 @@
 <td class="cellrowborder" valign="top" width="40.32%" headers="mcps1.1.4.1.2"><p id="p2042183752117">提供KRL的版本发布信息。</p></td>
 <td class="cellrowborder" valign="top" width="16.96%" headers="mcps1.1.4.1.3"><p id="p13623131318111">开源仓</p></td>
 </tr>
-<tr id="row1612315613200">
-<td class="cellrowborder" valign="top" width="42.72%" headers="mcps1.1.4.1.1"><p id="p1012395613204">《快速入门》</p></td>
-<td class="cellrowborder" valign="top" width="40.32%" headers="mcps1.1.4.1.2"><p id="p15918183742018">提供KRL的快速入门指导。</p></td>
-<td class="cellrowborder" valign="top" width="16.96%" headers="mcps1.1.4.1.3"><p id="p18232175511192">开源仓</p></td>
-</tr>
 <tr id="row1941037152117">
-<td class="cellrowborder" valign="top" width="42.72%" headers="mcps1.1.4.1.1"><p id="p5143115122016">《安装指南》</p></td>
+<td class="cellrowborder" valign="top" width="42.72%" headers="mcps1.1.4.1.1"><p id="p5143115122016">《用户指南》</p></td>
 <td class="cellrowborder" valign="top" width="40.32%" headers="mcps1.1.4.1.2"><p id="p1914345202019">提供KRL安装部署等开发指导。</p></td>
 <td class="cellrowborder" valign="top" width="16.96%" headers="mcps1.1.4.1.3"><p id="p8622131312113">开源仓</p></td>
 </tr>
