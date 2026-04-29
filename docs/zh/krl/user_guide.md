@@ -48,7 +48,7 @@
 
 本节提供RPM包安装KRL方法。请参照本节内容对KRL进行安装和安装后验证。若操作过程中使用了RPM包管理工具支持但本文档中未说明的参数，可能会引入未定义行为，请谨慎操作。
 
-1. 从GitCode仓获取对应的鲲鹏检索算子库软件安装包[BoostKit-boostsra-krl\_1.1.0.zip](https://gitcode.com/boostkit/boostsra/releases/download/v1.1.0/BoostKit-SRA_KRL-1.1.0.zip)，用户解压zip文件后可获取RPM安装包。
+1. 从GitCode仓获取对应的鲲鹏检索算子库软件安装包[BoostKit-boostsra-krl\_1.0.0.zip](https://gitcode.com/boostkit/boostsra/releases/download/v1.0.0/BoostKit-SRA_KRL-1.0.0.zip)，用户解压zip文件后可获取RPM安装包。
 
     >![](public_sys-resources/icon-note.gif) **说明：** 
     >- KRL软件包结构如下所示。
