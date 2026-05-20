@@ -111,13 +111,21 @@ Faiss可对接KRL增强HNSW、PQFS、IVFPQ、IVFPQFS、IVFFLAT算法性能。用
     git clone --branch v1.8.0 --single-branch https://github.com/facebookresearch/faiss.git
     ```
 
-2. 安装Make、CMake、GCC 12。GCC 12安装步骤适用于openEuler 22.03 LTS SP3系统，openEuler 24.03 LTS SP3系统自带GCC 12，仅安装Make、CMake。
+2. 安装Make、CMake、GCC 12。
 
-    ```bash
-    yum install make cmake gcc-toolset-12-gcc gcc-toolset-12-gcc-c++ gcc-toolset-12-libstdc++-static gcc-toolset-12-gcc-gfortran
-    export PATH=/opt/openEuler/gcc-toolset-12/root/usr/bin/:$PATH
-    export LD_LIBRARY_PATH=/opt/openEuler/gcc-toolset-12/root/usr/lib64/:$LD_LIBRARY_PATH
-    ```
+    - openEuler 22.03 LTS SP3系统
+
+      ```bash
+      yum install make cmake gcc-toolset-12-gcc gcc-toolset-12-gcc-c++ gcc-toolset-12-libstdc++-static gcc-toolset-12-gcc-gfortran
+      export PATH=/opt/openEuler/gcc-toolset-12/root/usr/bin/:$PATH
+      export LD_LIBRARY_PATH=/opt/openEuler/gcc-toolset-12/root/usr/lib64/:$LD_LIBRARY_PATH
+      ```
+
+    - openEuler 24.03 LTS SP3系统
+
+      ```bash
+      yum install make cmake gcc g++
+      ```
 
 3. <a name="li84129301112"></a>Faiss依赖数学库，从[Github仓](https://github.com/OpenMathLib/OpenBLAS.git)下载开源OpenBLAS源代码，标签为**v0.3.29**。保存在编译机器可访问的路径中，假设位于“/path/to/OpenBLAS-0.3.29”。
 
@@ -247,4 +255,3 @@ Faiss可对接KRL增强HNSW、PQFS、IVFPQ、IVFPQFS、IVFFLAT算法性能。用
    **图 2** 优化后运行结果<a name="fig9931619182"></a><a id="优化后运行结果"></a>
 
    ![](./figures/quick_start-运行结果.jpg "优化后运行结果")
-

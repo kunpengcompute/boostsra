@@ -49,7 +49,7 @@
     yum install hdf5 hdf5-devel numactl numactl-devel
     ```
 
-2. 请参考[《KBest安装指南》](./installation_guide.md)编译安装KBest。
+2. 请参考《[安装指南](./installation_guide.md)》编译安装KBest。
 3. 编译可执行文件。根据命令行提示输入KBest安装路径及其他所需依赖所在路径。
 
     ```bash
@@ -79,7 +79,7 @@ KBest算法可对接Milvus数据库（2.4.5版本）使用，在保证高召回�
 
 2. 将补丁文件合入到Milvus中全量编译。
 
-    请参见《[Milvus数据库KBest优化 特性指南](https://www.hikunpeng.com/document/detail/zh/kunpengdbs/appAccelFeatures/milvuskbestop/kunpeng_kbest_43_002.html)》。
+    请参见《[Milvus KBest优化 特性指南](https://www.hikunpeng.com/document/detail/zh/boostdb/milvus/milvuskbestop/docs/zh/milvus_kbest_optimization_feature_guide.md)》。
 
 3. 使用ann-benchmarks测试。
 
