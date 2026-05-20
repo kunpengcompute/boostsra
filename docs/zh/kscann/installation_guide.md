@@ -39,7 +39,7 @@
 
 ## 安装KScaNN
 
-本节提供RPM包安装KRL方法。请参照本节内容对KRL进行安装和安装后验证。若操作过程中使用了RPM包管理工具支持但本文档中未说明的参数，可能会引入未定义行为，请谨慎操作。
+本节提供RPM包安装KScaNN方法。请参照本节内容对KScaNN进行安装和安装后验证。若操作过程中使用了RPM包管理工具支持但本文档中未说明的参数，可能会引入未定义行为，请谨慎操作。
 
 1. 从GitCode获取KScaNN软件包[BoostKit-boostsra-kscann\_2.2.0.zip](https://gitcode.com/boostkit/boostsra/releases/download/v1.1.0/BoostKit-boostsra-kscann_2.2.0.zip)，解压后得到二进制RPM包。
 
@@ -92,7 +92,7 @@ KScaNN依赖基于鲲鹏优化的开源ScaNN以提供完整的功能。因此安
     ```
 
 4. ScaNN依赖AVX2KI库，因此需要通过以下步骤安装AVX2KI的RPM包。
-    1. 安装AVX2KI之前请先从[鲲鹏社区](https://www.hikunpeng.com/developer/boostkit/library/detail?subtab=AVX2KI)获取软件包，再进行软件包校验，确保与网站上的原始软件包一致，用户解压zip文件后可获取RPM安装包。
+    1. 安装AVX2KI之前请先从[鲲鹏社区](https://www.hikunpeng.com/boostkit/download?version=25.3.0&suiteType=BoostCore%E5%9F%BA%E7%A1%80%E5%8A%A0%E9%80%9F&subType=KSL+%E7%B3%BB%E7%BB%9F%E5%BA%93)获取软件包，再进行软件包校验，确保与网站上的原始软件包一致，用户解压zip文件后可获取RPM安装包。
 
         >![](public_sys-resources/icon-notice.gif) **须知：** 
         >使用软件包前请先阅读《[鲲鹏应用使能套件BoostKit用户许可协议 2.0](https://www.hikunpeng.com/zh/legal/developer/boostkit/software/protocol)》，如确认继续使用，则默认同意协议的条款和条件。
@@ -189,7 +189,7 @@ KScaNN依赖基于鲲鹏优化的开源ScaNN以提供完整的功能。因此安
         wget https://mirrors.huaweicloud.com/kunpeng/archive/compiler/kunpeng_gcc/gcc-12.3.1-2025.06-aarch64-linux.tar.gz --no-check-certificate
         ```
 
-    2. 请参见《GCC for openEuler 用户指南》的[安装GCC for openEuler](https://www.hikunpeng.com/document/detail/zh/kunpengdevps/compiler/ug-hgcc/kunpenghgcc_06_0004.html)章节完成安装。
+    2. 请参见《GCC for openEuler 用户指南》的[安装GCC for openEuler](https://www.hikunpeng.com/document/detail/zh/kunpengdevps/compilation/ug-hgcc/kunpenghgcc_06_0004.html)章节完成安装。
 
         ```bash
         export CC=/opt/aarch64/compiler/gcc-12.3.1-2025.06-aarch64-linux/bin/gcc

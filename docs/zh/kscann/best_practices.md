@@ -84,7 +84,7 @@ project.sh                                                          // 编译脚
 
 **测试步骤<a name="section080205934220"></a>**
 
-1. 请确保参考[《KScaNN 安装指南》](./installation_guide.md)已编译成功libscann\_cc.so。
+1. 请确保参考《[安装指南](./installation_guide.md)》已编译成功libscann\_cc.so。
 2. 安装CMake。
 
     ```bash
@@ -185,7 +185,7 @@ KScaNN算法通过动态库内联、低比特量化、检索算子、向量化�
 
 2. 将补丁文件合入到Milvus中全量编译。
 
-    请参见《[Milvus数据库KScaNN优化 特性指南](https://www.hikunpeng.com/document/detail/zh/kunpengdbs/appAccelFeatures/Milvuskscannop/kunpeng_kscann_tx_64_002.html)》。
+    请参见《[Milvus KScaNN优化 特性指南](https://www.hikunpeng.com/document/detail/zh/boostdb/milvus/Milvuskscannop/docs/zh/milvus_kscann_optimization_feature_guide.md)》。
 
 3. 使用ann-benchmarks测试。
 
