@@ -311,7 +311,7 @@ None
   </thead>
   <tbody>
     <tr id="row1341193722116">
-      <td class="cellrowborder" valign="top" width="45.02%" headers="mcps1.1.4.1.1">Release Notes</p>
+      <td class="cellrowborder" valign="top" width="45.02%" headers="mcps1.1.4.1.1"><p>Release Notes</p>
       </td>
       <td class="cellrowborder" valign="top" width="38.02%" headers="mcps1.1.4.1.2">
         <p>Provides version release information of KDNN.</p>

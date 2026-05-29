@@ -53,7 +53,6 @@ Other <th class="cellrowborder" valign="top" width="27.250000000000004%" id="mcp
 </tr>
 <tr id="zh-cn_topic_0000002483307829_row181811714214"><td class="cellrowborder" valign="top" width="21.8%" headers="mcps1.2.6.1.1 "><p id="p575574814317"><a name="p575574814317"></a><a name="p575574814317"></a>openEuler 22.03 LTS SP3</p>
 </td>
-
 <td class="cellrowborder" valign="top" width="19.91%" headers="mcps1.2.6.1.2 "><p id="p4371843154314"><a name="p4371843154314"></a><a name="p4371843154314"></a>New Kunpeng 920 processor model</p>
 </td>
 <td class="cellrowborder" valign="top" width="13.700000000000001%" headers="mcps1.2.6.1.3 "><p id="p17897637144312"><a name="p17897637144312"></a><a name="p17897637144312"></a>16 * 32GB</p>
@@ -62,6 +61,7 @@ Other <th class="cellrowborder" valign="top" width="27.250000000000004%" id="mcp
 </td>
 <td class="cellrowborder" valign="top" width="27.250000000000004%" headers="mcps1.2.6.1.5 "><a name="zh-cn_topic_0000002483307829_ul491101924211"></a><a name="zh-cn_topic_0000002483307829_ul491101924211"></a><ul id="zh-cn_topic_0000002483307829_ul491101924211"><li>CMake&gt;=3.22.0</li><li>GLIBCXX&gt;=3.4.28</li><li>Python 3.9.x</li></ul>
 </td>
+</tr>
 <tbody><tr id="zh-cn_topic_0000002483307829_row179603146519"><td class="cellrowborder" valign="top" width="20.86%" headers="mcps1.2.6.1.1 "><p id="zh-cn_topic_0000002483307829_p896011141252"><a name="zh-cn_topic_0000002483307829_p896011141252"></a><a name="zh-cn_topic_0000002483307829_p896011141252"></a>openEuler 24.03 LTS SP3</p>
 </td>
 <td class="cellrowborder" valign="top" width="20.150000000000002%" headers="mcps1.2.6.1.2 "><p id="zh-cn_topic_0000002483307829_p1496010143513"><a name="zh-cn_topic_0000002483307829_p1496010143513"></a><a name="zh-cn_topic_0000002483307829_p1496010143513"></a>Kunpeng 950 processor</p>
