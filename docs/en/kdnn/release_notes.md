@@ -368,4 +368,4 @@ None
 
 ### Obtaining Documentation
 
-Visit the [open-source repository](https://gitcode.com/boostkit/kdnn) to view or download related documents.
+Visit the [open-source repository](https://gitcode.com/boostkit/boostsra/blob/master/docs/en/kdnn/README.md) to view or download related documents.

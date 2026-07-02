@@ -49,7 +49,7 @@ This document provides details on how to call the KBest algorithm API in C++. In
     yum install hdf5 hdf5-devel numactl numactl-devel
     ```
 
-2. Compile and install KBest as described in [KBest Installation Guide](./installation_guide.md).
+2. Compile and install KBest as described in [Installation Guide](./installation_guide.md).
 3. Build the executable file. Enter the KBest installation path and the paths to other required dependencies as prompted.
 
     ```bash

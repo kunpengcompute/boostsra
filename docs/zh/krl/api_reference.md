@@ -250,21 +250,21 @@ KRL提供的接口如[**表 1** KRL提供的接口](#KRL提供的接口)所示�
 </td>
 <td class="cellrowborder" valign="top" width="23.380000000000003%" headers="mcps1.2.4.1.2 "><p id="p196762119202"><a name="p196762119202"></a><a name="p196762119202"></a>krl_table_lookup_8b_f32</p>
 </td>
-<td class="cellrowborder" valign="top" width="63.56%" headers="mcps1.2.4.1.3 "><p id="p126761515204"><a name="p126761515204"></a><a name="p126761515204"></a>使用8bit索引在float类型表项中查询距离并累和，将累和结果加上dis0后存入distance。</p>
+<td class="cellrowborder" valign="top" width="63.56%" headers="mcps1.2.4.1.3 "><p id="p126761515204"><a name="p126761515204"></a><a name="p126761515204"></a>使用8bit索引在float类型表项中查询距离并累和，将累和结果加上dis0后存入dis。</p>
 </td>
 </tr>
 <tr id="row1380243132018"><td class="cellrowborder" valign="top" width="13.059999999999999%" headers="mcps1.2.4.1.1 "><p id="p3506620151918"><a name="p3506620151918"></a><a name="p3506620151918"></a>8bit查表累和接口</p>
 </td>
 <td class="cellrowborder" valign="top" width="23.380000000000003%" headers="mcps1.2.4.1.2 "><p id="p28034302020"><a name="p28034302020"></a><a name="p28034302020"></a>krl_table_lookup_8b_f32_by_idx</p>
 </td>
-<td class="cellrowborder" valign="top" width="63.56%" headers="mcps1.2.4.1.3 "><p id="p4803034206"><a name="p4803034206"></a><a name="p4803034206"></a>使用8bit索引在float类型表项中查询距离并累和，将累和结果加上dis0后存入distance。ID在idx数组中出现的底库向量结果才会参与计算。</p>
+<td class="cellrowborder" valign="top" width="63.56%" headers="mcps1.2.4.1.3 "><p id="p4803034206"><a name="p4803034206"></a><a name="p4803034206"></a>使用8bit索引在float类型表项中查询距离并累和，将累和结果加上dis0后存入dis。ID在idx数组中出现的底库向量结果才会参与计算。</p>
 </td>
 </tr>
 <tr id="row13704145182016"><td class="cellrowborder" valign="top" width="13.059999999999999%" headers="mcps1.2.4.1.1 "><p id="p45071220161916"><a name="p45071220161916"></a><a name="p45071220161916"></a>8bit查表累和接口</p>
 </td>
 <td class="cellrowborder" valign="top" width="23.380000000000003%" headers="mcps1.2.4.1.2 "><p id="p270425132019"><a name="p270425132019"></a><a name="p270425132019"></a>krl_table_lookup_8b_f32_with_handle</p>
 </td>
-<td class="cellrowborder" valign="top" width="63.56%" headers="mcps1.2.4.1.3 "><p id="p27041512013"><a name="p27041512013"></a><a name="p27041512013"></a>使用8bit索引在float类型表项中查询距离并累和，将累和结果加上dis0后存入distance。idx数组与distance数组被包含在KRLLUT8bHandle实例中，ID在idx数组中出现的底库向量结果才会参与计算。</p>
+<td class="cellrowborder" valign="top" width="63.56%" headers="mcps1.2.4.1.3 "><p id="p27041512013"><a name="p27041512013"></a><a name="p27041512013"></a>使用8bit索引在float类型表项中查询距离并累和，将累和结果加上dis0后存入dis。idx数组与dis数组被包含在KRLLUT8bHandle实例中，ID在idx数组中出现的底库向量结果才会参与计算。</p>
 </td>
 </tr>
 <tr id="row1040647122014"><td class="cellrowborder" valign="top" width="13.059999999999999%" headers="mcps1.2.4.1.1 "><p id="p46851630141710"><a name="p46851630141710"></a><a name="p46851630141710"></a>4bit查表累和接口</p>
@@ -369,7 +369,7 @@ KRL提供的接口如[**表 1** KRL提供的接口](#KRL提供的接口)所示�
 </td>
 <td class="cellrowborder" valign="top" width="23.380000000000003%" headers="mcps1.2.4.1.2 "><p id="p1120132012282"><a name="p1120132012282"></a><a name="p1120132012282"></a>krl_pack_codes_4b</p>
 </td>
-<td class="cellrowborder" valign="top" width="63.56%" headers="mcps1.2.4.1.3 "><p id="p16427162162010"><a name="p16427162162010"></a><a name="p16427162162010"></a>单独处理数据类型为fp16的查询向量的4比特查表累和过滤压缩算子。计算1个查询向量与多个底库向量间的内积距离，距离的初始值为dis_f16。此接口不会进行过滤压缩（与阈值进行比较）。</p>
+<td class="cellrowborder" valign="top" width="63.56%" headers="mcps1.2.4.1.3 "><p id="p16427162162010"><a name="p16427162162010"></a><a name="p16427162162010"></a>将原始4比特码本数据进行打包处理，以便进行快速查表计算。</p>
 </td>
 </tr>
 <tr id="row_pqfs_unpack_codes_idx"><td class="cellrowborder" valign="top" width="13.059999999999999%" headers="mcps1.2.4.1.1 "><p id="p_pqfs_unpack_cat"><a name="p_pqfs_unpack_cat"></a><a name="p_pqfs_unpack_cat"></a>4bit查表累和接口</p>
@@ -649,7 +649,7 @@ int krl\_create\_reorder\_handle\(KRLDistanceHandle\*\* kdh, size\_t accu\_level
 </td>
 <td class="cellrowborder" valign="top" width="14.591459145914593%" headers="mcps1.1.5.1.2 "><p id="p5893141517919"><a name="p5893141517919"></a><a name="p5893141517919"></a>size_t</p>
 </td>
-<td class="cellrowborder" valign="top" width="30.29302930293029%" headers="mcps1.1.5.1.3 "><p id="p10230433115013"><a name="p10230433115013"></a><a name="p10230433115013"></a>低精度粗排量化等级。</p>
+<td class="cellrowborder" valign="top" width="30.29302930293029%" headers="mcps1.1.5.1.3 "><p id="p10230433115013"><a name="p10230433115013"></a><a name="p10230433115013"></a>低精度粗排量化等级，用于重排前的粗排阶段。</p>
 </td>
 <td class="cellrowborder" valign="top" width="39.55395539553955%" headers="mcps1.1.5.1.4 "><p id="p77289581198"><a name="p77289581198"></a><a name="p77289581198"></a>[1,3]，取值表示不同的量化等级：</p>
 <a name="ul164886121012"></a><a name="ul164886121012"></a><ul id="ul164886121012"><li>1：int8。</li><li>2：fp16。</li><li>3：fp32。</li></ul>
@@ -697,7 +697,7 @@ int krl\_create\_reorder\_handle\(KRLDistanceHandle\*\* kdh, size\_t accu\_level
 </td>
 <td class="cellrowborder" valign="top" width="14.591459145914593%" headers="mcps1.1.5.1.2 "><p id="p19131103031011"><a name="p19131103031011"></a><a name="p19131103031011"></a>const uint8_t*</p>
 </td>
-<td class="cellrowborder" valign="top" width="30.29302930293029%" headers="mcps1.1.5.1.3 "><p id="p55461255161011"><a name="p55461255161011"></a><a name="p55461255161011"></a>底库向量（float）。</p>
+<td class="cellrowborder" valign="top" width="30.29302930293029%" headers="mcps1.1.5.1.3 "><p id="p55461255161011"><a name="p55461255161011"></a><a name="p55461255161011"></a>底库向量编码数据。</p>
 </td>
 <td class="cellrowborder" valign="top" width="39.55395539553955%" headers="mcps1.1.5.1.4 "><p id="p213293001016"><a name="p213293001016"></a><a name="p213293001016"></a>限制长度为codes_size，其中<span class="parmname" id="parmname17671637191415"><a name="parmname17671637191415"></a><a name="parmname17671637191415"></a>“codes_size”</span>为底库向量codes的长度。</p>
 </td>
@@ -1471,7 +1471,7 @@ int main() {
 
 **接口定义**
 
-int krl\_L2sqr\_f16f32\_sve2\(const uint16\_t\* query\_vec, const uint16\_t\* base\_vec, int dim, float\* distance, size\_t distance\_size\);
+int krl\_L2sqr\_f16f32\_sve2\(const uint16\_t\* x, const uint16\_t\* y, int d, float\* dis, size\_t dis\_size\);
 
 **接口用途**
 
@@ -2443,7 +2443,7 @@ cleanup:
 
 **接口定义**
 
-int krl\_L2sqr\_by\_idx\_f16f32\_sve2\(const uint16\_t\* query\_vec, const uint16\_t\* base\_vec, const uint32\_t\* idx, int dim, int nx, float\* distances, size\_t idx\_size, size\_t distances\_size\);
+int krl\_L2sqr\_by\_idx\_f16f32\_sve2\(float\* dis, const uint16\_t\* x, const uint16\_t\* y, const uint32\_t\* ids, size\_t d, size\_t ny, size\_t dis\_size\);
 
 **接口用途**
 
@@ -3728,7 +3728,7 @@ cleanup:
 
 **接口定义<a name="section172317194488"></a>**
 
-in krl\_L2sqr\_ny\_f16f32\(float\* dis, const uint16\_t\* x, const uint16\_t\* y, size\_t ny, size\_t d, size\_t dis\_size\);
+int krl\_L2sqr\_ny\_f16f32\(float\* dis, const uint16\_t\* x, const uint16\_t\* y, size\_t ny, size\_t d, size\_t dis\_size\);
 
 **接口用途<a name="section1153124784912"></a>**
 
@@ -4170,7 +4170,7 @@ int krl\_L2sqr\_ny\_with\_handle\(const KRLDistanceHandle\* kdh, float\* dis, co
 </tr>
 <tr id="row10982132445420"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p1089412431931"><a name="p1089412431931"></a><a name="p1089412431931"></a>x</p>
 </td>
-<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p1389417431933"><a name="p1389417431933"></a><a name="p1389417431933"></a>const uint8_t*</p>
+<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p1389417431933"><a name="p1389417431933"></a><a name="p1389417431933"></a>const float*</p>
 </td>
 <td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p28941943039"><a name="p28941943039"></a><a name="p28941943039"></a>参与距离计算的查询向量。</p>
 </td>
@@ -4880,7 +4880,7 @@ cleanup:
 
 **接口定义<a name="section172317194488"></a>**
 
-int krl\_inner\_product\_ny\_with\_handle\(const KRLDistanceHandle\* krl\_distance\_handle, float\* dis, const float\* x, size\_t dis\_size, size\_t x\_size\);
+int krl\_inner\_product\_ny\_with\_handle\(const KRLDistanceHandle\* kdh, float\* dis, const float\* x, size\_t dis\_size, size\_t x\_size\);
 
 **接口用途<a name="section1153124784912"></a>**
 
@@ -4919,7 +4919,7 @@ int krl\_inner\_product\_ny\_with\_handle\(const KRLDistanceHandle\* krl\_distan
 </tr>
 <tr id="row10982132445420"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p1089412431931"><a name="p1089412431931"></a><a name="p1089412431931"></a>x</p>
 </td>
-<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p1389417431933"><a name="p1389417431933"></a><a name="p1389417431933"></a>const uint8_t*</p>
+<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p1389417431933"><a name="p1389417431933"></a><a name="p1389417431933"></a>const float*</p>
 </td>
 <td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p28941943039"><a name="p28941943039"></a><a name="p28941943039"></a>参与距离计算的查询向量。</p>
 </td>
@@ -5065,7 +5065,7 @@ int krl\_table\_lookup\_8b\_f32\(size\_t nsq, size\_t ncode, const uint8\_t\* co
 
 **接口用途<a name="section1153124784912"></a>**
 
-使用8bit索引在float类型表项中查询距离并累和，将累和结果加上dis0后存入distance。
+使用8bit索引在float类型表项中查询距离并累和，将累和结果加上dis0后存入dis。
 
 **参数说明<a name="section157501312135019"></a>**
 
@@ -5267,7 +5267,7 @@ int krl\_table\_lookup\_8b\_f32\_by\_idx\(size\_t nsq, size\_t ncode, const uint
 
 **接口用途<a name="section1153124784912"></a>**
 
-使用8bit索引在float类型表项中查询距离并累和，将累和结果加上dis0后存入distance。ID在idx数组中出现的底库向量结果才会参与计算。
+使用8bit索引在float类型表项中查询距离并累和，将累和结果加上dis0后存入dis。ID在idx数组中出现的底库向量结果才会参与计算。
 
 **参数说明<a name="section157501312135019"></a>**
 
@@ -5476,7 +5476,7 @@ int krl\_table\_lookup\_8b\_f32\_with\_handle\(KRLLUT8bHandle\* klh, size\_t dim
 
 **接口用途<a name="section1153124784912"></a>**
 
-使用8bit索引在float类型表项中查询距离并累和，将累和结果加上dis0后存入distance。idx数组与distance数组被包含在KRLLUT8bHandle实例中，ID在idx数组中出现的底库向量结果才会参与计算。
+使用8bit索引在float类型表项中查询距离并累和，将累和结果加上dis0后存入dis。idx数组与distance数组被包含在KRLLUT8bHandle实例中，ID在idx数组中出现的底库向量结果才会参与计算。
 
 **参数说明<a name="section157501312135019"></a>**
 
@@ -8271,7 +8271,7 @@ int krl\_pack\_codes\_4b\(const uint8\_t\* codes, size\_t ncode, size\_t nsq, ui
 
 **接口用途<a name="section1153124784912"></a>**
 
-单独处理数据类型为fp16的查询向量的4比特查表累和过滤压缩算子。计算1个查询向量与多个底库向量间的内积距离，距离的初始值为dis\_f16。此接口不会进行过滤压缩（与阈值进行比较）。
+将原始4比特码本数据进行打包处理，以便进行快速查表计算。
 
 **参数说明<a name="section157501312135019"></a>**
 
@@ -8816,7 +8816,7 @@ int krl\_reorder\_2\_vector\(const KRLDistanceHandle\* kdh, int64\_t base\_k, fl
 </td>
 <td class="cellrowborder" valign="top" width="29.532953295329534%" headers="mcps1.1.5.1.3 "><p id="p36611261054"><a name="p36611261054"></a><a name="p36611261054"></a>使用低精度检索算法得到的候选点ID。</p>
 </td>
-<td class="cellrowborder" valign="top" width="40.31403140314032%" headers="mcps1.1.5.1.4 "><p id="p85127581355"><a name="p85127581355"></a><a name="p85127581355"></a>限制长度为base_k，其中<span class="parmname" id="parmname17965921181220"><a name="parmname17965921181220"></a><a name="parmname17965921181220"></a>“base_k”</span>为使用低精度检索算法得到的候选点数量。[-1,codes_num]，其中<span class="parmname" id="parmname880205993515"><a name="parmname880205993515"></a><a name="parmname880205993515"></a>“codes_num”</span>为每个查询向量计算的底库向量数量。ID需单调递增。若存在无需计算的占位符-1，则需要集中于向量末尾。</p>
+<td class="cellrowborder" valign="top" width="40.31403140314032%" headers="mcps1.1.5.1.4 "><p id="p85127581355"><a name="p85127581355"></a><a name="p85127581355"></a>限制长度为base_k，其中<span class="parmname" id="parmname17965921181220"><a name="parmname17965921181220"></a><a name="parmname17965921181220"></a>“base_k”</span>为使用低精度检索算法得到的候选点数量。[-1,codes_num]，其中<span class="parmname" id="parmname880205993515"><a name="parmname880205993515"></a><a name="parmname880205993515"></a>“codes_num”</span>为每个查询向量计算的底库向量数量。ID需单调递增。若存在无需计算的占位符-1，则需要置于向量末尾。</p>
 </td>
 </tr>
 <tr id="row103951453161513"><td class="cellrowborder" valign="top" width="15.541554155415543%" headers="mcps1.1.5.1.1 "><p id="p14723141215409"><a name="p14723141215409"></a><a name="p14723141215409"></a>query_vector</p>
@@ -9855,5 +9855,3 @@ int main() {
     return 0;
 }
 ```
-
-

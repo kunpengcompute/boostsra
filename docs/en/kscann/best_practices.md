@@ -28,7 +28,8 @@ The directory structure of the main files is as follows:
 
 **Test Procedure<a name="section25072475424"></a>**
 
-1. Verify that `scann-1.2.10-cp39-cp39-linux_aarch64.whl` has been installed as described in [KScaNN Installation Guide](./installation_guide.md).
+1. Verify that `scann-1.2.10-cp39-cp39-linux_aarch64.whl` has been installed as described in [Installation Guide](./installation_guide.md).
+
 2. Install the dependencies required by `ann-benchmarks`.
 
     ```bash
@@ -84,7 +85,8 @@ project.sh                                                          // Compilati
 
 **Procedure<a name="section080205934220"></a>**
 
-1. Verify that `libscann_cc.so` has been compiled successfully as described in [KScaNN Installation Guide](./installation_guide.md).
+1. Verify that `libscann_cc.so` has been compiled successfully as described in [Installation Guide](./installation_guide.md).
+
 2. Install CMake.
 
     ```bash

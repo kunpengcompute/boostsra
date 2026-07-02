@@ -20,34 +20,28 @@ For details about the feature updates of KBest, see [Release Notes](./release_no
 <table>
 <thead align="left">
 <tr id="row532024445820">
-<th class="cellrowborder" valign="top" width="14.8014801480148%" id="mcps1.1.4.1.1"><p id="p10320944115815">Resource Type</p></th>
 <th class="cellrowborder" valign="top" width="28.012801280128013%" id="mcps1.1.4.1.2"><p id="p14321184425814">Resource Name</p></th>
 <th class="cellrowborder" valign="top" width="57.18571857185718%" id="mcps1.1.4.1.3"><p id="p1932112447589">Resource Description</p></th>
 </tr>
 </thead>
 <tbody>
 <tr id="row183211844195812">
-<td class="cellrowborder" valign="top" width="14.8014801480148%" headers="mcps1.1.4.1.1"><p id="p77463013710">Document</p></td>
 <td class="cellrowborder" valign="top" width="28.012801280128013%" headers="mcps1.1.4.1.2"><p id="p132119442580"><a href="./release_notes.md">Release Notes</a></p></td>
 <td class="cellrowborder" valign="top" width="57.18571857185718%" headers="mcps1.1.4.1.3"><p id="p13321194412589">Provides basic information and feature updates for each KBest version.</p></td>
 </tr>
 <tr id="row18632162163420">
-<td class="cellrowborder" valign="top" width="14.8014801480148%" headers="mcps1.1.4.1.1"><p id="p186331521183417">Document</p></td>
 <td class="cellrowborder" valign="top" width="28.012801280128013%" headers="mcps1.1.4.1.2"><p id="p863317218347"><a href="./quick_start.md">Quick Start</a></p></td>
 <td class="cellrowborder" valign="top" width="57.18571857185718%" headers="mcps1.1.4.1.3"><p id="p26331921183410">Provides a quick start guide for KBest.</p></td>
 </tr>
 <tr id="row6321164455815">
-<td class="cellrowborder" valign="top" width="14.8014801480148%" headers="mcps1.1.4.1.1"><p id="p9991857717">Document</p></td>
 <td class="cellrowborder" valign="top" width="28.012801280128013%" headers="mcps1.1.4.1.2"><p id="p14321104418585"><a href="./installation_guide.md">Installation Guide</a></p></td>
 <td class="cellrowborder" valign="top" width="57.18571857185718%" headers="mcps1.1.4.1.3"><p id="p1332134420587">Provides detailed instructions for compiling and installing KBest.</p></td>
 </tr>
 <tr id="row13219448585">
-<td class="cellrowborder" valign="top" width="14.8014801480148%" headers="mcps1.1.4.1.1"><p id="p131000513714">Document</p></td>
 <td class="cellrowborder" valign="top" width="28.012801280128013%" headers="mcps1.1.4.1.2"><p id="p5321124418587"><a href="./best_practices.md">Best Practices</a></p></td>
 <td class="cellrowborder" valign="top" width="57.18571857185718%" headers="mcps1.1.4.1.3"><p id="p232174455818">Provides practice cases of KBest.</p></td>
 </tr>
 <tr id="row1632118447589">
-<td class="cellrowborder" valign="top" width="14.8014801480148%" headers="mcps1.1.4.1.1"><p id="p1510111511718">Document</p></td>
 <td class="cellrowborder" valign="top" width="28.012801280128013%" headers="mcps1.1.4.1.2"><p id="p183213445582"><a href="./api_reference.md">API Reference</a></p></td>
 <td class="cellrowborder" valign="top" width="57.18571857185718%" headers="mcps1.1.4.1.3"><p id="p53214445588">Provides definitions, descriptions, and calling examples of KBest APIs.</p></td>
 </tr>
@@ -87,7 +81,7 @@ The documentation of this project is licensed under the CC BY 4.0 License.
 
 ## Contribution Statement
 
-You are welcome to contribute to the community. If you have any questions/suggestions or want to provide feedback on feature requirements and bug reports, you can submit [issues](https://gitcode.com/boostkit/community/blob/master/docs/contributor/issue-submit.md). For details, see the [contribution guideline](https://gitcode.com/boostkit/community/blob/master/docs/contributor/contributing.md). You are also welcome to share insights in the [Discussions](https://gitcode.com/boostkit/community/discussions). Thank you for your support.
+You are welcome to contribute to the community. If you have any questions/suggestions or want to provide feedback on feature requirements and bug reports, you can submit issues. For details, see the contribution guideline. You are also welcome to share insights in the [Discussions](https://gitcode.com/boostkit/community/discussions). Thank you for your support.
 
 ## Acknowledgments
 
