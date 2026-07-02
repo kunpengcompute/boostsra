@@ -9,12 +9,11 @@
 
 ## Project Overview
 
-Kunpeng Deep Neural Network Library (KDNN) is implemented using C/C++ and assembly language. It is a high-performance neural network operator library optimized by Huawei for the Kunpeng platform. It includes KDNN and Kunpeng Deep Neural Network Extension Library (KDNN_EXT). KDNN_EXT includes operators such as softmax and random_choice. [Table 1](#table113613052017) describes KDNN components.
+Kunpeng AI Library (KAIL) is implemented using C/C++ and assembly language. It is a high-performance AI operator library optimized by Huawei for the Kunpeng platform. It includes the Kunpeng Deep Neural Network Library (KDNN) and Kunpeng Deep Neural Network Extension Library (KDNN_EXT) that contains operators such as softmax and random_choice. [Table 1](#table113613052017) describes KAIL components.
 
 **Table 1** KDNN components
 <div id="table113613052017"></div>
-<table><thead align="left"><tr id="row237018052015"><th class="cellrowborder" valign="top" width="12%" id="mcps1.2.5.1.1"><p id="p13701307204"><a name="p13701307204"></a><a name="p13701307204"></a>Sequence Number</p>
-</th>
+<table><thead align="left"><tr id="row237018052015">
 <th class="cellrowborder" valign="top" width="13.83%" id="mcps1.2.5.1.2"><p id="p10370130112016"><a name="p10370130112016"></a><a name="p10370130112016"></a>Library</p>
 </th>
 <th class="cellrowborder" valign="top" width="44.11%" id="mcps1.2.5.1.3"><p id="p173704019205"><a name="p173704019205"></a><a name="p173704019205"></a>Description</p>
@@ -23,8 +22,7 @@ Kunpeng Deep Neural Network Library (KDNN) is implemented using C/C++ and assemb
 </th>
 </tr>
 </thead>
-<tbody><tr id="row737011016208"><td class="cellrowborder" valign="top" width="6%" headers="mcps1.2.5.1.1 "><p id="p7370107203"><a name="p7370107203"></a><a name="p7370107203"></a>1</p>
-</td>
+<tbody><tr id="row737011016208">
 <td class="cellrowborder" valign="top" width="13.83%" headers="mcps1.2.5.1.2 "><p id="p1237011013202"><a name="p1237011013202"></a><a name="p1237011013202"></a>KDNN</p>
 </td>
 <td class="cellrowborder" valign="top" width="44.11%" headers="mcps1.2.5.1.3 "><p id="p193701909209"><a name="p193701909209"></a><a name="p193701909209"></a>A deep neural network library that contains AI operators optimized based on the Kunpeng processor microarchitecture and software optimizations. It can be integrated into open-source oneDNN as an operator library plugin.</p>
@@ -32,8 +30,7 @@ Kunpeng Deep Neural Network Library (KDNN) is implemented using C/C++ and assemb
 <td class="cellrowborder" valign="top" width="36.059999999999995%" headers="mcps1.2.5.1.4 "><p id="p153707032017"><a name="p153707032017"></a><a name="p153707032017"></a>Suitable for various machine learning applications, including image classification, object detection, and speech recognition. It can be integrated with various deep learning frameworks, such as TensorFlow and PyTorch.</p>
 </td>
 </tr>
-<tr id="row163701804202"><td class="cellrowborder" valign="top" width="6%" headers="mcps1.2.5.1.1 "><p id="p173701403204"><a name="p173701403204"></a><a name="p173701403204"></a>2</p>
-</td>
+<tr id="row163701804202">
 <td class="cellrowborder" valign="top" width="13.83%" headers="mcps1.2.5.1.2 "><p id="p163704072014"><a name="p163704072014"></a><a name="p163704072014"></a>KDNN_EXT</p>
 </td>
 <td class="cellrowborder" valign="top" width="44.11%" headers="mcps1.2.5.1.3 "><p id="p73701209208"><a name="p73701209208"></a><a name="p73701209208"></a>A deep neural network extension library that contains operators such as softmax and random_choice. They are encapsulated as Python interfaces.</p>
@@ -127,44 +124,38 @@ To use KDNN smoothly and securely, ensure that your environment is one of the ve
 ## Related Documents
 
 <a name="table11320174415582"></a>
-<table><thead align="left"><tr id="row532024445820"><th class="cellrowborder" valign="top" width="14.8014801480148%" id="mcps1.1.4.1.1"><p id="p10320944115815"><a name="p10320944115815"></a><a name="p10320944115815"></a>Resource Type</p>
-</th>
+<table><thead align="left"><tr id="row532024445820">
 <th class="cellrowborder" valign="top" width="28.012801280128013%" id="mcps1.1.4.1.2"><p id="p14321184425814"><a name="p14321184425814"></a><a name="p14321184425814"></a>Resource Name</p>
 </th>
 <th class="cellrowborder" valign="top" width="57.18571857185718%" id="mcps1.1.4.1.3"><p id="p1932112447589"><a name="p1932112447589"></a><a name="p1932112447589"></a>Resource Description</p>
 </th>
 </tr>
 </thead>
-<tbody><tr id="row183211844195812"><td class="cellrowborder" valign="top" width="14.8014801480148%" headers="mcps1.1.4.1.1 "><p id="p77463013710"><a name="p77463013710"></a><a name="p77463013710"></a>Document</p>
-</td>
+<tbody><tr id="row183211844195812">
 <td class="cellrowborder" valign="top" width="28.012801280128013%" headers="mcps1.1.4.1.2 "><p id="p132119442580"><a name="p132119442580"></a><a name="p132119442580"></a><a href="release_notes.md"> Release Notes</a></p>
 </td>
 <td class="cellrowborder" valign="top" width="57.18571857185718%" headers="mcps1.1.4.1.3 "><p id="p13321194412589"><a name="p13321194412589"></a><a name="p13321194412589"></a>Provides basic information and feature updates for each KDNN version.</p>
 </td>
 </tr>
-<tr id="row4533125512117"><td class="cellrowborder" valign="top" width="14.8014801480148%" headers="mcps1.1.4.1.1 "><p id="p19321184415819"><a name="p19321184415819"></a><a name="p19321184415819"></a>Document</p>
-</td>
+<tr id="row4533125512117">
 <td class="cellrowborder" valign="top" width="28.012801280128013%" headers="mcps1.1.4.1.2 "><p id="p032144418580"><a name="p032144418580"></a><a name="p032144418580"></a><a href="quick_start.md">Quick Start</a> </p>
 </td>
 <td class="cellrowborder" valign="top" width="57.18571857185718%" headers="mcps1.1.4.1.3 "><p id="p83216449586"><a name="p83216449586"></a><a name="p83216449586"></a>Provides guidance for getting started with KDNN.</p>
 </td>
 </tr>
-<tr id="row6321164455815"><td class="cellrowborder" valign="top" width="14.8014801480148%" headers="mcps1.1.4.1.1 "><p id="p9991857717"><a name="p9991857717"></a><a name="p9991857717"></a>Document</p>
-</td>
+<tr id="row6321164455815">
 <td class="cellrowborder" valign="top" width="28.012801280128013%" headers="mcps1.1.4.1.2 "><p id="p14321104418585"><a name="p14321104418585"></a><a name="p14321104418585"></a><a href="installation_guide.md">Installation Guide</a></p>
 </td>
 <td class="cellrowborder" valign="top" width="57.18571857185718%" headers="mcps1.1.4.1.3 "><p id="p1332134420587"><a name="p1332134420587"></a><a name="p1332134420587"></a>Provides detailed instructions for compiling and installing KDNN.</p>
 </td>
 </tr>
-<tr id="row13219448585"><td class="cellrowborder" valign="top" width="14.8014801480148%" headers="mcps1.1.4.1.1 "><p id="p131000513714"><a name="p131000513714"></a><a name="p131000513714"></a>Document</p>
-</td>
+<tr id="row13219448585">
 <td class="cellrowborder" valign="top" width="28.012801280128013%" headers="mcps1.1.4.1.2 "><p id="p5321124418587"><a name="p5321124418587"></a><a name="p5321124418587"></a><a href="api_reference.md">API Reference</a></p>
 </td>
 <td class="cellrowborder" valign="top" width="57.18571857185718%" headers="mcps1.1.4.1.3 "><p id="p53214445588"><a name="p53214445588"></a><a name="p53214445588"></a>Provides definitions, descriptions, and calling examples of KDNN APIs.</p>
 </td>
 </tr>
-<tr id="row1632118447589"><td class="cellrowborder" valign="top" width="14.8014801480148%" headers="mcps1.1.4.1.1 "><p id="p1510111511718"><a name="p1510111511718"></a><a name="p1510111511718"></a>Document</p>
-</td>
+<tr id="row1632118447589">
 <td class="cellrowborder" valign="top" width="28.012801280128013%" headers="mcps1.1.4.1.2 "><p id="p183213445582"><a name="p183213445582"></a><a name="p183213445582"></a><a href="best_practices.md">Best Practices</a></p>
 </td>
 <td class="cellrowborder" valign="top" width="57.18571857185718%" headers="mcps1.1.4.1.3 "><p id="p232174455818"><a name="p232174455818"></a><a name="p232174455818"></a>Provides best practices of using KDNN.</p>
@@ -195,7 +186,7 @@ The documents of this project are licensed under CC-BY 4.0. For details, see [LI
 
 ## Contribution Statement
 
-We welcome your contributions to the community. If you have any questions/suggestions or want to provide feedback on feature requirements and bug reports, you can [submit issues](https://gitcode.com/boostkit/community/blob/master/docs/contributor/issue-submit.md). For details, see the [contribution guideline](https://gitcode.com/boostkit/community/blob/master/docs/contributor/contributing.md). You are also welcome to share insights in the [Discussions](https://gitcode.com/boostkit/community/discussions). Thank you for your support.
+We welcome your contributions to the community. If you have any questions/suggestions or want to provide feedback on feature requirements and bug reports, you can submit issues. For details, see the contribution guideline. You are also welcome to share insights in the [Discussions](https://gitcode.com/boostkit/community/discussions). Thank you for your support.
 
 ## Acknowledgments
 

@@ -48,7 +48,7 @@
 
 本节提供RPM包安装KRL方法。请参照本节内容对KRL进行安装和安装后验证。若操作过程中使用了RPM包管理工具支持但本文档中未说明的参数，可能会引入未定义行为，请谨慎操作。
 
-1. 从GitCode仓获取对应的鲲鹏检索算子库软件安装包[BoostKit-boostsra-krl\_1.1.0.zip](https://gitcode.com/boostkit/boostsra/releases/download/v1.1.0/BoostKit-SRA_KRL-1.1.0.zip)，用户解压zip文件后可获取RPM安装包。
+1. 从GitCode仓获取对应的鲲鹏检索算子库软件安装包[BoostKit-boostsra-krl\_1.1.0.zip](https://gitcode.com/boostkit/boostsra/releases/download/v1.3.0/BoostKit-SRA_KRL-1.1.0.zip)，用户解压zip文件后可获取RPM安装包。
 
     >![](public_sys-resources/icon-note.gif) **说明：** 
     >- KRL软件包结构如下所示。
@@ -252,6 +252,6 @@ Faiss可对接KRL增强HNSW、PQFS、IVFPQ、IVFPQFS、IVFFLAT算法性能。用
 
    优化后结果如[**图 2** 优化后运行结果](#优化后运行结果)所示。
 
-   **图 2** 优化后运行结果<a name="fig9931619182"></a><a id="优化后运行结果"></a>
+   **图 2** 优化后运行结果<a name="fig9931619183"></a><a id="优化后运行结果"></a>
 
    ![](./figures/quick_start-运行结果.jpg "优化后运行结果")

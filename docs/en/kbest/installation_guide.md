@@ -68,8 +68,6 @@ To use KBest smoothly and securely, ensure that your environment is one of the v
 
 ## Installing KBest
 
-### Installation Using an RPM Package
-
 This section describes how to install KBest using the RPM package and verify KBest. Using parameters supported by the RPM package manager but not documented in this guide may result in undefined behavior. Proceed with caution.
 
 **Installation Procedure <a name="section349212333315"></a>**
