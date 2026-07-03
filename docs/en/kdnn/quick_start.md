@@ -1,5 +1,9 @@
 # Quick Start
 
+## Prerequisites
+
+When running the functional verification and example invocation steps using this guide, please first refer to the [Installation Guide](./installation_guide.md) to complete the KDNN installation.
+
 ## Function Verification
 
 After compilation, go to the <code>out/test/dnn/llt/scripts</code> directory and run the following command to run the operator test cases:

@@ -94,7 +94,7 @@ KScaNN depends on the open-source ScaNN optimized for Kunpeng to provide full fu
     ```
 
 4. ScaNN depends on the AVX2KI library. Therefore, perform the following steps to install the AVX2KI RPM package.
-    1. To install AVX2KI, obtain the software package from the [Kunpeng community](https://www.hikunpeng.com/document/detail/en/kunpengaccel/system-lib/dg-avx2ki/kunpengaccel_ksl_16_0006.html#EN-US_TOPIC_0000002507568443__li13931917173512) and verify the software package to ensure that it is consistent with the original software package on the website. Decompress the ZIP file to obtain the RPM installation package.
+    1. To install AVX2KI, obtain the software package from the [Kunpeng community](hhttps://www.hikunpeng.com/document/detail/en/kunpengboostkithistory/2530/accel/kunpengaccel_ksl_16_0006.html) and verify the software package to ensure that it is consistent with the original software package on the website. Decompress the ZIP file to obtain the RPM installation package.
 
         >![notice](public_sys-resources/icon-notice.gif) **NOTICE:**
         >Before using the software package, read and agree to [Kunpeng BoostKit User License Agreement 2.0](https://www.hikunpeng.com/en/legal/developer/boostkit/software/protocol).
@@ -191,7 +191,7 @@ KScaNN depends on the open-source ScaNN optimized for Kunpeng to provide full fu
         wget https://mirrors.huaweicloud.com/kunpeng/archive/compiler/kunpeng_gcc/gcc-12.3.1-2025.06-aarch64-linux.tar.gz --no-check-certificate
         ```
 
-    2. For details, see section [Installing GCC for openEuler](https://www.hikunpeng.com/document/detail/en/kunpengdevps/compiler/ug-hgcc/kunpenghgcc_06_0004.html) in the _GCC for openEuler User Guide_.
+    2. For details, see section [Installing GCC for openEuler](https://www.hikunpeng.com/document/detail/en/kunpengdevps/compilation/ug-hgcc/kunpenghgcc_06_0004.html) in the _GCC for openEuler User Guide_.
 
         ```bash
         export CC=/opt/aarch64/compiler/gcc-12.3.1-2025.06-aarch64-linux/bin/gcc

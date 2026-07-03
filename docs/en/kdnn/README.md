@@ -9,12 +9,11 @@
 
 ## Project Overview
 
-Kunpeng Deep Neural Network Library (KDNN) is implemented using C/C++ and assembly language. It is a high-performance neural network operator library optimized by Huawei for the Kunpeng platform. It includes KDNN and Kunpeng Deep Neural Network Extension Library (KDNN_EXT). KDNN_EXT includes operators such as softmax and random_choice. [Table 1](#table113613052017) describes KDNN components.
+Kunpeng AI Library (KAIL) is implemented using C/C++ and assembly language. It is a high-performance AI operator library optimized by Huawei for the Kunpeng platform. It includes the Kunpeng Deep Neural Network Library (KDNN) and Kunpeng Deep Neural Network Extension Library (KDNN_EXT) that contains operators such as softmax and random_choice. [Table 1](#table113613052017) describes KAIL components.
 
-**Table 1** KDNN components
+**Table 1** KAIL components
 <div id="table113613052017"></div>
-<table><thead align="left"><tr id="row237018052015"><th class="cellrowborder" valign="top" width="12%" id="mcps1.2.5.1.1"><p id="p13701307204"><a name="p13701307204"></a><a name="p13701307204"></a>Sequence Number</p>
-</th>
+<table><thead align="left"><tr id="row237018052015">
 <th class="cellrowborder" valign="top" width="13.83%" id="mcps1.2.5.1.2"><p id="p10370130112016"><a name="p10370130112016"></a><a name="p10370130112016"></a>Library</p>
 </th>
 <th class="cellrowborder" valign="top" width="44.11%" id="mcps1.2.5.1.3"><p id="p173704019205"><a name="p173704019205"></a><a name="p173704019205"></a>Description</p>
@@ -23,8 +22,7 @@ Kunpeng Deep Neural Network Library (KDNN) is implemented using C/C++ and assemb
 </th>
 </tr>
 </thead>
-<tbody><tr id="row737011016208"><td class="cellrowborder" valign="top" width="6%" headers="mcps1.2.5.1.1 "><p id="p7370107203"><a name="p7370107203"></a><a name="p7370107203"></a>1</p>
-</td>
+<tbody><tr id="row737011016208">
 <td class="cellrowborder" valign="top" width="13.83%" headers="mcps1.2.5.1.2 "><p id="p1237011013202"><a name="p1237011013202"></a><a name="p1237011013202"></a>KDNN</p>
 </td>
 <td class="cellrowborder" valign="top" width="44.11%" headers="mcps1.2.5.1.3 "><p id="p193701909209"><a name="p193701909209"></a><a name="p193701909209"></a>A deep neural network library that contains AI operators optimized based on the Kunpeng processor microarchitecture and software optimizations. It can be integrated into open-source oneDNN as an operator library plugin.</p>
@@ -32,8 +30,7 @@ Kunpeng Deep Neural Network Library (KDNN) is implemented using C/C++ and assemb
 <td class="cellrowborder" valign="top" width="36.059999999999995%" headers="mcps1.2.5.1.4 "><p id="p153707032017"><a name="p153707032017"></a><a name="p153707032017"></a>Suitable for various machine learning applications, including image classification, object detection, and speech recognition. It can be integrated with various deep learning frameworks, such as TensorFlow and PyTorch.</p>
 </td>
 </tr>
-<tr id="row163701804202"><td class="cellrowborder" valign="top" width="6%" headers="mcps1.2.5.1.1 "><p id="p173701403204"><a name="p173701403204"></a><a name="p173701403204"></a>2</p>
-</td>
+<tr id="row163701804202">
 <td class="cellrowborder" valign="top" width="13.83%" headers="mcps1.2.5.1.2 "><p id="p163704072014"><a name="p163704072014"></a><a name="p163704072014"></a>KDNN_EXT</p>
 </td>
 <td class="cellrowborder" valign="top" width="44.11%" headers="mcps1.2.5.1.3 "><p id="p73701209208"><a name="p73701209208"></a><a name="p73701209208"></a>A deep neural network extension library that contains operators such as softmax and random_choice. They are encapsulated as Python interfaces.</p>
@@ -195,7 +192,7 @@ The documents of this project are licensed under CC-BY 4.0. For details, see [LI
 
 ## Contribution Statement
 
-We welcome your contributions to the community. If you have any questions/suggestions or want to provide feedback on feature requirements and bug reports, you can [submit issues](https://gitcode.com/boostkit/community/blob/master/docs/contributor/issue-submit.md). For details, see the [contribution guideline](https://gitcode.com/boostkit/community/blob/master/docs/contributor/contributing.md). You are also welcome to share insights in the [Discussions](https://gitcode.com/boostkit/community/discussions). Thank you for your support.
+We welcome your contributions to the community. If you have any questions/suggestions or want to provide feedback on feature requirements and bug reports, you can submit issues. For details, see the contribution guideline. You are also welcome to share insights in the [Discussions](https://gitcode.com/boostkit/community/discussions). Thank you for your support.
 
 ## Acknowledgments
 

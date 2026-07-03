@@ -1,6 +1,6 @@
 # API Reference
 
-## APIs
+## API List
 
 [**Table 1** KRL interfaces](#krl-interfaces) describes the interfaces provided by KRL.
 
@@ -15,56 +15,56 @@
 </th>
 </tr>
 </thead>
-<tbody><tr id="row712018285575"><td class="cellrowborder" valign="top" width="13.059999999999999%" headers="mcps1.2.4.1.1 "><p id="p1468583012176"><a name="p1468583012176"></a><a name="p1468583012176"></a>Handle class interfaces</p>
+<tbody><tr id="row712018285575"><td class="cellrowborder" valign="top" width="13.059999999999999%" headers="mcps1.2.4.1.1 "><p id="p1468583012176"><a name="p1468583012176"></a><a name="p1468583012176"></a>Handle class interface</p>
 </td>
 <td class="cellrowborder" valign="top" width="23.380000000000003%" headers="mcps1.2.4.1.2 "><p id="p8993524101814"><a name="p8993524101814"></a><a name="p8993524101814"></a>krl_create_distance_handle</p>
 </td>
 <td class="cellrowborder" valign="top" width="63.56%" headers="mcps1.2.4.1.3 "><p id="p14993924101811"><a name="p14993924101811"></a><a name="p14993924101811"></a>Initializes and constructs a KRLDistanceHandle instance for dense distance computation.</p>
 </td>
 </tr>
-<tr id="row119491112174414"><td class="cellrowborder" valign="top" width="13.059999999999999%" headers="mcps1.2.4.1.1 "><p id="p163141052196"><a name="p163141052196"></a><a name="p163141052196"></a>Handle class interfaces</p>
+<tr id="row119491112174414"><td class="cellrowborder" valign="top" width="13.059999999999999%" headers="mcps1.2.4.1.1 "><p id="p163141052196"><a name="p163141052196"></a><a name="p163141052196"></a>Handle class interface</p>
 </td>
 <td class="cellrowborder" valign="top" width="23.380000000000003%" headers="mcps1.2.4.1.2 "><p id="p175854912238"><a name="p175854912238"></a><a name="p175854912238"></a>krl_create_reorder_handle</p>
 </td>
-<td class="cellrowborder" valign="top" width="63.56%" headers="mcps1.2.4.1.3 "><p id="p09931024131816"><a name="p09931024131816"></a><a name="p09931024131816"></a>Initializes and constructs a KRLDistanceHandle instance for reranking computation.</p>
+<td class="cellrowborder" valign="top" width="63.56%" headers="mcps1.2.4.1.3 "><p id="p09931024131816"><a name="p09931024131816"></a><a name="p09931024131816"></a>Initializes and constructs a KRLDistanceHandle instance for reordering computation.</p>
 </td>
 </tr>
-<tr id="row9949131219443"><td class="cellrowborder" valign="top" width="13.059999999999999%" headers="mcps1.2.4.1.1 "><p id="p831619512197"><a name="p831619512197"></a><a name="p831619512197"></a>Handle class interfaces</p>
+<tr id="row9949131219443"><td class="cellrowborder" valign="top" width="13.059999999999999%" headers="mcps1.2.4.1.1 "><p id="p831619512197"><a name="p831619512197"></a><a name="p831619512197"></a>Handle class interface</p>
 </td>
 <td class="cellrowborder" valign="top" width="23.380000000000003%" headers="mcps1.2.4.1.2 "><p id="p19936249184"><a name="p19936249184"></a><a name="p19936249184"></a>krl_clean_distance_handle</p>
 </td>
 <td class="cellrowborder" valign="top" width="63.56%" headers="mcps1.2.4.1.3 "><p id="p7729162612418"><a name="p7729162612418"></a><a name="p7729162612418"></a>Destroys the KRLDistanceHandle instance and releases memory space.</p>
 </td>
 </tr>
-<tr id="row1594913120443"><td class="cellrowborder" valign="top" width="13.059999999999999%" headers="mcps1.2.4.1.1 "><p id="p16317151193"><a name="p16317151193"></a><a name="p16317151193"></a>Handle class interfaces</p>
+<tr id="row1594913120443"><td class="cellrowborder" valign="top" width="13.059999999999999%" headers="mcps1.2.4.1.1 "><p id="p16317151193"><a name="p16317151193"></a><a name="p16317151193"></a>Handle class interface</p>
 </td>
 <td class="cellrowborder" valign="top" width="23.380000000000003%" headers="mcps1.2.4.1.2 "><p id="p799319246182"><a name="p799319246182"></a><a name="p799319246182"></a>krl_create_LUT8b_handle</p>
 </td>
 <td class="cellrowborder" valign="top" width="63.56%" headers="mcps1.2.4.1.3 "><p id="p7993122417187"><a name="p7993122417187"></a><a name="p7993122417187"></a>Initializes and constructs a KRLLUT8bHandle instance for accumulation based on 8-bit table lookup.</p>
 </td>
 </tr>
-<tr id="row6949131274416"><td class="cellrowborder" valign="top" width="13.059999999999999%" headers="mcps1.2.4.1.1 "><p id="p13180551910"><a name="p13180551910"></a><a name="p13180551910"></a>Handle class interfaces</p>
+<tr id="row6949131274416"><td class="cellrowborder" valign="top" width="13.059999999999999%" headers="mcps1.2.4.1.1 "><p id="p13180551910"><a name="p13180551910"></a><a name="p13180551910"></a>Handle class interface</p>
 </td>
 <td class="cellrowborder" valign="top" width="23.380000000000003%" headers="mcps1.2.4.1.2 "><p id="p12993324191819"><a name="p12993324191819"></a><a name="p12993324191819"></a>krl_clean_LUT8b_handle</p>
 </td>
 <td class="cellrowborder" valign="top" width="63.56%" headers="mcps1.2.4.1.3 "><p id="p139801643145818"><a name="p139801643145818"></a><a name="p139801643145818"></a>Destroys the KRLLUT8bHandle instance and releases memory space.</p>
 </td>
 </tr>
-<tr id="row13975184141820"><td class="cellrowborder" valign="top" width="13.059999999999999%" headers="mcps1.2.4.1.1 "><p id="p531917514195"><a name="p531917514195"></a><a name="p531917514195"></a>Handle class interfaces</p>
+<tr id="row13975184141820"><td class="cellrowborder" valign="top" width="13.059999999999999%" headers="mcps1.2.4.1.1 "><p id="p531917514195"><a name="p531917514195"></a><a name="p531917514195"></a>Handle class interface</p>
 </td>
 <td class="cellrowborder" valign="top" width="23.380000000000003%" headers="mcps1.2.4.1.2 "><p id="p7975114191820"><a name="p7975114191820"></a><a name="p7975114191820"></a>krl_get_idx_pointer</p>
 </td>
 <td class="cellrowborder" valign="top" width="63.56%" headers="mcps1.2.4.1.3 "><p id="p192601719115616"><a name="p192601719115616"></a><a name="p192601719115616"></a>Obtains the IDs of to-be-computed base vectors stored in the KRLLUT8bHandle instance.</p>
 </td>
 </tr>
-<tr id="row1682414614182"><td class="cellrowborder" valign="top" width="13.059999999999999%" headers="mcps1.2.4.1.1 "><p id="p183211558190"><a name="p183211558190"></a><a name="p183211558190"></a>Handle class interfaces</p>
+<tr id="row1682414614182"><td class="cellrowborder" valign="top" width="13.059999999999999%" headers="mcps1.2.4.1.1 "><p id="p183211558190"><a name="p183211558190"></a><a name="p183211558190"></a>Handle class interface</p>
 </td>
 <td class="cellrowborder" valign="top" width="23.380000000000003%" headers="mcps1.2.4.1.2 "><p id="p621722142419"><a name="p621722142419"></a><a name="p621722142419"></a>krl_get_dist_pointer</p>
 </td>
 <td class="cellrowborder" valign="top" width="63.56%" headers="mcps1.2.4.1.3 "><p id="p2824164621814"><a name="p2824164621814"></a><a name="p2824164621814"></a>Obtains the start address of the distance array stored in the KRLLUT8bHandle instance. The address contains a random number before a table lookup-based accumulation operator is called, and holds the computed distance value after the operator is called.</p>
 </td>
 </tr>
-<tr id="row891194810189"><td class="cellrowborder" valign="top" width="13.059999999999999%" headers="mcps1.2.4.1.1 "><p id="p6685230201716"><a name="p6685230201716"></a><a name="p6685230201716"></a>Distance computation interfaces</p>
+<tr id="row891194810189"><td class="cellrowborder" valign="top" width="13.059999999999999%" headers="mcps1.2.4.1.1 "><p id="p6685230201716"><a name="p6685230201716"></a><a name="p6685230201716"></a>Distance computation interface</p>
 </td>
 <td class="cellrowborder" valign="top" width="23.380000000000003%" headers="mcps1.2.4.1.2 "><p id="p12911154891819"><a name="p12911154891819"></a><a name="p12911154891819"></a>krl_L2sqr</p>
 </td>
@@ -78,207 +78,298 @@
 <td class="cellrowborder" valign="top" width="63.56%" headers="mcps1.2.4.1.3 "><p id="p1693388205916"><a name="p1693388205916"></a><a name="p1693388205916"></a>Performs one-to-one Euclidean distance computation on vectors represented in fp16 precision.</p>
 </td>
 </tr>
-<tr id="row490119533188"><td class="cellrowborder" valign="top" width="13.059999999999999%" headers="mcps1.2.4.1.1 "><p id="p14208191316192"><a name="p14208191316192"></a><a name="p14208191316192"></a>Distance computation interfaces</p>
+<tr id="row1710165116183_sve2"><td class="cellrowborder" valign="top" width="13.059999999999999%" headers="mcps1.2.4.1.1 "><p id="p120601371911_sve2"><a name="p120601371911_sve2"></a><a name="p120601371911_sve2"></a>Distance computation interface</p>
+</td>
+<td class="cellrowborder" valign="top" width="23.380000000000003%" headers="mcps1.2.4.1.2 "><p id="p710165111184_sve2"><a name="p710165111184_sve2"></a><a name="p710165111184_sve2"></a>krl_L2sqr_f16f32_sve2</p>
+</td>
+<td class="cellrowborder" valign="top" width="63.56%" headers="mcps1.2.4.1.3 "><p id="p1693388205916_sve2"><a name="p1693388205916_sve2"></a><a name="p1693388205916_sve2"></a>Performs one-to-one Euclidean distance computation on vectors represented in fp16 precision (SVE2).</p>
+</td>
+</tr>
+<tr id="row490119533188"><td class="cellrowborder" valign="top" width="13.059999999999999%" headers="mcps1.2.4.1.1 "><p id="p14208191316192"><a name="p14208191316192"></a><a name="p14208191316192"></a>Distance computation interface</p>
 </td>
 <td class="cellrowborder" valign="top" width="23.380000000000003%" headers="mcps1.2.4.1.2 "><p id="p179011053151819"><a name="p179011053151819"></a><a name="p179011053151819"></a>krl_L2sqr_u8u32</p>
 </td>
 <td class="cellrowborder" valign="top" width="63.56%" headers="mcps1.2.4.1.3 "><p id="p790155315187"><a name="p790155315187"></a><a name="p790155315187"></a>Performs one-to-one Euclidean distance computation on vectors represented as 8-bit unsigned integers (uint8).</p>
 </td>
 </tr>
-<tr id="row1785925518184"><td class="cellrowborder" valign="top" width="13.059999999999999%" headers="mcps1.2.4.1.1 "><p id="p11209713131919"><a name="p11209713131919"></a><a name="p11209713131919"></a>Distance computation interfaces</p>
+<tr id="row1785925518184"><td class="cellrowborder" valign="top" width="13.059999999999999%" headers="mcps1.2.4.1.1 "><p id="p11209713131919"><a name="p11209713131919"></a><a name="p11209713131919"></a>Distance computation interface</p>
 </td>
 <td class="cellrowborder" valign="top" width="23.380000000000003%" headers="mcps1.2.4.1.2 "><p id="p4860165531811"><a name="p4860165531811"></a><a name="p4860165531811"></a>krl_ipdis</p>
 </td>
 <td class="cellrowborder" valign="top" width="63.56%" headers="mcps1.2.4.1.3 "><p id="p158609551186"><a name="p158609551186"></a><a name="p158609551186"></a>Performs one-to-one distance computation using inner product on vectors represented in float precision.</p>
 </td>
 </tr>
-<tr id="row197613573181"><td class="cellrowborder" valign="top" width="13.059999999999999%" headers="mcps1.2.4.1.1 "><p id="p321121341919"><a name="p321121341919"></a><a name="p321121341919"></a>Distance computation interfaces</p>
+<tr id="row197613573181"><td class="cellrowborder" valign="top" width="13.059999999999999%" headers="mcps1.2.4.1.1 "><p id="p321121341919"><a name="p321121341919"></a><a name="p321121341919"></a>Distance computation interface</p>
 </td>
 <td class="cellrowborder" valign="top" width="23.380000000000003%" headers="mcps1.2.4.1.2 "><p id="p5761135713185"><a name="p5761135713185"></a><a name="p5761135713185"></a>krl_negative_ipdis_f16f32</p>
 </td>
 <td class="cellrowborder" valign="top" width="63.56%" headers="mcps1.2.4.1.3 "><p id="p20381543012"><a name="p20381543012"></a><a name="p20381543012"></a>Performs one-to-one distance computation using inner product on vectors represented in fp16 precision.</p>
 </td>
 </tr>
-<tr id="row2030213041919"><td class="cellrowborder" valign="top" width="13.059999999999999%" headers="mcps1.2.4.1.1 "><p id="p521251381911"><a name="p521251381911"></a><a name="p521251381911"></a>Distance computation interfaces</p>
+<tr id="row2030213041919"><td class="cellrowborder" valign="top" width="13.059999999999999%" headers="mcps1.2.4.1.1 "><p id="p521251381911"><a name="p521251381911"></a><a name="p521251381911"></a>Distance computation interface</p>
 </td>
 <td class="cellrowborder" valign="top" width="23.380000000000003%" headers="mcps1.2.4.1.2 "><p id="p15619557252"><a name="p15619557252"></a><a name="p15619557252"></a>krl_negative_ipdis_s8s32</p>
 </td>
 <td class="cellrowborder" valign="top" width="63.56%" headers="mcps1.2.4.1.3 "><p id="p17303140191918"><a name="p17303140191918"></a><a name="p17303140191918"></a>Performs one-to-one distance computation using inner product on vectors represented as 8-bit signed integers (int8).</p>
 </td>
 </tr>
-<tr id="row238412241914"><td class="cellrowborder" valign="top" width="13.059999999999999%" headers="mcps1.2.4.1.1 "><p id="p15213213161920"><a name="p15213213161920"></a><a name="p15213213161920"></a>Distance computation interfaces</p>
+<tr id="row238412241914"><td class="cellrowborder" valign="top" width="13.059999999999999%" headers="mcps1.2.4.1.1 "><p id="p15213213161920"><a name="p15213213161920"></a><a name="p15213213161920"></a>Distance computation interface</p>
 </td>
 <td class="cellrowborder" valign="top" width="23.380000000000003%" headers="mcps1.2.4.1.2 "><p id="p1138418201911"><a name="p1138418201911"></a><a name="p1138418201911"></a>krl_L2sqr_by_idx</p>
 </td>
 <td class="cellrowborder" valign="top" width="63.56%" headers="mcps1.2.4.1.3 "><p id="p203841126192"><a name="p203841126192"></a><a name="p203841126192"></a>Performs one-to-many Euclidean distance computation on vectors represented in float precision.</p>
 </td>
 </tr>
-<tr id="row0391358193"><td class="cellrowborder" valign="top" width="13.059999999999999%" headers="mcps1.2.4.1.1 "><p id="p192142139194"><a name="p192142139194"></a><a name="p192142139194"></a>Distance computation interfaces</p>
+<tr id="row0391358193"><td class="cellrowborder" valign="top" width="13.059999999999999%" headers="mcps1.2.4.1.1 "><p id="p192142139194"><a name="p192142139194"></a><a name="p192142139194"></a>Distance computation interface</p>
 </td>
 <td class="cellrowborder" valign="top" width="23.380000000000003%" headers="mcps1.2.4.1.2 "><p id="p2725181712253"><a name="p2725181712253"></a><a name="p2725181712253"></a>krl_L2sqr_by_idx_f16f32</p>
 </td>
 <td class="cellrowborder" valign="top" width="63.56%" headers="mcps1.2.4.1.3 "><p id="p133913511915"><a name="p133913511915"></a><a name="p133913511915"></a>Performs one-to-many Euclidean distance computation on vectors represented in fp16 precision.</p>
 </td>
 </tr>
-<tr id="row151611671195"><td class="cellrowborder" valign="top" width="13.059999999999999%" headers="mcps1.2.4.1.1 "><p id="p12215201391920"><a name="p12215201391920"></a><a name="p12215201391920"></a>Distance computation interfaces</p>
+<tr id="row0391358193_sve2"><td class="cellrowborder" valign="top" width="13.059999999999999%" headers="mcps1.2.4.1.1 "><p id="p192142139194_sve2"><a name="p192142139194_sve2"></a><a name="p192142139194_sve2"></a>Distance computation interface</p>
+</td>
+<td class="cellrowborder" valign="top" width="23.380000000000003%" headers="mcps1.2.4.1.2 "><p id="p2725181712253_sve2"><a name="p2725181712253_sve2"></a><a name="p2725181712253_sve2"></a>krl_L2sqr_by_idx_f16f32_sve2</p>
+</td>
+<td class="cellrowborder" valign="top" width="63.56%" headers="mcps1.2.4.1.3 "><p id="p133913511915_sve2"><a name="p133913511915_sve2"></a><a name="p133913511915_sve2"></a>Performs one-to-many Euclidean distance computation on vectors represented in fp16 precision (SVE2).</p>
+</td>
+</tr>
+<tr id="row151611671195"><td class="cellrowborder" valign="top" width="13.059999999999999%" headers="mcps1.2.4.1.1 "><p id="p12215201391920"><a name="p12215201391920"></a><a name="p12215201391920"></a>Distance computation interface</p>
 </td>
 <td class="cellrowborder" valign="top" width="23.380000000000003%" headers="mcps1.2.4.1.2 "><p id="p20161197101911"><a name="p20161197101911"></a><a name="p20161197101911"></a>krl_L2sqr_by_idx_u8f32</p>
 </td>
 <td class="cellrowborder" valign="top" width="63.56%" headers="mcps1.2.4.1.3 "><p id="p1616177151919"><a name="p1616177151919"></a><a name="p1616177151919"></a>Performs one-to-many Euclidean distance computation on vectors represented as 8-bit unsigned integers (uint8).</p>
 </td>
 </tr>
-<tr id="row5354120161911"><td class="cellrowborder" valign="top" width="13.059999999999999%" headers="mcps1.2.4.1.1 "><p id="p321691321913"><a name="p321691321913"></a><a name="p321691321913"></a>Distance computation interfaces</p>
+<tr id="row5354120161911"><td class="cellrowborder" valign="top" width="13.059999999999999%" headers="mcps1.2.4.1.1 "><p id="p321691321913"><a name="p321691321913"></a><a name="p321691321913"></a>Distance computation interface</p>
 </td>
 <td class="cellrowborder" valign="top" width="23.380000000000003%" headers="mcps1.2.4.1.2 "><p id="p0354420111913"><a name="p0354420111913"></a><a name="p0354420111913"></a>krl_inner_product_by_idx</p>
 </td>
 <td class="cellrowborder" valign="top" width="63.56%" headers="mcps1.2.4.1.3 "><p id="p2354132010196"><a name="p2354132010196"></a><a name="p2354132010196"></a>Performs one-to-many distance computation using inner product on vectors represented in float precision.</p>
 </td>
 </tr>
-<tr id="row1423643420194"><td class="cellrowborder" valign="top" width="13.059999999999999%" headers="mcps1.2.4.1.1 "><p id="p221741341915"><a name="p221741341915"></a><a name="p221741341915"></a>Distance computation interfaces</p>
+<tr id="row1423643420194"><td class="cellrowborder" valign="top" width="13.059999999999999%" headers="mcps1.2.4.1.1 "><p id="p221741341915"><a name="p221741341915"></a><a name="p221741341915"></a>Distance computation interface</p>
 </td>
 <td class="cellrowborder" valign="top" width="23.380000000000003%" headers="mcps1.2.4.1.2 "><p id="p5233173872520"><a name="p5233173872520"></a><a name="p5233173872520"></a>krl_inner_product_by_idx_f16f32</p>
 </td>
 <td class="cellrowborder" valign="top" width="63.56%" headers="mcps1.2.4.1.3 "><p id="p2354132010196"><a name="p2354132010196"></a><a name="p2354132010196"></a>Performs one-to-many distance computation using inner product on vectors represented in fp16 precision.</p>
 </td>
 </tr>
-<tr id="row1792738101914"><td class="cellrowborder" valign="top" width="13.059999999999999%" headers="mcps1.2.4.1.1 "><p id="p10218111381917"><a name="p10218111381917"></a><a name="p10218111381917"></a>Distance computation interfaces</p>
+<tr id="row1423643420194_sve2"><td class="cellrowborder" valign="top" width="13.059999999999999%" headers="mcps1.2.4.1.1 "><p id="p221741341915_sve2"><a name="p221741341915_sve2"></a><a name="p221741341915_sve2"></a>Distance computation interface</p>
+</td>
+<td class="cellrowborder" valign="top" width="23.380000000000003%" headers="mcps1.2.4.1.2 "><p id="p5233173872520_sve2"><a name="p5233173872520_sve2"></a><a name="p5233173872520_sve2"></a>krl_inner_product_by_idx_f16f32_sve2</p>
+</td>
+<td class="cellrowborder" valign="top" width="63.56%" headers="mcps1.2.4.1.3 "><p id="p5236113431915_sve2"><a name="p5236113431915_sve2"></a><a name="p5236113431915_sve2"></a>Performs one-to-many distance computation using inner product on vectors represented in fp16 precision (SVE2).</p>
+</td>
+</tr>
+<tr id="row1792738101914"><td class="cellrowborder" valign="top" width="13.059999999999999%" headers="mcps1.2.4.1.1 "><p id="p10218111381917"><a name="p10218111381917"></a><a name="p10218111381917"></a>Distance computation interface</p>
 </td>
 <td class="cellrowborder" valign="top" width="23.380000000000003%" headers="mcps1.2.4.1.2 "><p id="p18810342182514"><a name="p18810342182514"></a><a name="p18810342182514"></a>krl_negative_inner_product_by_idx_f16f32</p>
 </td>
 <td class="cellrowborder" valign="top" width="63.56%" headers="mcps1.2.4.1.3 "><p id="p27921838121916"><a name="p27921838121916"></a><a name="p27921838121916"></a>Performs one-to-many distance computation using inner product on vectors represented in fp16 precision, and negates the computation results.</p>
 </td>
 </tr>
-<tr id="row7651940121918"><td class="cellrowborder" valign="top" width="13.059999999999999%" headers="mcps1.2.4.1.1 "><p id="p32191513101918"><a name="p32191513101918"></a><a name="p32191513101918"></a>Distance computation interfaces</p>
+<tr id="row7651940121918"><td class="cellrowborder" valign="top" width="13.059999999999999%" headers="mcps1.2.4.1.1 "><p id="p32191513101918"><a name="p32191513101918"></a><a name="p32191513101918"></a>Distance computation interface</p>
 </td>
 <td class="cellrowborder" valign="top" width="23.380000000000003%" headers="mcps1.2.4.1.2 "><p id="p186516406195"><a name="p186516406195"></a><a name="p186516406195"></a>krl_inner_product_by_idx_s8f32</p>
 </td>
 <td class="cellrowborder" valign="top" width="63.56%" headers="mcps1.2.4.1.3 "><p id="p196511640121916"><a name="p196511640121916"></a><a name="p196511640121916"></a>Performs one-to-many distance computation using inner product on vectors represented as 8-bit signed integers (int8).</p>
 </td>
 </tr>
-<tr id="row283274219196"><td class="cellrowborder" valign="top" width="13.059999999999999%" headers="mcps1.2.4.1.1 "><p id="p822001319194"><a name="p822001319194"></a><a name="p822001319194"></a>Distance computation interfaces</p>
+<tr id="row283274219196"><td class="cellrowborder" valign="top" width="13.059999999999999%" headers="mcps1.2.4.1.1 "><p id="p822001319194"><a name="p822001319194"></a><a name="p822001319194"></a>Distance computation interface</p>
 </td>
 <td class="cellrowborder" valign="top" width="23.380000000000003%" headers="mcps1.2.4.1.2 "><p id="p383264213197"><a name="p383264213197"></a><a name="p383264213197"></a>krl_L2sqr_ny</p>
 </td>
 <td class="cellrowborder" valign="top" width="63.56%" headers="mcps1.2.4.1.3 "><p id="p168329424199"><a name="p168329424199"></a><a name="p168329424199"></a>Performs one-to-many Euclidean distance computation on vectors represented in float precision.</p>
 </td>
 </tr>
-<tr id="row47661344161914"><td class="cellrowborder" valign="top" width="13.059999999999999%" headers="mcps1.2.4.1.1 "><p id="p1922131381913"><a name="p1922131381913"></a><a name="p1922131381913"></a>Distance computation interfaces</p>
+<tr id="row47661344161914"><td class="cellrowborder" valign="top" width="13.059999999999999%" headers="mcps1.2.4.1.1 "><p id="p1922131381913"><a name="p1922131381913"></a><a name="p1922131381913"></a>Distance computation interface</p>
 </td>
 <td class="cellrowborder" valign="top" width="23.380000000000003%" headers="mcps1.2.4.1.2 "><p id="p207661044101919"><a name="p207661044101919"></a><a name="p207661044101919"></a>krl_L2sqr_ny_f16f32</p>
 </td>
 <td class="cellrowborder" valign="top" width="63.56%" headers="mcps1.2.4.1.3 "><p id="p1176710447191"><a name="p1176710447191"></a><a name="p1176710447191"></a>Performs one-to-many Euclidean distance computation on vectors represented in fp16 precision.</p>
 </td>
 </tr>
-<tr id="row0904184681920"><td class="cellrowborder" valign="top" width="13.059999999999999%" headers="mcps1.2.4.1.1 "><p id="p112221813111918"><a name="p112221813111918"></a><a name="p112221813111918"></a>Distance computation interfaces</p>
+<tr id="row47661344161914_sve2"><td class="cellrowborder" valign="top" width="13.059999999999999%" headers="mcps1.2.4.1.1 "><p id="p1922131381913_sve2"><a name="p1922131381913_sve2"></a><a name="p1922131381913_sve2"></a>Distance computation interface</p>
+</td>
+<td class="cellrowborder" valign="top" width="23.380000000000003%" headers="mcps1.2.4.1.2 "><p id="p207661044101919_sve2"><a name="p207661044101919_sve2"></a><a name="p207661044101919_sve2"></a>krl_L2sqr_ny_f16f32_sve2</p>
+</td>
+<td class="cellrowborder" valign="top" width="63.56%" headers="mcps1.2.4.1.3 "><p id="p1176710447191_sve2"><a name="p1176710447191_sve2"></a><a name="p1176710447191_sve2"></a>Performs one-to-many Euclidean distance computation on vectors represented in fp16 precision (SVE2).</p>
+</td>
+</tr>
+<tr id="row0904184681920"><td class="cellrowborder" valign="top" width="13.059999999999999%" headers="mcps1.2.4.1.1 "><p id="p112221813111918"><a name="p112221813111918"></a><a name="p112221813111918"></a>Distance computation interface</p>
 </td>
 <td class="cellrowborder" valign="top" width="23.380000000000003%" headers="mcps1.2.4.1.2 "><p id="p1090416468197"><a name="p1090416468197"></a><a name="p1090416468197"></a>krl_L2sqr_ny_u8f32</p>
 </td>
 <td class="cellrowborder" valign="top" width="63.56%" headers="mcps1.2.4.1.3 "><p id="p19047462196"><a name="p19047462196"></a><a name="p19047462196"></a>Performs one-to-many Euclidean distance computation on vectors represented as 8-bit unsigned integers (uint8).</p>
 </td>
 </tr>
-<tr id="row1149011486191"><td class="cellrowborder" valign="top" width="13.059999999999999%" headers="mcps1.2.4.1.1 "><p id="p222361351918"><a name="p222361351918"></a><a name="p222361351918"></a>Distance computation interfaces</p>
+<tr id="row1149011486191"><td class="cellrowborder" valign="top" width="13.059999999999999%" headers="mcps1.2.4.1.1 "><p id="p222361351918"><a name="p222361351918"></a><a name="p222361351918"></a>Distance computation interface</p>
 </td>
 <td class="cellrowborder" valign="top" width="23.380000000000003%" headers="mcps1.2.4.1.2 "><p id="p9490144814199"><a name="p9490144814199"></a><a name="p9490144814199"></a>krl_L2sqr_ny_with_handle</p>
 </td>
 <td class="cellrowborder" valign="top" width="63.56%" headers="mcps1.2.4.1.3 "><p id="p64901848191916"><a name="p64901848191916"></a><a name="p64901848191916"></a>Performs one-to-many Euclidean distance computation on vectors represented in float precision. The base vectors and dimensions are stored in the handle.</p>
 </td>
 </tr>
-<tr id="row221135114193"><td class="cellrowborder" valign="top" width="13.059999999999999%" headers="mcps1.2.4.1.1 "><p id="p15224131313192"><a name="p15224131313192"></a><a name="p15224131313192"></a>Distance computation interfaces</p>
+<tr id="row221135114193"><td class="cellrowborder" valign="top" width="13.059999999999999%" headers="mcps1.2.4.1.1 "><p id="p15224131313192"><a name="p15224131313192"></a><a name="p15224131313192"></a>Distance computation interface</p>
 </td>
 <td class="cellrowborder" valign="top" width="23.380000000000003%" headers="mcps1.2.4.1.2 "><p id="p13221351171919"><a name="p13221351171919"></a><a name="p13221351171919"></a>krl_inner_product_ny</p>
 </td>
 <td class="cellrowborder" valign="top" width="63.56%" headers="mcps1.2.4.1.3 "><p id="p1022851141912"><a name="p1022851141912"></a><a name="p1022851141912"></a>Performs one-to-many distance computation using inner product on vectors represented in float precision.</p>
 </td>
 </tr>
-<tr id="row1670318531197"><td class="cellrowborder" valign="top" width="13.059999999999999%" headers="mcps1.2.4.1.1 "><p id="p022551361914"><a name="p022551361914"></a><a name="p022551361914"></a>Distance computation interfaces</p>
+<tr id="row1670318531197"><td class="cellrowborder" valign="top" width="13.059999999999999%" headers="mcps1.2.4.1.1 "><p id="p022551361914"><a name="p022551361914"></a><a name="p022551361914"></a>Distance computation interface</p>
 </td>
 <td class="cellrowborder" valign="top" width="23.380000000000003%" headers="mcps1.2.4.1.2 "><p id="p370305310196"><a name="p370305310196"></a><a name="p370305310196"></a>krl_inner_product_ny_f16f32</p>
 </td>
 <td class="cellrowborder" valign="top" width="63.56%" headers="mcps1.2.4.1.3 "><p id="p1570335316191"><a name="p1570335316191"></a><a name="p1570335316191"></a>Performs one-to-many distance computation using inner product on vectors represented in fp16 precision.</p>
 </td>
 </tr>
-<tr id="row1659115614196"><td class="cellrowborder" valign="top" width="13.059999999999999%" headers="mcps1.2.4.1.1 "><p id="p222621316199"><a name="p222621316199"></a><a name="p222621316199"></a>Distance computation interfaces</p>
+<tr id="row1670318531197_sve2"><td class="cellrowborder" valign="top" width="13.059999999999999%" headers="mcps1.2.4.1.1 "><p id="p022551361914_sve2"><a name="p022551361914_sve2"></a><a name="p022551361914_sve2"></a>Distance computation interface</p>
+</td>
+<td class="cellrowborder" valign="top" width="23.380000000000003%" headers="mcps1.2.4.1.2 "><p id="p370305310196_sve2"><a name="p370305310196_sve2"></a><a name="p370305310196_sve2"></a>krl_inner_product_ny_f16f32_sve2</p>
+</td>
+<td class="cellrowborder" valign="top" width="63.56%" headers="mcps1.2.4.1.3 "><p id="p1570335316191_sve2"><a name="p1570335316191_sve2"></a><a name="p1570335316191_sve2"></a>Performs one-to-many distance computation using inner product on vectors represented in fp16 precision (SVE2).</p>
+</td>
+</tr>
+<tr id="row1659115614196"><td class="cellrowborder" valign="top" width="13.059999999999999%" headers="mcps1.2.4.1.1 "><p id="p222621316199"><a name="p222621316199"></a><a name="p222621316199"></a>Distance computation interface</p>
 </td>
 <td class="cellrowborder" valign="top" width="23.380000000000003%" headers="mcps1.2.4.1.2 "><p id="p05910561199"><a name="p05910561199"></a><a name="p05910561199"></a>krl_inner_product_ny_s8f32</p>
 </td>
 <td class="cellrowborder" valign="top" width="63.56%" headers="mcps1.2.4.1.3 "><p id="p135911256161914"><a name="p135911256161914"></a><a name="p135911256161914"></a>Performs one-to-many distance computation using inner product on vectors represented as 8-bit signed integers (int8).</p>
 </td>
 </tr>
-<tr id="row86397594196"><td class="cellrowborder" valign="top" width="13.059999999999999%" headers="mcps1.2.4.1.1 "><p id="p11227813101917"><a name="p11227813101917"></a><a name="p11227813101917"></a>Distance computation interfaces</p>
+<tr id="row86397594196"><td class="cellrowborder" valign="top" width="13.059999999999999%" headers="mcps1.2.4.1.1 "><p id="p11227813101917"><a name="p11227813101917"></a><a name="p11227813101917"></a>Distance computation interface</p>
 </td>
 <td class="cellrowborder" valign="top" width="23.380000000000003%" headers="mcps1.2.4.1.2 "><p id="p2640125961913"><a name="p2640125961913"></a><a name="p2640125961913"></a>krl_inner_product_ny_with_handle</p>
 </td>
 <td class="cellrowborder" valign="top" width="63.56%" headers="mcps1.2.4.1.3 "><p id="p8640159201914"><a name="p8640159201914"></a><a name="p8640159201914"></a>Performs one-to-many distance computation using inner product on vectors represented in float precision. The base vectors and dimensions are stored in the handle.</p>
 </td>
 </tr>
-<tr id="row166751616206"><td class="cellrowborder" valign="top" width="13.059999999999999%" headers="mcps1.2.4.1.1 "><p id="p206851730131710"><a name="p206851730131710"></a><a name="p206851730131710"></a>8-bit table lookup-based accumulation interfaces</p>
+<tr id="row166751616206"><td class="cellrowborder" valign="top" width="13.059999999999999%" headers="mcps1.2.4.1.1 "><p id="p206851730131710"><a name="p206851730131710"></a><a name="p206851730131710"></a>8-bit table lookup-based accumulation interface</p>
 </td>
 <td class="cellrowborder" valign="top" width="23.380000000000003%" headers="mcps1.2.4.1.2 "><p id="p196762119202"><a name="p196762119202"></a><a name="p196762119202"></a>krl_table_lookup_8b_f32</p>
 </td>
-<td class="cellrowborder" valign="top" width="63.56%" headers="mcps1.2.4.1.3 "><p id="p126761515204"><a name="p126761515204"></a><a name="p126761515204"></a>Obtains distance values from the float-type LUT using 8-bit indexes, accumulates the distance values, adds <code>dis0</code> to the result after accumulation, and stores the final result in <code>distance</code>.</p>
+<td class="cellrowborder" valign="top" width="63.56%" headers="mcps1.2.4.1.3 "><p id="p126761515204"><a name="p126761515204"></a><a name="p126761515204"></a>Obtains distance values from the float-type LUT using 8-bit indexes, accumulates the distance values, adds <code>dis0</code> to the result after accumulation, and stores the final result in <code>dis</code>.</p>
 </td>
 </tr>
-<tr id="row1380243132018"><td class="cellrowborder" valign="top" width="13.059999999999999%" headers="mcps1.2.4.1.1 "><p id="p3506620151918"><a name="p3506620151918"></a><a name="p3506620151918"></a>8-bit table lookup-based accumulation interfaces</p>
+<tr id="row1380243132018"><td class="cellrowborder" valign="top" width="13.059999999999999%" headers="mcps1.2.4.1.1 "><p id="p3506620151918"><a name="p3506620151918"></a><a name="p3506620151918"></a>8-bit table lookup-based accumulation interface</p>
 </td>
 <td class="cellrowborder" valign="top" width="23.380000000000003%" headers="mcps1.2.4.1.2 "><p id="p28034302020"><a name="p28034302020"></a><a name="p28034302020"></a>krl_table_lookup_8b_f32_by_idx</p>
 </td>
-<td class="cellrowborder" valign="top" width="63.56%" headers="mcps1.2.4.1.3 "><p id="p4803034206"><a name="p4803034206"></a><a name="p4803034206"></a>Obtains distance values from the float-type LUT using 8-bit indexes, accumulates the distance values, adds <code>dis0</code> to the result after accumulation, and stores the final result in <code>distance</code>. Only the base vectors whose IDs are in the <code>idx</code> array are used for computation.</p>
+<td class="cellrowborder" valign="top" width="63.56%" headers="mcps1.2.4.1.3 "><p id="p4803034206"><a name="p4803034206"></a><a name="p4803034206"></a>Obtains distance values from the float-type LUT using 8-bit indexes, accumulates the distance values, adds <code>dis0</code> to the result after accumulation, and stores the final result in <code>dis</code>. Only the base vectors whose IDs are in the <code>idx</code> array are used for computation.</p>
 </td>
 </tr>
-<tr id="row13704145182016"><td class="cellrowborder" valign="top" width="13.059999999999999%" headers="mcps1.2.4.1.1 "><p id="p45071220161916"><a name="p45071220161916"></a><a name="p45071220161916"></a>8-bit table lookup-based accumulation interfaces</p>
+<tr id="row13704145182016"><td class="cellrowborder" valign="top" width="13.059999999999999%" headers="mcps1.2.4.1.1 "><p id="p45071220161916"><a name="p45071220161916"></a><a name="p45071220161916"></a>8-bit table lookup-based accumulation interface</p>
 </td>
 <td class="cellrowborder" valign="top" width="23.380000000000003%" headers="mcps1.2.4.1.2 "><p id="p270425132019"><a name="p270425132019"></a><a name="p270425132019"></a>krl_table_lookup_8b_f32_with_handle</p>
 </td>
-<td class="cellrowborder" valign="top" width="63.56%" headers="mcps1.2.4.1.3 "><p id="p27041512013"><a name="p27041512013"></a><a name="p27041512013"></a>Obtains distance values from the float-type LUT using 8-bit indexes, accumulates the distance values, adds <code>dis0</code> to the result after accumulation, and stores the final result in <code>distance</code>. The <code>idx</code> and <code>distance</code> arrays are contained in the KRLLUT8bHandle instance. Only the base vectors whose IDs are in the <code>idx</code> array are used for computation.</p>
+<td class="cellrowborder" valign="top" width="63.56%" headers="mcps1.2.4.1.3 "><p id="p27041512013"><a name="p27041512013"></a><a name="p27041512013"></a>Obtains distance values from the float-type LUT using 8-bit indexes, accumulates the distance values, adds <code>dis0</code> to the result after accumulation, and stores the final result in <code>dis</code>. The <code>idx</code> and <code>dis</code> arrays are contained in the KRLLUT8bHandle instance. Only the base vectors whose IDs are in the <code>idx</code> array are used for computation.</p>
 </td>
 </tr>
-<tr id="row1040647122014"><td class="cellrowborder" valign="top" width="13.059999999999999%" headers="mcps1.2.4.1.1 "><p id="p46851630141710"><a name="p46851630141710"></a><a name="p46851630141710"></a>4-bit table lookup-based accumulation interfaces</p>
+<tr id="row1040647122014"><td class="cellrowborder" valign="top" width="13.059999999999999%" headers="mcps1.2.4.1.1 "><p id="p46851630141710"><a name="p46851630141710"></a><a name="p46851630141710"></a>4-bit table lookup-based accumulation interface</p>
 </td>
 <td class="cellrowborder" valign="top" width="23.380000000000003%" headers="mcps1.2.4.1.2 "><p id="p12407197202019"><a name="p12407197202019"></a><a name="p12407197202019"></a>krl_fast_table_lookup_step</p>
 </td>
 <td class="cellrowborder" valign="top" width="63.56%" headers="mcps1.2.4.1.3 "><p id="p040757182014"><a name="p040757182014"></a><a name="p040757182014"></a>An operator designed for 4-bit table lookup, accumulation, filtering, and compression. It is used for batch processing of float-type query vectors. This operator is used to compute distances between a maximum of 16 query vectors and 32 base vectors. After the distance computation, each result is compared against a threshold. If a distance value is less than the threshold, the bit in <code>lt_mask</code> of the corresponding base vector is set to <code>1</code>. Otherwise, it is set to <code>0</code>.</p>
 </td>
 </tr>
-<tr id="row187412920207"><td class="cellrowborder" valign="top" width="13.059999999999999%" headers="mcps1.2.4.1.1 "><p id="p1962812276198"><a name="p1962812276198"></a><a name="p1962812276198"></a>4-bit table lookup-based accumulation interfaces</p>
+<tr id="row187412920207_bs32"><td class="cellrowborder" valign="top" width="13.059999999999999%" headers="mcps1.2.4.1.1 "><p id="p1962812276198_bs32"><a name="p1962812276198_bs32"></a><a name="p1962812276198_bs32"></a>4-bit table lookup-based accumulation interface</p>
+</td>
+<td class="cellrowborder" valign="top" width="23.380000000000003%" headers="mcps1.2.4.1.2 "><p id="p1332135182717_bs32"><a name="p1332135182717_bs32"></a><a name="p1332135182717_bs32"></a>krl_L2_table_lookup_fast_scan_bs32</p>
+</td>
+<td class="cellrowborder" valign="top" width="63.56%" headers="mcps1.2.4.1.3 "><p id="p1974249132015_bs32"><a name="p1974249132015_bs32"></a><a name="p1974249132015_bs32"></a>An operator designed for 4-bit table lookup, accumulation, filtering, and compression. It is used for processing float-type query vectors individually. Computes Euclidean distances between a query vector and 32 base vectors. Based on the distance comparison rule, if a distance value meets the comparison rule, the bit in <code>lt_mask</code> of the corresponding base vector is set to <code>1</code>. Otherwise, it is set to <code>0</code>.</p>
+</td>
+</tr>
+<tr id="row10185812122010_bs32"><td class="cellrowborder" valign="top" width="13.059999999999999%" headers="mcps1.2.4.1.1 "><p id="p1630327101916_bs32"><a name="p1630327101916_bs32"></a><a name="p1630327101916_bs32"></a>4-bit table lookup-based accumulation interface</p>
+</td>
+<td class="cellrowborder" valign="top" width="23.380000000000003%" headers="mcps1.2.4.1.2 "><p id="p1618516126202_bs32"><a name="p1618516126202_bs32"></a><a name="p1618516126202_bs32"></a>krl_IP_table_lookup_fast_scan_bs32</p>
+</td>
+<td class="cellrowborder" valign="top" width="63.56%" headers="mcps1.2.4.1.3 "><p id="p2405162815416_bs32"><a name="p2405162815416_bs32"></a><a name="p2405162815416_bs32"></a>An operator designed for 4-bit table lookup, accumulation, filtering, and compression. It is used for processing float-type query vectors individually. Computes distances between a query vector and 32 base vectors using inner product. Based on the distance comparison rule, if a distance value meets the comparison rule, the bit in <code>lt_mask</code> of the corresponding base vector is set to <code>1</code>. Otherwise, it is set to <code>0</code>.</p>
+</td>
+</tr>
+<tr id="row187412920207"><td class="cellrowborder" valign="top" width="13.059999999999999%" headers="mcps1.2.4.1.1 "><p id="p1962812276198"><a name="p1962812276198"></a><a name="p1962812276198"></a>4-bit table lookup-based accumulation interface</p>
 </td>
 <td class="cellrowborder" valign="top" width="23.380000000000003%" headers="mcps1.2.4.1.2 "><p id="p1332135182717"><a name="p1332135182717"></a><a name="p1332135182717"></a>krl_L2_table_lookup_fast_scan_bs64</p>
 </td>
-<td class="cellrowborder" valign="top" width="63.56%" headers="mcps1.2.4.1.3 "><p id="p1974249132015"><a name="p1974249132015"></a><a name="p1974249132015"></a>An operator designed for 4-bit table lookup, accumulation, filtering, and compression. It is used for processing float-type query vectors individually. Computes Euclidean distances between a query vector and 64 base vectors. Based on the distance comparison rule, if a distance value meets the comparison rule, the bit in <code>lt_mask</code> of the corresponding base vector is set to <code>1</code>. Otherwise, it is set to <code>0</code>.</p>
+<td class="cellrowborder" valign="top" width="63.56%" headers="mcps1.2.4.1.3 "><p id="p1974249132015"><a name="p1974249132015"></a><a name="p1974249132015"></a>An operator designed for 4-bit table lookup, accumulation, filtering, and compression. It is used for processing float-type query vectors individually. Computes Euclidean distances between a query vector and 64 base vectors. Based on the distance comparison rule, if a distance value meets the comparison rule, the bit in **lt_mask** of the corresponding base vector is set to **1**. Otherwise, it is set to **0**.</p>
 </td>
 </tr>
-<tr id="row10185812122010"><td class="cellrowborder" valign="top" width="13.059999999999999%" headers="mcps1.2.4.1.1 "><p id="p1630327101916"><a name="p1630327101916"></a><a name="p1630327101916"></a>4-bit table lookup-based accumulation interfaces</p>
+<tr id="row10185812122010"><td class="cellrowborder" valign="top" width="13.059999999999999%" headers="mcps1.2.4.1.1 "><p id="p1630327101916"><a name="p1630327101916"></a><a name="p1630327101916"></a>4-bit table lookup-based accumulation interface</p>
 </td>
 <td class="cellrowborder" valign="top" width="23.380000000000003%" headers="mcps1.2.4.1.2 "><p id="p1618516126202"><a name="p1618516126202"></a><a name="p1618516126202"></a>krl_IP_table_lookup_fast_scan_bs64</p>
 </td>
-<td class="cellrowborder" valign="top" width="63.56%" headers="mcps1.2.4.1.3 "><p id="p2405162815416"><a name="p2405162815416"></a><a name="p2405162815416"></a>An operator designed for 4-bit table lookup, accumulation, filtering, and compression. It is used for processing float-type query vectors individually. It computes distances between a query vector and 64 base vectors using inner product. Based on the distance comparison rule, if a distance value meets the comparison rule, the bit in <code>lt_mask</code> of the corresponding base vector is set to <code>1</code>. Otherwise, it is set to <code>0</code>.</p>
+<td class="cellrowborder" valign="top" width="63.56%" headers="mcps1.2.4.1.3 "><p id="p2405162815416"><a name="p2405162815416"></a><a name="p2405162815416"></a>An operator designed for 4-bit table lookup, accumulation, filtering, and compression. It is used for processing float-type query vectors individually. Computes distances between a query vector and 64 base vectors using inner product. Based on the distance comparison rule, if a distance value meets the comparison rule, the bit in <code>lt_mask</code> of the corresponding base vector is set to <code>1</code>. Otherwise, it is set to <code>0</code>.</p>
 </td>
 </tr>
-<tr id="row17962171310208"><td class="cellrowborder" valign="top" width="13.059999999999999%" headers="mcps1.2.4.1.1 "><p id="p3631162715196"><a name="p3631162715196"></a><a name="p3631162715196"></a>4-bit table lookup-based accumulation interfaces</p>
+<tr id="row17962171310208"><td class="cellrowborder" valign="top" width="13.059999999999999%" headers="mcps1.2.4.1.1 "><p id="p3631162715196"><a name="p3631162715196"></a><a name="p3631162715196"></a>4-bit table lookup-based accumulation interface</p>
 </td>
 <td class="cellrowborder" valign="top" width="23.380000000000003%" headers="mcps1.2.4.1.2 "><p id="p3585133102819"><a name="p3585133102819"></a><a name="p3585133102819"></a>krl_L2_table_lookup_fast_scan_bs96</p>
 </td>
-<td class="cellrowborder" valign="top" width="63.56%" headers="mcps1.2.4.1.3 "><p id="p18962121362013"><a name="p18962121362013"></a><a name="p18962121362013"></a>An operator designed for 4-bit table lookup, accumulation, filtering, and compression. It is used for processing float-type query vectors individually. It computes Euclidean distances between a query vector and 96 base vectors. Based on the distance comparison rule, if a distance value meets the comparison rule, the bit in <code>lt_mask</code> of the corresponding base vector is set to <code>1</code>. Otherwise, it is set to <code>0</code>.</p>
+<td class="cellrowborder" valign="top" width="63.56%" headers="mcps1.2.4.1.3 "><p id="p18962121362013"><a name="p18962121362013"></a><a name="p18962121362013"></a>An operator designed for 4-bit table lookup, accumulation, filtering, and compression. It is used for processing float-type query vectors individually. Computes Euclidean distances between a query vector and 96 base vectors. Based on the distance comparison rule, if a distance value meets the comparison rule, the bit in <code>lt_mask</code> of the corresponding base vector is set to <code>1</code>. Otherwise, it is set to <code>0</code>.</p>
 </td>
 </tr>
-<tr id="row39991716192015"><td class="cellrowborder" valign="top" width="13.059999999999999%" headers="mcps1.2.4.1.1 "><p id="p56321127121916"><a name="p56321127121916"></a><a name="p56321127121916"></a>4-bit table lookup-based accumulation interfaces</p>
+<tr id="row39991716192015"><td class="cellrowborder" valign="top" width="13.059999999999999%" headers="mcps1.2.4.1.1 "><p id="p56321127121916"><a name="p56321127121916"></a><a name="p56321127121916"></a>4-bit table lookup-based accumulation interface</p>
 </td>
 <td class="cellrowborder" valign="top" width="23.380000000000003%" headers="mcps1.2.4.1.2 "><p id="p1999916102012"><a name="p1999916102012"></a><a name="p1999916102012"></a>krl_IP_table_lookup_fast_scan_bs96</p>
 </td>
 <td class="cellrowborder" valign="top" width="63.56%" headers="mcps1.2.4.1.3 "><p id="p8999816192019"><a name="p8999816192019"></a><a name="p8999816192019"></a>An operator designed for 4-bit table lookup, accumulation, filtering, and compression. It is used for processing float-type query vectors individually. Computes distances between a query vector and 96 base vectors using inner product. Based on the distance comparison rule, if a distance value meets the comparison rule, the bit in <code>lt_mask</code> of the corresponding base vector is set to <code>1</code>. Otherwise, it is set to <code>0</code>.</p>
 </td>
 </tr>
-<tr id="row879313188203"><td class="cellrowborder" valign="top" width="13.059999999999999%" headers="mcps1.2.4.1.1 "><p id="p106331927191916"><a name="p106331927191916"></a><a name="p106331927191916"></a>4-bit table lookup-based accumulation interfaces</p>
+<tr id="row187412920207_bs32_sve2"><td class="cellrowborder" valign="top" width="13.059999999999999%" headers="mcps1.2.4.1.1 "><p id="p1962812276198_bs32_sve2"><a name="p1962812276198_bs32_sve2"></a><a name="p1962812276198_bs32_sve2"></a>4-bit table lookup-based accumulation interface</p>
+</td>
+<td class="cellrowborder" valign="top" width="23.380000000000003%" headers="mcps1.2.4.1.2 "><p id="p1332135182717_bs32_sve2"><a name="p1332135182717_bs32_sve2"></a><a name="p1332135182717_bs32_sve2"></a>krl_L2_table_lookup_fast_scan_bs32_sve2</p>
+</td>
+<td class="cellrowborder" valign="top" width="63.56%" headers="mcps1.2.4.1.3 "><p id="p1974249132015_bs32_sve2"><a name="p1974249132015_bs32_sve2"></a><a name="p1974249132015_bs32_sve2"></a>An operator designed for 4-bit table lookup, accumulation, filtering, and compression. It is used for processing float-type query vectors individually. Computes Euclidean distances between a query vector and 32 base vectors. Based on the distance comparison rule, if a distance value meets the comparison rule, the bit in <code>lt_mask</code> of the corresponding base vector is set to <code>1</code>. Otherwise, it is set to <code>0</code> (SVE2).</p>
+</td>
+</tr>
+<tr id="row10185812122010_bs32_sve2"><td class="cellrowborder" valign="top" width="13.059999999999999%" headers="mcps1.2.4.1.1 "><p id="p1630327101916_bs32_sve2"><a name="p1630327101916_bs32_sve2"></a><a name="p1630327101916_bs32_sve2"></a>4-bit table lookup-based accumulation interface</p>
+</td>
+<td class="cellrowborder" valign="top" width="23.380000000000003%" headers="mcps1.2.4.1.2 "><p id="p1618516126202_bs32_sve2"><a name="p1618516126202_bs32_sve2"></a><a name="p1618516126202_bs32_sve2"></a>krl_IP_table_lookup_fast_scan_bs32_sve2</p>
+</td>
+<td class="cellrowborder" valign="top" width="63.56%" headers="mcps1.2.4.1.3 "><p id="p2405162815416_bs32_sve2"><a name="p2405162815416_bs32_sve2"></a><a name="p2405162815416_bs32_sve2"></a>An operator designed for 4-bit table lookup, accumulation, filtering, and compression. It is used for processing float-type query vectors individually. Computes distances between a query vector and 32 base vectors using inner product. Based on the distance comparison rule, if a distance value meets the comparison rule, the bit in <code>lt_mask</code> of the corresponding base vector is set to <code>1</code>. Otherwise, it is set to <code>0</code> (SVE2).</p>
+</td>
+</tr>
+<tr id="row187412920207_bs64_sve2"><td class="cellrowborder" valign="top" width="13.059999999999999%" headers="mcps1.2.4.1.1 "><p id="p1962812276198_bs64_sve2"><a name="p1962812276198_bs64_sve2"></a><a name="p1962812276198_bs64_sve2"></a>4-bit table lookup-based accumulation interface</p>
+</td>
+<td class="cellrowborder" valign="top" width="23.380000000000003%" headers="mcps1.2.4.1.2 "><p id="p1332135182717_bs64_sve2"><a name="p1332135182717_bs64_sve2"></a><a name="p1332135182717_bs64_sve2"></a>krl_L2_table_lookup_fast_scan_bs64_sve2</p>
+</td>
+<td class="cellrowborder" valign="top" width="63.56%" headers="mcps1.2.4.1.3 "><p id="p1974249132015_bs64_sve2"><a name="p1974249132015_bs64_sve2"></a><a name="p1974249132015_bs64_sve2"></a>An operator designed for 4-bit table lookup, accumulation, filtering, and compression. It is used for processing float-type query vectors individually. Computes Euclidean distances between a query vector and 64 base vectors. Based on the distance comparison rule, if a distance value meets the comparison rule, the bit in <code>lt_mask</code> of the corresponding base vector is set to <code>1</code>. Otherwise, it is set to <code>0</code> (SVE2).</p>
+</td>
+</tr>
+<tr id="row10185812122010_bs64_sve2"><td class="cellrowborder" valign="top" width="13.059999999999999%" headers="mcps1.2.4.1.1 "><p id="p1630327101916_bs64_sve2"><a name="p1630327101916_bs64_sve2"></a><a name="p1630327101916_bs64_sve2"></a>4-bit table lookup-based accumulation interface</p>
+</td>
+<td class="cellrowborder" valign="top" width="23.380000000000003%" headers="mcps1.2.4.1.2 "><p id="p1618516126202_bs64_sve2"><a name="p1618516126202_bs64_sve2"></a><a name="p1618516126202_bs64_sve2"></a>krl_IP_table_lookup_fast_scan_bs64_sve2</p>
+</td>
+<td class="cellrowborder" valign="top" width="63.56%" headers="mcps1.2.4.1.3 "><p id="p2405162815416_bs64_sve2"><a name="p2405162815416_bs64_sve2"></a><a name="p2405162815416_bs64_sve2"></a>An operator designed for 4-bit table lookup, accumulation, filtering, and compression. It is used for processing float-type query vectors individually. It computes distances between a query vector and 64 base vectors using inner product. Based on the distance comparison rule, if a distance value meets the comparison rule, the bit in <code>lt_mask</code> of the corresponding base vector is set to <code>1</code>. Otherwise, it is set to <code>0</code> (SVE2).</p>
+</td>
+</tr>
+<tr id="row17962171310208_bs96_sve2"><td class="cellrowborder" valign="top" width="13.059999999999999%" headers="mcps1.2.4.1.1 "><p id="p3631162715196_bs96_sve2"><a name="p3631162715196_bs96_sve2"></a><a name="p3631162715196_bs96_sve2"></a>4-bit table lookup-based accumulation interface</p>
+</td>
+<td class="cellrowborder" valign="top" width="23.380000000000003%" headers="mcps1.2.4.1.2 "><p id="p3585133102819_bs96_sve2"><a name="p3585133102819_bs96_sve2"></a><a name="p3585133102819_bs96_sve2"></a>krl_L2_table_lookup_fast_scan_bs96_sve2</p>
+</td>
+<td class="cellrowborder" valign="top" width="63.56%" headers="mcps1.2.4.1.3 "><p id="p18962121362013_bs96_sve2"><a name="p18962121362013_bs96_sve2"></a><a name="p18962121362013_bs96_sve2"></a>An operator designed for 4-bit table lookup, accumulation, filtering, and compression. It is used for processing float-type query vectors individually. It computes Euclidean distances between a query vector and 96 base vectors. Based on the distance comparison rule, if a distance value meets the comparison rule, the bit in <code>lt_mask</code> of the corresponding base vector is set to <code>1</code>. Otherwise, it is set to <code>0</code> (SVE2).</p>
+</td>
+</tr>
+<tr id="row39991716192015_bs96_sve2"><td class="cellrowborder" valign="top" width="13.059999999999999%" headers="mcps1.2.4.1.1 "><p id="p56321127121916_bs96_sve2"><a name="p56321127121916_bs96_sve2"></a><a name="p56321127121916_bs96_sve2"></a>4-bit table lookup-based accumulation interface</p>
+</td>
+<td class="cellrowborder" valign="top" width="23.380000000000003%" headers="mcps1.2.4.1.2 "><p id="p1999916102012_bs96_sve2"><a name="p1999916102012_bs96_sve2"></a><a name="p1999916102012_bs96_sve2"></a>krl_IP_table_lookup_fast_scan_bs96_sve2</p>
+</td>
+<td class="cellrowborder" valign="top" width="63.56%" headers="mcps1.2.4.1.3 "><p id="p8999816192019_bs96_sve2"><a name="p8999816192019_bs96_sve2"></a><a name="p8999816192019_bs96_sve2"></a>An operator designed for 4-bit table lookup, accumulation, filtering, and compression. It is used for processing float-type query vectors individually. Computes distances between a query vector and 96 base vectors using inner product. Based on the distance comparison rule, if a distance value meets the comparison rule, the bit in <code>lt_mask</code> of the corresponding base vector is set to <code>1</code>. Otherwise, it is set to <code>0</code> (SVE2).</p>
+</td>
+</tr>
+<tr id="row879313188203"><td class="cellrowborder" valign="top" width="13.059999999999999%" headers="mcps1.2.4.1.1 "><p id="p106331927191916"><a name="p106331927191916"></a><a name="p106331927191916"></a>4-bit table lookup-based accumulation interface</p>
 </td>
 <td class="cellrowborder" valign="top" width="23.380000000000003%" headers="mcps1.2.4.1.2 "><p id="p979311816203"><a name="p979311816203"></a><a name="p979311816203"></a>krl_table_lookup_4b_f16</p>
 </td>
 <td class="cellrowborder" valign="top" width="63.56%" headers="mcps1.2.4.1.3 "><p id="p1479391832015"><a name="p1479391832015"></a><a name="p1479391832015"></a>An operator designed for 4-bit table lookup, accumulation, filtering, and compression. It is used for processing fp16 query vectors individually. It computes distances between a query vector and multiple base vectors using inner product. The initial distance is <code>dis_f16</code>. This interface does not perform filtering or compression (that is, comparison with the threshold).</p>
 </td>
 </tr>
-<tr id="row54279217209"><td class="cellrowborder" valign="top" width="13.059999999999999%" headers="mcps1.2.4.1.1 "><p id="p136351727111911"><a name="p136351727111911"></a><a name="p136351727111911"></a>4-bit table lookup-based accumulation interfaces</p>
+<tr id="row54279217209"><td class="cellrowborder" valign="top" width="13.059999999999999%" headers="mcps1.2.4.1.1 "><p id="p136351727111911"><a name="p136351727111911"></a><a name="p136351727111911"></a>4-bit table lookup-based accumulation interface</p>
 </td>
 <td class="cellrowborder" valign="top" width="23.380000000000003%" headers="mcps1.2.4.1.2 "><p id="p1120132012282"><a name="p1120132012282"></a><a name="p1120132012282"></a>krl_pack_codes_4b</p>
 </td>
-<td class="cellrowborder" valign="top" width="63.56%" headers="mcps1.2.4.1.3 "><p id="p16427162162010"><a name="p16427162162010"></a><a name="p16427162162010"></a>An operator designed for 4-bit table lookup, accumulation, filtering, and compression. It is used for processing fp16 query vectors individually. It computes distances between a query vector and multiple base vectors using inner product. The initial distance is <code>dis_f16</code>. This interface does not perform filtering or compression (that is, comparison with the threshold).</p>
+<td class="cellrowborder" valign="top" width="63.56%" headers="mcps1.2.4.1.3 "><p id="p16427162162010"><a name="p16427162162010"></a><a name="p16427162162010"></a>Pack the original 4-bit codebook data to enable fast table lookup computation.</p>
 </td>
 </tr>
 <tr id="row2013422482018"><td class="cellrowborder" valign="top" width="13.059999999999999%" headers="mcps1.2.4.1.1 "><p id="p18685113014176"><a name="p18685113014176"></a><a name="p18685113014176"></a>Reranking interfaces</p>
@@ -330,7 +421,7 @@
 
 ### krl\_create\_distance\_handle
 
-**Interface Definition <a name="section172317194488"></a>**
+**API Definition<a name="section172317194488"></a>**
 
 int krl\_create\_distance\_handle\(KRLDistanceHandle\*\* kdh, size\_t accu\_level, size\_t blocksize, size\_t codes\_num, size\_t dim, size\_t num\_base, int metric\_type, const uint8\_t\* codes, size\_t codes\_size\);
 
@@ -385,7 +476,7 @@ Initializes and constructs a KRLDistanceHandle instance for dense distance compu
 </td>
 <td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p65975343465"><a name="p65975343465"></a><a name="p65975343465"></a>Number of base vectors computed for each query vector.</p>
 </td>
-<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p16989883251"><a name="p16989883251"></a><a name="p16989883251"></a>[1, 2^30-1]</p>
+<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p16989883251"><a name="p16989883251"></a><a name="p16989883251"></a>[1,2^30-1]</p>
 </td>
 </tr>
 <tr id="row523013315504"><td class="cellrowborder" valign="top" width="15.56155615561556%" headers="mcps1.1.5.1.1 "><p id="p10230123316509"><a name="p10230123316509"></a><a name="p10230123316509"></a>dim</p>
@@ -394,7 +485,7 @@ Initializes and constructs a KRLDistanceHandle instance for dense distance compu
 </td>
 <td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p102301133105015"><a name="p102301133105015"></a><a name="p102301133105015"></a>Vector dimension.</p>
 </td>
-<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p296864410116"><a name="p296864410116"></a><a name="p296864410116"></a>[1, 65535]</p>
+<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p296864410116"><a name="p296864410116"></a><a name="p296864410116"></a>[1,65535]</p>
 </td>
 </tr>
 <tr id="row1523083315012"><td class="cellrowborder" valign="top" width="15.56155615561556%" headers="mcps1.1.5.1.1 "><p id="p10230433105020"><a name="p10230433105020"></a><a name="p10230433105020"></a>num_base</p>
@@ -403,7 +494,7 @@ Initializes and constructs a KRLDistanceHandle instance for dense distance compu
 </td>
 <td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p623053365015"><a name="p623053365015"></a><a name="p623053365015"></a>Number of vectors processed in a batch.</p>
 </td>
-<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p1946832961016"><a name="p1946832961016"></a><a name="p1946832961016"></a>[1, 65535]</p>
+<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p1946832961016"><a name="p1946832961016"></a><a name="p1946832961016"></a>[1,65535]</p>
 </td>
 </tr>
 <tr id="row387211011106"><td class="cellrowborder" valign="top" width="15.56155615561556%" headers="mcps1.1.5.1.1 "><p id="p2023791201011"><a name="p2023791201011"></a><a name="p2023791201011"></a>metric_type</p>
@@ -437,7 +528,7 @@ Initializes and constructs a KRLDistanceHandle instance for dense distance compu
 </tbody>
 </table>
 
-**Return Values<a name="section49971832106"></a>**
+**Return Value<a name="section49971832106"></a>**
 
 <a name="table17997635100"></a>
 <table><thead align="left"><tr id="row699763141018"><th class="cellrowborder" valign="top" width="40%" id="mcps1.1.3.1.1"><p id="p699793141012"><a name="p699793141012"></a><a name="p699793141012"></a>Data Type</p>
@@ -448,13 +539,13 @@ Initializes and constructs a KRLDistanceHandle instance for dense distance compu
 </thead>
 <tbody><tr id="row1599716361015"><td class="cellrowborder" valign="top" width="40%" headers="mcps1.1.3.1.1 "><p id="p39970319101"><a name="p39970319101"></a><a name="p39970319101"></a>int</p>
 </td>
-<td class="cellrowborder" valign="top" width="60%" headers="mcps1.1.3.1.2 "><p id="p53461032104518"><a name="p53461032104518"></a><a name="p53461032104518"></a><code>0</code> is returned on successful execution. In case of failure, an error code is returned to indicate the specific issue.</p>
+<td class="cellrowborder" valign="top" width="60%" headers="mcps1.1.3.1.2 "><p id="p53461032104518"><a name="p53461032104518"></a><a name="p53461032104518"></a><code>0</code> is returned on successful execution. In case of failure, an error code is returned.</p>
 </td>
 </tr>
 </tbody>
 </table>
 
-**Example**
+**Sample**
 
 ```c
 #include <stdio.h>
@@ -463,18 +554,18 @@ Initializes and constructs a KRLDistanceHandle instance for dense distance compu
 #include "krl.h"
 
 int main() {
-    // Parameter configuration
-    size_t dim = 128;           // Vector dimension
+    // Set parameters.
+    size_t dim = 128; // Vector dimension
     size_t num_base = 1;        // Number of query vectors processed in a single batch
     size_t codes_num = 1000;    // Number of base vectors
     size_t accu_level = 3;      // Quantization level
     size_t blocksize = 32;      // Data block size (<code>codes_num</code> must be divisible by the data block size)
     int metric_type = 1;        // Euclidean distance
 
-    // Base vector data preparation
+    // Prepare base vector data.
     size_t codes_size = num_base * codes_num * dim * sizeof(float);
     float* codes_data = (float*)malloc(codes_size);
-    //... Populate codes_data ...
+    // ... Populate the codes_data
 
     // Handle creation
     KRLDistanceHandle* kdh = NULL;
@@ -500,7 +591,7 @@ int main() {
 
     //... Use kdh to compute the distance ...
 
-    // Resources cleanup
+    // Free resources.
     krl_clean_distance_handle(&kdh);
     free(codes_data);
 
@@ -510,13 +601,13 @@ int main() {
 
 ### krl\_create\_reorder\_handle
 
-**Interface Definition<a name="section172317194488"></a>**
+**API Definition<a name="section172317194488"></a>**
 
 int krl\_create\_reorder\_handle\(KRLDistanceHandle\*\* kdh, size\_t accu\_level, size\_t full\_accu\_level, size\_t codes\_num, size\_t dim, int metric\_type, const uint8\_t\* codes, size\_t codes\_size\);
 
 **Function<a name="section1153124784912"></a>**
 
-Initializes and constructs a KRLDistanceHandle instance for reranking computation.
+Initializes and constructs a KRLDistanceHandle instance for reordering computation.
 
 **Parameters<a name="section157501312135019"></a>**
 
@@ -544,7 +635,7 @@ Initializes and constructs a KRLDistanceHandle instance for reranking computatio
 </td>
 <td class="cellrowborder" valign="top" width="14.591459145914593%" headers="mcps1.1.5.1.2 "><p id="p5893141517919"><a name="p5893141517919"></a><a name="p5893141517919"></a>size_t</p>
 </td>
-<td class="cellrowborder" valign="top" width="30.29302930293029%" headers="mcps1.1.5.1.3 "><p id="p10230433115013"><a name="p10230433115013"></a><a name="p10230433115013"></a>Quantization level in low-accuracy coarse ranking.</p>
+<td class="cellrowborder" valign="top" width="30.29302930293029%" headers="mcps1.1.5.1.3 "><p id="p10230433115013"><a name="p10230433115013"></a><a name="p10230433115013"></a>Quantization level in low-accuracy coarse ordering, used in the corase ranking phase before re-ranking.</p>
 </td>
 <td class="cellrowborder" valign="top" width="39.55395539553955%" headers="mcps1.1.5.1.4 "><p id="p77289581198"><a name="p77289581198"></a><a name="p77289581198"></a>[1, 3]</p>
 <a name="ul164886121012"></a><a name="ul164886121012"></a><ul id="ul164886121012"><li><code>1</code>: int8 </li><li><code>2</code>: fp16 </li><li><code>3</code>: fp32</li></ul>
@@ -554,7 +645,7 @@ Initializes and constructs a KRLDistanceHandle instance for reranking computatio
 </td>
 <td class="cellrowborder" valign="top" width="14.591459145914593%" headers="mcps1.1.5.1.2 "><p id="p489312151893"><a name="p489312151893"></a><a name="p489312151893"></a>size_t</p>
 </td>
-<td class="cellrowborder" valign="top" width="30.29302930293029%" headers="mcps1.1.5.1.3 "><p id="p268013224617"><a name="p268013224617"></a><a name="p268013224617"></a>Quantization level in high-accuracy reranking.</p>
+<td class="cellrowborder" valign="top" width="30.29302930293029%" headers="mcps1.1.5.1.3 "><p id="p268013224617"><a name="p268013224617"></a><a name="p268013224617"></a>Quantization level in high-accuracy reordering.</p>
 </td>
 <td class="cellrowborder" valign="top" width="39.55395539553955%" headers="mcps1.1.5.1.4 "><p id="p11884449121914"><a name="p11884449121914"></a><a name="p11884449121914"></a>[1, 3]</p>
 <a name="ul1588418498192"></a><a name="ul1588418498192"></a><ul id="ul1588418498192"><li><code>1</code>: int8 </li><li><code>2</code>: fp16 </li><li><code>3</code>: fp32</li></ul>
@@ -566,7 +657,7 @@ Initializes and constructs a KRLDistanceHandle instance for reranking computatio
 </td>
 <td class="cellrowborder" valign="top" width="30.29302930293029%" headers="mcps1.1.5.1.3 "><p id="p65975343465"><a name="p65975343465"></a><a name="p65975343465"></a>Number of base vectors computed for each query vector.</p>
 </td>
-<td class="cellrowborder" valign="top" width="39.55395539553955%" headers="mcps1.1.5.1.4 "><p id="p16989883251"><a name="p16989883251"></a><a name="p16989883251"></a>[1, 2^30-1]</p>
+<td class="cellrowborder" valign="top" width="39.55395539553955%" headers="mcps1.1.5.1.4 "><p id="p16989883251"><a name="p16989883251"></a><a name="p16989883251"></a>[1,2^30-1]</p>
 </td>
 </tr>
 <tr id="row523013315504"><td class="cellrowborder" valign="top" width="15.56155615561556%" headers="mcps1.1.5.1.1 "><p id="p10230123316509"><a name="p10230123316509"></a><a name="p10230123316509"></a>dim</p>
@@ -575,7 +666,7 @@ Initializes and constructs a KRLDistanceHandle instance for reranking computatio
 </td>
 <td class="cellrowborder" valign="top" width="30.29302930293029%" headers="mcps1.1.5.1.3 "><p id="p102301133105015"><a name="p102301133105015"></a><a name="p102301133105015"></a>Vector dimension.</p>
 </td>
-<td class="cellrowborder" valign="top" width="39.55395539553955%" headers="mcps1.1.5.1.4 "><p id="p296864410116"><a name="p296864410116"></a><a name="p296864410116"></a>[1, 65535]</p>
+<td class="cellrowborder" valign="top" width="39.55395539553955%" headers="mcps1.1.5.1.4 "><p id="p296864410116"><a name="p296864410116"></a><a name="p296864410116"></a>[1,65535]</p>
 </td>
 </tr>
 <tr id="row387211011106"><td class="cellrowborder" valign="top" width="15.56155615561556%" headers="mcps1.1.5.1.1 "><p id="p2023791201011"><a name="p2023791201011"></a><a name="p2023791201011"></a>metric_type</p>
@@ -592,7 +683,7 @@ Initializes and constructs a KRLDistanceHandle instance for reranking computatio
 </td>
 <td class="cellrowborder" valign="top" width="14.591459145914593%" headers="mcps1.1.5.1.2 "><p id="p19131103031011"><a name="p19131103031011"></a><a name="p19131103031011"></a>const uint8_t*</p>
 </td>
-<td class="cellrowborder" valign="top" width="30.29302930293029%" headers="mcps1.1.5.1.3 "><p id="p55461255161011"><a name="p55461255161011"></a><a name="p55461255161011"></a>Base vectors (float).</p>
+<td class="cellrowborder" valign="top" width="30.29302930293029%" headers="mcps1.1.5.1.3 "><p id="p55461255161011"><a name="p55461255161011"></a><a name="p55461255161011"></a>Base vector encoding data.</p>
 </td>
 <td class="cellrowborder" valign="top" width="39.55395539553955%" headers="mcps1.1.5.1.4 "><p id="p213293001016"><a name="p213293001016"></a><a name="p213293001016"></a>The size is specified by <code>codes_size</code>.</p>
 </td>
@@ -609,7 +700,7 @@ Initializes and constructs a KRLDistanceHandle instance for reranking computatio
 </tbody>
 </table>
 
-**Return Values<a name="section49971832106"></a>**
+**Return Value<a name="section49971832106"></a>**
 
 <a name="table17997635100"></a>
 <table><thead align="left"><tr id="row699763141018"><th class="cellrowborder" valign="top" width="40%" id="mcps1.1.3.1.1"><p id="p699793141012"><a name="p699793141012"></a><a name="p699793141012"></a>Data Type</p>
@@ -620,13 +711,13 @@ Initializes and constructs a KRLDistanceHandle instance for reranking computatio
 </thead>
 <tbody><tr id="row1599716361015"><td class="cellrowborder" valign="top" width="40%" headers="mcps1.1.3.1.1 "><p id="p39970319101"><a name="p39970319101"></a><a name="p39970319101"></a>int</p>
 </td>
-<td class="cellrowborder" valign="top" width="60%" headers="mcps1.1.3.1.2 "><p id="p53461032104518"><a name="p53461032104518"></a><a name="p53461032104518"></a><code>0</code> is returned on successful execution. In case of failure, an error code is returned to indicate the specific issue.</p>
+<td class="cellrowborder" valign="top" width="60%" headers="mcps1.1.3.1.2 "><p id="p53461032104518"><a name="p53461032104518"></a><a name="p53461032104518"></a><code>0</code> is returned on successful execution. In case of failure, an error code is returned.</p>
 </td>
 </tr>
 </tbody>
 </table>
 
-**Example**
+**Sample**
 
 ```c
 #include <stdio.h>
@@ -634,17 +725,17 @@ Initializes and constructs a KRLDistanceHandle instance for reranking computatio
 #include "krl.h"
 
 int main() {
-    // Parameter configuration
+    // Set parameters.
     size_t dim = 128;           // Vector dimension
     size_t codes_num = 100;         // Number of candidate vectors for reranking
     size_t accu_level = 1;          // int8 for coarse ranking
     size_t full_accu_level = 3;     // fp32 for reranking
     int metric_type = 1;            // Euclidean distance
 
-    // Base vector data preparation
+    // Prepare base vector data.
     size_t codes_size = codes_num * dim * sizeof(float);
     float* codes_data = (float*)malloc(codes_size);
-    //... Populate codes_data ...
+    // ... Populate the codes_data
 
     // Reranking handle creation
     KRLDistanceHandle* kdh = NULL;
@@ -669,7 +760,7 @@ int main() {
 
     //... Use kdh to perform reranking computation...
 
-    // Resources cleanup
+    // Free resources.
     krl_clean_distance_handle(&kdh);
     free(codes_data);
 
@@ -679,7 +770,7 @@ int main() {
 
 ### krl\_clean\_distance\_handle
 
-**Interface Definition<a name="section172317194488"></a>**
+**API Definition<a name="section172317194488"></a>**
 
 void krl\_clean\_distance\_handle\(KRLDistanceHandle\*\* kdh\);
 
@@ -712,7 +803,7 @@ Destroys the KRLDistanceHandle instance and releases memory space.
 </tbody>
 </table>
 
-**Example**
+**Sample**
 
 ```c
 #include <stdio.h>
@@ -750,7 +841,7 @@ int main() {
 
 ### krl\_create\_LUT8b\_handle
 
-**Interface Definition<a name="section172317194488"></a>**
+**API Definition<a name="section172317194488"></a>**
 
 int krl\_create\_LUT8b\_handle\(KRLLUT8bHandle\*\* klh, int use\_idx, size\_t capacity\);
 
@@ -802,7 +893,7 @@ Initializes and constructs a KRLLUT8bHandle instance for accumulation based on 8
 </tbody>
 </table>
 
-**Return Values<a name="section49971832106"></a>**
+**Return Value<a name="section49971832106"></a>**
 
 <a name="table17997635100"></a>
 <table><thead align="left"><tr id="row699763141018"><th class="cellrowborder" valign="top" width="40%" id="mcps1.1.3.1.1"><p id="p699793141012"><a name="p699793141012"></a><a name="p699793141012"></a>Data Type</p>
@@ -813,20 +904,20 @@ Initializes and constructs a KRLLUT8bHandle instance for accumulation based on 8
 </thead>
 <tbody><tr id="row1599716361015"><td class="cellrowborder" valign="top" width="40%" headers="mcps1.1.3.1.1 "><p id="p39970319101"><a name="p39970319101"></a><a name="p39970319101"></a>int</p>
 </td>
-<td class="cellrowborder" valign="top" width="60%" headers="mcps1.1.3.1.2 "><p id="p53461032104518"><a name="p53461032104518"></a><a name="p53461032104518"></a><code>0</code> is returned on successful execution. In case of failure, an error code is returned to indicate the specific issue.</p>
+<td class="cellrowborder" valign="top" width="60%" headers="mcps1.1.3.1.2 "><p id="p53461032104518"><a name="p53461032104518"></a><a name="p53461032104518"></a><code>0</code> is returned on successful execution. In case of failure, an error code is returned.</p>
 </td>
 </tr>
 </tbody>
 </table>
 
-**Example**
+**Sample**
 
 ```c
 #include <stdio.h>
 #include "krl.h"
 
 int main() {
-    // Parameter configuration
+    // Set parameters.
     int use_idx = 1; // Enable filtering of base vectors.
     size_t capacity = 10000; // A maximum of 10,000 base vectors are supported.
 
@@ -849,7 +940,7 @@ int main() {
 
     //... Use klh to perform accumulation based on table lookup ...
 
-    // Resources cleanup
+    // Free resources.
     krl_clean_LUT8b_handle(&klh);
 
     return 0;
@@ -858,7 +949,7 @@ int main() {
 
 ### krl\_clean\_LUT8b\_handle
 
-**Interface Definition<a name="section172317194488"></a>**
+**API Definition<a name="section172317194488"></a>**
 
 void krl\_clean\_LUT8b\_handle\(KRLLUT8bHandle\*\* klh\);
 
@@ -891,7 +982,7 @@ Destroys the KRLLUT8bHandle instance and releases memory space.
 </tbody>
 </table>
 
-**Example**
+**Sample**
 
 ```c
 #include <stdio.h>
@@ -920,7 +1011,7 @@ int main() {
 
 ### krl\_get\_idx\_pointer
 
-**Interface Definition<a name="section172317194488"></a>**
+**API Definition<a name="section172317194488"></a>**
 
 size\_t\* krl\_get\_idx\_pointer\(const KRLLUT8bHandle\* klh\);
 
@@ -953,7 +1044,7 @@ Obtains the IDs of to-be-computed base vectors stored in the KRLLUT8bHandle inst
 </tbody>
 </table>
 
-**Return Values<a name="section49971832106"></a>**
+**Return Value<a name="section49971832106"></a>**
 
 <a name="table17997635100"></a>
 <table><thead align="left"><tr id="row699763141018"><th class="cellrowborder" valign="top" width="40%" id="mcps1.1.3.1.1"><p id="p699793141012"><a name="p699793141012"></a><a name="p699793141012"></a>Data Type</p>
@@ -970,7 +1061,7 @@ Obtains the IDs of to-be-computed base vectors stored in the KRLLUT8bHandle inst
 </tbody>
 </table>
 
-**Example**
+**Sample**
 
 ```c
 #include <stdio.h>
@@ -1010,7 +1101,7 @@ int main() {
 
 ### krl\_get\_dist\_pointer
 
-**Interface Definition<a name="section172317194488"></a>**
+**API Definition<a name="section172317194488"></a>**
 
 float\* krl\_get\_dist\_pointer\(const KRLLUT8bHandle\* klh\);
 
@@ -1043,7 +1134,7 @@ Obtains the start address of the distance array stored in the KRLLUT8bHandle ins
 </tbody>
 </table>
 
-**Return Values<a name="section49971832106"></a>**
+**Return Value<a name="section49971832106"></a>**
 
 <a name="table17997635100"></a>
 <table><thead align="left"><tr id="row699763141018"><th class="cellrowborder" valign="top" width="40%" id="mcps1.1.3.1.1"><p id="p699793141012"><a name="p699793141012"></a><a name="p699793141012"></a>Data Type</p>
@@ -1060,7 +1151,7 @@ Obtains the start address of the distance array stored in the KRLLUT8bHandle ins
 </tbody>
 </table>
 
-**Example**
+**Sample**
 
 ```c
 #include <stdio.h>
@@ -1101,7 +1192,7 @@ int main() {
 
 ### krl\_L2sqr
 
-**Interface Definition<a name="section172317194488"></a>**
+**API Definition<a name="section172317194488"></a>**
 
 int krl\_L2sqr\(const float\* x, const float\* \_\_restrict y, const size\_t d, float\* dis, size\_t dis\_size\);
 
@@ -1137,7 +1228,7 @@ Performs one-to-one Euclidean distance computation on vectors represented in flo
 </td>
 <td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p36611261054"><a name="p36611261054"></a><a name="p36611261054"></a>Base vector for distance computation.</p>
 </td>
-<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p85127581355"><a name="p85127581355"></a><a name="p85127581355"></a>The vector has a dimension of <code>d</code>.</p>
+<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p85127581355"><a name="p85127581355"></a><a name="p85127581355"></a>The vector has a dimension of d.</p>
 </td>
 </tr>
 <tr id="row106882715416"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p46812710547"><a name="p46812710547"></a><a name="p46812710547"></a>d</p>
@@ -1146,7 +1237,7 @@ Performs one-to-one Euclidean distance computation on vectors represented in flo
 </td>
 <td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p17661261256"><a name="p17661261256"></a><a name="p17661261256"></a>Vector dimension.</p>
 </td>
-<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p46952755416"><a name="p46952755416"></a><a name="p46952755416"></a>[1, 65535]</p>
+<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p46952755416"><a name="p46952755416"></a><a name="p46952755416"></a>[1,65535]</p>
 </td>
 </tr>
 <tr id="row2848154911529"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p4849194916526"><a name="p4849194916526"></a><a name="p4849194916526"></a>dis</p>
@@ -1170,7 +1261,7 @@ Performs one-to-one Euclidean distance computation on vectors represented in flo
 </tbody>
 </table>
 
-**Return Values<a name="section49971832106"></a>**
+**Return Value<a name="section49971832106"></a>**
 
 <a name="table17997635100"></a>
 <table><thead align="left"><tr id="row699763141018"><th class="cellrowborder" valign="top" width="40%" id="mcps1.1.3.1.1"><p id="p699793141012"><a name="p699793141012"></a><a name="p699793141012"></a>Data Type</p>
@@ -1181,13 +1272,13 @@ Performs one-to-one Euclidean distance computation on vectors represented in flo
 </thead>
 <tbody><tr id="row1599716361015"><td class="cellrowborder" valign="top" width="40%" headers="mcps1.1.3.1.1 "><p id="p39970319101"><a name="p39970319101"></a><a name="p39970319101"></a>int</p>
 </td>
-<td class="cellrowborder" valign="top" width="60%" headers="mcps1.1.3.1.2 "><p id="p53461032104518"><a name="p53461032104518"></a><a name="p53461032104518"></a><code>0</code> is returned on successful execution. In case of failure, an error code is returned to indicate the specific issue.</p>
+<td class="cellrowborder" valign="top" width="60%" headers="mcps1.1.3.1.2 "><p id="p53461032104518"><a name="p53461032104518"></a><a name="p53461032104518"></a><code>0</code> is returned on successful execution. In case of failure, an error code is returned.</p>
 </td>
 </tr>
 </tbody>
 </table>
 
-**Example**
+**Sample**
 
 ```c
 #include <stdio.h>
@@ -1231,7 +1322,7 @@ int main() {
 
 ### krl\_L2sqr\_f16f32
 
-**Interface Definition<a name="section172317194488"></a>**
+**API Definition<a name="section172317194488"></a>**
 
 int krl\_L2sqr\_f16f32\(const uint16\_t\* x, const uint16\_t\* \_\_restrict y, size\_t d, float\* dis, size\_t dis\_size\);
 
@@ -1267,7 +1358,7 @@ Performs one-to-one Euclidean distance computation on vectors represented in fp1
 </td>
 <td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p36611261054"><a name="p36611261054"></a><a name="p36611261054"></a>Base vector for distance computation.</p>
 </td>
-<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p85127581355"><a name="p85127581355"></a><a name="p85127581355"></a>The vector has a dimension of <code>d</code>.</p>
+<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p85127581355"><a name="p85127581355"></a><a name="p85127581355"></a>The vector has a dimension of d.</p>
 </td>
 </tr>
 <tr id="row106882715416"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p46812710547"><a name="p46812710547"></a><a name="p46812710547"></a>d</p>
@@ -1276,7 +1367,7 @@ Performs one-to-one Euclidean distance computation on vectors represented in fp1
 </td>
 <td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p17661261256"><a name="p17661261256"></a><a name="p17661261256"></a>Vector dimension.</p>
 </td>
-<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p46952755416"><a name="p46952755416"></a><a name="p46952755416"></a>[1, 65535]</p>
+<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p46952755416"><a name="p46952755416"></a><a name="p46952755416"></a>[1,65535]</p>
 </td>
 </tr>
 <tr id="row6435174117149"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p4849194916526"><a name="p4849194916526"></a><a name="p4849194916526"></a>dis</p>
@@ -1300,7 +1391,7 @@ Performs one-to-one Euclidean distance computation on vectors represented in fp1
 </tbody>
 </table>
 
-**Return Values<a name="section49971832106"></a>**
+**Return Value<a name="section49971832106"></a>**
 
 <a name="table17997635100"></a>
 <table><thead align="left"><tr id="row699763141018"><th class="cellrowborder" valign="top" width="40%" id="mcps1.1.3.1.1"><p id="p699793141012"><a name="p699793141012"></a><a name="p699793141012"></a>Data Type</p>
@@ -1311,13 +1402,13 @@ Performs one-to-one Euclidean distance computation on vectors represented in fp1
 </thead>
 <tbody><tr id="row1599716361015"><td class="cellrowborder" valign="top" width="40%" headers="mcps1.1.3.1.1 "><p id="p39970319101"><a name="p39970319101"></a><a name="p39970319101"></a>int</p>
 </td>
-<td class="cellrowborder" valign="top" width="60%" headers="mcps1.1.3.1.2 "><p id="p53461032104518"><a name="p53461032104518"></a><a name="p53461032104518"></a><code>0</code> is returned on successful execution. In case of failure, an error code is returned to indicate the specific issue.</p>
+<td class="cellrowborder" valign="top" width="60%" headers="mcps1.1.3.1.2 "><p id="p53461032104518"><a name="p53461032104518"></a><a name="p53461032104518"></a><code>0</code> is returned on successful execution. In case of failure, an error code is returned.</p>
 </td>
 </tr>
 </tbody>
 </table>
 
-**Example**
+**Sample**
 
 ```c
 #include <stdio.h>
@@ -1362,9 +1453,101 @@ int main() {
 }
 ```
 
+### krl\_L2sqr\_f16f32\_sve2
+
+**Interface Definition**
+
+int krl\_L2sqr\_f16f32\_sve2\(const uint16\_t\* x, const uint16\_t\* y, int d, float\* dis, size\_t dis\_size\);
+
+**Usage**
+
+Performs one-to-one Euclidean distance computation on vectors represented in fp16 precision (SVE2).
+
+**Parameters<a name="section157501312135019"></a>**
+
+<a name="table1623016332509"></a>
+<table><thead align="left"><tr id="row823063355012"><th class="cellrowborder" valign="top" width="15.551555155515551%" id="mcps1.1.5.1.1"><p id="p1230333125010"><a name="p1230333125010"></a><a name="p1230333125010"></a>Parameter</p>
+</th>
+<th class="cellrowborder" valign="top" width="14.601460146014599%" id="mcps1.1.5.1.2"><p id="p089311158912"><a name="p089311158912"></a><a name="p089311158912"></a>Data Type</p>
+</th>
+<th class="cellrowborder" valign="top" width="33.99339933993399%" id="mcps1.1.5.1.3"><p id="p4230193313507"><a name="p4230193313507"></a><a name="p4230193313507"></a>Description</p>
+</th>
+<th class="cellrowborder" valign="top" width="35.85358535853585%" id="mcps1.1.5.1.4"><p id="p19887819256"><a name="p19887819256"></a><a name="p19887819256"></a>Value Range</p>
+</th>
+</tr>
+</thead>
+<tbody><tr id="row1823023318504"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p11230033165015"><a name="p11230033165015"></a><a name="p11230033165015"></a>x</p>
+</td>
+<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p953215815518"><a name="p953215815518"></a><a name="p953215815518"></a>const uint16_t*</p>
+</td>
+<td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p18661136253"><a name="p18661136253"></a><a name="p18661136253"></a>Query vector for distance computation.</p>
+</td>
+<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p79885872519"><a name="p79885872519"></a><a name="p79885872519"></a>The vector has a dimension of <code>d</code>.</p>
+</td>
+</tr>
+<tr id="row10982132445420"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p4982142445414"><a name="p4982142445414"></a><a name="p4982142445414"></a>y</p>
+</td>
+<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p7532158856"><a name="p7532158856"></a><a name="p7532158856"></a>const uint16_t*</p>
+</td>
+<td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p36611261054"><a name="p36611261054"></a><a name="p36611261054"></a>Base vector for distance computation.</p>
+</td>
+<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p85127581355"><a name="p85127581355"></a><a name="p85127581355"></a>The vector has a dimension of d.</p>
+</td>
+</tr>
+<tr id="row106882715416"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p46812710547"><a name="p46812710547"></a><a name="p46812710547"></a>d</p>
+</td>
+<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p45311183519"><a name="p45311183519"></a><a name="p45311183519"></a>size_t</p>
+</td>
+<td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p17661261256"><a name="p17661261256"></a><a name="p17661261256"></a>Vector dimension.</p>
+</td>
+<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p46952755416"><a name="p46952755416"></a><a name="p46952755416"></a>[1,65535]</p>
+</td>
+</tr>
+<tr id="row6435174117149"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p4849194916526"><a name="p4849194916526"></a><a name="p4849194916526"></a>dis</p>
+</td>
+<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p484916497520"><a name="p484916497520"></a><a name="p484916497520"></a>float*</p>
+</td>
+<td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p184912496525"><a name="p184912496525"></a><a name="p184912496525"></a>Stores the distance computation result.</p>
+</td>
+<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p1984914498527"><a name="p1984914498527"></a><a name="p1984914498527"></a>The size is specified by <code>dis_size</code>. The memory needs to be allocated in advance.</p>
+</td>
+</tr>
+<tr id="row14276273554"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p271521115212"><a name="p271521115212"></a><a name="p271521115212"></a>dis_size</p>
+</td>
+<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p10722125214"><a name="p10722125214"></a><a name="p10722125214"></a>size_t</p>
+</td>
+<td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p1762116529"><a name="p1762116529"></a><a name="p1762116529"></a>Size of the distance result array.</p>
+</td>
+<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p17182165214"><a name="p17182165214"></a><a name="p17182165214"></a>The value is <code>1</code>.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+**Return Value<a name="section49971832106"></a>**
+
+<a name="table17997635100"></a>
+<table><thead align="left"><tr id="row699763141018"><th class="cellrowborder" valign="top" width="40%" id="mcps1.1.3.1.1"><p id="p699793141012"><a name="p699793141012"></a><a name="p699793141012"></a>Data Type</p>
+</th>
+<th class="cellrowborder" valign="top" width="60%" id="mcps1.1.3.1.2"><p id="p1999763141020"><a name="p1999763141020"></a><a name="p1999763141020"></a>Description</p>
+</th>
+</tr>
+</thead>
+<tbody><tr id="row1599716361015"><td class="cellrowborder" valign="top" width="40%" headers="mcps1.1.3.1.1 "><p id="p39970319101"><a name="p39970319101"></a><a name="p39970319101"></a>int</p>
+</td>
+<td class="cellrowborder" valign="top" width="60%" headers="mcps1.1.3.1.2 "><p id="p53461032104518"><a name="p53461032104518"></a><a name="p53461032104518"></a><code>0</code> is returned on successful execution. In case of failure, an error code is returned.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+**Sample**
+
+You can use the `krl_L2sqr_f16f32` example as a reference and simply substitute the function call with `krl_L2sqr_f16f32_sve2`.
+
 ### krl\_L2sqr\_u8u32
 
-**Interface Definition<a name="section172317194488"></a>**
+**API Definition<a name="section172317194488"></a>**
 
 int krl\_L2sqr\_u8u32\(const uint8\_t\* x, const uint8\_t\* \_\_restrict y, size\_t d, uint32\_t\* dis, size\_t dis\_size\);
 
@@ -1409,7 +1592,7 @@ Performs one-to-one Euclidean distance computation on vectors represented as 8-b
 </td>
 <td class="cellrowborder" valign="top" width="33.77337733773377%" headers="mcps1.1.5.1.3 "><p id="p17661261256"><a name="p17661261256"></a><a name="p17661261256"></a>Vector dimension.</p>
 </td>
-<td class="cellrowborder" valign="top" width="36.07360736073608%" headers="mcps1.1.5.1.4 "><p id="p46952755416"><a name="p46952755416"></a><a name="p46952755416"></a>[1, 65535]</p>
+<td class="cellrowborder" valign="top" width="36.07360736073608%" headers="mcps1.1.5.1.4 "><p id="p46952755416"><a name="p46952755416"></a><a name="p46952755416"></a>[1,65535]</p>
 </td>
 </tr>
 <tr id="row5811550198"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p4849194916526"><a name="p4849194916526"></a><a name="p4849194916526"></a>dis</p>
@@ -1433,7 +1616,7 @@ Performs one-to-one Euclidean distance computation on vectors represented as 8-b
 </tbody>
 </table>
 
-**Return Values<a name="section49971832106"></a>**
+**Return Value<a name="section49971832106"></a>**
 
 <a name="table17997635100"></a>
 <table><thead align="left"><tr id="row699763141018"><th class="cellrowborder" valign="top" width="40%" id="mcps1.1.3.1.1"><p id="p699793141012"><a name="p699793141012"></a><a name="p699793141012"></a>Data Type</p>
@@ -1444,13 +1627,13 @@ Performs one-to-one Euclidean distance computation on vectors represented as 8-b
 </thead>
 <tbody><tr id="row1599716361015"><td class="cellrowborder" valign="top" width="40%" headers="mcps1.1.3.1.1 "><p id="p39970319101"><a name="p39970319101"></a><a name="p39970319101"></a>int</p>
 </td>
-<td class="cellrowborder" valign="top" width="60%" headers="mcps1.1.3.1.2 "><p id="p53461032104518"><a name="p53461032104518"></a><a name="p53461032104518"></a><code>0</code> is returned on successful execution. In case of failure, an error code is returned to indicate the specific issue.</p>
+<td class="cellrowborder" valign="top" width="60%" headers="mcps1.1.3.1.2 "><p id="p53461032104518"><a name="p53461032104518"></a><a name="p53461032104518"></a><code>0</code> is returned on successful execution. In case of failure, an error code is returned.</p>
 </td>
 </tr>
 </tbody>
 </table>
 
-**Example**
+**Sample**
 
 ```c
 #include <stdio.h>
@@ -1494,7 +1677,7 @@ int main() {
 
 ### krl\_ipdis
 
-**Interface Definition<a name="section172317194488"></a>**
+**API Definition<a name="section172317194488"></a>**
 
 int krl\_ipdis\(const float\* x, const float\* \_\_restrict y, const size\_t d, float\* dis, size\_t dis\_size\);
 
@@ -1530,7 +1713,7 @@ Performs one-to-one distance computation using inner product on vectors represen
 </td>
 <td class="cellrowborder" valign="top" width="34.003400340034005%" headers="mcps1.1.5.1.3 "><p id="p36611261054"><a name="p36611261054"></a><a name="p36611261054"></a>Base vector for distance computation.</p>
 </td>
-<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p85127581355"><a name="p85127581355"></a><a name="p85127581355"></a>The vector has a dimension of <code>d</code>.</p>
+<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p85127581355"><a name="p85127581355"></a><a name="p85127581355"></a>The vector has a dimension of d.</p>
 </td>
 </tr>
 <tr id="row106882715416"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p46812710547"><a name="p46812710547"></a><a name="p46812710547"></a>d</p>
@@ -1539,7 +1722,7 @@ Performs one-to-one distance computation using inner product on vectors represen
 </td>
 <td class="cellrowborder" valign="top" width="34.003400340034005%" headers="mcps1.1.5.1.3 "><p id="p17661261256"><a name="p17661261256"></a><a name="p17661261256"></a>Vector dimension.</p>
 </td>
-<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p46952755416"><a name="p46952755416"></a><a name="p46952755416"></a>[1, 65535]</p>
+<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p46952755416"><a name="p46952755416"></a><a name="p46952755416"></a>[1,65535]</p>
 </td>
 </tr>
 <tr id="row6516613222"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p8546192216"><a name="p8546192216"></a><a name="p8546192216"></a>dis</p>
@@ -1563,7 +1746,7 @@ Performs one-to-one distance computation using inner product on vectors represen
 </tbody>
 </table>
 
-**Return Values<a name="section49971832106"></a>**
+**Return Value<a name="section49971832106"></a>**
 
 <a name="table17997635100"></a>
 <table><thead align="left"><tr id="row699763141018"><th class="cellrowborder" valign="top" width="40%" id="mcps1.1.3.1.1"><p id="p699793141012"><a name="p699793141012"></a><a name="p699793141012"></a>Data Type</p>
@@ -1574,13 +1757,13 @@ Performs one-to-one distance computation using inner product on vectors represen
 </thead>
 <tbody><tr id="row1599716361015"><td class="cellrowborder" valign="top" width="40%" headers="mcps1.1.3.1.1 "><p id="p39970319101"><a name="p39970319101"></a><a name="p39970319101"></a>int</p>
 </td>
-<td class="cellrowborder" valign="top" width="60%" headers="mcps1.1.3.1.2 "><p id="p53461032104518"><a name="p53461032104518"></a><a name="p53461032104518"></a><code>0</code> is returned on successful execution. In case of failure, an error code is returned to indicate the specific issue.</p>
+<td class="cellrowborder" valign="top" width="60%" headers="mcps1.1.3.1.2 "><p id="p53461032104518"><a name="p53461032104518"></a><a name="p53461032104518"></a><code>0</code> is returned on successful execution. In case of failure, an error code is returned.</p>
 </td>
 </tr>
 </tbody>
 </table>
 
-**Example**
+**Sample**
 
 ```c
 #include <stdio.h>
@@ -1635,7 +1818,7 @@ int main() {
 
 ### krl\_negative\_ipdis\_f16f32
 
-**Interface Definition<a name="section172317194488"></a>**
+**API Definition<a name="section172317194488"></a>**
 
 float krl\_negative\_ipdis\_f16f32\(const uint16\_t\* x, const uint16\_t\* \_\_restrict y, const size\_t d, float\* dis, size\_t dis\_size\);
 
@@ -1671,7 +1854,7 @@ Performs one-to-one distance computation using inner product on vectors represen
 </td>
 <td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p36611261054"><a name="p36611261054"></a><a name="p36611261054"></a>Base vector for distance computation.</p>
 </td>
-<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p85127581355"><a name="p85127581355"></a><a name="p85127581355"></a>The vector has a dimension of <code>d</code>.</p>
+<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p85127581355"><a name="p85127581355"></a><a name="p85127581355"></a>The vector has a dimension of d.</p>
 </td>
 </tr>
 <tr id="row106882715416"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p46812710547"><a name="p46812710547"></a><a name="p46812710547"></a>d</p>
@@ -1680,7 +1863,7 @@ Performs one-to-one distance computation using inner product on vectors represen
 </td>
 <td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p17661261256"><a name="p17661261256"></a><a name="p17661261256"></a>Vector dimension.</p>
 </td>
-<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p46952755416"><a name="p46952755416"></a><a name="p46952755416"></a>[1, 65535]</p>
+<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p46952755416"><a name="p46952755416"></a><a name="p46952755416"></a>[1,65535]</p>
 </td>
 </tr>
 <tr id="row172931135182017"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p8546192216"><a name="p8546192216"></a><a name="p8546192216"></a>dis</p>
@@ -1704,7 +1887,7 @@ Performs one-to-one distance computation using inner product on vectors represen
 </tbody>
 </table>
 
-**Return Values<a name="section49971832106"></a>**
+**Return Value<a name="section49971832106"></a>**
 
 <a name="table17997635100"></a>
 <table><thead align="left"><tr id="row699763141018"><th class="cellrowborder" valign="top" width="40%" id="mcps1.1.3.1.1"><p id="p699793141012"><a name="p699793141012"></a><a name="p699793141012"></a>Data Type</p>
@@ -1715,13 +1898,13 @@ Performs one-to-one distance computation using inner product on vectors represen
 </thead>
 <tbody><tr id="row1599716361015"><td class="cellrowborder" valign="top" width="40%" headers="mcps1.1.3.1.1 "><p id="p39970319101"><a name="p39970319101"></a><a name="p39970319101"></a>int</p>
 </td>
-<td class="cellrowborder" valign="top" width="60%" headers="mcps1.1.3.1.2 "><p id="p53461032104518"><a name="p53461032104518"></a><a name="p53461032104518"></a><code>0</code> is returned on successful execution. In case of failure, an error code is returned to indicate the specific issue.</p>
+<td class="cellrowborder" valign="top" width="60%" headers="mcps1.1.3.1.2 "><p id="p53461032104518"><a name="p53461032104518"></a><a name="p53461032104518"></a><code>0</code> is returned on successful execution. In case of failure, an error code is returned.</p>
 </td>
 </tr>
 </tbody>
 </table>
 
-**Example**
+**Sample**
 
 ```c
 #include <stdio.h>
@@ -1768,7 +1951,7 @@ int main() {
 
 ### krl\_negative\_ipdis\_s8s32
 
-**Interface Definition <a name="section172317194488"></a>**
+**API Definition<a name="section172317194488"></a>**
 
 int krl\_negative\_ipdis\_s8s32\(const int8\_t\* x, const int8\_t\* \_\_restrict y, const size\_t d, int32\_t\* dis, size\_t dis\_size\);
 
@@ -1804,7 +1987,7 @@ Performs one-to-one distance computation using inner product on vectors represen
 </td>
 <td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p36611261054"><a name="p36611261054"></a><a name="p36611261054"></a>Base vector for distance computation.</p>
 </td>
-<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p85127581355"><a name="p85127581355"></a><a name="p85127581355"></a>The vector has a dimension of <code>d</code>.</p>
+<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p85127581355"><a name="p85127581355"></a><a name="p85127581355"></a>The vector has a dimension of d.</p>
 </td>
 </tr>
 <tr id="row106882715416"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p46812710547"><a name="p46812710547"></a><a name="p46812710547"></a>d</p>
@@ -1813,7 +1996,7 @@ Performs one-to-one distance computation using inner product on vectors represen
 </td>
 <td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p17661261256"><a name="p17661261256"></a><a name="p17661261256"></a>Vector dimension.</p>
 </td>
-<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p46952755416"><a name="p46952755416"></a><a name="p46952755416"></a>[1, 65535]</p>
+<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p46952755416"><a name="p46952755416"></a><a name="p46952755416"></a>[1,65535]</p>
 </td>
 </tr>
 <tr id="row78157718211"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p4816127192115"><a name="p4816127192115"></a><a name="p4816127192115"></a>dis</p>
@@ -1837,7 +2020,7 @@ Performs one-to-one distance computation using inner product on vectors represen
 </tbody>
 </table>
 
-**Return Values<a name="section49971832106"></a>**
+**Return Value<a name="section49971832106"></a>**
 
 <a name="table17997635100"></a>
 <table><thead align="left"><tr id="row699763141018"><th class="cellrowborder" valign="top" width="40%" id="mcps1.1.3.1.1"><p id="p699793141012"><a name="p699793141012"></a><a name="p699793141012"></a>Data Type</p>
@@ -1848,13 +2031,13 @@ Performs one-to-one distance computation using inner product on vectors represen
 </thead>
 <tbody><tr id="row1599716361015"><td class="cellrowborder" valign="top" width="40%" headers="mcps1.1.3.1.1 "><p id="p39970319101"><a name="p39970319101"></a><a name="p39970319101"></a>int</p>
 </td>
-<td class="cellrowborder" valign="top" width="60%" headers="mcps1.1.3.1.2 "><p id="p53461032104518"><a name="p53461032104518"></a><a name="p53461032104518"></a><code>0</code> is returned on successful execution. In case of failure, an error code is returned to indicate the specific issue.</p>
+<td class="cellrowborder" valign="top" width="60%" headers="mcps1.1.3.1.2 "><p id="p53461032104518"><a name="p53461032104518"></a><a name="p53461032104518"></a><code>0</code> is returned on successful execution. In case of failure, an error code is returned.</p>
 </td>
 </tr>
 </tbody>
 </table>
 
-**Example**
+**Sample**
 
 ```c
 #include <stdio.h>
@@ -1898,7 +2081,7 @@ int main() {
 
 ### krl\_L2sqr\_by\_idx
 
-**Interface Definition<a name="section172317194488"></a>**
+**API Definition<a name="section172317194488"></a>**
 
 int krl\_L2sqr\_by\_idx\(float\* dis, const float\* x, const float\* y, const int64\_t\* ids, size\_t d, size\_t ny, size\_t dis\_size\);
 
@@ -1923,7 +2106,7 @@ Performs one-to-many Euclidean distance computation on vectors represented in fl
 </td>
 <td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p11230154710156"><a name="p11230154710156"></a><a name="p11230154710156"></a>float*</p>
 </td>
-<td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p82303471154"><a name="p82303471154"></a><a name="p82303471154"></a>Stores the distance computation result.</p>
+<td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p184912496525"><a name="p184912496525"></a><a name="p184912496525"></a>Stores the distance computation result.</p>
 </td>
 <td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p1984914498527"><a name="p1984914498527"></a><a name="p1984914498527"></a>The size is specified by <code>dis_size</code>. The memory needs to be allocated in advance.</p>
 </td>
@@ -1961,7 +2144,7 @@ Performs one-to-many Euclidean distance computation on vectors represented in fl
 </td>
 <td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p17661261256"><a name="p17661261256"></a><a name="p17661261256"></a>Vector dimension.</p>
 </td>
-<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p46952755416"><a name="p46952755416"></a><a name="p46952755416"></a>[1, 65535]</p>
+<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p46952755416"><a name="p46952755416"></a><a name="p46952755416"></a>[1,65535]</p>
 </td>
 </tr>
 <tr id="row37151957141516"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p171515741513"><a name="p171515741513"></a><a name="p171515741513"></a>ny</p>
@@ -1970,7 +2153,7 @@ Performs one-to-many Euclidean distance computation on vectors represented in fl
 </td>
 <td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p197153572157"><a name="p197153572157"></a><a name="p197153572157"></a>Number of base vectors for distance computation.</p>
 </td>
-<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p1071517573156"><a name="p1071517573156"></a><a name="p1071517573156"></a>[1, 2^30-1]</p>
+<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p1071517573156"><a name="p1071517573156"></a><a name="p1071517573156"></a>[1,2^30-1]</p>
 </td>
 </tr>
 <tr id="row1396217381443"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p39628388417"><a name="p39628388417"></a><a name="p39628388417"></a>dis_size</p>
@@ -1985,7 +2168,7 @@ Performs one-to-many Euclidean distance computation on vectors represented in fl
 </tbody>
 </table>
 
-**Return Values<a name="section49971832106"></a>**
+**Return Value<a name="section49971832106"></a>**
 
 <a name="table17997635100"></a>
 <table><thead align="left"><tr id="row699763141018"><th class="cellrowborder" valign="top" width="40%" id="mcps1.1.3.1.1"><p id="p699793141012"><a name="p699793141012"></a><a name="p699793141012"></a>Data Type</p>
@@ -1996,13 +2179,13 @@ Performs one-to-many Euclidean distance computation on vectors represented in fl
 </thead>
 <tbody><tr id="row1599716361015"><td class="cellrowborder" valign="top" width="40%" headers="mcps1.1.3.1.1 "><p id="p39970319101"><a name="p39970319101"></a><a name="p39970319101"></a>int</p>
 </td>
-<td class="cellrowborder" valign="top" width="60%" headers="mcps1.1.3.1.2 "><p id="p53461032104518"><a name="p53461032104518"></a><a name="p53461032104518"></a><code>0</code> is returned on successful execution. In case of failure, an error code is returned to indicate the specific issue.</p>
+<td class="cellrowborder" valign="top" width="60%" headers="mcps1.1.3.1.2 "><p id="p53461032104518"><a name="p53461032104518"></a><a name="p53461032104518"></a><code>0</code> is returned on successful execution. In case of failure, an error code is returned.</p>
 </td>
 </tr>
 </tbody>
 </table>
 
-**Example**
+**Sample**
 
 ```c
 #include <stdio.h>
@@ -2070,7 +2253,7 @@ cleanup:
 
 ### krl\_L2sqr\_by\_idx\_f16f32
 
-**Interface Definition<a name="section172317194488"></a>**
+**API Definition<a name="section172317194488"></a>**
 
 int krl\_L2sqr\_by\_idx\_f16f32\(float\* dis, const uint16\_t\* x, const uint16\_t\* y, const int64\_t\* ids, size\_t d, size\_t ny, size\_t dis\_size\);
 
@@ -2133,7 +2316,7 @@ Performs one-to-many Euclidean distance computation on vectors represented in fp
 </td>
 <td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p17661261256"><a name="p17661261256"></a><a name="p17661261256"></a>Vector dimension.</p>
 </td>
-<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p46952755416"><a name="p46952755416"></a><a name="p46952755416"></a>[1, 65535]</p>
+<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p46952755416"><a name="p46952755416"></a><a name="p46952755416"></a>[1,65535]</p>
 </td>
 </tr>
 <tr id="row37151957141516"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p171515741513"><a name="p171515741513"></a><a name="p171515741513"></a>ny</p>
@@ -2142,7 +2325,7 @@ Performs one-to-many Euclidean distance computation on vectors represented in fp
 </td>
 <td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p197153572157"><a name="p197153572157"></a><a name="p197153572157"></a>Number of base vectors for distance computation.</p>
 </td>
-<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p1071517573156"><a name="p1071517573156"></a><a name="p1071517573156"></a>[1, 2^30-1]</p>
+<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p1071517573156"><a name="p1071517573156"></a><a name="p1071517573156"></a>[1,2^30-1]</p>
 </td>
 </tr>
 <tr id="row106371540187"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p39628388417"><a name="p39628388417"></a><a name="p39628388417"></a>dis_size</p>
@@ -2157,7 +2340,7 @@ Performs one-to-many Euclidean distance computation on vectors represented in fp
 </tbody>
 </table>
 
-**Return Values<a name="section49971832106"></a>**
+**Return Value<a name="section49971832106"></a>**
 
 <a name="table17997635100"></a>
 <table><thead align="left"><tr id="row699763141018"><th class="cellrowborder" valign="top" width="40%" id="mcps1.1.3.1.1"><p id="p699793141012"><a name="p699793141012"></a><a name="p699793141012"></a>Data Type</p>
@@ -2168,13 +2351,13 @@ Performs one-to-many Euclidean distance computation on vectors represented in fp
 </thead>
 <tbody><tr id="row1599716361015"><td class="cellrowborder" valign="top" width="40%" headers="mcps1.1.3.1.1 "><p id="p39970319101"><a name="p39970319101"></a><a name="p39970319101"></a>int</p>
 </td>
-<td class="cellrowborder" valign="top" width="60%" headers="mcps1.1.3.1.2 "><p id="p53461032104518"><a name="p53461032104518"></a><a name="p53461032104518"></a><code>0</code> is returned on successful execution. In case of failure, an error code is returned to indicate the specific issue.</p>
+<td class="cellrowborder" valign="top" width="60%" headers="mcps1.1.3.1.2 "><p id="p53461032104518"><a name="p53461032104518"></a><a name="p53461032104518"></a><code>0</code> is returned on successful execution. In case of failure, an error code is returned.</p>
 </td>
 </tr>
 </tbody>
 </table>
 
-**Example**
+**Sample**
 
 ```c
 #include <stdio.h>
@@ -2242,9 +2425,119 @@ cleanup:
 }
 ```
 
+### krl\_L2sqr\_by\_idx\_f16f32\_sve2
+
+**Interface Definition**
+
+int krl\_L2sqr\_by\_idx\_f16f32\_sve2\(float\* dis, const uint16\_t\* x, const uint16\_t\* y, const uint32\_t\* ids, size\_t d, size\_t ny, size\_t dis\_size\);
+
+**Usage**
+
+Performs one-to-many Euclidean distance computation on vectors represented in fp16 precision (SVE2).
+
+**Parameters<a name="section157501312135019"></a>**
+
+<a name="table1623016332509"></a>
+<table><thead align="left"><tr id="row823063355012"><th class="cellrowborder" valign="top" width="15.551555155515551%" id="mcps1.1.5.1.1"><p id="p1230333125010"><a name="p1230333125010"></a><a name="p1230333125010"></a>Parameter</p>
+</th>
+<th class="cellrowborder" valign="top" width="14.601460146014599%" id="mcps1.1.5.1.2"><p id="p089311158912"><a name="p089311158912"></a><a name="p089311158912"></a>Data Type</p>
+</th>
+<th class="cellrowborder" valign="top" width="33.99339933993399%" id="mcps1.1.5.1.3"><p id="p4230193313507"><a name="p4230193313507"></a><a name="p4230193313507"></a>Description</p>
+</th>
+<th class="cellrowborder" valign="top" width="35.85358535853585%" id="mcps1.1.5.1.4"><p id="p19887819256"><a name="p19887819256"></a><a name="p19887819256"></a>Value Range</p>
+</th>
+</tr>
+</thead>
+<tbody><tr id="row92301478154"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p223015479158"><a name="p223015479158"></a><a name="p223015479158"></a>dis</p>
+</td>
+<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p11230154710156"><a name="p11230154710156"></a><a name="p11230154710156"></a>float*</p>
+</td>
+<td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p184912496525"><a name="p184912496525"></a><a name="p184912496525"></a>Stores the distance computation result.</p>
+</td>
+<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p923018478155"><a name="p923018478155"></a><a name="p923018478155"></a>The size is specified by <code>dis_size</code>. The memory needs to be allocated in advance.</p>
+</td>
+</tr>
+<tr id="row1823023318504"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p11230033165015"><a name="p11230033165015"></a><a name="p11230033165015"></a>x</p>
+</td>
+<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p953215815518"><a name="p953215815518"></a><a name="p953215815518"></a>const uint16_t*</p>
+</td>
+<td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p18661136253"><a name="p18661136253"></a><a name="p18661136253"></a>Query vector for distance computation.</p>
+</td>
+<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p79885872519"><a name="p79885872519"></a><a name="p79885872519"></a>The vector has a dimension of <code>d</code>.</p>
+</td>
+</tr>
+<tr id="row10982132445420"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p4982142445414"><a name="p4982142445414"></a><a name="p4982142445414"></a>y</p>
+</td>
+<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p7532158856"><a name="p7532158856"></a><a name="p7532158856"></a>const uint16_t*</p>
+</td>
+<td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p36611261054"><a name="p36611261054"></a><a name="p36611261054"></a>Base vector for distance computation.</p>
+</td>
+<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p85127581355"><a name="p85127581355"></a><a name="p85127581355"></a>The size is specified by <code>d</code> × <code>ny</code>.</p>
+</td>
+</tr>
+<tr id="row103951453161513"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p1395185361518"><a name="p1395185361518"></a><a name="p1395185361518"></a>ids</p>
+</td>
+<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p93958532154"><a name="p93958532154"></a><a name="p93958532154"></a>const int64_t*</p>
+</td>
+<td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p2039510531150"><a name="p2039510531150"></a><a name="p2039510531150"></a>IDs of base vectors.</p>
+</td>
+<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p6395135351511"><a name="p6395135351511"></a><a name="p6395135351511"></a>The ID value is greater than or equal to 0  and less than the total number of base vectors.</p>
+</td>
+</tr>
+<tr id="row106882715416"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p46812710547"><a name="p46812710547"></a><a name="p46812710547"></a>d</p>
+</td>
+<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p45311183519"><a name="p45311183519"></a><a name="p45311183519"></a>size_t</p>
+</td>
+<td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p17661261256"><a name="p17661261256"></a><a name="p17661261256"></a>Vector dimension.</p>
+</td>
+<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p46952755416"><a name="p46952755416"></a><a name="p46952755416"></a>[1,65535]</p>
+</td>
+</tr>
+<tr id="row37151957141516"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p171515741513"><a name="p171515741513"></a><a name="p171515741513"></a>ny</p>
+</td>
+<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p3715105741513"><a name="p3715105741513"></a><a name="p3715105741513"></a>size_t</p>
+</td>
+<td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p197153572157"><a name="p197153572157"></a><a name="p197153572157"></a>Number of base vectors for distance computation.</p>
+</td>
+<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p1071517573156"><a name="p1071517573156"></a><a name="p1071517573156"></a>[1,2^30-1]</p>
+</td>
+</tr>
+<tr id="row106371540187"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p39628388417"><a name="p39628388417"></a><a name="p39628388417"></a>dis_size</p>
+</td>
+<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p10722125214"><a name="p10722125214"></a><a name="p10722125214"></a>size_t</p>
+</td>
+<td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p1762116529"><a name="p1762116529"></a><a name="p1762116529"></a>Size of the distance result array.</p>
+</td>
+<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p154517391451"><a name="p154517391451"></a><a name="p154517391451"></a>The value is specified by <code>ny</code>.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+**Return Value<a name="section49971832106"></a>**
+
+<a name="table17997635100"></a>
+<table><thead align="left"><tr id="row699763141018"><th class="cellrowborder" valign="top" width="40%" id="mcps1.1.3.1.1"><p id="p699793141012"><a name="p699793141012"></a><a name="p699793141012"></a>Data Type</p>
+</th>
+<th class="cellrowborder" valign="top" width="60%" id="mcps1.1.3.1.2"><p id="p1999763141020"><a name="p1999763141020"></a><a name="p1999763141020"></a>Description</p>
+</th>
+</tr>
+</thead>
+<tbody><tr id="row1599716361015"><td class="cellrowborder" valign="top" width="40%" headers="mcps1.1.3.1.1 "><p id="p39970319101"><a name="p39970319101"></a><a name="p39970319101"></a>int</p>
+</td>
+<td class="cellrowborder" valign="top" width="60%" headers="mcps1.1.3.1.2 "><p id="p53461032104518"><a name="p53461032104518"></a><a name="p53461032104518"></a><code>0</code> is returned on successful execution. In case of failure, an error code is returned.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+**Sample**
+
+You can use the `krl_L2sqr_by_idx_f16f32` example as a reference and simply substitute the function call with `krl_L2sqr_by_idx_f16f32_sve2`.
+
 ### krl\_L2sqr\_by\_idx\_u8f32
 
-**Interface Definition<a name="section172317194488"></a>**
+**API Definition<a name="section172317194488"></a>**
 
 int krl\_L2sqr\_by\_idx\_u8f32\(float\* dis, const uint8\_t\* x, const uint8\_t\* y, const int64\_t\* ids, size\_t d, size\_t ny, size\_t dis\_size\);
 
@@ -2307,7 +2600,7 @@ Performs one-to-many Euclidean distance computation on vectors represented as 8-
 </td>
 <td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p17661261256"><a name="p17661261256"></a><a name="p17661261256"></a>Vector dimension.</p>
 </td>
-<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p46952755416"><a name="p46952755416"></a><a name="p46952755416"></a>[1, 65535]</p>
+<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p46952755416"><a name="p46952755416"></a><a name="p46952755416"></a>[1,65535]</p>
 </td>
 </tr>
 <tr id="row37151957141516"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p171515741513"><a name="p171515741513"></a><a name="p171515741513"></a>ny</p>
@@ -2316,7 +2609,7 @@ Performs one-to-many Euclidean distance computation on vectors represented as 8-
 </td>
 <td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p197153572157"><a name="p197153572157"></a><a name="p197153572157"></a>Number of base vectors for distance computation.</p>
 </td>
-<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p1071517573156"><a name="p1071517573156"></a><a name="p1071517573156"></a>[1, 2^30-1]</p>
+<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p1071517573156"><a name="p1071517573156"></a><a name="p1071517573156"></a>[1,2^30-1]</p>
 </td>
 </tr>
 <tr id="row1689332720259"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p39628388417"><a name="p39628388417"></a><a name="p39628388417"></a>dis_size</p>
@@ -2331,7 +2624,7 @@ Performs one-to-many Euclidean distance computation on vectors represented as 8-
 </tbody>
 </table>
 
-**Return Values<a name="section49971832106"></a>**
+**Return Value<a name="section49971832106"></a>**
 
 <a name="table17997635100"></a>
 <table><thead align="left"><tr id="row699763141018"><th class="cellrowborder" valign="top" width="40%" id="mcps1.1.3.1.1"><p id="p699793141012"><a name="p699793141012"></a><a name="p699793141012"></a>Data Type</p>
@@ -2342,13 +2635,13 @@ Performs one-to-many Euclidean distance computation on vectors represented as 8-
 </thead>
 <tbody><tr id="row1599716361015"><td class="cellrowborder" valign="top" width="40%" headers="mcps1.1.3.1.1 "><p id="p39970319101"><a name="p39970319101"></a><a name="p39970319101"></a>int</p>
 </td>
-<td class="cellrowborder" valign="top" width="60%" headers="mcps1.1.3.1.2 "><p id="p53461032104518"><a name="p53461032104518"></a><a name="p53461032104518"></a><code>0</code> is returned on successful execution. In case of failure, an error code is returned to indicate the specific issue.</p>
+<td class="cellrowborder" valign="top" width="60%" headers="mcps1.1.3.1.2 "><p id="p53461032104518"><a name="p53461032104518"></a><a name="p53461032104518"></a><code>0</code> is returned on successful execution. In case of failure, an error code is returned.</p>
 </td>
 </tr>
 </tbody>
 </table>
 
-**Example**
+**Sample**
 
 ```c
 #include <stdio.h>
@@ -2378,7 +2671,7 @@ int main() {
         ids[i] = (int64_t)(i * 25); // Select one every 25.
     }
 
-    // Allocate the distance result array (the output type is float).
+    // Allocate the distance result array (the output type is still float).
     float* distances = (float*)malloc(ny * sizeof(float));
 
     // Perform one-to-many Euclidean distance computation on vectors represented as 8-bit unsigned integers (uint8).
@@ -2422,7 +2715,7 @@ cleanup:
 
 ### krl\_inner\_product\_by\_idx
 
-**Interface Definition<a name="section172317194488"></a>**
+**API Definition<a name="section172317194488"></a>**
 
 int krl\_inner\_product\_by\_idx\(float\* dis, const float\* x, const float\* y, const int64\_t\* ids, size\_t d, size\_t ny, size\_t dis\_size\);
 
@@ -2485,7 +2778,7 @@ Performs one-to-many distance computation using inner product on vectors represe
 </td>
 <td class="cellrowborder" valign="top" width="33.97339733973397%" headers="mcps1.1.5.1.3 "><p id="p17661261256"><a name="p17661261256"></a><a name="p17661261256"></a>Vector dimension.</p>
 </td>
-<td class="cellrowborder" valign="top" width="35.873587358735875%" headers="mcps1.1.5.1.4 "><p id="p46952755416"><a name="p46952755416"></a><a name="p46952755416"></a>[1, 65535]</p>
+<td class="cellrowborder" valign="top" width="35.873587358735875%" headers="mcps1.1.5.1.4 "><p id="p46952755416"><a name="p46952755416"></a><a name="p46952755416"></a>[1,65535]</p>
 </td>
 </tr>
 <tr id="row37151957141516"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p171515741513"><a name="p171515741513"></a><a name="p171515741513"></a>ny</p>
@@ -2494,7 +2787,7 @@ Performs one-to-many distance computation using inner product on vectors represe
 </td>
 <td class="cellrowborder" valign="top" width="33.97339733973397%" headers="mcps1.1.5.1.3 "><p id="p197153572157"><a name="p197153572157"></a><a name="p197153572157"></a>Number of base vectors for distance computation.</p>
 </td>
-<td class="cellrowborder" valign="top" width="35.873587358735875%" headers="mcps1.1.5.1.4 "><p id="p1071517573156"><a name="p1071517573156"></a><a name="p1071517573156"></a>[1, 2^30-1]</p>
+<td class="cellrowborder" valign="top" width="35.873587358735875%" headers="mcps1.1.5.1.4 "><p id="p1071517573156"><a name="p1071517573156"></a><a name="p1071517573156"></a>[1,2^30-1]</p>
 </td>
 </tr>
 <tr id="row195051882311"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p39628388417"><a name="p39628388417"></a><a name="p39628388417"></a>dis_size</p>
@@ -2509,7 +2802,7 @@ Performs one-to-many distance computation using inner product on vectors represe
 </tbody>
 </table>
 
-**Return Values<a name="section49971832106"></a>**
+**Return Value<a name="section49971832106"></a>**
 
 <a name="table17997635100"></a>
 <table><thead align="left"><tr id="row699763141018"><th class="cellrowborder" valign="top" width="40%" id="mcps1.1.3.1.1"><p id="p699793141012"><a name="p699793141012"></a><a name="p699793141012"></a>Data Type</p>
@@ -2520,13 +2813,13 @@ Performs one-to-many distance computation using inner product on vectors represe
 </thead>
 <tbody><tr id="row1599716361015"><td class="cellrowborder" valign="top" width="40%" headers="mcps1.1.3.1.1 "><p id="p39970319101"><a name="p39970319101"></a><a name="p39970319101"></a>int</p>
 </td>
-<td class="cellrowborder" valign="top" width="60%" headers="mcps1.1.3.1.2 "><p id="p53461032104518"><a name="p53461032104518"></a><a name="p53461032104518"></a><code>0</code> is returned on successful execution. In case of failure, an error code is returned to indicate the specific issue.</p>
+<td class="cellrowborder" valign="top" width="60%" headers="mcps1.1.3.1.2 "><p id="p53461032104518"><a name="p53461032104518"></a><a name="p53461032104518"></a><code>0</code> is returned on successful execution. In case of failure, an error code is returned.</p>
 </td>
 </tr>
 </tbody>
 </table>
 
-**Example**
+**Sample**
 
 ```c
 #include <stdio.h>
@@ -2620,7 +2913,7 @@ cleanup:
 
 ### krl\_inner\_product\_by\_idx\_f16f32
 
-**Interface Definition<a name="section172317194488"></a>**
+**API Definition<a name="section172317194488"></a>**
 
 int krl\_inner\_product\_by\_idx\_f16f32\(float\* dis, const uint16\_t\* x, const uint16\_t\* y, const int64\_t\* ids, size\_t d, size\_t ny, size\_t dis\_size\);
 
@@ -2683,7 +2976,7 @@ Performs one-to-many distance computation using inner product on vectors represe
 </td>
 <td class="cellrowborder" valign="top" width="33.663366336633665%" headers="mcps1.1.5.1.3 "><p id="p17661261256"><a name="p17661261256"></a><a name="p17661261256"></a>Vector dimension.</p>
 </td>
-<td class="cellrowborder" valign="top" width="36.18361836183618%" headers="mcps1.1.5.1.4 "><p id="p46952755416"><a name="p46952755416"></a><a name="p46952755416"></a>[1, 65535]</p>
+<td class="cellrowborder" valign="top" width="36.18361836183618%" headers="mcps1.1.5.1.4 "><p id="p46952755416"><a name="p46952755416"></a><a name="p46952755416"></a>[1,65535]</p>
 </td>
 </tr>
 <tr id="row37151957141516"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p171515741513"><a name="p171515741513"></a><a name="p171515741513"></a>ny</p>
@@ -2692,7 +2985,7 @@ Performs one-to-many distance computation using inner product on vectors represe
 </td>
 <td class="cellrowborder" valign="top" width="33.663366336633665%" headers="mcps1.1.5.1.3 "><p id="p197153572157"><a name="p197153572157"></a><a name="p197153572157"></a>Number of base vectors for distance computation.</p>
 </td>
-<td class="cellrowborder" valign="top" width="36.18361836183618%" headers="mcps1.1.5.1.4 "><p id="p1071517573156"><a name="p1071517573156"></a><a name="p1071517573156"></a>[1, 2^30-1]</p>
+<td class="cellrowborder" valign="top" width="36.18361836183618%" headers="mcps1.1.5.1.4 "><p id="p1071517573156"><a name="p1071517573156"></a><a name="p1071517573156"></a>[1,2^30-1]</p>
 </td>
 </tr>
 <tr id="row36562453314"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p39628388417"><a name="p39628388417"></a><a name="p39628388417"></a>dis_size</p>
@@ -2707,7 +3000,7 @@ Performs one-to-many distance computation using inner product on vectors represe
 </tbody>
 </table>
 
-**Return Values<a name="section49971832106"></a>**
+**Return Value<a name="section49971832106"></a>**
 
 <a name="table17997635100"></a>
 <table><thead align="left"><tr id="row699763141018"><th class="cellrowborder" valign="top" width="40%" id="mcps1.1.3.1.1"><p id="p699793141012"><a name="p699793141012"></a><a name="p699793141012"></a>Data Type</p>
@@ -2718,13 +3011,13 @@ Performs one-to-many distance computation using inner product on vectors represe
 </thead>
 <tbody><tr id="row1599716361015"><td class="cellrowborder" valign="top" width="40%" headers="mcps1.1.3.1.1 "><p id="p39970319101"><a name="p39970319101"></a><a name="p39970319101"></a>int</p>
 </td>
-<td class="cellrowborder" valign="top" width="60%" headers="mcps1.1.3.1.2 "><p id="p53461032104518"><a name="p53461032104518"></a><a name="p53461032104518"></a><code>0</code> is returned on successful execution. In case of failure, an error code is returned to indicate the specific issue.</p>
+<td class="cellrowborder" valign="top" width="60%" headers="mcps1.1.3.1.2 "><p id="p53461032104518"><a name="p53461032104518"></a><a name="p53461032104518"></a><code>0</code> is returned on successful execution. In case of failure, an error code is returned.</p>
 </td>
 </tr>
 </tbody>
 </table>
 
-**Example**
+**Sample**
 
 ```c
 #include <stdio.h>
@@ -2760,7 +3053,7 @@ int main() {
     // Allocate the distance result array.
     float* distances = (float*)malloc(ny * sizeof(float));
 
-    // Perform one-to-many inner product distance computation on vectors represented in fp16 precision.
+    // Perform one-to-many inner product distance computation on vectors represented in fp16 precision..
     int ret = krl_inner_product_by_idx_f16f32(
         distances,
         query_vec_fp16,
@@ -2772,7 +3065,7 @@ int main() {
     );
 
     if (ret != 0) {
-        printf("Failed to compute the one-to-many inner product distance for vectors represented in fp16 precision. Error code: %d\n", ret);
+        printf("Failed to compute the one-to-many inner product distance on vectors represented in fp16 precision. Error code: %d\n", ret);
         goto cleanup;
     }
 
@@ -2792,9 +3085,119 @@ cleanup:
 }
 ```
 
+### krl\_inner\_product\_by\_idx\_f16f32\_sve2
+
+**Interface Definition**
+
+int krl\_inner\_product\_by\_idx\_f16f32\_sve2\(const uint16\_t\* query\_vec, const uint16\_t\* base\_vec, const uint32\_t\* idx, int dim, int nx, float\* distances, size\_t idx\_size, size\_t distances\_size\);
+
+**Usage**
+
+Performs one-to-many distance computation using inner product on vectors represented in fp16 precision (SVE2).
+
+**Parameters<a name="section157501312135019"></a>**
+
+<a name="table1623016332509"></a>
+<table><thead align="left"><tr id="row823063355012"><th class="cellrowborder" valign="top" width="15.551555155515551%" id="mcps1.1.5.1.1"><p id="p1230333125010"><a name="p1230333125010"></a><a name="p1230333125010"></a>Parameter</p>
+</th>
+<th class="cellrowborder" valign="top" width="14.601460146014599%" id="mcps1.1.5.1.2"><p id="p089311158912"><a name="p089311158912"></a><a name="p089311158912"></a>Data Type</p>
+</th>
+<th class="cellrowborder" valign="top" width="33.663366336633665%" id="mcps1.1.5.1.3"><p id="p4230193313507"><a name="p4230193313507"></a><a name="p4230193313507"></a>Description</p>
+</th>
+<th class="cellrowborder" valign="top" width="36.18361836183618%" id="mcps1.1.5.1.4"><p id="p19887819256"><a name="p19887819256"></a><a name="p19887819256"></a>Value Range</p>
+</th>
+</tr>
+</thead>
+<tbody><tr id="row92301478154"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p223015479158"><a name="p223015479158"></a><a name="p223015479158"></a>dis</p>
+</td>
+<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p11230154710156"><a name="p11230154710156"></a><a name="p11230154710156"></a>float*</p>
+</td>
+<td class="cellrowborder" valign="top" width="33.663366336633665%" headers="mcps1.1.5.1.3 "><p id="p82303471154"><a name="p82303471154"></a><a name="p82303471154"></a>Stores the distance computation result.</p>
+</td>
+<td class="cellrowborder" valign="top" width="36.18361836183618%" headers="mcps1.1.5.1.4 "><p id="p923018478155"><a name="p923018478155"></a><a name="p923018478155"></a>The size is specified by <code>dis_size</code>. The memory needs to be allocated in advance.</p>
+</td>
+</tr>
+<tr id="row1823023318504"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p11230033165015"><a name="p11230033165015"></a><a name="p11230033165015"></a>x</p>
+</td>
+<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p953215815518"><a name="p953215815518"></a><a name="p953215815518"></a>const uint16_t*</p>
+</td>
+<td class="cellrowborder" valign="top" width="33.663366336633665%" headers="mcps1.1.5.1.3 "><p id="p18661136253"><a name="p18661136253"></a><a name="p18661136253"></a>Query vector for distance computation.</p>
+</td>
+<td class="cellrowborder" valign="top" width="36.18361836183618%" headers="mcps1.1.5.1.4 "><p id="p79885872519"><a name="p79885872519"></a><a name="p79885872519"></a>The vector has a dimension of <code>d</code>.</p>
+</td>
+</tr>
+<tr id="row10982132445420"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p4982142445414"><a name="p4982142445414"></a><a name="p4982142445414"></a>y</p>
+</td>
+<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p7532158856"><a name="p7532158856"></a><a name="p7532158856"></a>const uint16_t*</p>
+</td>
+<td class="cellrowborder" valign="top" width="33.663366336633665%" headers="mcps1.1.5.1.3 "><p id="p36611261054"><a name="p36611261054"></a><a name="p36611261054"></a>Base vector for distance computation.</p>
+</td>
+<td class="cellrowborder" valign="top" width="36.18361836183618%" headers="mcps1.1.5.1.4 "><p id="p85127581355"><a name="p85127581355"></a><a name="p85127581355"></a>The size is specified by <code>d</code> × <code>ny</code>.</p>
+</td>
+</tr>
+<tr id="row103951453161513"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p1395185361518"><a name="p1395185361518"></a><a name="p1395185361518"></a>ids</p>
+</td>
+<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p93958532154"><a name="p93958532154"></a><a name="p93958532154"></a>const int64_t*</p>
+</td>
+<td class="cellrowborder" valign="top" width="33.663366336633665%" headers="mcps1.1.5.1.3 "><p id="p2039510531150"><a name="p2039510531150"></a><a name="p2039510531150"></a>IDs of base vectors.</p>
+</td>
+<td class="cellrowborder" valign="top" width="36.18361836183618%" headers="mcps1.1.5.1.4 "><p id="p6395135351511"><a name="p6395135351511"></a><a name="p6395135351511"></a>The ID value is greater than or equal to 0  and less than the total number of base vectors.</p>
+</td>
+</tr>
+<tr id="row106882715416"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p46812710547"><a name="p46812710547"></a><a name="p46812710547"></a>d</p>
+</td>
+<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p45311183519"><a name="p45311183519"></a><a name="p45311183519"></a>size_t</p>
+</td>
+<td class="cellrowborder" valign="top" width="33.663366336633665%" headers="mcps1.1.5.1.3 "><p id="p17661261256"><a name="p17661261256"></a><a name="p17661261256"></a>Vector dimension.</p>
+</td>
+<td class="cellrowborder" valign="top" width="36.18361836183618%" headers="mcps1.1.5.1.4 "><p id="p46952755416"><a name="p46952755416"></a><a name="p46952755416"></a>[1,65535]</p>
+</td>
+</tr>
+<tr id="row37151957141516"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p171515741513"><a name="p171515741513"></a><a name="p171515741513"></a>ny</p>
+</td>
+<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p3715105741513"><a name="p3715105741513"></a><a name="p3715105741513"></a>size_t</p>
+</td>
+<td class="cellrowborder" valign="top" width="33.663366336633665%" headers="mcps1.1.5.1.3 "><p id="p197153572157"><a name="p197153572157"></a><a name="p197153572157"></a>Number of base vectors for distance computation.</p>
+</td>
+<td class="cellrowborder" valign="top" width="36.18361836183618%" headers="mcps1.1.5.1.4 "><p id="p1071517573156"><a name="p1071517573156"></a><a name="p1071517573156"></a>[1,2^30-1]</p>
+</td>
+</tr>
+<tr id="row36562453314"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p39628388417"><a name="p39628388417"></a><a name="p39628388417"></a>dis_size</p>
+</td>
+<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p10722125214"><a name="p10722125214"></a><a name="p10722125214"></a>size_t</p>
+</td>
+<td class="cellrowborder" valign="top" width="33.663366336633665%" headers="mcps1.1.5.1.3 "><p id="p1762116529"><a name="p1762116529"></a><a name="p1762116529"></a>Size of the distance result array.</p>
+</td>
+<td class="cellrowborder" valign="top" width="36.18361836183618%" headers="mcps1.1.5.1.4 "><p id="p154517391451"><a name="p154517391451"></a><a name="p154517391451"></a>The value is specified by <code>ny</code>.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+**Return Value<a name="section49971832106"></a>**
+
+<a name="table17997635100"></a>
+<table><thead align="left"><tr id="row699763141018"><th class="cellrowborder" valign="top" width="40%" id="mcps1.1.3.1.1"><p id="p699793141012"><a name="p699793141012"></a><a name="p699793141012"></a>Data Type</p>
+</th>
+<th class="cellrowborder" valign="top" width="60%" id="mcps1.1.3.1.2"><p id="p1999763141020"><a name="p1999763141020"></a><a name="p1999763141020"></a>Description</p>
+</th>
+</tr>
+</thead>
+<tbody><tr id="row1599716361015"><td class="cellrowborder" valign="top" width="40%" headers="mcps1.1.3.1.1 "><p id="p39970319101"><a name="p39970319101"></a><a name="p39970319101"></a>int</p>
+</td>
+<td class="cellrowborder" valign="top" width="60%" headers="mcps1.1.3.1.2 "><p id="p53461032104518"><a name="p53461032104518"></a><a name="p53461032104518"></a><code>0</code> is returned on successful execution. In case of failure, an error code is returned.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+**Sample**
+
+You can use the `krl_inner_product_by_idx_f16f32` example as a reference and simply substitute the function call with `krl_inner_product_by_idx_f16f32_sve2`.
+
 ### krl\_negative\_inner\_product\_by\_idx\_f16f32
 
-**Interface Definition<a name="section172317194488"></a>**
+**API Definition<a name="section172317194488"></a>**
 
 int krl\_negative\_inner\_product\_by\_idx\_f16f32\(float\* dis, const uint16\_t\* x, const uint16\_t\* y, const int64\_t\* ids, size\_t d, size\_t ny, size\_t dis\_size\);
 
@@ -2857,7 +3260,7 @@ Performs one-to-many distance computation using inner product on vectors represe
 </td>
 <td class="cellrowborder" valign="top" width="33.93339333933393%" headers="mcps1.1.5.1.3 "><p id="p17661261256"><a name="p17661261256"></a><a name="p17661261256"></a>Vector dimension.</p>
 </td>
-<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p46952755416"><a name="p46952755416"></a><a name="p46952755416"></a>[1, 65535]</p>
+<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p46952755416"><a name="p46952755416"></a><a name="p46952755416"></a>[1,65535]</p>
 </td>
 </tr>
 <tr id="row37151957141516"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p171515741513"><a name="p171515741513"></a><a name="p171515741513"></a>ny</p>
@@ -2866,7 +3269,7 @@ Performs one-to-many distance computation using inner product on vectors represe
 </td>
 <td class="cellrowborder" valign="top" width="33.93339333933393%" headers="mcps1.1.5.1.3 "><p id="p197153572157"><a name="p197153572157"></a><a name="p197153572157"></a>Number of base vectors for distance computation.</p>
 </td>
-<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p1071517573156"><a name="p1071517573156"></a><a name="p1071517573156"></a>[1, 2^30-1]</p>
+<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p1071517573156"><a name="p1071517573156"></a><a name="p1071517573156"></a>[1,2^30-1]</p>
 </td>
 </tr>
 <tr id="row17278128173918"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p39628388417"><a name="p39628388417"></a><a name="p39628388417"></a>dis_size</p>
@@ -2881,7 +3284,7 @@ Performs one-to-many distance computation using inner product on vectors represe
 </tbody>
 </table>
 
-**Return Values<a name="section49971832106"></a>**
+**Return Value<a name="section49971832106"></a>**
 
 <a name="table17997635100"></a>
 <table><thead align="left"><tr id="row699763141018"><th class="cellrowborder" valign="top" width="40%" id="mcps1.1.3.1.1"><p id="p699793141012"><a name="p699793141012"></a><a name="p699793141012"></a>Data Type</p>
@@ -2892,13 +3295,13 @@ Performs one-to-many distance computation using inner product on vectors represe
 </thead>
 <tbody><tr id="row1599716361015"><td class="cellrowborder" valign="top" width="40%" headers="mcps1.1.3.1.1 "><p id="p39970319101"><a name="p39970319101"></a><a name="p39970319101"></a>int</p>
 </td>
-<td class="cellrowborder" valign="top" width="60%" headers="mcps1.1.3.1.2 "><p id="p53461032104518"><a name="p53461032104518"></a><a name="p53461032104518"></a><code>0</code> is returned on successful execution. In case of failure, an error code is returned to indicate the specific issue.</p>
+<td class="cellrowborder" valign="top" width="60%" headers="mcps1.1.3.1.2 "><p id="p53461032104518"><a name="p53461032104518"></a><a name="p53461032104518"></a><code>0</code> is returned on successful execution. In case of failure, an error code is returned.</p>
 </td>
 </tr>
 </tbody>
 </table>
 
-**Example**
+**Sample**
 
 ```c
 #include <stdio.h>
@@ -2979,7 +3382,7 @@ cleanup:
 
 ### krl\_inner\_product\_by\_idx\_s8f32
 
-**Interface Definition<a name="section172317194488"></a>**
+**API Definition<a name="section172317194488"></a>**
 
 int krl\_inner\_product\_by\_idx\_s8f32\(float\* dis, const int8\_t\* x, const int8\_t\* y, const int64\_t\* ids, size\_t d, size\_t ny, size\_t dis\_size\);
 
@@ -3042,7 +3445,7 @@ Performs one-to-many distance computation using inner product on vectors represe
 </td>
 <td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p17661261256"><a name="p17661261256"></a><a name="p17661261256"></a>Vector dimension.</p>
 </td>
-<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p46952755416"><a name="p46952755416"></a><a name="p46952755416"></a>[1, 65535]</p>
+<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p46952755416"><a name="p46952755416"></a><a name="p46952755416"></a>[1,65535]</p>
 </td>
 </tr>
 <tr id="row37151957141516"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p171515741513"><a name="p171515741513"></a><a name="p171515741513"></a>ny</p>
@@ -3051,7 +3454,7 @@ Performs one-to-many distance computation using inner product on vectors represe
 </td>
 <td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p197153572157"><a name="p197153572157"></a><a name="p197153572157"></a>Number of base vectors for distance computation.</p>
 </td>
-<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p1071517573156"><a name="p1071517573156"></a><a name="p1071517573156"></a>[1, 2^30-1]</p>
+<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p1071517573156"><a name="p1071517573156"></a><a name="p1071517573156"></a>[1,2^30-1]</p>
 </td>
 </tr>
 <tr id="row5987191044118"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p39628388417"><a name="p39628388417"></a><a name="p39628388417"></a>dis_size</p>
@@ -3066,7 +3469,7 @@ Performs one-to-many distance computation using inner product on vectors represe
 </tbody>
 </table>
 
-**Return Values<a name="section49971832106"></a>**
+**Return Value<a name="section49971832106"></a>**
 
 <a name="table17997635100"></a>
 <table><thead align="left"><tr id="row699763141018"><th class="cellrowborder" valign="top" width="40%" id="mcps1.1.3.1.1"><p id="p699793141012"><a name="p699793141012"></a><a name="p699793141012"></a>Data Type</p>
@@ -3077,13 +3480,13 @@ Performs one-to-many distance computation using inner product on vectors represe
 </thead>
 <tbody><tr id="row1599716361015"><td class="cellrowborder" valign="top" width="40%" headers="mcps1.1.3.1.1 "><p id="p39970319101"><a name="p39970319101"></a><a name="p39970319101"></a>int</p>
 </td>
-<td class="cellrowborder" valign="top" width="60%" headers="mcps1.1.3.1.2 "><p id="p53461032104518"><a name="p53461032104518"></a><a name="p53461032104518"></a><code>0</code> is returned on successful execution. In case of failure, an error code is returned to indicate the specific issue.</p>
+<td class="cellrowborder" valign="top" width="60%" headers="mcps1.1.3.1.2 "><p id="p53461032104518"><a name="p53461032104518"></a><a name="p53461032104518"></a><code>0</code> is returned on successful execution. In case of failure, an error code is returned.</p>
 </td>
 </tr>
 </tbody>
 </table>
 
-**Example**
+**Sample**
 
 ```c
 #include <stdio.h>
@@ -3150,7 +3553,7 @@ cleanup:
 
 ### krl\_L2sqr\_ny
 
-**Interface Definition<a name="section172317194488"></a>**
+**API Definition<a name="section172317194488"></a>**
 
 int krl\_L2sqr\_ny\(float\* dis, const float\* x, const float\* y, size\_t ny, size\_t d, size\_t dis\_size\);
 
@@ -3204,7 +3607,7 @@ Performs one-to-many Euclidean distance computation on vectors represented in fl
 </td>
 <td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p672341218403"><a name="p672341218403"></a><a name="p672341218403"></a>Number of base vectors for distance computation.</p>
 </td>
-<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p6723181274010"><a name="p6723181274010"></a><a name="p6723181274010"></a>[1, 2^30-1]</p>
+<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p6723181274010"><a name="p6723181274010"></a><a name="p6723181274010"></a>[1,2^30-1]</p>
 </td>
 </tr>
 <tr id="row106882715416"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p46812710547"><a name="p46812710547"></a><a name="p46812710547"></a>d</p>
@@ -3213,7 +3616,7 @@ Performs one-to-many Euclidean distance computation on vectors represented in fl
 </td>
 <td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p17661261256"><a name="p17661261256"></a><a name="p17661261256"></a>Vector dimension.</p>
 </td>
-<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p46952755416"><a name="p46952755416"></a><a name="p46952755416"></a>[1, 65535]</p>
+<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p46952755416"><a name="p46952755416"></a><a name="p46952755416"></a>[1,65535]</p>
 </td>
 </tr>
 <tr id="row161414323423"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p39628388417"><a name="p39628388417"></a><a name="p39628388417"></a>dis_size</p>
@@ -3228,7 +3631,7 @@ Performs one-to-many Euclidean distance computation on vectors represented in fl
 </tbody>
 </table>
 
-**Return Values<a name="section49971832106"></a>**
+**Return Value<a name="section49971832106"></a>**
 
 <a name="table17997635100"></a>
 <table><thead align="left"><tr id="row699763141018"><th class="cellrowborder" valign="top" width="40%" id="mcps1.1.3.1.1"><p id="p699793141012"><a name="p699793141012"></a><a name="p699793141012"></a>Data Type</p>
@@ -3239,13 +3642,13 @@ Performs one-to-many Euclidean distance computation on vectors represented in fl
 </thead>
 <tbody><tr id="row1599716361015"><td class="cellrowborder" valign="top" width="40%" headers="mcps1.1.3.1.1 "><p id="p39970319101"><a name="p39970319101"></a><a name="p39970319101"></a>int</p>
 </td>
-<td class="cellrowborder" valign="top" width="60%" headers="mcps1.1.3.1.2 "><p id="p53461032104518"><a name="p53461032104518"></a><a name="p53461032104518"></a><code>0</code> is returned on successful execution. In case of failure, an error code is returned to indicate the specific issue.</p>
+<td class="cellrowborder" valign="top" width="60%" headers="mcps1.1.3.1.2 "><p id="p53461032104518"><a name="p53461032104518"></a><a name="p53461032104518"></a><code>0</code> is returned on successful execution. In case of failure, an error code is returned.</p>
 </td>
 </tr>
 </tbody>
 </table>
 
-**Example**
+**Sample**
 
 ```c
 #include <stdio.h>
@@ -3309,9 +3712,9 @@ cleanup:
 
 ### krl\_L2sqr\_ny\_f16f32
 
-**Interface Definition<a name="section172317194488"></a>**
+**API Definition<a name="section172317194488"></a>**
 
-in krl\_L2sqr\_ny\_f16f32\(float\* dis, const uint16\_t\* x, const uint16\_t\* y, size\_t ny, size\_t d, size\_t dis\_size\);
+int krl\_L2sqr\_ny\_f16f32\(float\* dis, const uint16\_t\* x, const uint16\_t\* y, size\_t ny, size\_t d, size\_t dis\_size\);
 
 **Function<a name="section1153124784912"></a>**
 
@@ -3363,7 +3766,7 @@ Performs one-to-many Euclidean distance computation on vectors represented in fp
 </td>
 <td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p672341218403"><a name="p672341218403"></a><a name="p672341218403"></a>Number of base vectors for distance computation.</p>
 </td>
-<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p6723181274010"><a name="p6723181274010"></a><a name="p6723181274010"></a>[1, 2^30-1]</p>
+<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p6723181274010"><a name="p6723181274010"></a><a name="p6723181274010"></a>[1,2^30-1]</p>
 </td>
 </tr>
 <tr id="row106882715416"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p46812710547"><a name="p46812710547"></a><a name="p46812710547"></a>d</p>
@@ -3372,7 +3775,7 @@ Performs one-to-many Euclidean distance computation on vectors represented in fp
 </td>
 <td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p17661261256"><a name="p17661261256"></a><a name="p17661261256"></a>Vector dimension.</p>
 </td>
-<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p46952755416"><a name="p46952755416"></a><a name="p46952755416"></a>[1, 65535]</p>
+<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p46952755416"><a name="p46952755416"></a><a name="p46952755416"></a>[1,65535]</p>
 </td>
 </tr>
 <tr id="row1922192114518"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p39628388417"><a name="p39628388417"></a><a name="p39628388417"></a>dis_size</p>
@@ -3387,7 +3790,7 @@ Performs one-to-many Euclidean distance computation on vectors represented in fp
 </tbody>
 </table>
 
-**Return Values<a name="section49971832106"></a>**
+**Return Value<a name="section49971832106"></a>**
 
 <a name="table17997635100"></a>
 <table><thead align="left"><tr id="row699763141018"><th class="cellrowborder" valign="top" width="40%" id="mcps1.1.3.1.1"><p id="p699793141012"><a name="p699793141012"></a><a name="p699793141012"></a>Data Type</p>
@@ -3398,13 +3801,13 @@ Performs one-to-many Euclidean distance computation on vectors represented in fp
 </thead>
 <tbody><tr id="row1599716361015"><td class="cellrowborder" valign="top" width="40%" headers="mcps1.1.3.1.1 "><p id="p39970319101"><a name="p39970319101"></a><a name="p39970319101"></a>int</p>
 </td>
-<td class="cellrowborder" valign="top" width="60%" headers="mcps1.1.3.1.2 "><p id="p53461032104518"><a name="p53461032104518"></a><a name="p53461032104518"></a><code>0</code> is returned on successful execution. In case of failure, an error code is returned to indicate the specific issue.</p>
+<td class="cellrowborder" valign="top" width="60%" headers="mcps1.1.3.1.2 "><p id="p53461032104518"><a name="p53461032104518"></a><a name="p53461032104518"></a><code>0</code> is returned on successful execution. In case of failure, an error code is returned.</p>
 </td>
 </tr>
 </tbody>
 </table>
 
-**Example**
+**Sample**
 
 ```c
 #include <stdio.h>
@@ -3459,9 +3862,110 @@ cleanup:
 }
 ```
 
+### krl\_L2sqr\_ny\_f16f32\_sve2
+
+**Interface Definition**
+
+int krl\_L2sqr\_ny\_f16f32\_sve2\(const uint16\_t\* query\_vec, const uint16\_t\* base\_vec, int dim, int ny, float\* distances, size\_t distances\_size\);
+
+**Usage**
+
+Performs one-to-many Euclidean distance computation on vectors represented in fp16 precision (SVE2).
+
+**Parameters<a name="section157501312135019"></a>**
+
+<a name="table1623016332509"></a>
+<table><thead align="left"><tr id="row823063355012"><th class="cellrowborder" valign="top" width="15.551555155515551%" id="mcps1.1.5.1.1"><p id="p1230333125010"><a name="p1230333125010"></a><a name="p1230333125010"></a>Parameter</p>
+</th>
+<th class="cellrowborder" valign="top" width="14.601460146014599%" id="mcps1.1.5.1.2"><p id="p089311158912"><a name="p089311158912"></a><a name="p089311158912"></a>Data Type</p>
+</th>
+<th class="cellrowborder" valign="top" width="33.99339933993399%" id="mcps1.1.5.1.3"><p id="p4230193313507"><a name="p4230193313507"></a><a name="p4230193313507"></a>Description</p>
+</th>
+<th class="cellrowborder" valign="top" width="35.85358535853585%" id="mcps1.1.5.1.4"><p id="p19887819256"><a name="p19887819256"></a><a name="p19887819256"></a>Value Range</p>
+</th>
+</tr>
+</thead>
+<tbody><tr id="row92301478154"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p223015479158"><a name="p223015479158"></a><a name="p223015479158"></a>dis</p>
+</td>
+<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p11230154710156"><a name="p11230154710156"></a><a name="p11230154710156"></a>float*</p>
+</td>
+<td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p184912496525"><a name="p184912496525"></a><a name="p184912496525"></a>Stores the distance computation result.</p>
+</td>
+<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p923018478155"><a name="p923018478155"></a><a name="p923018478155"></a>The size is specified by <code>dis_size</code>. The memory needs to be allocated in advance.</p>
+</td>
+</tr>
+<tr id="row1823023318504"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p11230033165015"><a name="p11230033165015"></a><a name="p11230033165015"></a>x</p>
+</td>
+<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p953215815518"><a name="p953215815518"></a><a name="p953215815518"></a>const uint16_t*</p>
+</td>
+<td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p18661136253"><a name="p18661136253"></a><a name="p18661136253"></a>Query vector for distance computation.</p>
+</td>
+<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p79885872519"><a name="p79885872519"></a><a name="p79885872519"></a>The vector has a dimension of <code>d</code>.</p>
+</td>
+</tr>
+<tr id="row10982132445420"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p4982142445414"><a name="p4982142445414"></a><a name="p4982142445414"></a>y</p>
+</td>
+<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p7532158856"><a name="p7532158856"></a><a name="p7532158856"></a>const uint16_t*</p>
+</td>
+<td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p36611261054"><a name="p36611261054"></a><a name="p36611261054"></a>Base vector for distance computation.</p>
+</td>
+<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p85127581355"><a name="p85127581355"></a><a name="p85127581355"></a>The size is specified by <code>d</code> × <code>ny</code>.</p>
+</td>
+</tr>
+<tr id="row103951453161513"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p14723141215409"><a name="p14723141215409"></a><a name="p14723141215409"></a>ny</p>
+</td>
+<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p4723181210404"><a name="p4723181210404"></a><a name="p4723181210404"></a>size_t</p>
+</td>
+<td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p672341218403"><a name="p672341218403"></a><a name="p672341218403"></a>Number of base vectors for distance computation.</p>
+</td>
+<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p6723181274010"><a name="p6723181274010"></a><a name="p6723181274010"></a>[1,2^30-1]</p>
+</td>
+</tr>
+<tr id="row106882715416"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p46812710547"><a name="p46812710547"></a><a name="p46812710547"></a>d</p>
+</td>
+<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p45311183519"><a name="p45311183519"></a><a name="p45311183519"></a>size_t</p>
+</td>
+<td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p17661261256"><a name="p17661261256"></a><a name="p17661261256"></a>Vector dimension.</p>
+</td>
+<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p46952755416"><a name="p46952755416"></a><a name="p46952755416"></a>[1,65535]</p>
+</td>
+</tr>
+<tr id="row1922192114518"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p39628388417"><a name="p39628388417"></a><a name="p39628388417"></a>dis_size</p>
+</td>
+<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p10722125214"><a name="p10722125214"></a><a name="p10722125214"></a>size_t</p>
+</td>
+<td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p1762116529"><a name="p1762116529"></a><a name="p1762116529"></a>Size of the distance result array.</p>
+</td>
+<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p154517391451"><a name="p154517391451"></a><a name="p154517391451"></a>The value is specified by <code>ny</code>.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+**Return Value<a name="section49971832106"></a>**
+
+<a name="table17997635100"></a>
+<table><thead align="left"><tr id="row699763141018"><th class="cellrowborder" valign="top" width="40%" id="mcps1.1.3.1.1"><p id="p699793141012"><a name="p699793141012"></a><a name="p699793141012"></a>Data Type</p>
+</th>
+<th class="cellrowborder" valign="top" width="60%" id="mcps1.1.3.1.2"><p id="p1999763141020"><a name="p1999763141020"></a><a name="p1999763141020"></a>Description</p>
+</th>
+</tr>
+</thead>
+<tbody><tr id="row1599716361015"><td class="cellrowborder" valign="top" width="40%" headers="mcps1.1.3.1.1 "><p id="p39970319101"><a name="p39970319101"></a><a name="p39970319101"></a>int</p>
+</td>
+<td class="cellrowborder" valign="top" width="60%" headers="mcps1.1.3.1.2 "><p id="p53461032104518"><a name="p53461032104518"></a><a name="p53461032104518"></a><code>0</code> is returned on successful execution. In case of failure, an error code is returned.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+**Sample**
+
+You can use the `krl_L2sqr_ny_f16f32` example as a reference and simply substitute the function call with `krl_L2sqr_ny_f16f32_sve2`.
+
 ### krl\_L2sqr\_ny\_u8f32
 
-**Interface Definition<a name="section172317194488"></a>**
+**API Definition<a name="section172317194488"></a>**
 
 void krl\_L2sqr\_ny\_u8f32\(float\* dis, const uint8\_t\* x, const uint8\_t\* y, size\_t ny, size\_t d, size\_t dis\_size\);
 
@@ -3515,7 +4019,7 @@ Performs one-to-many Euclidean distance computation on vectors represented as 8-
 </td>
 <td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p672341218403"><a name="p672341218403"></a><a name="p672341218403"></a>Number of base vectors for distance computation.</p>
 </td>
-<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p6723181274010"><a name="p6723181274010"></a><a name="p6723181274010"></a>[1, 2^30-1]</p>
+<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p6723181274010"><a name="p6723181274010"></a><a name="p6723181274010"></a>[1,2^30-1]</p>
 </td>
 </tr>
 <tr id="row106882715416"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p46812710547"><a name="p46812710547"></a><a name="p46812710547"></a>d</p>
@@ -3524,7 +4028,7 @@ Performs one-to-many Euclidean distance computation on vectors represented as 8-
 </td>
 <td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p17661261256"><a name="p17661261256"></a><a name="p17661261256"></a>Vector dimension.</p>
 </td>
-<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p46952755416"><a name="p46952755416"></a><a name="p46952755416"></a>[1, 65535]</p>
+<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p46952755416"><a name="p46952755416"></a><a name="p46952755416"></a>[1,65535]</p>
 </td>
 </tr>
 <tr id="row882011193585"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p39628388417"><a name="p39628388417"></a><a name="p39628388417"></a>dis_size</p>
@@ -3539,7 +4043,7 @@ Performs one-to-many Euclidean distance computation on vectors represented as 8-
 </tbody>
 </table>
 
-**Return Values<a name="section49971832106"></a>**
+**Return Value<a name="section49971832106"></a>**
 
 <a name="table17997635100"></a>
 <table><thead align="left"><tr id="row699763141018"><th class="cellrowborder" valign="top" width="40%" id="mcps1.1.3.1.1"><p id="p699793141012"><a name="p699793141012"></a><a name="p699793141012"></a>Data Type</p>
@@ -3550,13 +4054,13 @@ Performs one-to-many Euclidean distance computation on vectors represented as 8-
 </thead>
 <tbody><tr id="row1599716361015"><td class="cellrowborder" valign="top" width="40%" headers="mcps1.1.3.1.1 "><p id="p39970319101"><a name="p39970319101"></a><a name="p39970319101"></a>int</p>
 </td>
-<td class="cellrowborder" valign="top" width="60%" headers="mcps1.1.3.1.2 "><p id="p53461032104518"><a name="p53461032104518"></a><a name="p53461032104518"></a><code>0</code> is returned on successful execution. In case of failure, an error code is returned to indicate the specific issue.</p>
+<td class="cellrowborder" valign="top" width="60%" headers="mcps1.1.3.1.2 "><p id="p53461032104518"><a name="p53461032104518"></a><a name="p53461032104518"></a><code>0</code> is returned on successful execution. In case of failure, an error code is returned.</p>
 </td>
 </tr>
 </tbody>
 </table>
 
-**Example**
+**Sample**
 
 ```c
 #include <stdio.h>
@@ -3567,7 +4071,7 @@ int main() {
     size_t dim = 128;
     size_t ny = 1000;
 
-    // Prepare query vectors of the uint8 type.
+    // Prepare the query vector of the uint8 type.
     uint8_t* query_vec = (uint8_t*)malloc(dim * sizeof(uint8_t));
     for (size_t i = 0; i < dim; i++) {
         query_vec[i] = (uint8_t)(rand() % 256);
@@ -3611,7 +4115,7 @@ int main() {
 
 ### krl\_L2sqr\_ny\_with\_handle
 
-**Interface Definition<a name="section172317194488"></a>**
+**API Definition<a name="section172317194488"></a>**
 
 int krl\_L2sqr\_ny\_with\_handle\(const KRLDistanceHandle\* kdh, float\* dis, const float\* x, size\_t dis\_size, size\_t x\_size\);
 
@@ -3652,7 +4156,7 @@ Performs one-to-many Euclidean distance computation on vectors represented in fl
 </tr>
 <tr id="row10982132445420"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p1089412431931"><a name="p1089412431931"></a><a name="p1089412431931"></a>x</p>
 </td>
-<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p1389417431933"><a name="p1389417431933"></a><a name="p1389417431933"></a>const uint8_t*</p>
+<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p1389417431933"><a name="p1389417431933"></a><a name="p1389417431933"></a>const float*</p>
 </td>
 <td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p28941943039"><a name="p28941943039"></a><a name="p28941943039"></a>Query vector for distance computation.</p>
 </td>
@@ -3680,7 +4184,7 @@ Performs one-to-many Euclidean distance computation on vectors represented in fl
 </tbody>
 </table>
 
-**Return Values<a name="section49971832106"></a>**
+**Return Value<a name="section49971832106"></a>**
 
 <a name="table17997635100"></a>
 <table><thead align="left"><tr id="row699763141018"><th class="cellrowborder" valign="top" width="40%" id="mcps1.1.3.1.1"><p id="p699793141012"><a name="p699793141012"></a><a name="p699793141012"></a>Data Type</p>
@@ -3691,13 +4195,13 @@ Performs one-to-many Euclidean distance computation on vectors represented in fl
 </thead>
 <tbody><tr id="row1599716361015"><td class="cellrowborder" valign="top" width="40%" headers="mcps1.1.3.1.1 "><p id="p39970319101"><a name="p39970319101"></a><a name="p39970319101"></a>int</p>
 </td>
-<td class="cellrowborder" valign="top" width="60%" headers="mcps1.1.3.1.2 "><p id="p53461032104518"><a name="p53461032104518"></a><a name="p53461032104518"></a><code>0</code> is returned on successful execution. In case of failure, an error code is returned to indicate the specific issue.</p>
+<td class="cellrowborder" valign="top" width="60%" headers="mcps1.1.3.1.2 "><p id="p53461032104518"><a name="p53461032104518"></a><a name="p53461032104518"></a><code>0</code> is returned on successful execution. In case of failure, an error code is returned.</p>
 </td>
 </tr>
 </tbody>
 </table>
 
-**Example**
+**Sample**
 
 ```c
 #include <stdio.h>
@@ -3705,7 +4209,7 @@ Performs one-to-many Euclidean distance computation on vectors represented in fl
 #include "krl.h"
 
 int main() {
-    // Parameter configuration
+    // Set parameters.
     size_t dim = 128;
     size_t num_base = 1;        // Number of query vectors processed in a single batch
     size_t codes_num = 1000;    // Number of base vectors each query vector is compared against.
@@ -3783,7 +4287,7 @@ cleanup:
 
 ### krl\_inner\_product\_ny
 
-**Interface Definition<a name="section172317194488"></a>**
+**API Definition<a name="section172317194488"></a>**
 
 int krl\_inner\_product\_ny\(float\* dis, const float\* x, const float\* y, size\_t ny, size\_t d, size\_t dis\_size\);
 
@@ -3837,7 +4341,7 @@ Performs one-to-many distance computation using inner product on vectors represe
 </td>
 <td class="cellrowborder" valign="top" width="34.043404340434044%" headers="mcps1.1.5.1.3 "><p id="p672341218403"><a name="p672341218403"></a><a name="p672341218403"></a>Number of base vectors for distance computation.</p>
 </td>
-<td class="cellrowborder" valign="top" width="35.80358035803581%" headers="mcps1.1.5.1.4 "><p id="p6723181274010"><a name="p6723181274010"></a><a name="p6723181274010"></a>[1, 2^30-1]</p>
+<td class="cellrowborder" valign="top" width="35.80358035803581%" headers="mcps1.1.5.1.4 "><p id="p6723181274010"><a name="p6723181274010"></a><a name="p6723181274010"></a>[1,2^30-1]</p>
 </td>
 </tr>
 <tr id="row106882715416"><td class="cellrowborder" valign="top" width="15.551555155515553%" headers="mcps1.1.5.1.1 "><p id="p46812710547"><a name="p46812710547"></a><a name="p46812710547"></a>d</p>
@@ -3846,7 +4350,7 @@ Performs one-to-many distance computation using inner product on vectors represe
 </td>
 <td class="cellrowborder" valign="top" width="34.043404340434044%" headers="mcps1.1.5.1.3 "><p id="p17661261256"><a name="p17661261256"></a><a name="p17661261256"></a>Vector dimension.</p>
 </td>
-<td class="cellrowborder" valign="top" width="35.80358035803581%" headers="mcps1.1.5.1.4 "><p id="p46952755416"><a name="p46952755416"></a><a name="p46952755416"></a>[1, 65535]</p>
+<td class="cellrowborder" valign="top" width="35.80358035803581%" headers="mcps1.1.5.1.4 "><p id="p46952755416"><a name="p46952755416"></a><a name="p46952755416"></a>[1,65535]</p>
 </td>
 </tr>
 <tr id="row1069011157013"><td class="cellrowborder" valign="top" width="15.551555155515553%" headers="mcps1.1.5.1.1 "><p id="p39628388417"><a name="p39628388417"></a><a name="p39628388417"></a>dis_size</p>
@@ -3861,7 +4365,7 @@ Performs one-to-many distance computation using inner product on vectors represe
 </tbody>
 </table>
 
-**Return Values<a name="section49971832106"></a>**
+**Return Value<a name="section49971832106"></a>**
 
 <a name="table17997635100"></a>
 <table><thead align="left"><tr id="row699763141018"><th class="cellrowborder" valign="top" width="40%" id="mcps1.1.3.1.1"><p id="p699793141012"><a name="p699793141012"></a><a name="p699793141012"></a>Data Type</p>
@@ -3872,13 +4376,13 @@ Performs one-to-many distance computation using inner product on vectors represe
 </thead>
 <tbody><tr id="row1599716361015"><td class="cellrowborder" valign="top" width="40%" headers="mcps1.1.3.1.1 "><p id="p39970319101"><a name="p39970319101"></a><a name="p39970319101"></a>int</p>
 </td>
-<td class="cellrowborder" valign="top" width="60%" headers="mcps1.1.3.1.2 "><p id="p53461032104518"><a name="p53461032104518"></a><a name="p53461032104518"></a><code>0</code> is returned on successful execution. In case of failure, an error code is returned to indicate the specific issue.</p>
+<td class="cellrowborder" valign="top" width="60%" headers="mcps1.1.3.1.2 "><p id="p53461032104518"><a name="p53461032104518"></a><a name="p53461032104518"></a><code>0</code> is returned on successful execution. In case of failure, an error code is returned.</p>
 </td>
 </tr>
 </tbody>
 </table>
 
-**Example**
+**Sample**
 
 ```c
 #include <stdio.h>
@@ -3896,7 +4400,7 @@ int main() {
         query_vec[i] = (float)(rand() % 100) / 100.0f;
     }
 
-    // Prepare the base vector.
+    // Prepare base vectors.
     float* base_vectors = (float*)malloc(ny * dim * sizeof(float));
     for (size_t i = 0; i < ny * dim; i++) {
         base_vectors[i] = (float)(rand() % 100) / 100.0f;
@@ -3943,7 +4447,7 @@ cleanup:
 
 ### krl\_inner\_product\_ny\_f16f32
 
-**Interface Definition<a name="section172317194488"></a>**
+**API Definition<a name="section172317194488"></a>**
 
 int krl\_inner\_product\_ny\_f16f32\(float\* dis, const uint16\_t\* x, const uint16\_t\* y, size\_t ny, size\_t d, size\_t dis\_size\);
 
@@ -3997,7 +4501,7 @@ Performs one-to-many distance computation using inner product on vectors represe
 </td>
 <td class="cellrowborder" valign="top" width="33.97339733973397%" headers="mcps1.1.5.1.3 "><p id="p672341218403"><a name="p672341218403"></a><a name="p672341218403"></a>Number of base vectors for distance computation.</p>
 </td>
-<td class="cellrowborder" valign="top" width="35.873587358735875%" headers="mcps1.1.5.1.4 "><p id="p6723181274010"><a name="p6723181274010"></a><a name="p6723181274010"></a>[1, 2^30-1]</p>
+<td class="cellrowborder" valign="top" width="35.873587358735875%" headers="mcps1.1.5.1.4 "><p id="p6723181274010"><a name="p6723181274010"></a><a name="p6723181274010"></a>[1,2^30-1]</p>
 </td>
 </tr>
 <tr id="row106882715416"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p46812710547"><a name="p46812710547"></a><a name="p46812710547"></a>d</p>
@@ -4006,7 +4510,7 @@ Performs one-to-many distance computation using inner product on vectors represe
 </td>
 <td class="cellrowborder" valign="top" width="33.97339733973397%" headers="mcps1.1.5.1.3 "><p id="p17661261256"><a name="p17661261256"></a><a name="p17661261256"></a>Vector dimension.</p>
 </td>
-<td class="cellrowborder" valign="top" width="35.873587358735875%" headers="mcps1.1.5.1.4 "><p id="p46952755416"><a name="p46952755416"></a><a name="p46952755416"></a>[1, 65535]</p>
+<td class="cellrowborder" valign="top" width="35.873587358735875%" headers="mcps1.1.5.1.4 "><p id="p46952755416"><a name="p46952755416"></a><a name="p46952755416"></a>[1,65535]</p>
 </td>
 </tr>
 <tr id="row536922710219"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p39628388417"><a name="p39628388417"></a><a name="p39628388417"></a>dis_size</p>
@@ -4021,7 +4525,7 @@ Performs one-to-many distance computation using inner product on vectors represe
 </tbody>
 </table>
 
-**Return Values<a name="section49971832106"></a>**
+**Return Value<a name="section49971832106"></a>**
 
 <a name="table17997635100"></a>
 <table><thead align="left"><tr id="row699763141018"><th class="cellrowborder" valign="top" width="40%" id="mcps1.1.3.1.1"><p id="p699793141012"><a name="p699793141012"></a><a name="p699793141012"></a>Data Type</p>
@@ -4032,13 +4536,13 @@ Performs one-to-many distance computation using inner product on vectors represe
 </thead>
 <tbody><tr id="row1599716361015"><td class="cellrowborder" valign="top" width="40%" headers="mcps1.1.3.1.1 "><p id="p39970319101"><a name="p39970319101"></a><a name="p39970319101"></a>int</p>
 </td>
-<td class="cellrowborder" valign="top" width="60%" headers="mcps1.1.3.1.2 "><p id="p53461032104518"><a name="p53461032104518"></a><a name="p53461032104518"></a><code>0</code> is returned on successful execution. In case of failure, an error code is returned to indicate the specific issue.</p>
+<td class="cellrowborder" valign="top" width="60%" headers="mcps1.1.3.1.2 "><p id="p53461032104518"><a name="p53461032104518"></a><a name="p53461032104518"></a><code>0</code> is returned on successful execution. In case of failure, an error code is returned.</p>
 </td>
 </tr>
 </tbody>
 </table>
 
-**Example**
+**Sample**
 
 ```c
 #include <stdio.h>
@@ -4093,9 +4597,110 @@ cleanup:
 }
 ```
 
+### krl\_inner\_product\_ny\_f16f32\_sve2
+
+**Interface Definition**
+
+int krl\_inner\_product\_ny\_f16f32\_sve2\(const uint16\_t\* query\_vec, const uint16\_t\* base\_vec, int dim, int ny, float\* distances, size\_t distances\_size\);
+
+**Usage**
+
+Performs one-to-many distance computation using inner product on vectors represented in fp16 precision (SVE2).
+
+**Parameters<a name="section157501312135019"></a>**
+
+<a name="table1623016332509"></a>
+<table><thead align="left"><tr id="row823063355012"><th class="cellrowborder" valign="top" width="15.551555155515551%" id="mcps1.1.5.1.1"><p id="p1230333125010"><a name="p1230333125010"></a><a name="p1230333125010"></a>Parameter</p>
+</th>
+<th class="cellrowborder" valign="top" width="14.601460146014599%" id="mcps1.1.5.1.2"><p id="p089311158912"><a name="p089311158912"></a><a name="p089311158912"></a>Data Type</p>
+</th>
+<th class="cellrowborder" valign="top" width="33.97339733973397%" id="mcps1.1.5.1.3"><p id="p4230193313507"><a name="p4230193313507"></a><a name="p4230193313507"></a>Description</p>
+</th>
+<th class="cellrowborder" valign="top" width="35.873587358735875%" id="mcps1.1.5.1.4"><p id="p19887819256"><a name="p19887819256"></a><a name="p19887819256"></a>Value Range</p>
+</th>
+</tr>
+</thead>
+<tbody><tr id="row92301478154"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p223015479158"><a name="p223015479158"></a><a name="p223015479158"></a>dis</p>
+</td>
+<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p11230154710156"><a name="p11230154710156"></a><a name="p11230154710156"></a>float*</p>
+</td>
+<td class="cellrowborder" valign="top" width="33.97339733973397%" headers="mcps1.1.5.1.3 "><p id="p82303471154"><a name="p82303471154"></a><a name="p82303471154"></a>Stores the distance computation result.</p>
+</td>
+<td class="cellrowborder" valign="top" width="35.873587358735875%" headers="mcps1.1.5.1.4 "><p id="p923018478155"><a name="p923018478155"></a><a name="p923018478155"></a>The size is specified by <code>dis_size</code>. The memory needs to be allocated in advance.</p>
+</td>
+</tr>
+<tr id="row1823023318504"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p11230033165015"><a name="p11230033165015"></a><a name="p11230033165015"></a>x</p>
+</td>
+<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p953215815518"><a name="p953215815518"></a><a name="p953215815518"></a>const uint16_t*</p>
+</td>
+<td class="cellrowborder" valign="top" width="33.97339733973397%" headers="mcps1.1.5.1.3 "><p id="p18661136253"><a name="p18661136253"></a><a name="p18661136253"></a>Query vector for distance computation.</p>
+</td>
+<td class="cellrowborder" valign="top" width="35.873587358735875%" headers="mcps1.1.5.1.4 "><p id="p79885872519"><a name="p79885872519"></a><a name="p79885872519"></a>The vector has a dimension of <code>d</code>.</p>
+</td>
+</tr>
+<tr id="row10982132445420"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p4982142445414"><a name="p4982142445414"></a><a name="p4982142445414"></a>y</p>
+</td>
+<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p7532158856"><a name="p7532158856"></a><a name="p7532158856"></a>const uint16_t*</p>
+</td>
+<td class="cellrowborder" valign="top" width="33.97339733973397%" headers="mcps1.1.5.1.3 "><p id="p36611261054"><a name="p36611261054"></a><a name="p36611261054"></a>Base vector for distance computation.</p>
+</td>
+<td class="cellrowborder" valign="top" width="35.873587358735875%" headers="mcps1.1.5.1.4 "><p id="p85127581355"><a name="p85127581355"></a><a name="p85127581355"></a>The size is specified by <code>d</code> × <code>ny</code>.</p>
+</td>
+</tr>
+<tr id="row103951453161513"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p14723141215409"><a name="p14723141215409"></a><a name="p14723141215409"></a>ny</p>
+</td>
+<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p4723181210404"><a name="p4723181210404"></a><a name="p4723181210404"></a>size_t</p>
+</td>
+<td class="cellrowborder" valign="top" width="33.97339733973397%" headers="mcps1.1.5.1.3 "><p id="p672341218403"><a name="p672341218403"></a><a name="p672341218403"></a>Number of base vectors for distance computation.</p>
+</td>
+<td class="cellrowborder" valign="top" width="35.873587358735875%" headers="mcps1.1.5.1.4 "><p id="p6723181274010"><a name="p6723181274010"></a><a name="p6723181274010"></a>[1,2^30-1]</p>
+</td>
+</tr>
+<tr id="row106882715416"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p46812710547"><a name="p46812710547"></a><a name="p46812710547"></a>d</p>
+</td>
+<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p45311183519"><a name="p45311183519"></a><a name="p45311183519"></a>size_t</p>
+</td>
+<td class="cellrowborder" valign="top" width="33.97339733973397%" headers="mcps1.1.5.1.3 "><p id="p17661261256"><a name="p17661261256"></a><a name="p17661261256"></a>Vector dimension.</p>
+</td>
+<td class="cellrowborder" valign="top" width="35.873587358735875%" headers="mcps1.1.5.1.4 "><p id="p46952755416"><a name="p46952755416"></a><a name="p46952755416"></a>[1,65535]</p>
+</td>
+</tr>
+<tr id="row536922710219"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p39628388417"><a name="p39628388417"></a><a name="p39628388417"></a>dis_size</p>
+</td>
+<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p10722125214"><a name="p10722125214"></a><a name="p10722125214"></a>size_t</p>
+</td>
+<td class="cellrowborder" valign="top" width="33.97339733973397%" headers="mcps1.1.5.1.3 "><p id="p1762116529"><a name="p1762116529"></a><a name="p1762116529"></a>Size of the distance result array.</p>
+</td>
+<td class="cellrowborder" valign="top" width="35.873587358735875%" headers="mcps1.1.5.1.4 "><p id="p154517391451"><a name="p154517391451"></a><a name="p154517391451"></a>The value is specified by <code>ny</code>.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+**Return Value<a name="section49971832106"></a>**
+
+<a name="table17997635100"></a>
+<table><thead align="left"><tr id="row699763141018"><th class="cellrowborder" valign="top" width="40%" id="mcps1.1.3.1.1"><p id="p699793141012"><a name="p699793141012"></a><a name="p699793141012"></a>Data Type</p>
+</th>
+<th class="cellrowborder" valign="top" width="60%" id="mcps1.1.3.1.2"><p id="p1999763141020"><a name="p1999763141020"></a><a name="p1999763141020"></a>Description</p>
+</th>
+</tr>
+</thead>
+<tbody><tr id="row1599716361015"><td class="cellrowborder" valign="top" width="40%" headers="mcps1.1.3.1.1 "><p id="p39970319101"><a name="p39970319101"></a><a name="p39970319101"></a>int</p>
+</td>
+<td class="cellrowborder" valign="top" width="60%" headers="mcps1.1.3.1.2 "><p id="p53461032104518"><a name="p53461032104518"></a><a name="p53461032104518"></a><code>0</code> is returned on successful execution. In case of failure, an error code is returned.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+**Sample**
+
+You can use the `krl_inner_product_ny_f16f32` example as a reference and simply substitute the function call with `krl_inner_product_ny_f16f32_sve2`.
+
 ### krl\_inner\_product\_ny\_s8f32
 
-**Interface Definition <a name="section172317194488"></a>**
+**API Definition<a name="section172317194488"></a>**
 
 int krl\_inner\_product\_ny\_s8f32\(float\* dis, const int8\_t\* x, const int8\_t\* y, size\_t ny, size\_t d, size\_t dis\_size\);
 
@@ -4149,7 +4754,7 @@ Performs one-to-many distance computation using inner product on vectors represe
 </td>
 <td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p672341218403"><a name="p672341218403"></a><a name="p672341218403"></a>Number of base vectors for distance computation.</p>
 </td>
-<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p6723181274010"><a name="p6723181274010"></a><a name="p6723181274010"></a>[1, 2^30-1]</p>
+<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p6723181274010"><a name="p6723181274010"></a><a name="p6723181274010"></a>[1,2^30-1]</p>
 </td>
 </tr>
 <tr id="row106882715416"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p46812710547"><a name="p46812710547"></a><a name="p46812710547"></a>d</p>
@@ -4158,7 +4763,7 @@ Performs one-to-many distance computation using inner product on vectors represe
 </td>
 <td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p17661261256"><a name="p17661261256"></a><a name="p17661261256"></a>Vector dimension.</p>
 </td>
-<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p46952755416"><a name="p46952755416"></a><a name="p46952755416"></a>[1, 65535]</p>
+<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p46952755416"><a name="p46952755416"></a><a name="p46952755416"></a>[1,65535]</p>
 </td>
 </tr>
 <tr id="row1491157243"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p39628388417"><a name="p39628388417"></a><a name="p39628388417"></a>dis_size</p>
@@ -4173,7 +4778,7 @@ Performs one-to-many distance computation using inner product on vectors represe
 </tbody>
 </table>
 
-**Return Values<a name="section49971832106"></a>**
+**Return Value<a name="section49971832106"></a>**
 
 <a name="table17997635100"></a>
 <table><thead align="left"><tr id="row699763141018"><th class="cellrowborder" valign="top" width="40%" id="mcps1.1.3.1.1"><p id="p699793141012"><a name="p699793141012"></a><a name="p699793141012"></a>Data Type</p>
@@ -4184,13 +4789,13 @@ Performs one-to-many distance computation using inner product on vectors represe
 </thead>
 <tbody><tr id="row1599716361015"><td class="cellrowborder" valign="top" width="40%" headers="mcps1.1.3.1.1 "><p id="p39970319101"><a name="p39970319101"></a><a name="p39970319101"></a>int</p>
 </td>
-<td class="cellrowborder" valign="top" width="60%" headers="mcps1.1.3.1.2 "><p id="p53461032104518"><a name="p53461032104518"></a><a name="p53461032104518"></a><code>0</code> is returned on successful execution. In case of failure, an error code is returned to indicate the specific issue.</p>
+<td class="cellrowborder" valign="top" width="60%" headers="mcps1.1.3.1.2 "><p id="p53461032104518"><a name="p53461032104518"></a><a name="p53461032104518"></a><code>0</code> is returned on successful execution. In case of failure, an error code is returned.</p>
 </td>
 </tr>
 </tbody>
 </table>
 
-**Example**
+**Sample**
 
 ```c
 #include <stdio.h>
@@ -4216,7 +4821,7 @@ int main() {
     // Allocate the distance result array.
     float* distances = (float*)malloc(ny * sizeof(float));
 
-    // Perform one-to-many inner product distance computation on vectors represented as int8.
+    // Perform one-to-many inner product distance computation on vectors represented as 8-bit signed integers (int8).
     int ret = krl_inner_product_ny_s8f32(
         distances,
         query_vec,
@@ -4259,9 +4864,9 @@ cleanup:
 
 ### krl\_inner\_product\_ny\_with\_handle
 
-**Interface Definition <a name="section172317194488"></a>**
+**API Definition<a name="section172317194488"></a>**
 
-int krl\_inner\_product\_ny\_with\_handle\(const KRLDistanceHandle\* krl\_distance\_handle, float\* dis, const float\* x, size\_t dis\_size, size\_t x\_size\);
+int krl\_inner\_product\_ny\_with\_handle\(const KRLDistanceHandle\* kdh, float\* dis, const float\* x, size\_t dis\_size, size\_t x\_size\);
 
 **Function<a name="section1153124784912"></a>**
 
@@ -4300,7 +4905,7 @@ Performs one-to-many distance computation using inner product on vectors represe
 </tr>
 <tr id="row10982132445420"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p1089412431931"><a name="p1089412431931"></a><a name="p1089412431931"></a>x</p>
 </td>
-<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p1389417431933"><a name="p1389417431933"></a><a name="p1389417431933"></a>const uint8_t*</p>
+<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p1389417431933"><a name="p1389417431933"></a><a name="p1389417431933"></a>const float*</p>
 </td>
 <td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p28941943039"><a name="p28941943039"></a><a name="p28941943039"></a>Query vector for distance computation.</p>
 </td>
@@ -4328,7 +4933,7 @@ Performs one-to-many distance computation using inner product on vectors represe
 </tbody>
 </table>
 
-**Return Values<a name="section49971832106"></a>**
+**Return Value<a name="section49971832106"></a>**
 
 <a name="table17997635100"></a>
 <table><thead align="left"><tr id="row699763141018"><th class="cellrowborder" valign="top" width="40%" id="mcps1.1.3.1.1"><p id="p699793141012"><a name="p699793141012"></a><a name="p699793141012"></a>Data Type</p>
@@ -4339,13 +4944,13 @@ Performs one-to-many distance computation using inner product on vectors represe
 </thead>
 <tbody><tr id="row1599716361015"><td class="cellrowborder" valign="top" width="40%" headers="mcps1.1.3.1.1 "><p id="p39970319101"><a name="p39970319101"></a><a name="p39970319101"></a>int</p>
 </td>
-<td class="cellrowborder" valign="top" width="60%" headers="mcps1.1.3.1.2 "><p id="p53461032104518"><a name="p53461032104518"></a><a name="p53461032104518"></a><code>0</code> is returned on successful execution. In case of failure, an error code is returned to indicate the specific issue.</p>
+<td class="cellrowborder" valign="top" width="60%" headers="mcps1.1.3.1.2 "><p id="p53461032104518"><a name="p53461032104518"></a><a name="p53461032104518"></a><code>0</code> is returned on successful execution. In case of failure, an error code is returned.</p>
 </td>
 </tr>
 </tbody>
 </table>
 
-**Example**
+**Sample**
 
 ```c
 #include <stdio.h>
@@ -4353,7 +4958,7 @@ Performs one-to-many distance computation using inner product on vectors represe
 #include "krl.h"
 
 int main() {
-    // Parameter configuration
+    // Set parameters.
     size_t dim = 128;
     size_t num_base = 1;
     size_t codes_num = 1000;
@@ -4361,7 +4966,7 @@ int main() {
     size_t blocksize = 32;
     int metric_type = 0;  // Inner product distance
 
-    // Prepare the base vectors.
+    // Prepare base vectors.
     size_t codes_size = num_base * codes_num * dim * sizeof(float);
     float* base_vectors = (float*)malloc(codes_size);
     for (size_t i = 0; i < num_base * codes_num * dim; i++) {
@@ -4388,7 +4993,7 @@ int main() {
         return -1;
     }
 
-    // Prepare the query vectors.
+    // Prepare the query vector.
     size_t x_size = dim * num_base;
     float* query_vec = (float*)malloc(x_size * sizeof(float));
     for (size_t i = 0; i < x_size; i++) {
@@ -4440,13 +5045,13 @@ cleanup:
 
 ### krl\_table\_lookup\_8b\_f32
 
-**Interface Definition<a name="section172317194488"></a>**
+**API Definition<a name="section172317194488"></a>**
 
 int krl\_table\_lookup\_8b\_f32\(size\_t nsq, size\_t ncode, const uint8\_t\* codes, const float\* sim\_table, float\* distance, float dis0, size\_t codes\_size, size\_t sim\_table\_size, size\_t dis\_size\);
 
 **Function<a name="section1153124784912"></a>**
 
-Obtains distance values from the float-type LUT using 8-bit indexes, accumulates the distance values, adds `dis0` to the result after accumulation, and stores the final result in `distance`.
+Obtains distance values from the float-type LUT using 8-bit indexes, accumulates the distance values, adds `dis0` to the result after accumulation, and stores the final result in `dis`.
 
 **Parameters<a name="section157501312135019"></a>**
 
@@ -4467,7 +5072,7 @@ Obtains distance values from the float-type LUT using 8-bit indexes, accumulates
 </td>
 <td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p82303471154"><a name="p82303471154"></a><a name="p82303471154"></a>Number of subspaces.</p>
 </td>
-<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p923018478155"><a name="p923018478155"></a><a name="p923018478155"></a>[1, 65535]</p>
+<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p923018478155"><a name="p923018478155"></a><a name="p923018478155"></a>[1,65535]</p>
 </td>
 </tr>
 <tr id="row1823023318504"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p11230033165015"><a name="p11230033165015"></a><a name="p11230033165015"></a>ncode</p>
@@ -4476,7 +5081,7 @@ Obtains distance values from the float-type LUT using 8-bit indexes, accumulates
 </td>
 <td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p18661136253"><a name="p18661136253"></a><a name="p18661136253"></a>Total number of base vectors.</p>
 </td>
-<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p79885872519"><a name="p79885872519"></a><a name="p79885872519"></a>[1, 2^30-1]</p>
+<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p79885872519"><a name="p79885872519"></a><a name="p79885872519"></a>[1,2^30-1]</p>
 </td>
 </tr>
 <tr id="row10982132445420"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p4982142445414"><a name="p4982142445414"></a><a name="p4982142445414"></a>codes</p>
@@ -4545,7 +5150,7 @@ Obtains distance values from the float-type LUT using 8-bit indexes, accumulates
 </tbody>
 </table>
 
-**Return Values<a name="section49971832106"></a>**
+**Return Value<a name="section49971832106"></a>**
 
 <a name="table17997635100"></a>
 <table><thead align="left"><tr id="row699763141018"><th class="cellrowborder" valign="top" width="40%" id="mcps1.1.3.1.1"><p id="p699793141012"><a name="p699793141012"></a><a name="p699793141012"></a>Data Type</p>
@@ -4556,13 +5161,13 @@ Obtains distance values from the float-type LUT using 8-bit indexes, accumulates
 </thead>
 <tbody><tr id="row1599716361015"><td class="cellrowborder" valign="top" width="40%" headers="mcps1.1.3.1.1 "><p id="p39970319101"><a name="p39970319101"></a><a name="p39970319101"></a>int</p>
 </td>
-<td class="cellrowborder" valign="top" width="60%" headers="mcps1.1.3.1.2 "><p id="p53461032104518"><a name="p53461032104518"></a><a name="p53461032104518"></a><code>0</code> is returned on successful execution. In case of failure, an error code is returned to indicate the specific issue.</p>
+<td class="cellrowborder" valign="top" width="60%" headers="mcps1.1.3.1.2 "><p id="p53461032104518"><a name="p53461032104518"></a><a name="p53461032104518"></a><code>0</code> is returned on successful execution. In case of failure, an error code is returned.</p>
 </td>
 </tr>
 </tbody>
 </table>
 
-**Example**
+**Sample**
 
 ```c
 #include <stdio.h>
@@ -4620,7 +5225,7 @@ int main() {
 
     printf("Successfully performed accumulation based on 8-bit table lookup\n");
 
-    // Determine the nearest neighbor.
+    // Find the nearest neighbor.
     float min_dist = distances[0];
     size_t min_idx = 0;
     for (size_t i = 1; i < ncode; i++) {
@@ -4642,13 +5247,13 @@ cleanup:
 
 ### krl\_table\_lookup\_8b\_f32\_by\_idx
 
-**Interface Definition<a name="section172317194488"></a>**
+**API Definition<a name="section172317194488"></a>**
 
 int krl\_table\_lookup\_8b\_f32\_by\_idx\(size\_t nsq, size\_t ncode, const uint8\_t\* codes, const float\* sim\_table, float\* dis, float dis0, const size\_t\* idx, size\_t codes\_size, size\_t sim\_table\_size, size\_t dis\_size\);
 
 **Function<a name="section1153124784912"></a>**
 
-Obtains distance values from the float-type LUT using 8-bit indexes, accumulates the distance values, adds `dis0` to the result after accumulation, and stores the final result in `distance`. Only the base vectors whose IDs are in the <code>idx</code> array are used for computation.
+Obtains distance values from the float-type LUT using 8-bit indexes, accumulates the distance values, adds `dis0` to the result after accumulation, and stores the final result in `dis`. Only the base vectors whose IDs are in the <code>idx</code> array are used for computation.
 
 **Parameters<a name="section157501312135019"></a>**
 
@@ -4669,7 +5274,7 @@ Obtains distance values from the float-type LUT using 8-bit indexes, accumulates
 </td>
 <td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p82303471154"><a name="p82303471154"></a><a name="p82303471154"></a>Number of subspaces.</p>
 </td>
-<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p923018478155"><a name="p923018478155"></a><a name="p923018478155"></a>[1, 65535]</p>
+<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p923018478155"><a name="p923018478155"></a><a name="p923018478155"></a>[1,65535]</p>
 </td>
 </tr>
 <tr id="row1823023318504"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p11230033165015"><a name="p11230033165015"></a><a name="p11230033165015"></a>ncode</p>
@@ -4678,7 +5283,7 @@ Obtains distance values from the float-type LUT using 8-bit indexes, accumulates
 </td>
 <td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p18661136253"><a name="p18661136253"></a><a name="p18661136253"></a>Total number of base vectors.</p>
 </td>
-<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p79885872519"><a name="p79885872519"></a><a name="p79885872519"></a>[1, 2^30-1]</p>
+<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p79885872519"><a name="p79885872519"></a><a name="p79885872519"></a>[1,2^30-1]</p>
 </td>
 </tr>
 <tr id="row10982132445420"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p4982142445414"><a name="p4982142445414"></a><a name="p4982142445414"></a>codes</p>
@@ -4756,7 +5361,7 @@ Obtains distance values from the float-type LUT using 8-bit indexes, accumulates
 </tbody>
 </table>
 
-**Return Values<a name="section49971832106"></a>**
+**Return Value<a name="section49971832106"></a>**
 
 <a name="table17997635100"></a>
 <table><thead align="left"><tr id="row699763141018"><th class="cellrowborder" valign="top" width="40%" id="mcps1.1.3.1.1"><p id="p699793141012"><a name="p699793141012"></a><a name="p699793141012"></a>Data Type</p>
@@ -4767,13 +5372,13 @@ Obtains distance values from the float-type LUT using 8-bit indexes, accumulates
 </thead>
 <tbody><tr id="row1599716361015"><td class="cellrowborder" valign="top" width="40%" headers="mcps1.1.3.1.1 "><p id="p39970319101"><a name="p39970319101"></a><a name="p39970319101"></a>int</p>
 </td>
-<td class="cellrowborder" valign="top" width="60%" headers="mcps1.1.3.1.2 "><p id="p53461032104518"><a name="p53461032104518"></a><a name="p53461032104518"></a><code>0</code> is returned on successful execution. In case of failure, an error code is returned to indicate the specific issue.</p>
+<td class="cellrowborder" valign="top" width="60%" headers="mcps1.1.3.1.2 "><p id="p53461032104518"><a name="p53461032104518"></a><a name="p53461032104518"></a><code>0</code> is returned on successful execution. In case of failure, an error code is returned.</p>
 </td>
 </tr>
 </tbody>
 </table>
 
-**Example**
+**Sample**
 
 ```c
 #include <stdio.h>
@@ -4781,7 +5386,7 @@ Obtains distance values from the float-type LUT using 8-bit indexes, accumulates
 #include "krl.h"
 
 int main() {
-    // PQ parameter configuration
+    // Product quantization (PQ) parameter configuration
     size_t nsq = 32;
     size_t total_vectors = 100000;  // Total number of base vectors
     size_t ncode = 1000;            // Number of vectors used for computation (after filtering)
@@ -4851,13 +5456,13 @@ cleanup:
 
 ### krl\_table\_lookup\_8b\_f32\_with\_handle
 
-**Interface Definition<a name="section172317194488"></a>**
+**API Definition<a name="section172317194488"></a>**
 
 int krl\_table\_lookup\_8b\_f32\_with\_handle\(KRLLUT8bHandle\* klh, size\_t dim, size\_t ncode, const uint8\_t\* codes, const float\* sim\_table, float dis0, size\_t codes\_size, size\_t sim\_table\_size\);
 
 **Function<a name="section1153124784912"></a>**
 
-Obtains distance values from the float-type LUT using 8-bit indexes, accumulates the distance values, adds `dis0` to the result after accumulation, and stores the final result in `distance`. The <code>idx</code> and <code>distance</code> arrays are contained in the KRLLUT8bHandle instance. Only the base vectors whose IDs are in the <code>idx</code> array are used for computation.
+Obtains distance values from the float-type LUT using 8-bit indexes, accumulates the distance values, adds `dis0` to the result after accumulation, and stores the final result in `dis`. The <code>idx</code> and <code>dis</code> arrays are contained in the KRLLUT8bHandle instance. Only the base vectors whose IDs are in the <code>idx</code> array are used for computation.
 
 **Parameters<a name="section157501312135019"></a>**
 
@@ -4887,7 +5492,7 @@ Obtains distance values from the float-type LUT using 8-bit indexes, accumulates
 </td>
 <td class="cellrowborder" valign="top" width="33.953395339533955%" headers="mcps1.1.5.1.3 "><p id="p1562414447536"><a name="p1562414447536"></a><a name="p1562414447536"></a>Vector dimension.</p>
 </td>
-<td class="cellrowborder" valign="top" width="35.8935893589359%" headers="mcps1.1.5.1.4 "><p id="p19624744195313"><a name="p19624744195313"></a><a name="p19624744195313"></a>[1, 65535]</p>
+<td class="cellrowborder" valign="top" width="35.8935893589359%" headers="mcps1.1.5.1.4 "><p id="p19624744195313"><a name="p19624744195313"></a><a name="p19624744195313"></a>[1,65535]</p>
 </td>
 </tr>
 <tr id="row1823023318504"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p11230033165015"><a name="p11230033165015"></a><a name="p11230033165015"></a>ncode</p>
@@ -4896,7 +5501,7 @@ Obtains distance values from the float-type LUT using 8-bit indexes, accumulates
 </td>
 <td class="cellrowborder" valign="top" width="33.953395339533955%" headers="mcps1.1.5.1.3 "><p id="p18661136253"><a name="p18661136253"></a><a name="p18661136253"></a>Total number of base vectors.</p>
 </td>
-<td class="cellrowborder" valign="top" width="35.8935893589359%" headers="mcps1.1.5.1.4 "><p id="p79885872519"><a name="p79885872519"></a><a name="p79885872519"></a>[1, 2^30-1]</p>
+<td class="cellrowborder" valign="top" width="35.8935893589359%" headers="mcps1.1.5.1.4 "><p id="p79885872519"><a name="p79885872519"></a><a name="p79885872519"></a>[1,2^30-1]</p>
 </td>
 </tr>
 <tr id="row10982132445420"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p4982142445414"><a name="p4982142445414"></a><a name="p4982142445414"></a>codes</p>
@@ -4947,7 +5552,7 @@ Obtains distance values from the float-type LUT using 8-bit indexes, accumulates
 </tbody>
 </table>
 
-**Return Values<a name="section49971832106"></a>**
+**Return Value<a name="section49971832106"></a>**
 
 <a name="table17997635100"></a>
 <table><thead align="left"><tr id="row699763141018"><th class="cellrowborder" valign="top" width="40%" id="mcps1.1.3.1.1"><p id="p699793141012"><a name="p699793141012"></a><a name="p699793141012"></a>Data Type</p>
@@ -4958,13 +5563,13 @@ Obtains distance values from the float-type LUT using 8-bit indexes, accumulates
 </thead>
 <tbody><tr id="row1599716361015"><td class="cellrowborder" valign="top" width="40%" headers="mcps1.1.3.1.1 "><p id="p39970319101"><a name="p39970319101"></a><a name="p39970319101"></a>int</p>
 </td>
-<td class="cellrowborder" valign="top" width="60%" headers="mcps1.1.3.1.2 "><p id="p53461032104518"><a name="p53461032104518"></a><a name="p53461032104518"></a><code>0</code> is returned on successful execution. In case of failure, an error code is returned to indicate the specific issue.</p>
+<td class="cellrowborder" valign="top" width="60%" headers="mcps1.1.3.1.2 "><p id="p53461032104518"><a name="p53461032104518"></a><a name="p53461032104518"></a><code>0</code> is returned on successful execution. In case of failure, an error code is returned.</p>
 </td>
 </tr>
 </tbody>
 </table>
 
-**Example**
+**Sample**
 
 ```c
 #include <stdio.h>
@@ -4972,7 +5577,7 @@ Obtains distance values from the float-type LUT using 8-bit indexes, accumulates
 #include "krl.h"
 
 int main() {
-    // Parameter configuration
+    // Set parameters.
     size_t dim = 128; // Vector dimensions (i.e., the number of subspaces)
     size_t ncode = 10000; // Total number of base vectors
     size_t ksub = 256;
@@ -5048,7 +5653,7 @@ cleanup:
 
 ### krl\_fast\_table\_lookup\_step
 
-**Interface Definition<a name="section172317194488"></a>**
+**API Definition<a name="section172317194488"></a>**
 
 int krl\_fast\_table\_lookup\_step\(int nq, int nsq, const uint8\_t\* codes, const uint8\_t\* LUT, uint16\_t\* dis, const uint16\_t\* threshold, uint32\_t\* lt\_mask, int keep\_min, size\_t codes\_size, size\_t LUT\_size, size\_t dis\_size, size\_t threshold\_size, size\_t lt\_mask\_size\);
 
@@ -5075,7 +5680,7 @@ An operator designed for 4-bit table lookup, accumulation, filtering, and compre
 </td>
 <td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p82303471154"><a name="p82303471154"></a><a name="p82303471154"></a>Total number of query vectors.</p>
 </td>
-<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p923018478155"><a name="p923018478155"></a><a name="p923018478155"></a>[1, 16]</p>
+<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p923018478155"><a name="p923018478155"></a><a name="p923018478155"></a>[1,16]</p>
 </td>
 </tr>
 <tr id="row166241441532"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p262494414531"><a name="p262494414531"></a><a name="p262494414531"></a>nsq</p>
@@ -5148,7 +5753,7 @@ An operator designed for 4-bit table lookup, accumulation, filtering, and compre
 </td>
 <td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p16681940142616"><a name="p16681940142616"></a><a name="p16681940142616"></a>Length of the codebook array.</p>
 </td>
-<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p568184012612"><a name="p568184012612"></a><a name="p568184012612"></a><code>nsq</code>/2 × 32</p>
+<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p568184012612"><a name="p568184012612"></a><a name="p568184012612"></a>nsq/2 × 32</p>
 </td>
 </tr>
 <tr id="row1758312172712"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p1258316232715"><a name="p1258316232715"></a><a name="p1258316232715"></a>LUT_size</p>
@@ -5190,7 +5795,7 @@ An operator designed for 4-bit table lookup, accumulation, filtering, and compre
 </tbody>
 </table>
 
-**Return Values<a name="section49971832106"></a>**
+**Return Value<a name="section49971832106"></a>**
 
 <a name="table17997635100"></a>
 <table><thead align="left"><tr id="row699763141018"><th class="cellrowborder" valign="top" width="40%" id="mcps1.1.3.1.1"><p id="p699793141012"><a name="p699793141012"></a><a name="p699793141012"></a>Data Type</p>
@@ -5201,13 +5806,13 @@ An operator designed for 4-bit table lookup, accumulation, filtering, and compre
 </thead>
 <tbody><tr id="row1599716361015"><td class="cellrowborder" valign="top" width="40%" headers="mcps1.1.3.1.1 "><p id="p39970319101"><a name="p39970319101"></a><a name="p39970319101"></a>int</p>
 </td>
-<td class="cellrowborder" valign="top" width="60%" headers="mcps1.1.3.1.2 "><p id="p53461032104518"><a name="p53461032104518"></a><a name="p53461032104518"></a><code>0</code> is returned on successful execution. In case of failure, an error code is returned to indicate the specific issue.</p>
+<td class="cellrowborder" valign="top" width="60%" headers="mcps1.1.3.1.2 "><p id="p53461032104518"><a name="p53461032104518"></a><a name="p53461032104518"></a><code>0</code> is returned on successful execution. In case of failure, an error code is returned.</p>
 </td>
 </tr>
 </tbody>
 </table>
 
-**Example**
+**Sample**
 
 ```c
 #include <stdio.h>
@@ -5304,9 +5909,448 @@ cleanup:
 }
 ```
 
+### krl\_L2\_table\_lookup\_fast\_scan\_bs32
+
+**Interface Definition**
+
+int krl\_L2\_table\_lookup\_fast\_scan\_bs32\(int nsq, const uint8\_t\* codes, const uint8\_t\* LUT, uint16\_t\* dis, uint16\_t threshold, uint32\_t\* lt\_mask, size\_t codes\_size, size\_t LUT\_size, size\_t dis\_size, size\_t lt\_mask\_size\);
+
+**Usage**
+
+An operator designed for 4-bit table lookup, accumulation, filtering, and compression. It is used for processing float-type query vectors individually. Computes Euclidean distances between a query vector and 32 base vectors. Based on the distance comparison rule, if a distance value meets the comparison rule, the bit in <code>lt\_mask</code> of the corresponding base vector is set to <code>1</code>. Otherwise, it is set to <code>0</code>.
+
+**Parameters<a name="section157501312135019"></a>**
+
+<a name="table1623016332509"></a>
+<table><thead align="left"><tr id="row823063355012"><th class="cellrowborder" valign="top" width="15.551555155515551%" id="mcps1.1.5.1.1"><p id="p1230333125010"><a name="p1230333125010"></a><a name="p1230333125010"></a>Parameter</p>
+</th>
+<th class="cellrowborder" valign="top" width="14.601460146014599%" id="mcps1.1.5.1.2"><p id="p089311158912"><a name="p089311158912"></a><a name="p089311158912"></a>Data Type</p>
+</th>
+<th class="cellrowborder" valign="top" width="33.97339733973397%" id="mcps1.1.5.1.3"><p id="p4230193313507"><a name="p4230193313507"></a><a name="p4230193313507"></a>Description</p>
+</th>
+<th class="cellrowborder" valign="top" width="35.873587358735875%" id="mcps1.1.5.1.4"><p id="p19887819256"><a name="p19887819256"></a><a name="p19887819256"></a>Value Range</p>
+</th>
+</tr>
+</thead>
+<tbody><tr id="row166241441532"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p262494414531"><a name="p262494414531"></a><a name="p262494414531"></a>nsq</p>
+</td>
+<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p126241544125310"><a name="p126241544125310"></a><a name="p126241544125310"></a>int</p>
+</td>
+<td class="cellrowborder" valign="top" width="33.97339733973397%" headers="mcps1.1.5.1.3 "><p id="p1562414447536"><a name="p1562414447536"></a><a name="p1562414447536"></a>Number of subspaces.</p>
+</td>
+<td class="cellrowborder" valign="top" width="35.873587358735875%" headers="mcps1.1.5.1.4 "><p id="p19624744195313"><a name="p19624744195313"></a><a name="p19624744195313"></a>An even number in [1, 256].</p>
+</td>
+</tr>
+<tr id="row1823023318504"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p14381721205612"><a name="p14381721205612"></a><a name="p14381721205612"></a>codes</p>
+</td>
+<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p7438122115569"><a name="p7438122115569"></a><a name="p7438122115569"></a>const uint8_t*</p>
+</td>
+<td class="cellrowborder" valign="top" width="33.97339733973397%" headers="mcps1.1.5.1.3 "><p id="p18618921124518"><a name="p18618921124518"></a><a name="p18618921124518"></a>Codebook, which stores indexes of base vectors after krl_pack_codes_4b (blocksize=64) processing.</p>
+</td>
+<td class="cellrowborder" valign="top" width="35.873587358735875%" headers="mcps1.1.5.1.4 "><p id="p51251625162911"><a name="p51251625162911"></a><a name="p51251625162911"></a>The size is specified by <code>codes_size</code>.</p>
+</td>
+</tr>
+<tr id="row10982132445420"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p4982142445414"><a name="p4982142445414"></a><a name="p4982142445414"></a>LUT</p>
+</td>
+<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p7532158856"><a name="p7532158856"></a><a name="p7532158856"></a>const uint8_t*</p>
+</td>
+<td class="cellrowborder" valign="top" width="33.97339733973397%" headers="mcps1.1.5.1.3 "><p id="p36611261054"><a name="p36611261054"></a><a name="p36611261054"></a>Distance LUT, which stores the uint8 distances between PQ centroids and query vectors in each subspace.</p>
+</td>
+<td class="cellrowborder" valign="top" width="35.873587358735875%" headers="mcps1.1.5.1.4 "><p id="p85127581355"><a name="p85127581355"></a><a name="p85127581355"></a>The size is specified by <code>LUT_size</code>.</p>
+</td>
+</tr>
+<tr id="row103951453161513"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p14723141215409"><a name="p14723141215409"></a><a name="p14723141215409"></a>dis</p>
+</td>
+<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p4723181210404"><a name="p4723181210404"></a><a name="p4723181210404"></a>uint16_t*</p>
+</td>
+<td class="cellrowborder" valign="top" width="33.97339733973397%" headers="mcps1.1.5.1.3 "><p id="p672341218403"><a name="p672341218403"></a><a name="p672341218403"></a>Stores the distance computation result.</p>
+</td>
+<td class="cellrowborder" valign="top" width="35.873587358735875%" headers="mcps1.1.5.1.4 "><p id="p57801052141013"><a name="p57801052141013"></a><a name="p57801052141013"></a>The size is specified by <code>dis_size</code>. The memory needs to be allocated in advance.</p>
+</td>
+</tr>
+<tr id="row1875218456372"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p275311453374"><a name="p275311453374"></a><a name="p275311453374"></a>threshold</p>
+</td>
+<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p7753045173714"><a name="p7753045173714"></a><a name="p7753045173714"></a>const uint16_t</p>
+</td>
+<td class="cellrowborder" valign="top" width="33.97339733973397%" headers="mcps1.1.5.1.3 "><p id="p17531445103716"><a name="p17531445103716"></a><a name="p17531445103716"></a>Distance threshold.</p>
+</td>
+<td class="cellrowborder" valign="top" width="35.873587358735875%" headers="mcps1.1.5.1.4 "><p id="p748810273302"><a name="p748810273302"></a><a name="p748810273302"></a>The value is <code>65535</code>.</p>
+</td>
+</tr>
+<tr id="row143744955610"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p34370492563"><a name="p34370492563"></a><a name="p34370492563"></a>lt_mask</p>
+</td>
+<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p3437549145616"><a name="p3437549145616"></a><a name="p3437549145616"></a>uint32_t*</p>
+</td>
+<td class="cellrowborder" valign="top" width="33.97339733973397%" headers="mcps1.1.5.1.3 "><p id="p143715495569"><a name="p143715495569"></a><a name="p143715495569"></a>Filtered and compressed results.</p>
+</td>
+<td class="cellrowborder" valign="top" width="35.873587358735875%" headers="mcps1.1.5.1.4 "><p id="p77615321231"><a name="p77615321231"></a><a name="p77615321231"></a>The size is specified by <code>lt_mask_size</code>. The memory needs to be allocated in advance.</p>
+</td>
+</tr>
+<tr id="row1695419558379"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p11681640172619"><a name="p11681640172619"></a><a name="p11681640172619"></a>codes_size</p>
+</td>
+<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p06662231878"><a name="p06662231878"></a><a name="p06662231878"></a>size_t</p>
+</td>
+<td class="cellrowborder" valign="top" width="33.97339733973397%" headers="mcps1.1.5.1.3 "><p id="p16681940142616"><a name="p16681940142616"></a><a name="p16681940142616"></a>Length of the codebook array.</p>
+</td>
+<td class="cellrowborder" valign="top" width="35.873587358735875%" headers="mcps1.1.5.1.4 "><p id="p568184012612"><a name="p568184012612"></a><a name="p568184012612"></a>nsq/2 × 64</p>
+</td>
+</tr>
+<tr id="row15954175511376"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p1258316232715"><a name="p1258316232715"></a><a name="p1258316232715"></a>LUT_size</p>
+</td>
+<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p6403112617719"><a name="p6403112617719"></a><a name="p6403112617719"></a>size_t</p>
+</td>
+<td class="cellrowborder" valign="top" width="33.97339733973397%" headers="mcps1.1.5.1.3 "><p id="p1258316212714"><a name="p1258316212714"></a><a name="p1258316212714"></a>Length of the distance LUT array.</p>
+</td>
+<td class="cellrowborder" valign="top" width="35.873587358735875%" headers="mcps1.1.5.1.4 "><p id="p1658311212279"><a name="p1658311212279"></a><a name="p1658311212279"></a><code>nsq</code> × 16</p>
+</td>
+</tr>
+<tr id="row109541655133713"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p1613312110277"><a name="p1613312110277"></a><a name="p1613312110277"></a>dis_size</p>
+</td>
+<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p1699263912712"><a name="p1699263912712"></a><a name="p1699263912712"></a>size_t</p>
+</td>
+<td class="cellrowborder" valign="top" width="33.97339733973397%" headers="mcps1.1.5.1.3 "><p id="p21335117279"><a name="p21335117279"></a><a name="p21335117279"></a>Size of the distance result array.</p>
+</td>
+<td class="cellrowborder" valign="top" width="35.873587358735875%" headers="mcps1.1.5.1.4 "><p id="p41335118277"><a name="p41335118277"></a><a name="p41335118277"></a>The value is <code>64</code>.</p>
+</td>
+</tr>
+<tr id="row4954455153717"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p172182719273"><a name="p172182719273"></a><a name="p172182719273"></a>lt_mask_size</p>
+</td>
+<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p119923399274"><a name="p119923399274"></a><a name="p119923399274"></a>size_t</p>
+</td>
+<td class="cellrowborder" valign="top" width="33.97339733973397%" headers="mcps1.1.5.1.3 "><p id="p92127202712"><a name="p92127202712"></a><a name="p92127202712"></a>Length of the array storing filtered and compressed results.</p>
+</td>
+<td class="cellrowborder" valign="top" width="35.873587358735875%" headers="mcps1.1.5.1.4 "><p id="p1421327132714"><a name="p1421327132714"></a><a name="p1421327132714"></a>The value is <code>2</code>.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+**Return Value<a name="section49971832106"></a>**
+
+<a name="table17997635100"></a>
+<table><thead align="left"><tr id="row699763141018"><th class="cellrowborder" valign="top" width="40%" id="mcps1.1.3.1.1"><p id="p699793141012"><a name="p699793141012"></a><a name="p699793141012"></a>Data Type</p>
+</th>
+<th class="cellrowborder" valign="top" width="60%" id="mcps1.1.3.1.2"><p id="p1999763141020"><a name="p1999763141020"></a><a name="p1999763141020"></a>Description</p>
+</th>
+</tr>
+</thead>
+<tbody><tr id="row1599716361015"><td class="cellrowborder" valign="top" width="40%" headers="mcps1.1.3.1.1 "><p id="p39970319101"><a name="p39970319101"></a><a name="p39970319101"></a>int</p>
+</td>
+<td class="cellrowborder" valign="top" width="60%" headers="mcps1.1.3.1.2 "><p id="p53461032104518"><a name="p53461032104518"></a><a name="p53461032104518"></a><code>0</code> is returned on successful execution. In case of failure, an error code is returned.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+**Sample**
+
+```c
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include "krl.h"
+
+int main() {
+    // 4-bit PQ parameter configuration (blocksize = 32)
+    int nsq = 64;           // Number of subspaces (must be an even number)
+    int ncode = 32; // Number of base vectors (must be 32)
+    int ksub = 16; // 4-bit index
+
+    // Prepare the codebook (with 4-bit packing and block size of 32).
+    size_t codes_size = (nsq / 2) * ncode;
+    uint8_t* codes = (uint8_t*)malloc(codes_size * sizeof(uint8_t));
+    
+    for (size_t i = 0; i < codes_size; i++) {
+        uint8_t low = rand() % ksub;
+        uint8_t high = rand() % ksub;
+        codes[i] = (high << 4) | low;
+    }
+
+    // Prepare the distance LUT.
+    size_t LUT_size = nsq * ksub;
+    uint8_t* LUT = (uint8_t*)malloc(LUT_size * sizeof(uint8_t));
+    for (size_t i = 0; i < LUT_size; i++) {
+        LUT[i] = (uint8_t)(rand() % 256);
+    }
+
+    // Prepare the distance result array.
+    uint16_t* distances = (uint16_t*)malloc(ncode * sizeof(uint16_t));
+
+    // Prepare the filter mask array.
+    size_t lt_mask_size = 1;  // One uint32 is required for 32 vectors.
+    uint32_t* lt_mask = (uint32_t*)malloc(lt_mask_size * sizeof(uint32_t));
+    memset(lt_mask, 0, lt_mask_size * sizeof(uint32_t));
+
+    // Perform accumulation and filtering based on 4-bit table lookup for the L2 distance (block size = 32).
+    uint16_t threshold = 8000;  // Distance threshold
+    int ret = krl_L2_table_lookup_fast_scan_bs32(
+        nsq,
+        codes,
+        LUT,
+        distances,
+        threshold,
+        lt_mask,
+        codes_size,
+        LUT_size,
+        ncode,
+        lt_mask_size
+    );
+
+    if (ret != 0) {
+        printf("Failed to perform accumulation and filtering based on 4-bit table lookup for the L2 distance. Error code: %d\n", ret);
+        goto cleanup;
+    }
+
+    printf("Successfully performed accumulation and filtering based on 4-bit table lookup (bs64) for L2 distance\n");
+
+    // Determine vectors that meet the conditions.
+    printf("Number of vectors that meet the condition (distance < %u): \n", threshold);
+    int count = 0;
+    for (int i = 0; i < ncode; i++) {
+        int mask_idx = i / 32;
+        int bit_idx = i % 32;
+        if (lt_mask[mask_idx] & (1u << bit_idx)) {
+            if (count < 10) { // Display only the first 10 vectors.
+                printf("  Vector [%d]: distance = %u\n", i, distances[i]);
+            }
+            count++;
+        }
+    }
+    printf("A total of %d vectors meet the condition.\n", count);
+
+cleanup:
+    free(codes);
+    free(LUT);
+    free(distances);
+    free(lt_mask);
+
+    return ret;
+}
+```
+
+**Interface Definition**
+
+int krl\_IP\_table\_lookup\_fast\_scan\_bs32\(int nsq, const uint8\_t\* codes, const uint8\_t\* LUT, uint16\_t\* dis, uint16\_t threshold, uint32\_t\* lt\_mask, size\_t codes\_size, size\_t LUT\_size, size\_t dis\_size, size\_t lt\_mask\_size\);
+
+**Usage**
+
+An operator designed for 4-bit table lookup, accumulation, filtering, and compression. It is used for processing float-type query vectors individually. Computes distances between a query vector and 32 base vectors using inner product. Based on the distance comparison rule, if a distance value meets the comparison rule, the bit in <code>lt\_mask</code> of the corresponding base vector is set to <code>1</code>. Otherwise, it is set to <code>0</code>.
+
+**Parameters<a name="section157501312135019"></a>**
+
+<a name="table1623016332509"></a>
+<table><thead align="left"><tr id="row823063355012"><th class="cellrowborder" valign="top" width="15.551555155515551%" id="mcps1.1.5.1.1"><p id="p1230333125010"><a name="p1230333125010"></a><a name="p1230333125010"></a>Parameter</p>
+</th>
+<th class="cellrowborder" valign="top" width="14.601460146014599%" id="mcps1.1.5.1.2"><p id="p089311158912"><a name="p089311158912"></a><a name="p089311158912"></a>Data Type</p>
+</th>
+<th class="cellrowborder" valign="top" width="33.99339933993399%" id="mcps1.1.5.1.3"><p id="p4230193313507"><a name="p4230193313507"></a><a name="p4230193313507"></a>Description</p>
+</th>
+<th class="cellrowborder" valign="top" width="35.85358535853585%" id="mcps1.1.5.1.4"><p id="p19887819256"><a name="p19887819256"></a><a name="p19887819256"></a>Value Range</p>
+</th>
+</tr>
+</thead>
+<tbody><tr id="row166241441532"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p262494414531"><a name="p262494414531"></a><a name="p262494414531"></a>nsq</p>
+</td>
+<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p126241544125310"><a name="p126241544125310"></a><a name="p126241544125310"></a>int</p>
+</td>
+<td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p1562414447536"><a name="p1562414447536"></a><a name="p1562414447536"></a>Number of subspaces.</p>
+</td>
+<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p19624744195313"><a name="p19624744195313"></a><a name="p19624744195313"></a>An even number in [1, 256].</p>
+</td>
+</tr>
+<tr id="row1823023318504"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p14381721205612"><a name="p14381721205612"></a><a name="p14381721205612"></a>codes</p>
+</td>
+<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p7438122115569"><a name="p7438122115569"></a><a name="p7438122115569"></a>const uint8_t*</p>
+</td>
+<td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p18618921124518"><a name="p18618921124518"></a><a name="p18618921124518"></a>Codebook, which stores indexes of base vectors after krl_pack_codes_4b (blocksize=64) processing.</p>
+</td>
+<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p51251625162911"><a name="p51251625162911"></a><a name="p51251625162911"></a>The size is specified by <code>codes_size</code>.</p>
+</td>
+</tr>
+<tr id="row10982132445420"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p4982142445414"><a name="p4982142445414"></a><a name="p4982142445414"></a>LUT</p>
+</td>
+<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p7532158856"><a name="p7532158856"></a><a name="p7532158856"></a>const uint8_t*</p>
+</td>
+<td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p36611261054"><a name="p36611261054"></a><a name="p36611261054"></a>Distance LUT, which stores the uint8 distances between product quantization (PQ) centroids and query vectors in each subspace.</p>
+</td>
+<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p85127581355"><a name="p85127581355"></a><a name="p85127581355"></a>The size is specified by <code>LUT_size</code>.</p>
+</td>
+</tr>
+<tr id="row103951453161513"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p14723141215409"><a name="p14723141215409"></a><a name="p14723141215409"></a>dis</p>
+</td>
+<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p4723181210404"><a name="p4723181210404"></a><a name="p4723181210404"></a>uint16_t*</p>
+</td>
+<td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p672341218403"><a name="p672341218403"></a><a name="p672341218403"></a>Stores the distance computation result.</p>
+</td>
+<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p57801052141013"><a name="p57801052141013"></a><a name="p57801052141013"></a>The size is specified by <code>dis_size</code>. The memory needs to be allocated in advance.</p>
+</td>
+</tr>
+<tr id="row1875218456372"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p275311453374"><a name="p275311453374"></a><a name="p275311453374"></a>threshold</p>
+</td>
+<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p7753045173714"><a name="p7753045173714"></a><a name="p7753045173714"></a>const uint16_t</p>
+</td>
+<td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p17531445103716"><a name="p17531445103716"></a><a name="p17531445103716"></a>Distance threshold.</p>
+</td>
+<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p748810273302"><a name="p748810273302"></a><a name="p748810273302"></a>The value is <code>65535</code>.</p>
+</td>
+</tr>
+<tr id="row143744955610"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p34370492563"><a name="p34370492563"></a><a name="p34370492563"></a>lt_mask</p>
+</td>
+<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p3437549145616"><a name="p3437549145616"></a><a name="p3437549145616"></a>uint32_t*</p>
+</td>
+<td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p143715495569"><a name="p143715495569"></a><a name="p143715495569"></a>Filtered and compressed results.</p>
+</td>
+<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p77615321231"><a name="p77615321231"></a><a name="p77615321231"></a>The size is specified by <code>lt_mask_size</code>. The memory needs to be allocated in advance.</p>
+</td>
+</tr>
+<tr id="row177615011429"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p11681640172619"><a name="p11681640172619"></a><a name="p11681640172619"></a>codes_size</p>
+</td>
+<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p06662231878"><a name="p06662231878"></a><a name="p06662231878"></a>size_t</p>
+</td>
+<td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p16681940142616"><a name="p16681940142616"></a><a name="p16681940142616"></a>Length of the codebook array.</p>
+</td>
+<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p568184012612"><a name="p568184012612"></a><a name="p568184012612"></a>nsq/2 × 64</p>
+</td>
+</tr>
+<tr id="row9760006427"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p1258316232715"><a name="p1258316232715"></a><a name="p1258316232715"></a>LUT_size</p>
+</td>
+<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p6403112617719"><a name="p6403112617719"></a><a name="p6403112617719"></a>size_t</p>
+</td>
+<td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p1258316212714"><a name="p1258316212714"></a><a name="p1258316212714"></a>Length of the distance LUT array.</p>
+</td>
+<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p1658311212279"><a name="p1658311212279"></a><a name="p1658311212279"></a><code>nsq</code> × 16</p>
+</td>
+</tr>
+<tr id="row1276017012420"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p1613312110277"><a name="p1613312110277"></a><a name="p1613312110277"></a>dis_size</p>
+</td>
+<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p1699263912712"><a name="p1699263912712"></a><a name="p1699263912712"></a>size_t</p>
+</td>
+<td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p21335117279"><a name="p21335117279"></a><a name="p21335117279"></a>Size of the distance result array.</p>
+</td>
+<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p41335118277"><a name="p41335118277"></a><a name="p41335118277"></a>The value is <code>64</code>.</p>
+</td>
+</tr>
+<tr id="row157604034212"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p172182719273"><a name="p172182719273"></a><a name="p172182719273"></a>lt_mask_size</p>
+</td>
+<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p119923399274"><a name="p119923399274"></a><a name="p119923399274"></a>size_t</p>
+</td>
+<td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p92127202712"><a name="p92127202712"></a><a name="p92127202712"></a>Length of the array storing filtered and compressed results.</p>
+</td>
+<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p1421327132714"><a name="p1421327132714"></a><a name="p1421327132714"></a>The value is <code>2</code>.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+**Return Value<a name="section49971832106"></a>**
+
+<a name="table17997635100"></a>
+<table><thead align="left"><tr id="row699763141018"><th class="cellrowborder" valign="top" width="40%" id="mcps1.1.3.1.1"><p id="p699793141012"><a name="p699793141012"></a><a name="p699793141012"></a>Data Type</p>
+</th>
+<th class="cellrowborder" valign="top" width="60%" id="mcps1.1.3.1.2"><p id="p1999763141020"><a name="p1999763141020"></a><a name="p1999763141020"></a>Description</p>
+</th>
+</tr>
+</thead>
+<tbody><tr id="row1599716361015"><td class="cellrowborder" valign="top" width="40%" headers="mcps1.1.3.1.1 "><p id="p39970319101"><a name="p39970319101"></a><a name="p39970319101"></a>int</p>
+</td>
+<td class="cellrowborder" valign="top" width="60%" headers="mcps1.1.3.1.2 "><p id="p53461032104518"><a name="p53461032104518"></a><a name="p53461032104518"></a><code>0</code> is returned on successful execution. In case of failure, an error code is returned.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+**Sample**
+
+```c
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include "krl.h"
+
+int main() {
+    // 4-bit PQ parameter configuration (inner product distance, blocksize = 32)
+    int nsq = 64;           // Number of subspaces (must be an even number)
+    int ncode = 32; // Number of base vectors (must be 32)
+    int ksub = 16; // 4-bit index, with 16 centroids per subspace
+
+    // Prepare the codebook (with 4-bit packing and block size of 32).
+    size_t codes_size = (nsq / 2) * ncode;
+    uint8_t* codes = (uint8_t*)malloc(codes_size * sizeof(uint8_t));
+    
+    for (size_t i = 0; i < codes_size; i++) {
+        uint8_t low = rand() % ksub;
+        uint8_t high = rand() % ksub;
+        codes[i] = (high << 4) | low;
+    }
+
+    // Prepare the inner product distance LUT.
+    // Note: The distance value computed using inner product usually needs to be negated or specially processed for comparison.
+    size_t LUT_size = nsq * ksub;
+    uint8_t* LUT = (uint8_t*)malloc(LUT_size * sizeof(uint8_t));
+    for (size_t i = 0; i < LUT_size; i++) {
+        LUT[i] = (uint8_t)(rand() % 256);
+    }
+
+    // Prepare the distance result array.
+    uint16_t* distances = (uint16_t*)malloc(ncode * sizeof(uint16_t));
+
+    // Prepare the filter mask array.
+    size_t lt_mask_size = 1; // Two uint32s are required for 32 vectors.
+    uint32_t* lt_mask = (uint32_t*)malloc(lt_mask_size * sizeof(uint32_t));
+    memset(lt_mask, 0, lt_mask_size * sizeof(uint32_t));
+
+    // Perform accumulation and filtering based on 4-bit table lookup for the inner product distance.
+    // Note: For the inner product distance, the threshold comparison rule is different from that for the L2 distance.
+    // A larger inner product indicates higher similarity. Therefore, results greater than the threshold are usually retained.
+    uint16_t threshold = 3000;
+    int ret = krl_IP_table_lookup_fast_scan_bs32(
+        nsq,
+        codes,
+        LUT,
+        distances,
+        threshold,
+        lt_mask,
+        codes_size,
+        LUT_size,
+        ncode,
+        lt_mask_size
+    );
+
+    if (ret != 0) {
+        printf("Failed to perform accumulation and filtering based on 4-bit table lookup for the inner product (IP) distance. Error code: %d\n", ret);
+        goto cleanup;
+    }
+
+    printf("Successfully performed accumulation and filtering based on 4-bit table lookup (bs64) for the IP distance\n");
+
+    // Determine vectors that meet the condition (inner product > threshold).
+    int count = 0;
+    printf("Number of vectors that meet the condition (inner product > %u): \n", threshold);
+    for (int i = 0; i < ncode; i++) {
+        int mask_idx = i / 32;
+        int bit_idx = i % 32;
+        if (lt_mask[mask_idx] & (1u << bit_idx)) {
+            if (count < 5) {
+                printf("  Vector [%d]: inner product = %u\n", i, distances[i]);
+            }
+            count++;
+        }
+    }
+    printf("A total of %d vectors meet the condition.\n", count);
+
+cleanup:
+    free(codes);
+    free(LUT);
+    free(distances);
+    free(lt_mask);
+
+    return ret;
+}
+```
+
 ### krl\_L2\_table\_lookup\_fast\_scan\_bs64
 
-**Interface Definition <a name="section172317194488"></a>**
+**API Definition<a name="section172317194488"></a>**
 
 int krl\_L2\_table\_lookup\_fast\_scan\_bs64\(int nsq, const uint8\_t\* codes, const uint8\_t\* LUT, uint16\_t\* dis, uint16\_t threshold, uint32\_t\* lt\_mask, size\_t codes\_size, size\_t LUT\_size, size\_t dis\_size, size\_t lt\_mask\_size\);
 
@@ -5387,7 +6431,7 @@ An operator designed for 4-bit table lookup, accumulation, filtering, and compre
 </td>
 <td class="cellrowborder" valign="top" width="33.97339733973397%" headers="mcps1.1.5.1.3 "><p id="p16681940142616"><a name="p16681940142616"></a><a name="p16681940142616"></a>Length of the codebook array.</p>
 </td>
-<td class="cellrowborder" valign="top" width="35.873587358735875%" headers="mcps1.1.5.1.4 "><p id="p568184012612"><a name="p568184012612"></a><a name="p568184012612"></a><code>nsq</code>/2 × 64</p>
+<td class="cellrowborder" valign="top" width="35.873587358735875%" headers="mcps1.1.5.1.4 "><p id="p568184012612"><a name="p568184012612"></a><a name="p568184012612"></a>nsq/2 × 64</p>
 </td>
 </tr>
 <tr id="row15954175511376"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p1258316232715"><a name="p1258316232715"></a><a name="p1258316232715"></a>LUT_size</p>
@@ -5420,7 +6464,7 @@ An operator designed for 4-bit table lookup, accumulation, filtering, and compre
 </tbody>
 </table>
 
-**Return Values<a name="section49971832106"></a>**
+**Return Value<a name="section49971832106"></a>**
 
 <a name="table17997635100"></a>
 <table><thead align="left"><tr id="row699763141018"><th class="cellrowborder" valign="top" width="40%" id="mcps1.1.3.1.1"><p id="p699793141012"><a name="p699793141012"></a><a name="p699793141012"></a>Data Type</p>
@@ -5431,13 +6475,13 @@ An operator designed for 4-bit table lookup, accumulation, filtering, and compre
 </thead>
 <tbody><tr id="row1599716361015"><td class="cellrowborder" valign="top" width="40%" headers="mcps1.1.3.1.1 "><p id="p39970319101"><a name="p39970319101"></a><a name="p39970319101"></a>int</p>
 </td>
-<td class="cellrowborder" valign="top" width="60%" headers="mcps1.1.3.1.2 "><p id="p53461032104518"><a name="p53461032104518"></a><a name="p53461032104518"></a><code>0</code> is returned on successful execution. In case of failure, an error code is returned to indicate the specific issue.</p>
+<td class="cellrowborder" valign="top" width="60%" headers="mcps1.1.3.1.2 "><p id="p53461032104518"><a name="p53461032104518"></a><a name="p53461032104518"></a><code>0</code> is returned on successful execution. In case of failure, an error code is returned.</p>
 </td>
 </tr>
 </tbody>
 </table>
 
-**Example**
+**Sample**
 
 ```c
 #include <stdio.h>
@@ -5525,7 +6569,7 @@ cleanup:
 
 ### krl\_IP\_table\_lookup\_fast\_scan\_bs64
 
-**Interface Definition <a name="section172317194488"></a>**
+**API Definition<a name="section172317194488"></a>**
 
 int krl\_IP\_table\_lookup\_fast\_scan\_bs64\(int nsq, const uint8\_t\* codes, const uint8\_t\* LUT, uint16\_t\* dis, uint16\_t threshold, uint32\_t\* lt\_mask, size\_t codes\_size, size\_t LUT\_size, size\_t dis\_size, size\_t lt\_mask\_size\);
 
@@ -5606,7 +6650,7 @@ An operator designed for 4-bit table lookup, accumulation, filtering, and compre
 </td>
 <td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p16681940142616"><a name="p16681940142616"></a><a name="p16681940142616"></a>Length of the codebook array.</p>
 </td>
-<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p568184012612"><a name="p568184012612"></a><a name="p568184012612"></a><code>nsq</code>/2 × 64</p>
+<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p568184012612"><a name="p568184012612"></a><a name="p568184012612"></a>nsq/2 × 64</p>
 </td>
 </tr>
 <tr id="row9760006427"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p1258316232715"><a name="p1258316232715"></a><a name="p1258316232715"></a>LUT_size</p>
@@ -5639,7 +6683,7 @@ An operator designed for 4-bit table lookup, accumulation, filtering, and compre
 </tbody>
 </table>
 
-**Return Values<a name="section49971832106"></a>**
+**Return Value<a name="section49971832106"></a>**
 
 <a name="table17997635100"></a>
 <table><thead align="left"><tr id="row699763141018"><th class="cellrowborder" valign="top" width="40%" id="mcps1.1.3.1.1"><p id="p699793141012"><a name="p699793141012"></a><a name="p699793141012"></a>Data Type</p>
@@ -5650,13 +6694,13 @@ An operator designed for 4-bit table lookup, accumulation, filtering, and compre
 </thead>
 <tbody><tr id="row1599716361015"><td class="cellrowborder" valign="top" width="40%" headers="mcps1.1.3.1.1 "><p id="p39970319101"><a name="p39970319101"></a><a name="p39970319101"></a>int</p>
 </td>
-<td class="cellrowborder" valign="top" width="60%" headers="mcps1.1.3.1.2 "><p id="p53461032104518"><a name="p53461032104518"></a><a name="p53461032104518"></a><code>0</code> is returned on successful execution. In case of failure, an error code is returned to indicate the specific issue.</p>
+<td class="cellrowborder" valign="top" width="60%" headers="mcps1.1.3.1.2 "><p id="p53461032104518"><a name="p53461032104518"></a><a name="p53461032104518"></a><code>0</code> is returned on successful execution. In case of failure, an error code is returned.</p>
 </td>
 </tr>
 </tbody>
 </table>
 
-**Example**
+**Sample**
 
 ```c
 #include <stdio.h>
@@ -5747,7 +6791,7 @@ cleanup:
 
 ### krl\_L2\_table\_lookup\_fast\_scan\_bs96
 
-**Interface Definition <a name="section172317194488"></a>**
+**API Definition<a name="section172317194488"></a>**
 
 int krl\_L2\_table\_lookup\_fast\_scan\_bs96\(int nsq, const uint8\_t\* codes, const uint8\_t\* LUT, uint16\_t\* dis, uint16\_t threshold, uint32\_t\* lt\_mask, size\_t codes\_size, size\_t LUT\_size, size\_t dis\_size, size\_t lt\_mask\_size\);
 
@@ -5828,7 +6872,7 @@ An operator designed for 4-bit table lookup, accumulation, filtering, and compre
 </td>
 <td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p16681940142616"><a name="p16681940142616"></a><a name="p16681940142616"></a>Length of the codebook array.</p>
 </td>
-<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p568184012612"><a name="p568184012612"></a><a name="p568184012612"></a><code>nsq</code>/2 × 96</p>
+<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p568184012612"><a name="p568184012612"></a><a name="p568184012612"></a>nsq/2 × 96</p>
 </td>
 </tr>
 <tr id="row11211726184714"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p1258316232715"><a name="p1258316232715"></a><a name="p1258316232715"></a>LUT_size</p>
@@ -5861,7 +6905,7 @@ An operator designed for 4-bit table lookup, accumulation, filtering, and compre
 </tbody>
 </table>
 
-**Return Values<a name="section49971832106"></a>**
+**Return Value<a name="section49971832106"></a>**
 
 <a name="table17997635100"></a>
 <table><thead align="left"><tr id="row699763141018"><th class="cellrowborder" valign="top" width="40%" id="mcps1.1.3.1.1"><p id="p699793141012"><a name="p699793141012"></a><a name="p699793141012"></a>Data Type</p>
@@ -5872,13 +6916,13 @@ An operator designed for 4-bit table lookup, accumulation, filtering, and compre
 </thead>
 <tbody><tr id="row1599716361015"><td class="cellrowborder" valign="top" width="40%" headers="mcps1.1.3.1.1 "><p id="p39970319101"><a name="p39970319101"></a><a name="p39970319101"></a>int</p>
 </td>
-<td class="cellrowborder" valign="top" width="60%" headers="mcps1.1.3.1.2 "><p id="p53461032104518"><a name="p53461032104518"></a><a name="p53461032104518"></a><code>0</code> is returned on successful execution. In case of failure, an error code is returned to indicate the specific issue.</p>
+<td class="cellrowborder" valign="top" width="60%" headers="mcps1.1.3.1.2 "><p id="p53461032104518"><a name="p53461032104518"></a><a name="p53461032104518"></a><code>0</code> is returned on successful execution. In case of failure, an error code is returned.</p>
 </td>
 </tr>
 </tbody>
 </table>
 
-**Example**
+**Sample**
 
 ```c
 #include <stdio.h>
@@ -5963,7 +7007,7 @@ cleanup:
 
 ### krl\_IP\_table\_lookup\_fast\_scan\_bs96
 
-**Interface Definition <a name="section172317194488"></a>**
+**API Definition<a name="section172317194488"></a>**
 
 int krl\_IP\_table\_lookup\_fast\_scan\_bs96\(int nsq, const uint8\_t\* codes, const uint8\_t\* LUT, uint16\_t\* dis, uint16\_t threshold, uint32\_t\* lt\_mask, size\_t codes\_size, size\_t LUT\_size, size\_t dis\_size, size\_t lt\_mask\_size\);
 
@@ -6044,7 +7088,7 @@ An operator designed for 4-bit table lookup, accumulation, filtering, and compre
 </td>
 <td class="cellrowborder" valign="top" width="35.94359435943594%" headers="mcps1.1.5.1.3 "><p id="p16681940142616"><a name="p16681940142616"></a><a name="p16681940142616"></a>Length of the codebook array.</p>
 </td>
-<td class="cellrowborder" valign="top" width="35.94359435943594%" headers="mcps1.1.5.1.4 "><p id="p568184012612"><a name="p568184012612"></a><a name="p568184012612"></a><code>nsq</code>/2 × 96</p>
+<td class="cellrowborder" valign="top" width="35.94359435943594%" headers="mcps1.1.5.1.4 "><p id="p568184012612"><a name="p568184012612"></a><a name="p568184012612"></a>nsq/2 × 96</p>
 </td>
 </tr>
 <tr id="row511551717527"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p1258316232715"><a name="p1258316232715"></a><a name="p1258316232715"></a>LUT_size</p>
@@ -6077,7 +7121,7 @@ An operator designed for 4-bit table lookup, accumulation, filtering, and compre
 </tbody>
 </table>
 
-**Return Values<a name="section49971832106"></a>**
+**Return Value<a name="section49971832106"></a>**
 
 <a name="table17997635100"></a>
 <table><thead align="left"><tr id="row699763141018"><th class="cellrowborder" valign="top" width="40%" id="mcps1.1.3.1.1"><p id="p699793141012"><a name="p699793141012"></a><a name="p699793141012"></a>Data Type</p>
@@ -6088,13 +7132,13 @@ An operator designed for 4-bit table lookup, accumulation, filtering, and compre
 </thead>
 <tbody><tr id="row1599716361015"><td class="cellrowborder" valign="top" width="40%" headers="mcps1.1.3.1.1 "><p id="p39970319101"><a name="p39970319101"></a><a name="p39970319101"></a>int</p>
 </td>
-<td class="cellrowborder" valign="top" width="60%" headers="mcps1.1.3.1.2 "><p id="p53461032104518"><a name="p53461032104518"></a><a name="p53461032104518"></a><code>0</code> is returned on successful execution. In case of failure, an error code is returned to indicate the specific issue.</p>
+<td class="cellrowborder" valign="top" width="60%" headers="mcps1.1.3.1.2 "><p id="p53461032104518"><a name="p53461032104518"></a><a name="p53461032104518"></a><code>0</code> is returned on successful execution. In case of failure, an error code is returned.</p>
 </td>
 </tr>
 </tbody>
 </table>
 
-**Example**
+**Sample**
 
 ```c
 #include <stdio.h>
@@ -6179,9 +7223,831 @@ cleanup:
 }
 ```
 
+### krl\_L2\_table\_lookup\_fast\_scan\_bs32\_sve2
+
+**Interface Definition**
+
+int krl\_L2\_table\_lookup\_fast\_scan\_bs32\_sve2\(int nsq, const uint8\_t\* codes, const uint8\_t\* LUT, uint16\_t\* dis, uint16\_t threshold, uint32\_t\* lt\_mask, size\_t codes\_size, size\_t LUT\_size, size\_t dis\_size, size\_t lt\_mask\_size\);
+
+**Usage**
+
+SVE2 version of `krl_L2_table_lookup_fast_scan_bs32`.
+
+**Parameters<a name="section157501312135019"></a>**
+
+<a name="table1623016332509"></a>
+<table><thead align="left"><tr id="row823063355012"><th class="cellrowborder" valign="top" width="15.551555155515551%" id="mcps1.1.5.1.1"><p id="p1230333125010"><a name="p1230333125010"></a><a name="p1230333125010"></a>Parameter</p>
+</th>
+<th class="cellrowborder" valign="top" width="14.601460146014599%" id="mcps1.1.5.1.2"><p id="p089311158912"><a name="p089311158912"></a><a name="p089311158912"></a>Data Type</p>
+</th>
+<th class="cellrowborder" valign="top" width="33.97339733973397%" id="mcps1.1.5.1.3"><p id="p4230193313507"><a name="p4230193313507"></a><a name="p4230193313507"></a>Description</p>
+</th>
+<th class="cellrowborder" valign="top" width="35.873587358735875%" id="mcps1.1.5.1.4"><p id="p19887819256"><a name="p19887819256"></a><a name="p19887819256"></a>Value Range</p>
+</th>
+</tr>
+</thead>
+<tbody><tr id="row166241441532"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p262494414531"><a name="p262494414531"></a><a name="p262494414531"></a>nsq</p>
+</td>
+<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p126241544125310"><a name="p126241544125310"></a><a name="p126241544125310"></a>int</p>
+</td>
+<td class="cellrowborder" valign="top" width="33.97339733973397%" headers="mcps1.1.5.1.3 "><p id="p1562414447536"><a name="p1562414447536"></a><a name="p1562414447536"></a>Number of subspaces.</p>
+</td>
+<td class="cellrowborder" valign="top" width="35.873587358735875%" headers="mcps1.1.5.1.4 "><p id="p19624744195313"><a name="p19624744195313"></a><a name="p19624744195313"></a>An even number in [1, 256].</p>
+</td>
+</tr>
+<tr id="row1823023318504"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p14381721205612"><a name="p14381721205612"></a><a name="p14381721205612"></a>codes</p>
+</td>
+<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p7438122115569"><a name="p7438122115569"></a><a name="p7438122115569"></a>const uint8_t*</p>
+</td>
+<td class="cellrowborder" valign="top" width="33.97339733973397%" headers="mcps1.1.5.1.3 "><p id="p18618921124518"><a name="p18618921124518"></a><a name="p18618921124518"></a>Codebook, which stores indexes of base vectors after krl_pack_codes_4b (blocksize=64) processing.</p>
+</td>
+<td class="cellrowborder" valign="top" width="35.873587358735875%" headers="mcps1.1.5.1.4 "><p id="p51251625162911"><a name="p51251625162911"></a><a name="p51251625162911"></a>The size is specified by <code>codes_size</code>.</p>
+</td>
+</tr>
+<tr id="row10982132445420"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p4982142445414"><a name="p4982142445414"></a><a name="p4982142445414"></a>LUT</p>
+</td>
+<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p7532158856"><a name="p7532158856"></a><a name="p7532158856"></a>const uint8_t*</p>
+</td>
+<td class="cellrowborder" valign="top" width="33.97339733973397%" headers="mcps1.1.5.1.3 "><p id="p36611261054"><a name="p36611261054"></a><a name="p36611261054"></a>Distance LUT, which stores the uint8 distances between PQ centroids and query vectors in each subspace.</p>
+</td>
+<td class="cellrowborder" valign="top" width="35.873587358735875%" headers="mcps1.1.5.1.4 "><p id="p85127581355"><a name="p85127581355"></a><a name="p85127581355"></a>The size is specified by <code>LUT_size</code>.</p>
+</td>
+</tr>
+<tr id="row103951453161513"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p14723141215409"><a name="p14723141215409"></a><a name="p14723141215409"></a>dis</p>
+</td>
+<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p4723181210404"><a name="p4723181210404"></a><a name="p4723181210404"></a>uint16_t*</p>
+</td>
+<td class="cellrowborder" valign="top" width="33.97339733973397%" headers="mcps1.1.5.1.3 "><p id="p672341218403"><a name="p672341218403"></a><a name="p672341218403"></a>Stores the distance computation result.</p>
+</td>
+<td class="cellrowborder" valign="top" width="35.873587358735875%" headers="mcps1.1.5.1.4 "><p id="p57801052141013"><a name="p57801052141013"></a><a name="p57801052141013"></a>The size is specified by <code>dis_size</code>. The memory needs to be allocated in advance.</p>
+</td>
+</tr>
+<tr id="row1875218456372"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p275311453374"><a name="p275311453374"></a><a name="p275311453374"></a>threshold</p>
+</td>
+<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p7753045173714"><a name="p7753045173714"></a><a name="p7753045173714"></a>const uint16_t</p>
+</td>
+<td class="cellrowborder" valign="top" width="33.97339733973397%" headers="mcps1.1.5.1.3 "><p id="p17531445103716"><a name="p17531445103716"></a><a name="p17531445103716"></a>Distance threshold.</p>
+</td>
+<td class="cellrowborder" valign="top" width="35.873587358735875%" headers="mcps1.1.5.1.4 "><p id="p748810273302"><a name="p748810273302"></a><a name="p748810273302"></a>The value is <code>65535</code>.</p>
+</td>
+</tr>
+<tr id="row143744955610"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p34370492563"><a name="p34370492563"></a><a name="p34370492563"></a>lt_mask</p>
+</td>
+<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p3437549145616"><a name="p3437549145616"></a><a name="p3437549145616"></a>uint32_t*</p>
+</td>
+<td class="cellrowborder" valign="top" width="33.97339733973397%" headers="mcps1.1.5.1.3 "><p id="p143715495569"><a name="p143715495569"></a><a name="p143715495569"></a>Filtered and compressed results.</p>
+</td>
+<td class="cellrowborder" valign="top" width="35.873587358735875%" headers="mcps1.1.5.1.4 "><p id="p77615321231"><a name="p77615321231"></a><a name="p77615321231"></a>The size is specified by <code>lt_mask_size</code>. The memory needs to be allocated in advance.</p>
+</td>
+</tr>
+<tr id="row1695419558379"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p11681640172619"><a name="p11681640172619"></a><a name="p11681640172619"></a>codes_size</p>
+</td>
+<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p06662231878"><a name="p06662231878"></a><a name="p06662231878"></a>size_t</p>
+</td>
+<td class="cellrowborder" valign="top" width="33.97339733973397%" headers="mcps1.1.5.1.3 "><p id="p16681940142616"><a name="p16681940142616"></a><a name="p16681940142616"></a>Length of the codebook array.</p>
+</td>
+<td class="cellrowborder" valign="top" width="35.873587358735875%" headers="mcps1.1.5.1.4 "><p id="p568184012612"><a name="p568184012612"></a><a name="p568184012612"></a>nsq/2 × 64</p>
+</td>
+</tr>
+<tr id="row15954175511376"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p1258316232715"><a name="p1258316232715"></a><a name="p1258316232715"></a>LUT_size</p>
+</td>
+<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p6403112617719"><a name="p6403112617719"></a><a name="p6403112617719"></a>size_t</p>
+</td>
+<td class="cellrowborder" valign="top" width="33.97339733973397%" headers="mcps1.1.5.1.3 "><p id="p1258316212714"><a name="p1258316212714"></a><a name="p1258316212714"></a>Length of the distance LUT array.</p>
+</td>
+<td class="cellrowborder" valign="top" width="35.873587358735875%" headers="mcps1.1.5.1.4 "><p id="p1658311212279"><a name="p1658311212279"></a><a name="p1658311212279"></a><code>nsq</code> × 16</p>
+</td>
+</tr>
+<tr id="row109541655133713"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p1613312110277"><a name="p1613312110277"></a><a name="p1613312110277"></a>dis_size</p>
+</td>
+<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p1699263912712"><a name="p1699263912712"></a><a name="p1699263912712"></a>size_t</p>
+</td>
+<td class="cellrowborder" valign="top" width="33.97339733973397%" headers="mcps1.1.5.1.3 "><p id="p21335117279"><a name="p21335117279"></a><a name="p21335117279"></a>Size of the distance result array.</p>
+</td>
+<td class="cellrowborder" valign="top" width="35.873587358735875%" headers="mcps1.1.5.1.4 "><p id="p41335118277"><a name="p41335118277"></a><a name="p41335118277"></a>The value is <code>64</code>.</p>
+</td>
+</tr>
+<tr id="row4954455153717"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p172182719273"><a name="p172182719273"></a><a name="p172182719273"></a>lt_mask_size</p>
+</td>
+<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p119923399274"><a name="p119923399274"></a><a name="p119923399274"></a>size_t</p>
+</td>
+<td class="cellrowborder" valign="top" width="33.97339733973397%" headers="mcps1.1.5.1.3 "><p id="p92127202712"><a name="p92127202712"></a><a name="p92127202712"></a>Length of the array storing filtered and compressed results.</p>
+</td>
+<td class="cellrowborder" valign="top" width="35.873587358735875%" headers="mcps1.1.5.1.4 "><p id="p1421327132714"><a name="p1421327132714"></a><a name="p1421327132714"></a>The value is <code>2</code>.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+**Return Value<a name="section49971832106"></a>**
+
+<a name="table17997635100"></a>
+<table><thead align="left"><tr id="row699763141018"><th class="cellrowborder" valign="top" width="40%" id="mcps1.1.3.1.1"><p id="p699793141012"><a name="p699793141012"></a><a name="p699793141012"></a>Data Type</p>
+</th>
+<th class="cellrowborder" valign="top" width="60%" id="mcps1.1.3.1.2"><p id="p1999763141020"><a name="p1999763141020"></a><a name="p1999763141020"></a>Description</p>
+</th>
+</tr>
+</thead>
+<tbody><tr id="row1599716361015"><td class="cellrowborder" valign="top" width="40%" headers="mcps1.1.3.1.1 "><p id="p39970319101"><a name="p39970319101"></a><a name="p39970319101"></a>int</p>
+</td>
+<td class="cellrowborder" valign="top" width="60%" headers="mcps1.1.3.1.2 "><p id="p53461032104518"><a name="p53461032104518"></a><a name="p53461032104518"></a><code>0</code> is returned on successful execution. In case of failure, an error code is returned.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+**Sample**
+
+You can use the `krl_L2_table_lookup_fast_scan_bs32` example as a reference and simply substitute the function call with `krl_L2_table_lookup_fast_scan_bs32_sve2`.
+
+### krl\_IP\_table\_lookup\_fast\_scan\_bs32\_sve2
+
+**Interface Definition**
+
+int krl\_IP\_table\_lookup\_fast\_scan\_bs32\_sve2\(int nsq, const uint8\_t\* codes, const uint8\_t\* LUT, uint16\_t\* dis, uint16\_t threshold, uint32\_t\* lt\_mask, size\_t codes\_size, size\_t LUT\_size, size\_t dis\_size, size\_t lt\_mask\_size\);
+
+**Usage**
+
+SVE2 version of `krl_IP_table_lookup_fast_scan_bs32`.
+
+**Parameters<a name="section157501312135019"></a>**
+
+<a name="table1623016332509"></a>
+<table><thead align="left"><tr id="row823063355012"><th class="cellrowborder" valign="top" width="15.551555155515551%" id="mcps1.1.5.1.1"><p id="p1230333125010"><a name="p1230333125010"></a><a name="p1230333125010"></a>Parameter</p>
+</th>
+<th class="cellrowborder" valign="top" width="14.601460146014599%" id="mcps1.1.5.1.2"><p id="p089311158912"><a name="p089311158912"></a><a name="p089311158912"></a>Data Type</p>
+</th>
+<th class="cellrowborder" valign="top" width="33.99339933993399%" id="mcps1.1.5.1.3"><p id="p4230193313507"><a name="p4230193313507"></a><a name="p4230193313507"></a>Description</p>
+</th>
+<th class="cellrowborder" valign="top" width="35.85358535853585%" id="mcps1.1.5.1.4"><p id="p19887819256"><a name="p19887819256"></a><a name="p19887819256"></a>Value Range</p>
+</th>
+</tr>
+</thead>
+<tbody><tr id="row166241441532"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p262494414531"><a name="p262494414531"></a><a name="p262494414531"></a>nsq</p>
+</td>
+<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p126241544125310"><a name="p126241544125310"></a><a name="p126241544125310"></a>int</p>
+</td>
+<td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p1562414447536"><a name="p1562414447536"></a><a name="p1562414447536"></a>Number of subspaces.</p>
+</td>
+<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p19624744195313"><a name="p19624744195313"></a><a name="p19624744195313"></a>An even number in [1, 256].</p>
+</td>
+</tr>
+<tr id="row1823023318504"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p14381721205612"><a name="p14381721205612"></a><a name="p14381721205612"></a>codes</p>
+</td>
+<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p7438122115569"><a name="p7438122115569"></a><a name="p7438122115569"></a>const uint8_t*</p>
+</td>
+<td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p18618921124518"><a name="p18618921124518"></a><a name="p18618921124518"></a>Codebook, which stores indexes of base vectors after krl_pack_codes_4b (blocksize=64) processing.</p>
+</td>
+<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p51251625162911"><a name="p51251625162911"></a><a name="p51251625162911"></a>The size is specified by <code>codes_size</code>.</p>
+</td>
+</tr>
+<tr id="row10982132445420"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p4982142445414"><a name="p4982142445414"></a><a name="p4982142445414"></a>LUT</p>
+</td>
+<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p7532158856"><a name="p7532158856"></a><a name="p7532158856"></a>const uint8_t*</p>
+</td>
+<td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p36611261054"><a name="p36611261054"></a><a name="p36611261054"></a>Distance LUT, which stores the uint8 distances between product quantization (PQ) centroids and query vectors in each subspace.</p>
+</td>
+<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p85127581355"><a name="p85127581355"></a><a name="p85127581355"></a>The size is specified by <code>LUT_size</code>.</p>
+</td>
+</tr>
+<tr id="row103951453161513"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p14723141215409"><a name="p14723141215409"></a><a name="p14723141215409"></a>dis</p>
+</td>
+<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p4723181210404"><a name="p4723181210404"></a><a name="p4723181210404"></a>uint16_t*</p>
+</td>
+<td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p672341218403"><a name="p672341218403"></a><a name="p672341218403"></a>Stores the distance computation result.</p>
+</td>
+<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p57801052141013"><a name="p57801052141013"></a><a name="p57801052141013"></a>The size is specified by <code>dis_size</code>. The memory needs to be allocated in advance.</p>
+</td>
+</tr>
+<tr id="row1875218456372"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p275311453374"><a name="p275311453374"></a><a name="p275311453374"></a>threshold</p>
+</td>
+<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p7753045173714"><a name="p7753045173714"></a><a name="p7753045173714"></a>const uint16_t</p>
+</td>
+<td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p17531445103716"><a name="p17531445103716"></a><a name="p17531445103716"></a>Distance threshold.</p>
+</td>
+<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p748810273302"><a name="p748810273302"></a><a name="p748810273302"></a>The value is <code>65535</code>.</p>
+</td>
+</tr>
+<tr id="row143744955610"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p34370492563"><a name="p34370492563"></a><a name="p34370492563"></a>lt_mask</p>
+</td>
+<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p3437549145616"><a name="p3437549145616"></a><a name="p3437549145616"></a>uint32_t*</p>
+</td>
+<td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p143715495569"><a name="p143715495569"></a><a name="p143715495569"></a>Filtered and compressed results.</p>
+</td>
+<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p77615321231"><a name="p77615321231"></a><a name="p77615321231"></a>The size is specified by <code>lt_mask_size</code>. The memory needs to be allocated in advance.</p>
+</td>
+</tr>
+<tr id="row177615011429"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p11681640172619"><a name="p11681640172619"></a><a name="p11681640172619"></a>codes_size</p>
+</td>
+<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p06662231878"><a name="p06662231878"></a><a name="p06662231878"></a>size_t</p>
+</td>
+<td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p16681940142616"><a name="p16681940142616"></a><a name="p16681940142616"></a>Length of the codebook array.</p>
+</td>
+<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p568184012612"><a name="p568184012612"></a><a name="p568184012612"></a>nsq/2 × 64</p>
+</td>
+</tr>
+<tr id="row9760006427"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p1258316232715"><a name="p1258316232715"></a><a name="p1258316232715"></a>LUT_size</p>
+</td>
+<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p6403112617719"><a name="p6403112617719"></a><a name="p6403112617719"></a>size_t</p>
+</td>
+<td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p1258316212714"><a name="p1258316212714"></a><a name="p1258316212714"></a>Length of the distance LUT array.</p>
+</td>
+<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p1658311212279"><a name="p1658311212279"></a><a name="p1658311212279"></a><code>nsq</code> × 16</p>
+</td>
+</tr>
+<tr id="row1276017012420"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p1613312110277"><a name="p1613312110277"></a><a name="p1613312110277"></a>dis_size</p>
+</td>
+<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p1699263912712"><a name="p1699263912712"></a><a name="p1699263912712"></a>size_t</p>
+</td>
+<td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p21335117279"><a name="p21335117279"></a><a name="p21335117279"></a>Size of the distance result array.</p>
+</td>
+<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p41335118277"><a name="p41335118277"></a><a name="p41335118277"></a>The value is <code>64</code>.</p>
+</td>
+</tr>
+<tr id="row157604034212"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p172182719273"><a name="p172182719273"></a><a name="p172182719273"></a>lt_mask_size</p>
+</td>
+<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p119923399274"><a name="p119923399274"></a><a name="p119923399274"></a>size_t</p>
+</td>
+<td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p92127202712"><a name="p92127202712"></a><a name="p92127202712"></a>Length of the array storing filtered and compressed results.</p>
+</td>
+<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p1421327132714"><a name="p1421327132714"></a><a name="p1421327132714"></a>The value is <code>2</code>.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+**Return Value<a name="section49971832106"></a>**
+
+<a name="table17997635100"></a>
+<table><thead align="left"><tr id="row699763141018"><th class="cellrowborder" valign="top" width="40%" id="mcps1.1.3.1.1"><p id="p699793141012"><a name="p699793141012"></a><a name="p699793141012"></a>Data Type</p>
+</th>
+<th class="cellrowborder" valign="top" width="60%" id="mcps1.1.3.1.2"><p id="p1999763141020"><a name="p1999763141020"></a><a name="p1999763141020"></a>Description</p>
+</th>
+</tr>
+</thead>
+<tbody><tr id="row1599716361015"><td class="cellrowborder" valign="top" width="40%" headers="mcps1.1.3.1.1 "><p id="p39970319101"><a name="p39970319101"></a><a name="p39970319101"></a>int</p>
+</td>
+<td class="cellrowborder" valign="top" width="60%" headers="mcps1.1.3.1.2 "><p id="p53461032104518"><a name="p53461032104518"></a><a name="p53461032104518"></a><code>0</code> is returned on successful execution. In case of failure, an error code is returned.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+**Sample**
+
+You can use the `krl_IP_table_lookup_fast_scan_bs32` example as a reference and simply substitute the function call with `krl_IP_table_lookup_fast_scan_bs32_sve2`.
+
+### krl\_L2\_table\_lookup\_fast\_scan\_bs64\_sve2
+
+**Interface Definition**
+
+int krl\_L2\_table\_lookup\_fast\_scan\_bs64\_sve2\(int nsq, const uint8\_t\* codes, const uint8\_t\* LUT, uint16\_t\* dis, uint16\_t threshold, uint32\_t\* lt\_mask, size\_t codes\_size, size\_t LUT\_size, size\_t dis\_size, size\_t lt\_mask\_size\);
+
+**Usage**
+
+SVE2 version of `krl_L2_table_lookup_fast_scan_bs64`.
+
+**Parameters<a name="section157501312135019"></a>**
+
+<a name="table1623016332509"></a>
+<table><thead align="left"><tr id="row823063355012"><th class="cellrowborder" valign="top" width="15.551555155515551%" id="mcps1.1.5.1.1"><p id="p1230333125010"><a name="p1230333125010"></a><a name="p1230333125010"></a>Parameter</p>
+</th>
+<th class="cellrowborder" valign="top" width="14.601460146014599%" id="mcps1.1.5.1.2"><p id="p089311158912"><a name="p089311158912"></a><a name="p089311158912"></a>Data Type</p>
+</th>
+<th class="cellrowborder" valign="top" width="33.97339733973397%" id="mcps1.1.5.1.3"><p id="p4230193313507"><a name="p4230193313507"></a><a name="p4230193313507"></a>Description</p>
+</th>
+<th class="cellrowborder" valign="top" width="35.873587358735875%" id="mcps1.1.5.1.4"><p id="p19887819256"><a name="p19887819256"></a><a name="p19887819256"></a>Value Range</p>
+</th>
+</tr>
+</thead>
+<tbody><tr id="row166241441532"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p262494414531"><a name="p262494414531"></a><a name="p262494414531"></a>nsq</p>
+</td>
+<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p126241544125310"><a name="p126241544125310"></a><a name="p126241544125310"></a>int</p>
+</td>
+<td class="cellrowborder" valign="top" width="33.97339733973397%" headers="mcps1.1.5.1.3 "><p id="p1562414447536"><a name="p1562414447536"></a><a name="p1562414447536"></a>Number of subspaces.</p>
+</td>
+<td class="cellrowborder" valign="top" width="35.873587358735875%" headers="mcps1.1.5.1.4 "><p id="p19624744195313"><a name="p19624744195313"></a><a name="p19624744195313"></a>An even number in [1, 256].</p>
+</td>
+</tr>
+<tr id="row1823023318504"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p14381721205612"><a name="p14381721205612"></a><a name="p14381721205612"></a>codes</p>
+</td>
+<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p7438122115569"><a name="p7438122115569"></a><a name="p7438122115569"></a>const uint8_t*</p>
+</td>
+<td class="cellrowborder" valign="top" width="33.97339733973397%" headers="mcps1.1.5.1.3 "><p id="p18618921124518"><a name="p18618921124518"></a><a name="p18618921124518"></a>Codebook, which stores indexes of base vectors after krl_pack_codes_4b (blocksize=64) processing.</p>
+</td>
+<td class="cellrowborder" valign="top" width="35.873587358735875%" headers="mcps1.1.5.1.4 "><p id="p51251625162911"><a name="p51251625162911"></a><a name="p51251625162911"></a>The size is specified by <code>codes_size</code>.</p>
+</td>
+</tr>
+<tr id="row10982132445420"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p4982142445414"><a name="p4982142445414"></a><a name="p4982142445414"></a>LUT</p>
+</td>
+<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p7532158856"><a name="p7532158856"></a><a name="p7532158856"></a>const uint8_t*</p>
+</td>
+<td class="cellrowborder" valign="top" width="33.97339733973397%" headers="mcps1.1.5.1.3 "><p id="p36611261054"><a name="p36611261054"></a><a name="p36611261054"></a>Distance LUT, which stores the uint8 distances between PQ centroids and query vectors in each subspace.</p>
+</td>
+<td class="cellrowborder" valign="top" width="35.873587358735875%" headers="mcps1.1.5.1.4 "><p id="p85127581355"><a name="p85127581355"></a><a name="p85127581355"></a>The size is specified by <code>LUT_size</code>.</p>
+</td>
+</tr>
+<tr id="row103951453161513"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p14723141215409"><a name="p14723141215409"></a><a name="p14723141215409"></a>dis</p>
+</td>
+<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p4723181210404"><a name="p4723181210404"></a><a name="p4723181210404"></a>uint16_t*</p>
+</td>
+<td class="cellrowborder" valign="top" width="33.97339733973397%" headers="mcps1.1.5.1.3 "><p id="p672341218403"><a name="p672341218403"></a><a name="p672341218403"></a>Stores the distance computation result.</p>
+</td>
+<td class="cellrowborder" valign="top" width="35.873587358735875%" headers="mcps1.1.5.1.4 "><p id="p57801052141013"><a name="p57801052141013"></a><a name="p57801052141013"></a>The size is specified by <code>dis_size</code>. The memory needs to be allocated in advance.</p>
+</td>
+</tr>
+<tr id="row1875218456372"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p275311453374"><a name="p275311453374"></a><a name="p275311453374"></a>threshold</p>
+</td>
+<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p7753045173714"><a name="p7753045173714"></a><a name="p7753045173714"></a>const uint16_t</p>
+</td>
+<td class="cellrowborder" valign="top" width="33.97339733973397%" headers="mcps1.1.5.1.3 "><p id="p17531445103716"><a name="p17531445103716"></a><a name="p17531445103716"></a>Distance threshold.</p>
+</td>
+<td class="cellrowborder" valign="top" width="35.873587358735875%" headers="mcps1.1.5.1.4 "><p id="p748810273302"><a name="p748810273302"></a><a name="p748810273302"></a>The value is <code>65535</code>.</p>
+</td>
+</tr>
+<tr id="row143744955610"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p34370492563"><a name="p34370492563"></a><a name="p34370492563"></a>lt_mask</p>
+</td>
+<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p3437549145616"><a name="p3437549145616"></a><a name="p3437549145616"></a>uint32_t*</p>
+</td>
+<td class="cellrowborder" valign="top" width="33.97339733973397%" headers="mcps1.1.5.1.3 "><p id="p143715495569"><a name="p143715495569"></a><a name="p143715495569"></a>Filtered and compressed results.</p>
+</td>
+<td class="cellrowborder" valign="top" width="35.873587358735875%" headers="mcps1.1.5.1.4 "><p id="p77615321231"><a name="p77615321231"></a><a name="p77615321231"></a>The size is specified by <code>lt_mask_size</code>. The memory needs to be allocated in advance.</p>
+</td>
+</tr>
+<tr id="row1695419558379"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p11681640172619"><a name="p11681640172619"></a><a name="p11681640172619"></a>codes_size</p>
+</td>
+<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p06662231878"><a name="p06662231878"></a><a name="p06662231878"></a>size_t</p>
+</td>
+<td class="cellrowborder" valign="top" width="33.97339733973397%" headers="mcps1.1.5.1.3 "><p id="p16681940142616"><a name="p16681940142616"></a><a name="p16681940142616"></a>Length of the codebook array.</p>
+</td>
+<td class="cellrowborder" valign="top" width="35.873587358735875%" headers="mcps1.1.5.1.4 "><p id="p568184012612"><a name="p568184012612"></a><a name="p568184012612"></a>nsq/2 × 64</p>
+</td>
+</tr>
+<tr id="row15954175511376"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p1258316232715"><a name="p1258316232715"></a><a name="p1258316232715"></a>LUT_size</p>
+</td>
+<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p6403112617719"><a name="p6403112617719"></a><a name="p6403112617719"></a>size_t</p>
+</td>
+<td class="cellrowborder" valign="top" width="33.97339733973397%" headers="mcps1.1.5.1.3 "><p id="p1258316212714"><a name="p1258316212714"></a><a name="p1258316212714"></a>Length of the distance LUT array.</p>
+</td>
+<td class="cellrowborder" valign="top" width="35.873587358735875%" headers="mcps1.1.5.1.4 "><p id="p1658311212279"><a name="p1658311212279"></a><a name="p1658311212279"></a><code>nsq</code> × 16</p>
+</td>
+</tr>
+<tr id="row109541655133713"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p1613312110277"><a name="p1613312110277"></a><a name="p1613312110277"></a>dis_size</p>
+</td>
+<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p1699263912712"><a name="p1699263912712"></a><a name="p1699263912712"></a>size_t</p>
+</td>
+<td class="cellrowborder" valign="top" width="33.97339733973397%" headers="mcps1.1.5.1.3 "><p id="p21335117279"><a name="p21335117279"></a><a name="p21335117279"></a>Size of the distance result array.</p>
+</td>
+<td class="cellrowborder" valign="top" width="35.873587358735875%" headers="mcps1.1.5.1.4 "><p id="p41335118277"><a name="p41335118277"></a><a name="p41335118277"></a>The value is <code>64</code>.</p>
+</td>
+</tr>
+<tr id="row4954455153717"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p172182719273"><a name="p172182719273"></a><a name="p172182719273"></a>lt_mask_size</p>
+</td>
+<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p119923399274"><a name="p119923399274"></a><a name="p119923399274"></a>size_t</p>
+</td>
+<td class="cellrowborder" valign="top" width="33.97339733973397%" headers="mcps1.1.5.1.3 "><p id="p92127202712"><a name="p92127202712"></a><a name="p92127202712"></a>Length of the array storing filtered and compressed results.</p>
+</td>
+<td class="cellrowborder" valign="top" width="35.873587358735875%" headers="mcps1.1.5.1.4 "><p id="p1421327132714"><a name="p1421327132714"></a><a name="p1421327132714"></a>The value is <code>2</code>.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+**Return Value<a name="section49971832106"></a>**
+
+<a name="table17997635100"></a>
+<table><thead align="left"><tr id="row699763141018"><th class="cellrowborder" valign="top" width="40%" id="mcps1.1.3.1.1"><p id="p699793141012"><a name="p699793141012"></a><a name="p699793141012"></a>Data Type</p>
+</th>
+<th class="cellrowborder" valign="top" width="60%" id="mcps1.1.3.1.2"><p id="p1999763141020"><a name="p1999763141020"></a><a name="p1999763141020"></a>Description</p>
+</th>
+</tr>
+</thead>
+<tbody><tr id="row1599716361015"><td class="cellrowborder" valign="top" width="40%" headers="mcps1.1.3.1.1 "><p id="p39970319101"><a name="p39970319101"></a><a name="p39970319101"></a>int</p>
+</td>
+<td class="cellrowborder" valign="top" width="60%" headers="mcps1.1.3.1.2 "><p id="p53461032104518"><a name="p53461032104518"></a><a name="p53461032104518"></a><code>0</code> is returned on successful execution. In case of failure, an error code is returned.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+**Sample**
+
+You can use the `krl_L2_table_lookup_fast_scan_bs64` example as a reference and simply substitute the function call with `krl_L2_table_lookup_fast_scan_bs64_sve2`.
+
+### krl\_IP\_table\_lookup\_fast\_scan\_bs64\_sve2
+
+**Interface Definition**
+
+int krl\_IP\_table\_lookup\_fast\_scan\_bs64\_sve2\(int nsq, const uint8\_t\* codes, const uint8\_t\* LUT, uint16\_t\* dis, uint16\_t threshold, uint32\_t\* lt\_mask, size\_t codes\_size, size\_t LUT\_size, size\_t dis\_size, size\_t lt\_mask\_size\);
+
+**Usage**
+
+SVE2 version of `krl_IP_table_lookup_fast_scan_bs64`.
+
+**Parameters<a name="section157501312135019"></a>**
+
+<a name="table1623016332509"></a>
+<table><thead align="left"><tr id="row823063355012"><th class="cellrowborder" valign="top" width="15.551555155515551%" id="mcps1.1.5.1.1"><p id="p1230333125010"><a name="p1230333125010"></a><a name="p1230333125010"></a>Parameter</p>
+</th>
+<th class="cellrowborder" valign="top" width="14.601460146014599%" id="mcps1.1.5.1.2"><p id="p089311158912"><a name="p089311158912"></a><a name="p089311158912"></a>Data Type</p>
+</th>
+<th class="cellrowborder" valign="top" width="33.99339933993399%" id="mcps1.1.5.1.3"><p id="p4230193313507"><a name="p4230193313507"></a><a name="p4230193313507"></a>Description</p>
+</th>
+<th class="cellrowborder" valign="top" width="35.85358535853585%" id="mcps1.1.5.1.4"><p id="p19887819256"><a name="p19887819256"></a><a name="p19887819256"></a>Value Range</p>
+</th>
+</tr>
+</thead>
+<tbody><tr id="row166241441532"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p262494414531"><a name="p262494414531"></a><a name="p262494414531"></a>nsq</p>
+</td>
+<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p126241544125310"><a name="p126241544125310"></a><a name="p126241544125310"></a>int</p>
+</td>
+<td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p1562414447536"><a name="p1562414447536"></a><a name="p1562414447536"></a>Number of subspaces.</p>
+</td>
+<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p19624744195313"><a name="p19624744195313"></a><a name="p19624744195313"></a>An even number in [1, 256].</p>
+</td>
+</tr>
+<tr id="row1823023318504"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p14381721205612"><a name="p14381721205612"></a><a name="p14381721205612"></a>codes</p>
+</td>
+<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p7438122115569"><a name="p7438122115569"></a><a name="p7438122115569"></a>const uint8_t*</p>
+</td>
+<td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p18618921124518"><a name="p18618921124518"></a><a name="p18618921124518"></a>Codebook, which stores indexes of base vectors after krl_pack_codes_4b (blocksize=64) processing.</p>
+</td>
+<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p51251625162911"><a name="p51251625162911"></a><a name="p51251625162911"></a>The size is specified by <code>codes_size</code>.</p>
+</td>
+</tr>
+<tr id="row10982132445420"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p4982142445414"><a name="p4982142445414"></a><a name="p4982142445414"></a>LUT</p>
+</td>
+<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p7532158856"><a name="p7532158856"></a><a name="p7532158856"></a>const uint8_t*</p>
+</td>
+<td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p36611261054"><a name="p36611261054"></a><a name="p36611261054"></a>Distance LUT, which stores the uint8 distances between product quantization (PQ) centroids and query vectors in each subspace.</p>
+</td>
+<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p85127581355"><a name="p85127581355"></a><a name="p85127581355"></a>The size is specified by <code>LUT_size</code>.</p>
+</td>
+</tr>
+<tr id="row103951453161513"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p14723141215409"><a name="p14723141215409"></a><a name="p14723141215409"></a>dis</p>
+</td>
+<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p4723181210404"><a name="p4723181210404"></a><a name="p4723181210404"></a>uint16_t*</p>
+</td>
+<td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p672341218403"><a name="p672341218403"></a><a name="p672341218403"></a>Stores the distance computation result.</p>
+</td>
+<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p57801052141013"><a name="p57801052141013"></a><a name="p57801052141013"></a>The size is specified by <code>dis_size</code>. The memory needs to be allocated in advance.</p>
+</td>
+</tr>
+<tr id="row1875218456372"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p275311453374"><a name="p275311453374"></a><a name="p275311453374"></a>threshold</p>
+</td>
+<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p7753045173714"><a name="p7753045173714"></a><a name="p7753045173714"></a>const uint16_t</p>
+</td>
+<td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p17531445103716"><a name="p17531445103716"></a><a name="p17531445103716"></a>Distance threshold.</p>
+</td>
+<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p748810273302"><a name="p748810273302"></a><a name="p748810273302"></a>The value is <code>65535</code>.</p>
+</td>
+</tr>
+<tr id="row143744955610"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p34370492563"><a name="p34370492563"></a><a name="p34370492563"></a>lt_mask</p>
+</td>
+<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p3437549145616"><a name="p3437549145616"></a><a name="p3437549145616"></a>uint32_t*</p>
+</td>
+<td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p143715495569"><a name="p143715495569"></a><a name="p143715495569"></a>Filtered and compressed results.</p>
+</td>
+<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p77615321231"><a name="p77615321231"></a><a name="p77615321231"></a>The size is specified by <code>lt_mask_size</code>. The memory needs to be allocated in advance.</p>
+</td>
+</tr>
+<tr id="row177615011429"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p11681640172619"><a name="p11681640172619"></a><a name="p11681640172619"></a>codes_size</p>
+</td>
+<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p06662231878"><a name="p06662231878"></a><a name="p06662231878"></a>size_t</p>
+</td>
+<td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p16681940142616"><a name="p16681940142616"></a><a name="p16681940142616"></a>Length of the codebook array.</p>
+</td>
+<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p568184012612"><a name="p568184012612"></a><a name="p568184012612"></a>nsq/2 × 64</p>
+</td>
+</tr>
+<tr id="row9760006427"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p1258316232715"><a name="p1258316232715"></a><a name="p1258316232715"></a>LUT_size</p>
+</td>
+<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p6403112617719"><a name="p6403112617719"></a><a name="p6403112617719"></a>size_t</p>
+</td>
+<td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p1258316212714"><a name="p1258316212714"></a><a name="p1258316212714"></a>Length of the distance LUT array.</p>
+</td>
+<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p1658311212279"><a name="p1658311212279"></a><a name="p1658311212279"></a><code>nsq</code> × 16</p>
+</td>
+</tr>
+<tr id="row1276017012420"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p1613312110277"><a name="p1613312110277"></a><a name="p1613312110277"></a>dis_size</p>
+</td>
+<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p1699263912712"><a name="p1699263912712"></a><a name="p1699263912712"></a>size_t</p>
+</td>
+<td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p21335117279"><a name="p21335117279"></a><a name="p21335117279"></a>Size of the distance result array.</p>
+</td>
+<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p41335118277"><a name="p41335118277"></a><a name="p41335118277"></a>The value is <code>64</code>.</p>
+</td>
+</tr>
+<tr id="row157604034212"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p172182719273"><a name="p172182719273"></a><a name="p172182719273"></a>lt_mask_size</p>
+</td>
+<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p119923399274"><a name="p119923399274"></a><a name="p119923399274"></a>size_t</p>
+</td>
+<td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p92127202712"><a name="p92127202712"></a><a name="p92127202712"></a>Length of the array storing filtered and compressed results.</p>
+</td>
+<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p1421327132714"><a name="p1421327132714"></a><a name="p1421327132714"></a>The value is <code>2</code>.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+**Return Value<a name="section49971832106"></a>**
+
+<a name="table17997635100"></a>
+<table><thead align="left"><tr id="row699763141018"><th class="cellrowborder" valign="top" width="40%" id="mcps1.1.3.1.1"><p id="p699793141012"><a name="p699793141012"></a><a name="p699793141012"></a>Data Type</p>
+</th>
+<th class="cellrowborder" valign="top" width="60%" id="mcps1.1.3.1.2"><p id="p1999763141020"><a name="p1999763141020"></a><a name="p1999763141020"></a>Description</p>
+</th>
+</tr>
+</thead>
+<tbody><tr id="row1599716361015"><td class="cellrowborder" valign="top" width="40%" headers="mcps1.1.3.1.1 "><p id="p39970319101"><a name="p39970319101"></a><a name="p39970319101"></a>int</p>
+</td>
+<td class="cellrowborder" valign="top" width="60%" headers="mcps1.1.3.1.2 "><p id="p53461032104518"><a name="p53461032104518"></a><a name="p53461032104518"></a><code>0</code> is returned on successful execution. In case of failure, an error code is returned.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+**Sample**
+
+You can use the `krl_IP_table_lookup_fast_scan_bs64` example as a reference and simply substitute the function call with `krl_IP_table_lookup_fast_scan_bs64_sve2`.
+
+### krl\_L2\_table\_lookup\_fast\_scan\_bs96\_sve2
+
+**Interface Definition**
+
+int krl\_L2\_table\_lookup\_fast\_scan\_bs96\_sve2\(int nsq, const uint8\_t\* codes, const uint8\_t\* LUT, uint16\_t\* dis, uint16\_t threshold, uint32\_t\* lt\_mask, size\_t codes\_size, size\_t LUT\_size, size\_t dis\_size, size\_t lt\_mask\_size\);
+
+**Usage**
+
+SVE2 version of `krl_L2_table_lookup_fast_scan_bs96`.
+
+**Parameters<a name="section157501312135019"></a>**
+
+<a name="table1623016332509"></a>
+<table><thead align="left"><tr id="row823063355012"><th class="cellrowborder" valign="top" width="15.551555155515551%" id="mcps1.1.5.1.1"><p id="p1230333125010"><a name="p1230333125010"></a><a name="p1230333125010"></a>Parameter</p>
+</th>
+<th class="cellrowborder" valign="top" width="14.601460146014599%" id="mcps1.1.5.1.2"><p id="p089311158912"><a name="p089311158912"></a><a name="p089311158912"></a>Data Type</p>
+</th>
+<th class="cellrowborder" valign="top" width="33.99339933993399%" id="mcps1.1.5.1.3"><p id="p4230193313507"><a name="p4230193313507"></a><a name="p4230193313507"></a>Description</p>
+</th>
+<th class="cellrowborder" valign="top" width="35.85358535853585%" id="mcps1.1.5.1.4"><p id="p19887819256"><a name="p19887819256"></a><a name="p19887819256"></a>Value Range</p>
+</th>
+</tr>
+</thead>
+<tbody><tr id="row166241441532"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p262494414531"><a name="p262494414531"></a><a name="p262494414531"></a>nsq</p>
+</td>
+<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p126241544125310"><a name="p126241544125310"></a><a name="p126241544125310"></a>int</p>
+</td>
+<td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p1562414447536"><a name="p1562414447536"></a><a name="p1562414447536"></a>Number of subspaces.</p>
+</td>
+<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p19624744195313"><a name="p19624744195313"></a><a name="p19624744195313"></a>An even number in [1, 256].</p>
+</td>
+</tr>
+<tr id="row1823023318504"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p14381721205612"><a name="p14381721205612"></a><a name="p14381721205612"></a>codes</p>
+</td>
+<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p7438122115569"><a name="p7438122115569"></a><a name="p7438122115569"></a>const uint8_t*</p>
+</td>
+<td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p18438121155616"><a name="p18438121155616"></a><a name="p18438121155616"></a>Codebook, which stores indexes of base vectors after krl_pack_codes_4b (blocksize=96) processing.</p>
+</td>
+<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p51251625162911"><a name="p51251625162911"></a><a name="p51251625162911"></a>The size is specified by <code>codes_size</code>.</p>
+</td>
+</tr>
+<tr id="row10982132445420"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p4982142445414"><a name="p4982142445414"></a><a name="p4982142445414"></a>LUT</p>
+</td>
+<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p7532158856"><a name="p7532158856"></a><a name="p7532158856"></a>const uint8_t*</p>
+</td>
+<td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p36611261054"><a name="p36611261054"></a><a name="p36611261054"></a>Distance LUT, which stores the uint8 distances between product quantization (PQ) centroids and query vectors in each subspace.</p>
+</td>
+<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p85127581355"><a name="p85127581355"></a><a name="p85127581355"></a>The size is specified by <code>LUT_size</code>.</p>
+</td>
+</tr>
+<tr id="row103951453161513"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p14723141215409"><a name="p14723141215409"></a><a name="p14723141215409"></a>dis</p>
+</td>
+<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p4723181210404"><a name="p4723181210404"></a><a name="p4723181210404"></a>uint16_t*</p>
+</td>
+<td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p672341218403"><a name="p672341218403"></a><a name="p672341218403"></a>Stores the distance computation result.</p>
+</td>
+<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p57801052141013"><a name="p57801052141013"></a><a name="p57801052141013"></a>The size is specified by <code>dis_size</code>. The memory needs to be allocated in advance.</p>
+</td>
+</tr>
+<tr id="row1875218456372"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p275311453374"><a name="p275311453374"></a><a name="p275311453374"></a>threshold</p>
+</td>
+<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p7753045173714"><a name="p7753045173714"></a><a name="p7753045173714"></a>const uint16_t</p>
+</td>
+<td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p17531445103716"><a name="p17531445103716"></a><a name="p17531445103716"></a>Distance threshold.</p>
+</td>
+<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p748810273302"><a name="p748810273302"></a><a name="p748810273302"></a>The value is <code>65535</code>.</p>
+</td>
+</tr>
+<tr id="row143744955610"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p34370492563"><a name="p34370492563"></a><a name="p34370492563"></a>lt_mask</p>
+</td>
+<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p3437549145616"><a name="p3437549145616"></a><a name="p3437549145616"></a>uint32_t*</p>
+</td>
+<td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p143715495569"><a name="p143715495569"></a><a name="p143715495569"></a>Filtered and compressed results.</p>
+</td>
+<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p77615321231"><a name="p77615321231"></a><a name="p77615321231"></a>The size is specified by <code>lt_mask_size</code>. The memory needs to be allocated in advance.</p>
+</td>
+</tr>
+<tr id="row02162634718"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p11681640172619"><a name="p11681640172619"></a><a name="p11681640172619"></a>codes_size</p>
+</td>
+<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p06662231878"><a name="p06662231878"></a><a name="p06662231878"></a>size_t</p>
+</td>
+<td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p16681940142616"><a name="p16681940142616"></a><a name="p16681940142616"></a>Length of the codebook array.</p>
+</td>
+<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p568184012612"><a name="p568184012612"></a><a name="p568184012612"></a>nsq/2 × 96</p>
+</td>
+</tr>
+<tr id="row11211726184714"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p1258316232715"><a name="p1258316232715"></a><a name="p1258316232715"></a>LUT_size</p>
+</td>
+<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p6403112617719"><a name="p6403112617719"></a><a name="p6403112617719"></a>size_t</p>
+</td>
+<td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p1258316212714"><a name="p1258316212714"></a><a name="p1258316212714"></a>Length of the distance LUT array.</p>
+</td>
+<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p1658311212279"><a name="p1658311212279"></a><a name="p1658311212279"></a><code>nsq</code> × 16</p>
+</td>
+</tr>
+<tr id="row172114262476"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p1613312110277"><a name="p1613312110277"></a><a name="p1613312110277"></a>dis_size</p>
+</td>
+<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p1699263912712"><a name="p1699263912712"></a><a name="p1699263912712"></a>size_t</p>
+</td>
+<td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p21335117279"><a name="p21335117279"></a><a name="p21335117279"></a>Size of the distance result array.</p>
+</td>
+<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p41335118277"><a name="p41335118277"></a><a name="p41335118277"></a>The value is <code>96</code>.</p>
+</td>
+</tr>
+<tr id="row11201326164720"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p172182719273"><a name="p172182719273"></a><a name="p172182719273"></a>lt_mask_size</p>
+</td>
+<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p119923399274"><a name="p119923399274"></a><a name="p119923399274"></a>size_t</p>
+</td>
+<td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p92127202712"><a name="p92127202712"></a><a name="p92127202712"></a>Length of the array storing filtered and compressed results.</p>
+</td>
+<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p1421327132714"><a name="p1421327132714"></a><a name="p1421327132714"></a>The value is <code>3</code>.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+**Return Value<a name="section49971832106"></a>**
+
+<a name="table17997635100"></a>
+<table><thead align="left"><tr id="row699763141018"><th class="cellrowborder" valign="top" width="40%" id="mcps1.1.3.1.1"><p id="p699793141012"><a name="p699793141012"></a><a name="p699793141012"></a>Data Type</p>
+</th>
+<th class="cellrowborder" valign="top" width="60%" id="mcps1.1.3.1.2"><p id="p1999763141020"><a name="p1999763141020"></a><a name="p1999763141020"></a>Description</p>
+</th>
+</tr>
+</thead>
+<tbody><tr id="row1599716361015"><td class="cellrowborder" valign="top" width="40%" headers="mcps1.1.3.1.1 "><p id="p39970319101"><a name="p39970319101"></a><a name="p39970319101"></a>int</p>
+</td>
+<td class="cellrowborder" valign="top" width="60%" headers="mcps1.1.3.1.2 "><p id="p53461032104518"><a name="p53461032104518"></a><a name="p53461032104518"></a><code>0</code> is returned on successful execution. In case of failure, an error code is returned.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+**Sample**
+
+You can use the `krl_L2_table_lookup_fast_scan_bs96` example as a reference and simply substitute the function call with `krl_L2_table_lookup_fast_scan_bs96_sve2`.
+
+### krl\_IP\_table\_lookup\_fast\_scan\_bs96\_sve2
+
+**Interface Definition**
+
+int krl\_IP\_table\_lookup\_fast\_scan\_bs96\_sve2\(int nsq, const uint8\_t\* codes, const uint8\_t\* LUT, uint16\_t\* dis, uint16\_t threshold, uint32\_t\* lt\_mask, size\_t codes\_size, size\_t LUT\_size, size\_t dis\_size, size\_t lt\_mask\_size\);
+
+**Usage**
+
+SVE2 version of `krl_IP_table_lookup_fast_scan_bs96`.
+
+**Parameters<a name="section157501312135019"></a>**
+
+<a name="table1623016332509"></a>
+<table><thead align="left"><tr id="row823063355012"><th class="cellrowborder" valign="top" width="15.551555155515551%" id="mcps1.1.5.1.1"><p id="p1230333125010"><a name="p1230333125010"></a><a name="p1230333125010"></a>Parameter</p>
+</th>
+<th class="cellrowborder" valign="top" width="14.601460146014599%" id="mcps1.1.5.1.2"><p id="p089311158912"><a name="p089311158912"></a><a name="p089311158912"></a>Data Type</p>
+</th>
+<th class="cellrowborder" valign="top" width="33.903390339033905%" id="mcps1.1.5.1.3"><p id="p4230193313507"><a name="p4230193313507"></a><a name="p4230193313507"></a>Description</p>
+</th>
+<th class="cellrowborder" valign="top" width="35.94359435943594%" id="mcps1.1.5.1.4"><p id="p19887819256"><a name="p19887819256"></a><a name="p19887819256"></a>Value Range</p>
+</th>
+</tr>
+</thead>
+<tbody><tr id="row166241441532"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p262494414531"><a name="p262494414531"></a><a name="p262494414531"></a>nsq</p>
+</td>
+<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p126241544125310"><a name="p126241544125310"></a><a name="p126241544125310"></a>int</p>
+</td>
+<td class="cellrowborder" valign="top" width="33.903390339033905%" headers="mcps1.1.5.1.3 "><p id="p1562414447536"><a name="p1562414447536"></a><a name="p1562414447536"></a>Number of subspaces.</p>
+</td>
+<td class="cellrowborder" valign="top" width="35.94359435943594%" headers="mcps1.1.5.1.4 "><p id="p19624744195313"><a name="p19624744195313"></a><a name="p19624744195313"></a>An even number in [1, 256].</p>
+</td>
+</tr>
+<tr id="row1823023318504"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p14381721205612"><a name="p14381721205612"></a><a name="p14381721205612"></a>codes</p>
+</td>
+<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p7438122115569"><a name="p7438122115569"></a><a name="p7438122115569"></a>const uint8_t*</p>
+</td>
+<td class="cellrowborder" valign="top" width="33.903390339033905%" headers="mcps1.1.5.1.3 "><p id="p18438121155616"><a name="p18438121155616"></a><a name="p18438121155616"></a>Codebook, which stores indexes of base vectors after krl_pack_codes_4b (blocksize=96) processing.</p>
+</td>
+<td class="cellrowborder" valign="top" width="35.94359435943594%" headers="mcps1.1.5.1.4 "><p id="p51251625162911"><a name="p51251625162911"></a><a name="p51251625162911"></a>The size is specified by <code>codes_size</code>.</p>
+</td>
+</tr>
+<tr id="row10982132445420"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p4982142445414"><a name="p4982142445414"></a><a name="p4982142445414"></a>LUT</p>
+</td>
+<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p7532158856"><a name="p7532158856"></a><a name="p7532158856"></a>const uint8_t*</p>
+</td>
+<td class="cellrowborder" valign="top" width="33.903390339033905%" headers="mcps1.1.5.1.3 "><p id="p36611261054"><a name="p36611261054"></a><a name="p36611261054"></a>Distance LUT, which stores the uint8 distances between product quantization (PQ) centroids and query vectors in each subspace.</p>
+</td>
+<td class="cellrowborder" valign="top" width="35.94359435943594%" headers="mcps1.1.5.1.4 "><p id="p85127581355"><a name="p85127581355"></a><a name="p85127581355"></a>The size is specified by <code>LUT_size</code>.</p>
+</td>
+</tr>
+<tr id="row103951453161513"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p14723141215409"><a name="p14723141215409"></a><a name="p14723141215409"></a>dis</p>
+</td>
+<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p4723181210404"><a name="p4723181210404"></a><a name="p4723181210404"></a>uint16_t*</p>
+</td>
+<td class="cellrowborder" valign="top" width="33.903390339033905%" headers="mcps1.1.5.1.3 "><p id="p672341218403"><a name="p672341218403"></a><a name="p672341218403"></a>Stores the distance computation result.</p>
+</td>
+<td class="cellrowborder" valign="top" width="35.94359435943594%" headers="mcps1.1.5.1.4 "><p id="p57801052141013"><a name="p57801052141013"></a><a name="p57801052141013"></a>The size is specified by <code>dis_size</code>. The memory needs to be allocated in advance.</p>
+</td>
+</tr>
+<tr id="row1875218456372"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p275311453374"><a name="p275311453374"></a><a name="p275311453374"></a>threshold</p>
+</td>
+<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p7753045173714"><a name="p7753045173714"></a><a name="p7753045173714"></a>const uint16_t</p>
+</td>
+<td class="cellrowborder" valign="top" width="33.903390339033905%" headers="mcps1.1.5.1.3 "><p id="p17531445103716"><a name="p17531445103716"></a><a name="p17531445103716"></a>Distance threshold.</p>
+</td>
+<td class="cellrowborder" valign="top" width="35.94359435943594%" headers="mcps1.1.5.1.4 "><p id="p748810273302"><a name="p748810273302"></a><a name="p748810273302"></a>The value is <code>65535</code>.</p>
+</td>
+</tr>
+<tr id="row143744955610"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p34370492563"><a name="p34370492563"></a><a name="p34370492563"></a>lt_mask</p>
+</td>
+<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p3437549145616"><a name="p3437549145616"></a><a name="p3437549145616"></a>uint32_t*</p>
+</td>
+<td class="cellrowborder" valign="top" width="33.903390339033905%" headers="mcps1.1.5.1.3 "><p id="p143715495569"><a name="p143715495569"></a><a name="p143715495569"></a>Filtered and compressed results.</p>
+</td>
+<td class="cellrowborder" valign="top" width="35.94359435943594%" headers="mcps1.1.5.1.4 "><p id="p77615321231"><a name="p77615321231"></a><a name="p77615321231"></a>The size is specified by <code>lt_mask_size</code>. The memory needs to be allocated in advance.</p>
+</td>
+</tr>
+<tr id="row3115131755217"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p11681640172619"><a name="p11681640172619"></a><a name="p11681640172619"></a>codes_size</p>
+</td>
+<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p06662231878"><a name="p06662231878"></a><a name="p06662231878"></a>size_t</p>
+</td>
+<td class="cellrowborder" valign="top" width="35.94359435943594%" headers="mcps1.1.5.1.3 "><p id="p16681940142616"><a name="p16681940142616"></a><a name="p16681940142616"></a>Length of the codebook array.</p>
+</td>
+<td class="cellrowborder" valign="top" width="35.94359435943594%" headers="mcps1.1.5.1.4 "><p id="p568184012612"><a name="p568184012612"></a><a name="p568184012612"></a>nsq/2 × 96</p>
+</td>
+</tr>
+<tr id="row511551717527"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p1258316232715"><a name="p1258316232715"></a><a name="p1258316232715"></a>LUT_size</p>
+</td>
+<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p6403112617719"><a name="p6403112617719"></a><a name="p6403112617719"></a>size_t</p>
+</td>
+<td class="cellrowborder" valign="top" width="33.903390339033905%" headers="mcps1.1.5.1.3 "><p id="p1258316212714"><a name="p1258316212714"></a><a name="p1258316212714"></a>Length of the distance LUT array.</p>
+</td>
+<td class="cellrowborder" valign="top" width="35.94359435943594%" headers="mcps1.1.5.1.4 "><p id="p1658311212279"><a name="p1658311212279"></a><a name="p1658311212279"></a><code>nsq</code> × 16</p>
+</td>
+</tr>
+<tr id="row11115201711529"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p1613312110277"><a name="p1613312110277"></a><a name="p1613312110277"></a>dis_size</p>
+</td>
+<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p1699263912712"><a name="p1699263912712"></a><a name="p1699263912712"></a>size_t</p>
+</td>
+<td class="cellrowborder" valign="top" width="33.903390339033905%" headers="mcps1.1.5.1.3 "><p id="p21335117279"><a name="p21335117279"></a><a name="p21335117279"></a>Size of the distance result array.</p>
+</td>
+<td class="cellrowborder" valign="top" width="35.94359435943594%" headers="mcps1.1.5.1.4 "><p id="p41335118277"><a name="p41335118277"></a><a name="p41335118277"></a>The value is <code>96</code>.</p>
+</td>
+</tr>
+<tr id="row111141217155212"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p172182719273"><a name="p172182719273"></a><a name="p172182719273"></a>lt_mask_size</p>
+</td>
+<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p119923399274"><a name="p119923399274"></a><a name="p119923399274"></a>size_t</p>
+</td>
+<td class="cellrowborder" valign="top" width="33.903390339033905%" headers="mcps1.1.5.1.3 "><p id="p92127202712"><a name="p92127202712"></a><a name="p92127202712"></a>Length of the array storing filtered and compressed results.</p>
+</td>
+<td class="cellrowborder" valign="top" width="35.94359435943594%" headers="mcps1.1.5.1.4 "><p id="p1421327132714"><a name="p1421327132714"></a><a name="p1421327132714"></a>The value is <code>3</code>.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+**Return Value<a name="section49971832106"></a>**
+
+<a name="table17997635100"></a>
+<table><thead align="left"><tr id="row699763141018"><th class="cellrowborder" valign="top" width="40%" id="mcps1.1.3.1.1"><p id="p699793141012"><a name="p699793141012"></a><a name="p699793141012"></a>Data Type</p>
+</th>
+<th class="cellrowborder" valign="top" width="60%" id="mcps1.1.3.1.2"><p id="p1999763141020"><a name="p1999763141020"></a><a name="p1999763141020"></a>Description</p>
+</th>
+</tr>
+</thead>
+<tbody><tr id="row1599716361015"><td class="cellrowborder" valign="top" width="40%" headers="mcps1.1.3.1.1 "><p id="p39970319101"><a name="p39970319101"></a><a name="p39970319101"></a>int</p>
+</td>
+<td class="cellrowborder" valign="top" width="60%" headers="mcps1.1.3.1.2 "><p id="p53461032104518"><a name="p53461032104518"></a><a name="p53461032104518"></a><code>0</code> is returned on successful execution. In case of failure, an error code is returned.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+**Sample**
+
+You can use the `krl_IP_table_lookup_fast_scan_bs96` example as a reference and simply substitute the function call with `krl_IP_table_lookup_fast_scan_bs96_sve2`.
+
 ### krl\_table\_lookup\_4b\_f16
 
-**Interface Definition <a name="section172317194488"></a>**
+**API Definition<a name="section172317194488"></a>**
 
 int krl\_table\_lookup\_4b\_f16\(size\_t nsq, size\_t ncode, const uint8\_t\* codes, const uint16\_t\* LUT, float\* dis, uint16\_t dis0, size\_t codes\_size, size\_t LUT\_size, size\_t dis\_size\);
 
@@ -6217,7 +8083,7 @@ An operator designed for 4-bit table lookup, accumulation, filtering, and compre
 </td>
 <td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p543720213125"><a name="p543720213125"></a><a name="p543720213125"></a>Total number of base vectors.</p>
 </td>
-<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p743792191219"><a name="p743792191219"></a><a name="p743792191219"></a>[1, 2^30-1]</p>
+<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p743792191219"><a name="p743792191219"></a><a name="p743792191219"></a>[1,2^30-1]</p>
 </td>
 </tr>
 <tr id="row1823023318504"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p14381721205612"><a name="p14381721205612"></a><a name="p14381721205612"></a>codes</p>
@@ -6286,7 +8152,7 @@ An operator designed for 4-bit table lookup, accumulation, filtering, and compre
 </tbody>
 </table>
 
-**Return Values<a name="section49971832106"></a>**
+**Return Value<a name="section49971832106"></a>**
 
 <a name="table17997635100"></a>
 <table><thead align="left"><tr id="row699763141018"><th class="cellrowborder" valign="top" width="40%" id="mcps1.1.3.1.1"><p id="p699793141012"><a name="p699793141012"></a><a name="p699793141012"></a>Data Type</p>
@@ -6297,13 +8163,13 @@ An operator designed for 4-bit table lookup, accumulation, filtering, and compre
 </thead>
 <tbody><tr id="row1599716361015"><td class="cellrowborder" valign="top" width="40%" headers="mcps1.1.3.1.1 "><p id="p39970319101"><a name="p39970319101"></a><a name="p39970319101"></a>int</p>
 </td>
-<td class="cellrowborder" valign="top" width="60%" headers="mcps1.1.3.1.2 "><p id="p53461032104518"><a name="p53461032104518"></a><a name="p53461032104518"></a><code>0</code> is returned on successful execution. In case of failure, an error code is returned to indicate the specific issue.</p>
+<td class="cellrowborder" valign="top" width="60%" headers="mcps1.1.3.1.2 "><p id="p53461032104518"><a name="p53461032104518"></a><a name="p53461032104518"></a><code>0</code> is returned on successful execution. In case of failure, an error code is returned.</p>
 </td>
 </tr>
 </tbody>
 </table>
 
-**Example**
+**Sample**
 
 ```c
 #include <stdio.h>
@@ -6383,13 +8249,13 @@ cleanup:
 
 ### krl\_pack\_codes\_4b
 
-**Interface Definition <a name="section172317194488"></a>**
+**API Definition<a name="section172317194488"></a>**
 
 int krl\_pack\_codes\_4b\(const uint8\_t\* codes, size\_t ncode, size\_t nsq, uint8\_t\* blocks, size\_t batchsize, int dim\_cross, size\_t codes\_size, size\_t blocks\_size\);
 
 **Function<a name="section1153124784912"></a>**
 
-An operator designed for 4-bit table lookup, accumulation, filtering, and compression. It is used for processing fp16 query vectors individually. It computes distances between a query vector and multiple base vectors using inner product. The initial distance is <code>dis\_f16</code>. This interface does not perform filtering or compression (that is, comparison with the threshold).
+Pack the original 4-bit codebook data to enable fast table lookup computation.
 
 **Parameters<a name="section157501312135019"></a>**
 
@@ -6419,7 +8285,7 @@ An operator designed for 4-bit table lookup, accumulation, filtering, and compre
 </td>
 <td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p287382118190"><a name="p287382118190"></a><a name="p287382118190"></a>Total number of base vectors.</p>
 </td>
-<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p79885872519"><a name="p79885872519"></a><a name="p79885872519"></a>[1, 2^30-1]</p>
+<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p79885872519"><a name="p79885872519"></a><a name="p79885872519"></a>[1,2^30-1]</p>
 </td>
 </tr>
 <tr id="row18840143271918"><td class="cellrowborder" valign="top" width="15.541554155415543%" headers="mcps1.1.5.1.1 "><p id="p4840832111916"><a name="p4840832111916"></a><a name="p4840832111916"></a>nsq</p>
@@ -6428,7 +8294,7 @@ An operator designed for 4-bit table lookup, accumulation, filtering, and compre
 </td>
 <td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p08401632111917"><a name="p08401632111917"></a><a name="p08401632111917"></a>Number of subspaces.</p>
 </td>
-<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p20840123241914"><a name="p20840123241914"></a><a name="p20840123241914"></a>[1, 65535]</p>
+<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p20840123241914"><a name="p20840123241914"></a><a name="p20840123241914"></a>[1,65535]</p>
 </td>
 </tr>
 <tr id="row10982132445420"><td class="cellrowborder" valign="top" width="15.541554155415543%" headers="mcps1.1.5.1.1 "><p id="p734604031220"><a name="p734604031220"></a><a name="p734604031220"></a>blocks</p>
@@ -6489,7 +8355,7 @@ An operator designed for 4-bit table lookup, accumulation, filtering, and compre
 </tbody>
 </table>
 
-**Return Values<a name="section49971832106"></a>**
+**Return Value<a name="section49971832106"></a>**
 
 <a name="table17997635100"></a>
 <table><thead align="left"><tr id="row699763141018"><th class="cellrowborder" valign="top" width="40%" id="mcps1.1.3.1.1"><p id="p699793141012"><a name="p699793141012"></a><a name="p699793141012"></a>Data Type</p>
@@ -6500,13 +8366,13 @@ An operator designed for 4-bit table lookup, accumulation, filtering, and compre
 </thead>
 <tbody><tr id="row1599716361015"><td class="cellrowborder" valign="top" width="40%" headers="mcps1.1.3.1.1 "><p id="p39970319101"><a name="p39970319101"></a><a name="p39970319101"></a>int</p>
 </td>
-<td class="cellrowborder" valign="top" width="60%" headers="mcps1.1.3.1.2 "><p id="p53461032104518"><a name="p53461032104518"></a><a name="p53461032104518"></a><code>0</code> is returned on successful execution. In case of failure, an error code is returned to indicate the specific issue.</p>
+<td class="cellrowborder" valign="top" width="60%" headers="mcps1.1.3.1.2 "><p id="p53461032104518"><a name="p53461032104518"></a><a name="p53461032104518"></a><code>0</code> is returned on successful execution. In case of failure, an error code is returned.</p>
 </td>
 </tr>
 </tbody>
 </table>
 
-**Example**
+**Sample**
 
 ```c
 #include <stdio.h>
@@ -6515,7 +8381,7 @@ An operator designed for 4-bit table lookup, accumulation, filtering, and compre
 #include "krl.h"
 
 int main() {
-    // Parameter configuration
+    // Set parameters.
     size_t ncode = 10000; // Total number of base vectors
     size_t nsq = 64;        // Number of subspaces
     size_t batchsize = 64; // Block size (corresponding to the bs64 API)
@@ -6577,7 +8443,7 @@ cleanup:
 
 ### krl\_reorder\_2\_vector
 
-**Interface Definition <a name="section172317194488"></a>**
+**API Definition<a name="section172317194488"></a>**
 
 int krl\_reorder\_2\_vector\(const KRLDistanceHandle\* kdh, int64\_t base\_k, float\* base\_dis, int64\_t\* base\_idx, const float\* query\_vector, int64\_t k, float\* dis, int64\_t\* idx, size\_t query\_vector\_size\);
 
@@ -6682,7 +8548,7 @@ Computes high-accuracy distances between a single query vector and multiple non-
 </tbody>
 </table>
 
-**Return Values<a name="section49971832106"></a>**
+**Return Value<a name="section49971832106"></a>**
 
 <a name="table17997635100"></a>
 <table><thead align="left"><tr id="row699763141018"><th class="cellrowborder" valign="top" width="40%" id="mcps1.1.3.1.1"><p id="p699793141012"><a name="p699793141012"></a><a name="p699793141012"></a>Data Type</p>
@@ -6693,13 +8559,13 @@ Computes high-accuracy distances between a single query vector and multiple non-
 </thead>
 <tbody><tr id="row1599716361015"><td class="cellrowborder" valign="top" width="40%" headers="mcps1.1.3.1.1 "><p id="p39970319101"><a name="p39970319101"></a><a name="p39970319101"></a>int</p>
 </td>
-<td class="cellrowborder" valign="top" width="60%" headers="mcps1.1.3.1.2 "><p id="p53461032104518"><a name="p53461032104518"></a><a name="p53461032104518"></a><code>0</code> is returned on successful execution. In case of failure, an error code is returned to indicate the specific issue.</p>
+<td class="cellrowborder" valign="top" width="60%" headers="mcps1.1.3.1.2 "><p id="p53461032104518"><a name="p53461032104518"></a><a name="p53461032104518"></a><code>0</code> is returned on successful execution. In case of failure, an error code is returned.</p>
 </td>
 </tr>
 </tbody>
 </table>
 
-**Example**
+**Sample**
 
 ```c
 #include <stdio.h>
@@ -6707,7 +8573,7 @@ Computes high-accuracy distances between a single query vector and multiple non-
 #include "krl.h"
 
 int main() {
-    // Parameter configuration
+    // Set parameters.
     size_t dim = 128; // Vector dimension
     size_t codes_num = 100000;  // Total number of base vectors
     int64_t base_k = 100;       // Number of candidate points returned in low-accuracy retrieval
@@ -6799,7 +8665,7 @@ cleanup:
 
 ### krl\_reorder\_2\_vector\_continuous
 
-**Interface Definition <a name="section172317194488"></a>**
+**API Definition<a name="section172317194488"></a>**
 
 int krl\_reorder\_2\_vector\_continuous\(const KRLDistanceHandle\* kdh, int64\_t base\_k, int64\_t begin\_id, const float\* query\_vector, int64\_t k, float\* dis, int64\_t\* idx, size\_t query\_vector\_size\);
 
@@ -6895,7 +8761,7 @@ Computes high-accuracy distances between a single query vector and multiple cont
 </tbody>
 </table>
 
-**Return Values<a name="section49971832106"></a>**
+**Return Value<a name="section49971832106"></a>**
 
 <a name="table17997635100"></a>
 <table><thead align="left"><tr id="row699763141018"><th class="cellrowborder" valign="top" width="40%" id="mcps1.1.3.1.1"><p id="p699793141012"><a name="p699793141012"></a><a name="p699793141012"></a>Data Type</p>
@@ -6906,13 +8772,13 @@ Computes high-accuracy distances between a single query vector and multiple cont
 </thead>
 <tbody><tr id="row1599716361015"><td class="cellrowborder" valign="top" width="40%" headers="mcps1.1.3.1.1 "><p id="p39970319101"><a name="p39970319101"></a><a name="p39970319101"></a>int</p>
 </td>
-<td class="cellrowborder" valign="top" width="60%" headers="mcps1.1.3.1.2 "><p id="p53461032104518"><a name="p53461032104518"></a><a name="p53461032104518"></a><code>0</code> is returned on successful execution. In case of failure, an error code is returned to indicate the specific issue.</p>
+<td class="cellrowborder" valign="top" width="60%" headers="mcps1.1.3.1.2 "><p id="p53461032104518"><a name="p53461032104518"></a><a name="p53461032104518"></a><code>0</code> is returned on successful execution. In case of failure, an error code is returned.</p>
 </td>
 </tr>
 </tbody>
 </table>
 
-**Example**
+**Sample**
 
 ```c
 #include <stdio.h>
@@ -6920,7 +8786,7 @@ Computes high-accuracy distances between a single query vector and multiple cont
 #include "krl.h"
 
 int main() {
-    // Parameter configuration
+    // Set parameters.
     size_t dim = 128;
     size_t codes_num = 100000;
     int64_t base_k = 1000;      // Number of consecutive candidate points
@@ -7000,7 +8866,7 @@ cleanup:
 
 ### krl\_store\_LUT8Handle
 
-**Interface Definition <a name="section172317194488"></a>**
+**API Definition<a name="section172317194488"></a>**
 
 int krl\_store\_LUT8Handle\(FILE\* f, const KRLLUT8bHandle\* klh\);
 
@@ -7042,7 +8908,7 @@ Stores the handle of an 8-bit lookup table into a file.
 </tbody>
 </table>
 
-**Return Values<a name="section49971832106"></a>**
+**Return Value<a name="section49971832106"></a>**
 
 <a name="table17997635100"></a>
 <table><thead align="left"><tr id="row699763141018"><th class="cellrowborder" valign="top" width="40%" id="mcps1.1.3.1.1"><p id="p699793141012"><a name="p699793141012"></a><a name="p699793141012"></a>Data Type</p>
@@ -7053,13 +8919,13 @@ Stores the handle of an 8-bit lookup table into a file.
 </thead>
 <tbody><tr id="row1599716361015"><td class="cellrowborder" valign="top" width="40%" headers="mcps1.1.3.1.1 "><p id="p39970319101"><a name="p39970319101"></a><a name="p39970319101"></a>int</p>
 </td>
-<td class="cellrowborder" valign="top" width="60%" headers="mcps1.1.3.1.2 "><p id="p53461032104518"><a name="p53461032104518"></a><a name="p53461032104518"></a><code>0</code> is returned on successful execution. In case of failure, an error code is returned to indicate the specific issue.</p>
+<td class="cellrowborder" valign="top" width="60%" headers="mcps1.1.3.1.2 "><p id="p53461032104518"><a name="p53461032104518"></a><a name="p53461032104518"></a><code>0</code> is returned on successful execution. In case of failure, an error code is returned.</p>
 </td>
 </tr>
 </tbody>
 </table>
 
-**Example**
+**Sample**
 
 ```c
 #include <stdio.h>
@@ -7157,7 +9023,7 @@ int main() {
 
 ### krl\_build\_LUT8Handle\_fromfile
 
-**Interface Definition <a name="section172317194488"></a>**
+**API Definition<a name="section172317194488"></a>**
 
 int krl\_build\_LUT8Handle\_fromfile\(FILE\* f, KRLLUT8bHandle\*\* klh\);
 
@@ -7199,7 +9065,7 @@ Reads data of an 8-bit lookup table from a file and rebuilds a handle.
 </tbody>
 </table>
 
-**Return Values<a name="section49971832106"></a>**
+**Return Value<a name="section49971832106"></a>**
 
 <a name="table17997635100"></a>
 <table><thead align="left"><tr id="row699763141018"><th class="cellrowborder" valign="top" width="40%" id="mcps1.1.3.1.1"><p id="p699793141012"><a name="p699793141012"></a><a name="p699793141012"></a>Data Type</p>
@@ -7210,13 +9076,13 @@ Reads data of an 8-bit lookup table from a file and rebuilds a handle.
 </thead>
 <tbody><tr id="row1599716361015"><td class="cellrowborder" valign="top" width="40%" headers="mcps1.1.3.1.1 "><p id="p39970319101"><a name="p39970319101"></a><a name="p39970319101"></a>int</p>
 </td>
-<td class="cellrowborder" valign="top" width="60%" headers="mcps1.1.3.1.2 "><p id="p53461032104518"><a name="p53461032104518"></a><a name="p53461032104518"></a><code>0</code> is returned on successful execution. In case of failure, an error code is returned to indicate the specific issue.</p>
+<td class="cellrowborder" valign="top" width="60%" headers="mcps1.1.3.1.2 "><p id="p53461032104518"><a name="p53461032104518"></a><a name="p53461032104518"></a><code>0</code> is returned on successful execution. In case of failure, an error code is returned.</p>
 </td>
 </tr>
 </tbody>
 </table>
 
-**Example**
+**Sample**
 
 ```c
 #include <stdio.h>
@@ -7305,7 +9171,7 @@ int main() {
         printf("  idx[%zu] = %zu\n", i, loaded_idx[i]);
     }
 
-    // Clean up
+    // Cleanup
     krl_clean_LUT8b_handle(&klh);
     
     return 0;
@@ -7314,7 +9180,7 @@ int main() {
 
 ### krl\_store\_distanceHandle
 
-**Interface Definition <a name="section172317194488"></a>**
+**API Definition<a name="section172317194488"></a>**
 
 int krl\_store\_distanceHandle\(FILE\* f, const KRLDistanceHandle\* kdh\);
 
@@ -7356,7 +9222,7 @@ Stores the handle for distance computation into a file.
 </tbody>
 </table>
 
-**Return Values<a name="section49971832106"></a>**
+**Return Value<a name="section49971832106"></a>**
 
 <a name="table17997635100"></a>
 <table><thead align="left"><tr id="row699763141018"><th class="cellrowborder" valign="top" width="40%" id="mcps1.1.3.1.1"><p id="p699793141012"><a name="p699793141012"></a><a name="p699793141012"></a>Data Type</p>
@@ -7367,13 +9233,13 @@ Stores the handle for distance computation into a file.
 </thead>
 <tbody><tr id="row1599716361015"><td class="cellrowborder" valign="top" width="40%" headers="mcps1.1.3.1.1 "><p id="p39970319101"><a name="p39970319101"></a><a name="p39970319101"></a>int</p>
 </td>
-<td class="cellrowborder" valign="top" width="60%" headers="mcps1.1.3.1.2 "><p id="p53461032104518"><a name="p53461032104518"></a><a name="p53461032104518"></a><code>0</code> is returned on successful execution. In case of failure, an error code is returned to indicate the specific issue.</p>
+<td class="cellrowborder" valign="top" width="60%" headers="mcps1.1.3.1.2 "><p id="p53461032104518"><a name="p53461032104518"></a><a name="p53461032104518"></a><code>0</code> is returned on successful execution. In case of failure, an error code is returned.</p>
 </td>
 </tr>
 </tbody>
 </table>
 
-**Example**
+**Sample**
 
 ```c
 #include <stdio.h>
@@ -7383,210 +9249,7 @@ Stores the handle for distance computation into a file.
 int main() {
     const char* filename = "distance_handle.bin";
     
-    // Parameter configuration
-    size_t dim = 128;
-    size_t ny = 10000;
-    int metric_type = 0;  // L2 distance
-
-    // Prepare base vectors.
-    float* base_vectors = (float*)malloc(ny * dim * sizeof(float));
-    for (size_t i = 0; i < ny * dim; i++) {
-        base_vectors[i] = (float)(rand() % 1000) / 100.0f;
-    }
-
-    // Create a handle.
-    KRLDistanceHandle* kdh = NULL;
-    int ret = krl_create_distance_handle(
-        &kdh, base_vectors, ny, dim, metric_type, ny * dim
-    );
-    if (ret != 0) {
-        printf("Failed to create DistanceHandle.\n");
-        free(base_vectors);
-        return -1;
-    }
-
-    // Save the handle to a file.
-    FILE* f_write = fopen(filename, "wb");
-    if (f_write == NULL) {
-        printf ("Failed to open the file for writing.\n");
-        krl_clean_distance_handle(&kdh);
-        free(base_vectors);
-        return -1;
-    }
-
-    ret = krl_store_distanceHandle(f_write, kdh);
-    fclose(f_write);
-    
-    if (ret != 0) {
-        printf("Failed to save the DistanceHandle: %d\n", ret);
-        krl_clean_distance_handle(&kdh);
-        free(base_vectors);
-        return -1;
-    }
-    printf("DistanceHandle saved to: %s\n", filename);
-
-    // Clean up the original handle.
-    krl_clean_distance_handle(&kdh);
-    kdh = NULL;
-
-    // Load a handle from the file.
-    FILE* f_read = fopen(filename, "rb");
-    if (f_read == NULL) {
-        printf ("Failed to open the file for reading\n");
-        free(base_vectors);
-        return -1;
-    }
-
-    ret = krl_build_distanceHandle_fromfile(f_read, &kdh);
-    fclose(f_read);
-
-    if (ret != 0) {
-        printf("Failed to load DistanceHandle: %d\n", ret);
-        free(base_vectors);
-        return -1;
-    }
-    printf ("DistanceHandle has been loaded from the file\n");
-
-    // Use the loaded handle to compute the distance.
-    float* query = (float*)malloc(dim * sizeof(float));
-    for (size_t i = 0; i < dim; i++) {
-        query[i] = (float)(rand() % 1000) / 100.0f;
-    }
-
-    float distance;
-    ret = krl_L2sqr_with_handle(kdh, query, 0, &distance, dim);
-    if (ret == 0) {
-        printf("Successfully computed the distance using the loaded handle: %f\n", distance);
-    }
-
-    // Cleanup
-    krl_clean_distance_handle(&kdh);
-    free(base_vectors);
-    free(query);
-
-    return 0;
-}
-```
-
-### krl\_build\_distanceHandle\_fromfile
-
-**Interface Definition <a name="section172317194488"></a>**
-
-int krl\_build\_distanceHandle\_fromfile\(FILE\* f, KRLDistanceHandle\*\* kdh\);
-
-**Function<a name="section1153124784912"></a>**
-
-Reads data of a distance computation handle from a file and rebuilds the handle.
-
-**Parameters<a name="section157501312135019"></a>**
-
-<a name="table1623016332509"></a>
-<table><thead align="left"><tr id="row823063355012"><th class="cellrowborder" valign="top" width="15.541554155415543%" id="mcps1.1.5.1.1"><p id="p1230333125010"><a name="p1230333125010"></a><a name="p1230333125010"></a>Parameter</p>
-</th>
-<th class="cellrowborder" valign="top" width="14.611461146114612%" id="mcps1.1.5.1.2"><p id="p089311158912"><a name="p089311158912"></a><a name="p089311158912"></a>Data Type</p>
-</th>
-<th class="cellrowborder" valign="top" width="33.99339933993399%" id="mcps1.1.5.1.3"><p id="p4230193313507"><a name="p4230193313507"></a><a name="p4230193313507"></a>Description</p>
-</th>
-<th class="cellrowborder" valign="top" width="35.85358535853585%" id="mcps1.1.5.1.4"><p id="p19887819256"><a name="p19887819256"></a><a name="p19887819256"></a>Value Range</p>
-</th>
-</tr>
-</thead>
-<tbody><tr id="row1823023318504"><td class="cellrowborder" valign="top" width="15.541554155415543%" headers="mcps1.1.5.1.1 "><p id="p14381721205612"><a name="p14381721205612"></a><a name="p14381721205612"></a>f</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.611461146114612%" headers="mcps1.1.5.1.2 "><p id="p7438122115569"><a name="p7438122115569"></a><a name="p7438122115569"></a>FILE*</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p6717120145712"><a name="p6717120145712"></a><a name="p6717120145712"></a>Handle to a file opened for reading.</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p4187123185620"><a name="p4187123185620"></a><a name="p4187123185620"></a>The value cannot be null.</p>
-</td>
-</tr>
-<tr id="row587315210197"><td class="cellrowborder" valign="top" width="15.541554155415543%" headers="mcps1.1.5.1.1 "><p id="p123371053104616"><a name="p123371053104616"></a><a name="p123371053104616"></a>kdh</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.611461146114612%" headers="mcps1.1.5.1.2 "><p id="p9468096466"><a name="p9468096466"></a><a name="p9468096466"></a>const KRLDistanceHandle*</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p287382118190"><a name="p287382118190"></a><a name="p287382118190"></a>Pointer to the KRLDistanceHandle instance.</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p1487318214195"><a name="p1487318214195"></a><a name="p1487318214195"></a>The value cannot be null.</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-**Return Values<a name="section49971832106"></a>**
-
-<a name="table17997635100"></a>
-<table><thead align="left"><tr id="row699763141018"><th class="cellrowborder" valign="top" width="40%" id="mcps1.1.3.1.1"><p id="p699793141012"><a name="p699793141012"></a><a name="p699793141012"></a>Data Type</p>
-</th>
-<th class="cellrowborder" valign="top" width="60%" id="mcps1.1.3.1.2"><p id="p1999763141020"><a name="p1999763141020"></a><a name="p1999763141020"></a>Description</p>
-</th>
-</tr>
-</thead>
-<tbody><tr id="row1599716361015"><td class="cellrowborder" valign="top" width="40%" headers="mcps1.1.3.1.1 "><p id="p39970319101"><a name="p39970319101"></a><a name="p39970319101"></a>int</p>
-</td>
-<td class="cellrowborder" valign="top" width="60%" headers="mcps1.1.3.1.2 "><p id="p53461032104518"><a name="p53461032104518"></a><a name="p53461032104518"></a><code>0</code> is returned on successful execution. In case of failure, an error code is returned to indicate the specific issue.</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-## Error Codes
-
-<a name="table17997635100"></a>
-<table><thead align="left"><tr id="row699763141018"><th class="cellrowborder" valign="top" width="40%" id="mcps1.1.3.1.1"><p id="p699793141012"><a name="p699793141012"></a><a name="p699793141012"></a>Error code</p>
-</th>
-<th class="cellrowborder" valign="top" width="60%" id="mcps1.1.3.1.2"><p id="p1999763141020"><a name="p1999763141020"></a><a name="p1999763141020"></a>Description</p>
-</th>
-</tr>
-</thead>
-<tbody><tr id="row1599716361015"><td class="cellrowborder" valign="top" width="40%" headers="mcps1.1.3.1.1 "><p id="p39970319101"><a name="p39970319101"></a><a name="p39970319101"></a>0</p>
-</td>
-<td class="cellrowborder" valign="top" width="60%" headers="mcps1.1.3.1.2 "><p id="p53461032104518"><a name="p53461032104518"></a><a name="p53461032104518"></a><code>0</code> is returned on successful execution.</p>
-</td>
-</tr>
-<tr id="row2932411194415"><td class="cellrowborder" valign="top" width="40%" headers="mcps1.1.3.1.1 "><p id="p99338112449"><a name="p99338112449"></a><a name="p99338112449"></a>-1</p>
-</td>
-<td class="cellrowborder" valign="top" width="60%" headers="mcps1.1.3.1.2 "><p id="p8763115484411"><a name="p8763115484411"></a><a name="p8763115484411"></a>Invalid pointer.</p>
-</td>
-</tr>
-<tr id="row1410418141442"><td class="cellrowborder" valign="top" width="40%" headers="mcps1.1.3.1.1 "><p id="p810461414413"><a name="p810461414413"></a><a name="p810461414413"></a>-2</p>
-</td>
-<td class="cellrowborder" valign="top" width="60%" headers="mcps1.1.3.1.2 "><p id="p7104191418447"><a name="p7104191418447"></a><a name="p7104191418447"></a>Memory allocation failure.</p>
-</td>
-</tr>
-<tr id="row628451718442"><td class="cellrowborder" valign="top" width="40%" headers="mcps1.1.3.1.1 "><p id="p2028411717447"><a name="p2028411717447"></a><a name="p2028411717447"></a>-3</p>
-</td>
-<td class="cellrowborder" valign="top" width="60%" headers="mcps1.1.3.1.2 "><p id="p728431784411"><a name="p728431784411"></a><a name="p728431784411"></a>Invalid input parameter.</p>
-</td>
-</tr>
-<tr id="row3524122294419"><td class="cellrowborder" valign="top" width="40%" headers="mcps1.1.3.1.1 "><p id="p20524162216440"><a name="p20524162216440"></a><a name="p20524162216440"></a>-4</p>
-</td>
-<td class="cellrowborder" valign="top" width="60%" headers="mcps1.1.3.1.2 "><p id="p18524122210449"><a name="p18524122210449"></a><a name="p18524122210449"></a>Double free.</p>
-</td>
-</tr>
-<tr id="row8864111915443"><td class="cellrowborder" valign="top" width="40%" headers="mcps1.1.3.1.1 "><p id="p0864219184413"><a name="p0864219184413"></a><a name="p0864219184413"></a>-5</p>
-</td>
-<td class="cellrowborder" valign="top" width="60%" headers="mcps1.1.3.1.2 "><p id="p786412199445"><a name="p786412199445"></a><a name="p786412199445"></a>Insecure memory operation.</p>
-</td>
-</tr>
-<tr id="row114641147134412"><td class="cellrowborder" valign="top" width="40%" headers="mcps1.1.3.1.1 "><p id="p746415479447"><a name="p746415479447"></a><a name="p746415479447"></a>-6</p>
-</td>
-<td class="cellrowborder" valign="top" width="60%" headers="mcps1.1.3.1.2 "><p id="p14640472441"><a name="p14640472441"></a><a name="p14640472441"></a>I/O failure.</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-**Example**
-
-```c
-#include <stdio.h>
-#include <stdlib.h>
-#include "krl.h"
-
-int main() {
-    const char* filename = "distance_handle.bin";
-    
-    // Parameter configuration
+    // Set parameters.
     size_t dim = 128;
     size_t ny = 10000;
     int metric_type = 0;  // L2 distance
@@ -7632,7 +9295,210 @@ int main() {
     krl_clean_distance_handle(&kdh);
     kdh = NULL;
 
-    // Load a handle from the file.
+    // Load the handle from a file.
+    FILE* f_read = fopen(filename, "rb");
+    if (f_read == NULL) {
+        printf ("Failed to open the file for reading\n");
+        free(base_vectors);
+        return -1;
+    }
+
+    ret = krl_build_distanceHandle_fromfile(f_read, &kdh);
+    fclose(f_read);
+
+    if (ret != 0) {
+        printf("Failed to load DistanceHandle: %d\n", ret);
+        free(base_vectors);
+        return -1;
+    }
+    printf ("DistanceHandle has been loaded from the file\n");
+
+    // Use the loaded handle to compute the distance.
+    float* query = (float*)malloc(dim * sizeof(float));
+    for (size_t i = 0; i < dim; i++) {
+        query[i] = (float)(rand() % 1000) / 100.0f;
+    }
+
+    float distance;
+    ret = krl_L2sqr_with_handle(kdh, query, 0, &distance, dim);
+    if (ret == 0) {
+        printf("Successfully computed the distance using the loaded handle: %f\n", distance);
+    }
+
+    // Cleanup
+    krl_clean_distance_handle(&kdh);
+    free(base_vectors);
+    free(query);
+
+    return 0;
+}
+```
+
+### krl\_build\_distanceHandle\_fromfile
+
+**API Definition<a name="section172317194488"></a>**
+
+int krl\_build\_distanceHandle\_fromfile\(FILE\* f, KRLDistanceHandle\*\* kdh\);
+
+**Function<a name="section1153124784912"></a>**
+
+Reads data of a distance computation handle from a file and rebuilds the handle.
+
+**Parameters<a name="section157501312135019"></a>**
+
+<a name="table1623016332509"></a>
+<table><thead align="left"><tr id="row823063355012"><th class="cellrowborder" valign="top" width="15.541554155415543%" id="mcps1.1.5.1.1"><p id="p1230333125010"><a name="p1230333125010"></a><a name="p1230333125010"></a>Parameter</p>
+</th>
+<th class="cellrowborder" valign="top" width="14.611461146114612%" id="mcps1.1.5.1.2"><p id="p089311158912"><a name="p089311158912"></a><a name="p089311158912"></a>Data Type</p>
+</th>
+<th class="cellrowborder" valign="top" width="33.99339933993399%" id="mcps1.1.5.1.3"><p id="p4230193313507"><a name="p4230193313507"></a><a name="p4230193313507"></a>Description</p>
+</th>
+<th class="cellrowborder" valign="top" width="35.85358535853585%" id="mcps1.1.5.1.4"><p id="p19887819256"><a name="p19887819256"></a><a name="p19887819256"></a>Value Range</p>
+</th>
+</tr>
+</thead>
+<tbody><tr id="row1823023318504"><td class="cellrowborder" valign="top" width="15.541554155415543%" headers="mcps1.1.5.1.1 "><p id="p14381721205612"><a name="p14381721205612"></a><a name="p14381721205612"></a>f</p>
+</td>
+<td class="cellrowborder" valign="top" width="14.611461146114612%" headers="mcps1.1.5.1.2 "><p id="p7438122115569"><a name="p7438122115569"></a><a name="p7438122115569"></a>FILE*</p>
+</td>
+<td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p6717120145712"><a name="p6717120145712"></a><a name="p6717120145712"></a>Handle to a file opened for reading.</p>
+</td>
+<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p4187123185620"><a name="p4187123185620"></a><a name="p4187123185620"></a>The value cannot be null.</p>
+</td>
+</tr>
+<tr id="row587315210197"><td class="cellrowborder" valign="top" width="15.541554155415543%" headers="mcps1.1.5.1.1 "><p id="p123371053104616"><a name="p123371053104616"></a><a name="p123371053104616"></a>kdh</p>
+</td>
+<td class="cellrowborder" valign="top" width="14.611461146114612%" headers="mcps1.1.5.1.2 "><p id="p9468096466"><a name="p9468096466"></a><a name="p9468096466"></a>const KRLDistanceHandle*</p>
+</td>
+<td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p287382118190"><a name="p287382118190"></a><a name="p287382118190"></a>Pointer to the KRLDistanceHandle instance.</p>
+</td>
+<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p1487318214195"><a name="p1487318214195"></a><a name="p1487318214195"></a>The value cannot be null.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+**Return Value<a name="section49971832106"></a>**
+
+<a name="table17997635100"></a>
+<table><thead align="left"><tr id="row699763141018"><th class="cellrowborder" valign="top" width="40%" id="mcps1.1.3.1.1"><p id="p699793141012"><a name="p699793141012"></a><a name="p699793141012"></a>Data Type</p>
+</th>
+<th class="cellrowborder" valign="top" width="60%" id="mcps1.1.3.1.2"><p id="p1999763141020"><a name="p1999763141020"></a><a name="p1999763141020"></a>Description</p>
+</th>
+</tr>
+</thead>
+<tbody><tr id="row1599716361015"><td class="cellrowborder" valign="top" width="40%" headers="mcps1.1.3.1.1 "><p id="p39970319101"><a name="p39970319101"></a><a name="p39970319101"></a>int</p>
+</td>
+<td class="cellrowborder" valign="top" width="60%" headers="mcps1.1.3.1.2 "><p id="p53461032104518"><a name="p53461032104518"></a><a name="p53461032104518"></a><code>0</code> is returned on successful execution. In case of failure, an error code is returned.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## Error Code
+
+<a name="table17997635100"></a>
+<table><thead align="left"><tr id="row699763141018"><th class="cellrowborder" valign="top" width="40%" id="mcps1.1.3.1.1"><p id="p699793141012"><a name="p699793141012"></a><a name="p699793141012"></a>Error Code</p>
+</th>
+<th class="cellrowborder" valign="top" width="60%" id="mcps1.1.3.1.2"><p id="p1999763141020"><a name="p1999763141020"></a><a name="p1999763141020"></a>Description</p>
+</th>
+</tr>
+</thead>
+<tbody><tr id="row1599716361015"><td class="cellrowborder" valign="top" width="40%" headers="mcps1.1.3.1.1 "><p id="p39970319101"><a name="p39970319101"></a><a name="p39970319101"></a>0</p>
+</td>
+<td class="cellrowborder" valign="top" width="60%" headers="mcps1.1.3.1.2 "><p id="p53461032104518"><a name="p53461032104518"></a><a name="p53461032104518"></a><code>0</code> is returned on successful execution.</p>
+</td>
+</tr>
+<tr id="row2932411194415"><td class="cellrowborder" valign="top" width="40%" headers="mcps1.1.3.1.1 "><p id="p99338112449"><a name="p99338112449"></a><a name="p99338112449"></a>-1</p>
+</td>
+<td class="cellrowborder" valign="top" width="60%" headers="mcps1.1.3.1.2 "><p id="p8763115484411"><a name="p8763115484411"></a><a name="p8763115484411"></a>Invalid pointer.</p>
+</td>
+</tr>
+<tr id="row1410418141442"><td class="cellrowborder" valign="top" width="40%" headers="mcps1.1.3.1.1 "><p id="p810461414413"><a name="p810461414413"></a><a name="p810461414413"></a>-2</p>
+</td>
+<td class="cellrowborder" valign="top" width="60%" headers="mcps1.1.3.1.2 "><p id="p7104191418447"><a name="p7104191418447"></a><a name="p7104191418447"></a>Memory allocation failure.</p>
+</td>
+</tr>
+<tr id="row628451718442"><td class="cellrowborder" valign="top" width="40%" headers="mcps1.1.3.1.1 "><p id="p2028411717447"><a name="p2028411717447"></a><a name="p2028411717447"></a>-3</p>
+</td>
+<td class="cellrowborder" valign="top" width="60%" headers="mcps1.1.3.1.2 "><p id="p728431784411"><a name="p728431784411"></a><a name="p728431784411"></a>Invalid input parameter.</p>
+</td>
+</tr>
+<tr id="row3524122294419"><td class="cellrowborder" valign="top" width="40%" headers="mcps1.1.3.1.1 "><p id="p20524162216440"><a name="p20524162216440"></a><a name="p20524162216440"></a>-4</p>
+</td>
+<td class="cellrowborder" valign="top" width="60%" headers="mcps1.1.3.1.2 "><p id="p18524122210449"><a name="p18524122210449"></a><a name="p18524122210449"></a>Double free.</p>
+</td>
+</tr>
+<tr id="row8864111915443"><td class="cellrowborder" valign="top" width="40%" headers="mcps1.1.3.1.1 "><p id="p0864219184413"><a name="p0864219184413"></a><a name="p0864219184413"></a>-5</p>
+</td>
+<td class="cellrowborder" valign="top" width="60%" headers="mcps1.1.3.1.2 "><p id="p786412199445"><a name="p786412199445"></a><a name="p786412199445"></a>Insecure memory operation.</p>
+</td>
+</tr>
+<tr id="row114641147134412"><td class="cellrowborder" valign="top" width="40%" headers="mcps1.1.3.1.1 "><p id="p746415479447"><a name="p746415479447"></a><a name="p746415479447"></a>-6</p>
+</td>
+<td class="cellrowborder" valign="top" width="60%" headers="mcps1.1.3.1.2 "><p id="p14640472441"><a name="p14640472441"></a><a name="p14640472441"></a>I/O failure.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+**Sample**
+
+```c
+#include <stdio.h>
+#include <stdlib.h>
+#include "krl.h"
+
+int main() {
+    const char* filename = "distance_handle.bin";
+    
+    // Set parameters.
+    size_t dim = 128;
+    size_t ny = 10000;
+    int metric_type = 0;  // L2 distance
+
+    // Prepare base vectors.
+    float* base_vectors = (float*)malloc(ny * dim * sizeof(float));
+    for (size_t i = 0; i < ny * dim; i++) {
+        base_vectors[i] = (float)(rand() % 1000) / 100.0f;
+    }
+
+    // Handle creation
+    KRLDistanceHandle* kdh = NULL;
+    int ret = krl_create_distance_handle(
+        &kdh, base_vectors, ny, dim, metric_type, ny * dim
+    );
+    if (ret != 0) {
+        printf("Failed to create DistanceHandle.\n");
+        free(base_vectors);
+        return -1;
+    }
+
+    // Save the handle to a file.
+    FILE* f_write = fopen(filename, "wb");
+    if (f_write == NULL) {
+        printf ("Failed to open the file for writing.\n");
+        krl_clean_distance_handle(&kdh);
+        free(base_vectors);
+        return -1;
+    }
+
+    ret = krl_store_distanceHandle(f_write, kdh);
+    fclose(f_write);
+    
+    if (ret != 0) {
+        printf("Failed to save the DistanceHandle: %d\n", ret);
+        krl_clean_distance_handle(&kdh);
+        free(base_vectors);
+        return -1;
+    }
+    printf("DistanceHandle saved to: %s\n", filename);
+
+    // Clean up the original handle.
+    krl_clean_distance_handle(&kdh);
+    kdh = NULL;
+
+    // Load the handle from a file.
     FILE* f_read = fopen(filename, "rb");
     if (f_read == NULL) {
         printf ("Failed to open the file for reading\n");
