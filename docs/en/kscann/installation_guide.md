@@ -94,7 +94,7 @@ KScaNN depends on the open-source ScaNN optimized for Kunpeng to provide full fu
     ```
 
 4. ScaNN depends on the AVX2KI library. Therefore, perform the following steps to install the AVX2KI RPM package.
-    1. To install AVX2KI, obtain the software package from the [Kunpeng community](hhttps://www.hikunpeng.com/document/detail/en/kunpengboostkithistory/2530/accel/kunpengaccel_ksl_16_0006.html) and verify the software package to ensure that it is consistent with the original software package on the website. Decompress the ZIP file to obtain the RPM installation package.
+    1. To install AVX2KI, obtain the software package from the [Kunpeng community](https://www.hikunpeng.com/document/detail/en/kunpengboostkithistory/2530/accel/kunpengaccel_ksl_16_0006.html) and verify the software package to ensure that it is consistent with the original software package on the website. Decompress the ZIP file to obtain the RPM installation package.
 
         >![notice](public_sys-resources/icon-notice.gif) **NOTICE:**
         >Before using the software package, read and agree to [Kunpeng BoostKit User License Agreement 2.0](https://www.hikunpeng.com/en/legal/developer/boostkit/software/protocol).
