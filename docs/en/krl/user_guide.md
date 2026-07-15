@@ -48,7 +48,7 @@ To use KRL smoothly and securely, ensure that your environment is one of the ver
 
 This section describes how to install KRL using the RPM package and verify the package. Using parameters supported by the RPM package manager but not documented in this guide may result in undefined behavior. Proceed with caution.
 
-1. Obtain the KRL software installation package [BoostKit-boostsra-krl_1.1.0.zip](https://gitcode.com/boostkit/boostsra/releases/download/v1.3.0/BoostKit-SRA_KRL-1.1.0.zip) from the GitCode repository. Decompress the ZIP file to obtain the RPM installation package.
+1. Obtain the KRL software installation package [BoostKit-boostsra-krl_1.1.0.zip](https://gitcode.com/boostkit/boostsra/releases/download/v1.3.0/Boostkit-boostsra-krl_1.1.0.zip) from the GitCode repository. Decompress the ZIP file to obtain the RPM installation package.
 
     >![](public_sys-resources/icon-note.gif) **NOTE:**
     >- The KRL software package consists of the following files:

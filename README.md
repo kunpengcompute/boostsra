@@ -5,6 +5,7 @@
 ### 概述
 
 鲲鹏BoostKit搜推广使能套件旨在为互联网搜索、推荐、广告业务场景提供基于鲲鹏平台的应用层加速能力，组件涵盖召回场景核心检索算法、排序场景模型推理软件框架优化。
+
 ### 架构图
 
 ![image.png](./docs/zh/figure/BoostSRA架构图.png 'image.png')
@@ -30,6 +31,7 @@
 | hnswlib扩展 | hnswlib召回算法鲲鹏亲和优化，包含通过向量化技术实现FP16高效支持，应用了预取与指令重排等优化策略。 | <ul><li>[源码仓](https://github.com/nmslib/hnswlib) </li><li>[扩展仓](https://gitcode.com/boostkit/hnswlib)</li></ul> |
 | Faiss扩展 | Faiss检索引擎鲲鹏亲和优化，包含向量化、维度交织查表累加及向量过滤压缩等关键技术。 |<ul><li>[源码仓](https://github.com/facebookresearch/faiss/releases/tag/v1.8.0)</li><li>[扩展仓](https://gitcode.com/boostkit/faiss)</li></ul> |
 | RaBitQ扩展 | RaBitQ算法扩展至ARM64（AArch64）架构，引入FP16精度优化、NEON SIMD向量化、汇编级LUT加速、SOAR溢出向量分配、ML自适应nprobe等多项性能优化。 | <ul><li>[源码仓](https://github.com/gaoj0017/RaBitQ)</li><li>[扩展仓](https://gitcode.com/boostkit/rabitq)</li></ul> |
+| DiskANN扩展 | DiskANN算法扩展至ARM64（AArch64）架构，引入NEON SIMD向量化、数据布局优化（邻接表驻留内存）、异步IO流水化、精排队列缩减等多项性能优化。 | <ul><li>[源码仓](https://github.com/microsoft/DiskANN/releases/tag/0.7.0)</li><li>[扩展仓](https://gitcode.com/boostkit/diskann)</li></ul> |
 
 ## 在线推理扩展
 
