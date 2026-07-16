@@ -26,9 +26,9 @@ The directory structure of the main files is as follows:
 └── test.sh                                                 // Test script
 ```
 
-**Test Procedure<a name="section25072475424"></a>**
+**Test Procedure**
 
-1. Verify that `scann-1.2.10-cp39-cp39-linux_aarch64.whl` has been installed as described in [KScaNN Installation Guide](./installation_guide.md).
+1. Verify that `scann-1.2.10-cp39-cp39-linux_aarch64.whl` has been installed as described in [Installation Guide](./installation_guide.md).
 2. Install the dependencies required by `ann-benchmarks`.
 
     ```bash
@@ -51,7 +51,7 @@ The test result is as follows:
 
 This section provides details on how to call the KScaNN algorithm API in C++. In the example, the `sift-128-euclidean.hdf5` dataset is used. Before calling the APIs, ensure that KScaNN has been installed.
 
-**Obtaining Datasets and Test Code<a name="section155352047153818"></a>**
+**Obtaining Datasets and Test Code**
 
 Obtain the test framework code from the source code downloaded from [GitCode](https://atomgit.com/openeuler/sra_scann_adapter.git). Assume that the source code is stored in `/path/to/scann/sra_scann_adapter` and the test framework code is stored in `/path/to/scann/sra_scann_adapter/ann-benchmarks`.
 
@@ -82,9 +82,9 @@ The directory structure of the main files is as follows:
 project.sh                                                          // Compilation script
 ```
 
-**Procedure<a name="section080205934220"></a>**
+**Procedure**
 
-1. Verify that `libscann_cc.so` has been compiled successfully as described in [KScaNN Installation Guide](./installation_guide.md).
+1. Verify that `libscann_cc.so` has been compiled successfully as described in [Installation Guide](./installation_guide.md).
 2. Install CMake.
 
     ```bash

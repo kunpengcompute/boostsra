@@ -12,12 +12,17 @@
 </tr>
 <tr id="row24726251"><th class="firstcol" valign="top" width="42.17%" id="mcps1.1.3.2.1"><p id="p56669300"><a name="p56669300"></a><a name="p56669300"></a>产品版本</p>
 </th>
-<td class="cellrowborder" valign="top" width="57.830000000000005%" headers="mcps1.1.3.2.1 "><p id="p11923034"><a name="p11923034"></a><a name="p11923034"></a><span id="text189831542174711"><a name="text189831542174711"></a><a name="text189831542174711"></a>26.1.0</span></p>
+<td class="cellrowborder" valign="top" width="57.830000000000005%" headers="mcps1.1.3.2.1 "><p id="p11923034"><a name="p11923034"></a><a name="p11923034"></a><span id="text189831542174711"><a name="text189831542174711"></a><a name="text189831542174711"></a>26.1.RC1</span></p>
 </td>
 </tr>
 <tr id="row1930811171892"><th class="firstcol" valign="top" width="42.17%" id="mcps1.1.3.3.1"><p id="p2030912172097"><a name="p2030912172097"></a><a name="p2030912172097"></a>软件名称</p>
 </th>
 <td class="cellrowborder" valign="top" width="57.830000000000005%" headers="mcps1.1.3.3.1 "><p id="p1730912179911"><a name="p1730912179911"></a><a name="p1730912179911"></a><span id="text18970145618322"><a name="text18970145618322"></a><a name="text18970145618322"></a>鲲鹏检索算子库</span></p>
+</td>
+</tr>
+<tr id="row19308111718"><th class="firstcol" valign="top" width="42.17%" id="mcps1.1.3.3.1"><p id="p2030912172097"><a name="p2030912172097"></a><a name="p2030912172097"></a>软件版本</p>
+</th>
+<td class="cellrowborder" valign="top" width="57.830000000000005%" headers="mcps1.1.3.3.1 "><p id="p1730912179911"><a name="p1730912179911"></a><a name="p1730912179911"></a><span id="text18970145618322"><a name="text18970145618322"></a><a name="text18970145618322"></a>V1.1.0</span></p>
 </td>
 </tr>
 </tbody>
@@ -53,56 +58,7 @@
 
 ### 病毒扫描结果
 
-本软件包、版本文档、产品文档经过防病毒软件扫描，未发现病毒。详细信息如下：
-
-<a name="table1980419519233"></a>
-<table><thead align="left"><tr id="row58533592317"><th class="cellrowborder" valign="top" width="15%" id="mcps1.1.6.1.1"><p id="p14853250231"><a name="p14853250231"></a><a name="p14853250231"></a>防病毒软件名称</p>
-</th>
-<th class="cellrowborder" valign="top" width="17%" id="mcps1.1.6.1.2"><p id="p1285355162312"><a name="p1285355162312"></a><a name="p1285355162312"></a>防病毒软件版本</p>
-</th>
-<th class="cellrowborder" valign="top" width="20.919999999999998%" id="mcps1.1.6.1.3"><p id="p4853353236"><a name="p4853353236"></a><a name="p4853353236"></a>病毒库版本</p>
-</th>
-<th class="cellrowborder" valign="top" width="28.08%" id="mcps1.1.6.1.4"><p id="p785317520238"><a name="p785317520238"></a><a name="p785317520238"></a>扫描时间</p>
-</th>
-<th class="cellrowborder" valign="top" width="19%" id="mcps1.1.6.1.5"><p id="p158539532314"><a name="p158539532314"></a><a name="p158539532314"></a>扫描结果</p>
-</th>
-</tr>
-</thead>
-<tbody><tr id="row108547513239"><td class="cellrowborder" valign="top" width="15%" headers="mcps1.1.6.1.1 "><p id="p2800318490"><a name="p2800318490"></a><a name="p2800318490"></a>QiAnXin</p>
-</td>
-<td class="cellrowborder" valign="top" width="17%" headers="mcps1.1.6.1.2 "><p id="p1385415520232"><a name="p1385415520232"></a><a name="p1385415520232"></a>8.0.5.5260</p>
-</td>
-<td class="cellrowborder" valign="top" width="20.919999999999998%" headers="mcps1.1.6.1.3 "><p id="p165171010191418"><a name="p165171010191418"></a><a name="p165171010191418"></a>2025-06-27 08:00:00.0</p>
-</td>
-<td class="cellrowborder" valign="top" width="28.08%" headers="mcps1.1.6.1.4 "><p id="p19818043416"><a name="p19818043416"></a><a name="p19818043416"></a>2025-06-28 17:37:20</p>
-</td>
-<td class="cellrowborder" valign="top" width="19%" headers="mcps1.1.6.1.5 "><p id="p1485417542312"><a name="p1485417542312"></a><a name="p1485417542312"></a>OK</p>
-</td>
-</tr>
-<tr id="row385413511237"><td class="cellrowborder" valign="top" width="15%" headers="mcps1.1.6.1.1 "><p id="p1577103194920"><a name="p1577103194920"></a><a name="p1577103194920"></a>Bitdefender</p>
-</td>
-<td class="cellrowborder" valign="top" width="17%" headers="mcps1.1.6.1.2 "><p id="p182011711332"><a name="p182011711332"></a><a name="p182011711332"></a>7.0.3.2038</p>
-</td>
-<td class="cellrowborder" valign="top" width="20.919999999999998%" headers="mcps1.1.6.1.3 "><p id="p1318511176313"><a name="p1318511176313"></a><a name="p1318511176313"></a>7.99075</p>
-</td>
-<td class="cellrowborder" valign="top" width="28.08%" headers="mcps1.1.6.1.4 "><p id="p2709163518313"><a name="p2709163518313"></a><a name="p2709163518313"></a>2025-06-28 17:37:27</p>
-</td>
-<td class="cellrowborder" valign="top" width="19%" headers="mcps1.1.6.1.5 "><p id="p58541156237"><a name="p58541156237"></a><a name="p58541156237"></a>OK</p>
-</td>
-</tr>
-<tr id="row108549512238"><td class="cellrowborder" valign="top" width="15%" headers="mcps1.1.6.1.1 "><p id="p37373118492"><a name="p37373118492"></a><a name="p37373118492"></a>Kaspersky</p>
-</td>
-<td class="cellrowborder" valign="top" width="17%" headers="mcps1.1.6.1.2 "><p id="p076112491811"><a name="p076112491811"></a><a name="p076112491811"></a>12.0.0.6672</p>
-</td>
-<td class="cellrowborder" valign="top" width="20.919999999999998%" headers="mcps1.1.6.1.3 "><p id="p1331815415310"><a name="p1331815415310"></a><a name="p1331815415310"></a>2025-06-27 02:05:00</p>
-</td>
-<td class="cellrowborder" valign="top" width="28.08%" headers="mcps1.1.6.1.4 "><p id="p997063819376"><a name="p997063819376"></a><a name="p997063819376"></a>2025-06-28 17:37:17</p>
-</td>
-<td class="cellrowborder" valign="top" width="19%" headers="mcps1.1.6.1.5 "><p id="p148543518236"><a name="p148543518236"></a><a name="p148543518236"></a>OK</p>
-</td>
-</tr>
-</tbody>
-</table>
+本软件包、版本文档、产品文档不涉及病毒扫描。
 
 ## 版本使用注意事项
 
@@ -147,11 +103,9 @@
 
 无
 
-## V25.3.0
+## V1.1.0
 
 ### 更新说明
-
-25.3.0版本为鲲鹏BoostKit版本号，该版本之后的组件版本号不再进行更新。
 
 **新增特性<a name="section11862975"></a>**
 
@@ -164,7 +118,7 @@
 </thead>
 <tbody><tr id="row84721825541"><td class="cellrowborder" valign="top" width="15.07%" headers="mcps1.1.3.1.1 "><p id="p1682142025412"><a name="p1682142025412"></a><a name="p1682142025412"></a>KRL</p>
 </td>
-<td class="cellrowborder" valign="top" width="84.93%" headers="mcps1.1.3.1.2 "><p id="p515310015517"><a name="p515310015517"></a><a name="p515310015517"></a>新增支持鲲鹏950处理器。</p>
+<td class="cellrowborder" valign="top" width="84.93%" headers="mcps1.1.3.1.2 "><p id="p515310015517"><a name="p515310015517"></a><a name="p515310015517"></a>更新软件包名称；新增支持鲲鹏950处理器。</p>
 </td>
 </tr>
 </tbody>
@@ -225,7 +179,7 @@
 
 ## 版本配套文档
 
-### V25.3.0版本配套文档
+### V1.1.0版本配套文档
 
 <table>
 <thead align="left">
