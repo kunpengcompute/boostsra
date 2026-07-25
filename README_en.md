@@ -36,7 +36,7 @@ The BoostSRA suite delivers high-performance application-layer acceleration for 
 
 | Algorithm| Description| Repository Path|
 | :---| :--- | :--- |
-| Embeddinglookup extension| It reduces the lookup latency in the core modules of real-time recommendation systems through key techniques such as compiler option tuning, spinlock optimization, memory alignment optimization, and Arm SIMD vectorization.| <ul><li>[Source code repository](https://github.com/bytedance/monolith)</li><li>[Extension repository](https://gitcode.com/boostkit/monolith)</li></ul>|
+| EmbeddingLookup extension| It reduces the lookup latency in the core modules of real-time recommendation systems through key techniques such as compiler option tuning, spinlock optimization, memory alignment optimization, and Arm SIMD vectorization.| <ul><li>[Source code repository](https://github.com/bytedance/monolith)</li><li>[Extension repository](https://gitcode.com/boostkit/monolith)</li></ul>|
 
 ## Ranking Inference
 

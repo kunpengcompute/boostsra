@@ -37,7 +37,7 @@
 
 | 算法名称 | 描述 | 仓库路径 |
 | --- | --- | --- |
-| Embeddinglookup扩展 | 通过编译选项调优、自旋锁优化、内存对齐优化及 ARM SIMD 向量化改造等关键技术，降低实时推荐系统核心模块查表延迟。 | <ul><li>[源码仓](https://github.com/bytedance/monolith)</li><li>[扩展仓](https://gitcode.com/boostkit/monolith)</li></ul> |
+| EmbeddingLookup扩展 | 通过编译选项调优、自旋锁优化、内存对齐优化及 ARM SIMD 向量化改造等关键技术，降低实时推荐系统核心模块查表延迟。 | <ul><li>[源码仓](https://github.com/bytedance/monolith)</li><li>[扩展仓](https://gitcode.com/boostkit/monolith)</li></ul> |
 
 ## 排序推理
 
