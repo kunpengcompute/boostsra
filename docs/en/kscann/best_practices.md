@@ -187,7 +187,7 @@ KScaNN optimizes the open-source ScaNN algorithm by using dynamic library inline
 
 2. Apply the patch file into Milvus for full compilation.
 
-    For details, see the [Milvus KScaNN Optimization Feature Guide](https://www.hikunpeng.com/document/detail/en/kunpengdbs/appAccelFeatures/Milvuskscannop/kunpeng_kscann_tx_64_002.html).
+    For details, see the [Milvus KScaNN Optimization Feature Guide](https://www.hikunpeng.com/document/detail/en/boostdb/milvus/Milvuskscannop/docs/en/milvus_kscann_optimization_feature_guide.md).
 
 3. Use ann-benchmarks for the test.
 

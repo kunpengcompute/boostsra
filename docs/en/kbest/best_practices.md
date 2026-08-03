@@ -79,7 +79,7 @@ Among all index algorithms supported by Milvus, the graph-based index algorithm 
 
 2. Apply the patch file into Milvus for full compilation.
 
-    For details, see the [Milvus KBest Optimization Feature Guide](https://www.hikunpeng.com/document/detail/en/kunpengdbs/appAccelFeatures/milvuskbestop/kunpeng_kbest_43_002.html).
+    For details, see the [Milvus KBest Optimization Feature Guide](https://www.hikunpeng.com/document/detail/en/boostdb/milvus/milvuskbestop/docs/en/milvus_kbest_optimization_feature_guide.md).
 
 3. Use ann-benchmarks for the test.
 
