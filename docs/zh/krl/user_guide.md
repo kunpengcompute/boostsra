@@ -46,9 +46,41 @@
 
 ## 安装KRL
 
+### RPM安装
+
 本节提供RPM包安装KRL方法。请参照本节内容对KRL进行安装和安装后验证。若操作过程中使用了RPM包管理工具支持但本文档中未说明的参数，可能会引入未定义行为，请谨慎操作。
 
-1. 从GitCode仓获取对应的鲲鹏检索算子库软件安装包[BoostKit-boostsra-krl\_1.1.0.zip](https://gitcode.com/boostkit/boostsra/releases/download/v1.3.0/Boostkit-boostsra-krl_1.1.0.zip)，用户解压zip文件后可获取RPM安装包。
+#### 获取安装源
+
+从GitCode仓获取对应的鲲鹏检索算子库软件安装包[BoostKit-boostsra-krl\_1.1.0.zip](https://gitcode.com/boostkit/boostsra/releases/download/v1.3.0/Boostkit-boostsra-krl_1.1.0.zip)。
+
+#### 发布包完整性校验
+
+为了检查软件包在传输或存储过程中是否因网络或设备问题而不完整，在获取到软件包后，需要对软件包的完整性进行校验，通过了校验的软件包才能部署。
+这里通过对比校验文件中记录的校验值和手动方式计算的zip包校验值，判断软件包是否完整。若两个值相同，说明zip包完整，否则，zip完整性被破坏，请重新获取zip发布包。
+
+在校验发布包完整性之前，需要准备如下文件：
+- zip包：BoostKit-boostsra-krl_xxx.zip。
+- 校验文件：同名的.sha256文件。
+
+文件完整性校验操作步骤如下：
+
+1. 计算文件的sha256校验值。linux执行命令如下：
+    ```bash
+    sha256sum BoostKit-boostsra-krl_xxx.zip
+    ```
+    windows执行命令如下：
+    ```bash
+    certutil -hashfile BoostKit-boostsra-krl_xxx.zip sha256
+    ```
+    命令执行完成后，输出校验值。
+
+2. 对比步骤 1 计算的校验值与刚刚复制的 SHA256 值是否一致。
+    如果校验值一致说明zip包完整，如果校验值不一致则可以确认文件完整性已被破坏，需要重新获取。
+
+#### 安装步骤
+
+1. 用户解压zip文件后可获取RPM安装包。
 
     >![](public_sys-resources/icon-note.gif) **说明：** 
     >- KRL软件包结构如下所示。
