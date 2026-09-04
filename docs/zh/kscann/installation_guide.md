@@ -91,39 +91,7 @@ KScaNN依赖基于鲲鹏优化的开源ScaNN以提供完整的功能。因此安
     patch -p1 < 0001-boostsra-kscann-adapter.patch
     ```
 
-4. ScaNN依赖AVX2KI库，因此需要通过以下步骤安装AVX2KI的RPM包。
-    1. 安装AVX2KI之前请先从[鲲鹏社区](https://www.hikunpeng.com/boostkit/download?version=25.3.0&suiteType=BoostCore%E5%9F%BA%E7%A1%80%E5%8A%A0%E9%80%9F&subType=KSL+%E7%B3%BB%E7%BB%9F%E5%BA%93&suiteType=AVX2KI)获取软件包，再进行软件包校验，确保与网站上的原始软件包一致，用户解压zip文件后可获取RPM安装包。
-
-        >![](public_sys-resources/icon-notice.gif) **须知：** 
-        >使用软件包前请先阅读《[鲲鹏应用使能套件BoostKit用户许可协议 2.0](https://www.hikunpeng.com/zh/legal/developer/boostkit/software/protocol)》，如确认继续使用，则默认同意协议的条款和条件。
-
-    2. <a name="li6766112117714"></a>从[华为企业业务网站](https://support.huawei.com/enterprise/zh/tool/pgp-verify-TL1000000054)获取校验工具和校验方法。
-    3. 请参见[4.2](#li6766112117714)中下载的《OpenPGP签名验证指南》进行软件包完整性检查。
-    4. 安装AVX2KI的RPM包。
-
-        ```bash
-        rpm -ivh boostkit-ksl-xxxx.aarch64.rpm
-        ```
-
-        安装结束后，自动追加环境变量LD\_LIBRARY\_PATH到“/etc/profile”中，即AVX2KI的动态库文件所在目录“/usr/local/ksl/lib”。
-
-        上述命令中的 **xxxx** 代表版本号。
-
-    5. 执行**source**命令或重新登录终端使AVX2KI环境变量生效。
-
-        ```bash
-        source /etc/profile
-        ```
-
-    6. 查看环境变量LD\_LIBRARY\_PATH是否包含AVX2KI的安装路径“/usr/local/ksl/lib”。
-
-        ```bash
-        env | grep LD_LIBRARY_PATH
-        ```
-
-        如果变量包含安装路径，说明安装成功。
-
-        安装成功后在安装路径（默认路径是“/usr/local/ksl”）下生成相应文件，其中，“include”文件夹包含AVX2KI的头文件，“lib”文件夹包含了AVX2KI的动态库文件。
+4. ScaNN依赖AVX2KI库，参考[AVX2KI安装指南](https://gitcode.com/boostkit/avx2ki/blob/master/docs/zh/installation_guide.md#%E5%AE%89%E8%A3%85)编译安装AVX2KI。
 
 5. 安装OpenJDK 11。
 

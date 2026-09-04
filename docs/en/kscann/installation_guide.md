@@ -91,39 +91,7 @@ KScaNN depends on the open-source ScaNN optimized for Kunpeng to provide full fu
     patch -p1 < 0001-boostsra-kscann-adapter.patch
     ```
 
-4. ScaNN depends on the AVX2KI library. Therefore, perform the following steps to install the AVX2KI RPM package.
-    1. To install AVX2KI, obtain the software package from the [Kunpeng community](https://www.hikunpeng.com/document/detail/en/kunpengboostkithistory/2530/accel/kunpengaccel_ksl_16_0006.html) and verify the software package to ensure that it is consistent with the original software package on the website. Decompress the ZIP file to obtain the RPM installation package.
-
-        >![notice](public_sys-resources/icon-notice.gif) **NOTICE:**
-        >Before using the software package, read and agree to [Kunpeng BoostKit User License Agreement 2.0](https://www.hikunpeng.com/en/legal/developer/boostkit/software/protocol).
-
-    2. <span id="li6766112117714">Obtain the verification tool and guide from</span> [Huawei enterprise website](https://support.huawei.com/enterprise/en/tool/pgp-verify-TL1000000054).
-    3. Verify the software package integrity by following the instructions described in _OpenPGP Signature Verification Guide_ obtained in [4.2](#li6766112117714).
-    4. Install the RPM package of AVX2KI.
-
-        ```bash
-        rpm -ivh boostkit-ksl-xxxx.aarch64.rpm
-        ```
-
-        After the installation is complete, the environment variable `LD_LIBRARY_PATH` is automatically added to `/etc/profile`, that is, the directory `/usr/local/ksl/lib` where the AVX2KI dynamic library files are located.
-
-        In the preceding command, _xxxx_ indicates the version.
-
-    5. Run the `source` command or log in to the terminal again for the AVX2KI environment variable to take effect.
-
-        ```bash
-        source /etc/profile
-        ```
-
-    6. Check whether the environment variable `LD_LIBRARY_PATH` contains the AVX2KI installation path `/usr/local/ksl/lib`.
-
-        ```bash
-        env | grep LD_LIBRARY_PATH
-        ```
-
-        If the variable contains the installation path, the installation is successful.
-
-        After the installation, the target files are generated in the installation path (the default path is `/usr/local/ksl`), where the `include` folder contains the AVX2KI header files, and the `lib` folder contains the AVX2KI dynamic library files.
+4. ScaNN depends on the AVX2KI library. Refer to the [AVX2KI Installation Guide](https://gitcode.com/boostkit/avx2ki/blob/master/docs/zh/installation_guide.md#%E5%AE%89%E8%A3%85) to compile and install AVX2KI.
 
 5. Install OpenJDK 11.
 
