@@ -82,7 +82,7 @@ KDNN目前支持的算子如[**表 1** KDNN支持的算子](#KDNN支持的算子
 </tr>
 <tr id="row1650019445388"><td class="cellrowborder" valign="top" width="39.989999999999995%" headers="mcps1.2.3.1.1 "><p id="p105017445383"><a name="p105017445383"></a><a name="p105017445383"></a>Batch Normalization（bnormal）</p>
 </td>
-<td class="cellrowborder" valign="top" width="60.01%" headers="mcps1.2.3.1.2 "><p id="p35011744103811"><a name="p35011744103811"></a><a name="p35011744103811"></a>批次归一化算子。</p>
+<td class="cellrowborder" valign="top" width="60.01%" headers="mcps1.2.3.1.2 "><p id="p35011744103811"><a name="p35011744103811"></a><a name="p35011744103811"></a>批归一化算子。</p>
 </td>
 </tr>
 <tr id="row1037713109395"><td class="cellrowborder" valign="top" width="39.989999999999995%" headers="mcps1.2.3.1.1 "><p id="p13771710133915"><a name="p13771710133915"></a><a name="p13771710133915"></a>Local Response Normalization（lrn）</p>
@@ -92,17 +92,17 @@ KDNN目前支持的算子如[**表 1** KDNN支持的算子](#KDNN支持的算子
 </tr>
 <tr id="row8309171333911"><td class="cellrowborder" valign="top" width="39.989999999999995%" headers="mcps1.2.3.1.1 "><p id="p330921315396"><a name="p330921315396"></a><a name="p330921315396"></a>Reduction</p>
 </td>
-<td class="cellrowborder" valign="top" width="60.01%" headers="mcps1.2.3.1.2 "><p id="p15309171318398"><a name="p15309171318398"></a><a name="p15309171318398"></a>推断算子。</p>
+<td class="cellrowborder" valign="top" width="60.01%" headers="mcps1.2.3.1.2 "><p id="p15309171318398"><a name="p15309171318398"></a><a name="p15309171318398"></a>归约算子。</p>
 </td>
 </tr>
 <tr id="row11693131523917"><td class="cellrowborder" valign="top" width="39.989999999999995%" headers="mcps1.2.3.1.1 "><p id="p669315155395"><a name="p669315155395"></a><a name="p669315155395"></a>PReLU</p>
 </td>
-<td class="cellrowborder" valign="top" width="60.01%" headers="mcps1.2.3.1.2 "><p id="p106931615193917"><a name="p106931615193917"></a><a name="p106931615193917"></a>使用训练alpha的激活算子（Leaky ReLU）。</p>
+<td class="cellrowborder" valign="top" width="60.01%" headers="mcps1.2.3.1.2 "><p id="p106931615193917"><a name="p106931615193917"></a><a name="p106931615193917"></a>使用可训练alpha参数的激活算子（Leaky ReLU）。</p>
 </td>
 </tr>
 <tr id="row19543518123911"><td class="cellrowborder" valign="top" width="39.989999999999995%" headers="mcps1.2.3.1.1 "><p id="p054321873912"><a name="p054321873912"></a><a name="p054321873912"></a>Binary</p>
 </td>
-<td class="cellrowborder" valign="top" width="60.01%" headers="mcps1.2.3.1.2 "><p id="p19543118173911"><a name="p19543118173911"></a><a name="p19543118173911"></a>二进制基元计算张量算子。</p>
+<td class="cellrowborder" valign="top" width="60.01%" headers="mcps1.2.3.1.2 "><p id="p19543118173911"><a name="p19543118173911"></a><a name="p19543118173911"></a>二元张量算子。</p>
 </td>
 </tr>
 <tr id="row105101723183916"><td class="cellrowborder" valign="top" width="39.989999999999995%" headers="mcps1.2.3.1.1 "><p id="p3510723193910"><a name="p3510723193910"></a><a name="p3510723193910"></a>RNN</p>
@@ -460,7 +460,7 @@ KDNN支持的Eltwise类算子支持1D-5D的顺序数据排布。
 </tr>
 <tr id="row1639014114112"><td class="cellrowborder" valign="top" width="50%" headers="mcps1.2.3.1.1 "><p id="p1539074151118"><a name="p1539074151118"></a><a name="p1539074151118"></a><a name="image21211546143111"></a><a name="image21211546143111"></a><span><img class="mathml" id="image21211546143111" src="figures/zh-cn_formulaimage_0000002518231560.png" width="51.3114" height="24.964100000000002"></span></p>
 </td>
-<td class="cellrowborder" valign="top" width="50%" headers="mcps1.2.3.1.2 "><p id="p193911941161119"><a name="p193911941161119"></a><a name="p193911941161119"></a>平均差。</p>
+<td class="cellrowborder" valign="top" width="50%" headers="mcps1.2.3.1.2 "><p id="p193911941161119"><a name="p193911941161119"></a><a name="p193911941161119"></a>平均值。</p>
 </td>
 </tr>
 <tr id="row1739116411114"><td class="cellrowborder" valign="top" width="50%" headers="mcps1.2.3.1.1 "><p id="p73917410117"><a name="p73917410117"></a><a name="p73917410117"></a><a name="image82328015166"></a><a name="image82328015166"></a><span><img class="mathml" id="image82328015166" src="figures/zh-cn_formulaimage_0000002549751335.png" width="53.2" height="24.964100000000002"></span></p>
@@ -2442,7 +2442,7 @@ KDNN Sum算子支持以下数据排布：
 </td>
 <td class="cellrowborder" valign="top" width="17.5%" headers="mcps1.1.6.1.3 "><p id="p111914477132"><a name="p111914477132"></a><a name="p111914477132"></a>kernel height with dilation</p>
 </td>
-<td class="cellrowborder" valign="top" width="17.49%" headers="mcps1.1.6.1.4 "><p id="p161199475137"><a name="p161199475137"></a><a name="p161199475137"></a>DKH = 1 + (oh-1) x sh</p>
+<td class="cellrowborder" valign="top" width="17.49%" headers="mcps1.1.6.1.4 "><p id="p161199475137"><a name="p161199475137"></a><a name="p161199475137"></a>DKH = 1 + (kh-1) x dh</p>
 </td>
 <td class="cellrowborder" valign="top" width="30.009999999999998%" headers="mcps1.1.6.1.5 "><p id="p121702232315"><a name="p121702232315"></a><a name="p121702232315"></a><a name="image1017010211239"></a><a name="image1017010211239"></a><span><img class="mathml" id="image1017010211239" src="figures/zh-cn_formulaimage_0000002522433242.png" width="150.29000000000002" height="25.855200000000004"></span></p>
 </td>
@@ -2453,7 +2453,7 @@ KDNN Sum算子支持以下数据排布：
 </td>
 <td class="cellrowborder" valign="top" width="17.5%" headers="mcps1.1.6.1.3 "><p id="p1812014731317"><a name="p1812014731317"></a><a name="p1812014731317"></a>kernel width with dilation</p>
 </td>
-<td class="cellrowborder" valign="top" width="17.49%" headers="mcps1.1.6.1.4 "><p id="p1414618410149"><a name="p1414618410149"></a><a name="p1414618410149"></a>DKW = 1 + (ow-1) x sw</p>
+<td class="cellrowborder" valign="top" width="17.49%" headers="mcps1.1.6.1.4 "><p id="p1414618410149"><a name="p1414618410149"></a><a name="p1414618410149"></a>DKW = 1 + (kw-1) x dw</p>
 </td>
 <td class="cellrowborder" valign="top" width="30.009999999999998%" headers="mcps1.1.6.1.5 "><p id="p5175728239"><a name="p5175728239"></a><a name="p5175728239"></a><a name="image151750232310"></a><a name="image151750232310"></a><span><img class="mathml" id="image151750232310" src="figures/zh-cn_formulaimage_0000002553553145.png" width="150.29000000000002" height="25.855200000000004"></span></p>
 </td>
@@ -3680,12 +3680,12 @@ Resampling算子可以对输入Tensor进行放缩。支持最近邻（nearest ne
 
 - 双线性采样的数学公式为：dst\(n, c, oh, ow\) = src\(n, c, ih<sub>0</sub>, iw<sub>0</sub>\)\*\(1 - W<sub>ih</sub>\)\*\(1 - W<sub>iw</sub>\) +src\(n, c, ih<sub>1</sub>, iw<sub>0</sub>\)\*W<sub>ih</sub>\*\(1 - W<sub>iw</sub>\) + src\(n, c, ih<sub>0</sub>, iw<sub>1</sub>\) \* \(1 - W<sub>ih</sub>\)\*W<sub>iw</sub>  +src\(n, c, ih<sub>1</sub>, iw<sub>1</sub>\)\*W<sub>ih</sub>\*W<sub>iw</sub>，其中：
 
-    - ih<sub>0</sub>=⌊oh+0.5F<sub>h</sub>−0.5⌋
-    - ih<sub>1</sub>=⌈oh+0.5F<sub>h</sub>−0.5⌉
-    - iw<sub>0</sub>=⌊ow+0.5Fw−0.5⌋
-    - iw<sub>1</sub>=⌈ow+0.5Fw−0.5⌉
-    - W<sub>ih</sub>=oh+0.5F<sub>h</sub>−0.5−ih<sub>0</sub>
-    - W<sub>iw</sub>=ow+0.5F<sub>w</sub>−0.5−iw<sub>0</sub>
+    - ih<sub>0</sub>=⌊(oh+0.5)/F<sub>h</sub>−0.5⌋
+    - ih<sub>1</sub>=⌈(oh+0.5)/F<sub>h</sub>−0.5⌉
+    - iw<sub>0</sub>=⌊(ow+0.5)/F<sub>w</sub>−0.5⌋
+    - iw<sub>1</sub>=⌈(ow+0.5)/F<sub>w</sub>−0.5⌉
+    - W<sub>ih</sub>=(oh+0.5)/F<sub>h</sub>−0.5−ih<sub>0</sub>
+    - W<sub>iw</sub>=(ow+0.5)/F<sub>w</sub>−0.5−iw<sub>0</sub>
 
     **表 1** 公式参数说明<a id="公式参数说明_7"></a>
 
@@ -3743,7 +3743,7 @@ Resampling算子可以对输入Tensor进行放缩。支持最近邻（nearest ne
 
 **数据类型<a name="section3831134894711"></a>**
 
-FWD\_D、BWD\_D支持f32/f16/bf16数据类型的任意组合。
+FWD\_D、BWD\_D支持f32、f16、bf16、s32、s8、u8数据类型的任意组合。
 
 <a name="table1614610477371"></a>
 <table><thead align="left"><tr id="row101467474371"><th class="cellrowborder" valign="top" width="15.540000000000001%" id="mcps1.1.6.1.1"><p id="p14236131915405"><a name="p14236131915405"></a><a name="p14236131915405"></a>传播方向</p>
@@ -3758,37 +3758,26 @@ FWD\_D、BWD\_D支持f32/f16/bf16数据类型的任意组合。
 </th>
 </tr>
 </thead>
-<tbody><tr id="row814714479373"><td class="cellrowborder" valign="top" width="15.540000000000001%" headers="mcps1.1.6.1.1 "><p id="p1816414512413"><a name="p1816414512413"></a><a name="p1816414512413"></a>FWD_D、BWD_D</p>
+<tbody><tr id="row814714479373"><td class="cellrowborder" valign="top" width="15.540000000000001%" headers="mcps1.1.6.1.1 "><p id="p1816414512413"><a name="p1816414512413"></a><a name="p1816414512413"></a>FWD_D</p>
 </td>
-<td class="cellrowborder" valign="top" width="15.079999999999998%" headers="mcps1.1.6.1.2 "><p id="p48997243817"><a name="p48997243817"></a><a name="p48997243817"></a>f32</p>
+<td class="cellrowborder" valign="top" width="15.079999999999998%" headers="mcps1.1.6.1.2 "><p id="p48997243817"><a name="p48997243817"></a><a name="p48997243817"></a>f32、f16、bf16、s32、s8、u8</p>
 </td>
-<td class="cellrowborder" valign="top" width="23.14%" headers="mcps1.1.6.1.3 "><p id="p15899162193816"><a name="p15899162193816"></a><a name="p15899162193816"></a>f32</p>
+<td class="cellrowborder" valign="top" width="23.14%" headers="mcps1.1.6.1.3 "><p id="p15899162193816"><a name="p15899162193816"></a><a name="p15899162193816"></a>f32、f16、bf16、s32、s8、u8</p>
 </td>
-<td class="cellrowborder" valign="top" width="23.119999999999997%" headers="mcps1.1.6.1.4 "><p id="p138996283815"><a name="p138996283815"></a><a name="p138996283815"></a>f32</p>
+<td class="cellrowborder" valign="top" width="23.119999999999997%" headers="mcps1.1.6.1.4 "><p id="p138996283815"><a name="p138996283815"></a><a name="p138996283815"></a>-</p>
 </td>
-<td class="cellrowborder" valign="top" width="23.119999999999997%" headers="mcps1.1.6.1.5 "><p id="p2701318123214"><a name="p2701318123214"></a><a name="p2701318123214"></a>f32</p>
-</td>
-</tr>
-<tr id="row8147154712378"><td class="cellrowborder" valign="top" width="15.540000000000001%" headers="mcps1.1.6.1.1 "><p id="p7686647112419"><a name="p7686647112419"></a><a name="p7686647112419"></a>FWD_D、BWD_D</p>
-</td>
-<td class="cellrowborder" valign="top" width="15.079999999999998%" headers="mcps1.1.6.1.2 "><p id="p2089919253815"><a name="p2089919253815"></a><a name="p2089919253815"></a>f16</p>
-</td>
-<td class="cellrowborder" valign="top" width="23.14%" headers="mcps1.1.6.1.3 "><p id="p78991429385"><a name="p78991429385"></a><a name="p78991429385"></a>f16</p>
-</td>
-<td class="cellrowborder" valign="top" width="23.119999999999997%" headers="mcps1.1.6.1.4 "><p id="p1289911203818"><a name="p1289911203818"></a><a name="p1289911203818"></a>f16</p>
-</td>
-<td class="cellrowborder" valign="top" width="23.119999999999997%" headers="mcps1.1.6.1.5 "><p id="p18701141893216"><a name="p18701141893216"></a><a name="p18701141893216"></a>f16</p>
+<td class="cellrowborder" valign="top" width="23.119999999999997%" headers="mcps1.1.6.1.5 "><p id="p2701318123214"><a name="p2701318123214"></a><a name="p2701318123214"></a>-</p>
 </td>
 </tr>
-<tr id="row18147124733714"><td class="cellrowborder" valign="top" width="15.540000000000001%" headers="mcps1.1.6.1.1 "><p id="p968734712419"><a name="p968734712419"></a><a name="p968734712419"></a>FWD_D、BWD_D</p>
+<tr id="row8147154712378"><td class="cellrowborder" valign="top" width="15.540000000000001%" headers="mcps1.1.6.1.1 "><p id="p7686647112419"><a name="p7686647112419"></a><a name="p7686647112419"></a>BWD_D</p>
 </td>
-<td class="cellrowborder" valign="top" width="15.079999999999998%" headers="mcps1.1.6.1.2 "><p id="p0899172173819"><a name="p0899172173819"></a><a name="p0899172173819"></a>bf16</p>
+<td class="cellrowborder" valign="top" width="15.079999999999998%" headers="mcps1.1.6.1.2 "><p id="p2089919253815"><a name="p2089919253815"></a><a name="p2089919253815"></a>-</p>
 </td>
-<td class="cellrowborder" valign="top" width="23.14%" headers="mcps1.1.6.1.3 "><p id="p1589982193811"><a name="p1589982193811"></a><a name="p1589982193811"></a>bf16</p>
+<td class="cellrowborder" valign="top" width="23.14%" headers="mcps1.1.6.1.3 "><p id="p78991429385"><a name="p78991429385"></a><a name="p78991429385"></a>-</p>
 </td>
-<td class="cellrowborder" valign="top" width="23.119999999999997%" headers="mcps1.1.6.1.4 "><p id="p389917212385"><a name="p389917212385"></a><a name="p389917212385"></a>bf16</p>
+<td class="cellrowborder" valign="top" width="23.119999999999997%" headers="mcps1.1.6.1.4 "><p id="p1289911203818"><a name="p1289911203818"></a><a name="p1289911203818"></a>f32、f16、bf16、s32、s8、u8</p>
 </td>
-<td class="cellrowborder" valign="top" width="23.119999999999997%" headers="mcps1.1.6.1.5 "><p id="p67017180323"><a name="p67017180323"></a><a name="p67017180323"></a>bf16</p>
+<td class="cellrowborder" valign="top" width="23.119999999999997%" headers="mcps1.1.6.1.5 "><p id="p18701141893216"><a name="p18701141893216"></a><a name="p18701141893216"></a>f32、f16、bf16、s32、s8、u8</p>
 </td>
 </tr>
 </tbody>
@@ -3880,7 +3869,19 @@ Shuffle算子可以对Tensor以某一维度为轴心进行数据混洗。
 
 **算子公式<a name="section1787522511317"></a>**
 
-数学公式表达为：![](figures/zh-cn_formulaimage_0000002549751319.png)  ，其中c′和c存在![](figures/zh-cn_formulaimage_0000002518391476.png)、![](figures/zh-cn_formulaimage_0000002518231558.png)的等式关系，式子中![](figures/zh-cn_formulaimage_0000002518391466.png)。
+数学公式表达为：
+
+![](figures/zh-cn_formulaimage_0000002549751319.png)
+
+其中，c′和c存在以下等式关系：
+
+![](figures/zh-cn_formulaimage_0000002518391476.png)
+
+![](figures/zh-cn_formulaimage_0000002518231558.png)
+
+式子中：
+
+![](figures/zh-cn_formulaimage_0000002518391466.png)
 
 **表 1** 公式参数说明<a id="公式参数说明_8"></a>
 
@@ -4520,7 +4521,7 @@ Local Response Normalization（简称lrn）是一种局部响应归一化操作�
 
 **数据排布<a name="section93424011482"></a>**
 
-支持1D至5D Tensor维度，具体数据排布如下。
+支持3D至5D Tensor维度，具体数据排布如下。
 
 <a name="table632335215406"></a>
 <table><thead align="left"><tr id="row132318524404"><th class="cellrowborder" valign="top" width="21.122112211221122%" id="mcps1.1.4.1.1"><p id="p686610581409"><a name="p686610581409"></a><a name="p686610581409"></a>Tensor维度</p>
@@ -4819,7 +4820,7 @@ Binary算子返回对张量source0和source1之间的元素操作结果，并可
 **表 1** op操作<a id="op操作"></a>
 
 <a name="table1429931423412"></a>
-<table><thead align="left"><tr id="row14315614193414"><th class="cellrowborder" valign="top" width="50%" id="mcps1.2.3.1.1"><p id="p731541415343"><a name="p731541415343"></a><a name="p731541415343"></a><strong id="b4315914113412"><a name="b4315914113412"></a><a name="b4315914113412"></a>reduce_op</strong></p>
+<table><thead align="left"><tr id="row14315614193414"><th class="cellrowborder" valign="top" width="50%" id="mcps1.2.3.1.1"><p id="p731541415343"><a name="p731541415343"></a><a name="p731541415343"></a><strong id="b4315914113412"><a name="b4315914113412"></a><a name="b4315914113412"></a>binary_op</strong></p>
 </th>
 <th class="cellrowborder" valign="top" width="50%" id="mcps1.2.3.1.2"><p id="p431541443417"><a name="p431541443417"></a><a name="p431541443417"></a><strong id="b17315914153414"><a name="b17315914153414"></a><a name="b17315914153414"></a>功能</strong></p>
 </th>
@@ -5339,7 +5340,7 @@ random\_choice是一种用于从集合中按概率随机选择元素的算法。
 
 **接口定义<a name="zh-cn_topic_0000002235268536_section8600057131316"></a>**
 
-def random\_choice\(arr: np.ndarray, seed: int\)-\>List\[int\]
+def random\_choice\(arr: np.ndarray, seed: int\)-\>np.ndarray
 
 该函数接收NumPy数组和随机数种子，返回random\_choice计算的结果。
 
@@ -5380,7 +5381,7 @@ def random\_choice\(arr: np.ndarray, seed: int\)-\>List\[int\]
 </th>
 </tr>
 </thead>
-<tbody><tr id="zh-cn_topic_0000002235268536_row769192744612"><td class="cellrowborder" valign="top" width="40%" headers="mcps1.1.3.1.1 "><p id="zh-cn_topic_0000002235268536_p106910272463"><a name="zh-cn_topic_0000002235268536_p106910272463"></a><a name="zh-cn_topic_0000002235268536_p106910272463"></a>List[int]</p>
+<tbody><tr id="zh-cn_topic_0000002235268536_row769192744612"><td class="cellrowborder" valign="top" width="40%" headers="mcps1.1.3.1.1 "><p id="zh-cn_topic_0000002235268536_p106910272463"><a name="zh-cn_topic_0000002235268536_p106910272463"></a><a name="zh-cn_topic_0000002235268536_p106910272463"></a>ndarray</p>
 </td>
 <td class="cellrowborder" valign="top" width="60%" headers="mcps1.1.3.1.2 "><p id="zh-cn_topic_0000002235268536_p156912027184613"><a name="zh-cn_topic_0000002235268536_p156912027184613"></a><a name="zh-cn_topic_0000002235268536_p156912027184613"></a>长度为1，如果发生异常，返回[-1]。</p>
 </td>

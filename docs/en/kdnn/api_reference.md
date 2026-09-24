@@ -102,7 +102,7 @@
 </tr>
 <tr id="row19543518123911"><td class="cellrowborder" valign="top" width="39.989999999999995%" headers="mcps1.2.3.1.1 "><p id="p054321873912"><a name="p054321873912"></a><a name="p054321873912"></a>Binary</p>
 </td>
-<td class="cellrowborder" valign="top" width="60.01%" headers="mcps1.2.3.1.2 "><p id="p19543118173911"><a name="p19543118173911"></a><a name="p19543118173911"></a>Binary primitive computation tensor operator</p>
+<td class="cellrowborder" valign="top" width="60.01%" headers="mcps1.2.3.1.2 "><p id="p19543118173911"><a name="p19543118173911"></a><a name="p19543118173911"></a>Binary tensor operator</p>
 </td>
 </tr>
 <tr id="row105101723183916"><td class="cellrowborder" valign="top" width="39.989999999999995%" headers="mcps1.2.3.1.1 "><p id="p3510723193910"><a name="p3510723193910"></a><a name="p3510723193910"></a>RNN</p>
@@ -2442,7 +2442,7 @@ General 2D convolution calculation formula:
 </td>
 <td class="cellrowborder" valign="top" width="17.5%" headers="mcps1.1.6.1.3 "><p id="p111914477132"><a name="p111914477132"></a><a name="p111914477132"></a>kernel height with dilation</p>
 </td>
-<td class="cellrowborder" valign="top" width="17.49%" headers="mcps1.1.6.1.4 "><p id="p161199475137"><a name="p161199475137"></a><a name="p161199475137"></a>DKH = 1 + (oh-1) x sh</p>
+<td class="cellrowborder" valign="top" width="17.49%" headers="mcps1.1.6.1.4 "><p id="p161199475137"><a name="p161199475137"></a><a name="p161199475137"></a>DKH = 1 + (kh-1) x dh</p>
 </td>
 <td class="cellrowborder" valign="top" width="30.009999999999998%" headers="mcps1.1.6.1.5 "><p id="p121702232315"><a name="p121702232315"></a><a name="p121702232315"></a><a name="image1017010211239"></a><a name="image1017010211239"></a><span><img class="mathml" id="image1017010211239" src="figures/zh-cn_formulaimage_0000002522433242.png" width="150.29000000000002" height="25.855200000000004"></span></p>
 </td>
@@ -2453,7 +2453,7 @@ General 2D convolution calculation formula:
 </td>
 <td class="cellrowborder" valign="top" width="17.5%" headers="mcps1.1.6.1.3 "><p id="p1812014731317"><a name="p1812014731317"></a><a name="p1812014731317"></a>kernel width with dilation</p>
 </td>
-<td class="cellrowborder" valign="top" width="17.49%" headers="mcps1.1.6.1.4 "><p id="p1414618410149"><a name="p1414618410149"></a><a name="p1414618410149"></a>DKW = 1 + (ow-1) x sw</p>
+<td class="cellrowborder" valign="top" width="17.49%" headers="mcps1.1.6.1.4 "><p id="p1414618410149"><a name="p1414618410149"></a><a name="p1414618410149"></a>DKW = 1 + (kw-1) x dw</p>
 </td>
 <td class="cellrowborder" valign="top" width="30.009999999999998%" headers="mcps1.1.6.1.5 "><p id="p5175728239"><a name="p5175728239"></a><a name="p5175728239"></a><a name="image151750232310"></a><a name="image151750232310"></a><span><img class="mathml" id="image151750232310" src="figures/zh-cn_formulaimage_0000002553553145.png" width="150.29000000000002" height="25.855200000000004"></span></p>
 </td>
@@ -3680,12 +3680,12 @@ Performs resampling operations on the input tensor. This operator uses two inter
 
 - The mathematical formula for bilinear sampling is dst\(n, c, oh, ow\) = src\(n, c, ih<sub>0</sub>, iw<sub>0</sub>\)\*\(1 - W<sub>ih</sub>\)\*\(1 - W<sub>iw</sub>\) +src\(n, c, ih<sub>1</sub>, iw<sub>0</sub>\)\*W<sub>ih</sub>\*\(1 - W<sub>iw</sub>\) + src\(n, c, ih<sub>0</sub>, iw<sub>1</sub>\) \* \(1 - W<sub>ih</sub>\)\*W<sub>iw</sub>  +src\(n, c, ih<sub>1</sub>, iw<sub>1</sub>\)\*W<sub>ih</sub>\*W<sub>iw</sub>, where:
 
-    - ih<sub>0</sub>=⌊oh+0.5F<sub>h</sub>−0.5⌋
-    - ih<sub>1</sub>=⌈oh+0.5F<sub>h</sub>−0.5⌉
-    - iw<sub>0</sub>=⌊ow+0.5Fw−0.5⌋
-    - iw<sub>1</sub>=⌈ow+0.5Fw−0.5⌉
-    - W<sub>ih</sub>=oh+0.5F<sub>h</sub>−0.5−ih<sub>0</sub>
-    - W<sub>iw</sub>=ow+0.5F<sub>w</sub>−0.5−iw<sub>0</sub>
+    - ih<sub>0</sub>=⌊(oh+0.5)/F<sub>h</sub>−0.5⌋
+    - ih<sub>1</sub>=⌈(oh+0.5)/F<sub>h</sub>−0.5⌉
+    - iw<sub>0</sub>=⌊(ow+0.5)/F<sub>w</sub>−0.5⌋
+    - iw<sub>1</sub>=⌈(ow+0.5)/F<sub>w</sub>−0.5⌉
+    - W<sub>ih</sub>=(oh+0.5)/F<sub>h</sub>−0.5−ih<sub>0</sub>
+    - W<sub>iw</sub>=(ow+0.5)/F<sub>w</sub>−0.5−iw<sub>0</sub>
 
     **Table 1** Formula parameters<a id="formula-parameters-7"></a>
 
@@ -3743,7 +3743,7 @@ Performs resampling operations on the input tensor. This operator uses two inter
 
 **Data Types<a name="section3831134894711"></a>**
 
-FWD_D and BWD_D support arbitrary combination of the f32, f16, and bf16 data types.
+FWD_D and BWD_D support arbitrary combination of the f32, f16, bf16, s32, s8, and u8 data types.
 
 <a name="table1614610477371"></a>
 <table><thead align="left"><tr id="row101467474371"><th class="cellrowborder" valign="top" width="15.540000000000001%" id="mcps1.1.6.1.1"><p id="p14236131915405"><a name="p14236131915405"></a><a name="p14236131915405"></a>Propagation Direction</p>
@@ -3758,37 +3758,26 @@ FWD_D and BWD_D support arbitrary combination of the f32, f16, and bf16 data typ
 </th>
 </tr>
 </thead>
-<tbody><tr id="row814714479373"><td class="cellrowborder" valign="top" width="15.540000000000001%" headers="mcps1.1.6.1.1 "><p id="p1816414512413"><a name="p1816414512413"></a><a name="p1816414512413"></a>FWD_D, BWD_D</p>
+<tbody><tr id="row814714479373"><td class="cellrowborder" valign="top" width="15.540000000000001%" headers="mcps1.1.6.1.1 "><p id="p1816414512413"><a name="p1816414512413"></a><a name="p1816414512413"></a>FWD_D</p>
 </td>
-<td class="cellrowborder" valign="top" width="15.079999999999998%" headers="mcps1.1.6.1.2 "><p id="p48997243817"><a name="p48997243817"></a><a name="p48997243817"></a>f32</p>
+<td class="cellrowborder" valign="top" width="15.079999999999998%" headers="mcps1.1.6.1.2 "><p id="p48997243817"><a name="p48997243817"></a><a name="p48997243817"></a>f32, f16, bf16, s32, s8, u8</p>
 </td>
-<td class="cellrowborder" valign="top" width="23.14%" headers="mcps1.1.6.1.3 "><p id="p15899162193816"><a name="p15899162193816"></a><a name="p15899162193816"></a>f32</p>
+<td class="cellrowborder" valign="top" width="23.14%" headers="mcps1.1.6.1.3 "><p id="p15899162193816"><a name="p15899162193816"></a><a name="p15899162193816"></a>f32, f16, bf16, s32, s8, u8</p>
 </td>
-<td class="cellrowborder" valign="top" width="23.119999999999997%" headers="mcps1.1.6.1.4 "><p id="p138996283815"><a name="p138996283815"></a><a name="p138996283815"></a>f32</p>
+<td class="cellrowborder" valign="top" width="23.119999999999997%" headers="mcps1.1.6.1.4 "><p id="p138996283815"><a name="p138996283815"></a><a name="p138996283815"></a>-</p>
 </td>
-<td class="cellrowborder" valign="top" width="23.119999999999997%" headers="mcps1.1.6.1.5 "><p id="p2701318123214"><a name="p2701318123214"></a><a name="p2701318123214"></a>f32</p>
-</td>
-</tr>
-<tr id="row8147154712378"><td class="cellrowborder" valign="top" width="15.540000000000001%" headers="mcps1.1.6.1.1 "><p id="p7686647112419"><a name="p7686647112419"></a><a name="p7686647112419"></a>FWD_D, BWD_D</p>
-</td>
-<td class="cellrowborder" valign="top" width="15.079999999999998%" headers="mcps1.1.6.1.2 "><p id="p2089919253815"><a name="p2089919253815"></a><a name="p2089919253815"></a>f16</p>
-</td>
-<td class="cellrowborder" valign="top" width="23.14%" headers="mcps1.1.6.1.3 "><p id="p78991429385"><a name="p78991429385"></a><a name="p78991429385"></a>f16</p>
-</td>
-<td class="cellrowborder" valign="top" width="23.119999999999997%" headers="mcps1.1.6.1.4 "><p id="p1289911203818"><a name="p1289911203818"></a><a name="p1289911203818"></a>f16</p>
-</td>
-<td class="cellrowborder" valign="top" width="23.119999999999997%" headers="mcps1.1.6.1.5 "><p id="p18701141893216"><a name="p18701141893216"></a><a name="p18701141893216"></a>f16</p>
+<td class="cellrowborder" valign="top" width="23.119999999999997%" headers="mcps1.1.6.1.5 "><p id="p2701318123214"><a name="p2701318123214"></a><a name="p2701318123214"></a>-</p>
 </td>
 </tr>
-<tr id="row18147124733714"><td class="cellrowborder" valign="top" width="15.540000000000001%" headers="mcps1.1.6.1.1 "><p id="p968734712419"><a name="p968734712419"></a><a name="p968734712419"></a>FWD_D, BWD_D</p>
+<tr id="row8147154712378"><td class="cellrowborder" valign="top" width="15.540000000000001%" headers="mcps1.1.6.1.1 "><p id="p7686647112419"><a name="p7686647112419"></a><a name="p7686647112419"></a>BWD_D</p>
 </td>
-<td class="cellrowborder" valign="top" width="15.079999999999998%" headers="mcps1.1.6.1.2 "><p id="p0899172173819"><a name="p0899172173819"></a><a name="p0899172173819"></a>bf16</p>
+<td class="cellrowborder" valign="top" width="15.079999999999998%" headers="mcps1.1.6.1.2 "><p id="p2089919253815"><a name="p2089919253815"></a><a name="p2089919253815"></a>-</p>
 </td>
-<td class="cellrowborder" valign="top" width="23.14%" headers="mcps1.1.6.1.3 "><p id="p1589982193811"><a name="p1589982193811"></a><a name="p1589982193811"></a>bf16</p>
+<td class="cellrowborder" valign="top" width="23.14%" headers="mcps1.1.6.1.3 "><p id="p78991429385"><a name="p78991429385"></a><a name="p78991429385"></a>-</p>
 </td>
-<td class="cellrowborder" valign="top" width="23.119999999999997%" headers="mcps1.1.6.1.4 "><p id="p389917212385"><a name="p389917212385"></a><a name="p389917212385"></a>bf16</p>
+<td class="cellrowborder" valign="top" width="23.119999999999997%" headers="mcps1.1.6.1.4 "><p id="p1289911203818"><a name="p1289911203818"></a><a name="p1289911203818"></a>f32, f16, bf16, s32, s8, u8</p>
 </td>
-<td class="cellrowborder" valign="top" width="23.119999999999997%" headers="mcps1.1.6.1.5 "><p id="p67017180323"><a name="p67017180323"></a><a name="p67017180323"></a>bf16</p>
+<td class="cellrowborder" valign="top" width="23.119999999999997%" headers="mcps1.1.6.1.5 "><p id="p18701141893216"><a name="p18701141893216"></a><a name="p18701141893216"></a>f32, f16, bf16, s32, s8, u8</p>
 </td>
 </tr>
 </tbody>
@@ -3880,7 +3869,19 @@ Shuffles tensor data along a shuffle axis (dimension).
 
 **Formula<a name="section1787522511317"></a>**
 
-The formula is ![](figures/zh-cn_formulaimage_0000002549751319.png), where <code>c'</code> and <code>c</code> relate through the equations ![](figures/zh-cn_formulaimage_0000002518391476.png) and ![](figures/zh-cn_formulaimage_0000002518231558.png). In the formula, ![](figures/zh-cn_formulaimage_0000002518391466.png) .
+The formula is:
+
+![](figures/zh-cn_formulaimage_0000002549751319.png)
+
+where <code>c'</code> and <code>c</code> relate through the following equations:
+
+![](figures/zh-cn_formulaimage_0000002518391476.png)
+
+![](figures/zh-cn_formulaimage_0000002518231558.png)
+
+In the formulas:
+
+![](figures/zh-cn_formulaimage_0000002518391466.png)
 
 **Table 1** Formula parameters<a id="formula-parameters-8"></a>
 
@@ -4520,7 +4521,7 @@ The single-channel formula is as follows:
 
 **Data Layout<a name="section93424011482"></a>**
 
-One to five dimensions are supported. The following data layout formats are supported.
+Three to five dimensions are supported. The following data layout formats are supported.
 
 <a name="table632335215406"></a>
 <table><thead align="left"><tr id="row132318524404"><th class="cellrowborder" valign="top" width="21.122112211221122%" id="mcps1.1.4.1.1"><p id="p686610581409"><a name="p686610581409"></a><a name="p686610581409"></a>Tensor Dimension</p>
@@ -4819,7 +4820,7 @@ The formula is ![](figures/zh-cn_formulaimage_0000002549871363.png).
 **Table 1** Operator operation<a id="operator-operation"></a>
 
 <a name="table1429931423412"></a>
-<table><thead align="left"><tr id="row14315614193414"><th class="cellrowborder" valign="top" width="50%" id="mcps1.2.3.1.1"><p id="p731541415343"><a name="p731541415343"></a><a name="p731541415343"></a><strong id="b4315914113412"><a name="b4315914113412"></a><a name="b4315914113412"></a>reduce_op</strong></p>
+<table><thead align="left"><tr id="row14315614193414"><th class="cellrowborder" valign="top" width="50%" id="mcps1.2.3.1.1"><p id="p731541415343"><a name="p731541415343"></a><a name="p731541415343"></a><strong id="b4315914113412"><a name="b4315914113412"></a><a name="b4315914113412"></a>binary_op</strong></p>
 </th>
 <th class="cellrowborder" valign="top" width="50%" id="mcps1.2.3.1.2"><p id="p431541443417"><a name="p431541443417"></a><a name="p431541443417"></a><strong id="b17315914153414"><a name="b17315914153414"></a><a name="b17315914153414"></a>Function</strong></p>
 </th>
@@ -5339,7 +5340,7 @@ The core of the random selection algorithm is to randomly select an element from
 
 **Interface Definition<a name="zh-cn_topic_0000002235268536_section8600057131316"></a>**
 
-def random\_choice\(arr: np.ndarray, seed: int\)-\>List\[int\]
+def random\_choice\(arr: np.ndarray, seed: int\)-\>np.ndarray
 
 Receives NumPy arrays and random seeds, and returns the result of random\_choice calculation.
 
@@ -5380,7 +5381,7 @@ Receives NumPy arrays and random seeds, and returns the result of random\_choice
 </th>
 </tr>
 </thead>
-<tbody><tr id="zh-cn_topic_0000002235268536_row769192744612"><td class="cellrowborder" valign="top" width="40%" headers="mcps1.1.3.1.1 "><p id="zh-cn_topic_0000002235268536_p106910272463"><a name="zh-cn_topic_0000002235268536_p106910272463"></a><a name="zh-cn_topic_0000002235268536_p106910272463"></a>List[int]</p>
+<tbody><tr id="zh-cn_topic_0000002235268536_row769192744612"><td class="cellrowborder" valign="top" width="40%" headers="mcps1.1.3.1.1 "><p id="zh-cn_topic_0000002235268536_p106910272463"><a name="zh-cn_topic_0000002235268536_p106910272463"></a><a name="zh-cn_topic_0000002235268536_p106910272463"></a>ndarray</p>
 </td>
 <td class="cellrowborder" valign="top" width="60%" headers="mcps1.1.3.1.2 "><p id="zh-cn_topic_0000002235268536_p156912027184613"><a name="zh-cn_topic_0000002235268536_p156912027184613"></a><a name="zh-cn_topic_0000002235268536_p156912027184613"></a>The value is <code>1</code>. If an exception occurs, [-1] is returned.</p>
 </td>

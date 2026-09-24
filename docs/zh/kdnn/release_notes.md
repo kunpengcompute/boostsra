@@ -12,7 +12,7 @@
 </tr>
 <tr id="row24726251"><th class="firstcol" valign="top" width="42.17%" id="mcps1.1.3.2.1"><p id="p56669300"><a name="p56669300"></a><a name="p56669300"></a>产品版本</p>
 </th>
-<td class="cellrowborder" valign="top" width="57.830000000000005%" headers="mcps1.1.3.2.1 "><p id="p13967181113316"><a name="p13967181113316"></a><a name="p13967181113316"></a><span id="text03501914183312"><a name="text03501914183312"></a><a name="text03501914183312"></a>26.0.RC1</span></p>
+<td class="cellrowborder" valign="top" width="57.830000000000005%" headers="mcps1.1.3.2.1 "><p id="p13967181113316"><a name="p13967181113316"></a><a name="p13967181113316"></a><span id="text03501914183312"><a name="text03501914183312"></a><a name="text03501914183312"></a>26.2.RC1</span></p>
 </td>
 </tr>
 <tr id="row1930811171892"><th class="firstcol" valign="top" width="42.17%" id="mcps1.1.3.3.1"><p id="p2030912172097"><a name="p2030912172097"></a><a name="p2030912172097"></a>软件名称</p>
@@ -22,7 +22,7 @@
 </tr>
 <tr id="row5497143514612"><th class="firstcol" valign="top" width="42.17%" id="mcps1.1.3.4.1"><p id="p162251517551"><a name="p162251517551"></a><a name="p162251517551"></a>软件包版本</p>
 </th>
-<td class="cellrowborder" valign="top" width="57.830000000000005%" headers="mcps1.1.3.4.1 "><p id="p6225131165519"><a name="p6225131165519"></a><a name="p6225131165519"></a>3.1.0</p>
+<td class="cellrowborder" valign="top" width="57.830000000000005%" headers="mcps1.1.3.4.1 "><p id="p6225131165519"><a name="p6225131165519"></a><a name="p6225131165519"></a>V3.2.0</p>
 </td>
 </tr>
 </tbody>
@@ -51,7 +51,7 @@
 </td>
 <td class="cellrowborder" valign="top" width="19.97%" headers="mcps1.2.7.1.2 "><p id="zh-cn_topic_0000002502992013_p16180743171218"><a name="zh-cn_topic_0000002502992013_p16180743171218"></a><a name="zh-cn_topic_0000002502992013_p16180743171218"></a>openEuler 22.03 LTS SP3</p>
 </td>
-<td class="cellrowborder" valign="top" width="22.32%" headers="mcps1.2.7.1.3 "><p id="zh-cn_topic_0000002502992013_p818014317128"><a name="zh-cn_topic_0000002502992013_p818014317128"></a><a name="zh-cn_topic_0000002502992013_p818014317128"></a>华为鲲鹏920 7270Z/7280Z处理器</p>
+<td class="cellrowborder" valign="top" width="22.32%" headers="mcps1.2.7.1.3 "><p id="zh-cn_topic_0000002502992013_p818014317128"><a name="zh-cn_topic_0000002502992013_p818014317128"></a><a name="zh-cn_topic_0000002502992013_p818014317128"></a>鲲鹏920 7270Z/7280Z处理器</p>
 </td>
 <td class="cellrowborder" valign="top" width="18.94%" headers="mcps1.2.7.1.4 "><p id="zh-cn_topic_0000002502992013_p718017432120"><a name="zh-cn_topic_0000002502992013_p718017432120"></a><a name="zh-cn_topic_0000002502992013_p718017432120"></a>GCC 10.3.1</p>
 </td>
@@ -63,7 +63,7 @@
 <tr id="zh-cn_topic_0000002502992013_row15391159141317"><td class="cellrowborder" valign="top" headers="mcps1.2.7.1.1 "><p id="zh-cn_topic_0000002502992013_p126842487387"><a name="zh-cn_topic_0000002502992013_p126842487387"></a><a name="zh-cn_topic_0000002502992013_p126842487387"></a>openEuler 22.03 LTS SP4</p>
 <p id="zh-cn_topic_0000002502992013_p618613441416"><a name="zh-cn_topic_0000002502992013_p618613441416"></a><a name="zh-cn_topic_0000002502992013_p618613441416"></a>内核版本高于5.10.0-228.0.0.127</p>
 </td>
-<td class="cellrowborder" valign="top" headers="mcps1.2.7.1.2 "><p id="zh-cn_topic_0000002502992013_p161878491412"><a name="zh-cn_topic_0000002502992013_p161878491412"></a><a name="zh-cn_topic_0000002502992013_p161878491412"></a>华为鲲鹏920新型号处理器</p>
+<td class="cellrowborder" valign="top" headers="mcps1.2.7.1.2 "><p id="zh-cn_topic_0000002502992013_p161878491412"><a name="zh-cn_topic_0000002502992013_p161878491412"></a><a name="zh-cn_topic_0000002502992013_p161878491412"></a>鲲鹏920新型号处理器</p>
 </td>
 <td class="cellrowborder" valign="top" headers="mcps1.2.7.1.3 "><p id="zh-cn_topic_0000002502992013_p6187843140"><a name="zh-cn_topic_0000002502992013_p6187843140"></a><a name="zh-cn_topic_0000002502992013_p6187843140"></a>GCC 12.3.1/毕昇 4.2.0</p>
 </td>
@@ -76,7 +76,7 @@
 </td>
 <td class="cellrowborder" valign="top" width="19.97%" headers="mcps1.2.7.1.2 "><p id="zh-cn_topic_0000002502992013_zh-cn_topic_0000001831167081_p49592815115"><a name="zh-cn_topic_0000002502992013_zh-cn_topic_0000001831167081_p49592815115"></a><a name="zh-cn_topic_0000002502992013_zh-cn_topic_0000001831167081_p49592815115"></a>openEuler 22.03 LTS SP3</p>
 </td>
-<td class="cellrowborder" valign="top" width="22.32%" headers="mcps1.2.7.1.3 "><p id="zh-cn_topic_0000002502992013_zh-cn_topic_0000001831167081_p1871451912230"><a name="zh-cn_topic_0000002502992013_zh-cn_topic_0000001831167081_p1871451912230"></a><a name="zh-cn_topic_0000002502992013_zh-cn_topic_0000001831167081_p1871451912230"></a>华为鲲鹏920系列处理器</p>
+<td class="cellrowborder" valign="top" width="22.32%" headers="mcps1.2.7.1.3 "><p id="zh-cn_topic_0000002502992013_zh-cn_topic_0000001831167081_p1871451912230"><a name="zh-cn_topic_0000002502992013_zh-cn_topic_0000001831167081_p1871451912230"></a><a name="zh-cn_topic_0000002502992013_zh-cn_topic_0000001831167081_p1871451912230"></a>鲲鹏920系列处理器</p>
 </td>
 <td class="cellrowborder" valign="top" width="18.94%" headers="mcps1.2.7.1.4 "><p id="zh-cn_topic_0000002502992013_zh-cn_topic_0000001831167081_p17184611237"><a name="zh-cn_topic_0000002502992013_zh-cn_topic_0000001831167081_p17184611237"></a><a name="zh-cn_topic_0000002502992013_zh-cn_topic_0000001831167081_p17184611237"></a>GCC 10.3.1</p>
 </td>
@@ -140,6 +140,34 @@
 </tr>
 </tbody>
 </table>
+
+## V3.2.0
+
+### 更新说明
+
+**新增特性**
+
+<table><thead align="left"><tr id="row28804032"><th class="cellrowborder" valign="top" width="31.7%" id="mcps1.1.3.1.1"><p id="p4697041"><a name="p4697041"></a><a name="p4697041"></a>特性描述</p>
+</th>
+<th class="cellrowborder" valign="top" width="68.30000000000001%" id="mcps1.1.3.1.2"><p id="p44916036"><a name="p44916036"></a><a name="p44916036"></a>更新说明</p>
+</th>
+</tr>
+</thead>
+<tbody><tr id="row84721825541"><td class="cellrowborder" valign="top" width="31.7%" headers="mcps1.1.3.1.1 "><p id="p1682142025412"><a name="p1682142025412"></a><a name="p1682142025412"></a>KDNN</p>
+</td>
+<td class="cellrowborder" valign="top" width="68.30000000000001%" headers="mcps1.1.3.1.2 "><a name="ul4362115103416"></a><a name="ul4362115103416"></a><ul id="ul4362115103416"><li>新增SparseGemm线程池并行支持。</li><li>新增小矩阵GEMM优化实现。</li><li>持续优化MatMul、卷积及相关算子在鲲鹏平台上的性能。</li></ul>
+</td>
+</tr>
+</tbody>
+</table>
+
+### 已解决的问题
+
+无
+
+### 遗留问题
+
+无
 
 ## V3.1.0
 
@@ -292,7 +320,7 @@
 
 ## 版本配套文档
 
-### V3.1.0版本配套文档
+### V3.2.0版本配套文档
 
 <a name="table41916133"></a>
 <table>
@@ -312,7 +340,7 @@
   <tbody>
     <tr id="row1341193722116">
       <td class="cellrowborder" valign="top" width="45.02%" headers="mcps1.1.4.1.1">
-        <p>版本说明书</p>
+        <p><a href="./release_notes.md">《版本说明书》</a></p>
       </td>
       <td class="cellrowborder" valign="top" width="38.02%" headers="mcps1.1.4.1.2">
         <p>本文档提供KDNN的版本发布信息。</p>
@@ -323,7 +351,7 @@
     </tr>
     <tr id="row20256161544411">
       <td class="cellrowborder" valign="top" width="45.02%" headers="mcps1.1.4.1.1">
-        <p>快速入门</p>
+        <p><a href="./quick_start.md">《快速入门》</a></p>
       </td>
       <td class="cellrowborder" valign="top" width="38.02%" headers="mcps1.1.4.1.2">
         <p>提供KDNN快速入门指导。</p>
@@ -334,7 +362,7 @@
     </tr>
     <tr id="row1941037152117">
       <td class="cellrowborder" valign="top" width="45.02%" headers="mcps1.1.4.1.1">
-        <p>安装指南</p>
+        <p><a href="./installation_guide.md">《安装指南》</a></p>
       </td>
       <td class="cellrowborder" valign="top" width="38.02%" headers="mcps1.1.4.1.2">
         <p>本文档提供KDNN安装部署等开发指导。</p>
@@ -345,7 +373,7 @@
     </tr>
     <tr id="row29615193441">
       <td class="cellrowborder" valign="top" width="45.02%" headers="mcps1.1.4.1.1">
-        <p>API参考</p>
+        <p><a href="./api_reference.md">《API参考》</a></p>
       </td>
       <td class="cellrowborder" valign="top" width="38.02%" headers="mcps1.1.4.1.2">
         <p>提供KDNN提供的API接口定义、接口说明、接口调用示例等。</p>
@@ -356,7 +384,7 @@
     </tr>
     <tr id="row181851121164416">
       <td class="cellrowborder" valign="top" width="45.02%" headers="mcps1.1.4.1.1">
-        <p>最佳实践</p>
+        <p><a href="./best_practices.md">《最佳实践》</a></p>
       </td>
       <td class="cellrowborder" valign="top" width="38.02%" headers="mcps1.1.4.1.2">
         <p>提供KDNN使用的实践案例。</p>
