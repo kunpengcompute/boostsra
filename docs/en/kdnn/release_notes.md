@@ -12,7 +12,7 @@
 </tr>
 <tr id="row24726251"><th class="firstcol" valign="top" width="42.17%" id="mcps1.1.3.2.1"><p id="p56669300"><a name="p56669300"></a><a name="p56669300"></a>Product Version</p>
 </th>
-<td class="cellrowborder" valign="top" width="57.830000000000005%" headers="mcps1.1.3.2.1 "><p id="p13967181113316"><a name="p13967181113316"></a><a name="p13967181113316"></a><span id="text03501914183312"><a name="text03501914183312"></a><a name="text03501914183312"></a>26.0.RC1</span></p>
+<td class="cellrowborder" valign="top" width="57.830000000000005%" headers="mcps1.1.3.2.1 "><p id="p13967181113316"><a name="p13967181113316"></a><a name="p13967181113316"></a><span id="text03501914183312"><a name="text03501914183312"></a><a name="text03501914183312"></a>26.2.RC1</span></p>
 </td>
 </tr>
 <tr id="row1930811171892"><th class="firstcol" valign="top" width="42.17%" id="mcps1.1.3.3.1"><p id="p2030912172097"><a name="p2030912172097"></a><a name="p2030912172097"></a>Software Name</p>
@@ -22,7 +22,7 @@
 </tr>
 <tr id="row5497143514612"><th class="firstcol" valign="top" width="42.17%" id="mcps1.1.3.4.1"><p id="p162251517551"><a name="p162251517551"></a><a name="p162251517551"></a>Software Version</p>
 </th>
-<td class="cellrowborder" valign="top" width="57.830000000000005%" headers="mcps1.1.3.4.1 "><p id="p6225131165519"><a name="p6225131165519"></a><a name="p6225131165519"></a>3.1.0</p>
+<td class="cellrowborder" valign="top" width="57.830000000000005%" headers="mcps1.1.3.4.1 "><p id="p6225131165519"><a name="p6225131165519"></a><a name="p6225131165519"></a>V3.2.0</p>
 </td>
 </tr>
 </tbody>
@@ -140,6 +140,34 @@ The software packages, release documents, and product documents have been scanne
 </tr>
 </tbody>
 </table>
+
+## V3.2.0
+
+### Change Description
+
+**New Features**
+
+<table><thead align="left"><tr id="row28804032"><th class="cellrowborder" valign="top" width="31.7%" id="mcps1.1.3.1.1"><p id="p4697041"><a name="p4697041"></a><a name="p4697041"></a>Feature</p>
+</th>
+<th class="cellrowborder" valign="top" width="68.30000000000001%" id="mcps1.1.3.1.2"><p id="p44916036"><a name="p44916036"></a><a name="p44916036"></a>Update Description</p>
+</th>
+</tr>
+</thead>
+<tbody><tr id="row84721825541"><td class="cellrowborder" valign="top" width="31.7%" headers="mcps1.1.3.1.1 "><p id="p1682142025412"><a name="p1682142025412"></a><a name="p1682142025412"></a>KDNN</p>
+</td>
+<td class="cellrowborder" valign="top" width="68.30000000000001%" headers="mcps1.1.3.1.2 "><a name="ul4362115103416"></a><a name="ul4362115103416"></a><ul id="ul4362115103416"><li>Added thread pool parallel support for SparseGemm.</li><li>Added an optimized implementation for small-matrix GEMM.</li><li>Continued optimizing the performance of MatMul, convolution, and related operators on the Kunpeng platform.</li></ul>
+</td>
+</tr>
+</tbody>
+</table>
+
+### Resolved Issues
+
+None
+
+### Known Issues
+
+None
 
 ## V3.1.0
 
@@ -292,7 +320,7 @@ None
 
 ## Related Documentation
 
-### V3.1.0 Documentation
+### V3.2.0 Documentation
 
 <a name="table41916133"></a>
 <table>
@@ -311,7 +339,7 @@ None
   </thead>
   <tbody>
     <tr id="row1341193722116">
-      <td class="cellrowborder" valign="top" width="45.02%" headers="mcps1.1.4.1.1"><p>Release Notes</p>
+      <td class="cellrowborder" valign="top" width="45.02%" headers="mcps1.1.4.1.1"><p><a href="./release_notes.md">Release Notes</a></p>
       </td>
       <td class="cellrowborder" valign="top" width="38.02%" headers="mcps1.1.4.1.2">
         <p>Provides version release information of KDNN.</p>
@@ -321,7 +349,7 @@ None
       </td>
     </tr>
     <tr id="row20256161544411">
-      <td class="cellrowborder" valign="top" width="45.02%" headers="mcps1.1.4.1.1"><p>Quick Start</p>
+      <td class="cellrowborder" valign="top" width="45.02%" headers="mcps1.1.4.1.1"><p><a href="./quick_start.md">Quick Start</a></p>
       </td>
       <td class="cellrowborder" valign="top" width="38.02%" headers="mcps1.1.4.1.2">
         <p>Provides guidance for getting started with KDNN.</p>
@@ -332,7 +360,7 @@ None
     </tr>
     <tr id="row1941037152117">
       <td class="cellrowborder" valign="top" width="45.02%" headers="mcps1.1.4.1.1">
-        <p>Installation Guide</p>
+        <p><a href="./installation_guide.md">Installation Guide</a></p>
       </td>
       <td class="cellrowborder" valign="top" width="38.02%" headers="mcps1.1.4.1.2">
         <p>Describes how to install and deploy KDNN.</p>
@@ -343,7 +371,7 @@ None
     </tr>
     <tr id="row29615193441">
       <td class="cellrowborder" valign="top" width="45.02%" headers="mcps1.1.4.1.1">
-        <p>API Reference</p>
+        <p><a href="./api_reference.md">API Reference</a></p>
       </td>
       <td class="cellrowborder" valign="top" width="38.02%" headers="mcps1.1.4.1.2">
         <p>Provides definitions, descriptions, and calling examples of KDNN APIs.</p>
@@ -354,7 +382,7 @@ None
     </tr>
     <tr id="row181851121164416">
       <td class="cellrowborder" valign="top" width="45.02%" headers="mcps1.1.4.1.1">
-        <p>Best Practices</p>
+        <p><a href="./best_practices.md">Best Practices</a></p>
       </td>
       <td class="cellrowborder" valign="top" width="38.02%" headers="mcps1.1.4.1.2">
         <p>Provides best practices of using KDNN.</p>

@@ -1,7 +1,10 @@
+简体中文|[English](../../en/kdnn/README.md)
+
 # KDNN介绍
 
 ## 最新消息
 
+- \[2026.09.30\]：KDNN新增SparseGemm线程池并行支持和小矩阵GEMM优化，并持续优化鲲鹏平台上的MatMul及卷积等算子性能。
 - \[2026.03.30\]：KDNN新增基于MMLA指令的s8/u8数据类型MatMul实现；支持Post-ops（后处理操作）；支持FusedMatMul融合算子。
 - \[2025.12.30\]：KDNN新增MatMul的NEON实现，新增支持MatMul的自定义线程池模式，新增Group Normalization、SparseGemm深度神经网络算子的鲲鹏平台支持。
 - \[2025.06.30\]：KDNN新增Pool、Batch Normalization、Local Response Normalization、Reduction、PReLU、Binary、RNN深度神经网络算子的鲲鹏平台支持。新增支持鲲鹏920新型号处理器。
@@ -9,7 +12,7 @@
 
 ## 项目介绍
 
-KAIL（Kunpeng AI Library，鲲鹏AI算子库）是华为提供的基于鲲鹏平台优化的高性能AI算子库，包含KDNN（Kunpeng Deep Neural Network Library，鲲鹏深度神经网络算子库）和KDNN_EXT（Kunpeng Deep Neural Network Extension Library，鲲鹏深度神经网络算子扩展库）。主要由C/C++、汇编语言实现。KDNN\_EXT扩展算子包括softmax、random\_choice等。KAIL的组成如[表1](#table113613052017)所示。
+KAIL（Kunpeng AI Library，鲲鹏AI算子库）是基于鲲鹏平台优化的高性能AI算子库，包含KDNN（Kunpeng Deep Neural Network Library，鲲鹏深度神经网络算子库）和KDNN_EXT（Kunpeng Deep Neural Network Extension Library，鲲鹏深度神经网络算子扩展库）。主要由C/C++、汇编语言实现。KDNN\_EXT扩展算子包括softmax、random\_choice等。KAIL的组成如[表1](#table113613052017)所示。
 
 **表 1**  KAIL组成部分
 
@@ -86,7 +89,7 @@ KDNN主要在以下场景中使用：
 </td>
 <td class="cellrowborder" valign="top" width="19.97%" headers="mcps1.2.7.1.2 "><p id="p45713315237"><a name="p45713315237"></a><a name="p45713315237"></a>openEuler 22.03 LTS SP3</p>
 </td>
-<td class="cellrowborder" valign="top" width="22.32%" headers="mcps1.2.7.1.3 "><p id="p2057631172312"><a name="p2057631172312"></a><a name="p2057631172312"></a>华为鲲鹏920 7270Z/7280Z处理器</p>
+<td class="cellrowborder" valign="top" width="22.32%" headers="mcps1.2.7.1.3 "><p id="p2057631172312"><a name="p2057631172312"></a><a name="p2057631172312"></a>鲲鹏920 7270Z/7280Z处理器</p>
 </td>
 <td class="cellrowborder" valign="top" width="18.94%" headers="mcps1.2.7.1.4 "><p id="p115753102316"><a name="p115753102316"></a><a name="p115753102316"></a>GCC 10.3.1</p>
 </td>
@@ -100,7 +103,7 @@ KDNN主要在以下场景中使用：
 <td class="cellrowborder" valign="top" width="19.97%" headers="mcps1.2.7.1.2 "><p id="p155719317232"><a name="p155719317232"></a><a name="p155719317232"></a>openEuler 22.03 LTS SP4</p>
 <p id="p105793172319"><a name="p105793172319"></a><a name="p105793172319"></a>内核版本高于5.10.0-228.0.0.127</p>
 </td>
-<td class="cellrowborder" valign="top" width="22.32%" headers="mcps1.2.7.1.3 "><p id="p65733172315"><a name="p65733172315"></a><a name="p65733172315"></a>华为鲲鹏920新型号处理器</p>
+<td class="cellrowborder" valign="top" width="22.32%" headers="mcps1.2.7.1.3 "><p id="p65733172315"><a name="p65733172315"></a><a name="p65733172315"></a>鲲鹏920新型号处理器</p>
 </td>
 <td class="cellrowborder" valign="top" width="18.94%" headers="mcps1.2.7.1.4 "><p id="p1757183162316"><a name="p1757183162316"></a><a name="p1757183162316"></a>GCC 12.3.1/毕昇 4.2.0</p>
 </td>
@@ -113,7 +116,7 @@ KDNN主要在以下场景中使用：
 </td>
 <td class="cellrowborder" valign="top" width="19.97%" headers="mcps1.2.7.1.2 "><p id="p45714313232"><a name="p45714313232"></a><a name="p45714313232"></a>openEuler 22.03 LTS SP3</p>
 </td>
-<td class="cellrowborder" valign="top" width="22.32%" headers="mcps1.2.7.1.3 "><p id="p7571931162318"><a name="p7571931162318"></a><a name="p7571931162318"></a>华为鲲鹏920系列处理器</p>
+<td class="cellrowborder" valign="top" width="22.32%" headers="mcps1.2.7.1.3 "><p id="p7571931162318"><a name="p7571931162318"></a><a name="p7571931162318"></a>鲲鹏920系列处理器</p>
 </td>
 <td class="cellrowborder" valign="top" width="18.94%" headers="mcps1.2.7.1.4 "><p id="p1379182902417"><a name="p1379182902417"></a><a name="p1379182902417"></a>GCC 10.3.1</p>
 </td>
@@ -128,9 +131,9 @@ KDNN主要在以下场景中使用：
 ## 学习文档
 
 <a name="table11320174415582"></a>
-<table><thead align="left"><tr id="row532024445820"><th class="cellrowborder" valign="top" width="28.012801280128013%" id="mcps1.1.4.1.2"><p id="p14321184425814"><a name="p14321184425814"></a><a name="p14321184425814"></a>学习资源名称</p>
+<table><thead align="left"><tr id="row532024445820"><th class="cellrowborder" valign="top" width="28.012801280128013%" id="mcps1.1.4.1.2"><p id="p14321184425814"><a name="p14321184425814"></a><a name="p14321184425814"></a>学习文档名称</p>
 </th>
-<th class="cellrowborder" valign="top" width="57.18571857185718%" id="mcps1.1.4.1.3"><p id="p1932112447589"><a name="p1932112447589"></a><a name="p1932112447589"></a>学习资源简介</p>
+<th class="cellrowborder" valign="top" width="57.18571857185718%" id="mcps1.1.4.1.3"><p id="p1932112447589"><a name="p1932112447589"></a><a name="p1932112447589"></a>内容简介</p>
 </th>
 </tr>
 </thead>

@@ -1,7 +1,10 @@
+[简体中文](../../zh/kdnn/README.md)|English
+
 # Introduction to KDNN
 
 ## Latest Updates
 
+- [2026.09.30]: KDNN added support for SparseGemm thread pool parallelism and optimization for small matrix GEMM, and continues to optimize the performance of operators such as MatMul and convolution on the Kunpeng platform.
 - [2026.03.30]: Added MatMul implementation for s8/u8 data types based on Matrix Multiply-Accumulate (MMLA) instructions, and added support for post-processing operations (post-ops) and for the FusedMatMul operator.
 - [2025.12.30]: Added NEON-based MatMul implementation, added support for the custom thread pool mode in MatMul, and added Kunpeng platform support for Group Normalization and SparseGemm operators.
 - [2025.06.30]: Added Kunpeng platform support for the Pool, Batch Normalization, Local Response Normalization, Reduction, PReLU, Binary, and RNN deep neural network operators. Added support for the new Kunpeng 920 processor model.
@@ -9,7 +12,7 @@
 
 ## Project Overview
 
-Kunpeng AI Library (KAIL) is implemented using C/C++ and assembly language. It is a high-performance AI operator library optimized by Huawei for the Kunpeng platform. It includes the Kunpeng Deep Neural Network Library (KDNN) and Kunpeng Deep Neural Network Extension Library (KDNN_EXT) that contains operators such as softmax and random_choice. [Table 1](#table113613052017) describes KAIL components.
+Kunpeng AI Library (KAIL) is a high-performance AI operator library optimized for the Kunpeng platform. It is implemented using C/C++ and assembly language. It includes the Kunpeng Deep Neural Network Library (KDNN) and Kunpeng Deep Neural Network Extension Library (KDNN_EXT) that contains operators such as softmax and random_choice. [Table 1](#table113613052017) describes KAIL components.
 
 **Table 1** KDNN components
 <div id="table113613052017"></div>
@@ -125,9 +128,9 @@ To use KDNN smoothly and securely, ensure that your environment is one of the ve
 
 <a name="table11320174415582"></a>
 <table><thead align="left"><tr id="row532024445820">
-<th class="cellrowborder" valign="top" width="28.012801280128013%" id="mcps1.1.4.1.2"><p id="p14321184425814"><a name="p14321184425814"></a><a name="p14321184425814"></a>Resource Name</p>
+<th class="cellrowborder" valign="top" width="28.012801280128013%" id="mcps1.1.4.1.2"><p id="p14321184425814"><a name="p14321184425814"></a><a name="p14321184425814"></a>Document Name</p>
 </th>
-<th class="cellrowborder" valign="top" width="57.18571857185718%" id="mcps1.1.4.1.3"><p id="p1932112447589"><a name="p1932112447589"></a><a name="p1932112447589"></a>Resource Description</p>
+<th class="cellrowborder" valign="top" width="57.18571857185718%" id="mcps1.1.4.1.3"><p id="p1932112447589"><a name="p1932112447589"></a><a name="p1932112447589"></a>Content Description</p>
 </th>
 </tr>
 </thead>

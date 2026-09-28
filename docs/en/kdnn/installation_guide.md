@@ -64,12 +64,11 @@ To use KDNN smoothly and securely, ensure that your environment is one of the ve
 </tbody>
 </table>
 
->![NOTICE](public_sys-resources/icon-notice.gif) **NOTICE**
+>![](public_sys-resources/icon-note.gif) **NOTE:**
 >
 >- KDNN supports the Kunpeng 920 processors and new Kunpeng 920 processor model. Using other processors may cause undefined results.
 >- KDNN is a low-level primitive library whose computational workflow manages memory read/write and allocation operations. It does not provide or distribute an operating system (OS). Users are responsible for OS installation and its subsequent security. Users must harden the OS based on their specific application scenarios, which includes disabling or removing unnecessary applications.
->- To prevent buffer overflow attacks, you are advised to use the address space layout randomization (ASLR) technology to randomize the layout of linear areas such as the heap, stack, and shared library mapping to make it more difficult for attackers to predict target addresses and locate code. This technology can be applied to heaps, stacks, and memory mapping areas (mmap base addresses, shared libraries, and vDSO pages).
-> Enabling method: <code>echo 2 \>/proc/sys/kernel/randomize\_va\_space</code>
+>- To prevent buffer overflow attacks, you are advised to use the address space layout randomization (ASLR) technology to randomize the layout of linear areas such as the heap, stack, and shared library mapping to make it more difficult for attackers to predict target addresses and locate code. This technology can be applied to heaps, stacks, and memory mapping areas (mmap base addresses, shared libraries, and vDSO pages). Enabling method: **echo 2 > /proc/sys/kernel/randomize_va_space**
 
 ## Configuring a Network Proxy<a name="ZH-CN_TOPIC_0000002518232616"></a>
 
@@ -136,43 +135,124 @@ Use Yum repositories to install the base software on which the system depends, i
     pip install numpy==1.24.2
     ```
 
-3. Install GCC 10.3.1, GCC 12.3.1, or BiSheng Compiler 4.2.0.
+3. Install one of the following compilers based on your target environment.
 
-## Installing KDNN
+    - GCC 10.3.1 (for openEuler 22.03 LTS SP3):
 
-This section describes how to install KDNN using an RPM package and verify the installation. If you use parameters that are supported by the RPM package management tool but not described in this document, undefined behavior may be introduced. Exercise caution when performing this operation.
+        ```bash
+        yum install gcc gcc-c++
+        gcc --version
+        g++ --version
+        ```
 
-### Installation Procedure
+    - GCC 12.3.1 (for openEuler 22.03 LTS SP4):
 
-1. Obtain the corresponding software digital certificate and software installation package from the Kunpeng community. Decompress the ZIP file to obtain the RPM installation package.
+        ```bash
+        yum install gcc-toolset-12-gcc gcc-toolset-12-gcc-c++ gcc-toolset-12-libstdc++-static gcc-toolset-12-gcc-gfortran
+        export PATH=/opt/openEuler/gcc-toolset-12/root/usr/bin/:$PATH
+        export LD_LIBRARY_PATH=/opt/openEuler/gcc-toolset-12/root/usr/lib64/:$LD_LIBRARY_PATH
+        gcc --version
+        g++ --version
+        ```
 
-    **Table 1** KDNN software package list<a id="kdnn-software-package-list"></a>
+    - BiSheng Compiler 4.2.0:
 
-    <a name="zh-cn_topic_0000001784526702_table677mcpsimp"></a>
-    <table><thead align="left"><tr id="zh-cn_topic_0000001784526702_row684mcpsimp"><th class="cellrowborder" valign="top" width="28.96%" id="mcps1.2.4.1.1"><p id="zh-cn_topic_0000001784526702_p686mcpsimp"><a name="zh-cn_topic_0000001784526702_p686mcpsimp"></a><a name="zh-cn_topic_0000001784526702_p686mcpsimp"></a>Package Name</p>
-    </th>
-    <th class="cellrowborder" valign="top" width="32.04%" id="mcps1.2.4.1.2"><p id="zh-cn_topic_0000001784526702_p688mcpsimp"><a name="zh-cn_topic_0000001784526702_p688mcpsimp"></a><a name="zh-cn_topic_0000001784526702_p688mcpsimp"></a> Package Name</p>
-    </th>
-    <th class="cellrowborder" valign="top" width="39%" id="mcps1.2.4.1.3"><p id="zh-cn_topic_0000001784526702_p690mcpsimp"><a name="zh-cn_topic_0000001784526702_p690mcpsimp"></a><a name="zh-cn_topic_0000001784526702_p690mcpsimp"></a>Download URL</p>
-    </th>
-    </tr>
-    </thead>
-    <tbody><tr id="zh-cn_topic_0000001784526702_row692mcpsimp"><td class="cellrowborder" valign="top" width="28.96%" headers="mcps1.2.4.1.1 "><p id="zh-cn_topic_0000001784526702_p694mcpsimp"><a name="zh-cn_topic_0000001784526702_p694mcpsimp"></a><a name="zh-cn_topic_0000001784526702_p694mcpsimp"></a>KDNN software package (GCC)</p>
-    </td>
-    <td class="cellrowborder" valign="top" width="32.04%" headers="mcps1.2.4.1.2 "><p id="zh-cn_topic_0000001784526702_p696mcpsimp"><a name="zh-cn_topic_0000001784526702_p696mcpsimp"></a><a name="zh-cn_topic_0000001784526702_p696mcpsimp"></a>BoostKit-boostcore-kdnn.3.1.0.zip</p>
-    </td>
-    <td class="cellrowborder" valign="top" width="39%" headers="mcps1.2.4.1.3 "><p id="p125955276200"><a name="p125955276200"></a><a name="p125955276200"></a><a href="https://gitcode.com/boostkit/boostsra/releases/download/v1.2.0/BoostKit-boostcore-kdnn_3.1.0.zip" target="_blank" rel="noopener noreferrer">Link</a></p>
-    </td>
-    </tr>
-    <tr id="row1487285541019"><td class="cellrowborder" valign="top" width="28.96%" headers="mcps1.2.4.1.1 "><p id="zh-cn_topic_0000001784526702_p708mcpsimp"><a name="zh-cn_topic_0000001784526702_p708mcpsimp"></a><a name="zh-cn_topic_0000001784526702_p708mcpsimp"></a>KDNN software package (BiSheng Compiler) </p>
-    </td>
-    <td class="cellrowborder" valign="top" width="32.04%" headers="mcps1.2.4.1.2 "><p id="zh-cn_topic_0000001784526702_p711mcpsimp"><a name="zh-cn_topic_0000001784526702_p711mcpsimp"></a><a name="zh-cn_topic_0000001784526702_p711mcpsimp"></a>BoostKit-boostcore-kdnn.3.0.0_bisheng.zip</p>
-    </td>
-    <td class="cellrowborder" valign="top" width="39%" headers="mcps1.2.4.1.3 "><p id="p141301730112014"><a name="p141301730112014"></a><a name="p141301730112014"></a><a href="https://gitcode.com/boostkit/boostsra/releases/download/v1.1.0/BoostKit-boostcore-kdnn_3.0.0_bisheng.zip" target="_blank" rel="noopener noreferrer">Link</a></p>
-    </td>
-    </tr>
-    </tbody>
-    </table>
+        Obtain the corresponding AArch64 installation package from the [BiSheng Compiler release page](https://mirrors.huaweicloud.com/kunpeng/archive/compiler/bisheng_compiler), and replace `<bisheng-package>` with the actual file name.
+
+        ```bash
+        tar -xzf <bisheng-package>.tar.gz -C /opt
+        export PATH=/opt/<bisheng-directory>/bin:$PATH
+        export LD_LIBRARY_PATH=/opt/<bisheng-directory>/lib:$LD_LIBRARY_PATH
+        export CC=/opt/<bisheng-directory>/bin/clang
+        export CXX=/opt/<bisheng-directory>/bin/clang++
+        clang --version
+        ```
+
+## Obtaining the Software Package
+
+Before installing KDNN, obtain the software package from the official website and verify the package to ensure that it is identical to the original package on the website.
+
+### Downloading the Software Package
+
+Obtain the corresponding software digital certificate and software installation package from [the GitCode Open Source Repository Release Interface](https://gitcode.com/boostkit/boostsra/releases). Decompress the ZIP file to obtain the RPM installation package.
+
+**Table 1** KDNN software package list<a id="kdnn-software-package-list"></a>
+
+<a name="zh-cn_topic_0000001784526702_table677mcpsimp"></a>
+<table><thead align="left"><tr id="zh-cn_topic_0000001784526702_row684mcpsimp"><th class="cellrowborder" valign="top" width="28.96%" id="mcps1.2.4.1.1"><p id="zh-cn_topic_0000001784526702_p686mcpsimp"><a name="zh-cn_topic_0000001784526702_p686mcpsimp"></a><a name="zh-cn_topic_0000001784526702_p686mcpsimp"></a>Name</p>
+</th>
+<th class="cellrowborder" valign="top" width="32.04%" id="mcps1.2.4.1.2"><p id="zh-cn_topic_0000001784526702_p688mcpsimp"><a name="zh-cn_topic_0000001784526702_p688mcpsimp"></a><a name="zh-cn_topic_0000001784526702_p688mcpsimp"></a>Package Name</p>
+</th>
+<th class="cellrowborder" valign="top" width="39%" id="mcps1.2.4.1.3"><p id="zh-cn_topic_0000001784526702_p690mcpsimp"><a name="zh-cn_topic_0000001784526702_p690mcpsimp"></a><a name="zh-cn_topic_0000001784526702_p690mcpsimp"></a>Release Version</p>
+</th>
+</tr>
+</thead>
+<tbody><tr id="zh-cn_topic_0000001784526702_row692mcpsimp"><td class="cellrowborder" valign="top" width="28.96%" headers="mcps1.2.4.1.1 "><p id="zh-cn_topic_0000001784526702_p694mcpsimp"><a name="zh-cn_topic_0000001784526702_p694mcpsimp"></a><a name="zh-cn_topic_0000001784526702_p694mcpsimp"></a>KDNN software package (GCC)</p>
+</td>
+<td class="cellrowborder" valign="top" width="32.04%" headers="mcps1.2.4.1.2">
+<p id="zh-cn_topic_0000001784526702_p696mcpsimp">
+    <a name="zh-cn_topic_0000001784526702_p696mcpsimp"></a>
+    BoostKit-boostcore-kdnn_3.2.0.zip
+</p>
+</td>
+<td class="cellrowborder" valign="top" width="39%" headers="mcps1.2.4.1.3 ">
+<p id="p125955276200"><a name="p125955276200"></a><a name="p125955276200"></a>v1.4.0</p>
+</td>
+</tr>
+<tr id="row1487285541019"><td class="cellrowborder" valign="top" width="28.96%" headers="mcps1.2.4.1.1 "><p id="zh-cn_topic_0000001784526702_p708mcpsimp"><a name="zh-cn_topic_0000001784526702_p708mcpsimp"></a><a name="zh-cn_topic_0000001784526702_p708mcpsimp"></a>KDNN software package (BiSheng Compiler)</p>
+</td>
+<td class="cellrowborder" valign="top" width="32.04%" headers="mcps1.2.4.1.2 "><p id="zh-cn_topic_0000001784526702_p711mcpsimp"><a name="zh-cn_topic_0000001784526702_p711mcpsimp"></a><a name="zh-cn_topic_0000001784526702_p711mcpsimp"></a>BoostKit-boostcore-kdnn.3.0.0_bisheng.zip<sup id="sup195471318183"><a name="sup195471318183"></a><a name="sup195471318183"></a>a</sup></p>
+</td>
+<td class="cellrowborder" valign="top" width="39%" headers="mcps1.2.4.1.3 ">
+<p id="p141301730112014"><a name="p141301730112014"></a><a name="p141301730112014"></a>v1.1.0</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+### Verifying Package Integrity
+
+#### Introduction
+
+To check whether the package was damaged during transmission or storage because of network or device issues, verify its integrity after obtaining it. Only a package that passes the verification can be deployed.<br>
+Compare the checksum recorded in the checksum file with the checksum manually calculated for the software package. If the values are identical, the file is complete. Otherwise, the file integrity has been compromised and the package must be obtained again.
+
+#### Prerequisites
+
+Prepare the following files before verifying package integrity:
+
+- Software package: `BoostKit-boostcore-kdnn_xxx.zip`.
+- Checksum file: A `.sha256` file with the same name.
+
+#### Procedure
+
+Perform the following steps to verify file integrity:
+
+1. Calculate the SHA-256 checksum of the package. On Linux, run:
+
+   ```bash
+   sha256sum BoostKit-boostcore-kdnn_xxx.zip
+   ```
+
+   On Windows, run:
+
+   ```cmd
+   certutil -hashfile BoostKit-boostcore-kdnn_xxx.zip SHA256
+   ```
+
+   The checksum is displayed after the command finishes.
+2. Compare the checksum calculated in step 1 with the SHA-256 value in the checksum file.<br>
+   If the values match, the file is complete. If they do not match, the file integrity has been compromised and the package must be obtained again.
+
+## Using KDNN
+
+### Installing KDNN
+
+This section describes how to install KDNN using an RPM package and verify the installation. If you use parameters supported by the RPM package management tool but not described in this document, undefined behavior may be introduced. Exercise caution when performing this operation.
+
+**Installation Procedure<a name="section39201312169"></a>**
+
+1. Obtain the KDNN package by following [Downloading the Software Package](#downloading-the-software-package), and decompress it to obtain the binary RPM package.
 2. Install KDNN.
 
     ```bash
@@ -181,9 +261,9 @@ This section describes how to install KDNN using an RPM package and verify the i
 
     After the installation is complete, the directories of the header file, static library, and dynamic library of the KAIL are <code>/usr/local/kdnn/include</code>, <code>/usr/local/kdnn/lib/threadpool</code>, and <code>/usr/local/kdnn/lib/omp</code>, respectively.
 
-    In the preceding command, <code>*xxxx*</code> indicates the version.
+**Verification After Installation<a name="section193111321616"></a>**
 
-### Verifying KDNN
+**Verifying KDNN**
 
 1. Run the <code>source</code> command or log in to the terminal again for the environment variable to take effect.
 
@@ -201,7 +281,7 @@ This section describes how to install KDNN using an RPM package and verify the i
 
     After the installation, the corresponding files are generated in the installation path (the default path is <code>/usr/local/kdnn</code>). The <code>include</code> folder contains the header file of the sublibrary, and the <code>lib</code> folder contains the static and dynamic library files of KDNN.
 
-### Verifying KDNN_EXT
+**Verifying KDNN_EXT**
 
 1. Set the <code>PYTHONPATH</code> environment variable.
     - To use the single-threaded version:
@@ -240,3 +320,9 @@ If KDNN is no longer needed, uninstall it. Using parameters supported by the RPM
     ```
 
 2. Confirm that the installation directory <code>/usr/local/kdnn</code> is deleted.
+
+## Revision History
+
+| Document Version | Release Date | Modification Description |
+| ---------- | -------- | -------- |
+| 01 | 2026-09-30 | First official release. |

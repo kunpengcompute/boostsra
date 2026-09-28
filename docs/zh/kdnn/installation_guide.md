@@ -25,7 +25,7 @@
 </td>
 <td class="cellrowborder" valign="top" width="19.97%" headers="mcps1.2.7.1.2 "><p id="p16180743171218"><a name="p16180743171218"></a><a name="p16180743171218"></a>openEuler 22.03 LTS SP3</p>
 </td>
-<td class="cellrowborder" valign="top" width="22.32%" headers="mcps1.2.7.1.3 "><p id="p818014317128"><a name="p818014317128"></a><a name="p818014317128"></a>华为鲲鹏920 7270Z/7280Z处理器</p>
+<td class="cellrowborder" valign="top" width="22.32%" headers="mcps1.2.7.1.3 "><p id="p818014317128"><a name="p818014317128"></a><a name="p818014317128"></a>鲲鹏920 7270Z/7280Z处理器</p>
 </td>
 <td class="cellrowborder" valign="top" width="18.94%" headers="mcps1.2.7.1.4 "><p id="p718017432120"><a name="p718017432120"></a><a name="p718017432120"></a>GCC 10.3.1</p>
 </td>
@@ -39,7 +39,7 @@
 <td class="cellrowborder" valign="top" width="19.97%" headers="mcps1.2.7.1.2 "><p id="p126842487387"><a name="p126842487387"></a><a name="p126842487387"></a>openEuler 22.03 LTS SP4</p>
 <p id="p618613441416"><a name="p618613441416"></a><a name="p618613441416"></a>内核版本高于5.10.0-228.0.0.127</p>
 </td>
-<td class="cellrowborder" valign="top" width="22.32%" headers="mcps1.2.7.1.3 "><p id="p161878491412"><a name="p161878491412"></a><a name="p161878491412"></a>华为鲲鹏920新型号处理器</p>
+<td class="cellrowborder" valign="top" width="22.32%" headers="mcps1.2.7.1.3 "><p id="p161878491412"><a name="p161878491412"></a><a name="p161878491412"></a>鲲鹏920新型号处理器</p>
 </td>
 <td class="cellrowborder" valign="top" width="18.94%" headers="mcps1.2.7.1.4 "><p id="p6187843140"><a name="p6187843140"></a><a name="p6187843140"></a>GCC 12.3.1/毕昇 4.2.0</p>
 </td>
@@ -52,7 +52,7 @@
 </td>
 <td class="cellrowborder" valign="top" width="19.97%" headers="mcps1.2.7.1.2 "><p id="zh-cn_topic_0000001831167081_p49592815115"><a name="zh-cn_topic_0000001831167081_p49592815115"></a><a name="zh-cn_topic_0000001831167081_p49592815115"></a>openEuler 22.03 LTS SP3</p>
 </td>
-<td class="cellrowborder" valign="top" width="22.32%" headers="mcps1.2.7.1.3 "><p id="zh-cn_topic_0000001831167081_p1871451912230"><a name="zh-cn_topic_0000001831167081_p1871451912230"></a><a name="zh-cn_topic_0000001831167081_p1871451912230"></a>华为鲲鹏920系列处理器</p>
+<td class="cellrowborder" valign="top" width="22.32%" headers="mcps1.2.7.1.3 "><p id="zh-cn_topic_0000001831167081_p1871451912230"><a name="zh-cn_topic_0000001831167081_p1871451912230"></a><a name="zh-cn_topic_0000001831167081_p1871451912230"></a>鲲鹏920系列处理器</p>
 </td>
 <td class="cellrowborder" valign="top" width="18.94%" headers="mcps1.2.7.1.4 "><p id="zh-cn_topic_0000001831167081_p17184611237"><a name="zh-cn_topic_0000001831167081_p17184611237"></a><a name="zh-cn_topic_0000001831167081_p17184611237"></a>GCC 10.3.1</p>
 </td>
@@ -64,12 +64,11 @@
 </tbody>
 </table>
 
->![](public_sys-resources/icon-notice.gif) **须知：** 
+>![](public_sys-resources/icon-note.gif) **说明：** 
 >
 >- KDNN目前支持鲲鹏920 7270Z/7280Z处理器、鲲鹏920新型号处理器，使用其他处理器可能会造成未定义的结果。
 >- KDNN为底层原语库，计算流程涉及内存读写、分配。KDNN不提供也不发布操作系统，操作系统须用户自行安装，不承担操作系统的安全责任，用户需要结合自身应用对操作系统安全加固，包括不安装或者移除不必要的应用等。
->- 为阻止缓冲区溢出攻击，建议使用ASLR（Address Space Layout Randomization）技术，通过对堆、栈、共享库映射等线性区布局的随机化，增加攻击者预测目的地址的难度，防止攻击者直接定位攻击代码位置。该技术可作用于堆、栈、内存映射区（mmap基址、shared libraries、vdso页）。
-> 开启方式：**echo 2 \>/proc/sys/kernel/randomize\_va\_space**
+>- 为阻止缓冲区溢出攻击，建议使用ASLR（Address Space Layout Randomization）技术，通过对堆、栈、共享库映射等线性区布局的随机化，增加攻击者预测目的地址的难度，防止攻击者直接定位攻击代码位置。该技术可作用于堆、栈、内存映射区（mmap基址、shared libraries、vdso页）。开启方式：**echo 2 > /proc/sys/kernel/randomize_va_space**
 
 ## 配置网络代理<a name="ZH-CN_TOPIC_0000002518232616"></a>
 
@@ -109,7 +108,7 @@
         export no_proxy=127.0.0.1,localhost,local,.local
         ```
 
-    3. 按“Esc”键，输入 **:wq!**，按“Enter”保存并退出编辑。
+    3. 按“Esc”键，输入 “:wq!”，按“Enter”保存并退出编辑。
     4. 使代理生效。
 
         ```bash
@@ -136,43 +135,122 @@
     pip install numpy==1.24.2
     ```
 
-3. 安装编译器GCC 10.3.1或者GCC 12.3.1或者毕昇4.2.0。
+3. 根据目标环境选择一种编译器安装。
 
-## 安装KDNN
+    - GCC 10.3.1（适用于openEuler 22.03 LTS SP3）：
+
+        ```bash
+        yum install gcc gcc-c++
+        gcc --version
+        g++ --version
+        ```
+
+    - GCC 12.3.1（适用于openEuler 22.03 LTS SP4）：
+
+        ```bash
+        yum install gcc-toolset-12-gcc gcc-toolset-12-gcc-c++ gcc-toolset-12-libstdc++-static gcc-toolset-12-gcc-gfortran
+        export PATH=/opt/openEuler/gcc-toolset-12/root/usr/bin/:$PATH
+        export LD_LIBRARY_PATH=/opt/openEuler/gcc-toolset-12/root/usr/lib64/:$LD_LIBRARY_PATH
+        gcc --version
+        g++ --version
+        ```
+
+    - 毕昇编译器4.2.0：
+
+        从[毕昇编译器发布页面](https://mirrors.huaweicloud.com/kunpeng/archive/compiler/bisheng_compiler)获取安装包`BiShengCompiler-4.2.0-aarch64-linux.tar.gz`，并将`<bisheng-package>`替换为实际文件名。
+
+        ```bash
+        tar -xzf <bisheng-package>.tar.gz -C /opt
+        export PATH=/opt/<bisheng-directory>/bin:$PATH
+        export LD_LIBRARY_PATH=/opt/<bisheng-directory>/lib:$LD_LIBRARY_PATH
+        export CC=/opt/<bisheng-directory>/bin/clang
+        export CXX=/opt/<bisheng-directory>/bin/clang++
+        clang --version
+        ```
+
+## 获取软件包
+
+### 软件包下载
+
+从[AtomGit发布界面](https://gitcode.com/boostkit/boostsra/releases)获取对应的软件数字证书和软件安装包，用户解压zip文件后可获取RPM安装包。
+
+**表 1** KDNN软件包获取列表<a id="KDNN软件包获取列表"></a>
+
+<a name="zh-cn_topic_0000001784526702_table677mcpsimp"></a>
+<table><thead align="left"><tr id="zh-cn_topic_0000001784526702_row684mcpsimp"><th class="cellrowborder" valign="top" width="28.96%" id="mcps1.2.4.1.1"><p id="zh-cn_topic_0000001784526702_p686mcpsimp"><a name="zh-cn_topic_0000001784526702_p686mcpsimp"></a><a name="zh-cn_topic_0000001784526702_p686mcpsimp"></a>名称</p>
+</th>
+<th class="cellrowborder" valign="top" width="32.04%" id="mcps1.2.4.1.2"><p id="zh-cn_topic_0000001784526702_p688mcpsimp"><a name="zh-cn_topic_0000001784526702_p688mcpsimp"></a><a name="zh-cn_topic_0000001784526702_p688mcpsimp"></a>包名</p>
+</th>
+<th class="cellrowborder" valign="top" width="39%" id="mcps1.2.4.1.3"><p id="zh-cn_topic_0000001784526702_p690mcpsimp"><a name="zh-cn_topic_0000001784526702_p690mcpsimp"></a><a name="zh-cn_topic_0000001784526702_p690mcpsimp"></a>发布版本</p>
+</th>
+</tr>
+</thead>
+<tbody><tr id="zh-cn_topic_0000001784526702_row692mcpsimp"><td class="cellrowborder" valign="top" width="28.96%" headers="mcps1.2.4.1.1 "><p id="zh-cn_topic_0000001784526702_p694mcpsimp"><a name="zh-cn_topic_0000001784526702_p694mcpsimp"></a><a name="zh-cn_topic_0000001784526702_p694mcpsimp"></a>KDNN软件包（GCC版本）</p>
+</td>
+<td class="cellrowborder" valign="top" width="32.04%" headers="mcps1.2.4.1.2">
+<p id="zh-cn_topic_0000001784526702_p696mcpsimp">
+    <a name="zh-cn_topic_0000001784526702_p696mcpsimp"></a>
+    BoostKit-boostcore-kdnn_3.2.0.zip
+</p>
+</td>
+<td class="cellrowborder" valign="top" width="39%" headers="mcps1.2.4.1.3 ">
+<p id="p125955276200"><a name="p125955276200"></a><a name="p125955276200"></a>v1.4.0</p>
+</td>
+</tr>
+<tr id="row1487285541019"><td class="cellrowborder" valign="top" width="28.96%" headers="mcps1.2.4.1.1 "><p id="zh-cn_topic_0000001784526702_p708mcpsimp"><a name="zh-cn_topic_0000001784526702_p708mcpsimp"></a><a name="zh-cn_topic_0000001784526702_p708mcpsimp"></a>KDNN软件包（毕昇编译器版本）</p>
+</td>
+<td class="cellrowborder" valign="top" width="32.04%" headers="mcps1.2.4.1.2 "><p id="zh-cn_topic_0000001784526702_p711mcpsimp"><a name="zh-cn_topic_0000001784526702_p711mcpsimp"></a><a name="zh-cn_topic_0000001784526702_p711mcpsimp"></a>BoostKit-boostcore-kdnn.3.0.0_bisheng.zip<sup id="sup195471318183"><a name="sup195471318183"></a><a name="sup195471318183"></a>a</sup></p>
+</td>
+<td class="cellrowborder" valign="top" width="39%" headers="mcps1.2.4.1.3 ">
+<p id="p141301730112014"><a name="p141301730112014"></a><a name="p141301730112014"></a>v1.1.0</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+### 软件包完整性校验
+
+#### 简介
+
+为了检查软件包在传输或存储过程中是否因网络或设备问题而不完整，在获取到软件包后，需要对软件包的完整性进行校验，通过了校验的软件包才能部署。<br>
+这里通过对比校验文件中记录的校验值和手动方式计算的软件包校验值，判断软件包是否完整。若两个值相同，说明文件完整，否则，文件完整性被破坏，请重新获取软件包。
+
+#### 前提条件
+
+在校验软件包完整性之前，需要准备如下文件：
+
+- 软件包：BoostKit-boostcore-kdnn_xxx.zip。
+- 校验文件：同名的.sha256文件。
+
+#### 操作指导
+
+文件完整性校验操作步骤如下：
+
+1. 计算软件包的sha256校验值。linux执行命令如下：
+
+   ```bash
+   sha256sum BoostKit-boostcore-kdnn_xxx.zip
+   ```
+
+   windows执行命令如下：
+
+   ```cmd
+   certutil -hashfile BoostKit-boostcore-kdnn_xxx.zip SHA256
+   ```
+
+   命令执行完成后，输出校验值。
+2. 对比步骤1计算的校验值与校验文件中的SHA256值是否一致<br>
+   如果校验值一致说明文件完整，如果校验值不一致则可以确认文件完整性已被破坏，需要重新获取。
+
+## 如何使用KDNN
+
+### 安装KDNN
 
 本文提供RPM包安装KDNN的方法，请参照本节内容对KDNN进行安装和验证。若使用了RPM包管理工具支持但本文档中未说明的参数，可能会引入未定义行为，因此请谨慎操作。
 
-### 安装步骤
+**安装步骤<a name="section39201312169"></a>**
 
-1. 从GitCode开源仓获取对应的软件安装包，用户解压zip文件后可获取RPM安装包。
-
-    **表 1** KDNN软件包获取列表<a id="KDNN软件包获取列表"></a>
-
-    <a name="zh-cn_topic_0000001784526702_table677mcpsimp"></a>
-    <table><thead align="left"><tr id="zh-cn_topic_0000001784526702_row684mcpsimp"><th class="cellrowborder" valign="top" width="28.96%" id="mcps1.2.4.1.1"><p id="zh-cn_topic_0000001784526702_p686mcpsimp"><a name="zh-cn_topic_0000001784526702_p686mcpsimp"></a><a name="zh-cn_topic_0000001784526702_p686mcpsimp"></a>名称</p>
-    </th>
-    <th class="cellrowborder" valign="top" width="32.04%" id="mcps1.2.4.1.2"><p id="zh-cn_topic_0000001784526702_p688mcpsimp"><a name="zh-cn_topic_0000001784526702_p688mcpsimp"></a><a name="zh-cn_topic_0000001784526702_p688mcpsimp"></a>包名</p>
-    </th>
-    <th class="cellrowborder" valign="top" width="39%" id="mcps1.2.4.1.3"><p id="zh-cn_topic_0000001784526702_p690mcpsimp"><a name="zh-cn_topic_0000001784526702_p690mcpsimp"></a><a name="zh-cn_topic_0000001784526702_p690mcpsimp"></a>获取地址</p>
-    </th>
-    </tr>
-    </thead>
-    <tbody><tr id="zh-cn_topic_0000001784526702_row692mcpsimp"><td class="cellrowborder" valign="top" width="28.96%" headers="mcps1.2.4.1.1 "><p id="zh-cn_topic_0000001784526702_p694mcpsimp"><a name="zh-cn_topic_0000001784526702_p694mcpsimp"></a><a name="zh-cn_topic_0000001784526702_p694mcpsimp"></a>KDNN软件包（GCC版本）</p>
-    </td>
-    <td class="cellrowborder" valign="top" width="32.04%" headers="mcps1.2.4.1.2 "><p id="zh-cn_topic_0000001784526702_p696mcpsimp"><a name="zh-cn_topic_0000001784526702_p696mcpsimp"></a><a name="zh-cn_topic_0000001784526702_p696mcpsimp"></a>BoostKit-boostcore-kdnn.3.1.0.zip</p>
-    </td>
-    <td class="cellrowborder" valign="top" width="39%" headers="mcps1.2.4.1.3 "><p id="p125955276200"><a name="p125955276200"></a><a name="p125955276200"></a><a href="https://gitcode.com/boostkit/boostsra/releases/download/v1.2.0/BoostKit-boostcore-kdnn_3.1.0.zip" target="_blank" rel="noopener noreferrer">获取链接</a></p>
-    </td>
-    </tr>
-    <tr id="row1487285541019"><td class="cellrowborder" valign="top" width="28.96%" headers="mcps1.2.4.1.1 "><p id="zh-cn_topic_0000001784526702_p708mcpsimp"><a name="zh-cn_topic_0000001784526702_p708mcpsimp"></a><a name="zh-cn_topic_0000001784526702_p708mcpsimp"></a>KDNN软件包（毕昇编译器版本）</p>
-    </td>
-    <td class="cellrowborder" valign="top" width="32.04%" headers="mcps1.2.4.1.2 "><p id="zh-cn_topic_0000001784526702_p711mcpsimp"><a name="zh-cn_topic_0000001784526702_p711mcpsimp"></a><a name="zh-cn_topic_0000001784526702_p711mcpsimp"></a>BoostKit-boostcore-kdnn.3.0.0_bisheng.zip</p>
-    </td>
-    <td class="cellrowborder" valign="top" width="39%" headers="mcps1.2.4.1.3 "><p id="p141301730112014"><a name="p141301730112014"></a><a name="p141301730112014"></a><a href="https://gitcode.com/boostkit/boostsra/releases/download/v1.1.0/BoostKit-boostcore-kdnn_3.0.0_bisheng.zip" target="_blank" rel="noopener noreferrer">获取链接</a></p>
-    </td>
-    </tr>
-    </tbody>
-    </table>
+1. 按照[获取软件包](#获取软件包)获取到KDNN软件包，解压后得到二进制RPM包。
 2. 安装KDNN。
 
     ```bash
@@ -181,9 +259,9 @@
 
     安装结束后，AI库的头文件和静态库、动态库文件目录分别为“/usr/local/kdnn/include”和“/usr/local/kdnn/lib/threadpool”、“/usr/local/kdnn/lib/omp”。
 
-    上述命令中涉及的 **_xxxx_** 代表版本号。
+**安装后验证<a name="section193111321616"></a>**
 
-### 验证KDNN
+**验证KDNN**
 
 1. 执行**source**命令或重新登录终端让环境变量生效。
 
@@ -201,7 +279,7 @@
 
     安装成功后在安装路径（默认路径是“/usr/local/kdnn”）下生成相应文件，其中，include文件夹包含子库的头文件，lib文件夹包含了KDNN库的静态库、动态库文件。
 
-### 验证KDNN\_EXT
+**验证KDNN\_EXT**
 
 1. 设置“PYTHONPATH”环境变量。
     - 使用单线程版本：
@@ -242,3 +320,9 @@
     ```
 
 2. 确认安装目录“/usr/local/kdnn”被删除。
+
+## 修订记录
+
+| 文档版本 | 发布日期 | 修改说明 |
+| ---------- | -------- | -------- |
+| 01 | 2026-09-30 | 第一次正式发布。 |

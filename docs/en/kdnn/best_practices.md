@@ -2,7 +2,7 @@
 
 ## Adapting TensorFlow for KDNN
 
-This document describes how to adapt the TensorFlow matrix operators (MatMul and FusedMatMul, which correspond to the Gemm operator of KDNN) to KDNN. Follow the instructions in this section. Improper operations may introduce undefined behaviors. Exercise caution when performing this operation.
+This document describes how to adapt the TensorFlow matrix operators (MatMul and FusedMatMul, which correspond to the Gemm operator of KDNN) to KDNN v3.1.0. Follow the instructions in this section. Improper operations may introduce undefined behaviors. Exercise caution when performing this operation.
 
 1. Install basic software.
 
@@ -81,7 +81,7 @@ This document describes how to adapt the TensorFlow matrix operators (MatMul and
 
 ## Adapting oneDNN for KDNN
 
-This section describes how to adapt oneDNN for KDNN. Misoperations may introduce undefined behaviors. Exercise caution when performing this operation.
+This section describes how to adapt oneDNN for KDNN v3.1.0. Misoperations may introduce undefined behaviors. Exercise caution when performing this operation.
 
 **Adaptation Procedure<a name="section39201312169"></a>**
 
@@ -147,3 +147,9 @@ After compiling oneDNN, use the test cases included in the software package to v
     If all results returned <code>passed</code> and the following information is displayed, oneDNN is successfully adapted.
 
     ![](figures/zh-cn_image_0000002549872587.png)
+
+## Revision History
+
+| Document Version | Release Date | Modification Description |
+| ---------- | -------- | -------- |
+| 01 | 2026-09-30 | First official release. |
