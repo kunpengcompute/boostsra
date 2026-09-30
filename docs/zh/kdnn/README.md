@@ -1,6 +1,6 @@
-简体中文|[English](../../en/kdnn/README.md)
-
 # KDNN介绍
+
+简体中文|[English](../../en/kdnn/README_en.md)
 
 ## 最新消息
 
