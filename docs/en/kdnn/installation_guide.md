@@ -64,7 +64,7 @@ To use KDNN smoothly and securely, ensure that your environment is one of the ve
 </tbody>
 </table>
 
->![](public_sys-resources/icon-note.gif) **NOTE:**
+>![](public_sys-resources/icon-note.gif) **NOTE**
 >
 >- KDNN supports the Kunpeng 920 processors and new Kunpeng 920 processor model. Using other processors may cause undefined results.
 >- KDNN is a low-level primitive library whose computational workflow manages memory read/write and allocation operations. It does not provide or distribute an operating system (OS). Users are responsible for OS installation and its subsequent security. Users must harden the OS based on their specific application scenarios, which includes disabling or removing unnecessary applications.
@@ -157,7 +157,7 @@ Use Yum repositories to install the base software on which the system depends, i
 
     - BiSheng Compiler 4.2.0:
 
-        Obtain the corresponding AArch64 installation package from the [BiSheng Compiler release page](https://mirrors.huaweicloud.com/kunpeng/archive/compiler/bisheng_compiler), and replace `<bisheng-package>` with the actual file name.
+        Obtain the `BiShengCompiler-4.2.0-aarch64-linux.tar.gz` installation package from the [BiSheng Compiler release page](https://mirrors.huaweicloud.com/kunpeng/archive/compiler/bisheng_compiler), and replace `<bisheng-package>` with the actual file name.
 
         ```bash
         tar -xzf <bisheng-package>.tar.gz -C /opt
@@ -170,11 +170,9 @@ Use Yum repositories to install the base software on which the system depends, i
 
 ## Obtaining the Software Package
 
-Before installing KDNN, obtain the software package from the official website and verify the package to ensure that it is identical to the original package on the website.
-
 ### Downloading the Software Package
 
-Obtain the corresponding software digital certificate and software installation package from [the GitCode Open Source Repository Release Interface](https://gitcode.com/boostkit/boostsra/releases). Decompress the ZIP file to obtain the RPM installation package.
+Obtain the corresponding software digital certificate and software installation package from the [AtomGit release page](https://gitcode.com/boostkit/boostsra/releases). Decompress the ZIP file to obtain the RPM installation package.
 
 **Table 1** KDNN software package list<a id="kdnn-software-package-list"></a>
 
@@ -212,7 +210,7 @@ Obtain the corresponding software digital certificate and software installation 
 
 ### Verifying Package Integrity
 
-#### Introduction
+#### Overview
 
 To check whether the package was damaged during transmission or storage because of network or device issues, verify its integrity after obtaining it. Only a package that passes the verification can be deployed.<br>
 Compare the checksum recorded in the checksum file with the checksum manually calculated for the software package. If the values are identical, the file is complete. Otherwise, the file integrity has been compromised and the package must be obtained again.
@@ -240,7 +238,7 @@ Perform the following steps to verify file integrity:
    certutil -hashfile BoostKit-boostcore-kdnn_xxx.zip SHA256
    ```
 
-   The checksum is displayed after the command finishes.
+   The checksum is displayed after the command execution finishes.
 2. Compare the checksum calculated in step 1 with the SHA-256 value in the checksum file.<br>
    If the values match, the file is complete. If they do not match, the file integrity has been compromised and the package must be obtained again.
 
@@ -303,6 +301,8 @@ This section describes how to install KDNN using an RPM package and verify the i
     >>> import libkdnn_ext
     ```
 
+    Or
+
     ```bash
     >>> from libkdnn_ext import random_choice, softmax, get_version
     ```
@@ -321,8 +321,8 @@ If KDNN is no longer needed, uninstall it. Using parameters supported by the RPM
 
 2. Confirm that the installation directory <code>/usr/local/kdnn</code> is deleted.
 
-## Revision History
+## Change History
 
-| Document Version | Release Date | Modification Description |
-| ---------- | -------- | -------- |
-| 01 | 2026-09-30 | First official release. |
+| Version | Date | Description |
+| ------- | ---- | -------- |
+| 01 | 2026-09-30 | This is the first official release. |
