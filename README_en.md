@@ -42,7 +42,7 @@ The BoostSRA suite delivers high-performance application-layer acceleration for 
 
 | Algorithm| Description| Repository Path|
 | :---| :--- | :--- |
-| KDNN| Based on the microarchitecture features of the Kunpeng processor, Kunpeng Deep Neural Network Library (KDNN) enhances the performance of core DNN operators through vectorization, assembly-level optimizations, and algorithmic improvements.| [KDNN documentation](./docs/en/kdnn/README.md)<br> **Only the documentation repository path is provided. The code repository will be released as open source at a later stage.**|
+| KDNN| Based on the microarchitecture features of the Kunpeng processor, Kunpeng Deep Neural Network Library (KDNN) enhances the performance of core DNN operators through vectorization, assembly-level optimizations, and algorithmic improvements.| [KDNN documentation](./docs/en/kdnn/README_en.md)<br> **Only the documentation repository path is provided. The code repository will be released as open source at a later stage.**|
 | ANNC| Accelerated Neural Network Compiler (ANNC) speeds up neural network computing. It accelerates inference for recommendation systems and foundation models by optimizing computational graphs, generating and integrating high-performance fused operators, and applying efficient code generation and optimization. In addition, ANNC works with popular open-source inference frameworks.| [ANNC repository](https://gitee.com/src-openeuler/ANNC)|
 
 ## Ranking Inference Extensions
