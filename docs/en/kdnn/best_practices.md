@@ -148,8 +148,8 @@ After compiling oneDNN, use the test cases included in the software package to v
 
     ![](figures/zh-cn_image_0000002549872587.png)
 
-## Revision History
+## Change History
 
-| Document Version | Release Date | Modification Description |
+| Version |  Date |  Description |
 | ---------- | -------- | -------- |
-| 01 | 2026-09-30 | First official release. |
+| 01 | 2026-09-30 | This is the first official release. |
