@@ -21,3 +21,9 @@ The built executable program is `out/test/dnn/oneDNN-3.4/build/tests/benchdnn/be
 ```bash
 ./benchdnn --mode=P --matmul --perf-template=Gflops:%0Gflops% --stag=ab --wtag=ab --dtag=ab 128x2048:2048x1024_n"googlenet_v1:ip1*1"
 ```
+
+## Change History
+
+| Version | Date | Description |
+| :--- | :--- | :--- |
+| 01 | 2026-09-30 | This is the first official release. |

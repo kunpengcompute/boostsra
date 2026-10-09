@@ -4,11 +4,11 @@
 
 ## 最新消息
 
-- \[2026.09.30\]：KDNN新增SparseGemm线程池并行支持和小矩阵GEMM优化，并持续优化鲲鹏平台上的MatMul及卷积等算子性能。
-- \[2026.03.30\]：KDNN新增基于MMLA指令的s8/u8数据类型MatMul实现；支持Post-ops（后处理操作）；支持FusedMatMul融合算子。
-- \[2025.12.30\]：KDNN新增MatMul的NEON实现，新增支持MatMul的自定义线程池模式，新增Group Normalization、SparseGemm深度神经网络算子的鲲鹏平台支持。
-- \[2025.06.30\]：KDNN新增Pool、Batch Normalization、Local Response Normalization、Reduction、PReLU、Binary、RNN深度神经网络算子的鲲鹏平台支持。新增支持鲲鹏920新型号处理器。
-- \[2024.12.30\]：KDNN新增reorder、resampling、concat、shuffle 4个深度神经网络算子的鲲鹏平台支持。KDNN\_EXT新增random_choice、softmax算子的鲲鹏平台支持。
+- [2026.09.30]：KDNN新增SparseGemm线程池并行支持，新增MatMul的小规模场景专用实现，新增BNorm/Pooling/PReLU/Reduction/Sum/Concat等算子的NEON实现。
+- [2026.03.30]：KDNN新增基于MMLA指令的s8/u8数据类型MatMul实现；支持Post-ops（后处理操作）；支持FusedMatMul融合算子。
+- [2025.12.30]：KDNN新增MatMul的NEON实现，新增支持MatMul的自定义线程池模式，新增Group Normalization、SparseGemm深度神经网络算子的鲲鹏平台支持。
+- [2025.06.30]：KDNN新增Pool、Batch Normalization、Local Response Normalization、Reduction、PReLU、Binary、RNN深度神经网络算子的鲲鹏平台支持。新增支持鲲鹏920新型号处理器。
+- [2024.12.30]：KDNN新增reorder、resampling、concat、shuffle 4个深度神经网络算子的鲲鹏平台支持。KDNN\_EXT新增random_choice、softmax算子的鲲鹏平台支持。
 
 ## 项目介绍
 

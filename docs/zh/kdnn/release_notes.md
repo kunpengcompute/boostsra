@@ -17,7 +17,7 @@
 </tr>
 <tr id="row1930811171892"><th class="firstcol" valign="top" width="42.17%" id="mcps1.1.3.3.1"><p id="p2030912172097"><a name="p2030912172097"></a><a name="p2030912172097"></a>软件名称</p>
 </th>
-<td class="cellrowborder" valign="top" width="57.830000000000005%" headers="mcps1.1.3.3.1 "><p id="p1730912179911"><a name="p1730912179911"></a><a name="p1730912179911"></a>鲲鹏AI算子库（Kunpeng AI<strong id="b166665341595"><a name="b166665341595"></a><a name="b166665341595"></a> </strong>Library）</p>
+<td class="cellrowborder" valign="top" width="57.830000000000005%" headers="mcps1.1.3.3.1 "><p id="p1730912179911"><a name="p1730912179911"></a><a name="p1730912179911"></a>KDNN<strong id="b166665341595"><a name="b166665341595"></a><a name="b166665341595"></a> </strong></p>
 </td>
 </tr>
 <tr id="row5497143514612"><th class="firstcol" valign="top" width="42.17%" id="mcps1.1.3.4.1"><p id="p162251517551"><a name="p162251517551"></a><a name="p162251517551"></a>软件包版本</p>
@@ -105,11 +105,11 @@
 </th>
 </tr>
 </thead>
-<tbody><tr id="row3156182231010"><td class="cellrowborder" valign="top" width="15%" headers="mcps1.1.6.1.1 "><p id="p28541562315"><a name="p28541562315"></a><a name="p28541562315"></a>QiAnXin</p>
+<tbody><tr id="row3156182231010"><td class="cellrowborder" valign="top" width="15%" headers="mcps1.1.6.1.1 "><p id="p28541562315"><a name="p28541562315"></a><a name="p28541562315"></a>clamav</p>
 </td>
-<td class="cellrowborder" valign="top" width="17%" headers="mcps1.1.6.1.2 "><p id="p1385415520232"><a name="p1385415520232"></a><a name="p1385415520232"></a><span>8.0.5.5260</span></p>
+<td class="cellrowborder" valign="top" width="17%" headers="mcps1.1.6.1.2 "><p id="p1385415520232"><a name="p1385415520232"></a><a name="p1385415520232"></a><span>1.09</span></p>
 </td>
-<td class="cellrowborder" valign="top" width="21%" headers="mcps1.1.6.1.3 "><p id="p165171010191418"><a name="p165171010191418"></a><a name="p165171010191418"></a><span>2026-09-27 08:00:00.0</span></p>
+<td class="cellrowborder" valign="top" width="21%" headers="mcps1.1.6.1.3 "><p id="p165171010191418"><a name="p165171010191418"></a><a name="p165171010191418"></a><span>28135</span></p>
 </td>
 <td class="cellrowborder" valign="top" width="28.000000000000004%" headers="mcps1.1.6.1.4 "><p id="p19818043416"><a name="p19818043416"></a><a name="p19818043416"></a>2026-09-28 16:02:00</p>
 </td>
