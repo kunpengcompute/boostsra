@@ -4,7 +4,7 @@ English|[简体中文](../../zh/kdnn/README.md)
 
 ## Latest News
 
-- [2026.09.30]: Added thread pool parallelism support for SparseGemm and optimized small-matrix GEMM, and continued to optimize the performance of MatMul and convolution operators on the Kunpeng platform.
+- [2026.09.30]: Added thread pool parallelism support for SparseGemm, added specialized implementation for MatMul in small-scale scenarios, and added NEON implementation for operators including BNorm, Pooling, PReLU, Reduction, Sum, and Concat.
 
 - [2026.03.30]: Added MatMul implementation for s8/u8 data types based on Matrix Multiply-Accumulate (MMLA) instructions, and added support for post-processing operations (post-ops) and for the FusedMatMul operator.
 
