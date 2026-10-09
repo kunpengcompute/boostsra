@@ -12,7 +12,7 @@
 <td class="cellrowborder" valign="top" width="57.830000000000005%" headers="mcps1.1.3.2.1 "><p id="p13967181113316"><a name="p13967181113316"></a><a name="p13967181113316"></a><span id="text03501914183312"><a name="text03501914183312"></a><a name="text03501914183312"></a>26.2.RC1</span></p></td>
 </tr>
 <tr id="row1930811171892"><th class="firstcol" valign="top" width="42.17%" id="mcps1.1.3.3.1"><p id="p2030912172097"><a name="p2030912172097"></a><a name="p2030912172097"></a>Software Name</p></th>
-<td class="cellrowborder" valign="top" width="57.830000000000005%" headers="mcps1.1.3.3.1 "><p id="p1730912179911"><a name="p1730912179911"></a><a name="p1730912179911"></a>Kunpeng AI Operator Library (Kunpeng AI<strong id="b166665341595"><a name="b166665341595"></a><a name="b166665341595"></a> </strong>Library)</p></td>
+<td class="cellrowborder" valign="top" width="57.830000000000005%" headers="mcps1.1.3.3.1 "><p id="p1730912179911"><a name="p1730912179911"></a><a name="p1730912179911"></a>KDNN<strong id="b166665341595"><a name="b166665341595"></a><a name="b166665341595"></a> </strong></p></td>
 </tr>
 <tr id="row5497143514612"><th class="firstcol" valign="top" width="42.17%" id="mcps1.1.3.4.1"><p id="p162251517551"><a name="p162251517551"></a><a name="p162251517551"></a>Software Version</p></th>
 <td class="cellrowborder" valign="top" width="57.830000000000005%" headers="mcps1.1.3.4.1 "><p id="p6225131165519"><a name="p6225131165519"></a><a name="p6225131165519"></a>V3.2.0</p></td>
@@ -40,7 +40,7 @@ The software packages, release documents, and product documents have been scanne
 
 | Antivirus Software | Antivirus Software Version | Virus Database Version | Scan Time | Scan Result |
 | --- | --- | --- | --- | --- |
-| QiAnXin | 8.0.5.5260 | 2026-09-27 08:00:00.0 | 2026-09-28 16:02:00 | OK |
+| clamav | 1.09 | 28135 | 2026-09-28 16:02:00 | OK |
 | Bitdefender | 7.5.1.200224 | 7.101487 | 2026-09-28 16:02:08 | OK |
 | Kaspersky | 12.0.0.6672 | 2026-09-28 10:09:00 | 2026-09-28 16:02:02 | OK |
 
@@ -177,4 +177,4 @@ None
 
 ### Obtaining Documentation
 
-Visit the [open-source repository](https://gitcode.com/boostkit/boostsra/blob/master/docs/en/kdnn/README.md) to view or download related documents.
+Visit the [open-source repository](https://gitcode.com/boostkit/boostsra/blob/master/docs/en/kdnn/README_en.md) to view or download related documents.

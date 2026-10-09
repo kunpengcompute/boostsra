@@ -5439,3 +5439,9 @@ def get\_version\(\) -\> Dict\[bytes, bytes\]
 
 >![](public_sys-resources/icon-note.gif) **NOTE**
 >The version number and compile time are subject to the running results in your environment. The preceding results are for reference only.
+
+## Change History
+
+| Version | Date | Description |
+| :--- | :--- | :--- |
+| 01 | 2026-09-30 | This is the first official release. |
