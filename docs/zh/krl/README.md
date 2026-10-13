@@ -1,5 +1,7 @@
 # KRL介绍
 
+简体中文|[English](../../en/krl/README.md)
+
 ## 最新消息
 
 - \[2026.06.30\]：新增4bit查表累和算子与部分FP16距离计算算子的SVE2指令实现。
@@ -65,9 +67,5 @@ KRL采用 Apache 2.0 License 许可证授权，支持修改代码和再开源。
 欢迎大家为社区做贡献，如果使用过程中有任何问题/建议，或者需要反馈特性需求和bug报告，可以提交[Issues](https://gitcode.com/boostkit/community/blob/master/docs/contributor/issue-submit.md)联系我们，具体贡献方法可参考[这里](https://gitcode.com/boostkit/community/blob/master/docs/contributor/contributing.md)。同时也欢迎大家在[讨论专区](https://gitcode.com/boostkit/community/discussions)展开讨论交流。感谢您的支持。
 
 ## 致谢
-
-KRL由华为公司的下列部门联合贡献：
-
-- 鲲鹏计算Boostkit开发部
 
 感谢来自社区的每一个PR，欢迎贡献KRL！
