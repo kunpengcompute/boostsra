@@ -1,5 +1,7 @@
 # Introduction to KRL
 
+English|[简体中文](../../zh/krl/README.md)
+
 ## Latest Updates
 
 - [2026-06-30]: Added SVE2 instruction implementation for the 4-bit table lookup-based accumulation operators and some FP16 distance computation operators.
@@ -65,9 +67,5 @@ The documentation of this project is licensed under the CC BY 4.0 License.
 We welcome your contributions to the community. If you have any questions/suggestions or want to provide feedback on feature requirements and bug reports, you can submit issues. For details, see Contribution Guideline. You are also welcome to share insights in [Discussions](https://gitcode.com/boostkit/community/discussions). Thank you for your support.
 
 ## Acknowledgments
-
-KRL is jointly developed by the following Huawei department:
-
-- Kunpeng Computing BoostKit Development Dept
 
 Thank you to everyone in the community for your PRs. We warmly welcome contributions to KRL!
