@@ -1,5 +1,7 @@
 ﻿# API参考
 
+本文档介绍KRL（Knowledge Retrieval Library，知识检索库）向量检索库的API接口参考，包含Handle类接口、距离计算接口、查表累和接口、重排接口和保存加载接口等，适用于需要使用KRL库进行向量相似度计算的开发者。
+
 ## 接口列表
 
 KRL提供的接口如[**表 1** KRL提供的接口](#KRL提供的接口)所示。
@@ -82,7 +84,7 @@ KRL提供的接口如[**表 1** KRL提供的接口](#KRL提供的接口)所示�
 </td>
 <td class="cellrowborder" valign="top" width="23.380000000000003%" headers="mcps1.2.4.1.2 "><p id="p710165111184_sve2"><a name="p710165111184_sve2"></a><a name="p710165111184_sve2"></a>krl_L2sqr_f16f32_sve2</p>
 </td>
-<td class="cellrowborder" valign="top" width="63.56%" headers="mcps1.2.4.1.3 "><p id="p1693388205916_sve2"><a name="p1693388205916_sve2"></a><a name="p1693388205916_sve2"></a>进行数据类型为fp16的一对一欧氏距离计算（SVE2版本）。</p>
+<td class="cellrowborder" valign="top" width="63.56%" headers="mcps1.2.4.1.3 "><p id="p1693388205916_sve2"><a name="p1693388205916_sve2"></a><a name="p1693388205916_sve2"></a>进行数据类型为fp16的一对一欧氏距离计算（SVE2（Scalable Vector Extension 2，可扩展矢量扩展2）版本）。</p>
 </td>
 </tr>
 <tr id="row490119533188"><td class="cellrowborder" valign="top" width="13.059999999999999%" headers="mcps1.2.4.1.1 "><p id="p14208191316192"><a name="p14208191316192"></a><a name="p14208191316192"></a>距离计算接口</p>
@@ -8624,7 +8626,7 @@ int krl\_repack\_codes\_4b\(const uint8\_t\* codes, size\_t ncode, size\_t nsq, 
 </td>
 <td class="cellrowborder" valign="top" width="14.611461146114612%" headers="mcps_rp4_2 "><p id="p_rp4_codes_t"><a name="p_rp4_codes_t"></a><a name="p_rp4_codes_t"></a>const uint8_t*</p>
 </td>
-<td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps_rp4_3 "><p id="p_rp4_codes_d"><a name="p_rp4_codes_d"></a><a name="p_rp4_codes_d"></a>源码本：按向量顺序存放的常规4bit码本（IVFPQ打包输入），或 PQFS 已打包缓冲区。</p>
+<td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps_rp4_3 "><p id="p_rp4_codes_d"><a name="p_rp4_codes_d"></a><a name="p_rp4_codes_d"></a>源码本：按向量顺序存放的常规4bit码本（IVFPQ（Inverted File with Product Quantization，倒排乘积量化）打包输入），或 PQFS（Product Quantization with Feature Selection，带特征选择的乘积量化）已打包缓冲区。</p>
 </td>
 <td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps_rp4_4 "><p id="p_rp4_codes_r"><a name="p_rp4_codes_r"></a><a name="p_rp4_codes_r"></a>与 dim_cross 及 ncode、nsq 一致的有效数据。</p>
 </td>
@@ -9855,3 +9857,12 @@ int main() {
     return 0;
 }
 ```
+
+## 缩略语
+
+|缩略语|英文全称|中文全称|
+|---|---|---|
+|KRL|Knowledge Retrieval Library|知识检索库|
+|IVFPQ|Inverted File with Product Quantization|倒排乘积量化|
+|PQFS|Product Quantization with Feature Selection|带特征选择的乘积量化|
+|SVE2|Scalable Vector Extension 2|可扩展矢量扩展2|
