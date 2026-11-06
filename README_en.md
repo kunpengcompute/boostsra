@@ -1,74 +1,196 @@
-# BoostSRA
+# Introduction to KDNN
 
-## Project Introduction
+<!-- md-trans-meta sourceCommit=4eb6b6efe8cf09750f757775bf08ea189a284a2d translatedAt=2026-11-03T08:58:34.403Z pushedAt=2026-11-04T01:07:09.483Z -->
 
-### Overview
+[简体中文](../../zh/kdnn/README.md) | English
 
-The BoostSRA suite delivers high-performance application-layer acceleration for search, recommendation, and advertising (SRA) services. It features advanced retrieval algorithms for recall scenarios and optimized model inference frameworks to enhance ranking performance.
+## Latest News
 
-### Architecture
+- [2026-09-30]: Added SparseGemm thread pool parallelism support, a dedicated MatMul implementation for small-scale scenarios, and NEON implementations for BNorm, Pooling, PReLU, Reduction, Sum, Concat, and other operators.
+- [2026-03-30]: Added MatMul implementation for s8/u8 data types based on Matrix Multiply-Accumulate (MMLA) instructions, and added support for post-processing operations (post-ops) and for the FusedMatMul operator.
+- [2025-12-30]: Added NEON-based MatMul implementation, added support for the custom thread pool mode in MatMul, and added Kunpeng platform support for Group Normalization and SparseGemm operators.
+- [2025-06-30]: Added Kunpeng platform support for the Pool, Batch Normalization, Local Response Normalization, Reduction, PReLU, Binary, and RNN deep neural network operators. Added support for the new Kunpeng 920 processor model.
+- [2024-12-30]: Added Kunpeng platform support for four deep neural network operators, including Reorder, Resampling, Concat, and Shuffle; added Kunpeng platform support for the random_choice and softmax operators in KDNN_EXT.
 
-![architecture](docs/en/figures/architecture.png)
+## Project Overview
 
-## Community
+Kunpeng AI Library (KAIL) is a high-performance AI operator library optimized for the Kunpeng platform. It is implemented using C/C++ and assembly languages. It includes the Kunpeng Deep Neural Network Library (KDNN) and Kunpeng Deep Neural Network Extension Library (KDNN_EXT) that contains operators such as softmax and random_choice. [Table 1](#table113613052017) describes KAIL components.
 
-[BoostSRA](https://www.hikunpeng.com/document/detail/en/SRA/overview/kunpengsra.html)
+**Table 1** KAIL components
 
-## Recall Algorithms
+<a name="table113613052017"></a>
+<table><thead align="left"><tr id="row237018052015"><th class="cellrowborder" valign="top" width="12%" id="mcps1.2.5.1.1"><p id="p13701307204"><a name="p13701307204"></a><a name="p13701307204"></a>No.</p>
+</th>
+<th class="cellrowborder" valign="top" width="13.83%" id="mcps1.2.5.1.2"><p id="p10370130112016"><a name="p10370130112016"></a><a name="p10370130112016"></a>Library</p>
+</th>
+<th class="cellrowborder" valign="top" width="44.11%" id="mcps1.2.5.1.3"><p id="p173704019205"><a name="p173704019205"></a><a name="p173704019205"></a>Description</p>
+</th>
+<th class="cellrowborder" valign="top" width="36.059999999999995%" id="mcps1.2.5.1.4"><p id="p737019032019"><a name="p737019032019"></a><a name="p737019032019"></a>Application Scenario</p>
+</th>
+</tr>
+</thead>
+<tbody><tr id="row737011016208"><td class="cellrowborder" valign="top" width="6%" headers="mcps1.2.5.1.1 "><p id="p7370107203"><a name="p7370107203"></a><a name="p7370107203"></a>1</p>
+</td>
+<td class="cellrowborder" valign="top" width="13.83%" headers="mcps1.2.5.1.2 "><p id="p1237011013202"><a name="p1237011013202"></a><a name="p1237011013202"></a>KDNN</p>
+</td>
+<td class="cellrowborder" valign="top" width="44.11%" headers="mcps1.2.5.1.3 "><p id="p193701909209"><a name="p193701909209"></a><a name="p193701909209"></a>A deep neural network library that contains AI operators optimized based on the Kunpeng processor microarchitecture and software optimizations. It can be integrated into open-source oneDNN as an operator library plugin.</p>
+</td>
+<td class="cellrowborder" valign="top" width="36.059999999999995%" headers="mcps1.2.5.1.4 "><p id="p153707032017"><a name="p153707032017"></a><a name="p153707032017"></a>Suitable for various machine learning applications, including image classification, object detection, and speech recognition. It can be integrated with various deep learning frameworks, such as TensorFlow and PyTorch.</p>
+</td>
+</tr>
+<tr id="row163701804202"><td class="cellrowborder" valign="top" width="6%" headers="mcps1.2.5.1.1 "><p id="p173701403204"><a name="p173701403204"></a><a name="p173701403204"></a>2</p>
+</td>
+<td class="cellrowborder" valign="top" width="13.83%" headers="mcps1.2.5.1.2 "><p id="p163704072014"><a name="p163704072014"></a><a name="p163704072014"></a>KDNN_EXT</p>
+</td>
+<td class="cellrowborder" valign="top" width="44.11%" headers="mcps1.2.5.1.3 "><p id="p73701209208"><a name="p73701209208"></a><a name="p73701209208"></a>A deep neural network extension library that contains operators such as softmax and random_choice. They are encapsulated as Python interfaces.</p>
+</td>
+<td class="cellrowborder" valign="top" width="36.059999999999995%" headers="mcps1.2.5.1.4 "><p id="p1237015014202"><a name="p1237015014202"></a><a name="p1237015014202"></a>Suitable for scenarios including multi-classification and random selection. It can be integrated with various deep learning frameworks, such as TensorFlow and PyTorch.</p>
+</td>
+</tr>
+</tbody>
+</table>
 
-| Algorithm| Description| Repository Path|
-| :---| :--- | :--- |
-| KBest| Kunpeng Blazing-fast embedding similarity search thruster (KBest) is a proprietary, efficient graph-based retrieval algorithm. It is designed for large-scale embedding similarity search scenarios.| [KBest documentation](./docs/en/kbest/README.md)<br>**Only the documentation repository path is provided. The code repository will be released as open source at a later stage.**|
-| KScaNN| Kunpeng Scalable Nearest Neighbors (KScaNN) is an inverted index-based vector retrieval algorithm that deeply optimizes index layout, algorithmic logic, and computing process to fully unlock the chip potential.| [KScaNN documentation](./docs/en/kscann/README.md)<br>**Only the documentation repository path is provided. The code repository will be released as open source at a later stage.**|
-| KRL| Kunpeng Retrieval Library (KRL) is an operator library optimized for the Kunpeng platform to accelerate vector retrieval. KRL operators can be enabled to accelerate algorithms such as HNSW, PQFS, IVFPQ, and IVFPQFS—implemented in the open-source Facebook AI Similarity Search (Faiss) library.| [KRL documentation](./docs/en/krl/README.md)<br>**Only the documentation repository path is provided. The code repository will be released as open source at a later stage.**|
-| KVecTurbo| KVecTurbo is a proprietary vector retrieval acceleration component and can work with the openGauss vector database. It quantifies and compresses high-dimensional vectors to quickly obtain the near neighbors of a query. In addition, KVecTurbo uses the SIMD instructions to accelerate distance calculation for multidimensional Nearest Neighbor Search (NNS).|[KVecTurbo](https://gitcode.com/boostkit/kvecturbo) |
+KDNN is available only for Kunpeng processors.
 
-## Recall Algorithm Extensions
+To achieve the optimal performance, KDNN interfaces do not verify all input parameters. The validity of input parameters is ensured by the service that calls the interfaces.
 
-| Algorithm| Description| Repository Path|
-| :---| :--- | :--- |
-| PforDelta extension| Engineered for the recall pipeline, it uses Kunpeng SIMD instructions to accelerate decompression of inverted index lists compressed with PForDelta.| <ul><li>[Source code repository](https://github.com/diegocaro/compression)</li><li>[Extension repository](https://gitcode.com/boostkit/knewpfordelta)</li></ul> |
-| hnswlib extension| Optimized for Kunpeng processors, it supports FP16 data type through vectorization and leverages optimization policies such as prefetching and instruction rescheduling.| <ul><li>[Source code repository](https://github.com/nmslib/hnswlib)</li><li>[Expansion repository](https://gitcode.com/boostkit/hnswlib)</li></ul> |
-| Faiss extension| Tailored to the Kunpeng architecture, it integrates vectorization, dimension-interleaved lookup and accumulation, and vector filtering and compression.| <ul><li>[Source code repository](https://github.com/facebookresearch/faiss/releases/tag/v1.8.0)</li><li>[Extension repository](https://gitcode.com/boostkit/faiss)</li></ul> |
-| RaBitQ extension| It adapts the RaBitQ algorithm for the Arm Architecture 64-bit (AArch64) architecture, introducing FP16 precision optimization, NEON SIMD vectorization, assembly-level Lookup Table (LUT) acceleration, Spilling with Orthogonality-Amplified Residuals (SOAR) vector allocation, and ML-based adaptive nprobe.| <ul><li>[Source code repository](https://github.com/gaoj0017/RaBitQ)</li><li>[Extension repository](https://gitcode.com/boostkit/rabitq)</li></ul> |
+**Application Scenarios<a name="section1957994882217"></a>**
 
-## Real-time Inference Extensions
+KDNN is mainly used in the following scenarios:
 
-| Algorithm| Description| Repository Path|
-| :---| :--- | :--- |
-| EmbeddingLookup extension| It reduces the lookup latency in the core modules of real-time recommendation systems through key techniques such as compiler option tuning, spinlock optimization, memory alignment optimization, and Arm SIMD vectorization.| <ul><li>[Source code repository](https://github.com/bytedance/monolith)</li><li>[Extension repository](https://gitcode.com/boostkit/monolith)</li></ul>|
+- Deep learning acceleration: image classification, object detection and segmentation, natural language processing, and recommendation systems
+- HPC: meteorology, life sciences, manufacturing, and education and scientific research
+- Big data: machine learning algorithms
 
-## Ranking Inference
+## Release Notes
 
-| Algorithm| Description| Repository Path|
-| :---| :--- | :--- |
-| KDNN| Based on the microarchitecture features of the Kunpeng processor, Kunpeng Deep Neural Network Library (KDNN) enhances the performance of core DNN operators through vectorization, assembly-level optimizations, and algorithmic improvements.| [KDNN documentation](./docs/en/kdnn/README_en.md)<br> **Only the documentation repository path is provided. The code repository will be released as open source at a later stage.**|
-| ANNC| Accelerated Neural Network Compiler (ANNC) speeds up neural network computing. It accelerates inference for recommendation systems and foundation models by optimizing computational graphs, generating and integrating high-performance fused operators, and applying efficient code generation and optimization. In addition, ANNC works with popular open-source inference frameworks.| [ANNC repository](https://gitee.com/src-openeuler/ANNC)|
+For details about the KDNN version updates, see [Release Notes](release_notes.md).
 
-## Ranking Inference Extensions
+## Compatibility Information
 
-| Algorithm| Description| Repository Path|
-| :---| :--- | :--- |
-| TensorFlow extension| Optimized the TensorFlow framework for the Kunpeng platform, including native TensorFlow (TF) operator optimizations.| <ul><li>[Source code repository](https://github.com/tensorflow/tensorflow)</li><li>[Extension repository](https://gitcode.com/boostkit/tensorflow)</li></ul>|
-| TensorFlow Serving extension| Optimized the TensorFlow Serving framework for the Kunpeng platform, including thread scheduling optimizations.| <ul><li>[Source code repository](https://github.com/tensorflow/serving)</li><li>[Extension repository](https://gitcode.com/boostkit/tensorflow-serving)</li></ul>|
-| TVM extension| Optimized the TVM framework for the Kunpeng platform, including softmax operator optimizations.| <ul><li>[Source code repository](https://github.com/apache/tvm)</li><li>[Extension repository](https://gitee.com/openeuler/sra_tvm_adapter)</li></ul>|
-| oneDNN extension| KDNN can be integrated into the open-source oneDNN as a plugin to provide full DNN capabilities.| <ul><li>[Source code repository](https://github.com/uxlfoundation/oneDNN)</li><li>[Expansion repository](https://gitee.com/openeuler/kail_dnn_adapter)</li></ul>|
-| TensorRT-LLM extension| It includes features such as operator optimizations, memory access optimizations, and parameter configuration features.| <ul><li>[Source code repository](https://github.com/NVIDIA/TensorRT-LLM)</li><li>[Extension repository](https://gitcode.com/boostkit/tensorrt-llm)</li></ul>|
+To use KDNN smoothly and securely, ensure that your environment is one of the verified environments.
 
-## Tools
+**Table 1** Verified KDNN environments
 
-### Benchmark
+<a name="table7471331132318"></a>
+<table><thead align="left"><tr id="row757143152315"><th class="cellrowborder" valign="top" width="12.15%" id="mcps1.2.7.1.1"><p id="p457831192313"><a name="p457831192313"></a><a name="p457831192313"></a>Component</p>
+</th>
+<th class="cellrowborder" valign="top" width="19.97%" id="mcps1.2.7.1.2"><p id="p5571831182318"><a name="p5571831182318"></a><a name="p5571831182318"></a>OS</p>
+</th>
+<th class="cellrowborder" valign="top" width="22.32%" id="mcps1.2.7.1.3"><p id="p55733113238"><a name="p55733113238"></a><a name="p55733113238"></a>CPU</p>
+</th>
+<th class="cellrowborder" valign="top" width="18.94%" id="mcps1.2.7.1.4"><p id="p35713152318"><a name="p35713152318"></a><a name="p35713152318"></a>Compiler</p>
+</th>
+<th class="cellrowborder" valign="top" width="11.07%" id="mcps1.2.7.1.5"><p id="p135718319231"><a name="p135718319231"></a><a name="p135718319231"></a>Build Tool</p>
+</th>
+<th class="cellrowborder" valign="top" width="15.55%" id="mcps1.2.7.1.6"><p id="p657153142317"><a name="p657153142317"></a><a name="p657153142317"></a>Python Interpreter</p>
+</th>
+</tr>
+</thead>
+<tbody><tr id="row165716316236"><td class="cellrowborder" valign="top" width="12.15%" headers="mcps1.2.7.1.1 "><p id="p4571531192317"><a name="p4571531192317"></a><a name="p4571531192317"></a>KDNN</p>
+</td>
+<td class="cellrowborder" valign="top" width="19.97%" headers="mcps1.2.7.1.2 "><p id="p45713315237"><a name="p45713315237"></a><a name="p45713315237"></a>openEuler 22.03 LTS SP3</p>
+</td>
+<td class="cellrowborder" valign="top" width="22.32%" headers="mcps1.2.7.1.3 "><p id="p2057631172312"><a name="p2057631172312"></a><a name="p2057631172312"></a>New Kunpeng 920 processor model</p>
+</td>
+<td class="cellrowborder" valign="top" width="18.94%" headers="mcps1.2.7.1.4 "><p id="p115753102316"><a name="p115753102316"></a><a name="p115753102316"></a>GCC 10.3.1</p>
+</td>
+<td class="cellrowborder" valign="top" width="11.07%" headers="mcps1.2.7.1.5 "><p id="p14571131142319"><a name="p14571131142319"></a><a name="p14571131142319"></a>CMake 3.22.0</p>
+</td>
+<td class="cellrowborder" valign="top" width="15.55%" headers="mcps1.2.7.1.6 "><p id="p3571531102318"><a name="p3571531102318"></a><a name="p3571531102318"></a>Python 3.9.21</p>
+</td>
+</tr>
+<tr id="row157193172311"><td class="cellrowborder" valign="top" width="12.15%" headers="mcps1.2.7.1.1 "><p id="p127798522236"><a name="p127798522236"></a><a name="p127798522236"></a>KDNN</p>
+</td>
+<td class="cellrowborder" valign="top" width="19.97%" headers="mcps1.2.7.1.2 "><p id="p155719317232"><a name="p155719317232"></a><a name="p155719317232"></a>openEuler 22.03 LTS SP4</p>
+<p id="p105793172319"><a name="p105793172319"></a><a name="p105793172319"></a>(kernel version later than 5.10.0-228.0.0.127)</p>
+</td>
+<td class="cellrowborder" valign="top" width="22.32%" headers="mcps1.2.7.1.3 "><p id="p65733172315"><a name="p65733172315"></a><a name="p65733172315"></a>New Kunpeng 920 processor model</p>
+</td>
+<td class="cellrowborder" valign="top" width="18.94%" headers="mcps1.2.7.1.4 "><p id="p1757183162316"><a name="p1757183162316"></a><a name="p1757183162316"></a>GCC 12.3.1/BiSheng 4.2.0</p>
+</td>
+<td class="cellrowborder" valign="top" width="11.07%" headers="mcps1.2.7.1.5 "><p id="p75743122317"><a name="p75743122317"></a><a name="p75743122317"></a>CMake 3.22.0</p>
+</td>
+<td class="cellrowborder" valign="top" width="15.55%" headers="mcps1.2.7.1.6 "><p id="p55720316236"><a name="p55720316236"></a><a name="p55720316236"></a>Python 3.9.21</p>
+</td>
+</tr>
+<tr id="row1457531142317"><td class="cellrowborder" valign="top" width="12.15%" headers="mcps1.2.7.1.1 "><p id="p3571631172311"><a name="p3571631172311"></a><a name="p3571631172311"></a>KDNN_EXT</p>
+</td>
+<td class="cellrowborder" valign="top" width="19.97%" headers="mcps1.2.7.1.2 "><p id="p45714313232"><a name="p45714313232"></a><a name="p45714313232"></a>openEuler 22.03 LTS SP3</p>
+</td>
+<td class="cellrowborder" valign="top" width="22.32%" headers="mcps1.2.7.1.3 "><p id="p7571931162318"><a name="p7571931162318"></a><a name="p7571931162318"></a>Kunpeng 920 processors</p>
+</td>
+<td class="cellrowborder" valign="top" width="18.94%" headers="mcps1.2.7.1.4 "><p id="p1379182902417"><a name="p1379182902417"></a><a name="p1379182902417"></a>GCC 10.3.1</p>
+</td>
+<td class="cellrowborder" valign="top" width="11.07%" headers="mcps1.2.7.1.5 "><p id="p1479132912419"><a name="p1479132912419"></a><a name="p1479132912419"></a>CMake 3.22.0</p>
+</td>
+<td class="cellrowborder" valign="top" width="15.55%" headers="mcps1.2.7.1.6 "><p id="p879162942416"><a name="p879162942416"></a><a name="p879162942416"></a>Python 3.9.21</p>
+</td>
+</tr>
+</tbody>
+</table>
 
-[SRA benchmark](https://gitee.com/openeuler/sra_benchmark): includes the ranking inference performance benchmarks for multiple models, such as DLRM and Wide & Deep.
+## Related Documents
 
-## Documents
+<a name="table11320174415582"></a>
+<table><thead align="left"><tr id="row532024445820"><th class="cellrowborder" valign="top" width="28.012801280128013%" id="mcps1.1.4.1.2"><p id="p14321184425814"><a name="p14321184425814"></a><a name="p14321184425814"></a>Document Name</p>
+</th>
+<th class="cellrowborder" valign="top" width="57.18571857185718%" id="mcps1.1.4.1.3"><p id="p1932112447589"><a name="p1932112447589"></a><a name="p1932112447589"></a>Content Description</p>
+</th>
+</tr>
+</thead>
+<tbody><tr id="row183211844195812"><td class="cellrowborder" valign="top" width="28.012801280128013%" headers="mcps1.1.4.1.2 "><p id="p132119442580"><a name="p132119442580"></a><a name="p132119442580"></a><a href="release_notes.md">Release Notes</a></p>
+</td>
+<td class="cellrowborder" valign="top" width="57.18571857185718%" headers="mcps1.1.4.1.3 "><p id="p13321194412589"><a name="p13321194412589"></a><a name="p13321194412589"></a>Provides basic information and feature updates for each KDNN version.</p>
+</td>
+</tr>
+<tr id="row4533125512117"><td class="cellrowborder" valign="top" width="28.012801280128013%" headers="mcps1.1.4.1.2 "><p id="p032144418580"><a name="p032144418580"></a><a name="p032144418580"></a><a href="quick_start.md">Quick Start</a></p>
+</td>
+<td class="cellrowborder" valign="top" width="57.18571857185718%" headers="mcps1.1.4.1.3 "><p id="p83216449586"><a name="p83216449586"></a><a name="p83216449586"></a>Provides guidance for getting started with KDNN.</p>
+</td>
+</tr>
+<tr id="row6321164455815"><td class="cellrowborder" valign="top" width="28.012801280128013%" headers="mcps1.1.4.1.2 "><p id="p14321104418585"><a name="p14321104418585"></a><a name="p14321104418585"></a><a href="installation_guide.md">Installation Guide</a></p>
+</td>
+<td class="cellrowborder" valign="top" width="57.18571857185718%" headers="mcps1.1.4.1.3 "><p id="p1332134420587"><a name="p1332134420587"></a><a name="p1332134420587"></a>Provides detailed instructions for compiling and installing KDNN.</p>
+</td>
+</tr>
+<tr id="row13219448585"><td class="cellrowborder" valign="top" width="28.012801280128013%" headers="mcps1.1.4.1.2 "><p id="p5321124418587"><a name="p5321124418587"></a><a name="p5321124418587"></a><a href="api_reference.md">API Reference</a></p>
+</td>
+<td class="cellrowborder" valign="top" width="57.18571857185718%" headers="mcps1.1.4.1.3 "><p id="p53214445588"><a name="p53214445588"></a><a name="p53214445588"></a>Provides definitions, descriptions, and calling examples of KDNN APIs.</p>
+</td>
+</tr>
+<tr id="row1632118447589"><td class="cellrowborder" valign="top" width="28.012801280128013%" headers="mcps1.1.4.1.2 "><p id="p183213445582"><a name="p183213445582"></a><a name="p183213445582"></a><a href="best_practices.md">Best Practices</a></p>
+</td>
+<td class="cellrowborder" valign="top" width="57.18571857185718%" headers="mcps1.1.4.1.3 "><p id="p232174455818"><a name="p232174455818"></a><a name="p232174455818"></a>Provides best practices of using KDNN.</p>
+</td>
+</tr>
+</tbody>
+</table>
 
-Kunpeng BoostKit for SRA [Feature List](https://www.hikunpeng.com/document/detail/en/SRA/overview/kunpengsra.html).
+## Disclaimer
 
-## Discussions
+**To users of this project**
 
-If you encounter any issues, join the [discussion](https://gitcode.com/BoostKit/BoostSRA/discussions) and contact us.
+- This project is intended solely for debugging and development. You are responsible for any risks and should carefully review the following information:
+  - Data processing and deletion: Users are responsible for managing and deleting any data generated while using this tool. Users are advised to delete such data promptly after use to prevent information leakage.
+  - Data confidentiality and transmission: Users understand and agree not to share or transmit any data generated by this tool. Neither the tool nor its developers are responsible for any information leaks, data breaches, or other negative consequences.
+  - User input security: Users are responsible for the security of any commands they enter and for any risks or losses resulting from improper input. The tool and its developers are not liable for issues caused by incorrect command usage.
 
-## License Agreement
+- Disclaimer scope: This disclaimer applies to all individuals and entities using this tool. By using the tool, you acknowledge and accept this statement and assume all risks and responsibilities arising from its use. If you do not agree, please stop using the tool immediately.
+- Before using this tool, **please read and understand the preceding disclaimer**. If you have any questions, contact the developer.
 
-By using the source code and its accompanying software, you acknowledge that you have read, understood, and agreed to be bound by the terms and conditions of the software license agreement.
+**To data owners**
+
+If you do not want your model or dataset to be mentioned in this project, or if you wish to update its description, please submit an issue on GitCode. We will delete or update your description according to your request. Thank you for your understanding and contribution to this project.
+
+## License
+
+The documents of this project are licensed under CC-BY 4.0. For details, see [LICENSE](LICENSE).
+
+## Contribution Statement
+
+We welcome your contributions to the community. If you have any questions/suggestions or want to provide feedback on feature requirements and bug reports, you can submit [issues](https://gitcode.com/boostkit/community/blob/master/docs/contributor/issue-submit.md). For details, see the [contribution guideline](https://gitcode.com/boostkit/community/blob/master/docs/contributor/contributing.md). You are also welcome to share insights in the [Discussions](https://gitcode.com/boostkit/community/discussions). Thank you for your support.
+
+## Acknowledgments
+
+Thank you to everyone in the community for your PRs. We warmly welcome contributions to KDNN!

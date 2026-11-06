@@ -1,5 +1,7 @@
 # 安装指南
 
+本文档介绍KDNN的安装指南，提供环境验证、依赖安装、软件包获取与安装验证的完整步骤，适用于需要在鲲鹏处理器环境中安装KDNN的用户。
+
 ## 已验证环境
 
 为保证您可以顺利安全地使用KDNN，请确保所使用的环境信息在已验证环境范围内。
@@ -23,7 +25,7 @@
 </thead>
 <tbody><tr id="row056323751218"><td class="cellrowborder" valign="top" width="12.15%" headers="mcps1.2.7.1.1 "><p id="p7180194317123"><a name="p7180194317123"></a><a name="p7180194317123"></a>KDNN</p>
 </td>
-<td class="cellrowborder" valign="top" width="19.97%" headers="mcps1.2.7.1.2 "><p id="p16180743171218"><a name="p16180743171218"></a><a name="p16180743171218"></a>openEuler 22.03 LTS SP3</p>
+<td class="cellrowborder" valign="top" width="19.97%" headers="mcps1.2.7.1.2 "><p id="p16180743171218"><a name="p16180743171218"></a><a name="p16180743171218"></a>openEuler 24.03 LTS SP3</p>
 </td>
 <td class="cellrowborder" valign="top" width="22.32%" headers="mcps1.2.7.1.3 "><p id="p818014317128"><a name="p818014317128"></a><a name="p818014317128"></a>鲲鹏920 7270Z/7280Z处理器</p>
 </td>
@@ -159,7 +161,7 @@
 
         从[毕昇编译器发布页面](https://mirrors.huaweicloud.com/kunpeng/archive/compiler/bisheng_compiler)获取安装包`BiShengCompiler-4.2.0-aarch64-linux.tar.gz`，并将`<bisheng-package>`替换为实际文件名。
 
-        ```bash
+        ```output
         tar -xzf <bisheng-package>.tar.gz -C /opt
         export PATH=/opt/<bisheng-directory>/bin:$PATH
         export LD_LIBRARY_PATH=/opt/<bisheng-directory>/lib:$LD_LIBRARY_PATH
@@ -303,7 +305,7 @@
 
     或
 
-    ```bash
+    ```python
     >>> from libkdnn_ext import random_choice, softmax, get_version
     ```
 

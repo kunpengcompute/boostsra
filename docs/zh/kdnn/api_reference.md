@@ -1,5 +1,7 @@
 # API参考
 
+本文档介绍KDNN支持的算子列表及详细说明，适用于需要了解KDNN算子类型及其功能的开发者。
+
 ## KDNN算子说明
 
 ### 算子范围
@@ -135,7 +137,7 @@ KDNN目前支持的算子如[**表 1** KDNN支持的算子](#KDNN支持的算子
 
 **算子公式<a name="section18781135743213"></a>**
 
-![](figures/zh-cn_formulaimage_0000002549751371.png)
+![Eltwise算子公式](figures/zh-cn_formulaimage_0000002549751371.png)
 
 Eltwise算子当前支持的Operation种类如[**表 1** Operation种类](#Operation种类)所示。
 
@@ -429,13 +431,13 @@ KDNN支持的Eltwise类算子支持1D-5D的顺序数据排布。
 
 3维情形下的层归一化算子公式为：
 
-![](figures/zh-cn_formulaimage_0000002518231564.png)
+![3维情形下的层归一化算子公式](figures/zh-cn_formulaimage_0000002518231564.png)
 
 均值和方差可通过运行时计算或由用户提供。如果在运行时计算均值和方差，请使用以下公式：
 
-![](figures/zh-cn_formulaimage_0000002549751331.png)
+![运行时计算均值公式](figures/zh-cn_formulaimage_0000002549751331.png)
 
-![](figures/zh-cn_formulaimage_0000002549871327.png)
+![运行时计算方差公式](figures/zh-cn_formulaimage_0000002549871327.png)
 
 其中，公式中参数描述如[**表 1** 公式参数说明](#公式参数说明_1)所示。
 
@@ -625,7 +627,7 @@ KDNN支持的Eltwise类算子支持1D-5D的顺序数据排布。
 
 2D情形下，矩阵内积计算公式如下：
 
-![](figures/zh-cn_formulaimage_0000002518231570.png)
+![2D情形下，矩阵内积计算公式](figures/zh-cn_formulaimage_0000002518231570.png)
 
 高维Tensor将被展平为2D Tensor进行计算。
 
@@ -885,7 +887,7 @@ KDNN支持的Eltwise类算子支持1D-5D的顺序数据排布。
 
 **算子公式<a name="section11971945184214"></a>**
 
-![](figures/zh-cn_formulaimage_0000002549871357.png)
+![Softmax函数运算算子公式](figures/zh-cn_formulaimage_0000002549871357.png)
 
 **表 1** 公式参数说明<a id="公式参数说明_3"></a>
 
@@ -1045,7 +1047,7 @@ KDNN支持的Eltwise类算子支持1D-5D的顺序数据排布。
 
 **算子公式<a name="section14477516144410"></a>**
 
-![](figures/zh-cn_formulaimage_0000002518391498.png)
+![Sum算子公式](figures/zh-cn_formulaimage_0000002518391498.png)
 
 **表 1** 公式参数说明<a id="公式参数说明_4"></a>
 
@@ -1194,11 +1196,11 @@ KDNN Sum算子支持以下数据排布：
 
 - 2D Tensor
 
-    ![](figures/zh-cn_formulaimage_0000002518391492.png)
+    ![2D Tensor算子公式](figures/zh-cn_formulaimage_0000002518391492.png)
 
 - 高维Tensor
 
-    ![](figures/zh-cn_formulaimage_0000002549871349.png)
+    ![高维Tensor算子公式](figures/zh-cn_formulaimage_0000002549871349.png)
 
     **表 1** 公式参数说明<a id="公式参数说明_5"></a>
 
@@ -1368,7 +1370,7 @@ KDNN Sum算子支持以下数据排布：
 
 通用2D卷积计算公式：
 
-![](figures/zh-cn_formulaimage_0000002549871359.png)
+![通用2D卷积计算公式](figures/zh-cn_formulaimage_0000002549871359.png)
 
 **表 1** 参数说明<a id="参数说明"></a>
 
@@ -3364,9 +3366,9 @@ Concat算子用来拼接N个指定的concat\_dimension维度（此处用C代表�
 
 **算子公式<a name="section986511368520"></a>**
 
-![](figures/zh-cn_image_0000002549871307.png)
+![Concat算子公式](figures/zh-cn_image_0000002549871307.png)
 
-其中![](figures/zh-cn_image_0000002518231540.png)
+其中![C的计算公式](figures/zh-cn_image_0000002518231540.png)
 
 **表 1** 公式参数说明<a id="公式参数说明_6"></a>
 
@@ -3661,7 +3663,7 @@ Concat原语没有前向或反向传播的概念。
 </tbody>
 </table>
 
->![](public_sys-resources/icon-note.gif) **说明：** 
+>![note](public_sys-resources/icon-note.gif) **说明：** 
 >Concat不仅要求输入输出的内存排布layout相同，对应的数据类型也必须相同。
 
 #### Resampling
@@ -3871,17 +3873,17 @@ Shuffle算子可以对Tensor以某一维度为轴心进行数据混洗。
 
 数学公式表达为：
 
-![](figures/zh-cn_formulaimage_0000002549751319.png)
+![Shuffle算子公式](figures/zh-cn_formulaimage_0000002549751319.png)
 
 其中，c′和c存在以下等式关系：
 
-![](figures/zh-cn_formulaimage_0000002518391476.png)
+![c′和c等式](figures/zh-cn_formulaimage_0000002518391476.png)
 
-![](figures/zh-cn_formulaimage_0000002518231558.png)
+![c′和c等式](figures/zh-cn_formulaimage_0000002518231558.png)
 
 式子中：
 
-![](figures/zh-cn_formulaimage_0000002518391466.png)
+![等式中的大小关系](figures/zh-cn_formulaimage_0000002518391466.png)
 
 **表 1** 公式参数说明<a id="公式参数说明_8"></a>
 
@@ -4135,7 +4137,7 @@ Reorder算子可以对Tensor重排成任意排布和任意数据类型。
 
 数学表达式为：
 
-![](figures/zh-cn_formulaimage_0000002549751327.png)
+![Reorder算子数学表达式](figures/zh-cn_formulaimage_0000002549751327.png)
 
 ##### 特性范围
 
@@ -4375,7 +4377,7 @@ Batch Normalization算子（简称bnormal）可以对Tensor进行批归一化计
 
 **算子公式<a name="section1926583913127"></a>**
 
-数学表达式为：![](figures/zh-cn_formulaimage_0000002518391534.png)
+数学表达式为：![Batch Normalization算子公式](figures/zh-cn_formulaimage_0000002518391534.png)
 
 具体参数信息请参见[Layer Normalization](#zh-cn_topic_0000002518231486)中的参数说明信息。
 
@@ -4449,7 +4451,7 @@ Local Response Normalization（简称lrn）是一种局部响应归一化操作�
 
 单通道的数学表达式为:
 
-![](figures/zh-cn_formulaimage_0000002518231578.png)
+![单通道的数学表达式](figures/zh-cn_formulaimage_0000002518231578.png)
 
 **表 1** 公式参数说明<a id="公式参数说明_9"></a>
 
@@ -4566,7 +4568,7 @@ Reduction算子是在Tensor的一个或者多个维度对每个目标元素进�
 
 **算子公式<a name="section357614211117"></a>**
 
-数学表达式为：![](figures/zh-cn_formulaimage_0000002549871367.png)，其中reduce\_op包含如[表1 reduce\_op算法操作](#table1429931423412)所示的算法操作。
+数学表达式为：![Reduction算子数学表达式](figures/zh-cn_formulaimage_0000002549871367.png)，其中reduce\_op包含如[表1 reduce\_op算法操作](#table1429931423412)所示的算法操作。
 
 **表 1** reduce\_op算法操作<a id="reduce\_op算法操作"></a>
 
@@ -4704,9 +4706,9 @@ PReLU算子即参数化修正线性单元，是ReLU（Rectified Linear Unit）�
 
 **算子公式<a name="section2679111817111"></a>**
 
-前向数学表达式为：![](figures/zh-cn_formulaimage_0000002549751333.png)
+前向数学表达式为：![前向数学表达式](figures/zh-cn_formulaimage_0000002549751333.png)
 
-后向数学表达式为：![](figures/zh-cn_formulaimage_0000002549871345.png)
+后向数学表达式为：![后向数学表达式](figures/zh-cn_formulaimage_0000002549871345.png)
 
 ##### 特性范围
 
@@ -4815,7 +4817,7 @@ Binary算子返回对张量source0和source1之间的元素操作结果，并可
 
 **算子公式<a name="section47591642191011"></a>**
 
-数学表达式为：![](figures/zh-cn_formulaimage_0000002549871363.png)
+数学表达式为：![Binary算子数学表达式](figures/zh-cn_formulaimage_0000002549871363.png)
 
 **表 1** op操作<a id="op操作"></a>
 
@@ -4985,7 +4987,7 @@ RNN即循环神经网络，它是一种特殊的神经网络，基于顺序或�
 
 RNN的数学描述或者表达式为：
 
-![](figures/zh-cn_formulaimage_0000002549871329.png)
+![RNN的数学描述或者表达式](figures/zh-cn_formulaimage_0000002549871329.png)
 
 ##### 特性范围
 
@@ -5083,14 +5085,14 @@ RNN的数学描述或者表达式为：
 
 数学表达式为：
 
-![](figures/zh-cn_formulaimage_0000002518231582.png)
+![Group Normalization数学表达式](figures/zh-cn_formulaimage_0000002518231582.png)
 
 其中，输入src的shape为\(N, C, H, W\)，分组数为G。
 
-- ![](figures/zh-cn_formulaimage_0000002549751349.png)
-- ![](figures/zh-cn_formulaimage_0000002518231586.png)
-- ![](figures/zh-cn_formulaimage_0000002549871353.png)：放缩和偏移系数
-- ![](figures/zh-cn_formulaimage_0000002549751343.png)：均值和方差
+- ![CG](figures/zh-cn_formulaimage_0000002549751349.png)
+- ![cg](figures/zh-cn_formulaimage_0000002518231586.png)
+- ![放缩和偏移系数](figures/zh-cn_formulaimage_0000002549871353.png)：放缩和偏移系数
+- ![均值和方差](figures/zh-cn_formulaimage_0000002549751343.png)：均值和方差
 
 ##### 特性范围
 
@@ -5191,7 +5193,7 @@ mean（均值），variance（方差），Scale（放缩），Shift（偏移）�
 
 SparseGemm算子用于计算如下形式的矩阵乘法：
 
-![](figures/zh-cn_formulaimage_0000002518231626.png)
+![SparseGemm算子用于计算如下形式的矩阵乘法](figures/zh-cn_formulaimage_0000002518231626.png)
 
 其中：
 
@@ -5437,5 +5439,5 @@ def get\_version\(\) -\> Dict\[bytes, bytes\]
 {'productName': b'Kunpeng Boostkit', 'productVersion': b'24.0.0', 'componentName': b'BoostKit-kail', 'componentVersion': b'1.0.0', 'componentAppendInfo': b'gcc', 'softwareName': b'boostKit-kail-dnn-ext', 'softwareVersion': b'1.0.0'}
 ```
 
->![](public_sys-resources/icon-note.gif) **说明：** 
+>![icon-note](public_sys-resources/icon-note.gif) **说明：** 
 >版本号和编译时间以实际运行结果为准，上述结果仅供参考。
