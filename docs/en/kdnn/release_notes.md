@@ -21,7 +21,6 @@
 </th>
 <td class="cellrowborder" valign="top" width="57.830000000000005%" headers="mcps1.1.3.3.1 "><p id="p1730912179911"><a name="p1730912179911"></a><a name="p1730912179911"></a>KDNN<strong id="b166665341595"><a name="b166665341595"></a><a name="b166665341595"></a> </strong></p>
 </td>
->>>>>>> 24bb37c... 现网检视问题修改&AI亲和，补充摘要，alt,修改模糊链接名称，刷新操作系统型号，合入930更新翻译，修改最新消息时间格式
 </tr>
 <tr id="row5497143514612"><th class="firstcol" valign="top" width="42.17%" id="mcps1.1.3.4.1"><p id="p162251517551"><a name="p162251517551"></a><a name="p162251517551"></a>Software Version</p>
 </th>
