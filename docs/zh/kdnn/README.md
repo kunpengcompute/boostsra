@@ -2,13 +2,15 @@
 
 简体中文|[English](../../en/kdnn/README_en.md)
 
+本文档介绍KDNN（鲲鹏深度神经网络算子库），提供KDNN的功能特性、版本更新、兼容性信息及学习文档指引，适用于需要在鲲鹏平台上使用深度神经网络算子的开发者。
+
 ## 最新消息
 
-- [2026.09.30]：KDNN新增SparseGemm线程池并行支持，新增MatMul的小规模场景专用实现，新增BNorm/Pooling/PReLU/Reduction/Sum/Concat等算子的NEON实现。
-- [2026.03.30]：KDNN新增基于MMLA指令的s8/u8数据类型MatMul实现；支持Post-ops（后处理操作）；支持FusedMatMul融合算子。
-- [2025.12.30]：KDNN新增MatMul的NEON实现，新增支持MatMul的自定义线程池模式，新增Group Normalization、SparseGemm深度神经网络算子的鲲鹏平台支持。
-- [2025.06.30]：KDNN新增Pool、Batch Normalization、Local Response Normalization、Reduction、PReLU、Binary、RNN深度神经网络算子的鲲鹏平台支持。新增支持鲲鹏920新型号处理器。
-- [2024.12.30]：KDNN新增reorder、resampling、concat、shuffle 4个深度神经网络算子的鲲鹏平台支持。KDNN\_EXT新增random_choice、softmax算子的鲲鹏平台支持。
+- \[2026-09-30\]：KDNN新增SparseGemm线程池并行支持，新增MatMul的小规模场景专用实现，新增BNorm/Pooling/PReLU/Reduction/Sum/Concat等算子的NEON实现。
+- \[2026-03-30\]：KDNN新增基于MMLA指令的s8/u8数据类型MatMul实现；支持Post-ops（后处理操作）；支持FusedMatMul融合算子。
+- \[2025-12-30\]：KDNN新增MatMul的NEON实现，新增支持MatMul的自定义线程池模式，新增Group Normalization、SparseGemm深度神经网络算子的鲲鹏平台支持。
+- \[2025-06-30\]：KDNN新增Pool、Batch Normalization、Local Response Normalization、Reduction、PReLU、Binary、RNN深度神经网络算子的鲲鹏平台支持。新增支持鲲鹏920新型号处理器。
+- \[2024-12-30\]：KDNN新增reorder、resampling、concat、shuffle 4个深度神经网络算子的鲲鹏平台支持。KDNN\_EXT新增random_choice、softmax算子的鲲鹏平台支持。
 
 ## 项目介绍
 
@@ -87,7 +89,7 @@ KDNN主要在以下场景中使用：
 </thead>
 <tbody><tr id="row165716316236"><td class="cellrowborder" valign="top" width="12.15%" headers="mcps1.2.7.1.1 "><p id="p4571531192317"><a name="p4571531192317"></a><a name="p4571531192317"></a>KDNN</p>
 </td>
-<td class="cellrowborder" valign="top" width="19.97%" headers="mcps1.2.7.1.2 "><p id="p45713315237"><a name="p45713315237"></a><a name="p45713315237"></a>openEuler 22.03 LTS SP3</p>
+<td class="cellrowborder" valign="top" width="19.97%" headers="mcps1.2.7.1.2 "><p id="p45713315237"><a name="p45713315237"></a><a name="p45713315237"></a>openEuler 24.03 LTS SP3</p>
 </td>
 <td class="cellrowborder" valign="top" width="22.32%" headers="mcps1.2.7.1.3 "><p id="p2057631172312"><a name="p2057631172312"></a><a name="p2057631172312"></a>鲲鹏920 7270Z/7280Z处理器</p>
 </td>
@@ -187,7 +189,7 @@ KDNN主要在以下场景中使用：
 
 ## 贡献声明
 
-欢迎大家为社区做贡献，如果使用过程中有任何问题/建议，或者需要反馈特性需求和bug报告，可以提交[Issues](https://gitcode.com/boostkit/community/blob/master/docs/contributor/issue-submit.md)联系我们，具体贡献方法可参考[这里](https://gitcode.com/boostkit/community/blob/master/docs/contributor/contributing.md)。同时也欢迎大家在[讨论专区](https://gitcode.com/boostkit/community/discussions)展开讨论交流。感谢您的支持。
+欢迎大家为社区做贡献，如果使用过程中有任何问题/建议，或者需要反馈特性需求和bug报告，可以提交[Issues](https://gitcode.com/boostkit/community/blob/master/docs/contributor/issue-submit.md)联系我们，具体贡献方法可参考《[贡献指南](https://gitcode.com/boostkit/community/blob/master/docs/contributor/contributing.md)》。同时也欢迎大家在[讨论专区](https://gitcode.com/boostkit/community/discussions)展开讨论交流。感谢您的支持。
 
 ## 致谢
 

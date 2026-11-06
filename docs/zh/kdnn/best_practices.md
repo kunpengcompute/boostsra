@@ -1,8 +1,10 @@
 # 最佳实践
 
+本文档提供基于KDNN v3.2.0版本适配TensorFlow中矩阵算子（MatMul和FusedMatMul对应KDNN的Gemm算子）的方法。
+
 ## 适配TensorFlow
 
-本章节提供基于KDNN v3.1.0版本适配TensorFlow中矩阵算子（MatMul和FusedMatMul对应KDNN的Gemm算子）的方法。请参照本章节内容操作，若操作不当，可能会引入未定义行为，请谨慎操作。
+本章节提供基于KDNN v3.2.0版本适配TensorFlow中矩阵算子（MatMul和FusedMatMul对应KDNN的Gemm算子）的方法。请参照本章节内容操作，若操作不当，可能会引入未定义行为，请谨慎操作。
 
 1. 安装基础软件。
 
@@ -124,7 +126,7 @@
 
     单独链接libdnnl.so可以得到oneDNN v3.4.0的全部接口功能。
 
-    >![](public_sys-resources/icon-note.gif) **说明：** 
+    >![note](public_sys-resources/icon-note.gif) **说明：** 
     >编译命令中，“--compiler=clang”表示使用毕昇编译器，默认使用GCC。
 
 **适配后验证<a name="section193111321616"></a>**
@@ -145,7 +147,7 @@
 
     如果用例执行结果全部为**passed**，并且有如下图所示信息返回，说明oneDNN适配成功。
 
-    ![](figures/zh-cn_image_0000002549872587.png)
+    ![适配oneDNN示意图](figures/zh-cn_image_0000002549872587.png)
 
 ## 修订记录
 
