@@ -139,7 +139,7 @@
 
 3. 根据目标环境选择一种编译器安装。
 
-    - GCC 10.3.1（适用于openEuler 22.03 LTS SP3）：
+    - GCC 10.3.1（适用于openEuler 24.03 LTS SP3）：
 
         ```bash
         yum install gcc gcc-c++

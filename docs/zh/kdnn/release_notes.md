@@ -49,7 +49,7 @@
 </thead>
 <tbody><tr id="zh-cn_topic_0000002502992013_row056323751218"><td class="cellrowborder" rowspan="2" valign="top" width="12.15%" headers="mcps1.2.7.1.1 "><p id="zh-cn_topic_0000002502992013_p7180194317123"><a name="zh-cn_topic_0000002502992013_p7180194317123"></a><a name="zh-cn_topic_0000002502992013_p7180194317123"></a>KDNN</p>
 </td>
-<td class="cellrowborder" valign="top" width="19.97%" headers="mcps1.2.7.1.2 "><p id="zh-cn_topic_0000002502992013_p16180743171218"><a name="zh-cn_topic_0000002502992013_p16180743171218"></a><a name="zh-cn_topic_0000002502992013_p16180743171218"></a>openEuler 22.03 LTS SP3</p>
+<td class="cellrowborder" valign="top" width="19.97%" headers="mcps1.2.7.1.2 "><p id="zh-cn_topic_0000002502992013_p16180743171218"><a name="zh-cn_topic_0000002502992013_p16180743171218"></a><a name="zh-cn_topic_0000002502992013_p16180743171218"></a>openEuler 24.03 LTS SP3</p>
 </td>
 <td class="cellrowborder" valign="top" width="22.32%" headers="mcps1.2.7.1.3 "><p id="zh-cn_topic_0000002502992013_p818014317128"><a name="zh-cn_topic_0000002502992013_p818014317128"></a><a name="zh-cn_topic_0000002502992013_p818014317128"></a>鲲鹏920 7270Z/7280Z处理器</p>
 </td>

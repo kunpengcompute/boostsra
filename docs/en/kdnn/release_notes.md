@@ -236,78 +236,14 @@ None
 ### V3.2.0 Documentation
 
 <a name="table41916133"></a>
-<table>
-  <thead align="left">
-    <tr id="row28804032">
-      <th class="cellrowborder" valign="top" width="45.02%" id="mcps1.1.4.1.1">
-        <p id="p4697041"><a name="p4697041"></a>Document Name</p>
-      </th>
-      <th class="cellrowborder" valign="top" width="38.02%" id="mcps1.1.4.1.2">
-        <p id="p44916036"><a name="p44916036"></a>Description</p>
-      </th>
-      <th class="cellrowborder" valign="top" width="16.96%" id="mcps1.1.4.1.3">
-        <p id="p14320308"><a name="p14320308"></a>Delivery Method</p>
-      </th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr id="row1341193722116">
-      <td class="cellrowborder" valign="top" width="45.02%" headers="mcps1.1.4.1.1">
-        <p><a href="./release_notes.md">Release Notes</a></p>
-      </td>
-      <td class="cellrowborder" valign="top" width="38.02%" headers="mcps1.1.4.1.2">
-        <p>Provides version release information of KDNN.</p>
-      </td>
-      <td class="cellrowborder" valign="top" width="16.96%" headers="mcps1.1.4.1.3">
-        <p>Open-source repository</p>
-      </td>
-    </tr>
-    <tr id="row20256161544411">
-      <td class="cellrowborder" valign="top" width="45.02%" headers="mcps1.1.4.1.1">
-        <p><a href="./quick_start.md">Quick Start</a></p>
-      </td>
-      <td class="cellrowborder" valign="top" width="38.02%" headers="mcps1.1.4.1.2">
-        <p>Provides guidance for getting started with KDNN.</p>
-      </td>
-      <td class="cellrowborder" valign="top" width="16.96%" headers="mcps1.1.4.1.3">
-        <p>Open-source repository</p>
-      </td>
-    </tr>
-    <tr id="row1941037152117">
-      <td class="cellrowborder" valign="top" width="45.02%" headers="mcps1.1.4.1.1">
-        <p><a href="./installation_guide.md">Installation Guide</a></p>
-      </td>
-      <td class="cellrowborder" valign="top" width="38.02%" headers="mcps1.1.4.1.2">
-        <p>Describes how to install and deploy KDNN.</p>
-      </td>
-      <td class="cellrowborder" valign="top" width="16.96%" headers="mcps1.1.4.1.3">
-        <p>Open-source repository</p>
-      </td>
-    </tr>
-    <tr id="row29615193441">
-      <td class="cellrowborder" valign="top" width="45.02%" headers="mcps1.1.4.1.1">
-        <p><a href="./api_reference.md">API Reference</a></p>
-      </td>
-      <td class="cellrowborder" valign="top" width="38.02%" headers="mcps1.1.4.1.2">
-        <p>Provides definitions, descriptions, and calling examples of KDNN APIs.</p>
-      </td>
-      <td class="cellrowborder" valign="top" width="16.96%" headers="mcps1.1.4.1.3">
-        <p>Open-source repository</p>
-      </td>
-    </tr>
-    <tr id="row181851121164416">
-      <td class="cellrowborder" valign="top" width="45.02%" headers="mcps1.1.4.1.1">
-        <p><a href="./best_practices.md">Best Practices</a></p>
-      </td>
-      <td class="cellrowborder" valign="top" width="38.02%" headers="mcps1.1.4.1.2">
-        <p>Provides best practices of using KDNN.</p>
-      </td>
-      <td class="cellrowborder" valign="top" width="16.96%" headers="mcps1.1.4.1.3">
-        <p>Open-source repository</p>
-      </td>
-    </tr>
-  </tbody>
-</table>
+
+| Document Name | Description | Delivery Method |
+| --- | --- | --- |
+| Release Notes | Provides version release information of KDNN. | Open-source repository |
+| Quick Start| Provides guidance for getting started with KDNN. | Open-source repository |
+| Installation Guide | Describes how to install and deploy KDNN. | Open-source repository |
+| API Reference | Provides definitions, descriptions, and calling examples of KDNN APIs. | Open-source repository |
+| Best Practices| Provides best practices of using KDNN. | Open-source repository |
 
 ### Obtaining Documentation
 
