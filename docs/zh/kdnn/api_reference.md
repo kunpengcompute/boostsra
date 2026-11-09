@@ -429,9 +429,9 @@ KDNN支持的Eltwise类算子支持1D-5D的顺序数据排布。
 
 **算子公式<a name="section36451039203911"></a>**
 
-3维情形下的层归一化算子公式为：
+3D情形下的层归一化算子公式为：
 
-![3维情形下的层归一化算子公式](figures/zh-cn_formulaimage_0000002518231564.png)
+![3D情形下的层归一化算子公式](figures/zh-cn_formulaimage_0000002518231564.png)
 
 均值和方差可通过运行时计算或由用户提供。如果在运行时计算均值和方差，请使用以下公式：
 
@@ -3368,7 +3368,7 @@ Concat算子用来拼接N个指定的concat\_dimension维度（此处用C代表�
 
 ![Concat算子公式](figures/zh-cn_image_0000002549871307.png)
 
-其中![C的计算公式](figures/zh-cn_image_0000002518231540.png)
+其中![Concat的计算公式中的参数c](figures/zh-cn_image_0000002518231540.png)
 
 **表 1** 公式参数说明<a id="公式参数说明_6"></a>
 
