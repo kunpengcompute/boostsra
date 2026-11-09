@@ -226,11 +226,11 @@ None
 
 | Document Name | Description | Delivery Method |
 | --- | --- | --- |
-| [Release Notes](./release_notes.md) | Provides version release information of KDNN. | Open-source repository |
-| [Quick Start](./quick_start.md) | Provides guidance for getting started with KDNN. | Open-source repository |
-| [Installation Guide](./installation_guide.md) | Describes how to install and deploy KDNN. | Open-source repository |
-| [API Reference](./api_reference.md) | Provides definitions, descriptions, and calling examples of KDNN APIs. | Open-source repository |
-| [Best Practices](./best_practices.md) | Provides best practices of using KDNN. | Open-source repository |
+| Release Notes | Provides version release information of KDNN. | Open-source repository |
+| Quick Start| Provides guidance for getting started with KDNN. | Open-source repository |
+| Installation Guide | Describes how to install and deploy KDNN. | Open-source repository |
+| API Reference | Provides definitions, descriptions, and calling examples of KDNN APIs. | Open-source repository |
+| Best Practices| Provides best practices of using KDNN. | Open-source repository |
 
 ### Obtaining Documentation
 
