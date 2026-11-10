@@ -1,5 +1,7 @@
 # API参考
 
+本文档介绍KDNN支持的算子列表及详细说明，适用于需要了解KDNN算子类型及其功能的开发者。
+
 ## KDNN算子说明
 
 ### 算子范围
@@ -135,7 +137,7 @@ KDNN目前支持的算子如[**表 1** KDNN支持的算子](#KDNN支持的算子
 
 **算子公式<a name="section18781135743213"></a>**
 
-![](figures/zh-cn_formulaimage_0000002549751371.png)
+![Eltwise算子公式](figures/zh-cn_formulaimage_0000002549751371.png)
 
 Eltwise算子当前支持的Operation种类如[**表 1** Operation种类](#Operation种类)所示。
 
@@ -366,7 +368,7 @@ Eltwise算子当前支持的Operation种类如[**表 1** Operation种类](#Opera
 
 **维度与数据排布<a name="section176701873395"></a>**
 
-KDNN支持的Eltwise类算子支持1D-5D的顺序数据排布。
+KDNN支持的Eltwise类算子支持1维-5维的顺序数据排布。
 
 **表 1** Tensor维度对应参数数据排布<a id="Tensor维度对应参数数据排布"></a>
 
@@ -379,35 +381,35 @@ KDNN支持的Eltwise类算子支持1D-5D的顺序数据排布。
 </th>
 </tr>
 </thead>
-<tbody><tr id="row2053225622311"><td class="cellrowborder" valign="top" width="33.33333333333333%" headers="mcps1.2.4.1.1 "><p id="p7532125611236"><a name="p7532125611236"></a><a name="p7532125611236"></a>1D</p>
+<tbody><tr id="row2053225622311"><td class="cellrowborder" valign="top" width="33.33333333333333%" headers="mcps1.2.4.1.1 "><p id="p7532125611236"><a name="p7532125611236"></a><a name="p7532125611236"></a>1维</p>
 </td>
 <td class="cellrowborder" valign="top" width="33.33333333333333%" headers="mcps1.2.4.1.2 "><p id="p18532105615234"><a name="p18532105615234"></a><a name="p18532105615234"></a>dnnl_a</p>
 </td>
 <td class="cellrowborder" valign="top" width="33.33333333333333%" headers="mcps1.2.4.1.3 "><p id="p661713246227"><a name="p661713246227"></a><a name="p661713246227"></a>dnnl_a</p>
 </td>
 </tr>
-<tr id="row105326567239"><td class="cellrowborder" valign="top" width="33.33333333333333%" headers="mcps1.2.4.1.1 "><p id="p5532115672314"><a name="p5532115672314"></a><a name="p5532115672314"></a>2D</p>
+<tr id="row105326567239"><td class="cellrowborder" valign="top" width="33.33333333333333%" headers="mcps1.2.4.1.1 "><p id="p5532115672314"><a name="p5532115672314"></a><a name="p5532115672314"></a>2维</p>
 </td>
 <td class="cellrowborder" valign="top" width="33.33333333333333%" headers="mcps1.2.4.1.2 "><p id="p15328565230"><a name="p15328565230"></a><a name="p15328565230"></a>dnnl_ab</p>
 </td>
 <td class="cellrowborder" valign="top" width="33.33333333333333%" headers="mcps1.2.4.1.3 "><p id="p1353245692315"><a name="p1353245692315"></a><a name="p1353245692315"></a>dnnl_ab</p>
 </td>
 </tr>
-<tr id="row11532125617237"><td class="cellrowborder" valign="top" width="33.33333333333333%" headers="mcps1.2.4.1.1 "><p id="p1653218564231"><a name="p1653218564231"></a><a name="p1653218564231"></a>3D</p>
+<tr id="row11532125617237"><td class="cellrowborder" valign="top" width="33.33333333333333%" headers="mcps1.2.4.1.1 "><p id="p1653218564231"><a name="p1653218564231"></a><a name="p1653218564231"></a>3维</p>
 </td>
 <td class="cellrowborder" valign="top" width="33.33333333333333%" headers="mcps1.2.4.1.2 "><p id="p13532155662315"><a name="p13532155662315"></a><a name="p13532155662315"></a>dnnl_abc</p>
 </td>
 <td class="cellrowborder" valign="top" width="33.33333333333333%" headers="mcps1.2.4.1.3 "><p id="p253318566235"><a name="p253318566235"></a><a name="p253318566235"></a>dnnl_abc</p>
 </td>
 </tr>
-<tr id="row1112183414268"><td class="cellrowborder" valign="top" width="33.33333333333333%" headers="mcps1.2.4.1.1 "><p id="p1511373411267"><a name="p1511373411267"></a><a name="p1511373411267"></a>4D</p>
+<tr id="row1112183414268"><td class="cellrowborder" valign="top" width="33.33333333333333%" headers="mcps1.2.4.1.1 "><p id="p1511373411267"><a name="p1511373411267"></a><a name="p1511373411267"></a>4维</p>
 </td>
 <td class="cellrowborder" valign="top" width="33.33333333333333%" headers="mcps1.2.4.1.2 "><p id="p511383402618"><a name="p511383402618"></a><a name="p511383402618"></a>dnnl_abcd</p>
 </td>
 <td class="cellrowborder" valign="top" width="33.33333333333333%" headers="mcps1.2.4.1.3 "><p id="p411363413263"><a name="p411363413263"></a><a name="p411363413263"></a>dnnl_abcd</p>
 </td>
 </tr>
-<tr id="row840614372268"><td class="cellrowborder" valign="top" width="33.33333333333333%" headers="mcps1.2.4.1.1 "><p id="p1540763710265"><a name="p1540763710265"></a><a name="p1540763710265"></a>5D</p>
+<tr id="row840614372268"><td class="cellrowborder" valign="top" width="33.33333333333333%" headers="mcps1.2.4.1.1 "><p id="p1540763710265"><a name="p1540763710265"></a><a name="p1540763710265"></a>5维</p>
 </td>
 <td class="cellrowborder" valign="top" width="33.33333333333333%" headers="mcps1.2.4.1.2 "><p id="p1840711378265"><a name="p1840711378265"></a><a name="p1840711378265"></a>dnnl_abcde</p>
 </td>
@@ -429,13 +431,13 @@ KDNN支持的Eltwise类算子支持1D-5D的顺序数据排布。
 
 3维情形下的层归一化算子公式为：
 
-![](figures/zh-cn_formulaimage_0000002518231564.png)
+![3维情形下的层归一化算子公式](figures/zh-cn_formulaimage_0000002518231564.png)
 
 均值和方差可通过运行时计算或由用户提供。如果在运行时计算均值和方差，请使用以下公式：
 
-![](figures/zh-cn_formulaimage_0000002549751331.png)
+![运行时计算均值公式](figures/zh-cn_formulaimage_0000002549751331.png)
 
-![](figures/zh-cn_formulaimage_0000002549871327.png)
+![运行时计算方差公式](figures/zh-cn_formulaimage_0000002549871327.png)
 
 其中，公式中参数描述如[**表 1** 公式参数说明](#公式参数说明_1)所示。
 
@@ -574,7 +576,7 @@ KDNN支持的Eltwise类算子支持1D-5D的顺序数据排布。
 </th>
 </tr>
 </thead>
-<tbody><tr id="row1568412416267"><td class="cellrowborder" valign="top" width="25%" headers="mcps1.2.5.1.1 "><p id="p18684924102618"><a name="p18684924102618"></a><a name="p18684924102618"></a>2D</p>
+<tbody><tr id="row1568412416267"><td class="cellrowborder" valign="top" width="25%" headers="mcps1.2.5.1.1 "><p id="p18684924102618"><a name="p18684924102618"></a><a name="p18684924102618"></a>2维</p>
 </td>
 <td class="cellrowborder" valign="top" width="25%" headers="mcps1.2.5.1.2 "><p id="p15328565230"><a name="p15328565230"></a><a name="p15328565230"></a>dnnl_ab</p>
 </td>
@@ -583,7 +585,7 @@ KDNN支持的Eltwise类算子支持1D-5D的顺序数据排布。
 <td class="cellrowborder" valign="top" width="25%" headers="mcps1.2.5.1.4 "><p id="p7454113816305"><a name="p7454113816305"></a><a name="p7454113816305"></a>dnnl_a</p>
 </td>
 </tr>
-<tr id="row14684152482617"><td class="cellrowborder" valign="top" width="25%" headers="mcps1.2.5.1.1 "><p id="p1968418241269"><a name="p1968418241269"></a><a name="p1968418241269"></a>3D</p>
+<tr id="row14684152482617"><td class="cellrowborder" valign="top" width="25%" headers="mcps1.2.5.1.1 "><p id="p1968418241269"><a name="p1968418241269"></a><a name="p1968418241269"></a>3维</p>
 </td>
 <td class="cellrowborder" valign="top" width="25%" headers="mcps1.2.5.1.2 "><p id="p13532155662315"><a name="p13532155662315"></a><a name="p13532155662315"></a>dnnl_abc</p>
 </td>
@@ -592,7 +594,7 @@ KDNN支持的Eltwise类算子支持1D-5D的顺序数据排布。
 <td class="cellrowborder" valign="top" width="25%" headers="mcps1.2.5.1.4 "><p id="p9454038163010"><a name="p9454038163010"></a><a name="p9454038163010"></a>dnnl_ab</p>
 </td>
 </tr>
-<tr id="row10750131682910"><td class="cellrowborder" valign="top" width="25%" headers="mcps1.2.5.1.1 "><p id="p9750181682917"><a name="p9750181682917"></a><a name="p9750181682917"></a>4D</p>
+<tr id="row10750131682910"><td class="cellrowborder" valign="top" width="25%" headers="mcps1.2.5.1.1 "><p id="p9750181682917"><a name="p9750181682917"></a><a name="p9750181682917"></a>4维</p>
 </td>
 <td class="cellrowborder" valign="top" width="25%" headers="mcps1.2.5.1.2 "><p id="p511383402618"><a name="p511383402618"></a><a name="p511383402618"></a>dnnl_abcd</p>
 </td>
@@ -601,7 +603,7 @@ KDNN支持的Eltwise类算子支持1D-5D的顺序数据排布。
 <td class="cellrowborder" valign="top" width="25%" headers="mcps1.2.5.1.4 "><p id="p1645413817303"><a name="p1645413817303"></a><a name="p1645413817303"></a>dnnl_abc</p>
 </td>
 </tr>
-<tr id="row1150917293293"><td class="cellrowborder" valign="top" width="25%" headers="mcps1.2.5.1.1 "><p id="p15096295298"><a name="p15096295298"></a><a name="p15096295298"></a>5D</p>
+<tr id="row1150917293293"><td class="cellrowborder" valign="top" width="25%" headers="mcps1.2.5.1.1 "><p id="p15096295298"><a name="p15096295298"></a><a name="p15096295298"></a>5维</p>
 </td>
 <td class="cellrowborder" valign="top" width="25%" headers="mcps1.2.5.1.2 "><p id="p1840711378265"><a name="p1840711378265"></a><a name="p1840711378265"></a>dnnl_abcde</p>
 </td>
@@ -623,11 +625,11 @@ KDNN支持的Eltwise类算子支持1D-5D的顺序数据排布。
 
 **算子公式<a name="section102471449419"></a>**
 
-2D情形下，矩阵内积计算公式如下：
+2维情形下，矩阵内积计算公式如下：
 
-![](figures/zh-cn_formulaimage_0000002518231570.png)
+![2维情形下，矩阵内积计算公式](figures/zh-cn_formulaimage_0000002518231570.png)
 
-高维Tensor将被展平为2D Tensor进行计算。
+高维Tensor将被展平为2维 Tensor进行计算。
 
 **表 1** 公式参数说明<a id="公式参数说明_2"></a>
 
@@ -885,7 +887,7 @@ KDNN支持的Eltwise类算子支持1D-5D的顺序数据排布。
 
 **算子公式<a name="section11971945184214"></a>**
 
-![](figures/zh-cn_formulaimage_0000002549871357.png)
+![Softmax函数运算算子公式](figures/zh-cn_formulaimage_0000002549871357.png)
 
 **表 1** 公式参数说明<a id="公式参数说明_3"></a>
 
@@ -997,35 +999,35 @@ KDNN支持的Eltwise类算子支持1D-5D的顺序数据排布。
 </th>
 </tr>
 </thead>
-<tbody><tr id="row1814331418128"><td class="cellrowborder" valign="top" width="33.33333333333333%" headers="mcps1.2.4.1.1 "><p id="p5143191401217"><a name="p5143191401217"></a><a name="p5143191401217"></a>1D</p>
+<tbody><tr id="row1814331418128"><td class="cellrowborder" valign="top" width="33.33333333333333%" headers="mcps1.2.4.1.1 "><p id="p5143191401217"><a name="p5143191401217"></a><a name="p5143191401217"></a>1维</p>
 </td>
 <td class="cellrowborder" valign="top" width="33.33333333333333%" headers="mcps1.2.4.1.2 "><p id="p614361416126"><a name="p614361416126"></a><a name="p614361416126"></a>dnnl_a</p>
 </td>
 <td class="cellrowborder" valign="top" width="33.33333333333333%" headers="mcps1.2.4.1.3 "><p id="p514311411127"><a name="p514311411127"></a><a name="p514311411127"></a>dnnl_a</p>
 </td>
 </tr>
-<tr id="row1568412416267"><td class="cellrowborder" valign="top" width="33.33333333333333%" headers="mcps1.2.4.1.1 "><p id="p18684924102618"><a name="p18684924102618"></a><a name="p18684924102618"></a>2D</p>
+<tr id="row1568412416267"><td class="cellrowborder" valign="top" width="33.33333333333333%" headers="mcps1.2.4.1.1 "><p id="p18684924102618"><a name="p18684924102618"></a><a name="p18684924102618"></a>2维</p>
 </td>
 <td class="cellrowborder" valign="top" width="33.33333333333333%" headers="mcps1.2.4.1.2 "><p id="p749541091218"><a name="p749541091218"></a><a name="p749541091218"></a>dnnl_ab</p>
 </td>
 <td class="cellrowborder" valign="top" width="33.33333333333333%" headers="mcps1.2.4.1.3 "><p id="p125351636203012"><a name="p125351636203012"></a><a name="p125351636203012"></a>dnnl_ab</p>
 </td>
 </tr>
-<tr id="row14684152482617"><td class="cellrowborder" valign="top" width="33.33333333333333%" headers="mcps1.2.4.1.1 "><p id="p1968418241269"><a name="p1968418241269"></a><a name="p1968418241269"></a>3D</p>
+<tr id="row14684152482617"><td class="cellrowborder" valign="top" width="33.33333333333333%" headers="mcps1.2.4.1.1 "><p id="p1968418241269"><a name="p1968418241269"></a><a name="p1968418241269"></a>3维</p>
 </td>
 <td class="cellrowborder" valign="top" width="33.33333333333333%" headers="mcps1.2.4.1.2 "><p id="p549571041215"><a name="p549571041215"></a><a name="p549571041215"></a>dnnl_abc</p>
 </td>
 <td class="cellrowborder" valign="top" width="33.33333333333333%" headers="mcps1.2.4.1.3 "><p id="p2536103613010"><a name="p2536103613010"></a><a name="p2536103613010"></a>dnnl_abc</p>
 </td>
 </tr>
-<tr id="row10750131682910"><td class="cellrowborder" valign="top" width="33.33333333333333%" headers="mcps1.2.4.1.1 "><p id="p9750181682917"><a name="p9750181682917"></a><a name="p9750181682917"></a>4D</p>
+<tr id="row10750131682910"><td class="cellrowborder" valign="top" width="33.33333333333333%" headers="mcps1.2.4.1.1 "><p id="p9750181682917"><a name="p9750181682917"></a><a name="p9750181682917"></a>4维</p>
 </td>
 <td class="cellrowborder" valign="top" width="33.33333333333333%" headers="mcps1.2.4.1.2 "><p id="p4495161031215"><a name="p4495161031215"></a><a name="p4495161031215"></a>dnnl_abcd</p>
 </td>
 <td class="cellrowborder" valign="top" width="33.33333333333333%" headers="mcps1.2.4.1.3 "><p id="p155368361301"><a name="p155368361301"></a><a name="p155368361301"></a>dnnl_abcd</p>
 </td>
 </tr>
-<tr id="row1150917293293"><td class="cellrowborder" valign="top" width="33.33333333333333%" headers="mcps1.2.4.1.1 "><p id="p15096295298"><a name="p15096295298"></a><a name="p15096295298"></a>5D</p>
+<tr id="row1150917293293"><td class="cellrowborder" valign="top" width="33.33333333333333%" headers="mcps1.2.4.1.1 "><p id="p15096295298"><a name="p15096295298"></a><a name="p15096295298"></a>5维</p>
 </td>
 <td class="cellrowborder" valign="top" width="33.33333333333333%" headers="mcps1.2.4.1.2 "><p id="p94952010131215"><a name="p94952010131215"></a><a name="p94952010131215"></a>dnnl_abcde</p>
 </td>
@@ -1045,7 +1047,7 @@ KDNN支持的Eltwise类算子支持1D-5D的顺序数据排布。
 
 **算子公式<a name="section14477516144410"></a>**
 
-![](figures/zh-cn_formulaimage_0000002518391498.png)
+![Sum算子公式](figures/zh-cn_formulaimage_0000002518391498.png)
 
 **表 1** 公式参数说明<a id="公式参数说明_4"></a>
 
@@ -1109,7 +1111,7 @@ KDNN支持的Eltwise类算子支持1D-5D的顺序数据排布。
 
 KDNN Sum算子支持以下数据排布：
 
-- 数据维度支持1D-5D。
+- 数据维度支持1维-5维。
 - N个输入Tensor与输出Tensor需为相同维度、相同数据排布，具体数据排布支持情况见下表。
 
 **表 2** Tensor维度对应参数数据排布<a id="Tensor维度对应参数数据排布_3"></a>
@@ -1123,56 +1125,56 @@ KDNN Sum算子支持以下数据排布：
 </th>
 </tr>
 </thead>
-<tbody><tr id="row26900475406"><td class="cellrowborder" valign="top" width="33.339999999999996%" headers="mcps1.2.4.1.1 "><p id="p86901147194011"><a name="p86901147194011"></a><a name="p86901147194011"></a>1D</p>
+<tbody><tr id="row26900475406"><td class="cellrowborder" valign="top" width="33.339999999999996%" headers="mcps1.2.4.1.1 "><p id="p86901147194011"><a name="p86901147194011"></a><a name="p86901147194011"></a>1维</p>
 </td>
 <td class="cellrowborder" valign="top" width="33.33%" headers="mcps1.2.4.1.2 "><p id="p18532105615234"><a name="p18532105615234"></a><a name="p18532105615234"></a>dnnl_a</p>
 </td>
 <td class="cellrowborder" valign="top" width="33.33%" headers="mcps1.2.4.1.3 "><p id="p147956329"><a name="p147956329"></a><a name="p147956329"></a>dnnl_a</p>
 </td>
 </tr>
-<tr id="row19578448114116"><td class="cellrowborder" valign="top" width="33.339999999999996%" headers="mcps1.2.4.1.1 "><p id="p12578748144111"><a name="p12578748144111"></a><a name="p12578748144111"></a>2D</p>
+<tr id="row19578448114116"><td class="cellrowborder" valign="top" width="33.339999999999996%" headers="mcps1.2.4.1.1 "><p id="p12578748144111"><a name="p12578748144111"></a><a name="p12578748144111"></a>2维</p>
 </td>
 <td class="cellrowborder" valign="top" width="33.33%" headers="mcps1.2.4.1.2 "><p id="p1457834834116"><a name="p1457834834116"></a><a name="p1457834834116"></a>dnnl_ab</p>
 </td>
 <td class="cellrowborder" valign="top" width="33.33%" headers="mcps1.2.4.1.3 "><p id="p1457814815418"><a name="p1457814815418"></a><a name="p1457814815418"></a>dnnl_ab</p>
 </td>
 </tr>
-<tr id="row12878442184113"><td class="cellrowborder" valign="top" width="33.339999999999996%" headers="mcps1.2.4.1.1 "><p id="p987864274112"><a name="p987864274112"></a><a name="p987864274112"></a>3D</p>
+<tr id="row12878442184113"><td class="cellrowborder" valign="top" width="33.339999999999996%" headers="mcps1.2.4.1.1 "><p id="p987864274112"><a name="p987864274112"></a><a name="p987864274112"></a>3维</p>
 </td>
 <td class="cellrowborder" valign="top" width="33.33%" headers="mcps1.2.4.1.2 "><p id="p487824216418"><a name="p487824216418"></a><a name="p487824216418"></a>dnnl_abc</p>
 </td>
 <td class="cellrowborder" valign="top" width="33.33%" headers="mcps1.2.4.1.3 "><p id="p987864213418"><a name="p987864213418"></a><a name="p987864213418"></a>dnnl_abc</p>
 </td>
 </tr>
-<tr id="row76901347194013"><td class="cellrowborder" valign="top" width="33.339999999999996%" headers="mcps1.2.4.1.1 "><p id="p51126812110"><a name="p51126812110"></a><a name="p51126812110"></a>3D</p>
+<tr id="row76901347194013"><td class="cellrowborder" valign="top" width="33.339999999999996%" headers="mcps1.2.4.1.1 "><p id="p51126812110"><a name="p51126812110"></a><a name="p51126812110"></a>3维</p>
 </td>
 <td class="cellrowborder" valign="top" width="33.33%" headers="mcps1.2.4.1.2 "><p id="p169015477408"><a name="p169015477408"></a><a name="p169015477408"></a>dnnl_acb</p>
 </td>
 <td class="cellrowborder" valign="top" width="33.33%" headers="mcps1.2.4.1.3 "><p id="p3690104774011"><a name="p3690104774011"></a><a name="p3690104774011"></a>dnnl_acb</p>
 </td>
 </tr>
-<tr id="row195751943154217"><td class="cellrowborder" valign="top" width="33.339999999999996%" headers="mcps1.2.4.1.1 "><p id="p19576043154218"><a name="p19576043154218"></a><a name="p19576043154218"></a>4D</p>
+<tr id="row195751943154217"><td class="cellrowborder" valign="top" width="33.339999999999996%" headers="mcps1.2.4.1.1 "><p id="p19576043154218"><a name="p19576043154218"></a><a name="p19576043154218"></a>4维</p>
 </td>
 <td class="cellrowborder" valign="top" width="33.33%" headers="mcps1.2.4.1.2 "><p id="p857612438420"><a name="p857612438420"></a><a name="p857612438420"></a>dnnl_abcd</p>
 </td>
 <td class="cellrowborder" valign="top" width="33.33%" headers="mcps1.2.4.1.3 "><p id="p0576043174213"><a name="p0576043174213"></a><a name="p0576043174213"></a>dnnl_abcd</p>
 </td>
 </tr>
-<tr id="row6818174517422"><td class="cellrowborder" valign="top" width="33.339999999999996%" headers="mcps1.2.4.1.1 "><p id="p442918137217"><a name="p442918137217"></a><a name="p442918137217"></a>4D</p>
+<tr id="row6818174517422"><td class="cellrowborder" valign="top" width="33.339999999999996%" headers="mcps1.2.4.1.1 "><p id="p442918137217"><a name="p442918137217"></a><a name="p442918137217"></a>4维</p>
 </td>
 <td class="cellrowborder" valign="top" width="33.33%" headers="mcps1.2.4.1.2 "><p id="p381854514425"><a name="p381854514425"></a><a name="p381854514425"></a>dnnl_acdb</p>
 </td>
 <td class="cellrowborder" valign="top" width="33.33%" headers="mcps1.2.4.1.3 "><p id="p198188452422"><a name="p198188452422"></a><a name="p198188452422"></a>dnnl_acdb</p>
 </td>
 </tr>
-<tr id="row18821453184211"><td class="cellrowborder" valign="top" width="33.339999999999996%" headers="mcps1.2.4.1.1 "><p id="p6821553144217"><a name="p6821553144217"></a><a name="p6821553144217"></a>5D</p>
+<tr id="row18821453184211"><td class="cellrowborder" valign="top" width="33.339999999999996%" headers="mcps1.2.4.1.1 "><p id="p6821553144217"><a name="p6821553144217"></a><a name="p6821553144217"></a>5维</p>
 </td>
 <td class="cellrowborder" valign="top" width="33.33%" headers="mcps1.2.4.1.2 "><p id="p17821653164219"><a name="p17821653164219"></a><a name="p17821653164219"></a>dnnl_abcde</p>
 </td>
 <td class="cellrowborder" valign="top" width="33.33%" headers="mcps1.2.4.1.3 "><p id="p1782145304220"><a name="p1782145304220"></a><a name="p1782145304220"></a>dnnl_abcde</p>
 </td>
 </tr>
-<tr id="row1952845624210"><td class="cellrowborder" valign="top" width="33.339999999999996%" headers="mcps1.2.4.1.1 "><p id="p144355191213"><a name="p144355191213"></a><a name="p144355191213"></a>5D</p>
+<tr id="row1952845624210"><td class="cellrowborder" valign="top" width="33.339999999999996%" headers="mcps1.2.4.1.1 "><p id="p144355191213"><a name="p144355191213"></a><a name="p144355191213"></a>5维</p>
 </td>
 <td class="cellrowborder" valign="top" width="33.33%" headers="mcps1.2.4.1.2 "><p id="p145283562424"><a name="p145283562424"></a><a name="p145283562424"></a>dnnl_acdeb</p>
 </td>
@@ -1192,13 +1194,13 @@ KDNN Sum算子支持以下数据排布：
 
 **算子公式<a name="section1277182184518"></a>**
 
-- 2D Tensor
+- 2维 Tensor
 
-    ![](figures/zh-cn_formulaimage_0000002518391492.png)
+    ![2维 Tensor算子公式](figures/zh-cn_formulaimage_0000002518391492.png)
 
 - 高维Tensor
 
-    ![](figures/zh-cn_formulaimage_0000002549871349.png)
+    ![高维Tensor算子公式](figures/zh-cn_formulaimage_0000002549871349.png)
 
     **表 1** 公式参数说明<a id="公式参数说明_5"></a>
 
@@ -1317,7 +1319,7 @@ KDNN Sum算子支持以下数据排布：
 </th>
 </tr>
 </thead>
-<tbody><tr id="row4739161942519"><td class="cellrowborder" valign="top" width="25%" headers="mcps1.2.5.1.1 "><p id="p12407926102519"><a name="p12407926102519"></a><a name="p12407926102519"></a>2D</p>
+<tbody><tr id="row4739161942519"><td class="cellrowborder" valign="top" width="25%" headers="mcps1.2.5.1.1 "><p id="p12407926102519"><a name="p12407926102519"></a><a name="p12407926102519"></a>2维</p>
 </td>
 <td class="cellrowborder" valign="top" width="25%" headers="mcps1.2.5.1.2 "><p id="p18532105615234"><a name="p18532105615234"></a><a name="p18532105615234"></a>dnnl_ab/dnnl_ba</p>
 </td>
@@ -1326,7 +1328,7 @@ KDNN Sum算子支持以下数据排布：
 <td class="cellrowborder" valign="top" width="25%" headers="mcps1.2.5.1.4 "><p id="p340714261257"><a name="p340714261257"></a><a name="p340714261257"></a>dnnl_ab/dnnl_ba</p>
 </td>
 </tr>
-<tr id="row157391119112515"><td class="cellrowborder" valign="top" width="25%" headers="mcps1.2.5.1.1 "><p id="p1440710268257"><a name="p1440710268257"></a><a name="p1440710268257"></a>3D</p>
+<tr id="row157391119112515"><td class="cellrowborder" valign="top" width="25%" headers="mcps1.2.5.1.1 "><p id="p1440710268257"><a name="p1440710268257"></a><a name="p1440710268257"></a>3维</p>
 </td>
 <td class="cellrowborder" valign="top" width="25%" headers="mcps1.2.5.1.2 "><p id="p1940716264259"><a name="p1940716264259"></a><a name="p1940716264259"></a>dnnl_abc/dnnl_acb</p>
 </td>
@@ -1335,7 +1337,7 @@ KDNN Sum算子支持以下数据排布：
 <td class="cellrowborder" valign="top" width="25%" headers="mcps1.2.5.1.4 "><p id="p740792612517"><a name="p740792612517"></a><a name="p740792612517"></a>dnnl_abc/dnnl_acb</p>
 </td>
 </tr>
-<tr id="row20739019102518"><td class="cellrowborder" valign="top" width="25%" headers="mcps1.2.5.1.1 "><p id="p44070263251"><a name="p44070263251"></a><a name="p44070263251"></a>4D</p>
+<tr id="row20739019102518"><td class="cellrowborder" valign="top" width="25%" headers="mcps1.2.5.1.1 "><p id="p44070263251"><a name="p44070263251"></a><a name="p44070263251"></a>4维</p>
 </td>
 <td class="cellrowborder" valign="top" width="25%" headers="mcps1.2.5.1.2 "><p id="p3407172619253"><a name="p3407172619253"></a><a name="p3407172619253"></a>dnnl_abcd/dnnl_abdc</p>
 </td>
@@ -1344,7 +1346,7 @@ KDNN Sum算子支持以下数据排布：
 <td class="cellrowborder" valign="top" width="25%" headers="mcps1.2.5.1.4 "><p id="p14407726112513"><a name="p14407726112513"></a><a name="p14407726112513"></a>dnnl_abcd/dnnl_abdc</p>
 </td>
 </tr>
-<tr id="row373981920257"><td class="cellrowborder" valign="top" width="25%" headers="mcps1.2.5.1.1 "><p id="p1407142619257"><a name="p1407142619257"></a><a name="p1407142619257"></a>5D</p>
+<tr id="row373981920257"><td class="cellrowborder" valign="top" width="25%" headers="mcps1.2.5.1.1 "><p id="p1407142619257"><a name="p1407142619257"></a><a name="p1407142619257"></a>5维</p>
 </td>
 <td class="cellrowborder" valign="top" width="25%" headers="mcps1.2.5.1.2 "><p id="p7407182610257"><a name="p7407182610257"></a><a name="p7407182610257"></a>dnnl_abcde/dnnl_abced</p>
 </td>
@@ -1366,9 +1368,9 @@ KDNN Sum算子支持以下数据排布：
 
 **算子公式<a name="section17199318134615"></a>**
 
-通用2D卷积计算公式：
+通用2维卷积计算公式：
 
-![](figures/zh-cn_formulaimage_0000002549871359.png)
+![通用2维卷积计算公式](figures/zh-cn_formulaimage_0000002549871359.png)
 
 **表 1** 参数说明<a id="参数说明"></a>
 
@@ -1772,7 +1774,7 @@ KDNN Sum算子支持以下数据排布：
 
 **数据排布<a name="section741514919466"></a>**
 
-支持2D卷积，输入、输出数据为4D Tensor，src，weights，dst数据排布满足以下组合：
+支持2维卷积，输入、输出数据为4维 Tensor，src，weights，dst数据排布满足以下组合：
 
 <a name="table14121197159"></a>
 <table><thead align="left"><tr id="row1612111961520"><th class="cellrowborder" valign="top" width="25%" id="mcps1.1.5.1.1"><p id="p62314147155"><a name="p62314147155"></a><a name="p62314147155"></a>Tensor维度</p>
@@ -1785,7 +1787,7 @@ KDNN Sum算子支持以下数据排布：
 </th>
 </tr>
 </thead>
-<tbody><tr id="row81225991511"><td class="cellrowborder" valign="top" width="25%" headers="mcps1.1.5.1.1 "><p id="p9231181412157"><a name="p9231181412157"></a><a name="p9231181412157"></a>4D</p>
+<tbody><tr id="row81225991511"><td class="cellrowborder" valign="top" width="25%" headers="mcps1.1.5.1.1 "><p id="p9231181412157"><a name="p9231181412157"></a><a name="p9231181412157"></a>4维</p>
 </td>
 <td class="cellrowborder" valign="top" width="25%" headers="mcps1.1.5.1.2 "><p id="p16231121431511"><a name="p16231121431511"></a><a name="p16231121431511"></a>dnnl_abcd</p>
 </td>
@@ -2699,7 +2701,7 @@ KDNN Sum算子支持以下数据排布：
 
 **数据排布<a name="section93424011482"></a>**
 
-支持2D反卷积。输入和输出数据为4D Tensor，其中src、weights、dst的数据排布满足以下组合：
+支持2维反卷积。输入和输出数据为4维 Tensor，其中src、weights、dst的数据排布满足以下组合：
 
 <a name="table632335215406"></a>
 <table><thead align="left"><tr id="row132318524404"><th class="cellrowborder" valign="top" width="25%" id="mcps1.1.5.1.1"><p id="p686610581409"><a name="p686610581409"></a><a name="p686610581409"></a>Tensor维度</p>
@@ -2712,7 +2714,7 @@ KDNN Sum算子支持以下数据排布：
 </th>
 </tr>
 </thead>
-<tbody><tr id="row1432395213404"><td class="cellrowborder" valign="top" width="25%" headers="mcps1.1.5.1.1 "><p id="p148661158164018"><a name="p148661158164018"></a><a name="p148661158164018"></a>4D Tensor</p>
+<tbody><tr id="row1432395213404"><td class="cellrowborder" valign="top" width="25%" headers="mcps1.1.5.1.1 "><p id="p148661158164018"><a name="p148661158164018"></a><a name="p148661158164018"></a>4维 Tensor</p>
 </td>
 <td class="cellrowborder" valign="top" width="25%" headers="mcps1.1.5.1.2 "><p id="p586613583405"><a name="p586613583405"></a><a name="p586613583405"></a>abcd</p>
 </td>
@@ -3364,9 +3366,9 @@ Concat算子用来拼接N个指定的concat\_dimension维度（此处用C代表�
 
 **算子公式<a name="section986511368520"></a>**
 
-![](figures/zh-cn_image_0000002549871307.png)
+![Concat算子公式](figures/zh-cn_image_0000002549871307.png)
 
-其中![](figures/zh-cn_image_0000002518231540.png)
+其中![Concat的计算公式中的参数c](figures/zh-cn_image_0000002518231540.png)
 
 **表 1** 公式参数说明<a id="公式参数说明_6"></a>
 
@@ -3497,7 +3499,7 @@ Concat原语没有前向或反向传播的概念。
 
 **数据排布<a name="section93424011482"></a>**
 
-最高支持5D Tensor，不同输入Tensor需具有相同维度，且各维度值也需相同。支持以下数据排布，且各输入和输出Tensor数据排布相同。
+最高支持5维 Tensor，不同输入Tensor需具有相同维度，且各维度值也需相同。支持以下数据排布，且各输入和输出Tensor数据排布相同。
 
 <a name="table632335215406"></a>
 <table><thead align="left"><tr id="row132318524404"><th class="cellrowborder" valign="top" width="21.39%" id="mcps1.1.3.1.1"><p id="p686610581409"><a name="p686610581409"></a><a name="p686610581409"></a>Tensor维度</p>
@@ -3506,27 +3508,27 @@ Concat原语没有前向或反向传播的概念。
 </th>
 </tr>
 </thead>
-<tbody><tr id="row1432395213404"><td class="cellrowborder" valign="top" width="21.39%" headers="mcps1.1.3.1.1 "><p id="p148661158164018"><a name="p148661158164018"></a><a name="p148661158164018"></a>1D Tensor</p>
+<tbody><tr id="row1432395213404"><td class="cellrowborder" valign="top" width="21.39%" headers="mcps1.1.3.1.1 "><p id="p148661158164018"><a name="p148661158164018"></a><a name="p148661158164018"></a>1维 Tensor</p>
 </td>
 <td class="cellrowborder" valign="top" width="78.61%" headers="mcps1.1.3.1.2 "><p id="p586613583405"><a name="p586613583405"></a><a name="p586613583405"></a>a</p>
 </td>
 </tr>
-<tr id="row11460111205"><td class="cellrowborder" valign="top" width="21.39%" headers="mcps1.1.3.1.1 "><p id="p3200163882316"><a name="p3200163882316"></a><a name="p3200163882316"></a>2D Tensor</p>
+<tr id="row11460111205"><td class="cellrowborder" valign="top" width="21.39%" headers="mcps1.1.3.1.1 "><p id="p3200163882316"><a name="p3200163882316"></a><a name="p3200163882316"></a>2维 Tensor</p>
 </td>
 <td class="cellrowborder" valign="top" width="78.61%" headers="mcps1.1.3.1.2 "><p id="p74611019014"><a name="p74611019014"></a><a name="p74611019014"></a>ab、ba</p>
 </td>
 </tr>
-<tr id="row1793834015"><td class="cellrowborder" valign="top" width="21.39%" headers="mcps1.1.3.1.1 "><p id="p18824143872311"><a name="p18824143872311"></a><a name="p18824143872311"></a>3D Tensor</p>
+<tr id="row1793834015"><td class="cellrowborder" valign="top" width="21.39%" headers="mcps1.1.3.1.1 "><p id="p18824143872311"><a name="p18824143872311"></a><a name="p18824143872311"></a>3维 Tensor</p>
 </td>
 <td class="cellrowborder" valign="top" width="78.61%" headers="mcps1.1.3.1.2 "><p id="p10793173709"><a name="p10793173709"></a><a name="p10793173709"></a>abc、acb、bac、bca、cab、cba</p>
 </td>
 </tr>
-<tr id="row15978660020"><td class="cellrowborder" valign="top" width="21.39%" headers="mcps1.1.3.1.1 "><p id="p16434173962312"><a name="p16434173962312"></a><a name="p16434173962312"></a>4D Tensor</p>
+<tr id="row15978660020"><td class="cellrowborder" valign="top" width="21.39%" headers="mcps1.1.3.1.1 "><p id="p16434173962312"><a name="p16434173962312"></a><a name="p16434173962312"></a>4维 Tensor</p>
 </td>
 <td class="cellrowborder" valign="top" width="78.61%" headers="mcps1.1.3.1.2 "><p id="p1797820615018"><a name="p1797820615018"></a><a name="p1797820615018"></a>abcd、abdc、acbd、acdb、adbc、adcb、bacd、bcda、cdab、cdba、dcab</p>
 </td>
 </tr>
-<tr id="row53481310608"><td class="cellrowborder" valign="top" width="21.39%" headers="mcps1.1.3.1.1 "><p id="p23464014232"><a name="p23464014232"></a><a name="p23464014232"></a>5D Tensor</p>
+<tr id="row53481310608"><td class="cellrowborder" valign="top" width="21.39%" headers="mcps1.1.3.1.1 "><p id="p23464014232"><a name="p23464014232"></a><a name="p23464014232"></a>5维 Tensor</p>
 </td>
 <td class="cellrowborder" valign="top" width="78.61%" headers="mcps1.1.3.1.2 "><p id="p1348610200"><a name="p1348610200"></a><a name="p1348610200"></a>abcde、abced、abdec、acbde、acdeb、adecb、bacde、bcdea、cdeab、cdeba、decab</p>
 </td>
@@ -3661,7 +3663,7 @@ Concat原语没有前向或反向传播的概念。
 </tbody>
 </table>
 
->![](public_sys-resources/icon-note.gif) **说明：** 
+>![note](public_sys-resources/icon-note.gif) **说明：** 
 >Concat不仅要求输入输出的内存排布layout相同，对应的数据类型也必须相同。
 
 #### Resampling
@@ -3785,7 +3787,7 @@ FWD\_D、BWD\_D支持f32、f16、bf16、s32、s8、u8数据类型的任意组合
 
 **数据排布<a name="section93424011482"></a>**
 
-支持3D\~5D Tensor维度，具体数据排布如下，输入和输出的数据排布方式需保持一致。
+支持3维-5维 Tensor维度，具体数据排布如下，输入和输出的数据排布方式需保持一致。
 
 <a name="table632335215406"></a>
 <table><thead align="left"><tr id="row132318524404"><th class="cellrowborder" valign="top" width="17.53%" id="mcps1.1.3.1.1"><p id="p686610581409"><a name="p686610581409"></a><a name="p686610581409"></a>Tensor维度</p>
@@ -3794,17 +3796,17 @@ FWD\_D、BWD\_D支持f32、f16、bf16、s32、s8、u8数据类型的任意组合
 </th>
 </tr>
 </thead>
-<tbody><tr id="row1432395213404"><td class="cellrowborder" valign="top" width="17.53%" headers="mcps1.1.3.1.1 "><p id="p148661158164018"><a name="p148661158164018"></a><a name="p148661158164018"></a>3D Tensor</p>
+<tbody><tr id="row1432395213404"><td class="cellrowborder" valign="top" width="17.53%" headers="mcps1.1.3.1.1 "><p id="p148661158164018"><a name="p148661158164018"></a><a name="p148661158164018"></a>3维 Tensor</p>
 </td>
 <td class="cellrowborder" valign="top" width="82.47%" headers="mcps1.1.3.1.2 "><p id="p586613583405"><a name="p586613583405"></a><a name="p586613583405"></a>abc、acb</p>
 </td>
 </tr>
-<tr id="row335412310316"><td class="cellrowborder" valign="top" width="17.53%" headers="mcps1.1.3.1.1 "><p id="p23549233316"><a name="p23549233316"></a><a name="p23549233316"></a>4D Tensor</p>
+<tr id="row335412310316"><td class="cellrowborder" valign="top" width="17.53%" headers="mcps1.1.3.1.1 "><p id="p23549233316"><a name="p23549233316"></a><a name="p23549233316"></a>4维 Tensor</p>
 </td>
 <td class="cellrowborder" valign="top" width="82.47%" headers="mcps1.1.3.1.2 "><p id="p635416234319"><a name="p635416234319"></a><a name="p635416234319"></a>abcd、acdb</p>
 </td>
 </tr>
-<tr id="row976715251314"><td class="cellrowborder" valign="top" width="17.53%" headers="mcps1.1.3.1.1 "><p id="p13767142523120"><a name="p13767142523120"></a><a name="p13767142523120"></a>5D Tensor</p>
+<tr id="row976715251314"><td class="cellrowborder" valign="top" width="17.53%" headers="mcps1.1.3.1.1 "><p id="p13767142523120"><a name="p13767142523120"></a><a name="p13767142523120"></a>5维 Tensor</p>
 </td>
 <td class="cellrowborder" valign="top" width="82.47%" headers="mcps1.1.3.1.2 "><p id="p1876720252319"><a name="p1876720252319"></a><a name="p1876720252319"></a>abcde、acdeb</p>
 </td>
@@ -3853,9 +3855,9 @@ resampling要求输入输出内存排布相同，但是维度大小可以不同�
 
 具体参考如下用例：
 
-- 5D维度：mb4\_ic8\_id4od8\_ih4oh8\_iw4ow8，输入4x8x4x4x4，输出4x8x8x8x8
-- 4D维度：mb4\_ic8\_ih4oh8\_iw4ow8，输入4x8x4x4，输出4x8x8x8
-- 3D维度：mb4\_ic8\_iw4ow8，输入4x8x4，输出4x8x8
+- 5维：mb4\_ic8\_id4od8\_ih4oh8\_iw4ow8，输入4x8x4x4x4，输出4x8x8x8x8
+- 4维：mb4\_ic8\_ih4oh8\_iw4ow8，输入4x8x4x4，输出4x8x8x8
+- 3维：mb4\_ic8\_iw4ow8，输入4x8x4，输出4x8x8
 
 此外id、ih、iw、od、oh、ow中的某一项过大可能会出现精度错误，由于测试系统限制，其他平台表现相同，不属于功能性问题；如需规避上述问题，建议将上述涉及的参数规模控制在20000以内。
 
@@ -3871,17 +3873,17 @@ Shuffle算子可以对Tensor以某一维度为轴心进行数据混洗。
 
 数学公式表达为：
 
-![](figures/zh-cn_formulaimage_0000002549751319.png)
+![Shuffle算子公式](figures/zh-cn_formulaimage_0000002549751319.png)
 
 其中，c′和c存在以下等式关系：
 
-![](figures/zh-cn_formulaimage_0000002518391476.png)
+![c′和c等式](figures/zh-cn_formulaimage_0000002518391476.png)
 
-![](figures/zh-cn_formulaimage_0000002518231558.png)
+![c′和c等式](figures/zh-cn_formulaimage_0000002518231558.png)
 
 式子中：
 
-![](figures/zh-cn_formulaimage_0000002518391466.png)
+![等式中的大小关系](figures/zh-cn_formulaimage_0000002518391466.png)
 
 **表 1** 公式参数说明<a id="公式参数说明_8"></a>
 
@@ -3982,7 +3984,7 @@ Shuffle算子可以对Tensor以某一维度为轴心进行数据混洗。
 
 **数据排布<a name="section93424011482"></a>**
 
-支持1D至5D Tensor维度，具体数据排布如下，输入和输出的数据排布方式需保持一致。
+支持1维至5维 Tensor维度，具体数据排布如下，输入和输出的数据排布方式需保持一致。
 
 <a name="table632335215406"></a>
 <table><thead align="left"><tr id="row132318524404"><th class="cellrowborder" valign="top" width="19.491949194919492%" id="mcps1.1.4.1.1"><p id="p686610581409"><a name="p686610581409"></a><a name="p686610581409"></a>Tensor维度</p>
@@ -3993,35 +3995,35 @@ Shuffle算子可以对Tensor以某一维度为轴心进行数据混洗。
 </th>
 </tr>
 </thead>
-<tbody><tr id="row1432395213404"><td class="cellrowborder" valign="top" width="19.491949194919492%" headers="mcps1.1.4.1.1 "><p id="p148661158164018"><a name="p148661158164018"></a><a name="p148661158164018"></a>1D Tensor</p>
+<tbody><tr id="row1432395213404"><td class="cellrowborder" valign="top" width="19.491949194919492%" headers="mcps1.1.4.1.1 "><p id="p148661158164018"><a name="p148661158164018"></a><a name="p148661158164018"></a>1维 Tensor</p>
 </td>
 <td class="cellrowborder" valign="top" width="34.053405340534056%" headers="mcps1.1.4.1.2 "><p id="p19115111713436"><a name="p19115111713436"></a><a name="p19115111713436"></a>a</p>
 </td>
 <td class="cellrowborder" valign="top" width="46.45464546454646%" headers="mcps1.1.4.1.3 "><p id="p9595181818434"><a name="p9595181818434"></a><a name="p9595181818434"></a>a</p>
 </td>
 </tr>
-<tr id="row162891321144314"><td class="cellrowborder" valign="top" width="19.491949194919492%" headers="mcps1.1.4.1.1 "><p id="p9289421164310"><a name="p9289421164310"></a><a name="p9289421164310"></a>2D Tensor</p>
+<tr id="row162891321144314"><td class="cellrowborder" valign="top" width="19.491949194919492%" headers="mcps1.1.4.1.1 "><p id="p9289421164310"><a name="p9289421164310"></a><a name="p9289421164310"></a>2维 Tensor</p>
 </td>
 <td class="cellrowborder" valign="top" width="34.053405340534056%" headers="mcps1.1.4.1.2 "><p id="p62896219435"><a name="p62896219435"></a><a name="p62896219435"></a>ab、ba</p>
 </td>
 <td class="cellrowborder" valign="top" width="46.45464546454646%" headers="mcps1.1.4.1.3 "><p id="p1328918218437"><a name="p1328918218437"></a><a name="p1328918218437"></a>ab、ba</p>
 </td>
 </tr>
-<tr id="row9853132624317"><td class="cellrowborder" valign="top" width="19.491949194919492%" headers="mcps1.1.4.1.1 "><p id="p6854172684318"><a name="p6854172684318"></a><a name="p6854172684318"></a>3D Tensor</p>
+<tr id="row9853132624317"><td class="cellrowborder" valign="top" width="19.491949194919492%" headers="mcps1.1.4.1.1 "><p id="p6854172684318"><a name="p6854172684318"></a><a name="p6854172684318"></a>3维 Tensor</p>
 </td>
 <td class="cellrowborder" valign="top" width="34.053405340534056%" headers="mcps1.1.4.1.2 "><p id="p98541626124314"><a name="p98541626124314"></a><a name="p98541626124314"></a>abc、acb、bac、bca、cab、cba</p>
 </td>
 <td class="cellrowborder" valign="top" width="46.45464546454646%" headers="mcps1.1.4.1.3 "><p id="p4854112614437"><a name="p4854112614437"></a><a name="p4854112614437"></a>abc、acb、bac、bca、cab、cba</p>
 </td>
 </tr>
-<tr id="row160212411437"><td class="cellrowborder" valign="top" width="19.491949194919492%" headers="mcps1.1.4.1.1 "><p id="p2602132410433"><a name="p2602132410433"></a><a name="p2602132410433"></a>4D Tensor</p>
+<tr id="row160212411437"><td class="cellrowborder" valign="top" width="19.491949194919492%" headers="mcps1.1.4.1.1 "><p id="p2602132410433"><a name="p2602132410433"></a><a name="p2602132410433"></a>4维 Tensor</p>
 </td>
 <td class="cellrowborder" valign="top" width="34.053405340534056%" headers="mcps1.1.4.1.2 "><p id="p1160202412437"><a name="p1160202412437"></a><a name="p1160202412437"></a>abcd、abdc、acbd、acdb、adbc、adcb、bacd、bcda、cdab、cdba、dcab</p>
 </td>
 <td class="cellrowborder" valign="top" width="46.45464546454646%" headers="mcps1.1.4.1.3 "><p id="p360212454312"><a name="p360212454312"></a><a name="p360212454312"></a>abcd、abdc、acbd、acdb、adbc、adcb、bacd、bcda、cdab、cdba、dcab</p>
 </td>
 </tr>
-<tr id="row1153133124315"><td class="cellrowborder" valign="top" width="19.491949194919492%" headers="mcps1.1.4.1.1 "><p id="p215343311436"><a name="p215343311436"></a><a name="p215343311436"></a>5D Tensor</p>
+<tr id="row1153133124315"><td class="cellrowborder" valign="top" width="19.491949194919492%" headers="mcps1.1.4.1.1 "><p id="p215343311436"><a name="p215343311436"></a><a name="p215343311436"></a>5维 Tensor</p>
 </td>
 <td class="cellrowborder" valign="top" width="34.053405340534056%" headers="mcps1.1.4.1.2 "><p id="p115353314433"><a name="p115353314433"></a><a name="p115353314433"></a>abcde、abced、abdec、acbde、acdeb、adecb、bacde、bcdea、cdeab、cdeba、decab</p>
 </td>
@@ -4135,7 +4137,7 @@ Reorder算子可以对Tensor重排成任意排布和任意数据类型。
 
 数学表达式为：
 
-![](figures/zh-cn_formulaimage_0000002549751327.png)
+![Reorder算子数学表达式](figures/zh-cn_formulaimage_0000002549751327.png)
 
 ##### 特性范围
 
@@ -4185,7 +4187,7 @@ Reorder算子可以对Tensor重排成任意排布和任意数据类型。
 
 **数据排布<a name="section93424011482"></a>**
 
-支持1D至5D Tensor维度，具体数据排布如下。
+支持1维至5维 Tensor维度，具体数据排布如下。
 
 <a name="table632335215406"></a>
 <table><thead align="left"><tr id="row132318524404"><th class="cellrowborder" valign="top" width="21.122112211221122%" id="mcps1.1.4.1.1"><p id="p686610581409"><a name="p686610581409"></a><a name="p686610581409"></a>Tensor维度</p>
@@ -4196,35 +4198,35 @@ Reorder算子可以对Tensor重排成任意排布和任意数据类型。
 </th>
 </tr>
 </thead>
-<tbody><tr id="row1432395213404"><td class="cellrowborder" valign="top" width="21.122112211221122%" headers="mcps1.1.4.1.1 "><p id="p148661158164018"><a name="p148661158164018"></a><a name="p148661158164018"></a>1D Tensor</p>
+<tbody><tr id="row1432395213404"><td class="cellrowborder" valign="top" width="21.122112211221122%" headers="mcps1.1.4.1.1 "><p id="p148661158164018"><a name="p148661158164018"></a><a name="p148661158164018"></a>1维 Tensor</p>
 </td>
 <td class="cellrowborder" valign="top" width="37.253725372537254%" headers="mcps1.1.4.1.2 "><p id="p586613583405"><a name="p586613583405"></a><a name="p586613583405"></a>a</p>
 </td>
 <td class="cellrowborder" valign="top" width="41.624162416241624%" headers="mcps1.1.4.1.3 "><p id="p48661558164010"><a name="p48661558164010"></a><a name="p48661558164010"></a>a</p>
 </td>
 </tr>
-<tr id="row735162311127"><td class="cellrowborder" valign="top" width="21.122112211221122%" headers="mcps1.1.4.1.1 "><p id="p1635223121219"><a name="p1635223121219"></a><a name="p1635223121219"></a>2D Tensor</p>
+<tr id="row735162311127"><td class="cellrowborder" valign="top" width="21.122112211221122%" headers="mcps1.1.4.1.1 "><p id="p1635223121219"><a name="p1635223121219"></a><a name="p1635223121219"></a>2维 Tensor</p>
 </td>
 <td class="cellrowborder" valign="top" width="37.253725372537254%" headers="mcps1.1.4.1.2 "><p id="p935172331214"><a name="p935172331214"></a><a name="p935172331214"></a>ab、ba</p>
 </td>
 <td class="cellrowborder" valign="top" width="41.624162416241624%" headers="mcps1.1.4.1.3 "><p id="p10358234128"><a name="p10358234128"></a><a name="p10358234128"></a>ab、ba</p>
 </td>
 </tr>
-<tr id="row49461525101210"><td class="cellrowborder" valign="top" width="21.122112211221122%" headers="mcps1.1.4.1.1 "><p id="p13947142541214"><a name="p13947142541214"></a><a name="p13947142541214"></a>3D Tensor</p>
+<tr id="row49461525101210"><td class="cellrowborder" valign="top" width="21.122112211221122%" headers="mcps1.1.4.1.1 "><p id="p13947142541214"><a name="p13947142541214"></a><a name="p13947142541214"></a>3维 Tensor</p>
 </td>
 <td class="cellrowborder" valign="top" width="37.253725372537254%" headers="mcps1.1.4.1.2 "><p id="p1794722517125"><a name="p1794722517125"></a><a name="p1794722517125"></a>abc、acb、bac、bca、cab、cba</p>
 </td>
 <td class="cellrowborder" valign="top" width="41.624162416241624%" headers="mcps1.1.4.1.3 "><p id="p99473257121"><a name="p99473257121"></a><a name="p99473257121"></a>abc、acb、bac、bca、cab、cba</p>
 </td>
 </tr>
-<tr id="row637892817129"><td class="cellrowborder" valign="top" width="21.122112211221122%" headers="mcps1.1.4.1.1 "><p id="p1037815289122"><a name="p1037815289122"></a><a name="p1037815289122"></a>4D Tensor</p>
+<tr id="row637892817129"><td class="cellrowborder" valign="top" width="21.122112211221122%" headers="mcps1.1.4.1.1 "><p id="p1037815289122"><a name="p1037815289122"></a><a name="p1037815289122"></a>4维 Tensor</p>
 </td>
 <td class="cellrowborder" valign="top" width="37.253725372537254%" headers="mcps1.1.4.1.2 "><p id="p11378132819125"><a name="p11378132819125"></a><a name="p11378132819125"></a>abcd、abdc、acbd、acdb、adbc、adcb、bacd、bcda、cdab、cdba、dcab</p>
 </td>
 <td class="cellrowborder" valign="top" width="41.624162416241624%" headers="mcps1.1.4.1.3 "><p id="p5378162813129"><a name="p5378162813129"></a><a name="p5378162813129"></a>abcd、abdc、acbd、acdb、adbc、adcb、bacd、bcda、cdab、cdba、dcab</p>
 </td>
 </tr>
-<tr id="row1851593081215"><td class="cellrowborder" valign="top" width="21.122112211221122%" headers="mcps1.1.4.1.1 "><p id="p1551519301122"><a name="p1551519301122"></a><a name="p1551519301122"></a>5D Tensor</p>
+<tr id="row1851593081215"><td class="cellrowborder" valign="top" width="21.122112211221122%" headers="mcps1.1.4.1.1 "><p id="p1551519301122"><a name="p1551519301122"></a><a name="p1551519301122"></a>5维 Tensor</p>
 </td>
 <td class="cellrowborder" valign="top" width="37.253725372537254%" headers="mcps1.1.4.1.2 "><p id="p11515133018128"><a name="p11515133018128"></a><a name="p11515133018128"></a>abcde、abced、abdec、acbde、acdeb、adecb、bacde、bcdea、cdeab、cdeba、decab</p>
 </td>
@@ -4316,7 +4318,7 @@ Pool实现了池化操作，用于减少Tensor尺寸，保留特征信息，包�
 
 **数据排布<a name="section93424011482"></a>**
 
-支持1D至5D Tensor维度，具体数据排布如下。
+支持1维至5维 Tensor维度，具体数据排布如下。
 
 <a name="table632335215406"></a>
 <table><thead align="left"><tr id="row132318524404"><th class="cellrowborder" valign="top" width="21.122112211221122%" id="mcps1.1.4.1.1"><p id="p686610581409"><a name="p686610581409"></a><a name="p686610581409"></a>Tensor维度</p>
@@ -4327,35 +4329,35 @@ Pool实现了池化操作，用于减少Tensor尺寸，保留特征信息，包�
 </th>
 </tr>
 </thead>
-<tbody><tr id="row1432395213404"><td class="cellrowborder" valign="top" width="21.122112211221122%" headers="mcps1.1.4.1.1 "><p id="p148661158164018"><a name="p148661158164018"></a><a name="p148661158164018"></a>1D Tensor</p>
+<tbody><tr id="row1432395213404"><td class="cellrowborder" valign="top" width="21.122112211221122%" headers="mcps1.1.4.1.1 "><p id="p148661158164018"><a name="p148661158164018"></a><a name="p148661158164018"></a>1维 Tensor</p>
 </td>
 <td class="cellrowborder" valign="top" width="37.253725372537254%" headers="mcps1.1.4.1.2 "><p id="p586613583405"><a name="p586613583405"></a><a name="p586613583405"></a>a</p>
 </td>
 <td class="cellrowborder" valign="top" width="41.624162416241624%" headers="mcps1.1.4.1.3 "><p id="p48661558164010"><a name="p48661558164010"></a><a name="p48661558164010"></a>a</p>
 </td>
 </tr>
-<tr id="row735162311127"><td class="cellrowborder" valign="top" width="21.122112211221122%" headers="mcps1.1.4.1.1 "><p id="p1635223121219"><a name="p1635223121219"></a><a name="p1635223121219"></a>2D Tensor</p>
+<tr id="row735162311127"><td class="cellrowborder" valign="top" width="21.122112211221122%" headers="mcps1.1.4.1.1 "><p id="p1635223121219"><a name="p1635223121219"></a><a name="p1635223121219"></a>2维 Tensor</p>
 </td>
 <td class="cellrowborder" valign="top" width="37.253725372537254%" headers="mcps1.1.4.1.2 "><p id="p935172331214"><a name="p935172331214"></a><a name="p935172331214"></a>ab、ba</p>
 </td>
 <td class="cellrowborder" valign="top" width="41.624162416241624%" headers="mcps1.1.4.1.3 "><p id="p10358234128"><a name="p10358234128"></a><a name="p10358234128"></a>ab、ba</p>
 </td>
 </tr>
-<tr id="row49461525101210"><td class="cellrowborder" valign="top" width="21.122112211221122%" headers="mcps1.1.4.1.1 "><p id="p13947142541214"><a name="p13947142541214"></a><a name="p13947142541214"></a>3D Tensor</p>
+<tr id="row49461525101210"><td class="cellrowborder" valign="top" width="21.122112211221122%" headers="mcps1.1.4.1.1 "><p id="p13947142541214"><a name="p13947142541214"></a><a name="p13947142541214"></a>3维 Tensor</p>
 </td>
 <td class="cellrowborder" valign="top" width="37.253725372537254%" headers="mcps1.1.4.1.2 "><p id="p1794722517125"><a name="p1794722517125"></a><a name="p1794722517125"></a>abc、acb、bac、bca、cab、cba</p>
 </td>
 <td class="cellrowborder" valign="top" width="41.624162416241624%" headers="mcps1.1.4.1.3 "><p id="p99473257121"><a name="p99473257121"></a><a name="p99473257121"></a>abc、acb、bac、bca、cab、cba</p>
 </td>
 </tr>
-<tr id="row637892817129"><td class="cellrowborder" valign="top" width="21.122112211221122%" headers="mcps1.1.4.1.1 "><p id="p1037815289122"><a name="p1037815289122"></a><a name="p1037815289122"></a>4D Tensor</p>
+<tr id="row637892817129"><td class="cellrowborder" valign="top" width="21.122112211221122%" headers="mcps1.1.4.1.1 "><p id="p1037815289122"><a name="p1037815289122"></a><a name="p1037815289122"></a>4维 Tensor</p>
 </td>
 <td class="cellrowborder" valign="top" width="37.253725372537254%" headers="mcps1.1.4.1.2 "><p id="p11378132819125"><a name="p11378132819125"></a><a name="p11378132819125"></a>abcd、abdc、acbd、acdb、adbc、adcb、bacd、bcda、cdab、cdba、dcab</p>
 </td>
 <td class="cellrowborder" valign="top" width="41.624162416241624%" headers="mcps1.1.4.1.3 "><p id="p5378162813129"><a name="p5378162813129"></a><a name="p5378162813129"></a>abcd、abdc、acbd、acdb、adbc、adcb、bacd、bcda、cdab、cdba、dcab</p>
 </td>
 </tr>
-<tr id="row1851593081215"><td class="cellrowborder" valign="top" width="21.122112211221122%" headers="mcps1.1.4.1.1 "><p id="p1551519301122"><a name="p1551519301122"></a><a name="p1551519301122"></a>5D Tensor</p>
+<tr id="row1851593081215"><td class="cellrowborder" valign="top" width="21.122112211221122%" headers="mcps1.1.4.1.1 "><p id="p1551519301122"><a name="p1551519301122"></a><a name="p1551519301122"></a>5维 Tensor</p>
 </td>
 <td class="cellrowborder" valign="top" width="37.253725372537254%" headers="mcps1.1.4.1.2 "><p id="p11515133018128"><a name="p11515133018128"></a><a name="p11515133018128"></a>abcde、abced、abdec、acbde、acdeb、adecb、bacde、bcdea、cdeab、cdeba、decab</p>
 </td>
@@ -4375,7 +4377,7 @@ Batch Normalization算子（简称bnormal）可以对Tensor进行批归一化计
 
 **算子公式<a name="section1926583913127"></a>**
 
-数学表达式为：![](figures/zh-cn_formulaimage_0000002518391534.png)
+数学表达式为：![Batch Normalization算子公式](figures/zh-cn_formulaimage_0000002518391534.png)
 
 具体参数信息请参见[Layer Normalization](#zh-cn_topic_0000002518231486)中的参数说明信息。
 
@@ -4400,7 +4402,7 @@ Batch Normalization算子（简称bnormal）可以对Tensor进行批归一化计
 
 **数据排布<a name="section93424011482"></a>**
 
-支持3D至5D Tensor维度，具体数据排布如下，输入和输出排布相同。
+支持3维至5维 Tensor维度，具体数据排布如下，输入和输出排布相同。
 
 <a name="table632335215406"></a>
 <table><thead align="left"><tr id="row132318524404"><th class="cellrowborder" valign="top" width="21.122112211221122%" id="mcps1.1.4.1.1"><p id="p686610581409"><a name="p686610581409"></a><a name="p686610581409"></a>Tensor维度</p>
@@ -4411,21 +4413,21 @@ Batch Normalization算子（简称bnormal）可以对Tensor进行批归一化计
 </th>
 </tr>
 </thead>
-<tbody><tr id="row49461525101210"><td class="cellrowborder" valign="top" width="21.122112211221122%" headers="mcps1.1.4.1.1 "><p id="p13947142541214"><a name="p13947142541214"></a><a name="p13947142541214"></a>3D Tensor</p>
+<tbody><tr id="row49461525101210"><td class="cellrowborder" valign="top" width="21.122112211221122%" headers="mcps1.1.4.1.1 "><p id="p13947142541214"><a name="p13947142541214"></a><a name="p13947142541214"></a>3维 Tensor</p>
 </td>
 <td class="cellrowborder" valign="top" width="37.253725372537254%" headers="mcps1.1.4.1.2 "><p id="p1794722517125"><a name="p1794722517125"></a><a name="p1794722517125"></a>abc、acb、bac、bca、cab、cba</p>
 </td>
 <td class="cellrowborder" valign="top" width="41.624162416241624%" headers="mcps1.1.4.1.3 "><p id="p99473257121"><a name="p99473257121"></a><a name="p99473257121"></a>abc、acb、bac、bca、cab、cba</p>
 </td>
 </tr>
-<tr id="row637892817129"><td class="cellrowborder" valign="top" width="21.122112211221122%" headers="mcps1.1.4.1.1 "><p id="p1037815289122"><a name="p1037815289122"></a><a name="p1037815289122"></a>4D Tensor</p>
+<tr id="row637892817129"><td class="cellrowborder" valign="top" width="21.122112211221122%" headers="mcps1.1.4.1.1 "><p id="p1037815289122"><a name="p1037815289122"></a><a name="p1037815289122"></a>4维 Tensor</p>
 </td>
 <td class="cellrowborder" valign="top" width="37.253725372537254%" headers="mcps1.1.4.1.2 "><p id="p11378132819125"><a name="p11378132819125"></a><a name="p11378132819125"></a>abcd、abdc、acbd、acdb、adbc、adcb、bacd、bcda、cdab、cdba、dcab</p>
 </td>
 <td class="cellrowborder" valign="top" width="41.624162416241624%" headers="mcps1.1.4.1.3 "><p id="p5378162813129"><a name="p5378162813129"></a><a name="p5378162813129"></a>abcd、abdc、acbd、acdb、adbc、adcb、bacd、bcda、cdab、cdba、dcab</p>
 </td>
 </tr>
-<tr id="row1851593081215"><td class="cellrowborder" valign="top" width="21.122112211221122%" headers="mcps1.1.4.1.1 "><p id="p1551519301122"><a name="p1551519301122"></a><a name="p1551519301122"></a>5D Tensor</p>
+<tr id="row1851593081215"><td class="cellrowborder" valign="top" width="21.122112211221122%" headers="mcps1.1.4.1.1 "><p id="p1551519301122"><a name="p1551519301122"></a><a name="p1551519301122"></a>5维 Tensor</p>
 </td>
 <td class="cellrowborder" valign="top" width="37.253725372537254%" headers="mcps1.1.4.1.2 "><p id="p11515133018128"><a name="p11515133018128"></a><a name="p11515133018128"></a>abcde、abced、abdec、acbde、acdeb、adecb、bacde、bcdea、cdeab、cdeba、decab</p>
 </td>
@@ -4449,7 +4451,7 @@ Local Response Normalization（简称lrn）是一种局部响应归一化操作�
 
 单通道的数学表达式为:
 
-![](figures/zh-cn_formulaimage_0000002518231578.png)
+![单通道的数学表达式](figures/zh-cn_formulaimage_0000002518231578.png)
 
 **表 1** 公式参数说明<a id="公式参数说明_9"></a>
 
@@ -4521,7 +4523,7 @@ Local Response Normalization（简称lrn）是一种局部响应归一化操作�
 
 **数据排布<a name="section93424011482"></a>**
 
-支持3D至5D Tensor维度，具体数据排布如下。
+支持3维至5维 Tensor维度，具体数据排布如下。
 
 <a name="table632335215406"></a>
 <table><thead align="left"><tr id="row132318524404"><th class="cellrowborder" valign="top" width="21.122112211221122%" id="mcps1.1.4.1.1"><p id="p686610581409"><a name="p686610581409"></a><a name="p686610581409"></a>Tensor维度</p>
@@ -4532,21 +4534,21 @@ Local Response Normalization（简称lrn）是一种局部响应归一化操作�
 </th>
 </tr>
 </thead>
-<tbody><tr id="row49461525101210"><td class="cellrowborder" valign="top" width="21.122112211221122%" headers="mcps1.1.4.1.1 "><p id="p13947142541214"><a name="p13947142541214"></a><a name="p13947142541214"></a>3D Tensor</p>
+<tbody><tr id="row49461525101210"><td class="cellrowborder" valign="top" width="21.122112211221122%" headers="mcps1.1.4.1.1 "><p id="p13947142541214"><a name="p13947142541214"></a><a name="p13947142541214"></a>3维 Tensor</p>
 </td>
 <td class="cellrowborder" valign="top" width="37.253725372537254%" headers="mcps1.1.4.1.2 "><p id="p1794722517125"><a name="p1794722517125"></a><a name="p1794722517125"></a>abc、acb、bac、bca、cab、cba</p>
 </td>
 <td class="cellrowborder" valign="top" width="41.624162416241624%" headers="mcps1.1.4.1.3 "><p id="p99473257121"><a name="p99473257121"></a><a name="p99473257121"></a>abc、acb、bac、bca、cab、cba</p>
 </td>
 </tr>
-<tr id="row637892817129"><td class="cellrowborder" valign="top" width="21.122112211221122%" headers="mcps1.1.4.1.1 "><p id="p1037815289122"><a name="p1037815289122"></a><a name="p1037815289122"></a>4D Tensor</p>
+<tr id="row637892817129"><td class="cellrowborder" valign="top" width="21.122112211221122%" headers="mcps1.1.4.1.1 "><p id="p1037815289122"><a name="p1037815289122"></a><a name="p1037815289122"></a>4维 Tensor</p>
 </td>
 <td class="cellrowborder" valign="top" width="37.253725372537254%" headers="mcps1.1.4.1.2 "><p id="p11378132819125"><a name="p11378132819125"></a><a name="p11378132819125"></a>abcd、abdc、acbd、acdb、adbc、adcb、bacd、bcda、cdab、cdba、dcab</p>
 </td>
 <td class="cellrowborder" valign="top" width="41.624162416241624%" headers="mcps1.1.4.1.3 "><p id="p5378162813129"><a name="p5378162813129"></a><a name="p5378162813129"></a>abcd、abdc、acbd、acdb、adbc、adcb、bacd、bcda、cdab、cdba、dcab</p>
 </td>
 </tr>
-<tr id="row1851593081215"><td class="cellrowborder" valign="top" width="21.122112211221122%" headers="mcps1.1.4.1.1 "><p id="p1551519301122"><a name="p1551519301122"></a><a name="p1551519301122"></a>5D Tensor</p>
+<tr id="row1851593081215"><td class="cellrowborder" valign="top" width="21.122112211221122%" headers="mcps1.1.4.1.1 "><p id="p1551519301122"><a name="p1551519301122"></a><a name="p1551519301122"></a>5维 Tensor</p>
 </td>
 <td class="cellrowborder" valign="top" width="37.253725372537254%" headers="mcps1.1.4.1.2 "><p id="p11515133018128"><a name="p11515133018128"></a><a name="p11515133018128"></a>abcde、abced、abdec、acbde、acdeb、adecb、bacde、bcdea、cdeab、cdeba、decab</p>
 </td>
@@ -4566,7 +4568,7 @@ Reduction算子是在Tensor的一个或者多个维度对每个目标元素进�
 
 **算子公式<a name="section357614211117"></a>**
 
-数学表达式为：![](figures/zh-cn_formulaimage_0000002549871367.png)，其中reduce\_op包含如[表1 reduce\_op算法操作](#table1429931423412)所示的算法操作。
+数学表达式为：![Reduction算子数学表达式](figures/zh-cn_formulaimage_0000002549871367.png)，其中reduce\_op包含如[表1 reduce\_op算法操作](#table1429931423412)所示的算法操作。
 
 **表 1** reduce\_op算法操作<a id="reduce\_op算法操作"></a>
 
@@ -4638,7 +4640,7 @@ Reduction算子是在Tensor的一个或者多个维度对每个目标元素进�
 
 **数据排布<a name="section93424011482"></a>**
 
-支持1D至5D Tensor维度，具体数据排布如下。
+支持1维至5维 Tensor维度，具体数据排布如下。
 
 <a name="table632335215406"></a>
 <table><thead align="left"><tr id="row132318524404"><th class="cellrowborder" valign="top" width="21.122112211221122%" id="mcps1.1.4.1.1"><p id="p686610581409"><a name="p686610581409"></a><a name="p686610581409"></a>Tensor维度</p>
@@ -4649,35 +4651,35 @@ Reduction算子是在Tensor的一个或者多个维度对每个目标元素进�
 </th>
 </tr>
 </thead>
-<tbody><tr id="row1432395213404"><td class="cellrowborder" valign="top" width="21.122112211221122%" headers="mcps1.1.4.1.1 "><p id="p148661158164018"><a name="p148661158164018"></a><a name="p148661158164018"></a>1D Tensor</p>
+<tbody><tr id="row1432395213404"><td class="cellrowborder" valign="top" width="21.122112211221122%" headers="mcps1.1.4.1.1 "><p id="p148661158164018"><a name="p148661158164018"></a><a name="p148661158164018"></a>1维 Tensor</p>
 </td>
 <td class="cellrowborder" valign="top" width="37.253725372537254%" headers="mcps1.1.4.1.2 "><p id="p586613583405"><a name="p586613583405"></a><a name="p586613583405"></a>a</p>
 </td>
 <td class="cellrowborder" valign="top" width="41.624162416241624%" headers="mcps1.1.4.1.3 "><p id="p48661558164010"><a name="p48661558164010"></a><a name="p48661558164010"></a>a</p>
 </td>
 </tr>
-<tr id="row735162311127"><td class="cellrowborder" valign="top" width="21.122112211221122%" headers="mcps1.1.4.1.1 "><p id="p1635223121219"><a name="p1635223121219"></a><a name="p1635223121219"></a>2D Tensor</p>
+<tr id="row735162311127"><td class="cellrowborder" valign="top" width="21.122112211221122%" headers="mcps1.1.4.1.1 "><p id="p1635223121219"><a name="p1635223121219"></a><a name="p1635223121219"></a>2维 Tensor</p>
 </td>
 <td class="cellrowborder" valign="top" width="37.253725372537254%" headers="mcps1.1.4.1.2 "><p id="p935172331214"><a name="p935172331214"></a><a name="p935172331214"></a>ab</p>
 </td>
 <td class="cellrowborder" valign="top" width="41.624162416241624%" headers="mcps1.1.4.1.3 "><p id="p10358234128"><a name="p10358234128"></a><a name="p10358234128"></a>ab</p>
 </td>
 </tr>
-<tr id="row49461525101210"><td class="cellrowborder" valign="top" width="21.122112211221122%" headers="mcps1.1.4.1.1 "><p id="p13947142541214"><a name="p13947142541214"></a><a name="p13947142541214"></a>3D Tensor</p>
+<tr id="row49461525101210"><td class="cellrowborder" valign="top" width="21.122112211221122%" headers="mcps1.1.4.1.1 "><p id="p13947142541214"><a name="p13947142541214"></a><a name="p13947142541214"></a>3维 Tensor</p>
 </td>
 <td class="cellrowborder" valign="top" width="37.253725372537254%" headers="mcps1.1.4.1.2 "><p id="p1794722517125"><a name="p1794722517125"></a><a name="p1794722517125"></a>abc</p>
 </td>
 <td class="cellrowborder" valign="top" width="41.624162416241624%" headers="mcps1.1.4.1.3 "><p id="p99473257121"><a name="p99473257121"></a><a name="p99473257121"></a>abc</p>
 </td>
 </tr>
-<tr id="row637892817129"><td class="cellrowborder" valign="top" width="21.122112211221122%" headers="mcps1.1.4.1.1 "><p id="p1037815289122"><a name="p1037815289122"></a><a name="p1037815289122"></a>4D Tensor</p>
+<tr id="row637892817129"><td class="cellrowborder" valign="top" width="21.122112211221122%" headers="mcps1.1.4.1.1 "><p id="p1037815289122"><a name="p1037815289122"></a><a name="p1037815289122"></a>4维 Tensor</p>
 </td>
 <td class="cellrowborder" valign="top" width="37.253725372537254%" headers="mcps1.1.4.1.2 "><p id="p11378132819125"><a name="p11378132819125"></a><a name="p11378132819125"></a>abcd</p>
 </td>
 <td class="cellrowborder" valign="top" width="41.624162416241624%" headers="mcps1.1.4.1.3 "><p id="p5378162813129"><a name="p5378162813129"></a><a name="p5378162813129"></a>abcd</p>
 </td>
 </tr>
-<tr id="row1851593081215"><td class="cellrowborder" valign="top" width="21.122112211221122%" headers="mcps1.1.4.1.1 "><p id="p1551519301122"><a name="p1551519301122"></a><a name="p1551519301122"></a>5D Tensor</p>
+<tr id="row1851593081215"><td class="cellrowborder" valign="top" width="21.122112211221122%" headers="mcps1.1.4.1.1 "><p id="p1551519301122"><a name="p1551519301122"></a><a name="p1551519301122"></a>5维 Tensor</p>
 </td>
 <td class="cellrowborder" valign="top" width="37.253725372537254%" headers="mcps1.1.4.1.2 "><p id="p11515133018128"><a name="p11515133018128"></a><a name="p11515133018128"></a>abcde</p>
 </td>
@@ -4691,8 +4693,8 @@ Reduction算子是在Tensor的一个或者多个维度对每个目标元素进�
 
 dst Tensor被规约的维度值需为1。例如：
 
-- 对于5D src Tensor 5x6x7x8x9与5D dst Tensor 1x1x1x1x1，表示规约的维度为整个Tensor（第1维-第5维）。
-- 对于5D src Tensor 5x6x7x8x9与5D dst Tensor 5x6x7x8x1，表示规约的维度为最内维（第5维）。
+- 对于5维 src Tensor 5x6x7x8x9与5D dst Tensor 1x1x1x1x1，表示规约的维度为整个Tensor（第1维-第5维）。
+- 对于5维 src Tensor 5x6x7x8x9与5D dst Tensor 5x6x7x8x1，表示规约的维度为最内维（第5维）。
 
 #### PReLU
 
@@ -4704,9 +4706,9 @@ PReLU算子即参数化修正线性单元，是ReLU（Rectified Linear Unit）�
 
 **算子公式<a name="section2679111817111"></a>**
 
-前向数学表达式为：![](figures/zh-cn_formulaimage_0000002549751333.png)
+前向数学表达式为：![前向数学表达式](figures/zh-cn_formulaimage_0000002549751333.png)
 
-后向数学表达式为：![](figures/zh-cn_formulaimage_0000002549871345.png)
+后向数学表达式为：![后向数学表达式](figures/zh-cn_formulaimage_0000002549871345.png)
 
 ##### 特性范围
 
@@ -4756,7 +4758,7 @@ PReLU算子即参数化修正线性单元，是ReLU（Rectified Linear Unit）�
 
 **数据排布<a name="section93424011482"></a>**
 
-支持1D至5D Tensor维度，具体数据排布如下。
+支持1维至5维 Tensor维度，具体数据排布如下。
 
 <a name="table632335215406"></a>
 <table><thead align="left"><tr id="row132318524404"><th class="cellrowborder" valign="top" width="21.122112211221122%" id="mcps1.1.4.1.1"><p id="p686610581409"><a name="p686610581409"></a><a name="p686610581409"></a>Tensor维度</p>
@@ -4767,35 +4769,35 @@ PReLU算子即参数化修正线性单元，是ReLU（Rectified Linear Unit）�
 </th>
 </tr>
 </thead>
-<tbody><tr id="row1432395213404"><td class="cellrowborder" valign="top" width="21.122112211221122%" headers="mcps1.1.4.1.1 "><p id="p148661158164018"><a name="p148661158164018"></a><a name="p148661158164018"></a>1D Tensor</p>
+<tbody><tr id="row1432395213404"><td class="cellrowborder" valign="top" width="21.122112211221122%" headers="mcps1.1.4.1.1 "><p id="p148661158164018"><a name="p148661158164018"></a><a name="p148661158164018"></a>1维 Tensor</p>
 </td>
 <td class="cellrowborder" valign="top" width="37.253725372537254%" headers="mcps1.1.4.1.2 "><p id="p586613583405"><a name="p586613583405"></a><a name="p586613583405"></a>a</p>
 </td>
 <td class="cellrowborder" valign="top" width="41.624162416241624%" headers="mcps1.1.4.1.3 "><p id="p48661558164010"><a name="p48661558164010"></a><a name="p48661558164010"></a>a</p>
 </td>
 </tr>
-<tr id="row735162311127"><td class="cellrowborder" valign="top" width="21.122112211221122%" headers="mcps1.1.4.1.1 "><p id="p1635223121219"><a name="p1635223121219"></a><a name="p1635223121219"></a>2D Tensor</p>
+<tr id="row735162311127"><td class="cellrowborder" valign="top" width="21.122112211221122%" headers="mcps1.1.4.1.1 "><p id="p1635223121219"><a name="p1635223121219"></a><a name="p1635223121219"></a>2维 Tensor</p>
 </td>
 <td class="cellrowborder" valign="top" width="37.253725372537254%" headers="mcps1.1.4.1.2 "><p id="p935172331214"><a name="p935172331214"></a><a name="p935172331214"></a>ab、ba</p>
 </td>
 <td class="cellrowborder" valign="top" width="41.624162416241624%" headers="mcps1.1.4.1.3 "><p id="p10358234128"><a name="p10358234128"></a><a name="p10358234128"></a>ab、ba</p>
 </td>
 </tr>
-<tr id="row49461525101210"><td class="cellrowborder" valign="top" width="21.122112211221122%" headers="mcps1.1.4.1.1 "><p id="p13947142541214"><a name="p13947142541214"></a><a name="p13947142541214"></a>3D Tensor</p>
+<tr id="row49461525101210"><td class="cellrowborder" valign="top" width="21.122112211221122%" headers="mcps1.1.4.1.1 "><p id="p13947142541214"><a name="p13947142541214"></a><a name="p13947142541214"></a>3维 Tensor</p>
 </td>
 <td class="cellrowborder" valign="top" width="37.253725372537254%" headers="mcps1.1.4.1.2 "><p id="p1794722517125"><a name="p1794722517125"></a><a name="p1794722517125"></a>abc、acb、bac、bca、cab、cba</p>
 </td>
 <td class="cellrowborder" valign="top" width="41.624162416241624%" headers="mcps1.1.4.1.3 "><p id="p99473257121"><a name="p99473257121"></a><a name="p99473257121"></a>abc、acb、bac、bca、cab、cba</p>
 </td>
 </tr>
-<tr id="row637892817129"><td class="cellrowborder" valign="top" width="21.122112211221122%" headers="mcps1.1.4.1.1 "><p id="p1037815289122"><a name="p1037815289122"></a><a name="p1037815289122"></a>4D Tensor</p>
+<tr id="row637892817129"><td class="cellrowborder" valign="top" width="21.122112211221122%" headers="mcps1.1.4.1.1 "><p id="p1037815289122"><a name="p1037815289122"></a><a name="p1037815289122"></a>4维 Tensor</p>
 </td>
 <td class="cellrowborder" valign="top" width="37.253725372537254%" headers="mcps1.1.4.1.2 "><p id="p11378132819125"><a name="p11378132819125"></a><a name="p11378132819125"></a>abcd、abdc、acbd、acdb、adbc、adcb、bacd、bcda、cdab、cdba、dcab</p>
 </td>
 <td class="cellrowborder" valign="top" width="41.624162416241624%" headers="mcps1.1.4.1.3 "><p id="p5378162813129"><a name="p5378162813129"></a><a name="p5378162813129"></a>abcd、abdc、acbd、acdb、adbc、adcb、bacd、bcda、cdab、cdba、dcab</p>
 </td>
 </tr>
-<tr id="row1851593081215"><td class="cellrowborder" valign="top" width="21.122112211221122%" headers="mcps1.1.4.1.1 "><p id="p1551519301122"><a name="p1551519301122"></a><a name="p1551519301122"></a>5D Tensor</p>
+<tr id="row1851593081215"><td class="cellrowborder" valign="top" width="21.122112211221122%" headers="mcps1.1.4.1.1 "><p id="p1551519301122"><a name="p1551519301122"></a><a name="p1551519301122"></a>5维 Tensor</p>
 </td>
 <td class="cellrowborder" valign="top" width="37.253725372537254%" headers="mcps1.1.4.1.2 "><p id="p11515133018128"><a name="p11515133018128"></a><a name="p11515133018128"></a>abcde、abced、abdec、acbde、acdeb、adecb、bacde、bcdea、cdeab、cdeba、decab</p>
 </td>
@@ -4815,7 +4817,7 @@ Binary算子返回对张量source0和source1之间的元素操作结果，并可
 
 **算子公式<a name="section47591642191011"></a>**
 
-数学表达式为：![](figures/zh-cn_formulaimage_0000002549871363.png)
+数学表达式为：![Binary算子数学表达式](figures/zh-cn_formulaimage_0000002549871363.png)
 
 **表 1** op操作<a id="op操作"></a>
 
@@ -4924,7 +4926,7 @@ Binary算子没有前向或反向传播的概念。
 
 **数据排布<a name="section93424011482"></a>**
 
-支持1D至5D Tensor维度，具体数据排布如下，输入和输出的排布必须相同。
+支持1维至5维 Tensor维度，具体数据排布如下，输入和输出的排布必须相同。
 
 <a name="table632335215406"></a>
 <table><thead align="left"><tr id="row132318524404"><th class="cellrowborder" valign="top" width="21.122112211221122%" id="mcps1.1.4.1.1"><p id="p686610581409"><a name="p686610581409"></a><a name="p686610581409"></a>Tensor维度</p>
@@ -4935,35 +4937,35 @@ Binary算子没有前向或反向传播的概念。
 </th>
 </tr>
 </thead>
-<tbody><tr id="row1432395213404"><td class="cellrowborder" valign="top" width="21.122112211221122%" headers="mcps1.1.4.1.1 "><p id="p148661158164018"><a name="p148661158164018"></a><a name="p148661158164018"></a>1D Tensor</p>
+<tbody><tr id="row1432395213404"><td class="cellrowborder" valign="top" width="21.122112211221122%" headers="mcps1.1.4.1.1 "><p id="p148661158164018"><a name="p148661158164018"></a><a name="p148661158164018"></a>1维 Tensor</p>
 </td>
 <td class="cellrowborder" valign="top" width="37.253725372537254%" headers="mcps1.1.4.1.2 "><p id="p586613583405"><a name="p586613583405"></a><a name="p586613583405"></a>a</p>
 </td>
 <td class="cellrowborder" valign="top" width="41.624162416241624%" headers="mcps1.1.4.1.3 "><p id="p48661558164010"><a name="p48661558164010"></a><a name="p48661558164010"></a>a</p>
 </td>
 </tr>
-<tr id="row735162311127"><td class="cellrowborder" valign="top" width="21.122112211221122%" headers="mcps1.1.4.1.1 "><p id="p1635223121219"><a name="p1635223121219"></a><a name="p1635223121219"></a>2D Tensor</p>
+<tr id="row735162311127"><td class="cellrowborder" valign="top" width="21.122112211221122%" headers="mcps1.1.4.1.1 "><p id="p1635223121219"><a name="p1635223121219"></a><a name="p1635223121219"></a>2维 Tensor</p>
 </td>
 <td class="cellrowborder" valign="top" width="37.253725372537254%" headers="mcps1.1.4.1.2 "><p id="p935172331214"><a name="p935172331214"></a><a name="p935172331214"></a>ab、ba</p>
 </td>
 <td class="cellrowborder" valign="top" width="41.624162416241624%" headers="mcps1.1.4.1.3 "><p id="p10358234128"><a name="p10358234128"></a><a name="p10358234128"></a>ab、ba</p>
 </td>
 </tr>
-<tr id="row49461525101210"><td class="cellrowborder" valign="top" width="21.122112211221122%" headers="mcps1.1.4.1.1 "><p id="p13947142541214"><a name="p13947142541214"></a><a name="p13947142541214"></a>3D Tensor</p>
+<tr id="row49461525101210"><td class="cellrowborder" valign="top" width="21.122112211221122%" headers="mcps1.1.4.1.1 "><p id="p13947142541214"><a name="p13947142541214"></a><a name="p13947142541214"></a>3维 Tensor</p>
 </td>
 <td class="cellrowborder" valign="top" width="37.253725372537254%" headers="mcps1.1.4.1.2 "><p id="p1794722517125"><a name="p1794722517125"></a><a name="p1794722517125"></a>abc、acb、bac、bca、cab、cba</p>
 </td>
 <td class="cellrowborder" valign="top" width="41.624162416241624%" headers="mcps1.1.4.1.3 "><p id="p99473257121"><a name="p99473257121"></a><a name="p99473257121"></a>abc、acb、bac、bca、cab、cba</p>
 </td>
 </tr>
-<tr id="row637892817129"><td class="cellrowborder" valign="top" width="21.122112211221122%" headers="mcps1.1.4.1.1 "><p id="p1037815289122"><a name="p1037815289122"></a><a name="p1037815289122"></a>4D Tensor</p>
+<tr id="row637892817129"><td class="cellrowborder" valign="top" width="21.122112211221122%" headers="mcps1.1.4.1.1 "><p id="p1037815289122"><a name="p1037815289122"></a><a name="p1037815289122"></a>4维 Tensor</p>
 </td>
 <td class="cellrowborder" valign="top" width="37.253725372537254%" headers="mcps1.1.4.1.2 "><p id="p11378132819125"><a name="p11378132819125"></a><a name="p11378132819125"></a>abcd、abdc、acbd、acdb、adbc、adcb、bacd、bcda、cdab、cdba、dcab</p>
 </td>
 <td class="cellrowborder" valign="top" width="41.624162416241624%" headers="mcps1.1.4.1.3 "><p id="p5378162813129"><a name="p5378162813129"></a><a name="p5378162813129"></a>abcd、abdc、acbd、acdb、adbc、adcb、bacd、bcda、cdab、cdba、dcab</p>
 </td>
 </tr>
-<tr id="row1851593081215"><td class="cellrowborder" valign="top" width="21.122112211221122%" headers="mcps1.1.4.1.1 "><p id="p1551519301122"><a name="p1551519301122"></a><a name="p1551519301122"></a>5D Tensor</p>
+<tr id="row1851593081215"><td class="cellrowborder" valign="top" width="21.122112211221122%" headers="mcps1.1.4.1.1 "><p id="p1551519301122"><a name="p1551519301122"></a><a name="p1551519301122"></a>5维 Tensor</p>
 </td>
 <td class="cellrowborder" valign="top" width="37.253725372537254%" headers="mcps1.1.4.1.2 "><p id="p11515133018128"><a name="p11515133018128"></a><a name="p11515133018128"></a>abcde、abced、abdec、acbde、acdeb、adecb、bacde、bcdea、cdeab、cdeba、decab</p>
 </td>
@@ -4985,7 +4987,7 @@ RNN即循环神经网络，它是一种特殊的神经网络，基于顺序或�
 
 RNN的数学描述或者表达式为：
 
-![](figures/zh-cn_formulaimage_0000002549871329.png)
+![RNN的数学描述或者表达式](figures/zh-cn_formulaimage_0000002549871329.png)
 
 ##### 特性范围
 
@@ -5083,14 +5085,14 @@ RNN的数学描述或者表达式为：
 
 数学表达式为：
 
-![](figures/zh-cn_formulaimage_0000002518231582.png)
+![Group Normalization数学表达式](figures/zh-cn_formulaimage_0000002518231582.png)
 
 其中，输入src的shape为\(N, C, H, W\)，分组数为G。
 
-- ![](figures/zh-cn_formulaimage_0000002549751349.png)
-- ![](figures/zh-cn_formulaimage_0000002518231586.png)
-- ![](figures/zh-cn_formulaimage_0000002549871353.png)：放缩和偏移系数
-- ![](figures/zh-cn_formulaimage_0000002549751343.png)：均值和方差
+- ![CG](figures/zh-cn_formulaimage_0000002549751349.png)
+- ![cg](figures/zh-cn_formulaimage_0000002518231586.png)
+- ![放缩和偏移系数](figures/zh-cn_formulaimage_0000002549871353.png)：放缩和偏移系数
+- ![均值和方差](figures/zh-cn_formulaimage_0000002549751343.png)：均值和方差
 
 ##### 特性范围
 
@@ -5137,7 +5139,7 @@ mean（均值），variance（方差），Scale（放缩），Shift（偏移）�
 
 **数据排布<a name="section93424011482"></a>**
 
-支持3D\~5D Tensor维度，具体数据排布如下，输入和输出排布相同。
+支持3维-5维 Tensor维度，具体数据排布如下，输入和输出排布相同。
 
 <a name="table632335215406"></a>
 <table><thead align="left"><tr id="row132318524404"><th class="cellrowborder" valign="top" width="21.122112211221122%" id="mcps1.1.4.1.1"><p id="p686610581409"><a name="p686610581409"></a><a name="p686610581409"></a>Tensor维度</p>
@@ -5148,28 +5150,28 @@ mean（均值），variance（方差），Scale（放缩），Shift（偏移）�
 </th>
 </tr>
 </thead>
-<tbody><tr id="row49461525101210"><td class="cellrowborder" valign="top" width="21.122112211221122%" headers="mcps1.1.4.1.1 "><p id="p13947142541214"><a name="p13947142541214"></a><a name="p13947142541214"></a>2D Tensor</p>
+<tbody><tr id="row49461525101210"><td class="cellrowborder" valign="top" width="21.122112211221122%" headers="mcps1.1.4.1.1 "><p id="p13947142541214"><a name="p13947142541214"></a><a name="p13947142541214"></a>2维 Tensor</p>
 </td>
 <td class="cellrowborder" valign="top" width="37.253725372537254%" headers="mcps1.1.4.1.2 "><p id="p1794722517125"><a name="p1794722517125"></a><a name="p1794722517125"></a>ab</p>
 </td>
 <td class="cellrowborder" valign="top" width="41.624162416241624%" headers="mcps1.1.4.1.3 "><p id="p1488283415299"><a name="p1488283415299"></a><a name="p1488283415299"></a>ab</p>
 </td>
 </tr>
-<tr id="row58441121122915"><td class="cellrowborder" valign="top" width="21.122112211221122%" headers="mcps1.1.4.1.1 "><p id="p8255182722915"><a name="p8255182722915"></a><a name="p8255182722915"></a>3D Tensor</p>
+<tr id="row58441121122915"><td class="cellrowborder" valign="top" width="21.122112211221122%" headers="mcps1.1.4.1.1 "><p id="p8255182722915"><a name="p8255182722915"></a><a name="p8255182722915"></a>3维 Tensor</p>
 </td>
 <td class="cellrowborder" valign="top" width="37.253725372537254%" headers="mcps1.1.4.1.2 "><p id="p1225519278294"><a name="p1225519278294"></a><a name="p1225519278294"></a>abc、acb</p>
 </td>
 <td class="cellrowborder" valign="top" width="41.624162416241624%" headers="mcps1.1.4.1.3 "><p id="p92551272294"><a name="p92551272294"></a><a name="p92551272294"></a>abc、acb</p>
 </td>
 </tr>
-<tr id="row637892817129"><td class="cellrowborder" valign="top" width="21.122112211221122%" headers="mcps1.1.4.1.1 "><p id="p1037815289122"><a name="p1037815289122"></a><a name="p1037815289122"></a>4D Tensor</p>
+<tr id="row637892817129"><td class="cellrowborder" valign="top" width="21.122112211221122%" headers="mcps1.1.4.1.1 "><p id="p1037815289122"><a name="p1037815289122"></a><a name="p1037815289122"></a>4维 Tensor</p>
 </td>
 <td class="cellrowborder" valign="top" width="37.253725372537254%" headers="mcps1.1.4.1.2 "><p id="p11378132819125"><a name="p11378132819125"></a><a name="p11378132819125"></a>abcd、acdb</p>
 </td>
 <td class="cellrowborder" valign="top" width="41.624162416241624%" headers="mcps1.1.4.1.3 "><p id="p5378162813129"><a name="p5378162813129"></a><a name="p5378162813129"></a>abcd、acdb</p>
 </td>
 </tr>
-<tr id="row1851593081215"><td class="cellrowborder" valign="top" width="21.122112211221122%" headers="mcps1.1.4.1.1 "><p id="p1551519301122"><a name="p1551519301122"></a><a name="p1551519301122"></a>5D Tensor</p>
+<tr id="row1851593081215"><td class="cellrowborder" valign="top" width="21.122112211221122%" headers="mcps1.1.4.1.1 "><p id="p1551519301122"><a name="p1551519301122"></a><a name="p1551519301122"></a>5维 Tensor</p>
 </td>
 <td class="cellrowborder" valign="top" width="37.253725372537254%" headers="mcps1.1.4.1.2 "><p id="p11515133018128"><a name="p11515133018128"></a><a name="p11515133018128"></a>abcde、acdeb</p>
 </td>
@@ -5191,7 +5193,7 @@ mean（均值），variance（方差），Scale（放缩），Shift（偏移）�
 
 SparseGemm算子用于计算如下形式的矩阵乘法：
 
-![](figures/zh-cn_formulaimage_0000002518231626.png)
+![SparseGemm算子用于计算如下形式的矩阵乘法](figures/zh-cn_formulaimage_0000002518231626.png)
 
 其中：
 
@@ -5238,7 +5240,7 @@ SparseGemm算子用于计算如下形式的矩阵乘法：
 </th>
 </tr>
 </thead>
-<tbody><tr id="row4739161942519"><td class="cellrowborder" valign="top" width="25%" headers="mcps1.1.5.1.1 "><p id="p12407926102519"><a name="p12407926102519"></a><a name="p12407926102519"></a>2D</p>
+<tbody><tr id="row4739161942519"><td class="cellrowborder" valign="top" width="25%" headers="mcps1.1.5.1.1 "><p id="p12407926102519"><a name="p12407926102519"></a><a name="p12407926102519"></a>2维</p>
 </td>
 <td class="cellrowborder" valign="top" width="25%" headers="mcps1.1.5.1.2 "><p id="p048882893510"><a name="p048882893510"></a><a name="p048882893510"></a>Layout::AB</p>
 </td>
@@ -5282,7 +5284,7 @@ softmax是一种常用的激活函数，特别在多分类问题中经常被使�
 
 def softmax\(arr: np.ndarray\)-\>np.ndarray
 
-该函数接收一个1D或2D的NumPy数组，并返回softmax计算的结果。
+该函数接收一个1维或2维的NumPy数组，并返回softmax计算的结果。
 
 **输入参数<a name="zh-cn_topic_0000002235268564_section134721039145915"></a>**
 
@@ -5299,7 +5301,7 @@ def softmax\(arr: np.ndarray\)-\>np.ndarray
 </td>
 <td class="cellrowborder" valign="top" width="20%" headers="mcps1.1.4.1.2 "><p id="zh-cn_topic_0000002235268564_p7596111712215"><a name="zh-cn_topic_0000002235268564_p7596111712215"></a><a name="zh-cn_topic_0000002235268564_p7596111712215"></a>ndarray</p>
 </td>
-<td class="cellrowborder" valign="top" width="60%" headers="mcps1.1.4.1.3 "><p id="zh-cn_topic_0000002235268564_p55961117172117"><a name="zh-cn_topic_0000002235268564_p55961117172117"></a><a name="zh-cn_topic_0000002235268564_p55961117172117"></a>元素为任意实数，数据类型支持FP32，维度支持1D/2D。</p>
+<td class="cellrowborder" valign="top" width="60%" headers="mcps1.1.4.1.3 "><p id="zh-cn_topic_0000002235268564_p55961117172117"><a name="zh-cn_topic_0000002235268564_p55961117172117"></a><a name="zh-cn_topic_0000002235268564_p55961117172117"></a>元素为任意实数，数据类型支持FP32，维度支持1维/2维。</p>
 </td>
 </tr>
 </tbody>
@@ -5359,7 +5361,7 @@ def random\_choice\(arr: np.ndarray, seed: int\)-\>np.ndarray
 </td>
 <td class="cellrowborder" valign="top" width="20%" headers="mcps1.1.4.1.2 "><p id="zh-cn_topic_0000002235268536_p14909114620242"><a name="zh-cn_topic_0000002235268536_p14909114620242"></a><a name="zh-cn_topic_0000002235268536_p14909114620242"></a>ndarray</p>
 </td>
-<td class="cellrowborder" valign="top" width="60%" headers="mcps1.1.4.1.3 "><p id="zh-cn_topic_0000002235268536_p55961117172117"><a name="zh-cn_topic_0000002235268536_p55961117172117"></a><a name="zh-cn_topic_0000002235268536_p55961117172117"></a>数据类型支持FP32，维度支持1D和2D。维度为2D时，形状需满足(1, N)、(N, 1)。</p>
+<td class="cellrowborder" valign="top" width="60%" headers="mcps1.1.4.1.3 "><p id="zh-cn_topic_0000002235268536_p55961117172117"><a name="zh-cn_topic_0000002235268536_p55961117172117"></a><a name="zh-cn_topic_0000002235268536_p55961117172117"></a>数据类型支持FP32，维度支持1维和2维。维度为2维时，形状需满足(1, N)、(N, 1)。</p>
 </td>
 </tr>
 <tr id="zh-cn_topic_0000002235268536_row9354143335914"><td class="cellrowborder" valign="top" width="20%" headers="mcps1.1.4.1.1 "><p id="zh-cn_topic_0000002235268536_p698192414449"><a name="zh-cn_topic_0000002235268536_p698192414449"></a><a name="zh-cn_topic_0000002235268536_p698192414449"></a>seed</p>
@@ -5437,7 +5439,7 @@ def get\_version\(\) -\> Dict\[bytes, bytes\]
 {'productName': b'Kunpeng Boostkit', 'productVersion': b'24.0.0', 'componentName': b'BoostKit-kail', 'componentVersion': b'1.0.0', 'componentAppendInfo': b'gcc', 'softwareName': b'boostKit-kail-dnn-ext', 'softwareVersion': b'1.0.0'}
 ```
 
->![](public_sys-resources/icon-note.gif) **说明：** 
+>![icon-note](public_sys-resources/icon-note.gif) **说明：** 
 >版本号和编译时间以实际运行结果为准，上述结果仅供参考。
 
 ## 修订记录

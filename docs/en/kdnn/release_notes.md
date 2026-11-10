@@ -1,21 +1,31 @@
 # Release Notes
 
+<!-- md-trans-meta sourceCommit=4eb6b6efe8cf09750f757775bf08ea189a284a2d translatedAt=2026-11-03T08:58:34.403Z pushedAt=2026-11-04T01:07:09.483Z -->
+
 ## Version Mapping
 
 ### Product Version
 
 <a name="table62675726"></a>
-<table><tbody><tr id="row41561572"><th class="firstcol" valign="top" width="42.17%" id="mcps1.1.3.1.1"><p id="p11044137"><a name="p11044137"></a><a name="p11044137"></a>Product Name</p></th>
-<td class="cellrowborder" valign="top" width="57.830000000000005%" headers="mcps1.1.3.1.1 "><p id="p1597721693713"><a name="p1597721693713"></a><a name="p1597721693713"></a>Kunpeng BoostKit</p></td>
+<table><tbody><tr id="row41561572"><th class="firstcol" valign="top" width="42.17%" id="mcps1.1.3.1.1"><p id="p11044137"><a name="p11044137"></a><a name="p11044137"></a>Product Name</p>
+</th>
+<td class="cellrowborder" valign="top" width="57.830000000000005%" headers="mcps1.1.3.1.1 "><p id="p1597721693713"><a name="p1597721693713"></a><a name="p1597721693713"></a>Kunpeng BoostKit</p>
+</td>
 </tr>
-<tr id="row24726251"><th class="firstcol" valign="top" width="42.17%" id="mcps1.1.3.2.1"><p id="p56669300"><a name="p56669300"></a><a name="p56669300"></a>Product Version</p></th>
-<td class="cellrowborder" valign="top" width="57.830000000000005%" headers="mcps1.1.3.2.1 "><p id="p13967181113316"><a name="p13967181113316"></a><a name="p13967181113316"></a><span id="text03501914183312"><a name="text03501914183312"></a><a name="text03501914183312"></a>26.2.RC1</span></p></td>
+<tr id="row24726251"><th class="firstcol" valign="top" width="42.17%" id="mcps1.1.3.2.1"><p id="p56669300"><a name="p56669300"></a><a name="p56669300"></a>Product Version</p>
+</th>
+<td class="cellrowborder" valign="top" width="57.830000000000005%" headers="mcps1.1.3.2.1 "><p id="p13967181113316"><a name="p13967181113316"></a><a name="p13967181113316"></a><span id="text03501914183312"><a name="text03501914183312"></a><a name="text03501914183312"></a>26.2.RC1</span></p>
+</td>
 </tr>
-<tr id="row1930811171892"><th class="firstcol" valign="top" width="42.17%" id="mcps1.1.3.3.1"><p id="p2030912172097"><a name="p2030912172097"></a><a name="p2030912172097"></a>Software Name</p></th>
-<td class="cellrowborder" valign="top" width="57.830000000000005%" headers="mcps1.1.3.3.1 "><p id="p1730912179911"><a name="p1730912179911"></a><a name="p1730912179911"></a>KDNN<strong id="b166665341595"><a name="b166665341595"></a><a name="b166665341595"></a> </strong></p></td>
+<tr id="row1930811171892"><th class="firstcol" valign="top" width="42.17%" id="mcps1.1.3.3.1"><p id="p2030912172097"><a name="p2030912172097"></a><a name="p2030912172097"></a>Software Name</p>
+</th>
+<td class="cellrowborder" valign="top" width="57.830000000000005%" headers="mcps1.1.3.3.1 "><p id="p1730912179911"><a name="p1730912179911"></a><a name="p1730912179911"></a>KDNN<strong id="b166665341595"><a name="b166665341595"></a><a name="b166665341595"></a> </strong></p>
+</td>
 </tr>
-<tr id="row5497143514612"><th class="firstcol" valign="top" width="42.17%" id="mcps1.1.3.4.1"><p id="p162251517551"><a name="p162251517551"></a><a name="p162251517551"></a>Software Version</p></th>
-<td class="cellrowborder" valign="top" width="57.830000000000005%" headers="mcps1.1.3.4.1 "><p id="p6225131165519"><a name="p6225131165519"></a><a name="p6225131165519"></a>V3.2.0</p></td>
+<tr id="row5497143514612"><th class="firstcol" valign="top" width="42.17%" id="mcps1.1.3.4.1"><p id="p162251517551"><a name="p162251517551"></a><a name="p162251517551"></a>Software Version</p>
+</th>
+<td class="cellrowborder" valign="top" width="57.830000000000005%" headers="mcps1.1.3.4.1 "><p id="p6225131165519"><a name="p6225131165519"></a><a name="p6225131165519"></a>V3.2.0</p>
+</td>
 </tr>
 </tbody>
 </table>
@@ -50,9 +60,19 @@ The software packages, release documents, and product documents have been scanne
 
 **New Features**
 
-| Feature | Description |
-|---|---|
-| KDNN | <ul><li>Added thread pool parallelism support for SparseGemm.</li><li>Added a small-matrix GEMM optimization implementation.</li><li>Continuously optimized the performance of MatMul, convolution, and related operators on the Kunpeng platform.</li></ul> |
+<table><thead align="left"><tr id="row28804032"><th class="cellrowborder" valign="top" width="31.7%" id="mcps1.1.3.1.1"><p id="p4697041"><a name="p4697041"></a><a name="p4697041"></a>Feature</p>
+</th>
+<th class="cellrowborder" valign="top" width="68.30000000000001%" id="mcps1.1.3.1.2"><p id="p44916036"><a name="p44916036"></a><a name="p44916036"></a>Description</p>
+</th>
+</tr>
+</thead>
+<tbody><tr id="row84721825541"><td class="cellrowborder" valign="top" width="31.7%" headers="mcps1.1.3.1.1 "><p id="p1682142025412"><a name="p1682142025412"></a><a name="p1682142025412"></a>KDNN</p>
+</td>
+<td class="cellrowborder" valign="top" width="68.30000000000001%" headers="mcps1.1.3.1.2 "><a name="ul4362115103416"></a><a name="ul4362115103416"></a><ul id="ul4362115103416"><li>Added thread pool parallelism support for SparseGemm.</li><li>Added a small-matrix GEMM optimization implementation.</li><li>Continuously optimized the performance of MatMul, convolution, and related operators on the Kunpeng platform.</li></ul>
+</td>
+</tr>
+</tbody>
+</table>
 
 ### Resolved Issues
 
@@ -68,9 +88,19 @@ None
 
 **New Features**
 
-| Feature | Description |
-|---|---|
-| KDNN | <ul><li>Added MatMul implementation for s8/u8 data types based on MMLA instructions.</li><li>Added support for post-processing operation.</li><li>Added support for the FusedMatMul operator.</li></ul> |
+<table><thead align="left"><tr id="row28804032"><th class="cellrowborder" valign="top" width="31.7%" id="mcps1.1.3.1.1"><p id="p4697041"><a name="p4697041"></a><a name="p4697041"></a>Feature</p>
+</th>
+<th class="cellrowborder" valign="top" width="68.30000000000001%" id="mcps1.1.3.1.2"><p id="p44916036"><a name="p44916036"></a><a name="p44916036"></a>Description</p>
+</th>
+</tr>
+</thead>
+<tbody><tr id="row84721825541"><td class="cellrowborder" valign="top" width="31.7%" headers="mcps1.1.3.1.1 "><p id="p1682142025412"><a name="p1682142025412"></a><a name="p1682142025412"></a>KDNN</p>
+</td>
+<td class="cellrowborder" valign="top" width="68.30000000000001%" headers="mcps1.1.3.1.2 "><a name="ul4362115103416"></a><a name="ul4362115103416"></a><ul id="ul4362115103416"><li>Added MatMul implementation for s8/u8 data types based on MMLA instructions.</li><li>Added support for post-processing operation.</li><li>Added support for the FusedMatMul operator.</li></ul>
+</td>
+</tr>
+</tbody>
+</table>
 
 ### Resolved Issues
 
@@ -87,10 +117,19 @@ None
 **New Features<a name="section11862975"></a>**
 
 <a name="table41916133"></a>
-
-| Feature | Description |
-|---|---|
-| KDNN | <ul><li>Added NEON implementation for MatMul.</li><li>Added support for a custom thread pool mode in MatMul.</li><li>Added Kunpeng platform support for the deep neural network operators Group Normalization and SparseGemm.</li></ul> |
+<table><thead align="left"><tr id="row28804032"><th class="cellrowborder" valign="top" width="31.7%" id="mcps1.1.3.1.1"><p id="p4697041"><a name="p4697041"></a><a name="p4697041"></a>Feature</p>
+</th>
+<th class="cellrowborder" valign="top" width="68.30000000000001%" id="mcps1.1.3.1.2"><p id="p44916036"><a name="p44916036"></a><a name="p44916036"></a>Description</p>
+</th>
+</tr>
+</thead>
+<tbody><tr id="row84721825541"><td class="cellrowborder" valign="top" width="31.7%" headers="mcps1.1.3.1.1 "><p id="p1682142025412"><a name="p1682142025412"></a><a name="p1682142025412"></a>KDNN</p>
+</td>
+<td class="cellrowborder" valign="top" width="68.30000000000001%" headers="mcps1.1.3.1.2 "><a name="ul4362115103416"></a><a name="ul4362115103416"></a><ul id="ul4362115103416"><li>Added NEON implementation for MatMul.</li><li>Added support for a custom thread pool mode in MatMul.</li><li>Added Kunpeng platform support for the deep neural network operators Group Normalization and SparseGemm.</li></ul>
+</td>
+</tr>
+</tbody>
+</table>
 
 ### Resolved Issues
 
@@ -107,10 +146,19 @@ None
 **New Features<a name="section11862975"></a>**
 
 <a name="table41916133"></a>
-
-| Feature | Description |
-|---|---|
-| KDNN | <ul><li>Added Kunpeng platform support for the Pool, Batch Normalization, Local Response Normalization, Reduction, PReLU, Binary, and RNN deep neural network operators.</li><li>Added support for the new Kunpeng 920 processor model.</li></ul> |
+<table><thead align="left"><tr id="row28804032"><th class="cellrowborder" valign="top" width="31.7%" id="mcps1.1.3.1.1"><p id="p4697041"><a name="p4697041"></a><a name="p4697041"></a>Feature</p>
+</th>
+<th class="cellrowborder" valign="top" width="68.30000000000001%" id="mcps1.1.3.1.2"><p id="p44916036"><a name="p44916036"></a><a name="p44916036"></a>Description</p>
+</th>
+</tr>
+</thead>
+<tbody><tr id="row84721825541"><td class="cellrowborder" valign="top" width="31.7%" headers="mcps1.1.3.1.1 "><p id="p1682142025412"><a name="p1682142025412"></a><a name="p1682142025412"></a>KDNN</p>
+</td>
+<td class="cellrowborder" valign="top" width="68.30000000000001%" headers="mcps1.1.3.1.2 "><a name="ul4362115103416"></a><a name="ul4362115103416"></a><ul id="ul4362115103416"><li>Added Kunpeng platform support for the Pool, Batch Normalization, Local Response Normalization, Reduction, PReLU, Binary, and RNN deep neural network operators.</li><li>Added support for the new Kunpeng 920 processor model.</li></ul>
+</td>
+</tr>
+</tbody>
+</table>
 
 ### Resolved Issues
 
@@ -127,10 +175,19 @@ None
 **New Features<a name="section11862975"></a>**
 
 <a name="table41916133"></a>
-
-| Feature | Description |
-|---|---|
-| KDNN | Added Kunpeng platform support for four deep neural network operators, including Reorder, Resampling, Concat, and Shuffle. |
+<table><thead align="left"><tr id="row28804032"><th class="cellrowborder" valign="top" width="31.740000000000002%" id="mcps1.1.3.1.1"><p id="p4697041"><a name="p4697041"></a><a name="p4697041"></a>Feature</p>
+</th>
+<th class="cellrowborder" valign="top" width="68.26%" id="mcps1.1.3.1.2"><p id="p44916036"><a name="p44916036"></a><a name="p44916036"></a>Description</p>
+</th>
+</tr>
+</thead>
+<tbody><tr id="row84721825541"><td class="cellrowborder" valign="top" width="31.740000000000002%" headers="mcps1.1.3.1.1 "><p id="p1682142025412"><a name="p1682142025412"></a><a name="p1682142025412"></a>KDNN</p>
+</td>
+<td class="cellrowborder" valign="top" width="68.26%" headers="mcps1.1.3.1.2 "><p id="p515310015517"><a name="p515310015517"></a><a name="p515310015517"></a>Added Kunpeng platform support for four deep neural network operators, including Reorder, Resampling, Concat, and Shuffle.</p>
+</td>
+</tr>
+</tbody>
+</table>
 
 ### Resolved Issues
 
@@ -169,11 +226,11 @@ None
 
 | Document Name | Description | Delivery Method |
 | --- | --- | --- |
-| [Release Notes](./release_notes.md) | Provides version release information of KDNN. | Open-source repository |
-| [Quick Start](./quick_start.md) | Provides guidance for getting started with KDNN. | Open-source repository |
-| [Installation Guide](./installation_guide.md) | Describes how to install and deploy KDNN. | Open-source repository |
-| [API Reference](./api_reference.md) | Provides definitions, descriptions, and calling examples of KDNN APIs. | Open-source repository |
-| [Best Practices](./best_practices.md) | Provides best practices of using KDNN. | Open-source repository |
+| Release Notes | Provides version release information of KDNN. | Open-source repository |
+| Quick Start| Provides guidance for getting started with KDNN. | Open-source repository |
+| Installation Guide | Describes how to install and deploy KDNN. | Open-source repository |
+| API Reference | Provides definitions, descriptions, and calling examples of KDNN APIs. | Open-source repository |
+| Best Practices| Provides best practices of using KDNN. | Open-source repository |
 
 ### Obtaining Documentation
 

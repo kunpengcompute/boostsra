@@ -1,5 +1,7 @@
 # API Reference
 
+<!-- md-trans-meta sourceCommit=4eb6b6efe8cf09750f757775bf08ea189a284a2d translatedAt=2026-11-03T08:58:34.403Z pushedAt=2026-11-04T01:07:09.483Z -->
+
 ## KDNN Operators
 
 ### Operator Range

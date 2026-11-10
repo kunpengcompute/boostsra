@@ -49,7 +49,7 @@
 </thead>
 <tbody><tr id="zh-cn_topic_0000002502992013_row056323751218"><td class="cellrowborder" rowspan="2" valign="top" width="12.15%" headers="mcps1.2.7.1.1 "><p id="zh-cn_topic_0000002502992013_p7180194317123"><a name="zh-cn_topic_0000002502992013_p7180194317123"></a><a name="zh-cn_topic_0000002502992013_p7180194317123"></a>KDNN</p>
 </td>
-<td class="cellrowborder" valign="top" width="19.97%" headers="mcps1.2.7.1.2 "><p id="zh-cn_topic_0000002502992013_p16180743171218"><a name="zh-cn_topic_0000002502992013_p16180743171218"></a><a name="zh-cn_topic_0000002502992013_p16180743171218"></a>openEuler 22.03 LTS SP3</p>
+<td class="cellrowborder" valign="top" width="19.97%" headers="mcps1.2.7.1.2 "><p id="zh-cn_topic_0000002502992013_p16180743171218"><a name="zh-cn_topic_0000002502992013_p16180743171218"></a><a name="zh-cn_topic_0000002502992013_p16180743171218"></a>openEuler 24.03 LTS SP3</p>
 </td>
 <td class="cellrowborder" valign="top" width="22.32%" headers="mcps1.2.7.1.3 "><p id="zh-cn_topic_0000002502992013_p818014317128"><a name="zh-cn_topic_0000002502992013_p818014317128"></a><a name="zh-cn_topic_0000002502992013_p818014317128"></a>鲲鹏920 7270Z/7280Z处理器</p>
 </td>
@@ -322,79 +322,13 @@
 
 ### V3.2.0版本配套文档
 
-<a name="table41916133"></a>
-<table>
-  <thead align="left">
-    <tr id="row28804032">
-      <th class="cellrowborder" valign="top" width="45.02%" id="mcps1.1.4.1.1">
-        <p id="p4697041"><a name="p4697041"></a>文档名称</p>
-      </th>
-      <th class="cellrowborder" valign="top" width="38.02%" id="mcps1.1.4.1.2">
-        <p id="p44916036"><a name="p44916036"></a>内容简介</p>
-      </th>
-      <th class="cellrowborder" valign="top" width="16.96%" id="mcps1.1.4.1.3">
-        <p id="p14320308"><a name="p14320308"></a>交付形式</p>
-      </th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr id="row1341193722116">
-      <td class="cellrowborder" valign="top" width="45.02%" headers="mcps1.1.4.1.1">
-        <p><a href="./release_notes.md">《版本说明书》</a></p>
-      </td>
-      <td class="cellrowborder" valign="top" width="38.02%" headers="mcps1.1.4.1.2">
-        <p>本文档提供KDNN的版本发布信息。</p>
-      </td>
-      <td class="cellrowborder" valign="top" width="16.96%" headers="mcps1.1.4.1.3">
-        <p>开源仓</p>
-      </td>
-    </tr>
-    <tr id="row20256161544411">
-      <td class="cellrowborder" valign="top" width="45.02%" headers="mcps1.1.4.1.1">
-        <p><a href="./quick_start.md">《快速入门》</a></p>
-      </td>
-      <td class="cellrowborder" valign="top" width="38.02%" headers="mcps1.1.4.1.2">
-        <p>提供KDNN快速入门指导。</p>
-      </td>
-      <td class="cellrowborder" valign="top" width="16.96%" headers="mcps1.1.4.1.3">
-        <p>开源仓</p>
-      </td>
-    </tr>
-    <tr id="row1941037152117">
-      <td class="cellrowborder" valign="top" width="45.02%" headers="mcps1.1.4.1.1">
-        <p><a href="./installation_guide.md">《安装指南》</a></p>
-      </td>
-      <td class="cellrowborder" valign="top" width="38.02%" headers="mcps1.1.4.1.2">
-        <p>本文档提供KDNN安装部署等开发指导。</p>
-      </td>
-      <td class="cellrowborder" valign="top" width="16.96%" headers="mcps1.1.4.1.3">
-        <p>开源仓</p>
-      </td>
-    </tr>
-    <tr id="row29615193441">
-      <td class="cellrowborder" valign="top" width="45.02%" headers="mcps1.1.4.1.1">
-        <p><a href="./api_reference.md">《API参考》</a></p>
-      </td>
-      <td class="cellrowborder" valign="top" width="38.02%" headers="mcps1.1.4.1.2">
-        <p>提供KDNN提供的API接口定义、接口说明、接口调用示例等。</p>
-      </td>
-      <td class="cellrowborder" valign="top" width="16.96%" headers="mcps1.1.4.1.3">
-        <p>开源仓</p>
-      </td>
-    </tr>
-    <tr id="row181851121164416">
-      <td class="cellrowborder" valign="top" width="45.02%" headers="mcps1.1.4.1.1">
-        <p><a href="./best_practices.md">《最佳实践》</a></p>
-      </td>
-      <td class="cellrowborder" valign="top" width="38.02%" headers="mcps1.1.4.1.2">
-        <p>提供KDNN使用的实践案例。</p>
-      </td>
-      <td class="cellrowborder" valign="top" width="16.96%" headers="mcps1.1.4.1.3">
-        <p>开源仓</p>
-      </td>
-    </tr>
-  </tbody>
-</table>
+|文档名称|内容简介|交付形式|
+|---|---|---|
+|《版本说明书》|本文档提供KDNN的版本发布信息。|开源仓|
+|《快速入门》|提供KDNN快速入门指导。|开源仓|
+|《安装指南》|本文档提供KDNN安装部署等开发指导。|开源仓|
+|《API参考》|提供KDNN提供的API接口定义、接口说明、接口调用示例等。|开源仓|
+|《最佳实践》|提供KDNN使用的实践案例。|开源仓|
 
 ### 获取文档的方法
 

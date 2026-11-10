@@ -1,5 +1,7 @@
 # Installation Guide
 
+<!-- md-trans-meta sourceCommit=b76f8f29f3d3c3deedd8513f6590a2d3ea38d9ec translatedAt=2026-11-03T08:58:34.403Z pushedAt=2026-11-04T01:07:09.483Z -->
+
 ## Verified Environments
 
 To use KDNN smoothly and securely, ensure that your environment is one of the verified environments.
@@ -98,7 +100,7 @@ If you cannot directly access the Internet, configure a network proxy temporaril
         vi /etc/profile
         ```
 
-    2. Press <code>i</code> to enter the insert mode and add the following content to the <code>/etc/profile</code> file.
+    2. Press <code>i</code> to enter insert mode and add the following content to the <code>/etc/profile</code> file.
 
         Set the user name, password, proxy IP address, and proxy port based on your requirements.
 

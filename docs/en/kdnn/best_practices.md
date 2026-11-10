@@ -1,8 +1,10 @@
 # Best Practices
 
+<!-- md-trans-meta sourceCommit=b76f8f29f3d3c3deedd8513f6590a2d3ea38d9ec translatedAt=2026-11-03T08:58:34.403Z pushedAt=2026-11-04T01:07:09.483Z -->
+
 ## Adapting TensorFlow for KDNN
 
-This document describes how to adapt the TensorFlow matrix operators (MatMul and FusedMatMul, which correspond to the Gemm operator of KDNN) to KDNN v3.1.0. Follow the instructions in this section. Improper operations may introduce undefined behaviors. Exercise caution when performing this operation.
+This document describes how to adapt the TensorFlow matrix operators (MatMul and FusedMatMul, which correspond to the Gemm operator of KDNN) to KDNN v3.1.0. Follow the instructions in this section. Improper operations may introduce undefined behavior. Exercise caution when performing this operation.
 
 1. Install basic software.
 
@@ -11,7 +13,6 @@ This document describes how to adapt the TensorFlow matrix operators (MatMul and
     ```
 
 2. Install Bazel by following the instructions in [Installing Bazel](https://www.hikunpeng.com/document/detail/en/SRA/ecosystemEnable/TensorFlow/kunpengtensorflow_02_0008.html) in the _TensorFlow Porting Guide_. Bazel is required for TensorFlow compilation. For TensorFlow 2.15.0, download Bazel 6.5.0.
-
 3. Download open-source TensorFlow 2.15.0 from GitHub.
 
     ```bash
@@ -81,7 +82,7 @@ This document describes how to adapt the TensorFlow matrix operators (MatMul and
 
 ## Adapting oneDNN for KDNN
 
-This section describes how to adapt oneDNN for KDNN v3.1.0. Misoperations may introduce undefined behaviors. Exercise caution when performing this operation.
+This section describes how to adapt oneDNN for KDNN v3.1.0. Misoperations may introduce undefined behavior. Exercise caution when performing this operation.
 
 **Adaptation Procedure<a name="section39201312169"></a>**
 
@@ -107,7 +108,7 @@ This section describes how to adapt oneDNN for KDNN v3.1.0. Misoperations may in
 
         The <code>--use_static_kdnn=on/off</code> option specifies whether to use the KDNN static library or dynamic library during compilation. The default value is <code>off</code>.
 
-    - For new Kunpeng 920 processor model (the following example is based on the BiSheng Compiler):
+    - For the new Kunpeng 920 processor model (the following example is based on the BiSheng Compiler):
 
         ```bash
         cd /path/to/kail_dnn_adapter
@@ -150,6 +151,6 @@ After compiling oneDNN, use the test cases included in the software package to v
 
 ## Change History
 
-| Version |  Date |  Description |
+| Version |  Date | Description |
 | ---------- | -------- | -------- |
 | 01 | 2026-09-30 | This is the first official release. |
