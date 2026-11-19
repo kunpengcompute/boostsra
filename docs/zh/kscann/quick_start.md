@@ -1,6 +1,6 @@
 # 快速入门
 
-本节提供快速上手KScaNN核心功能的简易指导。
+本文档提供KScaNN核心功能的快速入门简易指导和快速入门示例，覆盖KScaNN最基本的使用流程：构建索引、单条搜索、批量搜索。
 
 ## 核心概念
 
@@ -165,8 +165,7 @@ int main() {
 ```
 
 预期结果如下：
-
-<img src="figures/quick_start.jpg" alt="quick_start" width="1000"/>
+![快速入门示例的执行回显](./figures/quick_start.jpg)
 
 ## 进阶扩展
 
@@ -381,5 +380,10 @@ int main() {
 ```
 
 预期结果如下：
+![进阶扩展的执行回显](./figures/quick_start-advanced.jpg)
 
-<img src="figures/quick_start-advanced.jpg" alt="quick_start-advanced" width="1000"/>
+## 修订记录
+
+|文档版本|发布日期|修改说明|
+|--|--|--|
+|01|2025-12-30|第一次正式发布。|

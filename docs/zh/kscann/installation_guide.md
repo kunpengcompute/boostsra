@@ -1,41 +1,18 @@
 # 安装指南
 
+本文档介绍KScaNN安装指南，提供RPM包安装KScaNN及安装后验证方法，适用于需要安装KScaNN的用户。
+
 ## 已验证环境
 
 为保证您可以顺利安全地使用KScaNN，请确保所使用的环境信息在已验证环境范围内。
 
 **表 1** KScaNN已验证环境<a id="KScaNN已验证环境"></a>
 
-<table><thead align="left"><tr>
-<th class="cellrowborder" valign="top" width="20%" id="mcps1.2.6.1.1"><p>操作系统</p></th>
-<th class="cellrowborder" valign="top" width="18%" id="mcps1.2.6.1.2"><p>CPU类型</p></th>
-<th class="cellrowborder" valign="top" width="12%" id="mcps1.2.6.1.3"><p>内存</p></th>
-<th class="cellrowborder" valign="top" width="15%" id="mcps1.2.6.1.4"><p>编译器</p></th>
-<th class="cellrowborder" valign="top" width="35%" id="mcps1.2.6.1.5"><p>其他</p></th>
-</tr></thead>
-<tbody>
-<tr>
-<td class="cellrowborder" valign="top" width="20%" headers="mcps1.2.6.1.1 "><p>openEuler 22.03 LTS SP3</p></td>
-<td class="cellrowborder" valign="top" width="18%" headers="mcps1.2.6.1.2 "><p>鲲鹏920 7282C处理器</p></td>
-<td class="cellrowborder" valign="top" width="12%" headers="mcps1.2.6.1.3 "><p>16 * 32GB</p></td>
-<td class="cellrowborder" valign="top" width="15%" headers="mcps1.2.6.1.4 "><p>GCC 12.3.1</p></td>
-<td class="cellrowborder" valign="top" width="35%" headers="mcps1.2.6.1.5 "><ul><li>CMake>=3.22.0</li><li>GLIBCXX>=3.4.29</li><li>Python 3.9.x</li></ul></td>
-</tr>
-<tr>
-<td class="cellrowborder" valign="top" width="20%" headers="mcps1.2.6.1.1 "><p>openEuler 22.03 LTS SP3</p></td>
-<td class="cellrowborder" valign="top" width="18%" headers="mcps1.2.6.1.2 "><p>鲲鹏920 7282C处理器</p></td>
-<td class="cellrowborder" valign="top" width="12%" headers="mcps1.2.6.1.3 "><p>16 * 32GB</p></td>
-<td class="cellrowborder" valign="top" width="15%" headers="mcps1.2.6.1.4 "><p>GCC 10.3.1</p></td>
-<td class="cellrowborder" valign="top" width="35%" headers="mcps1.2.6.1.5 "><ul><li>CMake>=3.22.0</li><li>GLIBCXX>=3.4.28</li><li>Python 3.9.x</li></ul></td>
-</tr>
-<tr>
-<td class="cellrowborder" valign="top" width="20%" headers="mcps1.2.6.1.1 "><p>openEuler 24.03 LTS SP3</p></td>
-<td class="cellrowborder" valign="top" width="18%" headers="mcps1.2.6.1.2 "><p>鲲鹏950 7592C处理器</p></td>
-<td class="cellrowborder" valign="top" width="12%" headers="mcps1.2.6.1.3 "><p>24 * 64GB</p></td>
-<td class="cellrowborder" valign="top" width="15%" headers="mcps1.2.6.1.4 "><p>GCC 12.3.1</p></td>
-<td class="cellrowborder" valign="top" width="35%" headers="mcps1.2.6.1.5 "><ul><li>CMake>=3.22.0</li><li>GLIBCXX>=3.4.29</li><li>Python 3.9.x</li></ul></td>
-</tr>
-</tbody></table>
+| 操作系统 | CPU类型 | 内存 | 编译器 | 其他 |
+| --- | --- | --- | --- | --- |
+| openEuler 22.03 LTS SP3 | 鲲鹏920 7282C处理器 | 16 * 32GB | GCC 12.3.1 | CMake>=3.22.0<br>GLIBCXX>=3.4.29<br>Python 3.9.x |
+| openEuler 22.03 LTS SP3 | 鲲鹏920 7282C处理器 | 16 * 32GB | GCC 10.3.1 | CMake>=3.22.0<br>GLIBCXX>=3.4.28<br>Python 3.9.x |
+| openEuler 24.03 LTS SP3 | 鲲鹏950 7592C处理器 | 24 * 64GB | GCC 12.3.1 | CMake>=3.22.0<br>GLIBCXX>=3.4.29<br>Python 3.9.x |
 
 ## 安装KScaNN
 
@@ -107,7 +84,7 @@ KScaNN依赖基于鲲鹏优化的开源ScaNN以提供完整的功能。因此安
 
     如果回显包含openjdk version "11._**x**_.**_x_**"，则表示安装成功。若OpenJDK版本低于此版本，则后续编译Bazel可能会发生错误，导致无法正常构建Bazel。
 
-    >![](public_sys-resources/icon-note.gif) **说明：** 
+    >![note](public_sys-resources/icon-note.gif) **说明：** 
     >若执行上述命令发现版本不匹配，请按以下步骤配置环境变量。
     >
     >```bash
@@ -202,7 +179,7 @@ KScaNN依赖基于鲲鹏优化的开源ScaNN以提供完整的功能。因此安
 
         构建完的动态库文件libscann\_cc.so位于“/path/to/kscann-build/scann”下。
 
-        >![](public_sys-resources/icon-note.gif) **说明：** 
+        >![note](public_sys-resources/icon-note.gif) **说明：** 
         >project.sh中包含以下编译选项，可根据需求进行选择：
         >- --prepare：进行Python依赖安装。
         >- --build\_whl：构建完整的ScaNN的Python安装包。
@@ -257,3 +234,9 @@ KScaNN依赖基于鲲鹏优化的开源ScaNN以提供完整的功能。因此安
     ```
 
     如果输出包含WARNING: Package\(s\) not found: scann，则已卸载成功。
+
+## 修订记录
+
+|文档版本|发布日期|修改说明|
+|--|--|--|
+|01|2025-12-30|第一次正式发布。|

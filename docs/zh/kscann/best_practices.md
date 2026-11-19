@@ -1,5 +1,7 @@
 # 最佳实践
 
+本文档介绍KScaNN最佳实践，提供Python和C++调用KScaNN算法接口的完整使用示例及与Milvus数据库的对接方法，适用于需要使用KScaNN进行向量检索的用户。
+
 ## Python
 
 本章节以使用sift-128-euclidean.hdf5数据集为例，提供通过Python调用KScaNN算法接口的完整使用示例。调用前，请确保已安装KScaNN。
@@ -43,9 +45,8 @@ wget http://ann-benchmarks.com/sift-128-euclidean.hdf5 --no-check-certificate
     sh test.sh 
     ```
 
-测试结果如下所示：
-
-<img src="figures/best_practices-python.jpg" alt="best_practices-python" width="1000"/>
+   测试结果如下所示。
+   ![Python调用KscaNN算法的测试执行结果](./figures/best_practices-python.jpg)
 
 ## C++
 
@@ -147,7 +148,7 @@ project.sh                                                          // 编译脚
     sh project.sh --build_eval_cmake_sve
     ```
 
-    >![](public_sys-resources/icon-note.gif) **说明：** 
+    >![note](public_sys-resources/icon-note.gif) **说明：** 
     >project.sh中包含以下编译选项，可根据需求进行选择：
     >- --prepare：进行Python依赖安装。
     >- --build\_eval\_cmake\_sve：通过cmake使用libscann\_cc.so构建SVE指令版本的可执行文件。
@@ -161,7 +162,7 @@ project.sh                                                          // 编译脚
     sh test_cpp.sh 
     ```
 
-    >![](public_sys-resources/icon-note.gif) **说明：** 
+    >![note](public_sys-resources/icon-note.gif) **说明：** 
     >测试过程中，数据集相关参数（如索引构建、搜索策略等）由配置文件统一控制，配置文件路径为：
     >./algorithms/scann/cpp\_test/config-\*.config，（ \*为通配符，涵盖所有以config-开头、.config结尾的配置文件，如config-deep-image-96-angular.config等。）
     >通过调整配置文件中的 index\_save\_or\_load 参数，可控制测试过程中索引的处理模式，具体说明如下：
@@ -169,9 +170,8 @@ project.sh                                                          // 编译脚
     >- load：跳过索引构建步骤，直接从指定路径读取已保存的索引文件进行搜索，适用于验证索引复用场景。
     >- 其他值（非save/load）：从头构建搜索索引，但不保存索引文件，测试完成后索引仅在当前进程中生效。
 
-测试结果如下所示：
-
-<img src="figures/best_practices-c++.jpg" alt="best_practices-c++" width="1000"/>
+    测试结果如下所示：
+    ![C++调用KscaNN算法的测试执行结果](./figures/best_practices-c++.jpg)
 
 ## KScaNN对接Milvus
 
@@ -190,3 +190,9 @@ KScaNN算法通过动态库内联、低比特量化、检索算子、向量化�
 3. 使用ann-benchmarks测试。
 
     请参见《[Milvus数据库ann-benchmarks 测试指导](https://www.hikunpeng.com/document/detail/zh/kunpengdbs/testguide/tstg/kunpeng_ann_marks_001.html)》进行测试。
+
+## 修订记录
+
+|文档版本|发布日期|修改说明|
+|--|--|--|
+|01|2025-12-30|第一次正式发布。|

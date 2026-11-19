@@ -1,5 +1,7 @@
 ﻿# API参考
 
+本文档介绍KRL提供的接口信息，涵盖接口列表、Handle类接口、距离计算接口、8bit查表累和接口、4bit查表累和接口、重排接口和保存与加载接口，以及错误码，适用于需要使用KRL接口的用户。
+
 ## 接口列表
 
 KRL提供的接口如[**表 1** KRL提供的接口](#KRL提供的接口)所示。
@@ -7,429 +9,68 @@ KRL提供的接口如[**表 1** KRL提供的接口](#KRL提供的接口)所示�
 **表 1** KRL提供的接口<a id="KRL提供的接口"></a>
 
 <a name="table1194910128449"></a>
-<table><thead align="left"><tr id="row99491812134412"><th class="cellrowborder" valign="top" width="13.059999999999999%" id="mcps1.2.4.1.1"><p id="p768563014173"><a name="p768563014173"></a><a name="p768563014173"></a>接口类型</p>
-</th>
-<th class="cellrowborder" valign="top" width="23.380000000000003%" id="mcps1.2.4.1.2"><p id="p1794951224415"><a name="p1794951224415"></a><a name="p1794951224415"></a>接口名称</p>
-</th>
-<th class="cellrowborder" valign="top" width="63.56%" id="mcps1.2.4.1.3"><p id="p6949612124415"><a name="p6949612124415"></a><a name="p6949612124415"></a>接口作用</p>
-</th>
-</tr>
-</thead>
-<tbody><tr id="row712018285575"><td class="cellrowborder" valign="top" width="13.059999999999999%" headers="mcps1.2.4.1.1 "><p id="p1468583012176"><a name="p1468583012176"></a><a name="p1468583012176"></a>Handle类接口</p>
-</td>
-<td class="cellrowborder" valign="top" width="23.380000000000003%" headers="mcps1.2.4.1.2 "><p id="p8993524101814"><a name="p8993524101814"></a><a name="p8993524101814"></a>krl_create_distance_handle</p>
-</td>
-<td class="cellrowborder" valign="top" width="63.56%" headers="mcps1.2.4.1.3 "><p id="p14993924101811"><a name="p14993924101811"></a><a name="p14993924101811"></a>初始化构建一个KRLDistanceHandle实例，稠密距离计算时使用。</p>
-</td>
-</tr>
-<tr id="row119491112174414"><td class="cellrowborder" valign="top" width="13.059999999999999%" headers="mcps1.2.4.1.1 "><p id="p163141052196"><a name="p163141052196"></a><a name="p163141052196"></a>Handle类接口</p>
-</td>
-<td class="cellrowborder" valign="top" width="23.380000000000003%" headers="mcps1.2.4.1.2 "><p id="p175854912238"><a name="p175854912238"></a><a name="p175854912238"></a>krl_create_reorder_handle</p>
-</td>
-<td class="cellrowborder" valign="top" width="63.56%" headers="mcps1.2.4.1.3 "><p id="p09931024131816"><a name="p09931024131816"></a><a name="p09931024131816"></a>初始化构建一个KRLDistanceHandle实例，重排计算时使用。</p>
-</td>
-</tr>
-<tr id="row9949131219443"><td class="cellrowborder" valign="top" width="13.059999999999999%" headers="mcps1.2.4.1.1 "><p id="p831619512197"><a name="p831619512197"></a><a name="p831619512197"></a>Handle类接口</p>
-</td>
-<td class="cellrowborder" valign="top" width="23.380000000000003%" headers="mcps1.2.4.1.2 "><p id="p19936249184"><a name="p19936249184"></a><a name="p19936249184"></a>krl_clean_distance_handle</p>
-</td>
-<td class="cellrowborder" valign="top" width="63.56%" headers="mcps1.2.4.1.3 "><p id="p7729162612418"><a name="p7729162612418"></a><a name="p7729162612418"></a>析构KRLDistanceHandle实例，释放内存空间。</p>
-</td>
-</tr>
-<tr id="row1594913120443"><td class="cellrowborder" valign="top" width="13.059999999999999%" headers="mcps1.2.4.1.1 "><p id="p16317151193"><a name="p16317151193"></a><a name="p16317151193"></a>Handle类接口</p>
-</td>
-<td class="cellrowborder" valign="top" width="23.380000000000003%" headers="mcps1.2.4.1.2 "><p id="p799319246182"><a name="p799319246182"></a><a name="p799319246182"></a>krl_create_LUT8b_handle</p>
-</td>
-<td class="cellrowborder" valign="top" width="63.56%" headers="mcps1.2.4.1.3 "><p id="p7993122417187"><a name="p7993122417187"></a><a name="p7993122417187"></a>初始化构建一个KRLLUT8bHandle实例，8bit查表累和时使用。</p>
-</td>
-</tr>
-<tr id="row6949131274416"><td class="cellrowborder" valign="top" width="13.059999999999999%" headers="mcps1.2.4.1.1 "><p id="p13180551910"><a name="p13180551910"></a><a name="p13180551910"></a>Handle类接口</p>
-</td>
-<td class="cellrowborder" valign="top" width="23.380000000000003%" headers="mcps1.2.4.1.2 "><p id="p12993324191819"><a name="p12993324191819"></a><a name="p12993324191819"></a>krl_clean_LUT8b_handle</p>
-</td>
-<td class="cellrowborder" valign="top" width="63.56%" headers="mcps1.2.4.1.3 "><p id="p139801643145818"><a name="p139801643145818"></a><a name="p139801643145818"></a>析构KRLLUT8bHandle实例，释放内存空间。</p>
-</td>
-</tr>
-<tr id="row13975184141820"><td class="cellrowborder" valign="top" width="13.059999999999999%" headers="mcps1.2.4.1.1 "><p id="p531917514195"><a name="p531917514195"></a><a name="p531917514195"></a>Handle类接口</p>
-</td>
-<td class="cellrowborder" valign="top" width="23.380000000000003%" headers="mcps1.2.4.1.2 "><p id="p7975114191820"><a name="p7975114191820"></a><a name="p7975114191820"></a>krl_get_idx_pointer</p>
-</td>
-<td class="cellrowborder" valign="top" width="63.56%" headers="mcps1.2.4.1.3 "><p id="p192601719115616"><a name="p192601719115616"></a><a name="p192601719115616"></a>获取KRLLUT8bHandle实例中存储的需要计算的底库向量ID。</p>
-</td>
-</tr>
-<tr id="row1682414614182"><td class="cellrowborder" valign="top" width="13.059999999999999%" headers="mcps1.2.4.1.1 "><p id="p183211558190"><a name="p183211558190"></a><a name="p183211558190"></a>Handle类接口</p>
-</td>
-<td class="cellrowborder" valign="top" width="23.380000000000003%" headers="mcps1.2.4.1.2 "><p id="p621722142419"><a name="p621722142419"></a><a name="p621722142419"></a>krl_get_dist_pointer</p>
-</td>
-<td class="cellrowborder" valign="top" width="63.56%" headers="mcps1.2.4.1.3 "><p id="p2824164621814"><a name="p2824164621814"></a><a name="p2824164621814"></a>获取KRLLUT8bHandle实例中存储的距离数组首地址，在调用查表累和计算算子之前为随机数，调用之后为计算得到的距离。</p>
-</td>
-</tr>
-<tr id="row891194810189"><td class="cellrowborder" valign="top" width="13.059999999999999%" headers="mcps1.2.4.1.1 "><p id="p6685230201716"><a name="p6685230201716"></a><a name="p6685230201716"></a>距离计算接口</p>
-</td>
-<td class="cellrowborder" valign="top" width="23.380000000000003%" headers="mcps1.2.4.1.2 "><p id="p12911154891819"><a name="p12911154891819"></a><a name="p12911154891819"></a>krl_L2sqr</p>
-</td>
-<td class="cellrowborder" valign="top" width="63.56%" headers="mcps1.2.4.1.3 "><p id="p5911184810186"><a name="p5911184810186"></a><a name="p5911184810186"></a>进行数据类型为float的一对一欧氏距离计算。</p>
-</td>
-</tr>
-<tr id="row1710165116183"><td class="cellrowborder" valign="top" width="13.059999999999999%" headers="mcps1.2.4.1.1 "><p id="p120601371911"><a name="p120601371911"></a><a name="p120601371911"></a>距离计算接口</p>
-</td>
-<td class="cellrowborder" valign="top" width="23.380000000000003%" headers="mcps1.2.4.1.2 "><p id="p710165111184"><a name="p710165111184"></a><a name="p710165111184"></a>krl_L2sqr_f16f32</p>
-</td>
-<td class="cellrowborder" valign="top" width="63.56%" headers="mcps1.2.4.1.3 "><p id="p1693388205916"><a name="p1693388205916"></a><a name="p1693388205916"></a>进行数据类型为fp16的一对一欧氏距离计算。</p>
-</td>
-</tr>
-<tr id="row1710165116183_sve2"><td class="cellrowborder" valign="top" width="13.059999999999999%" headers="mcps1.2.4.1.1 "><p id="p120601371911_sve2"><a name="p120601371911_sve2"></a><a name="p120601371911_sve2"></a>距离计算接口</p>
-</td>
-<td class="cellrowborder" valign="top" width="23.380000000000003%" headers="mcps1.2.4.1.2 "><p id="p710165111184_sve2"><a name="p710165111184_sve2"></a><a name="p710165111184_sve2"></a>krl_L2sqr_f16f32_sve2</p>
-</td>
-<td class="cellrowborder" valign="top" width="63.56%" headers="mcps1.2.4.1.3 "><p id="p1693388205916_sve2"><a name="p1693388205916_sve2"></a><a name="p1693388205916_sve2"></a>进行数据类型为fp16的一对一欧氏距离计算（SVE2版本）。</p>
-</td>
-</tr>
-<tr id="row490119533188"><td class="cellrowborder" valign="top" width="13.059999999999999%" headers="mcps1.2.4.1.1 "><p id="p14208191316192"><a name="p14208191316192"></a><a name="p14208191316192"></a>距离计算接口</p>
-</td>
-<td class="cellrowborder" valign="top" width="23.380000000000003%" headers="mcps1.2.4.1.2 "><p id="p179011053151819"><a name="p179011053151819"></a><a name="p179011053151819"></a>krl_L2sqr_u8u32</p>
-</td>
-<td class="cellrowborder" valign="top" width="63.56%" headers="mcps1.2.4.1.3 "><p id="p790155315187"><a name="p790155315187"></a><a name="p790155315187"></a>进行数据类型为uint8的一对一欧氏距离计算。</p>
-</td>
-</tr>
-<tr id="row1785925518184"><td class="cellrowborder" valign="top" width="13.059999999999999%" headers="mcps1.2.4.1.1 "><p id="p11209713131919"><a name="p11209713131919"></a><a name="p11209713131919"></a>距离计算接口</p>
-</td>
-<td class="cellrowborder" valign="top" width="23.380000000000003%" headers="mcps1.2.4.1.2 "><p id="p4860165531811"><a name="p4860165531811"></a><a name="p4860165531811"></a>krl_ipdis</p>
-</td>
-<td class="cellrowborder" valign="top" width="63.56%" headers="mcps1.2.4.1.3 "><p id="p158609551186"><a name="p158609551186"></a><a name="p158609551186"></a>进行数据类型为float的一对一内积距离计算。</p>
-</td>
-</tr>
-<tr id="row197613573181"><td class="cellrowborder" valign="top" width="13.059999999999999%" headers="mcps1.2.4.1.1 "><p id="p321121341919"><a name="p321121341919"></a><a name="p321121341919"></a>距离计算接口</p>
-</td>
-<td class="cellrowborder" valign="top" width="23.380000000000003%" headers="mcps1.2.4.1.2 "><p id="p5761135713185"><a name="p5761135713185"></a><a name="p5761135713185"></a>krl_negative_ipdis_f16f32</p>
-</td>
-<td class="cellrowborder" valign="top" width="63.56%" headers="mcps1.2.4.1.3 "><p id="p20381543012"><a name="p20381543012"></a><a name="p20381543012"></a>进行数据类型为fp16的一对一内积距离计算。</p>
-</td>
-</tr>
-<tr id="row2030213041919"><td class="cellrowborder" valign="top" width="13.059999999999999%" headers="mcps1.2.4.1.1 "><p id="p521251381911"><a name="p521251381911"></a><a name="p521251381911"></a>距离计算接口</p>
-</td>
-<td class="cellrowborder" valign="top" width="23.380000000000003%" headers="mcps1.2.4.1.2 "><p id="p15619557252"><a name="p15619557252"></a><a name="p15619557252"></a>krl_negative_ipdis_s8s32</p>
-</td>
-<td class="cellrowborder" valign="top" width="63.56%" headers="mcps1.2.4.1.3 "><p id="p17303140191918"><a name="p17303140191918"></a><a name="p17303140191918"></a>进行数据类型为int8的一对一内积距离计算。</p>
-</td>
-</tr>
-<tr id="row238412241914"><td class="cellrowborder" valign="top" width="13.059999999999999%" headers="mcps1.2.4.1.1 "><p id="p15213213161920"><a name="p15213213161920"></a><a name="p15213213161920"></a>距离计算接口</p>
-</td>
-<td class="cellrowborder" valign="top" width="23.380000000000003%" headers="mcps1.2.4.1.2 "><p id="p1138418201911"><a name="p1138418201911"></a><a name="p1138418201911"></a>krl_L2sqr_by_idx</p>
-</td>
-<td class="cellrowborder" valign="top" width="63.56%" headers="mcps1.2.4.1.3 "><p id="p203841126192"><a name="p203841126192"></a><a name="p203841126192"></a>进行数据类型为float的一对多欧氏距离计算。</p>
-</td>
-</tr>
-<tr id="row0391358193"><td class="cellrowborder" valign="top" width="13.059999999999999%" headers="mcps1.2.4.1.1 "><p id="p192142139194"><a name="p192142139194"></a><a name="p192142139194"></a>距离计算接口</p>
-</td>
-<td class="cellrowborder" valign="top" width="23.380000000000003%" headers="mcps1.2.4.1.2 "><p id="p2725181712253"><a name="p2725181712253"></a><a name="p2725181712253"></a>krl_L2sqr_by_idx_f16f32</p>
-</td>
-<td class="cellrowborder" valign="top" width="63.56%" headers="mcps1.2.4.1.3 "><p id="p133913511915"><a name="p133913511915"></a><a name="p133913511915"></a>进行数据类型为fp16的一对多欧氏距离计算。</p>
-</td>
-</tr>
-<tr id="row0391358193_sve2"><td class="cellrowborder" valign="top" width="13.059999999999999%" headers="mcps1.2.4.1.1 "><p id="p192142139194_sve2"><a name="p192142139194_sve2"></a><a name="p192142139194_sve2"></a>距离计算接口</p>
-</td>
-<td class="cellrowborder" valign="top" width="23.380000000000003%" headers="mcps1.2.4.1.2 "><p id="p2725181712253_sve2"><a name="p2725181712253_sve2"></a><a name="p2725181712253_sve2"></a>krl_L2sqr_by_idx_f16f32_sve2</p>
-</td>
-<td class="cellrowborder" valign="top" width="63.56%" headers="mcps1.2.4.1.3 "><p id="p133913511915_sve2"><a name="p133913511915_sve2"></a><a name="p133913511915_sve2"></a>进行数据类型为fp16的一对多欧氏距离计算（SVE2版本）。</p>
-</td>
-</tr>
-<tr id="row151611671195"><td class="cellrowborder" valign="top" width="13.059999999999999%" headers="mcps1.2.4.1.1 "><p id="p12215201391920"><a name="p12215201391920"></a><a name="p12215201391920"></a>距离计算接口</p>
-</td>
-<td class="cellrowborder" valign="top" width="23.380000000000003%" headers="mcps1.2.4.1.2 "><p id="p20161197101911"><a name="p20161197101911"></a><a name="p20161197101911"></a>krl_L2sqr_by_idx_u8f32</p>
-</td>
-<td class="cellrowborder" valign="top" width="63.56%" headers="mcps1.2.4.1.3 "><p id="p1616177151919"><a name="p1616177151919"></a><a name="p1616177151919"></a>进行数据类型为uint8的一对多欧氏距离计算。</p>
-</td>
-</tr>
-<tr id="row5354120161911"><td class="cellrowborder" valign="top" width="13.059999999999999%" headers="mcps1.2.4.1.1 "><p id="p321691321913"><a name="p321691321913"></a><a name="p321691321913"></a>距离计算接口</p>
-</td>
-<td class="cellrowborder" valign="top" width="23.380000000000003%" headers="mcps1.2.4.1.2 "><p id="p0354420111913"><a name="p0354420111913"></a><a name="p0354420111913"></a>krl_inner_product_by_idx</p>
-</td>
-<td class="cellrowborder" valign="top" width="63.56%" headers="mcps1.2.4.1.3 "><p id="p2354132010196"><a name="p2354132010196"></a><a name="p2354132010196"></a>进行数据类型为float的一对多内积距离计算。</p>
-</td>
-</tr>
-<tr id="row1423643420194"><td class="cellrowborder" valign="top" width="13.059999999999999%" headers="mcps1.2.4.1.1 "><p id="p221741341915"><a name="p221741341915"></a><a name="p221741341915"></a>距离计算接口</p>
-</td>
-<td class="cellrowborder" valign="top" width="23.380000000000003%" headers="mcps1.2.4.1.2 "><p id="p5233173872520"><a name="p5233173872520"></a><a name="p5233173872520"></a>krl_inner_product_by_idx_f16f32</p>
-</td>
-<td class="cellrowborder" valign="top" width="63.56%" headers="mcps1.2.4.1.3 "><p id="p5236113431915"><a name="p5236113431915"></a><a name="p5236113431915"></a>进行数据类型为fp16的一对多内积距离计算。</p>
-</td>
-</tr>
-<tr id="row1423643420194_sve2"><td class="cellrowborder" valign="top" width="13.059999999999999%" headers="mcps1.2.4.1.1 "><p id="p221741341915_sve2"><a name="p221741341915_sve2"></a><a name="p221741341915_sve2"></a>距离计算接口</p>
-</td>
-<td class="cellrowborder" valign="top" width="23.380000000000003%" headers="mcps1.2.4.1.2 "><p id="p5233173872520_sve2"><a name="p5233173872520_sve2"></a><a name="p5233173872520_sve2"></a>krl_inner_product_by_idx_f16f32_sve2</p>
-</td>
-<td class="cellrowborder" valign="top" width="63.56%" headers="mcps1.2.4.1.3 "><p id="p5236113431915_sve2"><a name="p5236113431915_sve2"></a><a name="p5236113431915_sve2"></a>进行数据类型为fp16的一对多内积距离计算（SVE2版本）。</p>
-</td>
-</tr>
-<tr id="row1792738101914"><td class="cellrowborder" valign="top" width="13.059999999999999%" headers="mcps1.2.4.1.1 "><p id="p10218111381917"><a name="p10218111381917"></a><a name="p10218111381917"></a>距离计算接口</p>
-</td>
-<td class="cellrowborder" valign="top" width="23.380000000000003%" headers="mcps1.2.4.1.2 "><p id="p18810342182514"><a name="p18810342182514"></a><a name="p18810342182514"></a>krl_negative_inner_product_by_idx_f16f32</p>
-</td>
-<td class="cellrowborder" valign="top" width="63.56%" headers="mcps1.2.4.1.3 "><p id="p27921838121916"><a name="p27921838121916"></a><a name="p27921838121916"></a>进行数据类型为fp16的一对多内积距离计算，对结果取反。</p>
-</td>
-</tr>
-<tr id="row7651940121918"><td class="cellrowborder" valign="top" width="13.059999999999999%" headers="mcps1.2.4.1.1 "><p id="p32191513101918"><a name="p32191513101918"></a><a name="p32191513101918"></a>距离计算接口</p>
-</td>
-<td class="cellrowborder" valign="top" width="23.380000000000003%" headers="mcps1.2.4.1.2 "><p id="p186516406195"><a name="p186516406195"></a><a name="p186516406195"></a>krl_inner_product_by_idx_s8f32</p>
-</td>
-<td class="cellrowborder" valign="top" width="63.56%" headers="mcps1.2.4.1.3 "><p id="p196511640121916"><a name="p196511640121916"></a><a name="p196511640121916"></a>进行数据类型为int8的一对多内积距离计算。</p>
-</td>
-</tr>
-<tr id="row283274219196"><td class="cellrowborder" valign="top" width="13.059999999999999%" headers="mcps1.2.4.1.1 "><p id="p822001319194"><a name="p822001319194"></a><a name="p822001319194"></a>距离计算接口</p>
-</td>
-<td class="cellrowborder" valign="top" width="23.380000000000003%" headers="mcps1.2.4.1.2 "><p id="p383264213197"><a name="p383264213197"></a><a name="p383264213197"></a>krl_L2sqr_ny</p>
-</td>
-<td class="cellrowborder" valign="top" width="63.56%" headers="mcps1.2.4.1.3 "><p id="p168329424199"><a name="p168329424199"></a><a name="p168329424199"></a>进行数据类型为float的一对多欧氏距离计算。</p>
-</td>
-</tr>
-<tr id="row47661344161914"><td class="cellrowborder" valign="top" width="13.059999999999999%" headers="mcps1.2.4.1.1 "><p id="p1922131381913"><a name="p1922131381913"></a><a name="p1922131381913"></a>距离计算接口</p>
-</td>
-<td class="cellrowborder" valign="top" width="23.380000000000003%" headers="mcps1.2.4.1.2 "><p id="p207661044101919"><a name="p207661044101919"></a><a name="p207661044101919"></a>krl_L2sqr_ny_f16f32</p>
-</td>
-<td class="cellrowborder" valign="top" width="63.56%" headers="mcps1.2.4.1.3 "><p id="p1176710447191"><a name="p1176710447191"></a><a name="p1176710447191"></a>进行数据类型为fp16的一对多欧氏距离计算。</p>
-</td>
-</tr>
-<tr id="row47661344161914_sve2"><td class="cellrowborder" valign="top" width="13.059999999999999%" headers="mcps1.2.4.1.1 "><p id="p1922131381913_sve2"><a name="p1922131381913_sve2"></a><a name="p1922131381913_sve2"></a>距离计算接口</p>
-</td>
-<td class="cellrowborder" valign="top" width="23.380000000000003%" headers="mcps1.2.4.1.2 "><p id="p207661044101919_sve2"><a name="p207661044101919_sve2"></a><a name="p207661044101919_sve2"></a>krl_L2sqr_ny_f16f32_sve2</p>
-</td>
-<td class="cellrowborder" valign="top" width="63.56%" headers="mcps1.2.4.1.3 "><p id="p1176710447191_sve2"><a name="p1176710447191_sve2"></a><a name="p1176710447191_sve2"></a>进行数据类型为fp16的一对多欧氏距离计算（SVE2版本）。</p>
-</td>
-</tr>
-<tr id="row0904184681920"><td class="cellrowborder" valign="top" width="13.059999999999999%" headers="mcps1.2.4.1.1 "><p id="p112221813111918"><a name="p112221813111918"></a><a name="p112221813111918"></a>距离计算接口</p>
-</td>
-<td class="cellrowborder" valign="top" width="23.380000000000003%" headers="mcps1.2.4.1.2 "><p id="p1090416468197"><a name="p1090416468197"></a><a name="p1090416468197"></a>krl_L2sqr_ny_u8f32</p>
-</td>
-<td class="cellrowborder" valign="top" width="63.56%" headers="mcps1.2.4.1.3 "><p id="p19047462196"><a name="p19047462196"></a><a name="p19047462196"></a>进行数据类型为uint8的一对多欧氏距离计算。</p>
-</td>
-</tr>
-<tr id="row1149011486191"><td class="cellrowborder" valign="top" width="13.059999999999999%" headers="mcps1.2.4.1.1 "><p id="p222361351918"><a name="p222361351918"></a><a name="p222361351918"></a>距离计算接口</p>
-</td>
-<td class="cellrowborder" valign="top" width="23.380000000000003%" headers="mcps1.2.4.1.2 "><p id="p9490144814199"><a name="p9490144814199"></a><a name="p9490144814199"></a>krl_L2sqr_ny_with_handle</p>
-</td>
-<td class="cellrowborder" valign="top" width="63.56%" headers="mcps1.2.4.1.3 "><p id="p64901848191916"><a name="p64901848191916"></a><a name="p64901848191916"></a>进行数据类型为float的一对多欧氏距离计算，底库向量与维度存储于Handle中。</p>
-</td>
-</tr>
-<tr id="row221135114193"><td class="cellrowborder" valign="top" width="13.059999999999999%" headers="mcps1.2.4.1.1 "><p id="p15224131313192"><a name="p15224131313192"></a><a name="p15224131313192"></a>距离计算接口</p>
-</td>
-<td class="cellrowborder" valign="top" width="23.380000000000003%" headers="mcps1.2.4.1.2 "><p id="p13221351171919"><a name="p13221351171919"></a><a name="p13221351171919"></a>krl_inner_product_ny</p>
-</td>
-<td class="cellrowborder" valign="top" width="63.56%" headers="mcps1.2.4.1.3 "><p id="p1022851141912"><a name="p1022851141912"></a><a name="p1022851141912"></a>进行数据类型为float的一对多内积距离计算。</p>
-</td>
-</tr>
-<tr id="row1670318531197"><td class="cellrowborder" valign="top" width="13.059999999999999%" headers="mcps1.2.4.1.1 "><p id="p022551361914"><a name="p022551361914"></a><a name="p022551361914"></a>距离计算接口</p>
-</td>
-<td class="cellrowborder" valign="top" width="23.380000000000003%" headers="mcps1.2.4.1.2 "><p id="p370305310196"><a name="p370305310196"></a><a name="p370305310196"></a>krl_inner_product_ny_f16f32</p>
-</td>
-<td class="cellrowborder" valign="top" width="63.56%" headers="mcps1.2.4.1.3 "><p id="p1570335316191"><a name="p1570335316191"></a><a name="p1570335316191"></a>进行数据类型为fp16的一对多内积距离计算。</p>
-</td>
-</tr>
-<tr id="row1670318531197_sve2"><td class="cellrowborder" valign="top" width="13.059999999999999%" headers="mcps1.2.4.1.1 "><p id="p022551361914_sve2"><a name="p022551361914_sve2"></a><a name="p022551361914_sve2"></a>距离计算接口</p>
-</td>
-<td class="cellrowborder" valign="top" width="23.380000000000003%" headers="mcps1.2.4.1.2 "><p id="p370305310196_sve2"><a name="p370305310196_sve2"></a><a name="p370305310196_sve2"></a>krl_inner_product_ny_f16f32_sve2</p>
-</td>
-<td class="cellrowborder" valign="top" width="63.56%" headers="mcps1.2.4.1.3 "><p id="p1570335316191_sve2"><a name="p1570335316191_sve2"></a><a name="p1570335316191_sve2"></a>进行数据类型为fp16的一对多内积距离计算（SVE2版本）。</p>
-</td>
-</tr>
-<tr id="row1659115614196"><td class="cellrowborder" valign="top" width="13.059999999999999%" headers="mcps1.2.4.1.1 "><p id="p222621316199"><a name="p222621316199"></a><a name="p222621316199"></a>距离计算接口</p>
-</td>
-<td class="cellrowborder" valign="top" width="23.380000000000003%" headers="mcps1.2.4.1.2 "><p id="p05910561199"><a name="p05910561199"></a><a name="p05910561199"></a>krl_inner_product_ny_s8f32</p>
-</td>
-<td class="cellrowborder" valign="top" width="63.56%" headers="mcps1.2.4.1.3 "><p id="p135911256161914"><a name="p135911256161914"></a><a name="p135911256161914"></a>进行数据类型为int8的一对多内积距离计算。</p>
-</td>
-</tr>
-<tr id="row86397594196"><td class="cellrowborder" valign="top" width="13.059999999999999%" headers="mcps1.2.4.1.1 "><p id="p11227813101917"><a name="p11227813101917"></a><a name="p11227813101917"></a>距离计算接口</p>
-</td>
-<td class="cellrowborder" valign="top" width="23.380000000000003%" headers="mcps1.2.4.1.2 "><p id="p2640125961913"><a name="p2640125961913"></a><a name="p2640125961913"></a>krl_inner_product_ny_with_handle</p>
-</td>
-<td class="cellrowborder" valign="top" width="63.56%" headers="mcps1.2.4.1.3 "><p id="p8640159201914"><a name="p8640159201914"></a><a name="p8640159201914"></a>进行数据类型为float的一对多内积距离计算，底库向量与维度存储于Handle中。</p>
-</td>
-</tr>
-<tr id="row166751616206"><td class="cellrowborder" valign="top" width="13.059999999999999%" headers="mcps1.2.4.1.1 "><p id="p206851730131710"><a name="p206851730131710"></a><a name="p206851730131710"></a>8bit查表累和接口</p>
-</td>
-<td class="cellrowborder" valign="top" width="23.380000000000003%" headers="mcps1.2.4.1.2 "><p id="p196762119202"><a name="p196762119202"></a><a name="p196762119202"></a>krl_table_lookup_8b_f32</p>
-</td>
-<td class="cellrowborder" valign="top" width="63.56%" headers="mcps1.2.4.1.3 "><p id="p126761515204"><a name="p126761515204"></a><a name="p126761515204"></a>使用8bit索引在float类型表项中查询距离并累和，将累和结果加上dis0后存入dis。</p>
-</td>
-</tr>
-<tr id="row1380243132018"><td class="cellrowborder" valign="top" width="13.059999999999999%" headers="mcps1.2.4.1.1 "><p id="p3506620151918"><a name="p3506620151918"></a><a name="p3506620151918"></a>8bit查表累和接口</p>
-</td>
-<td class="cellrowborder" valign="top" width="23.380000000000003%" headers="mcps1.2.4.1.2 "><p id="p28034302020"><a name="p28034302020"></a><a name="p28034302020"></a>krl_table_lookup_8b_f32_by_idx</p>
-</td>
-<td class="cellrowborder" valign="top" width="63.56%" headers="mcps1.2.4.1.3 "><p id="p4803034206"><a name="p4803034206"></a><a name="p4803034206"></a>使用8bit索引在float类型表项中查询距离并累和，将累和结果加上dis0后存入dis。ID在idx数组中出现的底库向量结果才会参与计算。</p>
-</td>
-</tr>
-<tr id="row13704145182016"><td class="cellrowborder" valign="top" width="13.059999999999999%" headers="mcps1.2.4.1.1 "><p id="p45071220161916"><a name="p45071220161916"></a><a name="p45071220161916"></a>8bit查表累和接口</p>
-</td>
-<td class="cellrowborder" valign="top" width="23.380000000000003%" headers="mcps1.2.4.1.2 "><p id="p270425132019"><a name="p270425132019"></a><a name="p270425132019"></a>krl_table_lookup_8b_f32_with_handle</p>
-</td>
-<td class="cellrowborder" valign="top" width="63.56%" headers="mcps1.2.4.1.3 "><p id="p27041512013"><a name="p27041512013"></a><a name="p27041512013"></a>使用8bit索引在float类型表项中查询距离并累和，将累和结果加上dis0后存入dis。idx数组与dis数组被包含在KRLLUT8bHandle实例中，ID在idx数组中出现的底库向量结果才会参与计算。</p>
-</td>
-</tr>
-<tr id="row1040647122014"><td class="cellrowborder" valign="top" width="13.059999999999999%" headers="mcps1.2.4.1.1 "><p id="p46851630141710"><a name="p46851630141710"></a><a name="p46851630141710"></a>4bit查表累和接口</p>
-</td>
-<td class="cellrowborder" valign="top" width="23.380000000000003%" headers="mcps1.2.4.1.2 "><p id="p12407197202019"><a name="p12407197202019"></a><a name="p12407197202019"></a>krl_fast_table_lookup_step</p>
-</td>
-<td class="cellrowborder" valign="top" width="63.56%" headers="mcps1.2.4.1.3 "><p id="p040757182014"><a name="p040757182014"></a><a name="p040757182014"></a>批量处理数据类型为float的查询向量的4bit查表累和过滤压缩算子。算子支持计算至多16个查询向量与32个底库向量间的距离。在距离计算完成后，将其与阈值进行比较，满足比较条件的底库向量的lt_mask对应位置将会设置为1，反之为0。</p>
-</td>
-</tr>
-<tr id="row187412920207_bs32"><td class="cellrowborder" valign="top" width="13.059999999999999%" headers="mcps1.2.4.1.1 "><p id="p1962812276198_bs32"><a name="p1962812276198_bs32"></a><a name="p1962812276198_bs32"></a>4bit查表累和接口</p>
-</td>
-<td class="cellrowborder" valign="top" width="23.380000000000003%" headers="mcps1.2.4.1.2 "><p id="p1332135182717_bs32"><a name="p1332135182717_bs32"></a><a name="p1332135182717_bs32"></a>krl_L2_table_lookup_fast_scan_bs32</p>
-</td>
-<td class="cellrowborder" valign="top" width="63.56%" headers="mcps1.2.4.1.3 "><p id="p1974249132015_bs32"><a name="p1974249132015_bs32"></a><a name="p1974249132015_bs32"></a>单独处理数据类型为float的查询向量的4比特查表累和过滤压缩算子。计算1个查询向量与32个底库向量间的欧氏距离。根据距离类型决定比较规则，将距离值满足比较规则的底库向量的lt_mask设置为1，反之为0。</p>
-</td>
-</tr>
-<tr id="row10185812122010_bs32"><td class="cellrowborder" valign="top" width="13.059999999999999%" headers="mcps1.2.4.1.1 "><p id="p1630327101916_bs32"><a name="p1630327101916_bs32"></a><a name="p1630327101916_bs32"></a>4bit查表累和接口</p>
-</td>
-<td class="cellrowborder" valign="top" width="23.380000000000003%" headers="mcps1.2.4.1.2 "><p id="p1618516126202_bs32"><a name="p1618516126202_bs32"></a><a name="p1618516126202_bs32"></a>krl_IP_table_lookup_fast_scan_bs32</p>
-</td>
-<td class="cellrowborder" valign="top" width="63.56%" headers="mcps1.2.4.1.3 "><p id="p2405162815416_bs32"><a name="p2405162815416_bs32"></a><a name="p2405162815416_bs32"></a>单独处理数据类型为float的查询向量的4比特查表累和过滤压缩算子。计算1个查询向量与32个底库向量间的内积距离。根据距离类型决定比较规则，将距离值满足比较规则的底库向量的lt_mask设置为1，反之为0。</p>
-</td>
-</tr>
-<tr id="row187412920207"><td class="cellrowborder" valign="top" width="13.059999999999999%" headers="mcps1.2.4.1.1 "><p id="p1962812276198"><a name="p1962812276198"></a><a name="p1962812276198"></a>4bit查表累和接口</p>
-</td>
-<td class="cellrowborder" valign="top" width="23.380000000000003%" headers="mcps1.2.4.1.2 "><p id="p1332135182717"><a name="p1332135182717"></a><a name="p1332135182717"></a>krl_L2_table_lookup_fast_scan_bs64</p>
-</td>
-<td class="cellrowborder" valign="top" width="63.56%" headers="mcps1.2.4.1.3 "><p id="p1974249132015"><a name="p1974249132015"></a><a name="p1974249132015"></a>单独处理数据类型为float的查询向量的4比特查表累和过滤压缩算子。计算1个查询向量与64个底库向量间的欧氏距离。根据距离类型决定比较规则，将距离值满足比较规则的底库向量的lt_mask设置为1，反之为0。</p>
-</td>
-</tr>
-<tr id="row10185812122010"><td class="cellrowborder" valign="top" width="13.059999999999999%" headers="mcps1.2.4.1.1 "><p id="p1630327101916"><a name="p1630327101916"></a><a name="p1630327101916"></a>4bit查表累和接口</p>
-</td>
-<td class="cellrowborder" valign="top" width="23.380000000000003%" headers="mcps1.2.4.1.2 "><p id="p1618516126202"><a name="p1618516126202"></a><a name="p1618516126202"></a>krl_IP_table_lookup_fast_scan_bs64</p>
-</td>
-<td class="cellrowborder" valign="top" width="63.56%" headers="mcps1.2.4.1.3 "><p id="p2405162815416"><a name="p2405162815416"></a><a name="p2405162815416"></a>单独处理数据类型为float的查询向量的4比特查表累和过滤压缩算子。计算1个查询向量与64个底库向量间的内积距离。根据距离类型决定比较规则，将距离值满足比较规则的底库向量的lt_mask设置为1，反之为0。</p>
-</td>
-</tr>
-<tr id="row17962171310208"><td class="cellrowborder" valign="top" width="13.059999999999999%" headers="mcps1.2.4.1.1 "><p id="p3631162715196"><a name="p3631162715196"></a><a name="p3631162715196"></a>4bit查表累和接口</p>
-</td>
-<td class="cellrowborder" valign="top" width="23.380000000000003%" headers="mcps1.2.4.1.2 "><p id="p3585133102819"><a name="p3585133102819"></a><a name="p3585133102819"></a>krl_L2_table_lookup_fast_scan_bs96</p>
-</td>
-<td class="cellrowborder" valign="top" width="63.56%" headers="mcps1.2.4.1.3 "><p id="p18962121362013"><a name="p18962121362013"></a><a name="p18962121362013"></a>单独处理数据类型为float的查询向量的4比特查表累和过滤压缩算子。计算1个查询向量与96个底库向量间的欧氏距离。根据距离类型决定比较规则，将距离值满足比较规则的底库向量的lt_mask设置为1，反之为0。</p>
-</td>
-</tr>
-<tr id="row39991716192015"><td class="cellrowborder" valign="top" width="13.059999999999999%" headers="mcps1.2.4.1.1 "><p id="p56321127121916"><a name="p56321127121916"></a><a name="p56321127121916"></a>4bit查表累和接口</p>
-</td>
-<td class="cellrowborder" valign="top" width="23.380000000000003%" headers="mcps1.2.4.1.2 "><p id="p1999916102012"><a name="p1999916102012"></a><a name="p1999916102012"></a>krl_IP_table_lookup_fast_scan_bs96</p>
-</td>
-<td class="cellrowborder" valign="top" width="63.56%" headers="mcps1.2.4.1.3 "><p id="p8999816192019"><a name="p8999816192019"></a><a name="p8999816192019"></a>单独处理数据类型为float的查询向量的4比特查表累和过滤压缩算子。计算1个查询向量与96个底库向量间的内积距离。根据距离类型决定比较规则，将距离值满足比较规则的底库向量的lt_mask设置为1，反之为0。</p>
-</td>
-</tr>
-<tr id="row187412920207_bs32_sve2"><td class="cellrowborder" valign="top" width="13.059999999999999%" headers="mcps1.2.4.1.1 "><p id="p1962812276198_bs32_sve2"><a name="p1962812276198_bs32_sve2"></a><a name="p1962812276198_bs32_sve2"></a>4bit查表累和接口</p>
-</td>
-<td class="cellrowborder" valign="top" width="23.380000000000003%" headers="mcps1.2.4.1.2 "><p id="p1332135182717_bs32_sve2"><a name="p1332135182717_bs32_sve2"></a><a name="p1332135182717_bs32_sve2"></a>krl_L2_table_lookup_fast_scan_bs32_sve2</p>
-</td>
-<td class="cellrowborder" valign="top" width="63.56%" headers="mcps1.2.4.1.3 "><p id="p1974249132015_bs32_sve2"><a name="p1974249132015_bs32_sve2"></a><a name="p1974249132015_bs32_sve2"></a>单独处理数据类型为float的查询向量的4比特查表累和过滤压缩算子。计算1个查询向量与32个底库向量间的欧氏距离。根据距离类型决定比较规则，将距离值满足比较规则的底库向量的lt_mask设置为1，反之为0（SVE2版本）。</p>
-</td>
-</tr>
-<tr id="row10185812122010_bs32_sve2"><td class="cellrowborder" valign="top" width="13.059999999999999%" headers="mcps1.2.4.1.1 "><p id="p1630327101916_bs32_sve2"><a name="p1630327101916_bs32_sve2"></a><a name="p1630327101916_bs32_sve2"></a>4bit查表累和接口</p>
-</td>
-<td class="cellrowborder" valign="top" width="23.380000000000003%" headers="mcps1.2.4.1.2 "><p id="p1618516126202_bs32_sve2"><a name="p1618516126202_bs32_sve2"></a><a name="p1618516126202_bs32_sve2"></a>krl_IP_table_lookup_fast_scan_bs32_sve2</p>
-</td>
-<td class="cellrowborder" valign="top" width="63.56%" headers="mcps1.2.4.1.3 "><p id="p2405162815416_bs32_sve2"><a name="p2405162815416_bs32_sve2"></a><a name="p2405162815416_bs32_sve2"></a>单独处理数据类型为float的查询向量的4比特查表累和过滤压缩算子。计算1个查询向量与32个底库向量间的内积距离。根据距离类型决定比较规则，将距离值满足比较规则的底库向量的lt_mask设置为1，反之为0（SVE2版本）。</p>
-</td>
-</tr>
-<tr id="row187412920207_bs64_sve2"><td class="cellrowborder" valign="top" width="13.059999999999999%" headers="mcps1.2.4.1.1 "><p id="p1962812276198_bs64_sve2"><a name="p1962812276198_bs64_sve2"></a><a name="p1962812276198_bs64_sve2"></a>4bit查表累和接口</p>
-</td>
-<td class="cellrowborder" valign="top" width="23.380000000000003%" headers="mcps1.2.4.1.2 "><p id="p1332135182717_bs64_sve2"><a name="p1332135182717_bs64_sve2"></a><a name="p1332135182717_bs64_sve2"></a>krl_L2_table_lookup_fast_scan_bs64_sve2</p>
-</td>
-<td class="cellrowborder" valign="top" width="63.56%" headers="mcps1.2.4.1.3 "><p id="p1974249132015_bs64_sve2"><a name="p1974249132015_bs64_sve2"></a><a name="p1974249132015_bs64_sve2"></a>单独处理数据类型为float的查询向量的4比特查表累和过滤压缩算子。计算1个查询向量与64个底库向量间的欧氏距离。根据距离类型决定比较规则，将距离值满足比较规则的底库向量的lt_mask设置为1，反之为0（SVE2版本）。</p>
-</td>
-</tr>
-<tr id="row10185812122010_bs64_sve2"><td class="cellrowborder" valign="top" width="13.059999999999999%" headers="mcps1.2.4.1.1 "><p id="p1630327101916_bs64_sve2"><a name="p1630327101916_bs64_sve2"></a><a name="p1630327101916_bs64_sve2"></a>4bit查表累和接口</p>
-</td>
-<td class="cellrowborder" valign="top" width="23.380000000000003%" headers="mcps1.2.4.1.2 "><p id="p1618516126202_bs64_sve2"><a name="p1618516126202_bs64_sve2"></a><a name="p1618516126202_bs64_sve2"></a>krl_IP_table_lookup_fast_scan_bs64_sve2</p>
-</td>
-<td class="cellrowborder" valign="top" width="63.56%" headers="mcps1.2.4.1.3 "><p id="p2405162815416_bs64_sve2"><a name="p2405162815416_bs64_sve2"></a><a name="p2405162815416_bs64_sve2"></a>单独处理数据类型为float的查询向量的4比特查表累和过滤压缩算子。计算1个查询向量与64个底库向量间的内积距离。根据距离类型决定比较规则，将距离值满足比较规则的底库向量的lt_mask设置为1，反之为0（SVE2版本）。</p>
-</td>
-</tr>
-<tr id="row17962171310208_bs96_sve2"><td class="cellrowborder" valign="top" width="13.059999999999999%" headers="mcps1.2.4.1.1 "><p id="p3631162715196_bs96_sve2"><a name="p3631162715196_bs96_sve2"></a><a name="p3631162715196_bs96_sve2"></a>4bit查表累和接口</p>
-</td>
-<td class="cellrowborder" valign="top" width="23.380000000000003%" headers="mcps1.2.4.1.2 "><p id="p3585133102819_bs96_sve2"><a name="p3585133102819_bs96_sve2"></a><a name="p3585133102819_bs96_sve2"></a>krl_L2_table_lookup_fast_scan_bs96_sve2</p>
-</td>
-<td class="cellrowborder" valign="top" width="63.56%" headers="mcps1.2.4.1.3 "><p id="p18962121362013_bs96_sve2"><a name="p18962121362013_bs96_sve2"></a><a name="p18962121362013_bs96_sve2"></a>单独处理数据类型为float的查询向量的4比特查表累和过滤压缩算子。计算1个查询向量与96个底库向量间的欧氏距离。根据距离类型决定比较规则，将距离值满足比较规则的底库向量的lt_mask设置为1，反之为0（SVE2版本）。</p>
-</td>
-</tr>
-<tr id="row39991716192015_bs96_sve2"><td class="cellrowborder" valign="top" width="13.059999999999999%" headers="mcps1.2.4.1.1 "><p id="p56321127121916_bs96_sve2"><a name="p56321127121916_bs96_sve2"></a><a name="p56321127121916_bs96_sve2"></a>4bit查表累和接口</p>
-</td>
-<td class="cellrowborder" valign="top" width="23.380000000000003%" headers="mcps1.2.4.1.2 "><p id="p1999916102012_bs96_sve2"><a name="p1999916102012_bs96_sve2"></a><a name="p1999916102012_bs96_sve2"></a>krl_IP_table_lookup_fast_scan_bs96_sve2</p>
-</td>
-<td class="cellrowborder" valign="top" width="63.56%" headers="mcps1.2.4.1.3 "><p id="p8999816192019_bs96_sve2"><a name="p8999816192019_bs96_sve2"></a><a name="p8999816192019_bs96_sve2"></a>单独处理数据类型为float的查询向量的4比特查表累和过滤压缩算子。计算1个查询向量与96个底库向量间的内积距离。根据距离类型决定比较规则，将距离值满足比较规则的底库向量的lt_mask设置为1，反之为0（SVE2版本）。</p>
-</td>
-</tr>
-<tr id="row879313188203"><td class="cellrowborder" valign="top" width="13.059999999999999%" headers="mcps1.2.4.1.1 "><p id="p106331927191916"><a name="p106331927191916"></a><a name="p106331927191916"></a>4bit查表累和接口</p>
-</td>
-<td class="cellrowborder" valign="top" width="23.380000000000003%" headers="mcps1.2.4.1.2 "><p id="p979311816203"><a name="p979311816203"></a><a name="p979311816203"></a>krl_table_lookup_4b_f16</p>
-</td>
-<td class="cellrowborder" valign="top" width="63.56%" headers="mcps1.2.4.1.3 "><p id="p1479391832015"><a name="p1479391832015"></a><a name="p1479391832015"></a>单独处理数据类型为fp16的查询向量的4比特查表累和过滤压缩算子。计算1个查询向量与多个底库向量间的内积距离，距离的初始值为dis_f16。此接口不会进行过滤压缩（与阈值进行比较）。</p>
-</td>
-</tr>
-<tr id="row54279217209"><td class="cellrowborder" valign="top" width="13.059999999999999%" headers="mcps1.2.4.1.1 "><p id="p136351727111911"><a name="p136351727111911"></a><a name="p136351727111911"></a>4bit查表累和接口</p>
-</td>
-<td class="cellrowborder" valign="top" width="23.380000000000003%" headers="mcps1.2.4.1.2 "><p id="p1120132012282"><a name="p1120132012282"></a><a name="p1120132012282"></a>krl_pack_codes_4b</p>
-</td>
-<td class="cellrowborder" valign="top" width="63.56%" headers="mcps1.2.4.1.3 "><p id="p16427162162010"><a name="p16427162162010"></a><a name="p16427162162010"></a>将原始4比特码本数据进行打包处理，以便进行快速查表计算。</p>
-</td>
-</tr>
-<tr id="row_pqfs_unpack_codes_idx"><td class="cellrowborder" valign="top" width="13.059999999999999%" headers="mcps1.2.4.1.1 "><p id="p_pqfs_unpack_cat"><a name="p_pqfs_unpack_cat"></a><a name="p_pqfs_unpack_cat"></a>4bit查表累和接口</p>
-</td>
-<td class="cellrowborder" valign="top" width="23.380000000000003%" headers="mcps1.2.4.1.2 "><p id="p_pqfs_unpack_name"><a name="p_pqfs_unpack_name"></a><a name="p_pqfs_unpack_name"></a>krl_pqfs_unpack_codes</p>
-</td>
-<td class="cellrowborder" valign="top" width="63.56%" headers="mcps1.2.4.1.3 "><p id="p_pqfs_unpack_desc"><a name="p_pqfs_unpack_desc"></a><a name="p_pqfs_unpack_desc"></a>将PQFS布局的4bit打包码本解包为子空间优先的常规码本缓冲区，batchsize须与打包时一致。</p>
-</td>
-</tr>
-<tr id="row_repack_codes_4b_idx"><td class="cellrowborder" valign="top" width="13.059999999999999%" headers="mcps1.2.4.1.1 "><p id="p_repack_4b_cat"><a name="p_repack_4b_cat"></a><a name="p_repack_4b_cat"></a>4bit查表累和接口</p>
-</td>
-<td class="cellrowborder" valign="top" width="23.380000000000003%" headers="mcps1.2.4.1.2 "><p id="p_repack_4b_name"><a name="p_repack_4b_name"></a><a name="p_repack_4b_name"></a>krl_repack_codes_4b</p>
-</td>
-<td class="cellrowborder" valign="top" width="63.56%" headers="mcps1.2.4.1.3 "><p id="p_repack_4b_desc"><a name="p_repack_4b_desc"></a><a name="p_repack_4b_desc"></a>在按向量顺序存放的常规4bit码本与不同分块(batch)布局之间，或在PQFS不同batchsize之间重打包4bit码本。</p>
-</td>
-</tr>
-<tr id="row2013422482018"><td class="cellrowborder" valign="top" width="13.059999999999999%" headers="mcps1.2.4.1.1 "><p id="p18685113014176"><a name="p18685113014176"></a><a name="p18685113014176"></a>重排接口</p>
-</td>
-<td class="cellrowborder" valign="top" width="23.380000000000003%" headers="mcps1.2.4.1.2 "><p id="p5134202413207"><a name="p5134202413207"></a><a name="p5134202413207"></a>krl_reorder_2_vector</p>
-</td>
-<td class="cellrowborder" valign="top" width="63.56%" headers="mcps1.2.4.1.3 "><p id="p6358251857"><a name="p6358251857"></a><a name="p6358251857"></a>计算1个查询向量与多个不连续底库向量间的高精度距离并排序。</p>
-</td>
-</tr>
-<tr id="row071714259208"><td class="cellrowborder" valign="top" width="13.059999999999999%" headers="mcps1.2.4.1.1 "><p id="p1177182991910"><a name="p1177182991910"></a><a name="p1177182991910"></a>重排接口</p>
-</td>
-<td class="cellrowborder" valign="top" width="23.380000000000003%" headers="mcps1.2.4.1.2 "><p id="p671762518203"><a name="p671762518203"></a><a name="p671762518203"></a>krl_reorder_2_vector_continuous</p>
-</td>
-<td class="cellrowborder" valign="top" width="63.56%" headers="mcps1.2.4.1.3 "><p id="p157171825162016"><a name="p157171825162016"></a><a name="p157171825162016"></a>计算1个查询向量与多个连续底库向量间的高精度距离并排序。</p>
-</td>
-</tr>
-<tr id="row101930282204"><td class="cellrowborder" valign="top" width="13.059999999999999%" headers="mcps1.2.4.1.1 "><p id="p17685630131711"><a name="p17685630131711"></a><a name="p17685630131711"></a>保存/加载接口</p>
-</td>
-<td class="cellrowborder" valign="top" width="23.380000000000003%" headers="mcps1.2.4.1.2 "><p id="p619382822013"><a name="p619382822013"></a><a name="p619382822013"></a>krl_store_LUT8Handle</p>
-</td>
-<td class="cellrowborder" valign="top" width="63.56%" headers="mcps1.2.4.1.3 "><p id="p15193228102018"><a name="p15193228102018"></a><a name="p15193228102018"></a>将8bit查找表句柄保存到文件中。</p>
-</td>
-</tr>
-<tr id="row418063172011"><td class="cellrowborder" valign="top" width="13.059999999999999%" headers="mcps1.2.4.1.1 "><p id="p188531538101912"><a name="p188531538101912"></a><a name="p188531538101912"></a>保存/加载接口</p>
-</td>
-<td class="cellrowborder" valign="top" width="23.380000000000003%" headers="mcps1.2.4.1.2 "><p id="p4180133110202"><a name="p4180133110202"></a><a name="p4180133110202"></a>krl_build_LUT8Handle_fromfile</p>
-</td>
-<td class="cellrowborder" valign="top" width="63.56%" headers="mcps1.2.4.1.3 "><p id="p157004230511"><a name="p157004230511"></a><a name="p157004230511"></a>从文件中读取并重建8bit查找表句柄。</p>
-</td>
-</tr>
-<tr id="row4520183315206"><td class="cellrowborder" valign="top" width="13.059999999999999%" headers="mcps1.2.4.1.1 "><p id="p385513812191"><a name="p385513812191"></a><a name="p385513812191"></a>保存/加载接口</p>
-</td>
-<td class="cellrowborder" valign="top" width="23.380000000000003%" headers="mcps1.2.4.1.2 "><p id="p11520103311205"><a name="p11520103311205"></a><a name="p11520103311205"></a>krl_store_distanceHandle</p>
-</td>
-<td class="cellrowborder" valign="top" width="63.56%" headers="mcps1.2.4.1.3 "><p id="p952053342012"><a name="p952053342012"></a><a name="p952053342012"></a>将距离计算句柄保存到文件中。</p>
-</td>
-</tr>
-<tr id="row514503519205"><td class="cellrowborder" valign="top" width="13.059999999999999%" headers="mcps1.2.4.1.1 "><p id="p2856173821913"><a name="p2856173821913"></a><a name="p2856173821913"></a>保存/加载接口</p>
-</td>
-<td class="cellrowborder" valign="top" width="23.380000000000003%" headers="mcps1.2.4.1.2 "><p id="p3146835102018"><a name="p3146835102018"></a><a name="p3146835102018"></a>krl_build_distanceHandle_fromfile</p>
-</td>
-<td class="cellrowborder" valign="top" width="63.56%" headers="mcps1.2.4.1.3 "><p id="p144261417573"><a name="p144261417573"></a><a name="p144261417573"></a>从文件中读取并重建距离计算句柄。</p>
-</td>
-</tr>
-</tbody>
-</table>
+
+| 接口类型 | 接口名称 | 接口作用 |
+| --- | --- | --- |
+| Handle类接口 | krl_create_distance_handle | 初始化构建一个KRLDistanceHandle实例，稠密距离计算时使用。 |
+| Handle类接口 | krl_create_reorder_handle | 初始化构建一个KRLDistanceHandle实例，重排计算时使用。 |
+| Handle类接口 | krl_clean_distance_handle | 析构KRLDistanceHandle实例，释放内存空间。 |
+| Handle类接口 | krl_create_LUT8b_handle | 初始化构建一个KRLLUT8bHandle实例，8bit查表累和时使用。 |
+| Handle类接口 | krl_clean_LUT8b_handle | 析构KRLLUT8bHandle实例，释放内存空间。 |
+| Handle类接口 | krl_get_idx_pointer | 获取KRLLUT8bHandle实例中存储的需要计算的底库向量ID。 |
+| Handle类接口 | krl_get_dist_pointer | 获取KRLLUT8bHandle实例中存储的距离数组首地址，在调用查表累和计算算子之前为随机数，调用之后为计算得到的距离。 |
+| 距离计算接口 | krl_L2sqr | 进行数据类型为float的一对一欧氏距离计算。 |
+| 距离计算接口 | krl_L2sqr_f16f32 | 进行数据类型为fp16的一对一欧氏距离计算。 |
+| 距离计算接口 | krl_L2sqr_f16f32_sve2 | 进行数据类型为fp16的一对一欧氏距离计算（SVE2版本）。 |
+| 距离计算接口 | krl_L2sqr_u8u32 | 进行数据类型为uint8的一对一欧氏距离计算。 |
+| 距离计算接口 | krl_ipdis | 进行数据类型为float的一对一内积距离计算。 |
+| 距离计算接口 | krl_negative_ipdis_f16f32 | 进行数据类型为fp16的一对一内积距离计算。 |
+| 距离计算接口 | krl_negative_ipdis_s8s32 | 进行数据类型为int8的一对一内积距离计算。 |
+| 距离计算接口 | krl_L2sqr_by_idx | 进行数据类型为float的一对多欧氏距离计算。 |
+| 距离计算接口 | krl_L2sqr_by_idx_f16f32 | 进行数据类型为fp16的一对多欧氏距离计算。 |
+| 距离计算接口 | krl_L2sqr_by_idx_f16f32_sve2 | 进行数据类型为fp16的一对多欧氏距离计算（SVE2版本）。 |
+| 距离计算接口 | krl_L2sqr_by_idx_u8f32 | 进行数据类型为uint8的一对多欧氏距离计算。 |
+| 距离计算接口 | krl_inner_product_by_idx | 进行数据类型为float的一对多内积距离计算。 |
+| 距离计算接口 | krl_inner_product_by_idx_f16f32 | 进行数据类型为fp16的一对多内积距离计算。 |
+| 距离计算接口 | krl_inner_product_by_idx_f16f32_sve2 | 进行数据类型为fp16的一对多内积距离计算（SVE2版本）。 |
+| 距离计算接口 | krl_negative_inner_product_by_idx_f16f32 | 进行数据类型为fp16的一对多内积距离计算，对结果取反。 |
+| 距离计算接口 | krl_inner_product_by_idx_s8f32 | 进行数据类型为int8的一对多内积距离计算。 |
+| 距离计算接口 | krl_L2sqr_ny | 进行数据类型为float的一对多欧氏距离计算。 |
+| 距离计算接口 | krl_L2sqr_ny_f16f32 | 进行数据类型为fp16的一对多欧氏距离计算。 |
+| 距离计算接口 | krl_L2sqr_ny_f16f32_sve2 | 进行数据类型为fp16的一对多欧氏距离计算（SVE2版本）。 |
+| 距离计算接口 | krl_L2sqr_ny_u8f32 | 进行数据类型为uint8的一对多欧氏距离计算。 |
+| 距离计算接口 | krl_L2sqr_ny_with_handle | 进行数据类型为float的一对多欧氏距离计算，底库向量与维度存储于Handle中。 |
+| 距离计算接口 | krl_inner_product_ny | 进行数据类型为float的一对多内积距离计算。 |
+| 距离计算接口 | krl_inner_product_ny_f16f32 | 进行数据类型为fp16的一对多内积距离计算。 |
+| 距离计算接口 | krl_inner_product_ny_f16f32_sve2 | 进行数据类型为fp16的一对多内积距离计算（SVE2版本）。 |
+| 距离计算接口 | krl_inner_product_ny_s8f32 | 进行数据类型为int8的一对多内积距离计算。 |
+| 距离计算接口 | krl_inner_product_ny_with_handle | 进行数据类型为float的一对多内积距离计算，底库向量与维度存储于Handle中。 |
+| 8bit查表累和接口 | krl_table_lookup_8b_f32 | 使用8bit索引在float类型表项中查询距离并累和，将累和结果加上dis0后存入dis。 |
+| 8bit查表累和接口 | krl_table_lookup_8b_f32_by_idx | 使用8bit索引在float类型表项中查询距离并累和，将累和结果加上dis0后存入dis。ID在idx数组中出现的底库向量结果才会参与计算。 |
+| 8bit查表累和接口 | krl_table_lookup_8b_f32_with_handle | 使用8bit索引在float类型表项中查询距离并累和，将累和结果加上dis0后存入dis。idx数组与dis数组被包含在KRLLUT8bHandle实例中，ID在idx数组中出现的底库向量结果才会参与计算。 |
+| 4bit查表累和接口 | krl_fast_table_lookup_step | 批量处理数据类型为float的查询向量的4bit查表累和过滤压缩算子。算子支持计算至多16个查询向量与32个底库向量间的距离。在距离计算完成后，将其与阈值进行比较，满足比较条件的底库向量的lt_mask对应位置将会设置为1，反之为0。 |
+| 4bit查表累和接口 | krl_L2_table_lookup_fast_scan_bs32 | 单独处理数据类型为float的查询向量的4比特查表累和过滤压缩算子。计算1个查询向量与32个底库向量间的欧氏距离。根据距离类型决定比较规则，将距离值满足比较规则的底库向量的lt_mask设置为1，反之为0。 |
+| 4bit查表累和接口 | krl_IP_table_lookup_fast_scan_bs32 | 单独处理数据类型为float的查询向量的4比特查表累和过滤压缩算子。计算1个查询向量与32个底库向量间的内积距离。根据距离类型决定比较规则，将距离值满足比较规则的底库向量的lt_mask设置为1，反之为0。 |
+| 4bit查表累和接口 | krl_L2_table_lookup_fast_scan_bs64 | 单独处理数据类型为float的查询向量的4比特查表累和过滤压缩算子。计算1个查询向量与64个底库向量间的欧氏距离。根据距离类型决定比较规则，将距离值满足比较规则的底库向量的lt_mask设置为1，反之为0。 |
+| 4bit查表累和接口 | krl_IP_table_lookup_fast_scan_bs64 | 单独处理数据类型为float的查询向量的4比特查表累和过滤压缩算子。计算1个查询向量与64个底库向量间的内积距离。根据距离类型决定比较规则，将距离值满足比较规则的底库向量的lt_mask设置为1，反之为0。 |
+| 4bit查表累和接口 | krl_L2_table_lookup_fast_scan_bs96 | 单独处理数据类型为float的查询向量的4比特查表累和过滤压缩算子。计算1个查询向量与96个底库向量间的欧氏距离。根据距离类型决定比较规则，将距离值满足比较规则的底库向量的lt_mask设置为1，反之为0。 |
+| 4bit查表累和接口 | krl_IP_table_lookup_fast_scan_bs96 | 单独处理数据类型为float的查询向量的4比特查表累和过滤压缩算子。计算1个查询向量与96个底库向量间的内积距离。根据距离类型决定比较规则，将距离值满足比较规则的底库向量的lt_mask设置为1，反之为0。 |
+| 4bit查表累和接口 | krl_L2_table_lookup_fast_scan_bs32_sve2 | 单独处理数据类型为float的查询向量的4比特查表累和过滤压缩算子。计算1个查询向量与32个底库向量间的欧氏距离。根据距离类型决定比较规则，将距离值满足比较规则的底库向量的lt_mask设置为1，反之为0（SVE2版本）。 |
+| 4bit查表累和接口 | krl_IP_table_lookup_fast_scan_bs32_sve2 | 单独处理数据类型为float的查询向量的4比特查表累和过滤压缩算子。计算1个查询向量与32个底库向量间的内积距离。根据距离类型决定比较规则，将距离值满足比较规则的底库向量的lt_mask设置为1，反之为0（SVE2版本）。 |
+| 4bit查表累和接口 | krl_L2_table_lookup_fast_scan_bs64_sve2 | 单独处理数据类型为float的查询向量的4比特查表累和过滤压缩算子。计算1个查询向量与64个底库向量间的欧氏距离。根据距离类型决定比较规则，将距离值满足比较规则的底库向量的lt_mask设置为1，反之为0（SVE2版本）。 |
+| 4bit查表累和接口 | krl_IP_table_lookup_fast_scan_bs64_sve2 | 单独处理数据类型为float的查询向量的4比特查表累和过滤压缩算子。计算1个查询向量与64个底库向量间的内积距离。根据距离类型决定比较规则，将距离值满足比较规则的底库向量的lt_mask设置为1，反之为0（SVE2版本）。 |
+| 4bit查表累和接口 | krl_L2_table_lookup_fast_scan_bs96_sve2 | 单独处理数据类型为float的查询向量的4比特查表累和过滤压缩算子。计算1个查询向量与96个底库向量间的欧氏距离。根据距离类型决定比较规则，将距离值满足比较规则的底库向量的lt_mask设置为1，反之为0（SVE2版本）。 |
+| 4bit查表累和接口 | krl_IP_table_lookup_fast_scan_bs96_sve2 | 单独处理数据类型为float的查询向量的4比特查表累和过滤压缩算子。计算1个查询向量与96个底库向量间的内积距离。根据距离类型决定比较规则，将距离值满足比较规则的底库向量的lt_mask设置为1，反之为0（SVE2版本）。 |
+| 4bit查表累和接口 | krl_table_lookup_4b_f16 | 单独处理数据类型为fp16的查询向量的4比特查表累和过滤压缩算子。计算1个查询向量与多个底库向量间的内积距离，距离的初始值为dis_f16。此接口不会进行过滤压缩（与阈值进行比较）。 |
+| 4bit查表累和接口 | krl_pack_codes_4b | 将原始4比特码本数据进行打包处理，以便进行快速查表计算。 |
+| 4bit查表累和接口 | krl_pqfs_unpack_codes | 将PQFS布局的4bit打包码本解包为子空间优先的常规码本缓冲区，batchsize须与打包时一致。 |
+| 4bit查表累和接口 | krl_repack_codes_4b | 在按向量顺序存放的常规4bit码本与不同分块(batch)布局之间，或在PQFS不同batchsize之间重打包4bit码本。 |
+| 重排接口 | krl_reorder_2_vector | 计算1个查询向量与多个不连续底库向量间的高精度距离并排序。 |
+| 重排接口 | krl_reorder_2_vector_continuous | 计算1个查询向量与多个连续底库向量间的高精度距离并排序。 |
+| 保存/加载接口 | krl_store_LUT8Handle | 将8bit查找表句柄保存到文件中。 |
+| 保存/加载接口 | krl_build_LUT8Handle_fromfile | 从文件中读取并重建8bit查找表句柄。 |
+| 保存/加载接口 | krl_store_distanceHandle | 将距离计算句柄保存到文件中。 |
+| 保存/加载接口 | krl_build_distanceHandle_fromfile | 从文件中读取并重建距离计算句柄。 |
 
 ## Handle类接口
 
@@ -446,118 +87,26 @@ int krl\_create\_distance\_handle\(KRLDistanceHandle\*\* kdh, size\_t accu\_leve
 **参数说明<a name="section157501312135019"></a>**
 
 <a name="table1623016332509"></a>
-<table><thead align="left"><tr id="row823063355012"><th class="cellrowborder" valign="top" width="15.56155615561556%" id="mcps1.1.5.1.1"><p id="p1230333125010"><a name="p1230333125010"></a><a name="p1230333125010"></a>参数名称</p>
-</th>
-<th class="cellrowborder" valign="top" width="14.591459145914593%" id="mcps1.1.5.1.2"><p id="p089311158912"><a name="p089311158912"></a><a name="p089311158912"></a>数据类型</p>
-</th>
-<th class="cellrowborder" valign="top" width="33.99339933993399%" id="mcps1.1.5.1.3"><p id="p4230193313507"><a name="p4230193313507"></a><a name="p4230193313507"></a>描述</p>
-</th>
-<th class="cellrowborder" valign="top" width="35.85358535853585%" id="mcps1.1.5.1.4"><p id="p19887819256"><a name="p19887819256"></a><a name="p19887819256"></a>取值范围</p>
-</th>
-</tr>
-</thead>
-<tbody><tr id="row1823023318504"><td class="cellrowborder" valign="top" width="15.56155615561556%" headers="mcps1.1.5.1.1 "><p id="p11230033165015"><a name="p11230033165015"></a><a name="p11230033165015"></a>kdh</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.591459145914593%" headers="mcps1.1.5.1.2 "><p id="p98931015893"><a name="p98931015893"></a><a name="p98931015893"></a>KRLDistanceHandle**</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p182303331508"><a name="p182303331508"></a><a name="p182303331508"></a>需要被初始化构建的KRLDistanceHandle指针。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p79885872519"><a name="p79885872519"></a><a name="p79885872519"></a>限制为非空指针，指向一个空指针。</p>
-</td>
-</tr>
-<tr id="row11230173385019"><td class="cellrowborder" valign="top" width="15.56155615561556%" headers="mcps1.1.5.1.1 "><p id="p22301333165015"><a name="p22301333165015"></a><a name="p22301333165015"></a>accu_level</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.591459145914593%" headers="mcps1.1.5.1.2 "><p id="p5893141517919"><a name="p5893141517919"></a><a name="p5893141517919"></a>size_t</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p10230433115013"><a name="p10230433115013"></a><a name="p10230433115013"></a>计算时的量化等级。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p77289581198"><a name="p77289581198"></a><a name="p77289581198"></a>[1,3]，取值表示不同的量化等级：</p>
-<a name="ul164886121012"></a><a name="ul164886121012"></a><ul id="ul164886121012"><li>1：int8。</li><li>2：fp16。</li><li>3：fp32。</li></ul>
-</td>
-</tr>
-<tr id="row1368063274610"><td class="cellrowborder" valign="top" width="15.56155615561556%" headers="mcps1.1.5.1.1 "><p id="p116802032174613"><a name="p116802032174613"></a><a name="p116802032174613"></a>blocksize</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.591459145914593%" headers="mcps1.1.5.1.2 "><p id="p489312151893"><a name="p489312151893"></a><a name="p489312151893"></a>size_t</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p268013224617"><a name="p268013224617"></a><a name="p268013224617"></a>数据分块大小。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p6989158192510"><a name="p6989158192510"></a><a name="p6989158192510"></a>16或32或64。选择最大能除尽底库向量数量的分块。</p>
-</td>
-</tr>
-<tr id="row8597534164617"><td class="cellrowborder" valign="top" width="15.56155615561556%" headers="mcps1.1.5.1.1 "><p id="p4597734184616"><a name="p4597734184616"></a><a name="p4597734184616"></a>codes_num</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.591459145914593%" headers="mcps1.1.5.1.2 "><p id="p178931015394"><a name="p178931015394"></a><a name="p178931015394"></a>size_t</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p65975343465"><a name="p65975343465"></a><a name="p65975343465"></a>每个查询向量计算的底库向量数量。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p16989883251"><a name="p16989883251"></a><a name="p16989883251"></a>[1,2^30-1]</p>
-</td>
-</tr>
-<tr id="row523013315504"><td class="cellrowborder" valign="top" width="15.56155615561556%" headers="mcps1.1.5.1.1 "><p id="p10230123316509"><a name="p10230123316509"></a><a name="p10230123316509"></a>dim</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.591459145914593%" headers="mcps1.1.5.1.2 "><p id="p2894215596"><a name="p2894215596"></a><a name="p2894215596"></a>size_t</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p102301133105015"><a name="p102301133105015"></a><a name="p102301133105015"></a>向量维度。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p296864410116"><a name="p296864410116"></a><a name="p296864410116"></a>[1,65535]</p>
-</td>
-</tr>
-<tr id="row1523083315012"><td class="cellrowborder" valign="top" width="15.56155615561556%" headers="mcps1.1.5.1.1 "><p id="p10230433105020"><a name="p10230433105020"></a><a name="p10230433105020"></a>num_base</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.591459145914593%" headers="mcps1.1.5.1.2 "><p id="p15894141519917"><a name="p15894141519917"></a><a name="p15894141519917"></a>size_t</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p623053365015"><a name="p623053365015"></a><a name="p623053365015"></a>单次处理的向量个数。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p1946832961016"><a name="p1946832961016"></a><a name="p1946832961016"></a>[1,65535]</p>
-</td>
-</tr>
-<tr id="row387211011106"><td class="cellrowborder" valign="top" width="15.56155615561556%" headers="mcps1.1.5.1.1 "><p id="p2023791201011"><a name="p2023791201011"></a><a name="p2023791201011"></a>metric_type</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.591459145914593%" headers="mcps1.1.5.1.2 "><p id="p198722006101"><a name="p198722006101"></a><a name="p198722006101"></a>int</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p10237212111013"><a name="p10237212111013"></a><a name="p10237212111013"></a>距离度量类型。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p5904125914109"><a name="p5904125914109"></a><a name="p5904125914109"></a>[0,1]，取值表示不同的距离度量类型：</p>
-<a name="ul396901541013"></a><a name="ul396901541013"></a><ul id="ul396901541013"><li>0：内积距离。</li><li>1：欧氏距离。</li></ul>
-</td>
-</tr>
-<tr id="row7131153011107"><td class="cellrowborder" valign="top" width="15.56155615561556%" headers="mcps1.1.5.1.1 "><p id="p1546185591017"><a name="p1546185591017"></a><a name="p1546185591017"></a>codes</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.591459145914593%" headers="mcps1.1.5.1.2 "><p id="p19131103031011"><a name="p19131103031011"></a><a name="p19131103031011"></a>const uint8_t*</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p55461255161011"><a name="p55461255161011"></a><a name="p55461255161011"></a>底库向量（float）。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p213293001016"><a name="p213293001016"></a><a name="p213293001016"></a>限制长度为codes_size，其中<span class="parmname" id="parmname17671637191415"><a name="parmname17671637191415"></a><a name="parmname17671637191415"></a>“codes_size”</span>为底库向量codes的长度。</p>
-</td>
-</tr>
-<tr id="row1351603315418"><td class="cellrowborder" valign="top" width="15.56155615561556%" headers="mcps1.1.5.1.1 "><p id="p1151717330417"><a name="p1151717330417"></a><a name="p1151717330417"></a>codes_size</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.591459145914593%" headers="mcps1.1.5.1.2 "><p id="p351703319417"><a name="p351703319417"></a><a name="p351703319417"></a>size_t</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p6517433144111"><a name="p6517433144111"></a><a name="p6517433144111"></a>底库向量codes的长度。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p135171733184112"><a name="p135171733184112"></a><a name="p135171733184112"></a>num_base * codes_num * dim * 4，其中<span class="parmname" id="parmname8230125864315"><a name="parmname8230125864315"></a><a name="parmname8230125864315"></a>“num_base”</span>为单次处理的查询向量个数，<span class="parmname" id="parmname11230185824311"><a name="parmname11230185824311"></a><a name="parmname11230185824311"></a>“codes_num”</span>为每个查询向量计算的底库向量数量，<span class="parmname" id="parmname152302580436"><a name="parmname152302580436"></a><a name="parmname152302580436"></a>“dim”</span>为向量维度。</p>
-</td>
-</tr>
-</tbody>
-</table>
+
+| 参数名称 | 数据类型 | 描述 | 取值范围 |
+| --- | --- | --- | --- |
+| kdh | KRLDistanceHandle** | 需要被初始化构建的KRLDistanceHandle指针。 | 限制为非空指针，指向一个空指针。 |
+| accu_level | size_t | 计算时的量化等级。 | [1,3]，取值表示不同的量化等级：<br>1：int8。<br>2：fp16。<br>3：fp32。 |
+| blocksize | size_t | 数据分块大小。 | 16或32或64。选择最大能除尽底库向量数量的分块。 |
+| codes_num | size_t | 每个查询向量计算的底库向量数量。 | [1,2^30-1] |
+| dim | size_t | 向量维度。 | [1,65535] |
+| num_base | size_t | 单次处理的向量个数。 | [1,65535] |
+| metric_type | int | 距离度量类型。 | [0,1]，取值表示不同的距离度量类型：<br>0：内积距离。<br>1：欧氏距离。 |
+| codes | const uint8_t* | 底库向量（float）。 | 限制长度为codes_size，其中“codes_size”为底库向量codes的长度。 |
+| codes_size | size_t | 底库向量codes的长度。 | num_base \* codes_num \* dim \* 4`，其中“num_base”为单次处理的查询向量个数，“codes_num”为每个查询向量计算的底库向量数量，“dim”为向量维度。 |
 
 **返回值<a name="section49971832106"></a>**
 
 <a name="table17997635100"></a>
-<table><thead align="left"><tr id="row699763141018"><th class="cellrowborder" valign="top" width="40%" id="mcps1.1.3.1.1"><p id="p699793141012"><a name="p699793141012"></a><a name="p699793141012"></a>数据类型</p>
-</th>
-<th class="cellrowborder" valign="top" width="60%" id="mcps1.1.3.1.2"><p id="p1999763141020"><a name="p1999763141020"></a><a name="p1999763141020"></a>说明</p>
-</th>
-</tr>
-</thead>
-<tbody><tr id="row1599716361015"><td class="cellrowborder" valign="top" width="40%" headers="mcps1.1.3.1.1 "><p id="p39970319101"><a name="p39970319101"></a><a name="p39970319101"></a>int</p>
-</td>
-<td class="cellrowborder" valign="top" width="60%" headers="mcps1.1.3.1.2 "><p id="p53461032104518"><a name="p53461032104518"></a><a name="p53461032104518"></a>正常运行时返回0，异常退出返回对应错误码。</p>
-</td>
-</tr>
-</tbody>
-</table>
+
+| 数据类型 | 说明 |
+| --- | --- |
+| int | 正常运行时返回0，异常退出返回对应错误码。 |
 
 **使用示例**
 
@@ -626,110 +175,25 @@ int krl\_create\_reorder\_handle\(KRLDistanceHandle\*\* kdh, size\_t accu\_level
 **参数说明<a name="section157501312135019"></a>**
 
 <a name="table1623016332509"></a>
-<table><thead align="left"><tr id="row823063355012"><th class="cellrowborder" valign="top" width="15.56155615561556%" id="mcps1.1.5.1.1"><p id="p1230333125010"><a name="p1230333125010"></a><a name="p1230333125010"></a>参数名称</p>
-</th>
-<th class="cellrowborder" valign="top" width="14.591459145914593%" id="mcps1.1.5.1.2"><p id="p089311158912"><a name="p089311158912"></a><a name="p089311158912"></a>数据类型</p>
-</th>
-<th class="cellrowborder" valign="top" width="30.29302930293029%" id="mcps1.1.5.1.3"><p id="p4230193313507"><a name="p4230193313507"></a><a name="p4230193313507"></a>描述</p>
-</th>
-<th class="cellrowborder" valign="top" width="39.55395539553955%" id="mcps1.1.5.1.4"><p id="p19887819256"><a name="p19887819256"></a><a name="p19887819256"></a>取值范围</p>
-</th>
-</tr>
-</thead>
-<tbody><tr id="row1823023318504"><td class="cellrowborder" valign="top" width="15.56155615561556%" headers="mcps1.1.5.1.1 "><p id="p11230033165015"><a name="p11230033165015"></a><a name="p11230033165015"></a>kdh</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.591459145914593%" headers="mcps1.1.5.1.2 "><p id="p98931015893"><a name="p98931015893"></a><a name="p98931015893"></a>KRLDistanceHandle**</p>
-</td>
-<td class="cellrowborder" valign="top" width="30.29302930293029%" headers="mcps1.1.5.1.3 "><p id="p182303331508"><a name="p182303331508"></a><a name="p182303331508"></a>需要被初始化构建的KRLDistanceHandle指针。</p>
-</td>
-<td class="cellrowborder" valign="top" width="39.55395539553955%" headers="mcps1.1.5.1.4 "><p id="p79885872519"><a name="p79885872519"></a><a name="p79885872519"></a>限制为非空指针，指向一个空指针。</p>
-</td>
-</tr>
-<tr id="row11230173385019"><td class="cellrowborder" valign="top" width="15.56155615561556%" headers="mcps1.1.5.1.1 "><p id="p22301333165015"><a name="p22301333165015"></a><a name="p22301333165015"></a>accu_level</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.591459145914593%" headers="mcps1.1.5.1.2 "><p id="p5893141517919"><a name="p5893141517919"></a><a name="p5893141517919"></a>size_t</p>
-</td>
-<td class="cellrowborder" valign="top" width="30.29302930293029%" headers="mcps1.1.5.1.3 "><p id="p10230433115013"><a name="p10230433115013"></a><a name="p10230433115013"></a>低精度粗排量化等级，用于重排前的粗排阶段。</p>
-</td>
-<td class="cellrowborder" valign="top" width="39.55395539553955%" headers="mcps1.1.5.1.4 "><p id="p77289581198"><a name="p77289581198"></a><a name="p77289581198"></a>[1,3]，取值表示不同的量化等级：</p>
-<a name="ul164886121012"></a><a name="ul164886121012"></a><ul id="ul164886121012"><li>1：int8。</li><li>2：fp16。</li><li>3：fp32。</li></ul>
-</td>
-</tr>
-<tr id="row1368063274610"><td class="cellrowborder" valign="top" width="15.56155615561556%" headers="mcps1.1.5.1.1 "><p id="p116802032174613"><a name="p116802032174613"></a><a name="p116802032174613"></a>full_accu_level</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.591459145914593%" headers="mcps1.1.5.1.2 "><p id="p489312151893"><a name="p489312151893"></a><a name="p489312151893"></a>size_t</p>
-</td>
-<td class="cellrowborder" valign="top" width="30.29302930293029%" headers="mcps1.1.5.1.3 "><p id="p268013224617"><a name="p268013224617"></a><a name="p268013224617"></a>高精度重排量化等级。</p>
-</td>
-<td class="cellrowborder" valign="top" width="39.55395539553955%" headers="mcps1.1.5.1.4 "><p id="p11884449121914"><a name="p11884449121914"></a><a name="p11884449121914"></a>[1,3]，取值表示不同的量化等级：</p>
-<a name="ul1588418498192"></a><a name="ul1588418498192"></a><ul id="ul1588418498192"><li>1：int8。</li><li>2：fp16。</li><li>3：fp32。</li></ul>
-</td>
-</tr>
-<tr id="row8597534164617"><td class="cellrowborder" valign="top" width="15.56155615561556%" headers="mcps1.1.5.1.1 "><p id="p4597734184616"><a name="p4597734184616"></a><a name="p4597734184616"></a>codes_num</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.591459145914593%" headers="mcps1.1.5.1.2 "><p id="p178931015394"><a name="p178931015394"></a><a name="p178931015394"></a>size_t</p>
-</td>
-<td class="cellrowborder" valign="top" width="30.29302930293029%" headers="mcps1.1.5.1.3 "><p id="p65975343465"><a name="p65975343465"></a><a name="p65975343465"></a>每个查询向量计算的底库向量数量。</p>
-</td>
-<td class="cellrowborder" valign="top" width="39.55395539553955%" headers="mcps1.1.5.1.4 "><p id="p16989883251"><a name="p16989883251"></a><a name="p16989883251"></a>[1,2^30-1]</p>
-</td>
-</tr>
-<tr id="row523013315504"><td class="cellrowborder" valign="top" width="15.56155615561556%" headers="mcps1.1.5.1.1 "><p id="p10230123316509"><a name="p10230123316509"></a><a name="p10230123316509"></a>dim</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.591459145914593%" headers="mcps1.1.5.1.2 "><p id="p2894215596"><a name="p2894215596"></a><a name="p2894215596"></a>size_t</p>
-</td>
-<td class="cellrowborder" valign="top" width="30.29302930293029%" headers="mcps1.1.5.1.3 "><p id="p102301133105015"><a name="p102301133105015"></a><a name="p102301133105015"></a>向量维度。</p>
-</td>
-<td class="cellrowborder" valign="top" width="39.55395539553955%" headers="mcps1.1.5.1.4 "><p id="p296864410116"><a name="p296864410116"></a><a name="p296864410116"></a>[1,65535]</p>
-</td>
-</tr>
-<tr id="row387211011106"><td class="cellrowborder" valign="top" width="15.56155615561556%" headers="mcps1.1.5.1.1 "><p id="p2023791201011"><a name="p2023791201011"></a><a name="p2023791201011"></a>metric_type</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.591459145914593%" headers="mcps1.1.5.1.2 "><p id="p198722006101"><a name="p198722006101"></a><a name="p198722006101"></a>int</p>
-</td>
-<td class="cellrowborder" valign="top" width="30.29302930293029%" headers="mcps1.1.5.1.3 "><p id="p10237212111013"><a name="p10237212111013"></a><a name="p10237212111013"></a>距离度量类型。</p>
-</td>
-<td class="cellrowborder" valign="top" width="39.55395539553955%" headers="mcps1.1.5.1.4 "><p id="p5904125914109"><a name="p5904125914109"></a><a name="p5904125914109"></a>[0,1]，取值表示不同的距离度量类型：</p>
-<a name="ul396901541013"></a><a name="ul396901541013"></a><ul id="ul396901541013"><li>0：内积距离。</li><li>1：欧氏距离。</li></ul>
-</td>
-</tr>
-<tr id="row7131153011107"><td class="cellrowborder" valign="top" width="15.56155615561556%" headers="mcps1.1.5.1.1 "><p id="p1546185591017"><a name="p1546185591017"></a><a name="p1546185591017"></a>codes</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.591459145914593%" headers="mcps1.1.5.1.2 "><p id="p19131103031011"><a name="p19131103031011"></a><a name="p19131103031011"></a>const uint8_t*</p>
-</td>
-<td class="cellrowborder" valign="top" width="30.29302930293029%" headers="mcps1.1.5.1.3 "><p id="p55461255161011"><a name="p55461255161011"></a><a name="p55461255161011"></a>底库向量编码数据。</p>
-</td>
-<td class="cellrowborder" valign="top" width="39.55395539553955%" headers="mcps1.1.5.1.4 "><p id="p213293001016"><a name="p213293001016"></a><a name="p213293001016"></a>限制长度为codes_size，其中<span class="parmname" id="parmname17671637191415"><a name="parmname17671637191415"></a><a name="parmname17671637191415"></a>“codes_size”</span>为底库向量codes的长度。</p>
-</td>
-</tr>
-<tr id="row104562557484"><td class="cellrowborder" valign="top" width="15.56155615561556%" headers="mcps1.1.5.1.1 "><p id="p1151717330417"><a name="p1151717330417"></a><a name="p1151717330417"></a>codes_size</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.591459145914593%" headers="mcps1.1.5.1.2 "><p id="p351703319417"><a name="p351703319417"></a><a name="p351703319417"></a>size_t</p>
-</td>
-<td class="cellrowborder" valign="top" width="30.29302930293029%" headers="mcps1.1.5.1.3 "><p id="p6517433144111"><a name="p6517433144111"></a><a name="p6517433144111"></a>底库向量codes的长度。</p>
-</td>
-<td class="cellrowborder" valign="top" width="39.55395539553955%" headers="mcps1.1.5.1.4 "><p id="p135171733184112"><a name="p135171733184112"></a><a name="p135171733184112"></a>codes_num * dim * 4，其中<span class="parmname" id="parmname11230185824311"><a name="parmname11230185824311"></a><a name="parmname11230185824311"></a>“codes_num”</span>为每个查询向量计算的底库向量数量，<span class="parmname" id="parmname152302580436"><a name="parmname152302580436"></a><a name="parmname152302580436"></a>“dim”</span>为向量维度。</p>
-</td>
-</tr>
-</tbody>
-</table>
+
+| 参数名称 | 数据类型 | 描述 | 取值范围 |
+| --- | --- | --- | --- |
+| kdh | KRLDistanceHandle** | 需要被初始化构建的KRLDistanceHandle指针。 | 限制为非空指针，指向一个空指针。 |
+| accu_level | size_t | 低精度粗排量化等级，用于重排前的粗排阶段。 | [1,3]，取值表示不同的量化等级：<br>1：int8。<br>2：fp16。<br>3：fp32。 |
+| full_accu_level | size_t | 高精度重排量化等级。 | [1,3]，取值表示不同的量化等级：<br>1：int8。<br>2：fp16。<br>3：fp32。 |
+| codes_num | size_t | 每个查询向量计算的底库向量数量。 | [1,2^30-1] |
+| dim | size_t | 向量维度。 | [1,65535] |
+| metric_type | int | 距离度量类型。 | [0,1]，取值表示不同的距离度量类型：<br>0：内积距离。<br>1：欧氏距离。 |
+| codes | const uint8_t* | 底库向量编码数据。 | 限制长度为codes_size，其中“codes_size”为底库向量codes的长度。 |
+| codes_size | size_t | 底库向量codes的长度。 | codes_num \* dim \* 4，其中“codes_num”为每个查询向量计算的底库向量数量，“dim”为向量维度。 |
 
 **返回值<a name="section49971832106"></a>**
 
 <a name="table17997635100"></a>
-<table><thead align="left"><tr id="row699763141018"><th class="cellrowborder" valign="top" width="40%" id="mcps1.1.3.1.1"><p id="p699793141012"><a name="p699793141012"></a><a name="p699793141012"></a>数据类型</p>
-</th>
-<th class="cellrowborder" valign="top" width="60%" id="mcps1.1.3.1.2"><p id="p1999763141020"><a name="p1999763141020"></a><a name="p1999763141020"></a>说明</p>
-</th>
-</tr>
-</thead>
-<tbody><tr id="row1599716361015"><td class="cellrowborder" valign="top" width="40%" headers="mcps1.1.3.1.1 "><p id="p39970319101"><a name="p39970319101"></a><a name="p39970319101"></a>int</p>
-</td>
-<td class="cellrowborder" valign="top" width="60%" headers="mcps1.1.3.1.2 "><p id="p53461032104518"><a name="p53461032104518"></a><a name="p53461032104518"></a>正常运行时返回0，异常退出返回对应错误码。</p>
-</td>
-</tr>
-</tbody>
-</table>
+
+| 数据类型 | 说明 |
+| --- | --- |
+| int | 正常运行时返回0，异常退出返回对应错误码。 |
 
 **使用示例**
 
@@ -795,27 +259,10 @@ void krl\_clean\_distance\_handle\(KRLDistanceHandle\*\* kdh\);
 **参数说明<a name="section157501312135019"></a>**
 
 <a name="table1646711617442"></a>
-<table><thead align="left"><tr id="row846751612442"><th class="cellrowborder" valign="top" width="21.349999999999998%" id="mcps1.1.5.1.1"><p id="p1230333125010"><a name="p1230333125010"></a><a name="p1230333125010"></a>参数名称</p>
-</th>
-<th class="cellrowborder" valign="top" width="28.82%" id="mcps1.1.5.1.2"><p id="p089311158912"><a name="p089311158912"></a><a name="p089311158912"></a>数据类型</p>
-</th>
-<th class="cellrowborder" valign="top" width="22.98%" id="mcps1.1.5.1.3"><p id="p4230193313507"><a name="p4230193313507"></a><a name="p4230193313507"></a>描述</p>
-</th>
-<th class="cellrowborder" valign="top" width="26.85%" id="mcps1.1.5.1.4"><p id="p19887819256"><a name="p19887819256"></a><a name="p19887819256"></a>取值范围</p>
-</th>
-</tr>
-</thead>
-<tbody><tr id="row146815169448"><td class="cellrowborder" valign="top" width="21.349999999999998%" headers="mcps1.1.5.1.1 "><p id="p11230033165015"><a name="p11230033165015"></a><a name="p11230033165015"></a>kdh</p>
-</td>
-<td class="cellrowborder" valign="top" width="28.82%" headers="mcps1.1.5.1.2 "><p id="p98931015893"><a name="p98931015893"></a><a name="p98931015893"></a>KRLDistanceHandle**</p>
-</td>
-<td class="cellrowborder" valign="top" width="22.98%" headers="mcps1.1.5.1.3 "><p id="p182303331508"><a name="p182303331508"></a><a name="p182303331508"></a>需要被析构的KRLDistanceHandle指针。</p>
-</td>
-<td class="cellrowborder" valign="top" width="26.85%" headers="mcps1.1.5.1.4 "><p id="p12182012132917"><a name="p12182012132917"></a><a name="p12182012132917"></a>其指向的指针需要被krl_create_distance_handle初始化。</p>
-</td>
-</tr>
-</tbody>
-</table>
+
+| 参数名称 | 数据类型 | 描述 | 取值范围 |
+| --- | --- | --- | --- |
+| kdh | KRLDistanceHandle** | 需要被析构的KRLDistanceHandle指针。 | 其指向的指针需要被krl_create_distance_handle初始化。 |
 
 **使用示例**
 
@@ -866,63 +313,20 @@ int krl\_create\_LUT8b\_handle\(KRLLUT8bHandle\*\* klh, int use\_idx, size\_t ca
 **参数说明<a name="section157501312135019"></a>**
 
 <a name="table1623016332509"></a>
-<table><thead align="left"><tr id="row823063355012"><th class="cellrowborder" valign="top" width="15.56155615561556%" id="mcps1.1.5.1.1"><p id="p1230333125010"><a name="p1230333125010"></a><a name="p1230333125010"></a>参数名称</p>
-</th>
-<th class="cellrowborder" valign="top" width="14.591459145914593%" id="mcps1.1.5.1.2"><p id="p089311158912"><a name="p089311158912"></a><a name="p089311158912"></a>数据类型</p>
-</th>
-<th class="cellrowborder" valign="top" width="33.96339633963397%" id="mcps1.1.5.1.3"><p id="p4230193313507"><a name="p4230193313507"></a><a name="p4230193313507"></a>描述</p>
-</th>
-<th class="cellrowborder" valign="top" width="35.88358835883588%" id="mcps1.1.5.1.4"><p id="p19887819256"><a name="p19887819256"></a><a name="p19887819256"></a>取值范围</p>
-</th>
-</tr>
-</thead>
-<tbody><tr id="row1823023318504"><td class="cellrowborder" valign="top" width="15.56155615561556%" headers="mcps1.1.5.1.1 "><p id="p11230033165015"><a name="p11230033165015"></a><a name="p11230033165015"></a>klh</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.591459145914593%" headers="mcps1.1.5.1.2 "><p id="p98931015893"><a name="p98931015893"></a><a name="p98931015893"></a>KRLLUT8bHandle**</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.96339633963397%" headers="mcps1.1.5.1.3 "><p id="p182303331508"><a name="p182303331508"></a><a name="p182303331508"></a>需要被初始化构建的KRLLUT8bHandle指针。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.88358835883588%" headers="mcps1.1.5.1.4 "><p id="p79885872519"><a name="p79885872519"></a><a name="p79885872519"></a>限制为非空指针，指向一个空指针。</p>
-</td>
-</tr>
-<tr id="row11230173385019"><td class="cellrowborder" valign="top" width="15.56155615561556%" headers="mcps1.1.5.1.1 "><p id="p22301333165015"><a name="p22301333165015"></a><a name="p22301333165015"></a>use_idx</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.591459145914593%" headers="mcps1.1.5.1.2 "><p id="p5893141517919"><a name="p5893141517919"></a><a name="p5893141517919"></a>int</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.96339633963397%" headers="mcps1.1.5.1.3 "><p id="p10230433115013"><a name="p10230433115013"></a><a name="p10230433115013"></a>是否进行底库向量筛选。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.88358835883588%" headers="mcps1.1.5.1.4 "><p id="p77289581198"><a name="p77289581198"></a><a name="p77289581198"></a>[0,1]，取值表示是否进行底库向量筛选：</p>
-<a name="ul164886121012"></a><a name="ul164886121012"></a><ul id="ul164886121012"><li>0：不进行筛选。</li><li>1：进行筛选。</li></ul>
-</td>
-</tr>
-<tr id="row1368063274610"><td class="cellrowborder" valign="top" width="15.56155615561556%" headers="mcps1.1.5.1.1 "><p id="p10579191284217"><a name="p10579191284217"></a><a name="p10579191284217"></a>capacity</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.591459145914593%" headers="mcps1.1.5.1.2 "><p id="p489312151893"><a name="p489312151893"></a><a name="p489312151893"></a>size_t</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.96339633963397%" headers="mcps1.1.5.1.3 "><p id="p268013224617"><a name="p268013224617"></a><a name="p268013224617"></a>Handle类容量，最大可能的距离向量与筛选向量的大小。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.88358835883588%" headers="mcps1.1.5.1.4 "><p id="p173108137452"><a name="p173108137452"></a><a name="p173108137452"></a>大于等于1。大于等于调用krl_table_lookup_8b_f32_with_handle时的ncode，其中<span class="parmname" id="parmname103291726314"><a name="parmname103291726314"></a><a name="parmname103291726314"></a>“ncode”</span>为底库向量总数。</p>
-</td>
-</tr>
-</tbody>
-</table>
+
+| 参数名称 | 数据类型 | 描述 | 取值范围 |
+| --- | --- | --- | --- |
+| klh | KRLLUT8bHandle** | 需要被初始化构建的KRLLUT8bHandle指针。 | 限制为非空指针，指向一个空指针。 |
+| use_idx | int | 是否进行底库向量筛选。 | [0,1]，取值表示是否进行底库向量筛选：<br>0：不进行筛选。<br>1：进行筛选。 |
+| capacity | size_t | Handle类容量，最大可能的距离向量与筛选向量的大小。 | 大于等于1。大于等于调用krl_table_lookup_8b_f32_with_handle时的ncode，其中“ncode”为底库向量总数。 |
 
 **返回值<a name="section49971832106"></a>**
 
 <a name="table17997635100"></a>
-<table><thead align="left"><tr id="row699763141018"><th class="cellrowborder" valign="top" width="40%" id="mcps1.1.3.1.1"><p id="p699793141012"><a name="p699793141012"></a><a name="p699793141012"></a>数据类型</p>
-</th>
-<th class="cellrowborder" valign="top" width="60%" id="mcps1.1.3.1.2"><p id="p1999763141020"><a name="p1999763141020"></a><a name="p1999763141020"></a>说明</p>
-</th>
-</tr>
-</thead>
-<tbody><tr id="row1599716361015"><td class="cellrowborder" valign="top" width="40%" headers="mcps1.1.3.1.1 "><p id="p39970319101"><a name="p39970319101"></a><a name="p39970319101"></a>int</p>
-</td>
-<td class="cellrowborder" valign="top" width="60%" headers="mcps1.1.3.1.2 "><p id="p53461032104518"><a name="p53461032104518"></a><a name="p53461032104518"></a>正常运行时返回0，异常退出返回对应错误码。</p>
-</td>
-</tr>
-</tbody>
-</table>
+
+| 数据类型 | 说明 |
+| --- | --- |
+| int | 正常运行时返回0，异常退出返回对应错误码。 |
 
 **使用示例**
 
@@ -974,27 +378,10 @@ void krl\_clean\_LUT8b\_handle\(KRLLUT8bHandle\*\* klh\);
 **参数说明<a name="section157501312135019"></a>**
 
 <a name="table1623016332509"></a>
-<table><thead align="left"><tr id="row823063355012"><th class="cellrowborder" valign="top" width="15.56155615561556%" id="mcps1.1.5.1.1"><p id="p1230333125010"><a name="p1230333125010"></a><a name="p1230333125010"></a>参数名称</p>
-</th>
-<th class="cellrowborder" valign="top" width="14.591459145914593%" id="mcps1.1.5.1.2"><p id="p089311158912"><a name="p089311158912"></a><a name="p089311158912"></a>数据类型</p>
-</th>
-<th class="cellrowborder" valign="top" width="33.99339933993399%" id="mcps1.1.5.1.3"><p id="p4230193313507"><a name="p4230193313507"></a><a name="p4230193313507"></a>描述</p>
-</th>
-<th class="cellrowborder" valign="top" width="35.85358535853585%" id="mcps1.1.5.1.4"><p id="p19887819256"><a name="p19887819256"></a><a name="p19887819256"></a>取值范围</p>
-</th>
-</tr>
-</thead>
-<tbody><tr id="row1823023318504"><td class="cellrowborder" valign="top" width="15.56155615561556%" headers="mcps1.1.5.1.1 "><p id="p11230033165015"><a name="p11230033165015"></a><a name="p11230033165015"></a>klh</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.591459145914593%" headers="mcps1.1.5.1.2 "><p id="p98931015893"><a name="p98931015893"></a><a name="p98931015893"></a>KRLLUT8bHandle**</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p182303331508"><a name="p182303331508"></a><a name="p182303331508"></a>需要被析构的KRLLUT8bHandle指针。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p79885872519"><a name="p79885872519"></a><a name="p79885872519"></a>其指向的指针需要被krl_create_LUT8b_handle初始化。</p>
-</td>
-</tr>
-</tbody>
-</table>
+
+| 参数名称 | 数据类型 | 描述 | 取值范围 |
+| --- | --- | --- | --- |
+| klh | KRLLUT8bHandle** | 需要被析构的KRLLUT8bHandle指针。 | 其指向的指针需要被krl_create_LUT8b_handle初始化。 |
 
 **使用示例**
 
@@ -1036,44 +423,18 @@ size\_t\* krl\_get\_idx\_pointer\(const KRLLUT8bHandle\* klh\);
 **参数说明<a name="section157501312135019"></a>**
 
 <a name="table1623016332509"></a>
-<table><thead align="left"><tr id="row823063355012"><th class="cellrowborder" valign="top" width="15.56155615561556%" id="mcps1.1.5.1.1"><p id="p1230333125010"><a name="p1230333125010"></a><a name="p1230333125010"></a>参数名称</p>
-</th>
-<th class="cellrowborder" valign="top" width="14.591459145914593%" id="mcps1.1.5.1.2"><p id="p089311158912"><a name="p089311158912"></a><a name="p089311158912"></a>数据类型</p>
-</th>
-<th class="cellrowborder" valign="top" width="33.99339933993399%" id="mcps1.1.5.1.3"><p id="p4230193313507"><a name="p4230193313507"></a><a name="p4230193313507"></a>描述</p>
-</th>
-<th class="cellrowborder" valign="top" width="35.85358535853585%" id="mcps1.1.5.1.4"><p id="p19887819256"><a name="p19887819256"></a><a name="p19887819256"></a>取值范围</p>
-</th>
-</tr>
-</thead>
-<tbody><tr id="row1823023318504"><td class="cellrowborder" valign="top" width="15.56155615561556%" headers="mcps1.1.5.1.1 "><p id="p11230033165015"><a name="p11230033165015"></a><a name="p11230033165015"></a>klh</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.591459145914593%" headers="mcps1.1.5.1.2 "><p id="p98931015893"><a name="p98931015893"></a><a name="p98931015893"></a>KRLLUT8bHandle**</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p182303331508"><a name="p182303331508"></a><a name="p182303331508"></a>KRLLUT8bHandle指针。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p79885872519"><a name="p79885872519"></a><a name="p79885872519"></a>限制非空。</p>
-</td>
-</tr>
-</tbody>
-</table>
+
+| 参数名称 | 数据类型 | 描述 | 取值范围 |
+| --- | --- | --- | --- |
+| klh | KRLLUT8bHandle** | KRLLUT8bHandle指针。 | 限制非空。 |
 
 **返回值<a name="section49971832106"></a>**
 
 <a name="table17997635100"></a>
-<table><thead align="left"><tr id="row699763141018"><th class="cellrowborder" valign="top" width="40%" id="mcps1.1.3.1.1"><p id="p699793141012"><a name="p699793141012"></a><a name="p699793141012"></a>数据类型</p>
-</th>
-<th class="cellrowborder" valign="top" width="60%" id="mcps1.1.3.1.2"><p id="p1999763141020"><a name="p1999763141020"></a><a name="p1999763141020"></a>说明</p>
-</th>
-</tr>
-</thead>
-<tbody><tr id="row1599716361015"><td class="cellrowborder" valign="top" width="40%" headers="mcps1.1.3.1.1 "><p id="p39970319101"><a name="p39970319101"></a><a name="p39970319101"></a>size_t*</p>
-</td>
-<td class="cellrowborder" valign="top" width="60%" headers="mcps1.1.3.1.2 "><p id="p3457449204814"><a name="p3457449204814"></a><a name="p3457449204814"></a>KRLLUT8bHandle实例中存储的需要计算的底库向量ID。</p>
-</td>
-</tr>
-</tbody>
-</table>
+
+| 数据类型 | 说明 |
+| --- | --- |
+| size_t* | KRLLUT8bHandle实例中存储的需要计算的底库向量ID。 |
 
 **使用示例**
 
@@ -1126,44 +487,18 @@ float\* krl\_get\_dist\_pointer\(const KRLLUT8bHandle\* klh\);
 **参数说明<a name="section157501312135019"></a>**
 
 <a name="table1623016332509"></a>
-<table><thead align="left"><tr id="row823063355012"><th class="cellrowborder" valign="top" width="15.56155615561556%" id="mcps1.1.5.1.1"><p id="p1230333125010"><a name="p1230333125010"></a><a name="p1230333125010"></a>参数名称</p>
-</th>
-<th class="cellrowborder" valign="top" width="14.591459145914593%" id="mcps1.1.5.1.2"><p id="p089311158912"><a name="p089311158912"></a><a name="p089311158912"></a>数据类型</p>
-</th>
-<th class="cellrowborder" valign="top" width="33.99339933993399%" id="mcps1.1.5.1.3"><p id="p4230193313507"><a name="p4230193313507"></a><a name="p4230193313507"></a>描述</p>
-</th>
-<th class="cellrowborder" valign="top" width="35.85358535853585%" id="mcps1.1.5.1.4"><p id="p19887819256"><a name="p19887819256"></a><a name="p19887819256"></a>取值范围</p>
-</th>
-</tr>
-</thead>
-<tbody><tr id="row1823023318504"><td class="cellrowborder" valign="top" width="15.56155615561556%" headers="mcps1.1.5.1.1 "><p id="p11230033165015"><a name="p11230033165015"></a><a name="p11230033165015"></a>klh</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.591459145914593%" headers="mcps1.1.5.1.2 "><p id="p98931015893"><a name="p98931015893"></a><a name="p98931015893"></a>KRLLUT8bHandle*</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p182303331508"><a name="p182303331508"></a><a name="p182303331508"></a>KRLLUT8bHandle指针。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p79885872519"><a name="p79885872519"></a><a name="p79885872519"></a>限制非空。</p>
-</td>
-</tr>
-</tbody>
-</table>
+
+| 参数名称 | 数据类型 | 描述 | 取值范围 |
+| --- | --- | --- | --- |
+| klh | KRLLUT8bHandle* | KRLLUT8bHandle指针。 | 限制非空。 |
 
 **返回值<a name="section49971832106"></a>**
 
 <a name="table17997635100"></a>
-<table><thead align="left"><tr id="row699763141018"><th class="cellrowborder" valign="top" width="40%" id="mcps1.1.3.1.1"><p id="p699793141012"><a name="p699793141012"></a><a name="p699793141012"></a>数据类型</p>
-</th>
-<th class="cellrowborder" valign="top" width="60%" id="mcps1.1.3.1.2"><p id="p1999763141020"><a name="p1999763141020"></a><a name="p1999763141020"></a>说明</p>
-</th>
-</tr>
-</thead>
-<tbody><tr id="row1599716361015"><td class="cellrowborder" valign="top" width="40%" headers="mcps1.1.3.1.1 "><p id="p39970319101"><a name="p39970319101"></a><a name="p39970319101"></a>float*</p>
-</td>
-<td class="cellrowborder" valign="top" width="60%" headers="mcps1.1.3.1.2 "><p id="p3457449204814"><a name="p3457449204814"></a><a name="p3457449204814"></a>KRLLUT8bHandle实例中存储的距离数组首地址，在调用查表累和计算算子之前为随机数，调用之后为计算得到的距离。</p>
-</td>
-</tr>
-</tbody>
-</table>
+
+| 数据类型 | 说明 |
+| --- | --- |
+| float* | KRLLUT8bHandle实例中存储的距离数组首地址，在调用查表累和计算算子之前为随机数，调用之后为计算得到的距离。 |
 
 **使用示例**
 
@@ -1217,80 +552,22 @@ int krl\_L2sqr\(const float\* x, const float\* \_\_restrict y, const size\_t d, 
 **参数说明<a name="section157501312135019"></a>**
 
 <a name="table1623016332509"></a>
-<table><thead align="left"><tr id="row823063355012"><th class="cellrowborder" valign="top" width="15.551555155515551%" id="mcps1.1.5.1.1"><p id="p1230333125010"><a name="p1230333125010"></a><a name="p1230333125010"></a>参数名称</p>
-</th>
-<th class="cellrowborder" valign="top" width="14.601460146014599%" id="mcps1.1.5.1.2"><p id="p089311158912"><a name="p089311158912"></a><a name="p089311158912"></a>数据类型</p>
-</th>
-<th class="cellrowborder" valign="top" width="33.99339933993399%" id="mcps1.1.5.1.3"><p id="p4230193313507"><a name="p4230193313507"></a><a name="p4230193313507"></a>描述</p>
-</th>
-<th class="cellrowborder" valign="top" width="35.85358535853585%" id="mcps1.1.5.1.4"><p id="p19887819256"><a name="p19887819256"></a><a name="p19887819256"></a>取值范围</p>
-</th>
-</tr>
-</thead>
-<tbody><tr id="row1823023318504"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p11230033165015"><a name="p11230033165015"></a><a name="p11230033165015"></a>x</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p953215815518"><a name="p953215815518"></a><a name="p953215815518"></a>const float*</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p18661136253"><a name="p18661136253"></a><a name="p18661136253"></a>参与距离计算的查询向量。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p79885872519"><a name="p79885872519"></a><a name="p79885872519"></a>限制长度为d，其中<span class="parmname" id="parmname76117481457"><a name="parmname76117481457"></a><a name="parmname76117481457"></a>“d”</span>为向量维度。</p>
-</td>
-</tr>
-<tr id="row10982132445420"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p4982142445414"><a name="p4982142445414"></a><a name="p4982142445414"></a>y</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p7532158856"><a name="p7532158856"></a><a name="p7532158856"></a>const float*</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p36611261054"><a name="p36611261054"></a><a name="p36611261054"></a>参与距离计算的底库向量。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p85127581355"><a name="p85127581355"></a><a name="p85127581355"></a>限制长度为d，其中<span class="parmname" id="parmname551215813519"><a name="parmname551215813519"></a><a name="parmname551215813519"></a>“d”</span>为向量维度。</p>
-</td>
-</tr>
-<tr id="row106882715416"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p46812710547"><a name="p46812710547"></a><a name="p46812710547"></a>d</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p45311183519"><a name="p45311183519"></a><a name="p45311183519"></a>const size_t</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p17661261256"><a name="p17661261256"></a><a name="p17661261256"></a>向量维度。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p46952755416"><a name="p46952755416"></a><a name="p46952755416"></a>[1,65535]</p>
-</td>
-</tr>
-<tr id="row2848154911529"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p4849194916526"><a name="p4849194916526"></a><a name="p4849194916526"></a>dis</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p484916497520"><a name="p484916497520"></a><a name="p484916497520"></a>float*</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p184912496525"><a name="p184912496525"></a><a name="p184912496525"></a>存储计算所得的距离结果。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p1984914498527"><a name="p1984914498527"></a><a name="p1984914498527"></a>限制长度为dis_size，其中<span class="parmname" id="parmname133743422533"><a name="parmname133743422533"></a><a name="parmname133743422533"></a>“dis_size”</span>为存储距离结果数组的长度。需要预先分配内存。</p>
-</td>
-</tr>
-<tr id="row13612117522"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p271521115212"><a name="p271521115212"></a><a name="p271521115212"></a>dis_size</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p10722125214"><a name="p10722125214"></a><a name="p10722125214"></a>size_t</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p1762116529"><a name="p1762116529"></a><a name="p1762116529"></a>存储距离结果数组的长度。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p17182165214"><a name="p17182165214"></a><a name="p17182165214"></a>限制为1。</p>
-</td>
-</tr>
-</tbody>
-</table>
+
+| 参数名称 | 数据类型 | 描述 | 取值范围 |
+| --- | --- | --- | --- |
+| x | const float* | 参与距离计算的查询向量。 | 限制长度为d，其中“d”为向量维度。 |
+| y | const float* | 参与距离计算的底库向量。 | 限制长度为d，其中“d”为向量维度。 |
+| d | const size_t | 向量维度。 | [1,65535] |
+| dis | float* | 存储计算所得的距离结果。 | 限制长度为dis_size，其中“dis_size”为存储距离结果数组的长度。需要预先分配内存。 |
+| dis_size | size_t | 存储距离结果数组的长度。 | 限制为1。 |
 
 **返回值<a name="section49971832106"></a>**
 
 <a name="table17997635100"></a>
-<table><thead align="left"><tr id="row699763141018"><th class="cellrowborder" valign="top" width="40%" id="mcps1.1.3.1.1"><p id="p699793141012"><a name="p699793141012"></a><a name="p699793141012"></a>数据类型</p>
-</th>
-<th class="cellrowborder" valign="top" width="60%" id="mcps1.1.3.1.2"><p id="p1999763141020"><a name="p1999763141020"></a><a name="p1999763141020"></a>说明</p>
-</th>
-</tr>
-</thead>
-<tbody><tr id="row1599716361015"><td class="cellrowborder" valign="top" width="40%" headers="mcps1.1.3.1.1 "><p id="p39970319101"><a name="p39970319101"></a><a name="p39970319101"></a>int</p>
-</td>
-<td class="cellrowborder" valign="top" width="60%" headers="mcps1.1.3.1.2 "><p id="p53461032104518"><a name="p53461032104518"></a><a name="p53461032104518"></a>正常运行时返回0，异常退出返回对应错误码。</p>
-</td>
-</tr>
-</tbody>
-</table>
+
+| 数据类型 | 说明 |
+| --- | --- |
+| int | 正常运行时返回0，异常退出返回对应错误码。 |
 
 **使用示例**
 
@@ -1347,80 +624,22 @@ int krl\_L2sqr\_f16f32\(const uint16\_t\* x, const uint16\_t\* \_\_restrict y, s
 **参数说明<a name="section157501312135019"></a>**
 
 <a name="table1623016332509"></a>
-<table><thead align="left"><tr id="row823063355012"><th class="cellrowborder" valign="top" width="15.551555155515551%" id="mcps1.1.5.1.1"><p id="p1230333125010"><a name="p1230333125010"></a><a name="p1230333125010"></a>参数名称</p>
-</th>
-<th class="cellrowborder" valign="top" width="14.601460146014599%" id="mcps1.1.5.1.2"><p id="p089311158912"><a name="p089311158912"></a><a name="p089311158912"></a>数据类型</p>
-</th>
-<th class="cellrowborder" valign="top" width="33.99339933993399%" id="mcps1.1.5.1.3"><p id="p4230193313507"><a name="p4230193313507"></a><a name="p4230193313507"></a>描述</p>
-</th>
-<th class="cellrowborder" valign="top" width="35.85358535853585%" id="mcps1.1.5.1.4"><p id="p19887819256"><a name="p19887819256"></a><a name="p19887819256"></a>取值范围</p>
-</th>
-</tr>
-</thead>
-<tbody><tr id="row1823023318504"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p11230033165015"><a name="p11230033165015"></a><a name="p11230033165015"></a>x</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p953215815518"><a name="p953215815518"></a><a name="p953215815518"></a>const uint16_t*</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p18661136253"><a name="p18661136253"></a><a name="p18661136253"></a>参与距离计算的查询向量。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p79885872519"><a name="p79885872519"></a><a name="p79885872519"></a>限制长度为d，其中<span class="parmname" id="parmname76117481457"><a name="parmname76117481457"></a><a name="parmname76117481457"></a>“d”</span>为向量维度。</p>
-</td>
-</tr>
-<tr id="row10982132445420"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p4982142445414"><a name="p4982142445414"></a><a name="p4982142445414"></a>y</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p7532158856"><a name="p7532158856"></a><a name="p7532158856"></a>const uint16_t*</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p36611261054"><a name="p36611261054"></a><a name="p36611261054"></a>参与距离计算的底库向量。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p85127581355"><a name="p85127581355"></a><a name="p85127581355"></a>限制长度为d，其中<span class="parmname" id="parmname551215813519"><a name="parmname551215813519"></a><a name="parmname551215813519"></a>“d”</span>为向量维度。</p>
-</td>
-</tr>
-<tr id="row106882715416"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p46812710547"><a name="p46812710547"></a><a name="p46812710547"></a>d</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p45311183519"><a name="p45311183519"></a><a name="p45311183519"></a>size_t</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p17661261256"><a name="p17661261256"></a><a name="p17661261256"></a>向量维度。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p46952755416"><a name="p46952755416"></a><a name="p46952755416"></a>[1,65535]</p>
-</td>
-</tr>
-<tr id="row6435174117149"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p4849194916526"><a name="p4849194916526"></a><a name="p4849194916526"></a>dis</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p484916497520"><a name="p484916497520"></a><a name="p484916497520"></a>float*</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p184912496525"><a name="p184912496525"></a><a name="p184912496525"></a>存储计算所得的距离结果。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p1984914498527"><a name="p1984914498527"></a><a name="p1984914498527"></a>限制长度为dis_size，其中<span class="parmname" id="parmname133743422533"><a name="parmname133743422533"></a><a name="parmname133743422533"></a>“dis_size”</span>为存储距离结果数组的长度。需要预先分配内存。</p>
-</td>
-</tr>
-<tr id="row14276273554"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p271521115212"><a name="p271521115212"></a><a name="p271521115212"></a>dis_size</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p10722125214"><a name="p10722125214"></a><a name="p10722125214"></a>size_t</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p1762116529"><a name="p1762116529"></a><a name="p1762116529"></a>存储距离结果数组的长度。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p17182165214"><a name="p17182165214"></a><a name="p17182165214"></a>限制为1。</p>
-</td>
-</tr>
-</tbody>
-</table>
+
+| 参数名称 | 数据类型 | 描述 | 取值范围 |
+| --- | --- | --- | --- |
+| x | const uint16_t* | 参与距离计算的查询向量。 | 限制长度为d，其中“d”为向量维度。 |
+| y | const uint16_t* | 参与距离计算的底库向量。 | 限制长度为d，其中“d”为向量维度。 |
+| d | size_t | 向量维度。 | [1,65535] |
+| dis | float* | 存储计算所得的距离结果。 | 限制长度为dis_size，其中“dis_size”为存储距离结果数组的长度。需要预先分配内存。 |
+| dis_size | size_t | 存储距离结果数组的长度。 | 限制为1。 |
 
 **返回值<a name="section49971832106"></a>**
 
 <a name="table17997635100"></a>
-<table><thead align="left"><tr id="row699763141018"><th class="cellrowborder" valign="top" width="40%" id="mcps1.1.3.1.1"><p id="p699793141012"><a name="p699793141012"></a><a name="p699793141012"></a>数据类型</p>
-</th>
-<th class="cellrowborder" valign="top" width="60%" id="mcps1.1.3.1.2"><p id="p1999763141020"><a name="p1999763141020"></a><a name="p1999763141020"></a>说明</p>
-</th>
-</tr>
-</thead>
-<tbody><tr id="row1599716361015"><td class="cellrowborder" valign="top" width="40%" headers="mcps1.1.3.1.1 "><p id="p39970319101"><a name="p39970319101"></a><a name="p39970319101"></a>int</p>
-</td>
-<td class="cellrowborder" valign="top" width="60%" headers="mcps1.1.3.1.2 "><p id="p53461032104518"><a name="p53461032104518"></a><a name="p53461032104518"></a>正常运行时返回0，异常退出返回对应错误码。</p>
-</td>
-</tr>
-</tbody>
-</table>
+
+| 数据类型 | 说明 |
+| --- | --- |
+| int | 正常运行时返回0，异常退出返回对应错误码。 |
 
 **使用示例**
 
@@ -1480,80 +699,22 @@ int krl\_L2sqr\_f16f32\_sve2\(const uint16\_t\* x, const uint16\_t\* y, int d, f
 **参数说明<a name="section157501312135019"></a>**
 
 <a name="table1623016332509"></a>
-<table><thead align="left"><tr id="row823063355012"><th class="cellrowborder" valign="top" width="15.551555155515551%" id="mcps1.1.5.1.1"><p id="p1230333125010"><a name="p1230333125010"></a><a name="p1230333125010"></a>参数名称</p>
-</th>
-<th class="cellrowborder" valign="top" width="14.601460146014599%" id="mcps1.1.5.1.2"><p id="p089311158912"><a name="p089311158912"></a><a name="p089311158912"></a>数据类型</p>
-</th>
-<th class="cellrowborder" valign="top" width="33.99339933993399%" id="mcps1.1.5.1.3"><p id="p4230193313507"><a name="p4230193313507"></a><a name="p4230193313507"></a>描述</p>
-</th>
-<th class="cellrowborder" valign="top" width="35.85358535853585%" id="mcps1.1.5.1.4"><p id="p19887819256"><a name="p19887819256"></a><a name="p19887819256"></a>取值范围</p>
-</th>
-</tr>
-</thead>
-<tbody><tr id="row1823023318504"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p11230033165015"><a name="p11230033165015"></a><a name="p11230033165015"></a>x</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p953215815518"><a name="p953215815518"></a><a name="p953215815518"></a>const uint16_t*</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p18661136253"><a name="p18661136253"></a><a name="p18661136253"></a>参与距离计算的查询向量。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p79885872519"><a name="p79885872519"></a><a name="p79885872519"></a>限制长度为d，其中<span class="parmname" id="parmname76117481457"><a name="parmname76117481457"></a><a name="parmname76117481457"></a>“d”</span>为向量维度。</p>
-</td>
-</tr>
-<tr id="row10982132445420"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p4982142445414"><a name="p4982142445414"></a><a name="p4982142445414"></a>y</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p7532158856"><a name="p7532158856"></a><a name="p7532158856"></a>const uint16_t*</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p36611261054"><a name="p36611261054"></a><a name="p36611261054"></a>参与距离计算的底库向量。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p85127581355"><a name="p85127581355"></a><a name="p85127581355"></a>限制长度为d，其中<span class="parmname" id="parmname551215813519"><a name="parmname551215813519"></a><a name="parmname551215813519"></a>“d”</span>为向量维度。</p>
-</td>
-</tr>
-<tr id="row106882715416"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p46812710547"><a name="p46812710547"></a><a name="p46812710547"></a>d</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p45311183519"><a name="p45311183519"></a><a name="p45311183519"></a>size_t</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p17661261256"><a name="p17661261256"></a><a name="p17661261256"></a>向量维度。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p46952755416"><a name="p46952755416"></a><a name="p46952755416"></a>[1,65535]</p>
-</td>
-</tr>
-<tr id="row6435174117149"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p4849194916526"><a name="p4849194916526"></a><a name="p4849194916526"></a>dis</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p484916497520"><a name="p484916497520"></a><a name="p484916497520"></a>float*</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p184912496525"><a name="p184912496525"></a><a name="p184912496525"></a>存储计算所得的距离结果。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p1984914498527"><a name="p1984914498527"></a><a name="p1984914498527"></a>限制长度为dis_size，其中<span class="parmname" id="parmname133743422533"><a name="parmname133743422533"></a><a name="parmname133743422533"></a>“dis_size”</span>为存储距离结果数组的长度。需要预先分配内存。</p>
-</td>
-</tr>
-<tr id="row14276273554"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p271521115212"><a name="p271521115212"></a><a name="p271521115212"></a>dis_size</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p10722125214"><a name="p10722125214"></a><a name="p10722125214"></a>size_t</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p1762116529"><a name="p1762116529"></a><a name="p1762116529"></a>存储距离结果数组的长度。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p17182165214"><a name="p17182165214"></a><a name="p17182165214"></a>限制为1。</p>
-</td>
-</tr>
-</tbody>
-</table>
+
+| 参数名称 | 数据类型 | 描述 | 取值范围 |
+| --- | --- | --- | --- |
+| x | const uint16_t* | 参与距离计算的查询向量。 | 限制长度为d，其中“d”为向量维度。 |
+| y | const uint16_t* | 参与距离计算的底库向量。 | 限制长度为d，其中“d”为向量维度。 |
+| d | size_t | 向量维度。 | [1,65535] |
+| dis | float* | 存储计算所得的距离结果。 | 限制长度为dis_size，其中“dis_size”为存储距离结果数组的长度。需要预先分配内存。 |
+| dis_size | size_t | 存储距离结果数组的长度。 | 限制为1。 |
 
 **返回值<a name="section49971832106"></a>**
 
 <a name="table17997635100"></a>
-<table><thead align="left"><tr id="row699763141018"><th class="cellrowborder" valign="top" width="40%" id="mcps1.1.3.1.1"><p id="p699793141012"><a name="p699793141012"></a><a name="p699793141012"></a>数据类型</p>
-</th>
-<th class="cellrowborder" valign="top" width="60%" id="mcps1.1.3.1.2"><p id="p1999763141020"><a name="p1999763141020"></a><a name="p1999763141020"></a>说明</p>
-</th>
-</tr>
-</thead>
-<tbody><tr id="row1599716361015"><td class="cellrowborder" valign="top" width="40%" headers="mcps1.1.3.1.1 "><p id="p39970319101"><a name="p39970319101"></a><a name="p39970319101"></a>int</p>
-</td>
-<td class="cellrowborder" valign="top" width="60%" headers="mcps1.1.3.1.2 "><p id="p53461032104518"><a name="p53461032104518"></a><a name="p53461032104518"></a>正常运行时返回0，异常退出返回对应错误码。</p>
-</td>
-</tr>
-</tbody>
-</table>
+
+| 数据类型 | 说明 |
+| --- | --- |
+| int | 正常运行时返回0，异常退出返回对应错误码。 |
 
 **使用示例**
 
@@ -1572,80 +733,22 @@ int krl\_L2sqr\_u8u32\(const uint8\_t\* x, const uint8\_t\* \_\_restrict y, size
 **参数说明<a name="section157501312135019"></a>**
 
 <a name="table1623016332509"></a>
-<table><thead align="left"><tr id="row823063355012"><th class="cellrowborder" valign="top" width="15.551555155515551%" id="mcps1.1.5.1.1"><p id="p1230333125010"><a name="p1230333125010"></a><a name="p1230333125010"></a>参数名称</p>
-</th>
-<th class="cellrowborder" valign="top" width="14.601460146014599%" id="mcps1.1.5.1.2"><p id="p089311158912"><a name="p089311158912"></a><a name="p089311158912"></a>数据类型</p>
-</th>
-<th class="cellrowborder" valign="top" width="33.77337733773377%" id="mcps1.1.5.1.3"><p id="p4230193313507"><a name="p4230193313507"></a><a name="p4230193313507"></a>描述</p>
-</th>
-<th class="cellrowborder" valign="top" width="36.07360736073608%" id="mcps1.1.5.1.4"><p id="p19887819256"><a name="p19887819256"></a><a name="p19887819256"></a>取值范围</p>
-</th>
-</tr>
-</thead>
-<tbody><tr id="row1823023318504"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p11230033165015"><a name="p11230033165015"></a><a name="p11230033165015"></a>x</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p953215815518"><a name="p953215815518"></a><a name="p953215815518"></a>const uint8_t*</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.77337733773377%" headers="mcps1.1.5.1.3 "><p id="p18661136253"><a name="p18661136253"></a><a name="p18661136253"></a>参与距离计算的查询向量。</p>
-</td>
-<td class="cellrowborder" valign="top" width="36.07360736073608%" headers="mcps1.1.5.1.4 "><p id="p79885872519"><a name="p79885872519"></a><a name="p79885872519"></a>限制长度为d，其中<span class="parmname" id="parmname76117481457"><a name="parmname76117481457"></a><a name="parmname76117481457"></a>“d”</span>为向量维度。</p>
-</td>
-</tr>
-<tr id="row10982132445420"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p4982142445414"><a name="p4982142445414"></a><a name="p4982142445414"></a>y</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p7532158856"><a name="p7532158856"></a><a name="p7532158856"></a>const uint8_t*</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.77337733773377%" headers="mcps1.1.5.1.3 "><p id="p36611261054"><a name="p36611261054"></a><a name="p36611261054"></a>参与距离计算的底库向量。</p>
-</td>
-<td class="cellrowborder" valign="top" width="36.07360736073608%" headers="mcps1.1.5.1.4 "><p id="p85127581355"><a name="p85127581355"></a><a name="p85127581355"></a>限制长度为d，其中<span class="parmname" id="parmname551215813519"><a name="parmname551215813519"></a><a name="parmname551215813519"></a>“d”</span>为向量维度。</p>
-</td>
-</tr>
-<tr id="row106882715416"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p46812710547"><a name="p46812710547"></a><a name="p46812710547"></a>d</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p45311183519"><a name="p45311183519"></a><a name="p45311183519"></a>size_t</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.77337733773377%" headers="mcps1.1.5.1.3 "><p id="p17661261256"><a name="p17661261256"></a><a name="p17661261256"></a>向量维度。</p>
-</td>
-<td class="cellrowborder" valign="top" width="36.07360736073608%" headers="mcps1.1.5.1.4 "><p id="p46952755416"><a name="p46952755416"></a><a name="p46952755416"></a>[1,65535]</p>
-</td>
-</tr>
-<tr id="row5811550198"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p4849194916526"><a name="p4849194916526"></a><a name="p4849194916526"></a>dis</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p484916497520"><a name="p484916497520"></a><a name="p484916497520"></a>uint32_t*</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.77337733773377%" headers="mcps1.1.5.1.3 "><p id="p184912496525"><a name="p184912496525"></a><a name="p184912496525"></a>存储计算所得的距离结果。</p>
-</td>
-<td class="cellrowborder" valign="top" width="36.07360736073608%" headers="mcps1.1.5.1.4 "><p id="p1984914498527"><a name="p1984914498527"></a><a name="p1984914498527"></a>限制长度为dis_size，其中<span class="parmname" id="parmname133743422533"><a name="parmname133743422533"></a><a name="parmname133743422533"></a>“dis_size”</span>为存储距离结果数组的长度。需要预先分配内存。</p>
-</td>
-</tr>
-<tr id="row1971384576"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p271521115212"><a name="p271521115212"></a><a name="p271521115212"></a>dis_size</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p10722125214"><a name="p10722125214"></a><a name="p10722125214"></a>size_t</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.77337733773377%" headers="mcps1.1.5.1.3 "><p id="p1762116529"><a name="p1762116529"></a><a name="p1762116529"></a>存储距离结果数组的长度。</p>
-</td>
-<td class="cellrowborder" valign="top" width="36.07360736073608%" headers="mcps1.1.5.1.4 "><p id="p17182165214"><a name="p17182165214"></a><a name="p17182165214"></a>限制为1。</p>
-</td>
-</tr>
-</tbody>
-</table>
+
+| 参数名称 | 数据类型 | 描述 | 取值范围 |
+| --- | --- | --- | --- |
+| x | const uint8_t* | 参与距离计算的查询向量。 | 限制长度为d，其中“d”为向量维度。 |
+| y | const uint8_t* | 参与距离计算的底库向量。 | 限制长度为d，其中“d”为向量维度。 |
+| d | size_t | 向量维度。 | [1,65535] |
+| dis | uint32_t* | 存储计算所得的距离结果。 | 限制长度为dis_size，其中“dis_size”为存储距离结果数组的长度。需要预先分配内存。 |
+| dis_size | size_t | 存储距离结果数组的长度。 | 限制为1。 |
 
 **返回值<a name="section49971832106"></a>**
 
 <a name="table17997635100"></a>
-<table><thead align="left"><tr id="row699763141018"><th class="cellrowborder" valign="top" width="40%" id="mcps1.1.3.1.1"><p id="p699793141012"><a name="p699793141012"></a><a name="p699793141012"></a>数据类型</p>
-</th>
-<th class="cellrowborder" valign="top" width="60%" id="mcps1.1.3.1.2"><p id="p1999763141020"><a name="p1999763141020"></a><a name="p1999763141020"></a>说明</p>
-</th>
-</tr>
-</thead>
-<tbody><tr id="row1599716361015"><td class="cellrowborder" valign="top" width="40%" headers="mcps1.1.3.1.1 "><p id="p39970319101"><a name="p39970319101"></a><a name="p39970319101"></a>int</p>
-</td>
-<td class="cellrowborder" valign="top" width="60%" headers="mcps1.1.3.1.2 "><p id="p53461032104518"><a name="p53461032104518"></a><a name="p53461032104518"></a>正常运行时返回0，异常退出返回对应错误码。</p>
-</td>
-</tr>
-</tbody>
-</table>
+
+| 数据类型 | 说明 |
+| --- | --- |
+| int | 正常运行时返回0，异常退出返回对应错误码。 |
 
 **使用示例**
 
@@ -1702,80 +805,22 @@ int krl\_ipdis\(const float\* x, const float\* \_\_restrict y, const size\_t d, 
 **参数说明<a name="section157501312135019"></a>**
 
 <a name="table1623016332509"></a>
-<table><thead align="left"><tr id="row823063355012"><th class="cellrowborder" valign="top" width="15.551555155515551%" id="mcps1.1.5.1.1"><p id="p1230333125010"><a name="p1230333125010"></a><a name="p1230333125010"></a>参数名称</p>
-</th>
-<th class="cellrowborder" valign="top" width="14.591459145914593%" id="mcps1.1.5.1.2"><p id="p089311158912"><a name="p089311158912"></a><a name="p089311158912"></a>数据类型</p>
-</th>
-<th class="cellrowborder" valign="top" width="34.003400340034005%" id="mcps1.1.5.1.3"><p id="p4230193313507"><a name="p4230193313507"></a><a name="p4230193313507"></a>描述</p>
-</th>
-<th class="cellrowborder" valign="top" width="35.85358535853585%" id="mcps1.1.5.1.4"><p id="p19887819256"><a name="p19887819256"></a><a name="p19887819256"></a>取值范围</p>
-</th>
-</tr>
-</thead>
-<tbody><tr id="row1823023318504"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p11230033165015"><a name="p11230033165015"></a><a name="p11230033165015"></a>x</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.591459145914593%" headers="mcps1.1.5.1.2 "><p id="p953215815518"><a name="p953215815518"></a><a name="p953215815518"></a>const float*</p>
-</td>
-<td class="cellrowborder" valign="top" width="34.003400340034005%" headers="mcps1.1.5.1.3 "><p id="p18661136253"><a name="p18661136253"></a><a name="p18661136253"></a>参与距离计算的查询向量。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p79885872519"><a name="p79885872519"></a><a name="p79885872519"></a>限制长度为d，其中<span class="parmname" id="parmname76117481457"><a name="parmname76117481457"></a><a name="parmname76117481457"></a>“d”</span>为向量维度。</p>
-</td>
-</tr>
-<tr id="row10982132445420"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p4982142445414"><a name="p4982142445414"></a><a name="p4982142445414"></a>y</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.591459145914593%" headers="mcps1.1.5.1.2 "><p id="p7532158856"><a name="p7532158856"></a><a name="p7532158856"></a>const float*</p>
-</td>
-<td class="cellrowborder" valign="top" width="34.003400340034005%" headers="mcps1.1.5.1.3 "><p id="p36611261054"><a name="p36611261054"></a><a name="p36611261054"></a>参与距离计算的底库向量。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p85127581355"><a name="p85127581355"></a><a name="p85127581355"></a>限制长度为d，其中<span class="parmname" id="parmname551215813519"><a name="parmname551215813519"></a><a name="parmname551215813519"></a>“d”</span>为向量维度。</p>
-</td>
-</tr>
-<tr id="row106882715416"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p46812710547"><a name="p46812710547"></a><a name="p46812710547"></a>d</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.591459145914593%" headers="mcps1.1.5.1.2 "><p id="p45311183519"><a name="p45311183519"></a><a name="p45311183519"></a>const size_t</p>
-</td>
-<td class="cellrowborder" valign="top" width="34.003400340034005%" headers="mcps1.1.5.1.3 "><p id="p17661261256"><a name="p17661261256"></a><a name="p17661261256"></a>向量维度。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p46952755416"><a name="p46952755416"></a><a name="p46952755416"></a>[1,65535]</p>
-</td>
-</tr>
-<tr id="row6516613222"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p8546192216"><a name="p8546192216"></a><a name="p8546192216"></a>dis</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.591459145914593%" headers="mcps1.1.5.1.2 "><p id="p484916497520"><a name="p484916497520"></a><a name="p484916497520"></a>float*</p>
-</td>
-<td class="cellrowborder" valign="top" width="34.003400340034005%" headers="mcps1.1.5.1.3 "><p id="p184912496525"><a name="p184912496525"></a><a name="p184912496525"></a>存储计算所得的距离结果。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p1984914498527"><a name="p1984914498527"></a><a name="p1984914498527"></a>限制长度为dis_size，其中<span class="parmname" id="parmname133743422533"><a name="parmname133743422533"></a><a name="parmname133743422533"></a>“dis_size”</span>为存储距离结果数组的长度。需要预先分配内存。</p>
-</td>
-</tr>
-<tr id="row976544717599"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p271521115212"><a name="p271521115212"></a><a name="p271521115212"></a>dis_size</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.591459145914593%" headers="mcps1.1.5.1.2 "><p id="p10722125214"><a name="p10722125214"></a><a name="p10722125214"></a>size_t</p>
-</td>
-<td class="cellrowborder" valign="top" width="34.003400340034005%" headers="mcps1.1.5.1.3 "><p id="p1762116529"><a name="p1762116529"></a><a name="p1762116529"></a>存储距离结果数组的长度。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p17182165214"><a name="p17182165214"></a><a name="p17182165214"></a>限制为1。</p>
-</td>
-</tr>
-</tbody>
-</table>
+
+| 参数名称 | 数据类型 | 描述 | 取值范围 |
+| --- | --- | --- | --- |
+| x | const float* | 参与距离计算的查询向量。 | 限制长度为d，其中“d”为向量维度。 |
+| y | const float* | 参与距离计算的底库向量。 | 限制长度为d，其中“d”为向量维度。 |
+| d | const size_t | 向量维度。 | [1,65535] |
+| dis | float* | 存储计算所得的距离结果。 | 限制长度为dis_size，其中“dis_size”为存储距离结果数组的长度。需要预先分配内存。 |
+| dis_size | size_t | 存储距离结果数组的长度。 | 限制为1。 |
 
 **返回值<a name="section49971832106"></a>**
 
 <a name="table17997635100"></a>
-<table><thead align="left"><tr id="row699763141018"><th class="cellrowborder" valign="top" width="40%" id="mcps1.1.3.1.1"><p id="p699793141012"><a name="p699793141012"></a><a name="p699793141012"></a>数据类型</p>
-</th>
-<th class="cellrowborder" valign="top" width="60%" id="mcps1.1.3.1.2"><p id="p1999763141020"><a name="p1999763141020"></a><a name="p1999763141020"></a>说明</p>
-</th>
-</tr>
-</thead>
-<tbody><tr id="row1599716361015"><td class="cellrowborder" valign="top" width="40%" headers="mcps1.1.3.1.1 "><p id="p39970319101"><a name="p39970319101"></a><a name="p39970319101"></a>int</p>
-</td>
-<td class="cellrowborder" valign="top" width="60%" headers="mcps1.1.3.1.2 "><p id="p53461032104518"><a name="p53461032104518"></a><a name="p53461032104518"></a>正常运行时返回0，异常退出返回对应错误码。</p>
-</td>
-</tr>
-</tbody>
-</table>
+
+| 数据类型 | 说明 |
+| --- | --- |
+| int | 正常运行时返回0，异常退出返回对应错误码。 |
 
 **使用示例**
 
@@ -1843,80 +888,22 @@ float krl\_negative\_ipdis\_f16f32\(const uint16\_t\* x, const uint16\_t\* \_\_r
 **参数说明<a name="section157501312135019"></a>**
 
 <a name="table1623016332509"></a>
-<table><thead align="left"><tr id="row823063355012"><th class="cellrowborder" valign="top" width="15.551555155515551%" id="mcps1.1.5.1.1"><p id="p1230333125010"><a name="p1230333125010"></a><a name="p1230333125010"></a>参数名称</p>
-</th>
-<th class="cellrowborder" valign="top" width="14.601460146014599%" id="mcps1.1.5.1.2"><p id="p089311158912"><a name="p089311158912"></a><a name="p089311158912"></a>数据类型</p>
-</th>
-<th class="cellrowborder" valign="top" width="33.99339933993399%" id="mcps1.1.5.1.3"><p id="p4230193313507"><a name="p4230193313507"></a><a name="p4230193313507"></a>描述</p>
-</th>
-<th class="cellrowborder" valign="top" width="35.85358535853585%" id="mcps1.1.5.1.4"><p id="p19887819256"><a name="p19887819256"></a><a name="p19887819256"></a>取值范围</p>
-</th>
-</tr>
-</thead>
-<tbody><tr id="row1823023318504"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p11230033165015"><a name="p11230033165015"></a><a name="p11230033165015"></a>x</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p953215815518"><a name="p953215815518"></a><a name="p953215815518"></a>const uint16_t*</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p18661136253"><a name="p18661136253"></a><a name="p18661136253"></a>参与距离计算的查询向量。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p79885872519"><a name="p79885872519"></a><a name="p79885872519"></a>限制长度为d，其中<span class="parmname" id="parmname76117481457"><a name="parmname76117481457"></a><a name="parmname76117481457"></a>“d”</span>为向量维度。</p>
-</td>
-</tr>
-<tr id="row10982132445420"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p4982142445414"><a name="p4982142445414"></a><a name="p4982142445414"></a>y</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p7532158856"><a name="p7532158856"></a><a name="p7532158856"></a>const uint16_t*</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p36611261054"><a name="p36611261054"></a><a name="p36611261054"></a>参与距离计算的底库向量。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p85127581355"><a name="p85127581355"></a><a name="p85127581355"></a>限制长度为d，其中<span class="parmname" id="parmname551215813519"><a name="parmname551215813519"></a><a name="parmname551215813519"></a>“d”</span>为向量维度。</p>
-</td>
-</tr>
-<tr id="row106882715416"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p46812710547"><a name="p46812710547"></a><a name="p46812710547"></a>d</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p45311183519"><a name="p45311183519"></a><a name="p45311183519"></a>size_t</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p17661261256"><a name="p17661261256"></a><a name="p17661261256"></a>向量维度。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p46952755416"><a name="p46952755416"></a><a name="p46952755416"></a>[1,65535]</p>
-</td>
-</tr>
-<tr id="row172931135182017"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p8546192216"><a name="p8546192216"></a><a name="p8546192216"></a>dis</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p484916497520"><a name="p484916497520"></a><a name="p484916497520"></a>float*</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p184912496525"><a name="p184912496525"></a><a name="p184912496525"></a>存储计算所得的距离结果。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p1984914498527"><a name="p1984914498527"></a><a name="p1984914498527"></a>限制长度为dis_size，其中<span class="parmname" id="parmname133743422533"><a name="parmname133743422533"></a><a name="parmname133743422533"></a>“dis_size”</span>为存储距离结果数组的长度。需要预先分配内存。</p>
-</td>
-</tr>
-<tr id="row54317463111"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p271521115212"><a name="p271521115212"></a><a name="p271521115212"></a>dis_size</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p10722125214"><a name="p10722125214"></a><a name="p10722125214"></a>size_t</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p1762116529"><a name="p1762116529"></a><a name="p1762116529"></a>存储距离结果数组的长度。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p17182165214"><a name="p17182165214"></a><a name="p17182165214"></a>限制为1。</p>
-</td>
-</tr>
-</tbody>
-</table>
+
+| 参数名称 | 数据类型 | 描述 | 取值范围 |
+| --- | --- | --- | --- |
+| x | const uint16_t* | 参与距离计算的查询向量。 | 限制长度为d，其中“d”为向量维度。 |
+| y | const uint16_t* | 参与距离计算的底库向量。 | 限制长度为d，其中“d”为向量维度。 |
+| d | size_t | 向量维度。 | [1,65535] |
+| dis | float* | 存储计算所得的距离结果。 | 限制长度为dis_size，其中“dis_size”为存储距离结果数组的长度。需要预先分配内存。 |
+| dis_size | size_t | 存储距离结果数组的长度。 | 限制为1。 |
 
 **返回值<a name="section49971832106"></a>**
 
 <a name="table17997635100"></a>
-<table><thead align="left"><tr id="row699763141018"><th class="cellrowborder" valign="top" width="40%" id="mcps1.1.3.1.1"><p id="p699793141012"><a name="p699793141012"></a><a name="p699793141012"></a>数据类型</p>
-</th>
-<th class="cellrowborder" valign="top" width="60%" id="mcps1.1.3.1.2"><p id="p1999763141020"><a name="p1999763141020"></a><a name="p1999763141020"></a>说明</p>
-</th>
-</tr>
-</thead>
-<tbody><tr id="row1599716361015"><td class="cellrowborder" valign="top" width="40%" headers="mcps1.1.3.1.1 "><p id="p39970319101"><a name="p39970319101"></a><a name="p39970319101"></a>int</p>
-</td>
-<td class="cellrowborder" valign="top" width="60%" headers="mcps1.1.3.1.2 "><p id="p53461032104518"><a name="p53461032104518"></a><a name="p53461032104518"></a>正常运行时返回0，异常退出返回对应错误码。</p>
-</td>
-</tr>
-</tbody>
-</table>
+
+| 数据类型 | 说明 |
+| --- | --- |
+| int | 正常运行时返回0，异常退出返回对应错误码。 |
 
 **使用示例**
 
@@ -1976,80 +963,22 @@ int krl\_negative\_ipdis\_s8s32\(const int8\_t\* x, const int8\_t\* \_\_restrict
 **参数说明<a name="section157501312135019"></a>**
 
 <a name="table1623016332509"></a>
-<table><thead align="left"><tr id="row823063355012"><th class="cellrowborder" valign="top" width="15.551555155515551%" id="mcps1.1.5.1.1"><p id="p1230333125010"><a name="p1230333125010"></a><a name="p1230333125010"></a>参数名称</p>
-</th>
-<th class="cellrowborder" valign="top" width="14.601460146014599%" id="mcps1.1.5.1.2"><p id="p089311158912"><a name="p089311158912"></a><a name="p089311158912"></a>数据类型</p>
-</th>
-<th class="cellrowborder" valign="top" width="33.99339933993399%" id="mcps1.1.5.1.3"><p id="p4230193313507"><a name="p4230193313507"></a><a name="p4230193313507"></a>描述</p>
-</th>
-<th class="cellrowborder" valign="top" width="35.85358535853585%" id="mcps1.1.5.1.4"><p id="p19887819256"><a name="p19887819256"></a><a name="p19887819256"></a>取值范围</p>
-</th>
-</tr>
-</thead>
-<tbody><tr id="row1823023318504"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p11230033165015"><a name="p11230033165015"></a><a name="p11230033165015"></a>x</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p953215815518"><a name="p953215815518"></a><a name="p953215815518"></a>const int8_t*</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p18661136253"><a name="p18661136253"></a><a name="p18661136253"></a>参与距离计算的查询向量。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p79885872519"><a name="p79885872519"></a><a name="p79885872519"></a>限制长度为d，其中<span class="parmname" id="parmname76117481457"><a name="parmname76117481457"></a><a name="parmname76117481457"></a>“d”</span>为向量维度。</p>
-</td>
-</tr>
-<tr id="row10982132445420"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p4982142445414"><a name="p4982142445414"></a><a name="p4982142445414"></a>y</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p7532158856"><a name="p7532158856"></a><a name="p7532158856"></a>const int8_t*</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p36611261054"><a name="p36611261054"></a><a name="p36611261054"></a>参与距离计算的底库向量。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p85127581355"><a name="p85127581355"></a><a name="p85127581355"></a>限制长度为d，其中<span class="parmname" id="parmname551215813519"><a name="parmname551215813519"></a><a name="parmname551215813519"></a>“d”</span>为向量维度。</p>
-</td>
-</tr>
-<tr id="row106882715416"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p46812710547"><a name="p46812710547"></a><a name="p46812710547"></a>d</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p45311183519"><a name="p45311183519"></a><a name="p45311183519"></a>size_t</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p17661261256"><a name="p17661261256"></a><a name="p17661261256"></a>向量维度。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p46952755416"><a name="p46952755416"></a><a name="p46952755416"></a>[1,65535]</p>
-</td>
-</tr>
-<tr id="row78157718211"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p4816127192115"><a name="p4816127192115"></a><a name="p4816127192115"></a>dis</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p28168718210"><a name="p28168718210"></a><a name="p28168718210"></a>int32_t*</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p184912496525"><a name="p184912496525"></a><a name="p184912496525"></a>存储计算所得的距离结果。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p1984914498527"><a name="p1984914498527"></a><a name="p1984914498527"></a>限制长度为dis_size，其中<span class="parmname" id="parmname133743422533"><a name="parmname133743422533"></a><a name="parmname133743422533"></a>“dis_size”</span>为存储距离结果数组的长度。需要预先分配内存。</p>
-</td>
-</tr>
-<tr id="row162270523"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p271521115212"><a name="p271521115212"></a><a name="p271521115212"></a>dis_size</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p10722125214"><a name="p10722125214"></a><a name="p10722125214"></a>size_t</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p1762116529"><a name="p1762116529"></a><a name="p1762116529"></a>存储距离结果数组的长度。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p17182165214"><a name="p17182165214"></a><a name="p17182165214"></a>限制为1。</p>
-</td>
-</tr>
-</tbody>
-</table>
+
+| 参数名称 | 数据类型 | 描述 | 取值范围 |
+| --- | --- | --- | --- |
+| x | const int8_t* | 参与距离计算的查询向量。 | 限制长度为d，其中“d”为向量维度。 |
+| y | const int8_t* | 参与距离计算的底库向量。 | 限制长度为d，其中“d”为向量维度。 |
+| d | size_t | 向量维度。 | [1,65535] |
+| dis | int32_t* | 存储计算所得的距离结果。 | 限制长度为dis_size，其中“dis_size”为存储距离结果数组的长度。需要预先分配内存。 |
+| dis_size | size_t | 存储距离结果数组的长度。 | 限制为1。 |
 
 **返回值<a name="section49971832106"></a>**
 
 <a name="table17997635100"></a>
-<table><thead align="left"><tr id="row699763141018"><th class="cellrowborder" valign="top" width="40%" id="mcps1.1.3.1.1"><p id="p699793141012"><a name="p699793141012"></a><a name="p699793141012"></a>数据类型</p>
-</th>
-<th class="cellrowborder" valign="top" width="60%" id="mcps1.1.3.1.2"><p id="p1999763141020"><a name="p1999763141020"></a><a name="p1999763141020"></a>说明</p>
-</th>
-</tr>
-</thead>
-<tbody><tr id="row1599716361015"><td class="cellrowborder" valign="top" width="40%" headers="mcps1.1.3.1.1 "><p id="p39970319101"><a name="p39970319101"></a><a name="p39970319101"></a>int</p>
-</td>
-<td class="cellrowborder" valign="top" width="60%" headers="mcps1.1.3.1.2 "><p id="p53461032104518"><a name="p53461032104518"></a><a name="p53461032104518"></a>正常运行时返回0，异常退出返回对应错误码。</p>
-</td>
-</tr>
-</tbody>
-</table>
+
+| 数据类型 | 说明 |
+| --- | --- |
+| int | 正常运行时返回0，异常退出返回对应错误码。 |
 
 **使用示例**
 
@@ -2106,98 +1035,24 @@ int krl\_L2sqr\_by\_idx\(float\* dis, const float\* x, const float\* y, const in
 **参数说明<a name="section157501312135019"></a>**
 
 <a name="table1623016332509"></a>
-<table><thead align="left"><tr id="row823063355012"><th class="cellrowborder" valign="top" width="15.551555155515551%" id="mcps1.1.5.1.1"><p id="p1230333125010"><a name="p1230333125010"></a><a name="p1230333125010"></a>参数名称</p>
-</th>
-<th class="cellrowborder" valign="top" width="14.601460146014599%" id="mcps1.1.5.1.2"><p id="p089311158912"><a name="p089311158912"></a><a name="p089311158912"></a>数据类型</p>
-</th>
-<th class="cellrowborder" valign="top" width="33.99339933993399%" id="mcps1.1.5.1.3"><p id="p4230193313507"><a name="p4230193313507"></a><a name="p4230193313507"></a>描述</p>
-</th>
-<th class="cellrowborder" valign="top" width="35.85358535853585%" id="mcps1.1.5.1.4"><p id="p19887819256"><a name="p19887819256"></a><a name="p19887819256"></a>取值范围</p>
-</th>
-</tr>
-</thead>
-<tbody><tr id="row92301478154"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p223015479158"><a name="p223015479158"></a><a name="p223015479158"></a>dis</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p11230154710156"><a name="p11230154710156"></a><a name="p11230154710156"></a>float*</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p82303471154"><a name="p82303471154"></a><a name="p82303471154"></a>存储计算所得的距离结果。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p1984914498527"><a name="p1984914498527"></a><a name="p1984914498527"></a>限制长度为dis_size，其中<span class="parmname" id="parmname133743422533"><a name="parmname133743422533"></a><a name="parmname133743422533"></a>“dis_size”</span>为存储距离结果数组的长度。需要预先分配内存。</p>
-</td>
-</tr>
-<tr id="row1823023318504"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p11230033165015"><a name="p11230033165015"></a><a name="p11230033165015"></a>x</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p953215815518"><a name="p953215815518"></a><a name="p953215815518"></a>const float*</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p18661136253"><a name="p18661136253"></a><a name="p18661136253"></a>参与距离计算的查询向量。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p79885872519"><a name="p79885872519"></a><a name="p79885872519"></a>限制长度为d，其中<span class="parmname" id="parmname76117481457"><a name="parmname76117481457"></a><a name="parmname76117481457"></a>“d”</span>为向量维度。</p>
-</td>
-</tr>
-<tr id="row10982132445420"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p4982142445414"><a name="p4982142445414"></a><a name="p4982142445414"></a>y</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p7532158856"><a name="p7532158856"></a><a name="p7532158856"></a>const float*</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p36611261054"><a name="p36611261054"></a><a name="p36611261054"></a>参与距离计算的底库向量。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p85127581355"><a name="p85127581355"></a><a name="p85127581355"></a>限制长度为d*ny，其中<span class="parmname" id="parmname551215813519"><a name="parmname551215813519"></a><a name="parmname551215813519"></a>“d”</span>为向量维度，<span class="parmname" id="parmname8646142120239"><a name="parmname8646142120239"></a><a name="parmname8646142120239"></a>“ny”</span>为参与距离计算的底库向量个数。</p>
-</td>
-</tr>
-<tr id="row103951453161513"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p1395185361518"><a name="p1395185361518"></a><a name="p1395185361518"></a>ids</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p93958532154"><a name="p93958532154"></a><a name="p93958532154"></a>const int64_t*</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p2039510531150"><a name="p2039510531150"></a><a name="p2039510531150"></a>参与距离计算的底库向量ID。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p6395135351511"><a name="p6395135351511"></a><a name="p6395135351511"></a>限制长度为ny，其中<span class="parmname" id="parmname0410141908"><a name="parmname0410141908"></a><a name="parmname0410141908"></a>“ny”</span>为参与距离计算的底库向量个数。ID大于等于0，小于底库向量的总数。</p>
-</td>
-</tr>
-<tr id="row106882715416"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p46812710547"><a name="p46812710547"></a><a name="p46812710547"></a>d</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p45311183519"><a name="p45311183519"></a><a name="p45311183519"></a>size_t</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p17661261256"><a name="p17661261256"></a><a name="p17661261256"></a>向量维度。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p46952755416"><a name="p46952755416"></a><a name="p46952755416"></a>[1,65535]</p>
-</td>
-</tr>
-<tr id="row37151957141516"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p171515741513"><a name="p171515741513"></a><a name="p171515741513"></a>ny</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p3715105741513"><a name="p3715105741513"></a><a name="p3715105741513"></a>size_t</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p197153572157"><a name="p197153572157"></a><a name="p197153572157"></a>参与距离计算的底库向量个数。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p1071517573156"><a name="p1071517573156"></a><a name="p1071517573156"></a>[1,2^30-1]</p>
-</td>
-</tr>
-<tr id="row1396217381443"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p39628388417"><a name="p39628388417"></a><a name="p39628388417"></a>dis_size</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p10722125214"><a name="p10722125214"></a><a name="p10722125214"></a>size_t</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p1762116529"><a name="p1762116529"></a><a name="p1762116529"></a>存储距离结果数组的长度。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p154517391451"><a name="p154517391451"></a><a name="p154517391451"></a>ny，其中<span class="parmname" id="parmname44553910519"><a name="parmname44553910519"></a><a name="parmname44553910519"></a>“ny”</span>为参与距离计算的底库向量个数。</p>
-</td>
-</tr>
-</tbody>
-</table>
+
+| 参数名称 | 数据类型 | 描述 | 取值范围 |
+| --- | --- | --- | --- |
+| dis | float* | 存储计算所得的距离结果。 | 限制长度为dis_size，其中“dis_size”为存储距离结果数组的长度。需要预先分配内存。 |
+| x | const float* | 参与距离计算的查询向量。 | 限制长度为d，其中“d”为向量维度。 |
+| y | const float* | 参与距离计算的底库向量。 | 限制长度为d*ny，其中“d”为向量维度，“ny”为参与距离计算的底库向量个数。 |
+| ids | const int64_t* | 参与距离计算的底库向量ID。 | 限制长度为ny，其中“ny”为参与距离计算的底库向量个数。ID大于等于0，小于底库向量的总数。 |
+| d | size_t | 向量维度。 | [1,65535] |
+| ny | size_t | 参与距离计算的底库向量个数。 | [1,2^30-1] |
+| dis_size | size_t | 存储距离结果数组的长度。 | ny，其中“ny”为参与距离计算的底库向量个数。 |
 
 **返回值<a name="section49971832106"></a>**
 
 <a name="table17997635100"></a>
-<table><thead align="left"><tr id="row699763141018"><th class="cellrowborder" valign="top" width="40%" id="mcps1.1.3.1.1"><p id="p699793141012"><a name="p699793141012"></a><a name="p699793141012"></a>数据类型</p>
-</th>
-<th class="cellrowborder" valign="top" width="60%" id="mcps1.1.3.1.2"><p id="p1999763141020"><a name="p1999763141020"></a><a name="p1999763141020"></a>说明</p>
-</th>
-</tr>
-</thead>
-<tbody><tr id="row1599716361015"><td class="cellrowborder" valign="top" width="40%" headers="mcps1.1.3.1.1 "><p id="p39970319101"><a name="p39970319101"></a><a name="p39970319101"></a>int</p>
-</td>
-<td class="cellrowborder" valign="top" width="60%" headers="mcps1.1.3.1.2 "><p id="p53461032104518"><a name="p53461032104518"></a><a name="p53461032104518"></a>正常运行时返回0，异常退出返回对应错误码。</p>
-</td>
-</tr>
-</tbody>
-</table>
+
+| 数据类型 | 说明 |
+| --- | --- |
+| int | 正常运行时返回0，异常退出返回对应错误码。 |
 
 **使用示例**
 
@@ -2278,98 +1133,24 @@ int krl\_L2sqr\_by\_idx\_f16f32\(float\* dis, const uint16\_t\* x, const uint16\
 **参数说明<a name="section157501312135019"></a>**
 
 <a name="table1623016332509"></a>
-<table><thead align="left"><tr id="row823063355012"><th class="cellrowborder" valign="top" width="15.551555155515551%" id="mcps1.1.5.1.1"><p id="p1230333125010"><a name="p1230333125010"></a><a name="p1230333125010"></a>参数名称</p>
-</th>
-<th class="cellrowborder" valign="top" width="14.601460146014599%" id="mcps1.1.5.1.2"><p id="p089311158912"><a name="p089311158912"></a><a name="p089311158912"></a>数据类型</p>
-</th>
-<th class="cellrowborder" valign="top" width="33.99339933993399%" id="mcps1.1.5.1.3"><p id="p4230193313507"><a name="p4230193313507"></a><a name="p4230193313507"></a>描述</p>
-</th>
-<th class="cellrowborder" valign="top" width="35.85358535853585%" id="mcps1.1.5.1.4"><p id="p19887819256"><a name="p19887819256"></a><a name="p19887819256"></a>取值范围</p>
-</th>
-</tr>
-</thead>
-<tbody><tr id="row92301478154"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p223015479158"><a name="p223015479158"></a><a name="p223015479158"></a>dis</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p11230154710156"><a name="p11230154710156"></a><a name="p11230154710156"></a>float*</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p82303471154"><a name="p82303471154"></a><a name="p82303471154"></a>存储计算所得的距离结果。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p923018478155"><a name="p923018478155"></a><a name="p923018478155"></a>限制长度为dis_size，其中<span class="parmname" id="parmname133743422533"><a name="parmname133743422533"></a><a name="parmname133743422533"></a>“dis_size”</span>为存储距离结果数组的长度。需要预先分配内存。</p>
-</td>
-</tr>
-<tr id="row1823023318504"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p11230033165015"><a name="p11230033165015"></a><a name="p11230033165015"></a>x</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p953215815518"><a name="p953215815518"></a><a name="p953215815518"></a>const uint16_t*</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p18661136253"><a name="p18661136253"></a><a name="p18661136253"></a>参与距离计算的查询向量。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p79885872519"><a name="p79885872519"></a><a name="p79885872519"></a>限制长度为d，其中<span class="parmname" id="parmname76117481457"><a name="parmname76117481457"></a><a name="parmname76117481457"></a>“d”</span>为向量维度。</p>
-</td>
-</tr>
-<tr id="row10982132445420"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p4982142445414"><a name="p4982142445414"></a><a name="p4982142445414"></a>y</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p7532158856"><a name="p7532158856"></a><a name="p7532158856"></a>const uint16_t*</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p36611261054"><a name="p36611261054"></a><a name="p36611261054"></a>参与距离计算的底库向量。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p85127581355"><a name="p85127581355"></a><a name="p85127581355"></a>限制长度为d*ny，其中<span class="parmname" id="parmname551215813519"><a name="parmname551215813519"></a><a name="parmname551215813519"></a>“d”</span>为向量维度，<span class="parmname" id="parmname8646142120239"><a name="parmname8646142120239"></a><a name="parmname8646142120239"></a>“ny”</span>为参与距离计算的底库向量个数。</p>
-</td>
-</tr>
-<tr id="row103951453161513"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p1395185361518"><a name="p1395185361518"></a><a name="p1395185361518"></a>ids</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p93958532154"><a name="p93958532154"></a><a name="p93958532154"></a>const int64_t*</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p2039510531150"><a name="p2039510531150"></a><a name="p2039510531150"></a>参与距离计算的底库向量ID。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p6395135351511"><a name="p6395135351511"></a><a name="p6395135351511"></a>限制长度为ny，其中<span class="parmname" id="parmname0410141908"><a name="parmname0410141908"></a><a name="parmname0410141908"></a>“ny”</span>为参与距离计算的底库向量个数。ID大于等于0，小于底库向量的总数。</p>
-</td>
-</tr>
-<tr id="row106882715416"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p46812710547"><a name="p46812710547"></a><a name="p46812710547"></a>d</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p45311183519"><a name="p45311183519"></a><a name="p45311183519"></a>size_t</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p17661261256"><a name="p17661261256"></a><a name="p17661261256"></a>向量维度。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p46952755416"><a name="p46952755416"></a><a name="p46952755416"></a>[1,65535]</p>
-</td>
-</tr>
-<tr id="row37151957141516"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p171515741513"><a name="p171515741513"></a><a name="p171515741513"></a>ny</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p3715105741513"><a name="p3715105741513"></a><a name="p3715105741513"></a>size_t</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p197153572157"><a name="p197153572157"></a><a name="p197153572157"></a>参与距离计算的底库向量个数。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p1071517573156"><a name="p1071517573156"></a><a name="p1071517573156"></a>[1,2^30-1]</p>
-</td>
-</tr>
-<tr id="row106371540187"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p39628388417"><a name="p39628388417"></a><a name="p39628388417"></a>dis_size</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p10722125214"><a name="p10722125214"></a><a name="p10722125214"></a>size_t</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p1762116529"><a name="p1762116529"></a><a name="p1762116529"></a>存储距离结果数组的长度。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p154517391451"><a name="p154517391451"></a><a name="p154517391451"></a>ny，其中<span class="parmname" id="parmname44553910519"><a name="parmname44553910519"></a><a name="parmname44553910519"></a>“ny”</span>为参与距离计算的底库向量个数。</p>
-</td>
-</tr>
-</tbody>
-</table>
+
+| 参数名称 | 数据类型 | 描述 | 取值范围 |
+| --- | --- | --- | --- |
+| dis | float* | 存储计算所得的距离结果。 | 限制长度为dis_size，其中“dis_size”为存储距离结果数组的长度。需要预先分配内存。 |
+| x | const uint16_t* | 参与距离计算的查询向量。 | 限制长度为d，其中“d”为向量维度。 |
+| y | const uint16_t* | 参与距离计算的底库向量。 | 限制长度为d*ny，其中“d”为向量维度，“ny”为参与距离计算的底库向量个数。 |
+| ids | const int64_t* | 参与距离计算的底库向量ID。 | 限制长度为ny，其中“ny”为参与距离计算的底库向量个数。ID大于等于0，小于底库向量的总数。 |
+| d | size_t | 向量维度。 | [1,65535] |
+| ny | size_t | 参与距离计算的底库向量个数。 | [1,2^30-1] |
+| dis_size | size_t | 存储距离结果数组的长度。 | ny，其中“ny”为参与距离计算的底库向量个数。 |
 
 **返回值<a name="section49971832106"></a>**
 
 <a name="table17997635100"></a>
-<table><thead align="left"><tr id="row699763141018"><th class="cellrowborder" valign="top" width="40%" id="mcps1.1.3.1.1"><p id="p699793141012"><a name="p699793141012"></a><a name="p699793141012"></a>数据类型</p>
-</th>
-<th class="cellrowborder" valign="top" width="60%" id="mcps1.1.3.1.2"><p id="p1999763141020"><a name="p1999763141020"></a><a name="p1999763141020"></a>说明</p>
-</th>
-</tr>
-</thead>
-<tbody><tr id="row1599716361015"><td class="cellrowborder" valign="top" width="40%" headers="mcps1.1.3.1.1 "><p id="p39970319101"><a name="p39970319101"></a><a name="p39970319101"></a>int</p>
-</td>
-<td class="cellrowborder" valign="top" width="60%" headers="mcps1.1.3.1.2 "><p id="p53461032104518"><a name="p53461032104518"></a><a name="p53461032104518"></a>正常运行时返回0，异常退出返回对应错误码。</p>
-</td>
-</tr>
-</tbody>
-</table>
+
+| 数据类型 | 说明 |
+| --- | --- |
+| int | 正常运行时返回0，异常退出返回对应错误码。 |
 
 **使用示例**
 
@@ -2452,98 +1233,24 @@ int krl\_L2sqr\_by\_idx\_f16f32\_sve2\(float\* dis, const uint16\_t\* x, const u
 **参数说明<a name="section157501312135019"></a>**
 
 <a name="table1623016332509"></a>
-<table><thead align="left"><tr id="row823063355012"><th class="cellrowborder" valign="top" width="15.551555155515551%" id="mcps1.1.5.1.1"><p id="p1230333125010"><a name="p1230333125010"></a><a name="p1230333125010"></a>参数名称</p>
-</th>
-<th class="cellrowborder" valign="top" width="14.601460146014599%" id="mcps1.1.5.1.2"><p id="p089311158912"><a name="p089311158912"></a><a name="p089311158912"></a>数据类型</p>
-</th>
-<th class="cellrowborder" valign="top" width="33.99339933993399%" id="mcps1.1.5.1.3"><p id="p4230193313507"><a name="p4230193313507"></a><a name="p4230193313507"></a>描述</p>
-</th>
-<th class="cellrowborder" valign="top" width="35.85358535853585%" id="mcps1.1.5.1.4"><p id="p19887819256"><a name="p19887819256"></a><a name="p19887819256"></a>取值范围</p>
-</th>
-</tr>
-</thead>
-<tbody><tr id="row92301478154"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p223015479158"><a name="p223015479158"></a><a name="p223015479158"></a>dis</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p11230154710156"><a name="p11230154710156"></a><a name="p11230154710156"></a>float*</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p82303471154"><a name="p82303471154"></a><a name="p82303471154"></a>存储计算所得的距离结果。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p923018478155"><a name="p923018478155"></a><a name="p923018478155"></a>限制长度为dis_size，其中<span class="parmname" id="parmname133743422533"><a name="parmname133743422533"></a><a name="parmname133743422533"></a>“dis_size”</span>为存储距离结果数组的长度。需要预先分配内存。</p>
-</td>
-</tr>
-<tr id="row1823023318504"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p11230033165015"><a name="p11230033165015"></a><a name="p11230033165015"></a>x</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p953215815518"><a name="p953215815518"></a><a name="p953215815518"></a>const uint16_t*</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p18661136253"><a name="p18661136253"></a><a name="p18661136253"></a>参与距离计算的查询向量。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p79885872519"><a name="p79885872519"></a><a name="p79885872519"></a>限制长度为d，其中<span class="parmname" id="parmname76117481457"><a name="parmname76117481457"></a><a name="parmname76117481457"></a>“d”</span>为向量维度。</p>
-</td>
-</tr>
-<tr id="row10982132445420"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p4982142445414"><a name="p4982142445414"></a><a name="p4982142445414"></a>y</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p7532158856"><a name="p7532158856"></a><a name="p7532158856"></a>const uint16_t*</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p36611261054"><a name="p36611261054"></a><a name="p36611261054"></a>参与距离计算的底库向量。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p85127581355"><a name="p85127581355"></a><a name="p85127581355"></a>限制长度为d*ny，其中<span class="parmname" id="parmname551215813519"><a name="parmname551215813519"></a><a name="parmname551215813519"></a>“d”</span>为向量维度，<span class="parmname" id="parmname8646142120239"><a name="parmname8646142120239"></a><a name="parmname8646142120239"></a>“ny”</span>为参与距离计算的底库向量个数。</p>
-</td>
-</tr>
-<tr id="row103951453161513"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p1395185361518"><a name="p1395185361518"></a><a name="p1395185361518"></a>ids</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p93958532154"><a name="p93958532154"></a><a name="p93958532154"></a>const int64_t*</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p2039510531150"><a name="p2039510531150"></a><a name="p2039510531150"></a>参与距离计算的底库向量ID。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p6395135351511"><a name="p6395135351511"></a><a name="p6395135351511"></a>限制长度为ny，其中<span class="parmname" id="parmname0410141908"><a name="parmname0410141908"></a><a name="parmname0410141908"></a>“ny”</span>为参与距离计算的底库向量个数。ID大于等于0，小于底库向量的总数。</p>
-</td>
-</tr>
-<tr id="row106882715416"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p46812710547"><a name="p46812710547"></a><a name="p46812710547"></a>d</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p45311183519"><a name="p45311183519"></a><a name="p45311183519"></a>size_t</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p17661261256"><a name="p17661261256"></a><a name="p17661261256"></a>向量维度。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p46952755416"><a name="p46952755416"></a><a name="p46952755416"></a>[1,65535]</p>
-</td>
-</tr>
-<tr id="row37151957141516"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p171515741513"><a name="p171515741513"></a><a name="p171515741513"></a>ny</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p3715105741513"><a name="p3715105741513"></a><a name="p3715105741513"></a>size_t</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p197153572157"><a name="p197153572157"></a><a name="p197153572157"></a>参与距离计算的底库向量个数。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p1071517573156"><a name="p1071517573156"></a><a name="p1071517573156"></a>[1,2^30-1]</p>
-</td>
-</tr>
-<tr id="row106371540187"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p39628388417"><a name="p39628388417"></a><a name="p39628388417"></a>dis_size</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p10722125214"><a name="p10722125214"></a><a name="p10722125214"></a>size_t</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p1762116529"><a name="p1762116529"></a><a name="p1762116529"></a>存储距离结果数组的长度。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p154517391451"><a name="p154517391451"></a><a name="p154517391451"></a>ny，其中<span class="parmname" id="parmname44553910519"><a name="parmname44553910519"></a><a name="parmname44553910519"></a>“ny”</span>为参与距离计算的底库向量个数。</p>
-</td>
-</tr>
-</tbody>
-</table>
+
+| 参数名称 | 数据类型 | 描述 | 取值范围 |
+| --- | --- | --- | --- |
+| dis | float* | 存储计算所得的距离结果。 | 限制长度为dis_size，其中“dis_size”为存储距离结果数组的长度。需要预先分配内存。 |
+| x | const uint16_t* | 参与距离计算的查询向量。 | 限制长度为d，其中“d”为向量维度。 |
+| y | const uint16_t* | 参与距离计算的底库向量。 | 限制长度为d*ny，其中“d”为向量维度，“ny”为参与距离计算的底库向量个数。 |
+| ids | const int64_t* | 参与距离计算的底库向量ID。 | 限制长度为ny，其中“ny”为参与距离计算的底库向量个数。ID大于等于0，小于底库向量的总数。 |
+| d | size_t | 向量维度。 | [1,65535] |
+| ny | size_t | 参与距离计算的底库向量个数。 | [1,2^30-1] |
+| dis_size | size_t | 存储距离结果数组的长度。 | ny，其中“ny”为参与距离计算的底库向量个数。 |
 
 **返回值<a name="section49971832106"></a>**
 
 <a name="table17997635100"></a>
-<table><thead align="left"><tr id="row699763141018"><th class="cellrowborder" valign="top" width="40%" id="mcps1.1.3.1.1"><p id="p699793141012"><a name="p699793141012"></a><a name="p699793141012"></a>数据类型</p>
-</th>
-<th class="cellrowborder" valign="top" width="60%" id="mcps1.1.3.1.2"><p id="p1999763141020"><a name="p1999763141020"></a><a name="p1999763141020"></a>说明</p>
-</th>
-</tr>
-</thead>
-<tbody><tr id="row1599716361015"><td class="cellrowborder" valign="top" width="40%" headers="mcps1.1.3.1.1 "><p id="p39970319101"><a name="p39970319101"></a><a name="p39970319101"></a>int</p>
-</td>
-<td class="cellrowborder" valign="top" width="60%" headers="mcps1.1.3.1.2 "><p id="p53461032104518"><a name="p53461032104518"></a><a name="p53461032104518"></a>正常运行时返回0，异常退出返回对应错误码。</p>
-</td>
-</tr>
-</tbody>
-</table>
+
+| 数据类型 | 说明 |
+| --- | --- |
+| int | 正常运行时返回0，异常退出返回对应错误码。 |
 
 **使用示例**
 
@@ -2562,98 +1269,24 @@ int krl\_L2sqr\_by\_idx\_u8f32\(float\* dis, const uint8\_t\* x, const uint8\_t\
 **参数说明<a name="section157501312135019"></a>**
 
 <a name="table1623016332509"></a>
-<table><thead align="left"><tr id="row823063355012"><th class="cellrowborder" valign="top" width="15.551555155515551%" id="mcps1.1.5.1.1"><p id="p1230333125010"><a name="p1230333125010"></a><a name="p1230333125010"></a>参数名称</p>
-</th>
-<th class="cellrowborder" valign="top" width="14.601460146014599%" id="mcps1.1.5.1.2"><p id="p089311158912"><a name="p089311158912"></a><a name="p089311158912"></a>数据类型</p>
-</th>
-<th class="cellrowborder" valign="top" width="33.99339933993399%" id="mcps1.1.5.1.3"><p id="p4230193313507"><a name="p4230193313507"></a><a name="p4230193313507"></a>描述</p>
-</th>
-<th class="cellrowborder" valign="top" width="35.85358535853585%" id="mcps1.1.5.1.4"><p id="p19887819256"><a name="p19887819256"></a><a name="p19887819256"></a>取值范围</p>
-</th>
-</tr>
-</thead>
-<tbody><tr id="row92301478154"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p223015479158"><a name="p223015479158"></a><a name="p223015479158"></a>dis</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p11230154710156"><a name="p11230154710156"></a><a name="p11230154710156"></a>float*</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p82303471154"><a name="p82303471154"></a><a name="p82303471154"></a>存储计算所得的距离结果。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p923018478155"><a name="p923018478155"></a><a name="p923018478155"></a>限制长度为dis_size，其中<span class="parmname" id="parmname133743422533"><a name="parmname133743422533"></a><a name="parmname133743422533"></a>“dis_size”</span>为存储距离结果数组的长度。需要预先分配内存。</p>
-</td>
-</tr>
-<tr id="row1823023318504"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p11230033165015"><a name="p11230033165015"></a><a name="p11230033165015"></a>x</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p953215815518"><a name="p953215815518"></a><a name="p953215815518"></a>const uint8_t*</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p18661136253"><a name="p18661136253"></a><a name="p18661136253"></a>参与距离计算的查询向量。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p79885872519"><a name="p79885872519"></a><a name="p79885872519"></a>限制长度为d，其中<span class="parmname" id="parmname76117481457"><a name="parmname76117481457"></a><a name="parmname76117481457"></a>“d”</span>为向量维度。</p>
-</td>
-</tr>
-<tr id="row10982132445420"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p4982142445414"><a name="p4982142445414"></a><a name="p4982142445414"></a>y</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p154911116102813"><a name="p154911116102813"></a><a name="p154911116102813"></a>const uint8_t*</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p36611261054"><a name="p36611261054"></a><a name="p36611261054"></a>参与距离计算的底库向量。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p85127581355"><a name="p85127581355"></a><a name="p85127581355"></a>限制长度为d*ny，其中<span class="parmname" id="parmname551215813519"><a name="parmname551215813519"></a><a name="parmname551215813519"></a>“d”</span>为向量维度，<span class="parmname" id="parmname8646142120239"><a name="parmname8646142120239"></a><a name="parmname8646142120239"></a>“ny”</span>为参与距离计算的底库向量个数。</p>
-</td>
-</tr>
-<tr id="row103951453161513"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p1395185361518"><a name="p1395185361518"></a><a name="p1395185361518"></a>ids</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p93958532154"><a name="p93958532154"></a><a name="p93958532154"></a>const int64_t*</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p2039510531150"><a name="p2039510531150"></a><a name="p2039510531150"></a>参与距离计算的底库向量ID。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p19345103171215"><a name="p19345103171215"></a><a name="p19345103171215"></a>限制长度为ny，其中<span class="parmname" id="parmname0410141908"><a name="parmname0410141908"></a><a name="parmname0410141908"></a>“ny”</span>为参与距离计算的底库向量个数。ID大于等于0，小于底库向量的总数。</p>
-</td>
-</tr>
-<tr id="row106882715416"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p46812710547"><a name="p46812710547"></a><a name="p46812710547"></a>d</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p45311183519"><a name="p45311183519"></a><a name="p45311183519"></a>size_t</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p17661261256"><a name="p17661261256"></a><a name="p17661261256"></a>向量维度。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p46952755416"><a name="p46952755416"></a><a name="p46952755416"></a>[1,65535]</p>
-</td>
-</tr>
-<tr id="row37151957141516"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p171515741513"><a name="p171515741513"></a><a name="p171515741513"></a>ny</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p3715105741513"><a name="p3715105741513"></a><a name="p3715105741513"></a>size_t</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p197153572157"><a name="p197153572157"></a><a name="p197153572157"></a>参与距离计算的底库向量个数。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p1071517573156"><a name="p1071517573156"></a><a name="p1071517573156"></a>[1,2^30-1]</p>
-</td>
-</tr>
-<tr id="row1689332720259"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p39628388417"><a name="p39628388417"></a><a name="p39628388417"></a>dis_size</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p10722125214"><a name="p10722125214"></a><a name="p10722125214"></a>size_t</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p1762116529"><a name="p1762116529"></a><a name="p1762116529"></a>存储距离结果数组的长度。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p154517391451"><a name="p154517391451"></a><a name="p154517391451"></a>ny，其中<span class="parmname" id="parmname44553910519"><a name="parmname44553910519"></a><a name="parmname44553910519"></a>“ny”</span>为参与距离计算的底库向量个数。</p>
-</td>
-</tr>
-</tbody>
-</table>
+
+| 参数名称 | 数据类型 | 描述 | 取值范围 |
+| --- | --- | --- | --- |
+| dis | float* | 存储计算所得的距离结果。 | 限制长度为dis_size，其中“dis_size”为存储距离结果数组的长度。需要预先分配内存。 |
+| x | const uint8_t* | 参与距离计算的查询向量。 | 限制长度为d，其中“d”为向量维度。 |
+| y | const uint8_t* | 参与距离计算的底库向量。 | 限制长度为d*ny，其中“d”为向量维度，“ny”为参与距离计算的底库向量个数。 |
+| ids | const int64_t* | 参与距离计算的底库向量ID。 | 限制长度为ny，其中“ny”为参与距离计算的底库向量个数。ID大于等于0，小于底库向量的总数。 |
+| d | size_t | 向量维度。 | [1,65535] |
+| ny | size_t | 参与距离计算的底库向量个数。 | [1,2^30-1] |
+| dis_size | size_t | 存储距离结果数组的长度。 | ny，其中“ny”为参与距离计算的底库向量个数。 |
 
 **返回值<a name="section49971832106"></a>**
 
 <a name="table17997635100"></a>
-<table><thead align="left"><tr id="row699763141018"><th class="cellrowborder" valign="top" width="40%" id="mcps1.1.3.1.1"><p id="p699793141012"><a name="p699793141012"></a><a name="p699793141012"></a>数据类型</p>
-</th>
-<th class="cellrowborder" valign="top" width="60%" id="mcps1.1.3.1.2"><p id="p1999763141020"><a name="p1999763141020"></a><a name="p1999763141020"></a>说明</p>
-</th>
-</tr>
-</thead>
-<tbody><tr id="row1599716361015"><td class="cellrowborder" valign="top" width="40%" headers="mcps1.1.3.1.1 "><p id="p39970319101"><a name="p39970319101"></a><a name="p39970319101"></a>int</p>
-</td>
-<td class="cellrowborder" valign="top" width="60%" headers="mcps1.1.3.1.2 "><p id="p53461032104518"><a name="p53461032104518"></a><a name="p53461032104518"></a>正常运行时返回0，异常退出返回对应错误码。</p>
-</td>
-</tr>
-</tbody>
-</table>
+
+| 数据类型 | 说明 |
+| --- | --- |
+| int | 正常运行时返回0，异常退出返回对应错误码。 |
 
 **使用示例**
 
@@ -2740,98 +1373,24 @@ int krl\_inner\_product\_by\_idx\(float\* dis, const float\* x, const float\* y,
 **参数说明<a name="section157501312135019"></a>**
 
 <a name="table1623016332509"></a>
-<table><thead align="left"><tr id="row823063355012"><th class="cellrowborder" valign="top" width="15.551555155515551%" id="mcps1.1.5.1.1"><p id="p1230333125010"><a name="p1230333125010"></a><a name="p1230333125010"></a>参数名称</p>
-</th>
-<th class="cellrowborder" valign="top" width="14.601460146014599%" id="mcps1.1.5.1.2"><p id="p089311158912"><a name="p089311158912"></a><a name="p089311158912"></a>数据类型</p>
-</th>
-<th class="cellrowborder" valign="top" width="33.97339733973397%" id="mcps1.1.5.1.3"><p id="p4230193313507"><a name="p4230193313507"></a><a name="p4230193313507"></a>描述</p>
-</th>
-<th class="cellrowborder" valign="top" width="35.873587358735875%" id="mcps1.1.5.1.4"><p id="p19887819256"><a name="p19887819256"></a><a name="p19887819256"></a>取值范围</p>
-</th>
-</tr>
-</thead>
-<tbody><tr id="row92301478154"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p223015479158"><a name="p223015479158"></a><a name="p223015479158"></a>dis</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p11230154710156"><a name="p11230154710156"></a><a name="p11230154710156"></a>float*</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.97339733973397%" headers="mcps1.1.5.1.3 "><p id="p82303471154"><a name="p82303471154"></a><a name="p82303471154"></a>存储计算所得的距离结果。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.873587358735875%" headers="mcps1.1.5.1.4 "><p id="p923018478155"><a name="p923018478155"></a><a name="p923018478155"></a>限制长度为dis_size，其中<span class="parmname" id="parmname133743422533"><a name="parmname133743422533"></a><a name="parmname133743422533"></a>“dis_size”</span>为存储距离结果数组的长度。需要预先分配内存。</p>
-</td>
-</tr>
-<tr id="row1823023318504"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p11230033165015"><a name="p11230033165015"></a><a name="p11230033165015"></a>x</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p953215815518"><a name="p953215815518"></a><a name="p953215815518"></a>const float*</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.97339733973397%" headers="mcps1.1.5.1.3 "><p id="p18661136253"><a name="p18661136253"></a><a name="p18661136253"></a>参与距离计算的查询向量。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.873587358735875%" headers="mcps1.1.5.1.4 "><p id="p79885872519"><a name="p79885872519"></a><a name="p79885872519"></a>限制长度为d，其中<span class="parmname" id="parmname76117481457"><a name="parmname76117481457"></a><a name="parmname76117481457"></a>“d”</span>为向量维度。</p>
-</td>
-</tr>
-<tr id="row10982132445420"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p4982142445414"><a name="p4982142445414"></a><a name="p4982142445414"></a>y</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p7532158856"><a name="p7532158856"></a><a name="p7532158856"></a>const float*</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.97339733973397%" headers="mcps1.1.5.1.3 "><p id="p36611261054"><a name="p36611261054"></a><a name="p36611261054"></a>参与距离计算的底库向量。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.873587358735875%" headers="mcps1.1.5.1.4 "><p id="p85127581355"><a name="p85127581355"></a><a name="p85127581355"></a>限制长度为d*ny，其中<span class="parmname" id="parmname551215813519"><a name="parmname551215813519"></a><a name="parmname551215813519"></a>“d”</span>为向量维度，<span class="parmname" id="parmname8646142120239"><a name="parmname8646142120239"></a><a name="parmname8646142120239"></a>“ny”</span>为参与距离计算的底库向量个数。</p>
-</td>
-</tr>
-<tr id="row103951453161513"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p1395185361518"><a name="p1395185361518"></a><a name="p1395185361518"></a>ids</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p93958532154"><a name="p93958532154"></a><a name="p93958532154"></a>const int64_t*</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.97339733973397%" headers="mcps1.1.5.1.3 "><p id="p2039510531150"><a name="p2039510531150"></a><a name="p2039510531150"></a>参与距离计算的底库向量ID。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.873587358735875%" headers="mcps1.1.5.1.4 "><p id="p6395135351511"><a name="p6395135351511"></a><a name="p6395135351511"></a>限制长度为ny，其中<span class="parmname" id="parmname0410141908"><a name="parmname0410141908"></a><a name="parmname0410141908"></a>“ny”</span>为参与距离计算的底库向量个数。ID大于等于0，小于底库向量的总数。</p>
-</td>
-</tr>
-<tr id="row106882715416"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p46812710547"><a name="p46812710547"></a><a name="p46812710547"></a>d</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p45311183519"><a name="p45311183519"></a><a name="p45311183519"></a>size_t</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.97339733973397%" headers="mcps1.1.5.1.3 "><p id="p17661261256"><a name="p17661261256"></a><a name="p17661261256"></a>向量维度。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.873587358735875%" headers="mcps1.1.5.1.4 "><p id="p46952755416"><a name="p46952755416"></a><a name="p46952755416"></a>[1,65535]</p>
-</td>
-</tr>
-<tr id="row37151957141516"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p171515741513"><a name="p171515741513"></a><a name="p171515741513"></a>ny</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p3715105741513"><a name="p3715105741513"></a><a name="p3715105741513"></a>size_t</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.97339733973397%" headers="mcps1.1.5.1.3 "><p id="p197153572157"><a name="p197153572157"></a><a name="p197153572157"></a>参与距离计算的底库向量个数。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.873587358735875%" headers="mcps1.1.5.1.4 "><p id="p1071517573156"><a name="p1071517573156"></a><a name="p1071517573156"></a>[1,2^30-1]</p>
-</td>
-</tr>
-<tr id="row195051882311"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p39628388417"><a name="p39628388417"></a><a name="p39628388417"></a>dis_size</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p10722125214"><a name="p10722125214"></a><a name="p10722125214"></a>size_t</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.97339733973397%" headers="mcps1.1.5.1.3 "><p id="p1762116529"><a name="p1762116529"></a><a name="p1762116529"></a>存储距离结果数组的长度。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.873587358735875%" headers="mcps1.1.5.1.4 "><p id="p154517391451"><a name="p154517391451"></a><a name="p154517391451"></a>ny，其中<span class="parmname" id="parmname44553910519"><a name="parmname44553910519"></a><a name="parmname44553910519"></a>“ny”</span>为参与距离计算的底库向量个数。</p>
-</td>
-</tr>
-</tbody>
-</table>
+
+| 参数名称 | 数据类型 | 描述 | 取值范围 |
+| --- | --- | --- | --- |
+| dis | float* | 存储计算所得的距离结果。 | 限制长度为dis_size，其中“dis_size”为存储距离结果数组的长度。需要预先分配内存。 |
+| x | const float* | 参与距离计算的查询向量。 | 限制长度为d，其中“d”为向量维度。 |
+| y | const float* | 参与距离计算的底库向量。 | 限制长度为d*ny，其中“d”为向量维度，“ny”为参与距离计算的底库向量个数。 |
+| ids | const int64_t* | 参与距离计算的底库向量ID。 | 限制长度为ny，其中“ny”为参与距离计算的底库向量个数。ID大于等于0，小于底库向量的总数。 |
+| d | size_t | 向量维度。 | [1,65535] |
+| ny | size_t | 参与距离计算的底库向量个数。 | [1,2^30-1] |
+| dis_size | size_t | 存储距离结果数组的长度。 | ny，其中“ny”为参与距离计算的底库向量个数。 |
 
 **返回值<a name="section49971832106"></a>**
 
 <a name="table17997635100"></a>
-<table><thead align="left"><tr id="row699763141018"><th class="cellrowborder" valign="top" width="40%" id="mcps1.1.3.1.1"><p id="p699793141012"><a name="p699793141012"></a><a name="p699793141012"></a>数据类型</p>
-</th>
-<th class="cellrowborder" valign="top" width="60%" id="mcps1.1.3.1.2"><p id="p1999763141020"><a name="p1999763141020"></a><a name="p1999763141020"></a>说明</p>
-</th>
-</tr>
-</thead>
-<tbody><tr id="row1599716361015"><td class="cellrowborder" valign="top" width="40%" headers="mcps1.1.3.1.1 "><p id="p39970319101"><a name="p39970319101"></a><a name="p39970319101"></a>int</p>
-</td>
-<td class="cellrowborder" valign="top" width="60%" headers="mcps1.1.3.1.2 "><p id="p53461032104518"><a name="p53461032104518"></a><a name="p53461032104518"></a>正常运行时返回0，异常退出返回对应错误码。</p>
-</td>
-</tr>
-</tbody>
-</table>
+
+| 数据类型 | 说明 |
+| --- | --- |
+| int | 正常运行时返回0，异常退出返回对应错误码。 |
 
 **使用示例**
 
@@ -2938,98 +1497,22 @@ int krl\_inner\_product\_by\_idx\_f16f32\(float\* dis, const uint16\_t\* x, cons
 **参数说明<a name="section157501312135019"></a>**
 
 <a name="table1623016332509"></a>
-<table><thead align="left"><tr id="row823063355012"><th class="cellrowborder" valign="top" width="15.551555155515551%" id="mcps1.1.5.1.1"><p id="p1230333125010"><a name="p1230333125010"></a><a name="p1230333125010"></a>参数名称</p>
-</th>
-<th class="cellrowborder" valign="top" width="14.601460146014599%" id="mcps1.1.5.1.2"><p id="p089311158912"><a name="p089311158912"></a><a name="p089311158912"></a>数据类型</p>
-</th>
-<th class="cellrowborder" valign="top" width="33.663366336633665%" id="mcps1.1.5.1.3"><p id="p4230193313507"><a name="p4230193313507"></a><a name="p4230193313507"></a>描述</p>
-</th>
-<th class="cellrowborder" valign="top" width="36.18361836183618%" id="mcps1.1.5.1.4"><p id="p19887819256"><a name="p19887819256"></a><a name="p19887819256"></a>取值范围</p>
-</th>
-</tr>
-</thead>
-<tbody><tr id="row92301478154"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p223015479158"><a name="p223015479158"></a><a name="p223015479158"></a>dis</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p11230154710156"><a name="p11230154710156"></a><a name="p11230154710156"></a>float*</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.663366336633665%" headers="mcps1.1.5.1.3 "><p id="p82303471154"><a name="p82303471154"></a><a name="p82303471154"></a>存储计算所得的距离结果。</p>
-</td>
-<td class="cellrowborder" valign="top" width="36.18361836183618%" headers="mcps1.1.5.1.4 "><p id="p923018478155"><a name="p923018478155"></a><a name="p923018478155"></a>限制长度为dis_size，其中<span class="parmname" id="parmname133743422533"><a name="parmname133743422533"></a><a name="parmname133743422533"></a>“dis_size”</span>为存储距离结果数组的长度。需要预先分配内存。</p>
-</td>
-</tr>
-<tr id="row1823023318504"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p11230033165015"><a name="p11230033165015"></a><a name="p11230033165015"></a>x</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p953215815518"><a name="p953215815518"></a><a name="p953215815518"></a>const uint16_t*</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.663366336633665%" headers="mcps1.1.5.1.3 "><p id="p18661136253"><a name="p18661136253"></a><a name="p18661136253"></a>参与距离计算的查询向量。</p>
-</td>
-<td class="cellrowborder" valign="top" width="36.18361836183618%" headers="mcps1.1.5.1.4 "><p id="p79885872519"><a name="p79885872519"></a><a name="p79885872519"></a>限制长度为d，其中<span class="parmname" id="parmname76117481457"><a name="parmname76117481457"></a><a name="parmname76117481457"></a>“d”</span>为向量维度。</p>
-</td>
-</tr>
-<tr id="row10982132445420"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p4982142445414"><a name="p4982142445414"></a><a name="p4982142445414"></a>y</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p7532158856"><a name="p7532158856"></a><a name="p7532158856"></a>const uint16_t*</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.663366336633665%" headers="mcps1.1.5.1.3 "><p id="p36611261054"><a name="p36611261054"></a><a name="p36611261054"></a>参与距离计算的底库向量。</p>
-</td>
-<td class="cellrowborder" valign="top" width="36.18361836183618%" headers="mcps1.1.5.1.4 "><p id="p85127581355"><a name="p85127581355"></a><a name="p85127581355"></a>限制长度为d*ny，其中<span class="parmname" id="parmname551215813519"><a name="parmname551215813519"></a><a name="parmname551215813519"></a>“d”</span>为向量维度，<span class="parmname" id="parmname8646142120239"><a name="parmname8646142120239"></a><a name="parmname8646142120239"></a>“ny”</span>为参与距离计算的底库向量个数。</p>
-</td>
-</tr>
-<tr id="row103951453161513"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p1395185361518"><a name="p1395185361518"></a><a name="p1395185361518"></a>ids</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p93958532154"><a name="p93958532154"></a><a name="p93958532154"></a>const int64_t*</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.663366336633665%" headers="mcps1.1.5.1.3 "><p id="p2039510531150"><a name="p2039510531150"></a><a name="p2039510531150"></a>参与距离计算的底库向量ID。</p>
-</td>
-<td class="cellrowborder" valign="top" width="36.18361836183618%" headers="mcps1.1.5.1.4 "><p id="p6395135351511"><a name="p6395135351511"></a><a name="p6395135351511"></a>限制长度为ny，其中<span class="parmname" id="parmname0410141908"><a name="parmname0410141908"></a><a name="parmname0410141908"></a>“ny”</span>为参与距离计算的底库向量个数。ID大于等于0，小于底库向量的总数。</p>
-</td>
-</tr>
-<tr id="row106882715416"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p46812710547"><a name="p46812710547"></a><a name="p46812710547"></a>d</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p45311183519"><a name="p45311183519"></a><a name="p45311183519"></a>size_t</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.663366336633665%" headers="mcps1.1.5.1.3 "><p id="p17661261256"><a name="p17661261256"></a><a name="p17661261256"></a>向量维度。</p>
-</td>
-<td class="cellrowborder" valign="top" width="36.18361836183618%" headers="mcps1.1.5.1.4 "><p id="p46952755416"><a name="p46952755416"></a><a name="p46952755416"></a>[1,65535]</p>
-</td>
-</tr>
-<tr id="row37151957141516"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p171515741513"><a name="p171515741513"></a><a name="p171515741513"></a>ny</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p3715105741513"><a name="p3715105741513"></a><a name="p3715105741513"></a>size_t</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.663366336633665%" headers="mcps1.1.5.1.3 "><p id="p197153572157"><a name="p197153572157"></a><a name="p197153572157"></a>参与距离计算的底库向量个数。</p>
-</td>
-<td class="cellrowborder" valign="top" width="36.18361836183618%" headers="mcps1.1.5.1.4 "><p id="p1071517573156"><a name="p1071517573156"></a><a name="p1071517573156"></a>[1,2^30-1]</p>
-</td>
-</tr>
-<tr id="row36562453314"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p39628388417"><a name="p39628388417"></a><a name="p39628388417"></a>dis_size</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p10722125214"><a name="p10722125214"></a><a name="p10722125214"></a>size_t</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.663366336633665%" headers="mcps1.1.5.1.3 "><p id="p1762116529"><a name="p1762116529"></a><a name="p1762116529"></a>存储距离结果数组的长度。</p>
-</td>
-<td class="cellrowborder" valign="top" width="36.18361836183618%" headers="mcps1.1.5.1.4 "><p id="p154517391451"><a name="p154517391451"></a><a name="p154517391451"></a>ny，其中<span class="parmname" id="parmname44553910519"><a name="parmname44553910519"></a><a name="parmname44553910519"></a>“ny”</span>为参与距离计算的底库向量个数。</p>
-</td>
-</tr>
-</tbody>
-</table>
+
+| 参数名称 | 数据类型 | 描述 | 取值范围 |
+| --- | --- | --- | --- |
+| dis | float* | 存储计算所得的距离结果。 | 限制长度为dis_size，其中“dis_size”为存储距离结果数组的长度。需要预先分配内存。 |
+| x | const uint16_t* | 参与距离计算的查询向量。 | 限制长度为d，其中“d”为向量维度。 |
+| y | const uint16_t* | 参与距离计算的底库向量。 | 限制长度为d*ny，其中“d”为向量维度，“ny”为参与距离计算的底库向量个数。 |
+| ids | const int64_t* | 参与距离计算的底库向量ID。 | 限制长度为ny，其中“ny”为参与距离计算的底库向量个数。ID大于等于0，小于底库向量的总数。 |
+| d | size_t | 向量维度。 | [1,65535] |
+| ny | size_t | 参与距离计算的底库向量个数。 | [1,2^30-1] |
+| dis_size | size_t | 存储距离结果数组的长度。 | ny，其中“ny”为参与距离计算的底库向量个数。 |
 
 **返回值<a name="section49971832106"></a>**
 
-<a name="table17997635100"></a>
-<table><thead align="left"><tr id="row699763141018"><th class="cellrowborder" valign="top" width="40%" id="mcps1.1.3.1.1"><p id="p699793141012"><a name="p699793141012"></a><a name="p699793141012"></a>数据类型</p>
-</th>
-<th class="cellrowborder" valign="top" width="60%" id="mcps1.1.3.1.2"><p id="p1999763141020"><a name="p1999763141020"></a><a name="p1999763141020"></a>说明</p>
-</th>
-</tr>
-</thead>
-<tbody><tr id="row1599716361015"><td class="cellrowborder" valign="top" width="40%" headers="mcps1.1.3.1.1 "><p id="p39970319101"><a name="p39970319101"></a><a name="p39970319101"></a>int</p>
-</td>
-<td class="cellrowborder" valign="top" width="60%" headers="mcps1.1.3.1.2 "><p id="p53461032104518"><a name="p53461032104518"></a><a name="p53461032104518"></a>正常运行时返回0，异常退出返回对应错误码。</p>
-</td>
-</tr>
-</tbody>
-</table>
+| 数据类型 | 说明 |
+| --- | --- |
+| int | 正常运行时返回0，异常退出返回对应错误码。 |
 
 **使用示例**
 
@@ -3112,98 +1595,24 @@ int krl\_inner\_product\_by\_idx\_f16f32\_sve2\(const uint16\_t\* query\_vec, co
 **参数说明<a name="section157501312135019"></a>**
 
 <a name="table1623016332509"></a>
-<table><thead align="left"><tr id="row823063355012"><th class="cellrowborder" valign="top" width="15.551555155515551%" id="mcps1.1.5.1.1"><p id="p1230333125010"><a name="p1230333125010"></a><a name="p1230333125010"></a>参数名称</p>
-</th>
-<th class="cellrowborder" valign="top" width="14.601460146014599%" id="mcps1.1.5.1.2"><p id="p089311158912"><a name="p089311158912"></a><a name="p089311158912"></a>数据类型</p>
-</th>
-<th class="cellrowborder" valign="top" width="33.663366336633665%" id="mcps1.1.5.1.3"><p id="p4230193313507"><a name="p4230193313507"></a><a name="p4230193313507"></a>描述</p>
-</th>
-<th class="cellrowborder" valign="top" width="36.18361836183618%" id="mcps1.1.5.1.4"><p id="p19887819256"><a name="p19887819256"></a><a name="p19887819256"></a>取值范围</p>
-</th>
-</tr>
-</thead>
-<tbody><tr id="row92301478154"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p223015479158"><a name="p223015479158"></a><a name="p223015479158"></a>dis</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p11230154710156"><a name="p11230154710156"></a><a name="p11230154710156"></a>float*</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.663366336633665%" headers="mcps1.1.5.1.3 "><p id="p82303471154"><a name="p82303471154"></a><a name="p82303471154"></a>存储计算所得的距离结果。</p>
-</td>
-<td class="cellrowborder" valign="top" width="36.18361836183618%" headers="mcps1.1.5.1.4 "><p id="p923018478155"><a name="p923018478155"></a><a name="p923018478155"></a>限制长度为dis_size，其中<span class="parmname" id="parmname133743422533"><a name="parmname133743422533"></a><a name="parmname133743422533"></a>“dis_size”</span>为存储距离结果数组的长度。需要预先分配内存。</p>
-</td>
-</tr>
-<tr id="row1823023318504"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p11230033165015"><a name="p11230033165015"></a><a name="p11230033165015"></a>x</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p953215815518"><a name="p953215815518"></a><a name="p953215815518"></a>const uint16_t*</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.663366336633665%" headers="mcps1.1.5.1.3 "><p id="p18661136253"><a name="p18661136253"></a><a name="p18661136253"></a>参与距离计算的查询向量。</p>
-</td>
-<td class="cellrowborder" valign="top" width="36.18361836183618%" headers="mcps1.1.5.1.4 "><p id="p79885872519"><a name="p79885872519"></a><a name="p79885872519"></a>限制长度为d，其中<span class="parmname" id="parmname76117481457"><a name="parmname76117481457"></a><a name="parmname76117481457"></a>“d”</span>为向量维度。</p>
-</td>
-</tr>
-<tr id="row10982132445420"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p4982142445414"><a name="p4982142445414"></a><a name="p4982142445414"></a>y</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p7532158856"><a name="p7532158856"></a><a name="p7532158856"></a>const uint16_t*</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.663366336633665%" headers="mcps1.1.5.1.3 "><p id="p36611261054"><a name="p36611261054"></a><a name="p36611261054"></a>参与距离计算的底库向量。</p>
-</td>
-<td class="cellrowborder" valign="top" width="36.18361836183618%" headers="mcps1.1.5.1.4 "><p id="p85127581355"><a name="p85127581355"></a><a name="p85127581355"></a>限制长度为d*ny，其中<span class="parmname" id="parmname551215813519"><a name="parmname551215813519"></a><a name="parmname551215813519"></a>“d”</span>为向量维度，<span class="parmname" id="parmname8646142120239"><a name="parmname8646142120239"></a><a name="parmname8646142120239"></a>“ny”</span>为参与距离计算的底库向量个数。</p>
-</td>
-</tr>
-<tr id="row103951453161513"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p1395185361518"><a name="p1395185361518"></a><a name="p1395185361518"></a>ids</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p93958532154"><a name="p93958532154"></a><a name="p93958532154"></a>const int64_t*</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.663366336633665%" headers="mcps1.1.5.1.3 "><p id="p2039510531150"><a name="p2039510531150"></a><a name="p2039510531150"></a>参与距离计算的底库向量ID。</p>
-</td>
-<td class="cellrowborder" valign="top" width="36.18361836183618%" headers="mcps1.1.5.1.4 "><p id="p6395135351511"><a name="p6395135351511"></a><a name="p6395135351511"></a>限制长度为ny，其中<span class="parmname" id="parmname0410141908"><a name="parmname0410141908"></a><a name="parmname0410141908"></a>“ny”</span>为参与距离计算的底库向量个数。ID大于等于0，小于底库向量的总数。</p>
-</td>
-</tr>
-<tr id="row106882715416"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p46812710547"><a name="p46812710547"></a><a name="p46812710547"></a>d</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p45311183519"><a name="p45311183519"></a><a name="p45311183519"></a>size_t</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.663366336633665%" headers="mcps1.1.5.1.3 "><p id="p17661261256"><a name="p17661261256"></a><a name="p17661261256"></a>向量维度。</p>
-</td>
-<td class="cellrowborder" valign="top" width="36.18361836183618%" headers="mcps1.1.5.1.4 "><p id="p46952755416"><a name="p46952755416"></a><a name="p46952755416"></a>[1,65535]</p>
-</td>
-</tr>
-<tr id="row37151957141516"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p171515741513"><a name="p171515741513"></a><a name="p171515741513"></a>ny</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p3715105741513"><a name="p3715105741513"></a><a name="p3715105741513"></a>size_t</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.663366336633665%" headers="mcps1.1.5.1.3 "><p id="p197153572157"><a name="p197153572157"></a><a name="p197153572157"></a>参与距离计算的底库向量个数。</p>
-</td>
-<td class="cellrowborder" valign="top" width="36.18361836183618%" headers="mcps1.1.5.1.4 "><p id="p1071517573156"><a name="p1071517573156"></a><a name="p1071517573156"></a>[1,2^30-1]</p>
-</td>
-</tr>
-<tr id="row36562453314"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p39628388417"><a name="p39628388417"></a><a name="p39628388417"></a>dis_size</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p10722125214"><a name="p10722125214"></a><a name="p10722125214"></a>size_t</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.663366336633665%" headers="mcps1.1.5.1.3 "><p id="p1762116529"><a name="p1762116529"></a><a name="p1762116529"></a>存储距离结果数组的长度。</p>
-</td>
-<td class="cellrowborder" valign="top" width="36.18361836183618%" headers="mcps1.1.5.1.4 "><p id="p154517391451"><a name="p154517391451"></a><a name="p154517391451"></a>ny，其中<span class="parmname" id="parmname44553910519"><a name="parmname44553910519"></a><a name="parmname44553910519"></a>“ny”</span>为参与距离计算的底库向量个数。</p>
-</td>
-</tr>
-</tbody>
-</table>
+
+| 参数名称 | 数据类型 | 描述 | 取值范围 |
+| --- | --- | --- | --- |
+| dis | float* | 存储计算所得的距离结果。 | 限制长度为dis_size，其中“dis_size”为存储距离结果数组的长度。需要预先分配内存。 |
+| x | const uint16_t* | 参与距离计算的查询向量。 | 限制长度为d，其中“d”为向量维度。 |
+| y | const uint16_t* | 参与距离计算的底库向量。 | 限制长度为d*ny，其中“d”为向量维度，“ny”为参与距离计算的底库向量个数。 |
+| ids | const int64_t* | 参与距离计算的底库向量ID。 | 限制长度为ny，其中“ny”为参与距离计算的底库向量个数。ID大于等于0，小于底库向量的总数。 |
+| d | size_t | 向量维度。 | [1,65535] |
+| ny | size_t | 参与距离计算的底库向量个数。 | [1,2^30-1] |
+| dis_size | size_t | 存储距离结果数组的长度。 | ny，其中“ny”为参与距离计算的底库向量个数。 |
 
 **返回值<a name="section49971832106"></a>**
 
 <a name="table17997635100"></a>
-<table><thead align="left"><tr id="row699763141018"><th class="cellrowborder" valign="top" width="40%" id="mcps1.1.3.1.1"><p id="p699793141012"><a name="p699793141012"></a><a name="p699793141012"></a>数据类型</p>
-</th>
-<th class="cellrowborder" valign="top" width="60%" id="mcps1.1.3.1.2"><p id="p1999763141020"><a name="p1999763141020"></a><a name="p1999763141020"></a>说明</p>
-</th>
-</tr>
-</thead>
-<tbody><tr id="row1599716361015"><td class="cellrowborder" valign="top" width="40%" headers="mcps1.1.3.1.1 "><p id="p39970319101"><a name="p39970319101"></a><a name="p39970319101"></a>int</p>
-</td>
-<td class="cellrowborder" valign="top" width="60%" headers="mcps1.1.3.1.2 "><p id="p53461032104518"><a name="p53461032104518"></a><a name="p53461032104518"></a>正常运行时返回0，异常退出返回对应错误码。</p>
-</td>
-</tr>
-</tbody>
-</table>
+
+| 数据类型 | 说明 |
+| --- | --- |
+| int | 正常运行时返回0，异常退出返回对应错误码。 |
 
 **使用示例**
 
@@ -3222,98 +1631,24 @@ int krl\_negative\_inner\_product\_by\_idx\_f16f32\(float\* dis, const uint16\_t
 **参数说明<a name="section157501312135019"></a>**
 
 <a name="table1623016332509"></a>
-<table><thead align="left"><tr id="row823063355012"><th class="cellrowborder" valign="top" width="15.551555155515551%" id="mcps1.1.5.1.1"><p id="p1230333125010"><a name="p1230333125010"></a><a name="p1230333125010"></a>参数名称</p>
-</th>
-<th class="cellrowborder" valign="top" width="14.661466146614663%" id="mcps1.1.5.1.2"><p id="p089311158912"><a name="p089311158912"></a><a name="p089311158912"></a>数据类型</p>
-</th>
-<th class="cellrowborder" valign="top" width="33.93339333933393%" id="mcps1.1.5.1.3"><p id="p4230193313507"><a name="p4230193313507"></a><a name="p4230193313507"></a>描述</p>
-</th>
-<th class="cellrowborder" valign="top" width="35.85358535853585%" id="mcps1.1.5.1.4"><p id="p19887819256"><a name="p19887819256"></a><a name="p19887819256"></a>取值范围</p>
-</th>
-</tr>
-</thead>
-<tbody><tr id="row92301478154"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p223015479158"><a name="p223015479158"></a><a name="p223015479158"></a>dis</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.661466146614663%" headers="mcps1.1.5.1.2 "><p id="p11230154710156"><a name="p11230154710156"></a><a name="p11230154710156"></a>float*</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.93339333933393%" headers="mcps1.1.5.1.3 "><p id="p82303471154"><a name="p82303471154"></a><a name="p82303471154"></a>存储计算所得的距离结果。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p923018478155"><a name="p923018478155"></a><a name="p923018478155"></a>限制长度为dis_size，其中<span class="parmname" id="parmname133743422533"><a name="parmname133743422533"></a><a name="parmname133743422533"></a>“dis_size”</span>为存储距离结果数组的长度。需要预先分配内存。</p>
-</td>
-</tr>
-<tr id="row1823023318504"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p11230033165015"><a name="p11230033165015"></a><a name="p11230033165015"></a>x</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.661466146614663%" headers="mcps1.1.5.1.2 "><p id="p953215815518"><a name="p953215815518"></a><a name="p953215815518"></a>const uint16_t*</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.93339333933393%" headers="mcps1.1.5.1.3 "><p id="p18661136253"><a name="p18661136253"></a><a name="p18661136253"></a>参与距离计算的查询向量。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p79885872519"><a name="p79885872519"></a><a name="p79885872519"></a>限制长度为d，其中<span class="parmname" id="parmname76117481457"><a name="parmname76117481457"></a><a name="parmname76117481457"></a>“d”</span>为向量维度。</p>
-</td>
-</tr>
-<tr id="row10982132445420"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p4982142445414"><a name="p4982142445414"></a><a name="p4982142445414"></a>y</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.661466146614663%" headers="mcps1.1.5.1.2 "><p id="p7532158856"><a name="p7532158856"></a><a name="p7532158856"></a>const uint16_t*</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.93339333933393%" headers="mcps1.1.5.1.3 "><p id="p36611261054"><a name="p36611261054"></a><a name="p36611261054"></a>参与距离计算的底库向量。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p85127581355"><a name="p85127581355"></a><a name="p85127581355"></a>限制长度为d*ny，其中<span class="parmname" id="parmname551215813519"><a name="parmname551215813519"></a><a name="parmname551215813519"></a>“d”</span>为向量维度，<span class="parmname" id="parmname8646142120239"><a name="parmname8646142120239"></a><a name="parmname8646142120239"></a>“ny”</span>为参与距离计算的底库向量个数。</p>
-</td>
-</tr>
-<tr id="row103951453161513"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p1395185361518"><a name="p1395185361518"></a><a name="p1395185361518"></a>ids</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.661466146614663%" headers="mcps1.1.5.1.2 "><p id="p93958532154"><a name="p93958532154"></a><a name="p93958532154"></a>const int64_t*</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.93339333933393%" headers="mcps1.1.5.1.3 "><p id="p2039510531150"><a name="p2039510531150"></a><a name="p2039510531150"></a>参与距离计算的底库向量ID。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p6395135351511"><a name="p6395135351511"></a><a name="p6395135351511"></a>限制长度为ny，其中<span class="parmname" id="parmname0410141908"><a name="parmname0410141908"></a><a name="parmname0410141908"></a>“ny”</span>为参与距离计算的底库向量个数。ID大于等于0，小于底库向量的总数。</p>
-</td>
-</tr>
-<tr id="row106882715416"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p46812710547"><a name="p46812710547"></a><a name="p46812710547"></a>d</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.661466146614663%" headers="mcps1.1.5.1.2 "><p id="p45311183519"><a name="p45311183519"></a><a name="p45311183519"></a>size_t</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.93339333933393%" headers="mcps1.1.5.1.3 "><p id="p17661261256"><a name="p17661261256"></a><a name="p17661261256"></a>向量维度。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p46952755416"><a name="p46952755416"></a><a name="p46952755416"></a>[1,65535]</p>
-</td>
-</tr>
-<tr id="row37151957141516"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p171515741513"><a name="p171515741513"></a><a name="p171515741513"></a>ny</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.661466146614663%" headers="mcps1.1.5.1.2 "><p id="p3715105741513"><a name="p3715105741513"></a><a name="p3715105741513"></a>size_t</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.93339333933393%" headers="mcps1.1.5.1.3 "><p id="p197153572157"><a name="p197153572157"></a><a name="p197153572157"></a>参与距离计算的底库向量个数。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p1071517573156"><a name="p1071517573156"></a><a name="p1071517573156"></a>[1,2^30-1]</p>
-</td>
-</tr>
-<tr id="row17278128173918"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p39628388417"><a name="p39628388417"></a><a name="p39628388417"></a>dis_size</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.661466146614663%" headers="mcps1.1.5.1.2 "><p id="p10722125214"><a name="p10722125214"></a><a name="p10722125214"></a>size_t</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.93339333933393%" headers="mcps1.1.5.1.3 "><p id="p1762116529"><a name="p1762116529"></a><a name="p1762116529"></a>存储距离结果数组的长度。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p154517391451"><a name="p154517391451"></a><a name="p154517391451"></a>ny，其中<span class="parmname" id="parmname44553910519"><a name="parmname44553910519"></a><a name="parmname44553910519"></a>“ny”</span>为参与距离计算的底库向量个数。</p>
-</td>
-</tr>
-</tbody>
-</table>
+
+| 参数名称 | 数据类型 | 描述 | 取值范围 |
+| --- | --- | --- | --- |
+| dis | float* | 存储计算所得的距离结果。 | 限制长度为dis_size，其中“dis_size”为存储距离结果数组的长度。需要预先分配内存。 |
+| x | const uint16_t* | 参与距离计算的查询向量。 | 限制长度为d，其中“d”为向量维度。 |
+| y | const uint16_t* | 参与距离计算的底库向量。 | 限制长度为d*ny，其中“d”为向量维度，“ny”为参与距离计算的底库向量个数。 |
+| ids | const int64_t* | 参与距离计算的底库向量ID。 | 限制长度为ny，其中“ny”为参与距离计算的底库向量个数。ID大于等于0，小于底库向量的总数。 |
+| d | size_t | 向量维度。 | [1,65535] |
+| ny | size_t | 参与距离计算的底库向量个数。 | [1,2^30-1] |
+| dis_size | size_t | 存储距离结果数组的长度。 | ny，其中“ny”为参与距离计算的底库向量个数。 |
 
 **返回值<a name="section49971832106"></a>**
 
 <a name="table17997635100"></a>
-<table><thead align="left"><tr id="row699763141018"><th class="cellrowborder" valign="top" width="40%" id="mcps1.1.3.1.1"><p id="p699793141012"><a name="p699793141012"></a><a name="p699793141012"></a>数据类型</p>
-</th>
-<th class="cellrowborder" valign="top" width="60%" id="mcps1.1.3.1.2"><p id="p1999763141020"><a name="p1999763141020"></a><a name="p1999763141020"></a>说明</p>
-</th>
-</tr>
-</thead>
-<tbody><tr id="row1599716361015"><td class="cellrowborder" valign="top" width="40%" headers="mcps1.1.3.1.1 "><p id="p39970319101"><a name="p39970319101"></a><a name="p39970319101"></a>int</p>
-</td>
-<td class="cellrowborder" valign="top" width="60%" headers="mcps1.1.3.1.2 "><p id="p53461032104518"><a name="p53461032104518"></a><a name="p53461032104518"></a>正常运行时返回0，异常退出返回对应错误码。</p>
-</td>
-</tr>
-</tbody>
-</table>
+
+| 数据类型 | 说明 |
+| --- | --- |
+| int | 正常运行时返回0，异常退出返回对应错误码。 |
 
 **使用示例**
 
@@ -3407,98 +1742,24 @@ int krl\_inner\_product\_by\_idx\_s8f32\(float\* dis, const int8\_t\* x, const i
 **参数说明<a name="section157501312135019"></a>**
 
 <a name="table1623016332509"></a>
-<table><thead align="left"><tr id="row823063355012"><th class="cellrowborder" valign="top" width="15.551555155515551%" id="mcps1.1.5.1.1"><p id="p1230333125010"><a name="p1230333125010"></a><a name="p1230333125010"></a>参数名称</p>
-</th>
-<th class="cellrowborder" valign="top" width="14.601460146014599%" id="mcps1.1.5.1.2"><p id="p089311158912"><a name="p089311158912"></a><a name="p089311158912"></a>数据类型</p>
-</th>
-<th class="cellrowborder" valign="top" width="33.99339933993399%" id="mcps1.1.5.1.3"><p id="p4230193313507"><a name="p4230193313507"></a><a name="p4230193313507"></a>描述</p>
-</th>
-<th class="cellrowborder" valign="top" width="35.85358535853585%" id="mcps1.1.5.1.4"><p id="p19887819256"><a name="p19887819256"></a><a name="p19887819256"></a>取值范围</p>
-</th>
-</tr>
-</thead>
-<tbody><tr id="row92301478154"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p223015479158"><a name="p223015479158"></a><a name="p223015479158"></a>dis</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p11230154710156"><a name="p11230154710156"></a><a name="p11230154710156"></a>float*</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p82303471154"><a name="p82303471154"></a><a name="p82303471154"></a>存储计算所得的距离结果。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p923018478155"><a name="p923018478155"></a><a name="p923018478155"></a>限制长度为dis_size，其中<span class="parmname" id="parmname133743422533"><a name="parmname133743422533"></a><a name="parmname133743422533"></a>“dis_size”</span>为存储距离结果数组的长度。需要预先分配内存。</p>
-</td>
-</tr>
-<tr id="row1823023318504"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p11230033165015"><a name="p11230033165015"></a><a name="p11230033165015"></a>x</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p953215815518"><a name="p953215815518"></a><a name="p953215815518"></a>const int8_t*</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p18661136253"><a name="p18661136253"></a><a name="p18661136253"></a>参与距离计算的查询向量。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p79885872519"><a name="p79885872519"></a><a name="p79885872519"></a>限制长度为d，其中<span class="parmname" id="parmname76117481457"><a name="parmname76117481457"></a><a name="parmname76117481457"></a>“d”</span>为向量维度。</p>
-</td>
-</tr>
-<tr id="row10982132445420"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p4982142445414"><a name="p4982142445414"></a><a name="p4982142445414"></a>y</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p154911116102813"><a name="p154911116102813"></a><a name="p154911116102813"></a>const int8_t*</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p36611261054"><a name="p36611261054"></a><a name="p36611261054"></a>参与距离计算的底库向量。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p85127581355"><a name="p85127581355"></a><a name="p85127581355"></a>限制长度为d*ny，其中<span class="parmname" id="parmname551215813519"><a name="parmname551215813519"></a><a name="parmname551215813519"></a>“d”</span>为向量维度，<span class="parmname" id="parmname8646142120239"><a name="parmname8646142120239"></a><a name="parmname8646142120239"></a>“ny”</span>为参与距离计算的底库向量个数。</p>
-</td>
-</tr>
-<tr id="row103951453161513"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p1395185361518"><a name="p1395185361518"></a><a name="p1395185361518"></a>ids</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p93958532154"><a name="p93958532154"></a><a name="p93958532154"></a>const int64_t*</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p2039510531150"><a name="p2039510531150"></a><a name="p2039510531150"></a>参与距离计算的底库向量ID。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p6395135351511"><a name="p6395135351511"></a><a name="p6395135351511"></a>限制长度为ny，其中<span class="parmname" id="parmname0410141908"><a name="parmname0410141908"></a><a name="parmname0410141908"></a>“ny”</span>为参与距离计算的底库向量个数。ID大于等于0，小于底库向量的总数。</p>
-</td>
-</tr>
-<tr id="row106882715416"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p46812710547"><a name="p46812710547"></a><a name="p46812710547"></a>d</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p45311183519"><a name="p45311183519"></a><a name="p45311183519"></a>size_t</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p17661261256"><a name="p17661261256"></a><a name="p17661261256"></a>向量维度。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p46952755416"><a name="p46952755416"></a><a name="p46952755416"></a>[1,65535]</p>
-</td>
-</tr>
-<tr id="row37151957141516"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p171515741513"><a name="p171515741513"></a><a name="p171515741513"></a>ny</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p3715105741513"><a name="p3715105741513"></a><a name="p3715105741513"></a>size_t</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p197153572157"><a name="p197153572157"></a><a name="p197153572157"></a>参与距离计算的底库向量个数。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p1071517573156"><a name="p1071517573156"></a><a name="p1071517573156"></a>[1,2^30-1]</p>
-</td>
-</tr>
-<tr id="row5987191044118"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p39628388417"><a name="p39628388417"></a><a name="p39628388417"></a>dis_size</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p10722125214"><a name="p10722125214"></a><a name="p10722125214"></a>size_t</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p1762116529"><a name="p1762116529"></a><a name="p1762116529"></a>存储距离结果数组的长度。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p154517391451"><a name="p154517391451"></a><a name="p154517391451"></a>ny，其中<span class="parmname" id="parmname44553910519"><a name="parmname44553910519"></a><a name="parmname44553910519"></a>“ny”</span>为参与距离计算的底库向量个数。</p>
-</td>
-</tr>
-</tbody>
-</table>
+
+| 参数名称 | 数据类型 | 描述 | 取值范围 |
+| --- | --- | --- | --- |
+| dis | float* | 存储计算所得的距离结果。 | 限制长度为dis_size，其中“dis_size”为存储距离结果数组的长度。需要预先分配内存。 |
+| x | const int8_t* | 参与距离计算的查询向量。 | 限制长度为d，其中“d”为向量维度。 |
+| y | const int8_t* | 参与距离计算的底库向量。 | 限制长度为d*ny，其中“d”为向量维度，“ny”为参与距离计算的底库向量个数。 |
+| ids | const int64_t* | 参与距离计算的底库向量ID。 | 限制长度为ny，其中“ny”为参与距离计算的底库向量个数。ID大于等于0，小于底库向量的总数。 |
+| d | size_t | 向量维度。 | [1,65535] |
+| ny | size_t | 参与距离计算的底库向量个数。 | [1,2^30-1] |
+| dis_size | size_t | 存储距离结果数组的长度。 | ny，其中“ny”为参与距离计算的底库向量个数。 |
 
 **返回值<a name="section49971832106"></a>**
 
 <a name="table17997635100"></a>
-<table><thead align="left"><tr id="row699763141018"><th class="cellrowborder" valign="top" width="40%" id="mcps1.1.3.1.1"><p id="p699793141012"><a name="p699793141012"></a><a name="p699793141012"></a>数据类型</p>
-</th>
-<th class="cellrowborder" valign="top" width="60%" id="mcps1.1.3.1.2"><p id="p1999763141020"><a name="p1999763141020"></a><a name="p1999763141020"></a>说明</p>
-</th>
-</tr>
-</thead>
-<tbody><tr id="row1599716361015"><td class="cellrowborder" valign="top" width="40%" headers="mcps1.1.3.1.1 "><p id="p39970319101"><a name="p39970319101"></a><a name="p39970319101"></a>int</p>
-</td>
-<td class="cellrowborder" valign="top" width="60%" headers="mcps1.1.3.1.2 "><p id="p53461032104518"><a name="p53461032104518"></a><a name="p53461032104518"></a>正常运行时返回0，异常退出返回对应错误码。</p>
-</td>
-</tr>
-</tbody>
-</table>
+
+| 数据类型 | 说明 |
+| --- | --- |
+| int | 正常运行时返回0，异常退出返回对应错误码。 |
 
 **使用示例**
 
@@ -3578,89 +1839,23 @@ int krl\_L2sqr\_ny\(float\* dis, const float\* x, const float\* y, size\_t ny, s
 **参数说明<a name="section157501312135019"></a>**
 
 <a name="table1623016332509"></a>
-<table><thead align="left"><tr id="row823063355012"><th class="cellrowborder" valign="top" width="15.551555155515551%" id="mcps1.1.5.1.1"><p id="p1230333125010"><a name="p1230333125010"></a><a name="p1230333125010"></a>参数名称</p>
-</th>
-<th class="cellrowborder" valign="top" width="14.601460146014599%" id="mcps1.1.5.1.2"><p id="p089311158912"><a name="p089311158912"></a><a name="p089311158912"></a>数据类型</p>
-</th>
-<th class="cellrowborder" valign="top" width="33.99339933993399%" id="mcps1.1.5.1.3"><p id="p4230193313507"><a name="p4230193313507"></a><a name="p4230193313507"></a>描述</p>
-</th>
-<th class="cellrowborder" valign="top" width="35.85358535853585%" id="mcps1.1.5.1.4"><p id="p19887819256"><a name="p19887819256"></a><a name="p19887819256"></a>取值范围</p>
-</th>
-</tr>
-</thead>
-<tbody><tr id="row92301478154"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p223015479158"><a name="p223015479158"></a><a name="p223015479158"></a>dis</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p11230154710156"><a name="p11230154710156"></a><a name="p11230154710156"></a>float*</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p82303471154"><a name="p82303471154"></a><a name="p82303471154"></a>存储计算所得的距离结果。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p923018478155"><a name="p923018478155"></a><a name="p923018478155"></a>限制长度为dis_size，其中<span class="parmname" id="parmname133743422533"><a name="parmname133743422533"></a><a name="parmname133743422533"></a>“dis_size”</span>为存储距离结果数组的长度。需要预先分配内存。</p>
-</td>
-</tr>
-<tr id="row1823023318504"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p11230033165015"><a name="p11230033165015"></a><a name="p11230033165015"></a>x</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p953215815518"><a name="p953215815518"></a><a name="p953215815518"></a>const float*</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p18661136253"><a name="p18661136253"></a><a name="p18661136253"></a>参与距离计算的查询向量。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p79885872519"><a name="p79885872519"></a><a name="p79885872519"></a>限制长度为d，其中<span class="parmname" id="parmname76117481457"><a name="parmname76117481457"></a><a name="parmname76117481457"></a>“d”</span>为向量维度。</p>
-</td>
-</tr>
-<tr id="row10982132445420"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p4982142445414"><a name="p4982142445414"></a><a name="p4982142445414"></a>y</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p7532158856"><a name="p7532158856"></a><a name="p7532158856"></a>const float*</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p36611261054"><a name="p36611261054"></a><a name="p36611261054"></a>参与距离计算的底库向量。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p85127581355"><a name="p85127581355"></a><a name="p85127581355"></a>限制长度为d*ny，其中<span class="parmname" id="parmname551215813519"><a name="parmname551215813519"></a><a name="parmname551215813519"></a>“d”</span>为向量维度，<span class="parmname" id="parmname8646142120239"><a name="parmname8646142120239"></a><a name="parmname8646142120239"></a>“ny”</span>为参与距离计算的底库向量个数。</p>
-</td>
-</tr>
-<tr id="row103951453161513"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p14723141215409"><a name="p14723141215409"></a><a name="p14723141215409"></a>ny</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p4723181210404"><a name="p4723181210404"></a><a name="p4723181210404"></a>size_t</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p672341218403"><a name="p672341218403"></a><a name="p672341218403"></a>参与距离计算的底库向量个数。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p6723181274010"><a name="p6723181274010"></a><a name="p6723181274010"></a>[1,2^30-1]</p>
-</td>
-</tr>
-<tr id="row106882715416"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p46812710547"><a name="p46812710547"></a><a name="p46812710547"></a>d</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p45311183519"><a name="p45311183519"></a><a name="p45311183519"></a>size_t</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p17661261256"><a name="p17661261256"></a><a name="p17661261256"></a>向量维度。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p46952755416"><a name="p46952755416"></a><a name="p46952755416"></a>[1,65535]</p>
-</td>
-</tr>
-<tr id="row161414323423"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p39628388417"><a name="p39628388417"></a><a name="p39628388417"></a>dis_size</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p10722125214"><a name="p10722125214"></a><a name="p10722125214"></a>size_t</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p1762116529"><a name="p1762116529"></a><a name="p1762116529"></a>存储距离结果数组的长度。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p154517391451"><a name="p154517391451"></a><a name="p154517391451"></a>ny，其中<span class="parmname" id="parmname44553910519"><a name="parmname44553910519"></a><a name="parmname44553910519"></a>“ny”</span>为参与距离计算的底库向量个数。</p>
-</td>
-</tr>
-</tbody>
-</table>
+
+| 参数名称 | 数据类型 | 描述 | 取值范围 |
+| --- | --- | --- | --- |
+| dis | float* | 存储计算所得的距离结果。 | 限制长度为dis_size，其中“dis_size”为存储距离结果数组的长度。需要预先分配内存。 |
+| x | const float* | 参与距离计算的查询向量。 | 限制长度为d，其中“d”为向量维度。 |
+| y | const float* | 参与距离计算的底库向量。 | 限制长度为d*ny，其中“d”为向量维度，“ny”为参与距离计算的底库向量个数。 |
+| ny | size_t | 参与距离计算的底库向量个数。 | [1,2^30-1] |
+| d | size_t | 向量维度。 | [1,65535] |
+| dis_size | size_t | 存储距离结果数组的长度。 | ny，其中“ny”为参与距离计算的底库向量个数。 |
 
 **返回值<a name="section49971832106"></a>**
 
 <a name="table17997635100"></a>
-<table><thead align="left"><tr id="row699763141018"><th class="cellrowborder" valign="top" width="40%" id="mcps1.1.3.1.1"><p id="p699793141012"><a name="p699793141012"></a><a name="p699793141012"></a>数据类型</p>
-</th>
-<th class="cellrowborder" valign="top" width="60%" id="mcps1.1.3.1.2"><p id="p1999763141020"><a name="p1999763141020"></a><a name="p1999763141020"></a>说明</p>
-</th>
-</tr>
-</thead>
-<tbody><tr id="row1599716361015"><td class="cellrowborder" valign="top" width="40%" headers="mcps1.1.3.1.1 "><p id="p39970319101"><a name="p39970319101"></a><a name="p39970319101"></a>int</p>
-</td>
-<td class="cellrowborder" valign="top" width="60%" headers="mcps1.1.3.1.2 "><p id="p53461032104518"><a name="p53461032104518"></a><a name="p53461032104518"></a>正常运行时返回0，异常退出返回对应错误码。</p>
-</td>
-</tr>
-</tbody>
-</table>
+
+| 数据类型 | 说明 |
+| --- | --- |
+| int | 正常运行时返回0，异常退出返回对应错误码。 |
 
 **使用示例**
 
@@ -3737,89 +1932,23 @@ int krl\_L2sqr\_ny\_f16f32\(float\* dis, const uint16\_t\* x, const uint16\_t\* 
 **参数说明<a name="section157501312135019"></a>**
 
 <a name="table1623016332509"></a>
-<table><thead align="left"><tr id="row823063355012"><th class="cellrowborder" valign="top" width="15.551555155515551%" id="mcps1.1.5.1.1"><p id="p1230333125010"><a name="p1230333125010"></a><a name="p1230333125010"></a>参数名称</p>
-</th>
-<th class="cellrowborder" valign="top" width="14.601460146014599%" id="mcps1.1.5.1.2"><p id="p089311158912"><a name="p089311158912"></a><a name="p089311158912"></a>数据类型</p>
-</th>
-<th class="cellrowborder" valign="top" width="33.99339933993399%" id="mcps1.1.5.1.3"><p id="p4230193313507"><a name="p4230193313507"></a><a name="p4230193313507"></a>描述</p>
-</th>
-<th class="cellrowborder" valign="top" width="35.85358535853585%" id="mcps1.1.5.1.4"><p id="p19887819256"><a name="p19887819256"></a><a name="p19887819256"></a>取值范围</p>
-</th>
-</tr>
-</thead>
-<tbody><tr id="row92301478154"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p223015479158"><a name="p223015479158"></a><a name="p223015479158"></a>dis</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p11230154710156"><a name="p11230154710156"></a><a name="p11230154710156"></a>float*</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p82303471154"><a name="p82303471154"></a><a name="p82303471154"></a>存储计算所得的距离结果。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p923018478155"><a name="p923018478155"></a><a name="p923018478155"></a>限制长度为dis_size，其中<span class="parmname" id="parmname133743422533"><a name="parmname133743422533"></a><a name="parmname133743422533"></a>“dis_size”</span>为存储距离结果数组的长度。需要预先分配内存。</p>
-</td>
-</tr>
-<tr id="row1823023318504"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p11230033165015"><a name="p11230033165015"></a><a name="p11230033165015"></a>x</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p953215815518"><a name="p953215815518"></a><a name="p953215815518"></a>const uint16_t*</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p18661136253"><a name="p18661136253"></a><a name="p18661136253"></a>参与距离计算的查询向量。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p79885872519"><a name="p79885872519"></a><a name="p79885872519"></a>限制长度为d，其中<span class="parmname" id="parmname76117481457"><a name="parmname76117481457"></a><a name="parmname76117481457"></a>“d”</span>为向量维度。</p>
-</td>
-</tr>
-<tr id="row10982132445420"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p4982142445414"><a name="p4982142445414"></a><a name="p4982142445414"></a>y</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p7532158856"><a name="p7532158856"></a><a name="p7532158856"></a>const uint16_t*</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p36611261054"><a name="p36611261054"></a><a name="p36611261054"></a>参与距离计算的底库向量。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p85127581355"><a name="p85127581355"></a><a name="p85127581355"></a>限制长度为d*ny，其中<span class="parmname" id="parmname551215813519"><a name="parmname551215813519"></a><a name="parmname551215813519"></a>“d”</span>为向量维度，<span class="parmname" id="parmname8646142120239"><a name="parmname8646142120239"></a><a name="parmname8646142120239"></a>“ny”</span>为参与距离计算的底库向量个数。</p>
-</td>
-</tr>
-<tr id="row103951453161513"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p14723141215409"><a name="p14723141215409"></a><a name="p14723141215409"></a>ny</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p4723181210404"><a name="p4723181210404"></a><a name="p4723181210404"></a>size_t</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p672341218403"><a name="p672341218403"></a><a name="p672341218403"></a>参与距离计算的底库向量个数。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p6723181274010"><a name="p6723181274010"></a><a name="p6723181274010"></a>[1,2^30-1]</p>
-</td>
-</tr>
-<tr id="row106882715416"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p46812710547"><a name="p46812710547"></a><a name="p46812710547"></a>d</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p45311183519"><a name="p45311183519"></a><a name="p45311183519"></a>size_t</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p17661261256"><a name="p17661261256"></a><a name="p17661261256"></a>向量维度。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p46952755416"><a name="p46952755416"></a><a name="p46952755416"></a>[1,65535]</p>
-</td>
-</tr>
-<tr id="row1922192114518"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p39628388417"><a name="p39628388417"></a><a name="p39628388417"></a>dis_size</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p10722125214"><a name="p10722125214"></a><a name="p10722125214"></a>size_t</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p1762116529"><a name="p1762116529"></a><a name="p1762116529"></a>存储距离结果数组的长度。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p154517391451"><a name="p154517391451"></a><a name="p154517391451"></a>ny，其中<span class="parmname" id="parmname44553910519"><a name="parmname44553910519"></a><a name="parmname44553910519"></a>“ny”</span>为参与距离计算的底库向量个数。</p>
-</td>
-</tr>
-</tbody>
-</table>
+
+| 参数名称 | 数据类型 | 描述 | 取值范围 |
+| --- | --- | --- | --- |
+| dis | float* | 存储计算所得的距离结果。 | 限制长度为dis_size，其中“dis_size”为存储距离结果数组的长度。需要预先分配内存。 |
+| x | const uint16_t* | 参与距离计算的查询向量。 | 限制长度为d，其中“d”为向量维度。 |
+| y | const uint16_t* | 参与距离计算的底库向量。 | 限制长度为d*ny，其中“d”为向量维度，“ny”为参与距离计算的底库向量个数。 |
+| ny | size_t | 参与距离计算的底库向量个数。 | [1,2^30-1] |
+| d | size_t | 向量维度。 | [1,65535] |
+| dis_size | size_t | 存储距离结果数组的长度。 | ny，其中“ny”为参与距离计算的底库向量个数。 |
 
 **返回值<a name="section49971832106"></a>**
 
 <a name="table17997635100"></a>
-<table><thead align="left"><tr id="row699763141018"><th class="cellrowborder" valign="top" width="40%" id="mcps1.1.3.1.1"><p id="p699793141012"><a name="p699793141012"></a><a name="p699793141012"></a>数据类型</p>
-</th>
-<th class="cellrowborder" valign="top" width="60%" id="mcps1.1.3.1.2"><p id="p1999763141020"><a name="p1999763141020"></a><a name="p1999763141020"></a>说明</p>
-</th>
-</tr>
-</thead>
-<tbody><tr id="row1599716361015"><td class="cellrowborder" valign="top" width="40%" headers="mcps1.1.3.1.1 "><p id="p39970319101"><a name="p39970319101"></a><a name="p39970319101"></a>int</p>
-</td>
-<td class="cellrowborder" valign="top" width="60%" headers="mcps1.1.3.1.2 "><p id="p53461032104518"><a name="p53461032104518"></a><a name="p53461032104518"></a>正常运行时返回0，异常退出返回对应错误码。</p>
-</td>
-</tr>
-</tbody>
-</table>
+
+| 数据类型 | 说明 |
+| --- | --- |
+| int | 正常运行时返回0，异常退出返回对应错误码。 |
 
 **使用示例**
 
@@ -3889,89 +2018,23 @@ int krl\_L2sqr\_ny\_f16f32\_sve2\(const uint16\_t\* query\_vec, const uint16\_t\
 **参数说明<a name="section157501312135019"></a>**
 
 <a name="table1623016332509"></a>
-<table><thead align="left"><tr id="row823063355012"><th class="cellrowborder" valign="top" width="15.551555155515551%" id="mcps1.1.5.1.1"><p id="p1230333125010"><a name="p1230333125010"></a><a name="p1230333125010"></a>参数名称</p>
-</th>
-<th class="cellrowborder" valign="top" width="14.601460146014599%" id="mcps1.1.5.1.2"><p id="p089311158912"><a name="p089311158912"></a><a name="p089311158912"></a>数据类型</p>
-</th>
-<th class="cellrowborder" valign="top" width="33.99339933993399%" id="mcps1.1.5.1.3"><p id="p4230193313507"><a name="p4230193313507"></a><a name="p4230193313507"></a>描述</p>
-</th>
-<th class="cellrowborder" valign="top" width="35.85358535853585%" id="mcps1.1.5.1.4"><p id="p19887819256"><a name="p19887819256"></a><a name="p19887819256"></a>取值范围</p>
-</th>
-</tr>
-</thead>
-<tbody><tr id="row92301478154"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p223015479158"><a name="p223015479158"></a><a name="p223015479158"></a>dis</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p11230154710156"><a name="p11230154710156"></a><a name="p11230154710156"></a>float*</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p82303471154"><a name="p82303471154"></a><a name="p82303471154"></a>存储计算所得的距离结果。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p923018478155"><a name="p923018478155"></a><a name="p923018478155"></a>限制长度为dis_size，其中<span class="parmname" id="parmname133743422533"><a name="parmname133743422533"></a><a name="parmname133743422533"></a>“dis_size”</span>为存储距离结果数组的长度。需要预先分配内存。</p>
-</td>
-</tr>
-<tr id="row1823023318504"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p11230033165015"><a name="p11230033165015"></a><a name="p11230033165015"></a>x</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p953215815518"><a name="p953215815518"></a><a name="p953215815518"></a>const uint16_t*</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p18661136253"><a name="p18661136253"></a><a name="p18661136253"></a>参与距离计算的查询向量。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p79885872519"><a name="p79885872519"></a><a name="p79885872519"></a>限制长度为d，其中<span class="parmname" id="parmname76117481457"><a name="parmname76117481457"></a><a name="parmname76117481457"></a>“d”</span>为向量维度。</p>
-</td>
-</tr>
-<tr id="row10982132445420"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p4982142445414"><a name="p4982142445414"></a><a name="p4982142445414"></a>y</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p7532158856"><a name="p7532158856"></a><a name="p7532158856"></a>const uint16_t*</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p36611261054"><a name="p36611261054"></a><a name="p36611261054"></a>参与距离计算的底库向量。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p85127581355"><a name="p85127581355"></a><a name="p85127581355"></a>限制长度为d*ny，其中<span class="parmname" id="parmname551215813519"><a name="parmname551215813519"></a><a name="parmname551215813519"></a>“d”</span>为向量维度，<span class="parmname" id="parmname8646142120239"><a name="parmname8646142120239"></a><a name="parmname8646142120239"></a>“ny”</span>为参与距离计算的底库向量个数。</p>
-</td>
-</tr>
-<tr id="row103951453161513"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p14723141215409"><a name="p14723141215409"></a><a name="p14723141215409"></a>ny</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p4723181210404"><a name="p4723181210404"></a><a name="p4723181210404"></a>size_t</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p672341218403"><a name="p672341218403"></a><a name="p672341218403"></a>参与距离计算的底库向量个数。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p6723181274010"><a name="p6723181274010"></a><a name="p6723181274010"></a>[1,2^30-1]</p>
-</td>
-</tr>
-<tr id="row106882715416"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p46812710547"><a name="p46812710547"></a><a name="p46812710547"></a>d</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p45311183519"><a name="p45311183519"></a><a name="p45311183519"></a>size_t</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p17661261256"><a name="p17661261256"></a><a name="p17661261256"></a>向量维度。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p46952755416"><a name="p46952755416"></a><a name="p46952755416"></a>[1,65535]</p>
-</td>
-</tr>
-<tr id="row1922192114518"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p39628388417"><a name="p39628388417"></a><a name="p39628388417"></a>dis_size</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p10722125214"><a name="p10722125214"></a><a name="p10722125214"></a>size_t</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p1762116529"><a name="p1762116529"></a><a name="p1762116529"></a>存储距离结果数组的长度。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p154517391451"><a name="p154517391451"></a><a name="p154517391451"></a>ny，其中<span class="parmname" id="parmname44553910519"><a name="parmname44553910519"></a><a name="parmname44553910519"></a>“ny”</span>为参与距离计算的底库向量个数。</p>
-</td>
-</tr>
-</tbody>
-</table>
+
+| 参数名称 | 数据类型 | 描述 | 取值范围 |
+| --- | --- | --- | --- |
+| dis | float* | 存储计算所得的距离结果。 | 限制长度为dis_size，其中“dis_size”为存储距离结果数组的长度。需要预先分配内存。 |
+| x | const uint16_t* | 参与距离计算的查询向量。 | 限制长度为d，其中“d”为向量维度。 |
+| y | const uint16_t* | 参与距离计算的底库向量。 | 限制长度为d*ny，其中“d”为向量维度，“ny”为参与距离计算的底库向量个数。 |
+| ny | size_t | 参与距离计算的底库向量个数。 | [1,2^30-1] |
+| d | size_t | 向量维度。 | [1,65535] |
+| dis_size | size_t | 存储距离结果数组的长度。 | ny，其中“ny”为参与距离计算的底库向量个数。 |
 
 **返回值<a name="section49971832106"></a>**
 
 <a name="table17997635100"></a>
-<table><thead align="left"><tr id="row699763141018"><th class="cellrowborder" valign="top" width="40%" id="mcps1.1.3.1.1"><p id="p699793141012"><a name="p699793141012"></a><a name="p699793141012"></a>数据类型</p>
-</th>
-<th class="cellrowborder" valign="top" width="60%" id="mcps1.1.3.1.2"><p id="p1999763141020"><a name="p1999763141020"></a><a name="p1999763141020"></a>说明</p>
-</th>
-</tr>
-</thead>
-<tbody><tr id="row1599716361015"><td class="cellrowborder" valign="top" width="40%" headers="mcps1.1.3.1.1 "><p id="p39970319101"><a name="p39970319101"></a><a name="p39970319101"></a>int</p>
-</td>
-<td class="cellrowborder" valign="top" width="60%" headers="mcps1.1.3.1.2 "><p id="p53461032104518"><a name="p53461032104518"></a><a name="p53461032104518"></a>正常运行时返回0，异常退出返回对应错误码。</p>
-</td>
-</tr>
-</tbody>
-</table>
+
+| 数据类型 | 说明 |
+| --- | --- |
+| int | 正常运行时返回0，异常退出返回对应错误码。 |
 
 **使用示例**
 
@@ -3990,89 +2053,23 @@ void krl\_L2sqr\_ny\_u8f32\(float\* dis, const uint8\_t\* x, const uint8\_t\* y,
 **参数说明<a name="section157501312135019"></a>**
 
 <a name="table1623016332509"></a>
-<table><thead align="left"><tr id="row823063355012"><th class="cellrowborder" valign="top" width="15.551555155515551%" id="mcps1.1.5.1.1"><p id="p1230333125010"><a name="p1230333125010"></a><a name="p1230333125010"></a>参数名称</p>
-</th>
-<th class="cellrowborder" valign="top" width="14.601460146014599%" id="mcps1.1.5.1.2"><p id="p089311158912"><a name="p089311158912"></a><a name="p089311158912"></a>数据类型</p>
-</th>
-<th class="cellrowborder" valign="top" width="33.99339933993399%" id="mcps1.1.5.1.3"><p id="p4230193313507"><a name="p4230193313507"></a><a name="p4230193313507"></a>描述</p>
-</th>
-<th class="cellrowborder" valign="top" width="35.85358535853585%" id="mcps1.1.5.1.4"><p id="p19887819256"><a name="p19887819256"></a><a name="p19887819256"></a>取值范围</p>
-</th>
-</tr>
-</thead>
-<tbody><tr id="row92301478154"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p223015479158"><a name="p223015479158"></a><a name="p223015479158"></a>dis</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p11230154710156"><a name="p11230154710156"></a><a name="p11230154710156"></a>float*</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p82303471154"><a name="p82303471154"></a><a name="p82303471154"></a>存储计算所得的距离结果。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p923018478155"><a name="p923018478155"></a><a name="p923018478155"></a>限制长度为dis_size，其中<span class="parmname" id="parmname133743422533"><a name="parmname133743422533"></a><a name="parmname133743422533"></a>“dis_size”</span>为存储距离结果数组的长度。需要预先分配内存。</p>
-</td>
-</tr>
-<tr id="row1823023318504"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p11230033165015"><a name="p11230033165015"></a><a name="p11230033165015"></a>x</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p953215815518"><a name="p953215815518"></a><a name="p953215815518"></a>const uint8_t*</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p18661136253"><a name="p18661136253"></a><a name="p18661136253"></a>参与距离计算的查询向量。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p79885872519"><a name="p79885872519"></a><a name="p79885872519"></a>限制长度为d，其中<span class="parmname" id="parmname76117481457"><a name="parmname76117481457"></a><a name="parmname76117481457"></a>“d”</span>为向量维度。</p>
-</td>
-</tr>
-<tr id="row10982132445420"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p4982142445414"><a name="p4982142445414"></a><a name="p4982142445414"></a>y</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p7532158856"><a name="p7532158856"></a><a name="p7532158856"></a>const uint8_t*</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p36611261054"><a name="p36611261054"></a><a name="p36611261054"></a>参与距离计算的底库向量。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p85127581355"><a name="p85127581355"></a><a name="p85127581355"></a>限制长度为d*ny，其中<span class="parmname" id="parmname551215813519"><a name="parmname551215813519"></a><a name="parmname551215813519"></a>“d”</span>为向量维度，<span class="parmname" id="parmname8646142120239"><a name="parmname8646142120239"></a><a name="parmname8646142120239"></a>“ny”</span>为参与距离计算的底库向量个数。</p>
-</td>
-</tr>
-<tr id="row103951453161513"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p14723141215409"><a name="p14723141215409"></a><a name="p14723141215409"></a>ny</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p4723181210404"><a name="p4723181210404"></a><a name="p4723181210404"></a>size_t</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p672341218403"><a name="p672341218403"></a><a name="p672341218403"></a>参与距离计算的底库向量个数。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p6723181274010"><a name="p6723181274010"></a><a name="p6723181274010"></a>[1,2^30-1]</p>
-</td>
-</tr>
-<tr id="row106882715416"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p46812710547"><a name="p46812710547"></a><a name="p46812710547"></a>d</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p45311183519"><a name="p45311183519"></a><a name="p45311183519"></a>size_t</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p17661261256"><a name="p17661261256"></a><a name="p17661261256"></a>向量维度。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p46952755416"><a name="p46952755416"></a><a name="p46952755416"></a>[1,65535]</p>
-</td>
-</tr>
-<tr id="row882011193585"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p39628388417"><a name="p39628388417"></a><a name="p39628388417"></a>dis_size</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p10722125214"><a name="p10722125214"></a><a name="p10722125214"></a>size_t</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p1762116529"><a name="p1762116529"></a><a name="p1762116529"></a>存储距离结果数组的长度。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p154517391451"><a name="p154517391451"></a><a name="p154517391451"></a>ny，其中<span class="parmname" id="parmname44553910519"><a name="parmname44553910519"></a><a name="parmname44553910519"></a>“ny”</span>为参与距离计算的底库向量个数。</p>
-</td>
-</tr>
-</tbody>
-</table>
+
+| 参数名称 | 数据类型 | 描述 | 取值范围 |
+| --- | --- | --- | --- |
+| dis | float* | 存储计算所得的距离结果。 | 限制长度为dis_size，其中“dis_size”为存储距离结果数组的长度。需要预先分配内存。 |
+| x | const uint8_t* | 参与距离计算的查询向量。 | 限制长度为d，其中“d”为向量维度。 |
+| y | const uint8_t* | 参与距离计算的底库向量。 | 限制长度为d*ny，其中“d”为向量维度，“ny”为参与距离计算的底库向量个数。 |
+| ny | size_t | 参与距离计算的底库向量个数。 | [1,2^30-1] |
+| d | size_t | 向量维度。 | [1,65535] |
+| dis_size | size_t | 存储距离结果数组的长度。 | ny，其中“ny”为参与距离计算的底库向量个数。 |
 
 **返回值<a name="section49971832106"></a>**
 
 <a name="table17997635100"></a>
-<table><thead align="left"><tr id="row699763141018"><th class="cellrowborder" valign="top" width="40%" id="mcps1.1.3.1.1"><p id="p699793141012"><a name="p699793141012"></a><a name="p699793141012"></a>数据类型</p>
-</th>
-<th class="cellrowborder" valign="top" width="60%" id="mcps1.1.3.1.2"><p id="p1999763141020"><a name="p1999763141020"></a><a name="p1999763141020"></a>说明</p>
-</th>
-</tr>
-</thead>
-<tbody><tr id="row1599716361015"><td class="cellrowborder" valign="top" width="40%" headers="mcps1.1.3.1.1 "><p id="p39970319101"><a name="p39970319101"></a><a name="p39970319101"></a>int</p>
-</td>
-<td class="cellrowborder" valign="top" width="60%" headers="mcps1.1.3.1.2 "><p id="p53461032104518"><a name="p53461032104518"></a><a name="p53461032104518"></a>正常运行时返回0，异常退出返回对应错误码。</p>
-</td>
-</tr>
-</tbody>
-</table>
+
+| 数据类型 | 说明 |
+| --- | --- |
+| int | 正常运行时返回0，异常退出返回对应错误码。 |
 
 **使用示例**
 
@@ -4140,80 +2137,22 @@ int krl\_L2sqr\_ny\_with\_handle\(const KRLDistanceHandle\* kdh, float\* dis, co
 **参数说明<a name="section157501312135019"></a>**
 
 <a name="table1623016332509"></a>
-<table><thead align="left"><tr id="row823063355012"><th class="cellrowborder" valign="top" width="15.551555155515551%" id="mcps1.1.5.1.1"><p id="p1230333125010"><a name="p1230333125010"></a><a name="p1230333125010"></a>参数名称</p>
-</th>
-<th class="cellrowborder" valign="top" width="14.601460146014599%" id="mcps1.1.5.1.2"><p id="p089311158912"><a name="p089311158912"></a><a name="p089311158912"></a>数据类型</p>
-</th>
-<th class="cellrowborder" valign="top" width="33.99339933993399%" id="mcps1.1.5.1.3"><p id="p4230193313507"><a name="p4230193313507"></a><a name="p4230193313507"></a>描述</p>
-</th>
-<th class="cellrowborder" valign="top" width="35.85358535853585%" id="mcps1.1.5.1.4"><p id="p19887819256"><a name="p19887819256"></a><a name="p19887819256"></a>取值范围</p>
-</th>
-</tr>
-</thead>
-<tbody><tr id="row92301478154"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p223015479158"><a name="p223015479158"></a><a name="p223015479158"></a>kdh</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p11230154710156"><a name="p11230154710156"></a><a name="p11230154710156"></a>const KRLDistanceHandle*</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p82303471154"><a name="p82303471154"></a><a name="p82303471154"></a>KRLDistanceHandle指针。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p923018478155"><a name="p923018478155"></a><a name="p923018478155"></a>限制非空，需要使用krl_create_distance_handle初始化。</p>
-</td>
-</tr>
-<tr id="row1823023318504"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p11230033165015"><a name="p11230033165015"></a><a name="p11230033165015"></a>dis</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p953215815518"><a name="p953215815518"></a><a name="p953215815518"></a>float*</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p23437551435"><a name="p23437551435"></a><a name="p23437551435"></a>存储计算所得的距离结果。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p1334317552314"><a name="p1334317552314"></a><a name="p1334317552314"></a>限制长度为dis_size，其中<span class="parmname" id="parmname13438551312"><a name="parmname13438551312"></a><a name="parmname13438551312"></a>“dis_size”</span>为存储距离结果数组的长度。需要预先分配内存。</p>
-</td>
-</tr>
-<tr id="row10982132445420"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p1089412431931"><a name="p1089412431931"></a><a name="p1089412431931"></a>x</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p1389417431933"><a name="p1389417431933"></a><a name="p1389417431933"></a>const float*</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p28941943039"><a name="p28941943039"></a><a name="p28941943039"></a>参与距离计算的查询向量。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p389414311314"><a name="p389414311314"></a><a name="p389414311314"></a>限制长度为x_size，其中<span class="parmname" id="parmname58941043930"><a name="parmname58941043930"></a><a name="parmname58941043930"></a>“x_size”</span>为参与距离计算的查询向量数组的长度。</p>
-</td>
-</tr>
-<tr id="row204111454114013"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p741115416407"><a name="p741115416407"></a><a name="p741115416407"></a>dis_size</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p11411185494014"><a name="p11411185494014"></a><a name="p11411185494014"></a>size_t</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p54111354134020"><a name="p54111354134020"></a><a name="p54111354134020"></a>存储距离结果数组的长度。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p64114540409"><a name="p64114540409"></a><a name="p64114540409"></a>num_base*codes_num，其中<span class="parmname" id="parmname1683723319432"><a name="parmname1683723319432"></a><a name="parmname1683723319432"></a>“num_base”</span>为单次处理的查询向量个数，<span class="parmname" id="parmname68371933174315"><a name="parmname68371933174315"></a><a name="parmname68371933174315"></a>“codes_num”</span>为每个查询向量计算的底库向量数量。</p>
-</td>
-</tr>
-<tr id="row203061171413"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p63061672410"><a name="p63061672410"></a><a name="p63061672410"></a>x_size</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p1306147134110"><a name="p1306147134110"></a><a name="p1306147134110"></a>size_t</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p330613718414"><a name="p330613718414"></a><a name="p330613718414"></a>参与距离计算的查询向量数组的长度。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p1730614764116"><a name="p1730614764116"></a><a name="p1730614764116"></a>d*num_base，其中<span class="parmname" id="parmname1753503824315"><a name="parmname1753503824315"></a><a name="parmname1753503824315"></a>“d”</span>为向量维度，<span class="parmname" id="parmname1353503811435"><a name="parmname1353503811435"></a><a name="parmname1353503811435"></a>“num_base”</span>为单次处理的查询向量个数。</p>
-</td>
-</tr>
-</tbody>
-</table>
+
+| 参数名称 | 数据类型 | 描述 | 取值范围 |
+| --- | --- | --- | --- |
+| kdh | const KRLDistanceHandle* | KRLDistanceHandle指针。 | 限制非空，需要使用krl_create_distance_handle初始化。 |
+| dis | float* | 存储计算所得的距离结果。 | 限制长度为dis_size，其中“dis_size”为存储距离结果数组的长度。需要预先分配内存。 |
+| x | const float* | 参与距离计算的查询向量。 | 限制长度为x_size，其中“x_size”为参与距离计算的查询向量数组的长度。 |
+| dis_size | size_t | 存储距离结果数组的长度。 | num_base*codes_num，其中“num_base”为单次处理的查询向量个数，“codes_num”为每个查询向量计算的底库向量数量。 |
+| x_size | size_t | 参与距离计算的查询向量数组的长度。 | d*num_base，其中“d”为向量维度，“num_base”为单次处理的查询向量个数。 |
 
 **返回值<a name="section49971832106"></a>**
 
 <a name="table17997635100"></a>
-<table><thead align="left"><tr id="row699763141018"><th class="cellrowborder" valign="top" width="40%" id="mcps1.1.3.1.1"><p id="p699793141012"><a name="p699793141012"></a><a name="p699793141012"></a>数据类型</p>
-</th>
-<th class="cellrowborder" valign="top" width="60%" id="mcps1.1.3.1.2"><p id="p1999763141020"><a name="p1999763141020"></a><a name="p1999763141020"></a>说明</p>
-</th>
-</tr>
-</thead>
-<tbody><tr id="row1599716361015"><td class="cellrowborder" valign="top" width="40%" headers="mcps1.1.3.1.1 "><p id="p39970319101"><a name="p39970319101"></a><a name="p39970319101"></a>int</p>
-</td>
-<td class="cellrowborder" valign="top" width="60%" headers="mcps1.1.3.1.2 "><p id="p53461032104518"><a name="p53461032104518"></a><a name="p53461032104518"></a>正常运行时返回0，异常退出返回对应错误码。</p>
-</td>
-</tr>
-</tbody>
-</table>
+
+| 数据类型 | 说明 |
+| --- | --- |
+| int | 正常运行时返回0，异常退出返回对应错误码。 |
 
 **使用示例**
 
@@ -4312,89 +2251,23 @@ int krl\_inner\_product\_ny\(float\* dis, const float\* x, const float\* y, size
 **参数说明<a name="section157501312135019"></a>**
 
 <a name="table1623016332509"></a>
-<table><thead align="left"><tr id="row823063355012"><th class="cellrowborder" valign="top" width="15.551555155515553%" id="mcps1.1.5.1.1"><p id="p1230333125010"><a name="p1230333125010"></a><a name="p1230333125010"></a>参数名称</p>
-</th>
-<th class="cellrowborder" valign="top" width="14.601460146014603%" id="mcps1.1.5.1.2"><p id="p089311158912"><a name="p089311158912"></a><a name="p089311158912"></a>数据类型</p>
-</th>
-<th class="cellrowborder" valign="top" width="34.043404340434044%" id="mcps1.1.5.1.3"><p id="p4230193313507"><a name="p4230193313507"></a><a name="p4230193313507"></a>描述</p>
-</th>
-<th class="cellrowborder" valign="top" width="35.80358035803581%" id="mcps1.1.5.1.4"><p id="p19887819256"><a name="p19887819256"></a><a name="p19887819256"></a>取值范围</p>
-</th>
-</tr>
-</thead>
-<tbody><tr id="row92301478154"><td class="cellrowborder" valign="top" width="15.551555155515553%" headers="mcps1.1.5.1.1 "><p id="p223015479158"><a name="p223015479158"></a><a name="p223015479158"></a>dis</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.601460146014603%" headers="mcps1.1.5.1.2 "><p id="p11230154710156"><a name="p11230154710156"></a><a name="p11230154710156"></a>float*</p>
-</td>
-<td class="cellrowborder" valign="top" width="34.043404340434044%" headers="mcps1.1.5.1.3 "><p id="p82303471154"><a name="p82303471154"></a><a name="p82303471154"></a>存储计算所得的距离结果。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.80358035803581%" headers="mcps1.1.5.1.4 "><p id="p923018478155"><a name="p923018478155"></a><a name="p923018478155"></a>限制长度为dis_size，其中<span class="parmname" id="parmname133743422533"><a name="parmname133743422533"></a><a name="parmname133743422533"></a>“dis_size”</span>为存储距离结果数组的长度。需要预先分配内存。</p>
-</td>
-</tr>
-<tr id="row1823023318504"><td class="cellrowborder" valign="top" width="15.551555155515553%" headers="mcps1.1.5.1.1 "><p id="p11230033165015"><a name="p11230033165015"></a><a name="p11230033165015"></a>x</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.601460146014603%" headers="mcps1.1.5.1.2 "><p id="p953215815518"><a name="p953215815518"></a><a name="p953215815518"></a>const float*</p>
-</td>
-<td class="cellrowborder" valign="top" width="34.043404340434044%" headers="mcps1.1.5.1.3 "><p id="p18661136253"><a name="p18661136253"></a><a name="p18661136253"></a>参与距离计算的查询向量。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.80358035803581%" headers="mcps1.1.5.1.4 "><p id="p79885872519"><a name="p79885872519"></a><a name="p79885872519"></a>限制长度为d，其中<span class="parmname" id="parmname76117481457"><a name="parmname76117481457"></a><a name="parmname76117481457"></a>“d”</span>为向量维度。</p>
-</td>
-</tr>
-<tr id="row10982132445420"><td class="cellrowborder" valign="top" width="15.551555155515553%" headers="mcps1.1.5.1.1 "><p id="p4982142445414"><a name="p4982142445414"></a><a name="p4982142445414"></a>y</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.601460146014603%" headers="mcps1.1.5.1.2 "><p id="p7532158856"><a name="p7532158856"></a><a name="p7532158856"></a>const float*</p>
-</td>
-<td class="cellrowborder" valign="top" width="34.043404340434044%" headers="mcps1.1.5.1.3 "><p id="p36611261054"><a name="p36611261054"></a><a name="p36611261054"></a>参与距离计算的底库向量。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.80358035803581%" headers="mcps1.1.5.1.4 "><p id="p85127581355"><a name="p85127581355"></a><a name="p85127581355"></a>限制长度为d*ny，其中<span class="parmname" id="parmname551215813519"><a name="parmname551215813519"></a><a name="parmname551215813519"></a>“d”</span>为向量维度，<span class="parmname" id="parmname8646142120239"><a name="parmname8646142120239"></a><a name="parmname8646142120239"></a>“ny”</span>为参与距离计算的底库向量个数。</p>
-</td>
-</tr>
-<tr id="row103951453161513"><td class="cellrowborder" valign="top" width="15.551555155515553%" headers="mcps1.1.5.1.1 "><p id="p14723141215409"><a name="p14723141215409"></a><a name="p14723141215409"></a>ny</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.601460146014603%" headers="mcps1.1.5.1.2 "><p id="p4723181210404"><a name="p4723181210404"></a><a name="p4723181210404"></a>size_t</p>
-</td>
-<td class="cellrowborder" valign="top" width="34.043404340434044%" headers="mcps1.1.5.1.3 "><p id="p672341218403"><a name="p672341218403"></a><a name="p672341218403"></a>参与距离计算的底库向量个数。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.80358035803581%" headers="mcps1.1.5.1.4 "><p id="p6723181274010"><a name="p6723181274010"></a><a name="p6723181274010"></a>[1,2^30-1]</p>
-</td>
-</tr>
-<tr id="row106882715416"><td class="cellrowborder" valign="top" width="15.551555155515553%" headers="mcps1.1.5.1.1 "><p id="p46812710547"><a name="p46812710547"></a><a name="p46812710547"></a>d</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.601460146014603%" headers="mcps1.1.5.1.2 "><p id="p45311183519"><a name="p45311183519"></a><a name="p45311183519"></a>size_t</p>
-</td>
-<td class="cellrowborder" valign="top" width="34.043404340434044%" headers="mcps1.1.5.1.3 "><p id="p17661261256"><a name="p17661261256"></a><a name="p17661261256"></a>向量维度。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.80358035803581%" headers="mcps1.1.5.1.4 "><p id="p46952755416"><a name="p46952755416"></a><a name="p46952755416"></a>[1,65535]</p>
-</td>
-</tr>
-<tr id="row1069011157013"><td class="cellrowborder" valign="top" width="15.551555155515553%" headers="mcps1.1.5.1.1 "><p id="p39628388417"><a name="p39628388417"></a><a name="p39628388417"></a>dis_size</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.601460146014603%" headers="mcps1.1.5.1.2 "><p id="p10722125214"><a name="p10722125214"></a><a name="p10722125214"></a>size_t</p>
-</td>
-<td class="cellrowborder" valign="top" width="34.043404340434044%" headers="mcps1.1.5.1.3 "><p id="p1762116529"><a name="p1762116529"></a><a name="p1762116529"></a>存储距离结果数组的长度。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.80358035803581%" headers="mcps1.1.5.1.4 "><p id="p154517391451"><a name="p154517391451"></a><a name="p154517391451"></a>ny，其中<span class="parmname" id="parmname44553910519"><a name="parmname44553910519"></a><a name="parmname44553910519"></a>“ny”</span>为参与距离计算的底库向量个数。</p>
-</td>
-</tr>
-</tbody>
-</table>
+
+| 参数名称 | 数据类型 | 描述 | 取值范围 |
+| --- | --- | --- | --- |
+| dis | float* | 存储计算所得的距离结果。 | 限制长度为dis_size，其中“dis_size”为存储距离结果数组的长度。需要预先分配内存。 |
+| x | const float* | 参与距离计算的查询向量。 | 限制长度为d，其中“d”为向量维度。 |
+| y | const float* | 参与距离计算的底库向量。 | 限制长度为d*ny，其中“d”为向量维度，“ny”为参与距离计算的底库向量个数。 |
+| ny | size_t | 参与距离计算的底库向量个数。 | [1,2^30-1] |
+| d | size_t | 向量维度。 | [1,65535] |
+| dis_size | size_t | 存储距离结果数组的长度。 | ny，其中“ny”为参与距离计算的底库向量个数。 |
 
 **返回值<a name="section49971832106"></a>**
 
 <a name="table17997635100"></a>
-<table><thead align="left"><tr id="row699763141018"><th class="cellrowborder" valign="top" width="40%" id="mcps1.1.3.1.1"><p id="p699793141012"><a name="p699793141012"></a><a name="p699793141012"></a>数据类型</p>
-</th>
-<th class="cellrowborder" valign="top" width="60%" id="mcps1.1.3.1.2"><p id="p1999763141020"><a name="p1999763141020"></a><a name="p1999763141020"></a>说明</p>
-</th>
-</tr>
-</thead>
-<tbody><tr id="row1599716361015"><td class="cellrowborder" valign="top" width="40%" headers="mcps1.1.3.1.1 "><p id="p39970319101"><a name="p39970319101"></a><a name="p39970319101"></a>int</p>
-</td>
-<td class="cellrowborder" valign="top" width="60%" headers="mcps1.1.3.1.2 "><p id="p53461032104518"><a name="p53461032104518"></a><a name="p53461032104518"></a>正常运行时返回0，异常退出返回对应错误码。</p>
-</td>
-</tr>
-</tbody>
-</table>
+
+| 数据类型 | 说明 |
+| --- | --- |
+| int | 正常运行时返回0，异常退出返回对应错误码。 |
 
 **使用示例**
 
@@ -4472,89 +2345,23 @@ int krl\_inner\_product\_ny\_f16f32\(float\* dis, const uint16\_t\* x, const uin
 **参数说明<a name="section157501312135019"></a>**
 
 <a name="table1623016332509"></a>
-<table><thead align="left"><tr id="row823063355012"><th class="cellrowborder" valign="top" width="15.551555155515551%" id="mcps1.1.5.1.1"><p id="p1230333125010"><a name="p1230333125010"></a><a name="p1230333125010"></a>参数名称</p>
-</th>
-<th class="cellrowborder" valign="top" width="14.601460146014599%" id="mcps1.1.5.1.2"><p id="p089311158912"><a name="p089311158912"></a><a name="p089311158912"></a>数据类型</p>
-</th>
-<th class="cellrowborder" valign="top" width="33.97339733973397%" id="mcps1.1.5.1.3"><p id="p4230193313507"><a name="p4230193313507"></a><a name="p4230193313507"></a>描述</p>
-</th>
-<th class="cellrowborder" valign="top" width="35.873587358735875%" id="mcps1.1.5.1.4"><p id="p19887819256"><a name="p19887819256"></a><a name="p19887819256"></a>取值范围</p>
-</th>
-</tr>
-</thead>
-<tbody><tr id="row92301478154"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p223015479158"><a name="p223015479158"></a><a name="p223015479158"></a>dis</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p11230154710156"><a name="p11230154710156"></a><a name="p11230154710156"></a>float*</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.97339733973397%" headers="mcps1.1.5.1.3 "><p id="p82303471154"><a name="p82303471154"></a><a name="p82303471154"></a>存储计算所得的距离结果。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.873587358735875%" headers="mcps1.1.5.1.4 "><p id="p923018478155"><a name="p923018478155"></a><a name="p923018478155"></a>限制长度为dis_size，其中<span class="parmname" id="parmname133743422533"><a name="parmname133743422533"></a><a name="parmname133743422533"></a>“dis_size”</span>为存储距离结果数组的长度。需要预先分配内存。</p>
-</td>
-</tr>
-<tr id="row1823023318504"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p11230033165015"><a name="p11230033165015"></a><a name="p11230033165015"></a>x</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p953215815518"><a name="p953215815518"></a><a name="p953215815518"></a>const uint16_t*</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.97339733973397%" headers="mcps1.1.5.1.3 "><p id="p18661136253"><a name="p18661136253"></a><a name="p18661136253"></a>参与距离计算的查询向量。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.873587358735875%" headers="mcps1.1.5.1.4 "><p id="p79885872519"><a name="p79885872519"></a><a name="p79885872519"></a>限制长度为d，其中<span class="parmname" id="parmname76117481457"><a name="parmname76117481457"></a><a name="parmname76117481457"></a>“d”</span>为向量维度。</p>
-</td>
-</tr>
-<tr id="row10982132445420"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p4982142445414"><a name="p4982142445414"></a><a name="p4982142445414"></a>y</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p7532158856"><a name="p7532158856"></a><a name="p7532158856"></a>const uint16_t*</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.97339733973397%" headers="mcps1.1.5.1.3 "><p id="p36611261054"><a name="p36611261054"></a><a name="p36611261054"></a>参与距离计算的底库向量。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.873587358735875%" headers="mcps1.1.5.1.4 "><p id="p85127581355"><a name="p85127581355"></a><a name="p85127581355"></a>限制长度为d*ny，其中<span class="parmname" id="parmname551215813519"><a name="parmname551215813519"></a><a name="parmname551215813519"></a>“d”</span>为向量维度，<span class="parmname" id="parmname8646142120239"><a name="parmname8646142120239"></a><a name="parmname8646142120239"></a>“ny”</span>为参与距离计算的底库向量个数。</p>
-</td>
-</tr>
-<tr id="row103951453161513"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p14723141215409"><a name="p14723141215409"></a><a name="p14723141215409"></a>ny</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p4723181210404"><a name="p4723181210404"></a><a name="p4723181210404"></a>size_t</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.97339733973397%" headers="mcps1.1.5.1.3 "><p id="p672341218403"><a name="p672341218403"></a><a name="p672341218403"></a>参与距离计算的底库向量个数。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.873587358735875%" headers="mcps1.1.5.1.4 "><p id="p6723181274010"><a name="p6723181274010"></a><a name="p6723181274010"></a>[1,2^30-1]</p>
-</td>
-</tr>
-<tr id="row106882715416"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p46812710547"><a name="p46812710547"></a><a name="p46812710547"></a>d</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p45311183519"><a name="p45311183519"></a><a name="p45311183519"></a>size_t</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.97339733973397%" headers="mcps1.1.5.1.3 "><p id="p17661261256"><a name="p17661261256"></a><a name="p17661261256"></a>向量维度。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.873587358735875%" headers="mcps1.1.5.1.4 "><p id="p46952755416"><a name="p46952755416"></a><a name="p46952755416"></a>[1,65535]</p>
-</td>
-</tr>
-<tr id="row536922710219"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p39628388417"><a name="p39628388417"></a><a name="p39628388417"></a>dis_size</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p10722125214"><a name="p10722125214"></a><a name="p10722125214"></a>size_t</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.97339733973397%" headers="mcps1.1.5.1.3 "><p id="p1762116529"><a name="p1762116529"></a><a name="p1762116529"></a>存储距离结果数组的长度。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.873587358735875%" headers="mcps1.1.5.1.4 "><p id="p154517391451"><a name="p154517391451"></a><a name="p154517391451"></a>ny，其中<span class="parmname" id="parmname44553910519"><a name="parmname44553910519"></a><a name="parmname44553910519"></a>“ny”</span>为参与距离计算的底库向量个数。</p>
-</td>
-</tr>
-</tbody>
-</table>
+
+| 参数名称 | 数据类型 | 描述 | 取值范围 |
+| --- | --- | --- | --- |
+| dis | float* | 存储计算所得的距离结果。 | 限制长度为dis_size，其中“dis_size”为存储距离结果数组的长度。需要预先分配内存。 |
+| x | const uint16_t* | 参与距离计算的查询向量。 | 限制长度为d，其中“d”为向量维度。 |
+| y | const uint16_t* | 参与距离计算的底库向量。 | 限制长度为d*ny，其中“d”为向量维度，“ny”为参与距离计算的底库向量个数。 |
+| ny | size_t | 参与距离计算的底库向量个数。 | [1,2^30-1] |
+| d | size_t | 向量维度。 | [1,65535] |
+| dis_size | size_t | 存储距离结果数组的长度。 | ny，其中“ny”为参与距离计算的底库向量个数。 |
 
 **返回值<a name="section49971832106"></a>**
 
 <a name="table17997635100"></a>
-<table><thead align="left"><tr id="row699763141018"><th class="cellrowborder" valign="top" width="40%" id="mcps1.1.3.1.1"><p id="p699793141012"><a name="p699793141012"></a><a name="p699793141012"></a>数据类型</p>
-</th>
-<th class="cellrowborder" valign="top" width="60%" id="mcps1.1.3.1.2"><p id="p1999763141020"><a name="p1999763141020"></a><a name="p1999763141020"></a>说明</p>
-</th>
-</tr>
-</thead>
-<tbody><tr id="row1599716361015"><td class="cellrowborder" valign="top" width="40%" headers="mcps1.1.3.1.1 "><p id="p39970319101"><a name="p39970319101"></a><a name="p39970319101"></a>int</p>
-</td>
-<td class="cellrowborder" valign="top" width="60%" headers="mcps1.1.3.1.2 "><p id="p53461032104518"><a name="p53461032104518"></a><a name="p53461032104518"></a>正常运行时返回0，异常退出返回对应错误码。</p>
-</td>
-</tr>
-</tbody>
-</table>
+
+| 数据类型 | 说明 |
+| --- | --- |
+| int | 正常运行时返回0，异常退出返回对应错误码。 |
 
 **使用示例**
 
@@ -4624,89 +2431,23 @@ int krl\_inner\_product\_ny\_f16f32\_sve2\(const uint16\_t\* query\_vec, const u
 **参数说明<a name="section157501312135019"></a>**
 
 <a name="table1623016332509"></a>
-<table><thead align="left"><tr id="row823063355012"><th class="cellrowborder" valign="top" width="15.551555155515551%" id="mcps1.1.5.1.1"><p id="p1230333125010"><a name="p1230333125010"></a><a name="p1230333125010"></a>参数名称</p>
-</th>
-<th class="cellrowborder" valign="top" width="14.601460146014599%" id="mcps1.1.5.1.2"><p id="p089311158912"><a name="p089311158912"></a><a name="p089311158912"></a>数据类型</p>
-</th>
-<th class="cellrowborder" valign="top" width="33.97339733973397%" id="mcps1.1.5.1.3"><p id="p4230193313507"><a name="p4230193313507"></a><a name="p4230193313507"></a>描述</p>
-</th>
-<th class="cellrowborder" valign="top" width="35.873587358735875%" id="mcps1.1.5.1.4"><p id="p19887819256"><a name="p19887819256"></a><a name="p19887819256"></a>取值范围</p>
-</th>
-</tr>
-</thead>
-<tbody><tr id="row92301478154"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p223015479158"><a name="p223015479158"></a><a name="p223015479158"></a>dis</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p11230154710156"><a name="p11230154710156"></a><a name="p11230154710156"></a>float*</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.97339733973397%" headers="mcps1.1.5.1.3 "><p id="p82303471154"><a name="p82303471154"></a><a name="p82303471154"></a>存储计算所得的距离结果。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.873587358735875%" headers="mcps1.1.5.1.4 "><p id="p923018478155"><a name="p923018478155"></a><a name="p923018478155"></a>限制长度为dis_size，其中<span class="parmname" id="parmname133743422533"><a name="parmname133743422533"></a><a name="parmname133743422533"></a>“dis_size”</span>为存储距离结果数组的长度。需要预先分配内存。</p>
-</td>
-</tr>
-<tr id="row1823023318504"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p11230033165015"><a name="p11230033165015"></a><a name="p11230033165015"></a>x</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p953215815518"><a name="p953215815518"></a><a name="p953215815518"></a>const uint16_t*</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.97339733973397%" headers="mcps1.1.5.1.3 "><p id="p18661136253"><a name="p18661136253"></a><a name="p18661136253"></a>参与距离计算的查询向量。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.873587358735875%" headers="mcps1.1.5.1.4 "><p id="p79885872519"><a name="p79885872519"></a><a name="p79885872519"></a>限制长度为d，其中<span class="parmname" id="parmname76117481457"><a name="parmname76117481457"></a><a name="parmname76117481457"></a>“d”</span>为向量维度。</p>
-</td>
-</tr>
-<tr id="row10982132445420"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p4982142445414"><a name="p4982142445414"></a><a name="p4982142445414"></a>y</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p7532158856"><a name="p7532158856"></a><a name="p7532158856"></a>const uint16_t*</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.97339733973397%" headers="mcps1.1.5.1.3 "><p id="p36611261054"><a name="p36611261054"></a><a name="p36611261054"></a>参与距离计算的底库向量。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.873587358735875%" headers="mcps1.1.5.1.4 "><p id="p85127581355"><a name="p85127581355"></a><a name="p85127581355"></a>限制长度为d*ny，其中<span class="parmname" id="parmname551215813519"><a name="parmname551215813519"></a><a name="parmname551215813519"></a>“d”</span>为向量维度，<span class="parmname" id="parmname8646142120239"><a name="parmname8646142120239"></a><a name="parmname8646142120239"></a>“ny”</span>为参与距离计算的底库向量个数。</p>
-</td>
-</tr>
-<tr id="row103951453161513"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p14723141215409"><a name="p14723141215409"></a><a name="p14723141215409"></a>ny</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p4723181210404"><a name="p4723181210404"></a><a name="p4723181210404"></a>size_t</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.97339733973397%" headers="mcps1.1.5.1.3 "><p id="p672341218403"><a name="p672341218403"></a><a name="p672341218403"></a>参与距离计算的底库向量个数。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.873587358735875%" headers="mcps1.1.5.1.4 "><p id="p6723181274010"><a name="p6723181274010"></a><a name="p6723181274010"></a>[1,2^30-1]</p>
-</td>
-</tr>
-<tr id="row106882715416"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p46812710547"><a name="p46812710547"></a><a name="p46812710547"></a>d</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p45311183519"><a name="p45311183519"></a><a name="p45311183519"></a>size_t</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.97339733973397%" headers="mcps1.1.5.1.3 "><p id="p17661261256"><a name="p17661261256"></a><a name="p17661261256"></a>向量维度。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.873587358735875%" headers="mcps1.1.5.1.4 "><p id="p46952755416"><a name="p46952755416"></a><a name="p46952755416"></a>[1,65535]</p>
-</td>
-</tr>
-<tr id="row536922710219"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p39628388417"><a name="p39628388417"></a><a name="p39628388417"></a>dis_size</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p10722125214"><a name="p10722125214"></a><a name="p10722125214"></a>size_t</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.97339733973397%" headers="mcps1.1.5.1.3 "><p id="p1762116529"><a name="p1762116529"></a><a name="p1762116529"></a>存储距离结果数组的长度。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.873587358735875%" headers="mcps1.1.5.1.4 "><p id="p154517391451"><a name="p154517391451"></a><a name="p154517391451"></a>ny，其中<span class="parmname" id="parmname44553910519"><a name="parmname44553910519"></a><a name="parmname44553910519"></a>“ny”</span>为参与距离计算的底库向量个数。</p>
-</td>
-</tr>
-</tbody>
-</table>
+
+| 参数名称 | 数据类型 | 描述 | 取值范围 |
+| --- | --- | --- | --- |
+| dis | float* | 存储计算所得的距离结果。 | 限制长度为dis_size，其中“dis_size”为存储距离结果数组的长度。需要预先分配内存。 |
+| x | const uint16_t* | 参与距离计算的查询向量。 | 限制长度为d，其中“d”为向量维度。 |
+| y | const uint16_t* | 参与距离计算的底库向量。 | 限制长度为d*ny，其中“d”为向量维度，“ny”为参与距离计算的底库向量个数。 |
+| ny | size_t | 参与距离计算的底库向量个数。 | [1,2^30-1] |
+| d | size_t | 向量维度。 | [1,65535] |
+| dis_size | size_t | 存储距离结果数组的长度。 | ny，其中“ny”为参与距离计算的底库向量个数。 |
 
 **返回值<a name="section49971832106"></a>**
 
 <a name="table17997635100"></a>
-<table><thead align="left"><tr id="row699763141018"><th class="cellrowborder" valign="top" width="40%" id="mcps1.1.3.1.1"><p id="p699793141012"><a name="p699793141012"></a><a name="p699793141012"></a>数据类型</p>
-</th>
-<th class="cellrowborder" valign="top" width="60%" id="mcps1.1.3.1.2"><p id="p1999763141020"><a name="p1999763141020"></a><a name="p1999763141020"></a>说明</p>
-</th>
-</tr>
-</thead>
-<tbody><tr id="row1599716361015"><td class="cellrowborder" valign="top" width="40%" headers="mcps1.1.3.1.1 "><p id="p39970319101"><a name="p39970319101"></a><a name="p39970319101"></a>int</p>
-</td>
-<td class="cellrowborder" valign="top" width="60%" headers="mcps1.1.3.1.2 "><p id="p53461032104518"><a name="p53461032104518"></a><a name="p53461032104518"></a>正常运行时返回0，异常退出返回对应错误码。</p>
-</td>
-</tr>
-</tbody>
-</table>
+
+| 数据类型 | 说明 |
+| --- | --- |
+| int | 正常运行时返回0，异常退出返回对应错误码。 |
 
 **使用示例**
 
@@ -4725,89 +2466,23 @@ int krl\_inner\_product\_ny\_s8f32\(float\* dis, const int8\_t\* x, const int8\_
 **参数说明<a name="section157501312135019"></a>**
 
 <a name="table1623016332509"></a>
-<table><thead align="left"><tr id="row823063355012"><th class="cellrowborder" valign="top" width="15.551555155515551%" id="mcps1.1.5.1.1"><p id="p1230333125010"><a name="p1230333125010"></a><a name="p1230333125010"></a>参数名称</p>
-</th>
-<th class="cellrowborder" valign="top" width="14.601460146014599%" id="mcps1.1.5.1.2"><p id="p089311158912"><a name="p089311158912"></a><a name="p089311158912"></a>数据类型</p>
-</th>
-<th class="cellrowborder" valign="top" width="33.99339933993399%" id="mcps1.1.5.1.3"><p id="p4230193313507"><a name="p4230193313507"></a><a name="p4230193313507"></a>描述</p>
-</th>
-<th class="cellrowborder" valign="top" width="35.85358535853585%" id="mcps1.1.5.1.4"><p id="p19887819256"><a name="p19887819256"></a><a name="p19887819256"></a>取值范围</p>
-</th>
-</tr>
-</thead>
-<tbody><tr id="row92301478154"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p223015479158"><a name="p223015479158"></a><a name="p223015479158"></a>dis</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p11230154710156"><a name="p11230154710156"></a><a name="p11230154710156"></a>float*</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p82303471154"><a name="p82303471154"></a><a name="p82303471154"></a>存储计算所得的距离结果。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p923018478155"><a name="p923018478155"></a><a name="p923018478155"></a>限制长度为dis_size，其中<span class="parmname" id="parmname133743422533"><a name="parmname133743422533"></a><a name="parmname133743422533"></a>“dis_size”</span>为存储距离结果数组的长度。需要预先分配内存。</p>
-</td>
-</tr>
-<tr id="row1823023318504"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p11230033165015"><a name="p11230033165015"></a><a name="p11230033165015"></a>x</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p953215815518"><a name="p953215815518"></a><a name="p953215815518"></a>const int8_t*</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p18661136253"><a name="p18661136253"></a><a name="p18661136253"></a>参与距离计算的查询向量。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p79885872519"><a name="p79885872519"></a><a name="p79885872519"></a>限制长度为d，其中<span class="parmname" id="parmname76117481457"><a name="parmname76117481457"></a><a name="parmname76117481457"></a>“d”</span>为向量维度。</p>
-</td>
-</tr>
-<tr id="row10982132445420"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p4982142445414"><a name="p4982142445414"></a><a name="p4982142445414"></a>y</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p7532158856"><a name="p7532158856"></a><a name="p7532158856"></a>const int8_t*</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p36611261054"><a name="p36611261054"></a><a name="p36611261054"></a>参与距离计算的底库向量。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p85127581355"><a name="p85127581355"></a><a name="p85127581355"></a>限制长度为d*ny，其中<span class="parmname" id="parmname551215813519"><a name="parmname551215813519"></a><a name="parmname551215813519"></a>“d”</span>为向量维度，<span class="parmname" id="parmname8646142120239"><a name="parmname8646142120239"></a><a name="parmname8646142120239"></a>“ny”</span>为参与距离计算的底库向量个数。</p>
-</td>
-</tr>
-<tr id="row103951453161513"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p14723141215409"><a name="p14723141215409"></a><a name="p14723141215409"></a>ny</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p4723181210404"><a name="p4723181210404"></a><a name="p4723181210404"></a>size_t</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p672341218403"><a name="p672341218403"></a><a name="p672341218403"></a>参与距离计算的底库向量个数。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p6723181274010"><a name="p6723181274010"></a><a name="p6723181274010"></a>[1,2^30-1]</p>
-</td>
-</tr>
-<tr id="row106882715416"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p46812710547"><a name="p46812710547"></a><a name="p46812710547"></a>d</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p45311183519"><a name="p45311183519"></a><a name="p45311183519"></a>size_t</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p17661261256"><a name="p17661261256"></a><a name="p17661261256"></a>向量维度。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p46952755416"><a name="p46952755416"></a><a name="p46952755416"></a>[1,65535]</p>
-</td>
-</tr>
-<tr id="row1491157243"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p39628388417"><a name="p39628388417"></a><a name="p39628388417"></a>dis_size</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p10722125214"><a name="p10722125214"></a><a name="p10722125214"></a>size_t</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p1762116529"><a name="p1762116529"></a><a name="p1762116529"></a>存储距离结果数组的长度。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p154517391451"><a name="p154517391451"></a><a name="p154517391451"></a>ny，其中<span class="parmname" id="parmname44553910519"><a name="parmname44553910519"></a><a name="parmname44553910519"></a>“ny”</span>为参与距离计算的底库向量个数。</p>
-</td>
-</tr>
-</tbody>
-</table>
+
+| 参数名称 | 数据类型 | 描述 | 取值范围 |
+| --- | --- | --- | --- |
+| dis | float* | 存储计算所得的距离结果。 | 限制长度为dis_size，其中“dis_size”为存储距离结果数组的长度。需要预先分配内存。 |
+| x | const int8_t* | 参与距离计算的查询向量。 | 限制长度为d，其中“d”为向量维度。 |
+| y | const int8_t* | 参与距离计算的底库向量。 | 限制长度为d*ny，其中“d”为向量维度，“ny”为参与距离计算的底库向量个数。 |
+| ny | size_t | 参与距离计算的底库向量个数。 | [1,2^30-1] |
+| d | size_t | 向量维度。 | [1,65535] |
+| dis_size | size_t | 存储距离结果数组的长度。 | ny，其中“ny”为参与距离计算的底库向量个数。 |
 
 **返回值<a name="section49971832106"></a>**
 
 <a name="table17997635100"></a>
-<table><thead align="left"><tr id="row699763141018"><th class="cellrowborder" valign="top" width="40%" id="mcps1.1.3.1.1"><p id="p699793141012"><a name="p699793141012"></a><a name="p699793141012"></a>数据类型</p>
-</th>
-<th class="cellrowborder" valign="top" width="60%" id="mcps1.1.3.1.2"><p id="p1999763141020"><a name="p1999763141020"></a><a name="p1999763141020"></a>说明</p>
-</th>
-</tr>
-</thead>
-<tbody><tr id="row1599716361015"><td class="cellrowborder" valign="top" width="40%" headers="mcps1.1.3.1.1 "><p id="p39970319101"><a name="p39970319101"></a><a name="p39970319101"></a>int</p>
-</td>
-<td class="cellrowborder" valign="top" width="60%" headers="mcps1.1.3.1.2 "><p id="p53461032104518"><a name="p53461032104518"></a><a name="p53461032104518"></a>正常运行时返回0，异常退出返回对应错误码。</p>
-</td>
-</tr>
-</tbody>
-</table>
+
+| 数据类型 | 说明 |
+| --- | --- |
+| int | 正常运行时返回0，异常退出返回对应错误码。 |
 
 **使用示例**
 
@@ -4889,80 +2564,22 @@ int krl\_inner\_product\_ny\_with\_handle\(const KRLDistanceHandle\* kdh, float\
 **参数说明<a name="section157501312135019"></a>**
 
 <a name="table1623016332509"></a>
-<table><thead align="left"><tr id="row823063355012"><th class="cellrowborder" valign="top" width="15.551555155515551%" id="mcps1.1.5.1.1"><p id="p1230333125010"><a name="p1230333125010"></a><a name="p1230333125010"></a>参数名称</p>
-</th>
-<th class="cellrowborder" valign="top" width="14.601460146014599%" id="mcps1.1.5.1.2"><p id="p089311158912"><a name="p089311158912"></a><a name="p089311158912"></a>数据类型</p>
-</th>
-<th class="cellrowborder" valign="top" width="33.99339933993399%" id="mcps1.1.5.1.3"><p id="p4230193313507"><a name="p4230193313507"></a><a name="p4230193313507"></a>描述</p>
-</th>
-<th class="cellrowborder" valign="top" width="35.85358535853585%" id="mcps1.1.5.1.4"><p id="p19887819256"><a name="p19887819256"></a><a name="p19887819256"></a>取值范围</p>
-</th>
-</tr>
-</thead>
-<tbody><tr id="row92301478154"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p223015479158"><a name="p223015479158"></a><a name="p223015479158"></a>kdh</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p11230154710156"><a name="p11230154710156"></a><a name="p11230154710156"></a>const KRLDistanceHandle*</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p82303471154"><a name="p82303471154"></a><a name="p82303471154"></a>KRLDistanceHandle指针。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p923018478155"><a name="p923018478155"></a><a name="p923018478155"></a>限制非空，需要使用krl_create_distance_handle初始化。</p>
-</td>
-</tr>
-<tr id="row1823023318504"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p11230033165015"><a name="p11230033165015"></a><a name="p11230033165015"></a>dis</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p953215815518"><a name="p953215815518"></a><a name="p953215815518"></a>float*</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p23437551435"><a name="p23437551435"></a><a name="p23437551435"></a>存储计算所得的距离结果。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p1334317552314"><a name="p1334317552314"></a><a name="p1334317552314"></a>限制长度为dis_size，其中<span class="parmname" id="parmname13438551312"><a name="parmname13438551312"></a><a name="parmname13438551312"></a>“dis_size”</span>为存储距离结果数组的长度。需要预先分配内存。</p>
-</td>
-</tr>
-<tr id="row10982132445420"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p1089412431931"><a name="p1089412431931"></a><a name="p1089412431931"></a>x</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p1389417431933"><a name="p1389417431933"></a><a name="p1389417431933"></a>const float*</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p28941943039"><a name="p28941943039"></a><a name="p28941943039"></a>参与距离计算的查询向量。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p389414311314"><a name="p389414311314"></a><a name="p389414311314"></a>限制长度为x_size，其中<span class="parmname" id="parmname58941043930"><a name="parmname58941043930"></a><a name="parmname58941043930"></a>“x_size”</span>为参与距离计算的查询向量数组的长度。</p>
-</td>
-</tr>
-<tr id="row416975034615"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p741115416407"><a name="p741115416407"></a><a name="p741115416407"></a>dis_size</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p11411185494014"><a name="p11411185494014"></a><a name="p11411185494014"></a>size_t</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p54111354134020"><a name="p54111354134020"></a><a name="p54111354134020"></a>存储距离结果数组的长度。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p116975012466"><a name="p116975012466"></a><a name="p116975012466"></a>num_base*codes_num，其中<span class="parmname" id="parmname206011465474"><a name="parmname206011465474"></a><a name="parmname206011465474"></a>“num_base”</span>为单次处理的查询向量个数，<span class="parmname" id="parmname1660186134712"><a name="parmname1660186134712"></a><a name="parmname1660186134712"></a>“codes_num”</span>为每个查询向量计算的底库向量数量。</p>
-</td>
-</tr>
-<tr id="row17378115284614"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p63061672410"><a name="p63061672410"></a><a name="p63061672410"></a>x_size</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p1306147134110"><a name="p1306147134110"></a><a name="p1306147134110"></a>size_t</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p330613718414"><a name="p330613718414"></a><a name="p330613718414"></a>参与距离计算的查询向量数组的长度。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p10378252194615"><a name="p10378252194615"></a><a name="p10378252194615"></a>d*num_base，其中<span class="parmname" id="parmname5313131244714"><a name="parmname5313131244714"></a><a name="parmname5313131244714"></a>“d”</span>为向量维度，<span class="parmname" id="parmname231381224715"><a name="parmname231381224715"></a><a name="parmname231381224715"></a>“num_base”</span>为单次处理的查询向量个数。</p>
-</td>
-</tr>
-</tbody>
-</table>
+
+| 参数名称 | 数据类型 | 描述 | 取值范围 |
+| --- | --- | --- | --- |
+| kdh | const KRLDistanceHandle* | KRLDistanceHandle指针。 | 限制非空，需要使用krl_create_distance_handle初始化。 |
+| dis | float* | 存储计算所得的距离结果。 | 限制长度为dis_size，其中“dis_size”为存储距离结果数组的长度。需要预先分配内存。 |
+| x | const float* | 参与距离计算的查询向量。 | 限制长度为x_size，其中“x_size”为参与距离计算的查询向量数组的长度。 |
+| dis_size | size_t | 存储距离结果数组的长度。 | num_base*codes_num，其中“num_base”为单次处理的查询向量个数，“codes_num”为每个查询向量计算的底库向量数量。 |
+| x_size | size_t | 参与距离计算的查询向量数组的长度。 | d*num_base，其中“d”为向量维度，“num_base”为单次处理的查询向量个数。 |
 
 **返回值<a name="section49971832106"></a>**
 
 <a name="table17997635100"></a>
-<table><thead align="left"><tr id="row699763141018"><th class="cellrowborder" valign="top" width="40%" id="mcps1.1.3.1.1"><p id="p699793141012"><a name="p699793141012"></a><a name="p699793141012"></a>数据类型</p>
-</th>
-<th class="cellrowborder" valign="top" width="60%" id="mcps1.1.3.1.2"><p id="p1999763141020"><a name="p1999763141020"></a><a name="p1999763141020"></a>说明</p>
-</th>
-</tr>
-</thead>
-<tbody><tr id="row1599716361015"><td class="cellrowborder" valign="top" width="40%" headers="mcps1.1.3.1.1 "><p id="p39970319101"><a name="p39970319101"></a><a name="p39970319101"></a>int</p>
-</td>
-<td class="cellrowborder" valign="top" width="60%" headers="mcps1.1.3.1.2 "><p id="p53461032104518"><a name="p53461032104518"></a><a name="p53461032104518"></a>正常运行时返回0，异常退出返回对应错误码。</p>
-</td>
-</tr>
-</tbody>
-</table>
+
+| 数据类型 | 说明 |
+| --- | --- |
+| int | 正常运行时返回0，异常退出返回对应错误码。 |
 
 **使用示例**
 
@@ -5070,116 +2687,26 @@ int krl\_table\_lookup\_8b\_f32\(size\_t nsq, size\_t ncode, const uint8\_t\* co
 **参数说明<a name="section157501312135019"></a>**
 
 <a name="table1623016332509"></a>
-<table><thead align="left"><tr id="row823063355012"><th class="cellrowborder" valign="top" width="15.551555155515551%" id="mcps1.1.5.1.1"><p id="p1230333125010"><a name="p1230333125010"></a><a name="p1230333125010"></a>参数名称</p>
-</th>
-<th class="cellrowborder" valign="top" width="14.601460146014599%" id="mcps1.1.5.1.2"><p id="p089311158912"><a name="p089311158912"></a><a name="p089311158912"></a>数据类型</p>
-</th>
-<th class="cellrowborder" valign="top" width="33.99339933993399%" id="mcps1.1.5.1.3"><p id="p4230193313507"><a name="p4230193313507"></a><a name="p4230193313507"></a>描述</p>
-</th>
-<th class="cellrowborder" valign="top" width="35.85358535853585%" id="mcps1.1.5.1.4"><p id="p19887819256"><a name="p19887819256"></a><a name="p19887819256"></a>取值范围</p>
-</th>
-</tr>
-</thead>
-<tbody><tr id="row92301478154"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p223015479158"><a name="p223015479158"></a><a name="p223015479158"></a>nsq</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p11230154710156"><a name="p11230154710156"></a><a name="p11230154710156"></a>size_t</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p82303471154"><a name="p82303471154"></a><a name="p82303471154"></a>子空间数量。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p923018478155"><a name="p923018478155"></a><a name="p923018478155"></a>[1,65535]</p>
-</td>
-</tr>
-<tr id="row1823023318504"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p11230033165015"><a name="p11230033165015"></a><a name="p11230033165015"></a>ncode</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p953215815518"><a name="p953215815518"></a><a name="p953215815518"></a>size_t</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p18661136253"><a name="p18661136253"></a><a name="p18661136253"></a>底库向量总数。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p79885872519"><a name="p79885872519"></a><a name="p79885872519"></a>[1,2^30-1]</p>
-</td>
-</tr>
-<tr id="row10982132445420"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p4982142445414"><a name="p4982142445414"></a><a name="p4982142445414"></a>codes</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p7532158856"><a name="p7532158856"></a><a name="p7532158856"></a>const uint8_t*</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p36611261054"><a name="p36611261054"></a><a name="p36611261054"></a>码本，底库向量对应的索引。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p85127581355"><a name="p85127581355"></a><a name="p85127581355"></a>限制长度为codes_size，其中<span class="parmname" id="parmname551215813519"><a name="parmname551215813519"></a><a name="parmname551215813519"></a>“codes_size”</span>为码本数组的长度。</p>
-</td>
-</tr>
-<tr id="row103951453161513"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p14723141215409"><a name="p14723141215409"></a><a name="p14723141215409"></a>sim_table</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p4723181210404"><a name="p4723181210404"></a><a name="p4723181210404"></a>const float*</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p718413012396"><a name="p718413012396"></a><a name="p718413012396"></a>码表，存储每维度查询向量与所有质心的距离。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p6723181274010"><a name="p6723181274010"></a><a name="p6723181274010"></a>限制长度为sim_table_size，其中<span class="parmname" id="parmname23951728194513"><a name="parmname23951728194513"></a><a name="parmname23951728194513"></a>“sim_table_size”</span>为码表数组的长度。</p>
-</td>
-</tr>
-<tr id="row106882715416"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p46812710547"><a name="p46812710547"></a><a name="p46812710547"></a>dis</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p45311183519"><a name="p45311183519"></a><a name="p45311183519"></a>float*</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p17661261256"><a name="p17661261256"></a><a name="p17661261256"></a>存储计算所得的距离结果。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p57801052141013"><a name="p57801052141013"></a><a name="p57801052141013"></a>限制长度为dis_size，其中<span class="parmname" id="parmname1048505120457"><a name="parmname1048505120457"></a><a name="parmname1048505120457"></a>“dis_size”</span>为存储距离结果数组的长度。需预先分配内存。</p>
-</td>
-</tr>
-<tr id="row1875218456372"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p275311453374"><a name="p275311453374"></a><a name="p275311453374"></a>dis0</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p7753045173714"><a name="p7753045173714"></a><a name="p7753045173714"></a>float</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p17531445103716"><a name="p17531445103716"></a><a name="p17531445103716"></a>初始距离。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p69179904614"><a name="p69179904614"></a><a name="p69179904614"></a>浮点数。</p>
-</td>
-</tr>
-<tr id="row9742043764"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p137414311617"><a name="p137414311617"></a><a name="p137414311617"></a>codes_size</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p06662231878"><a name="p06662231878"></a><a name="p06662231878"></a>size_t</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p16744431269"><a name="p16744431269"></a><a name="p16744431269"></a>码本数组的长度。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p127494317611"><a name="p127494317611"></a><a name="p127494317611"></a>nsq*ncode，其中<span class="parmname" id="parmname137711421694"><a name="parmname137711421694"></a><a name="parmname137711421694"></a>“nsq”</span>为子空间数量，<span class="parmname" id="parmname83779421995"><a name="parmname83779421995"></a><a name="parmname83779421995"></a>“ncode”</span>为底库向量总数。</p>
-</td>
-</tr>
-<tr id="row411920559612"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p7119655861"><a name="p7119655861"></a><a name="p7119655861"></a>sim_table_size</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p6403112617719"><a name="p6403112617719"></a><a name="p6403112617719"></a>size_t</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p311925516613"><a name="p311925516613"></a><a name="p311925516613"></a>码表数组的长度。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p81191255064"><a name="p81191255064"></a><a name="p81191255064"></a>nsq*256，其中<span class="parmname" id="parmname6479105617916"><a name="parmname6479105617916"></a><a name="parmname6479105617916"></a>“nsq”</span>为子空间数量。</p>
-</td>
-</tr>
-<tr id="row2533196472"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p1753316619720"><a name="p1753316619720"></a><a name="p1753316619720"></a>dis_size</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p64039264714"><a name="p64039264714"></a><a name="p64039264714"></a>size_t</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p54111354134020"><a name="p54111354134020"></a><a name="p54111354134020"></a>存储距离结果数组的长度。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p175331661478"><a name="p175331661478"></a><a name="p175331661478"></a>ncode，其中<span class="parmname" id="parmname89954141011"><a name="parmname89954141011"></a><a name="parmname89954141011"></a>“ncode”</span>为底库向量总数。</p>
-</td>
-</tr>
-</tbody>
-</table>
+
+| 参数名称 | 数据类型 | 描述 | 取值范围 |
+| --- | --- | --- | --- |
+| nsq | size_t | 子空间数量。 | [1,65535] |
+| ncode | size_t | 底库向量总数。 | [1,2^30-1] |
+| codes | const uint8_t* | 码本，底库向量对应的索引。 | 限制长度为codes_size，其中“codes_size”为码本数组的长度。 |
+| sim_table | const float* | 码表，存储每维度查询向量与所有质心的距离。 | 限制长度为sim_table_size，其中“sim_table_size”为码表数组的长度。 |
+| dis | float* | 存储计算所得的距离结果。 | 限制长度为dis_size，其中“dis_size”为存储距离结果数组的长度。需预先分配内存。 |
+| dis0 | float | 初始距离。 | 浮点数。 |
+| codes_size | size_t | 码本数组的长度。 | nsq*ncode，其中“nsq”为子空间数量，“ncode”为底库向量总数。 |
+| sim_table_size | size_t | 码表数组的长度。 | nsq*256，其中“nsq”为子空间数量。 |
+| dis_size | size_t | 存储距离结果数组的长度。 | ncode，其中“ncode”为底库向量总数。 |
 
 **返回值<a name="section49971832106"></a>**
 
 <a name="table17997635100"></a>
-<table><thead align="left"><tr id="row699763141018"><th class="cellrowborder" valign="top" width="40%" id="mcps1.1.3.1.1"><p id="p699793141012"><a name="p699793141012"></a><a name="p699793141012"></a>数据类型</p>
-</th>
-<th class="cellrowborder" valign="top" width="60%" id="mcps1.1.3.1.2"><p id="p1999763141020"><a name="p1999763141020"></a><a name="p1999763141020"></a>说明</p>
-</th>
-</tr>
-</thead>
-<tbody><tr id="row1599716361015"><td class="cellrowborder" valign="top" width="40%" headers="mcps1.1.3.1.1 "><p id="p39970319101"><a name="p39970319101"></a><a name="p39970319101"></a>int</p>
-</td>
-<td class="cellrowborder" valign="top" width="60%" headers="mcps1.1.3.1.2 "><p id="p53461032104518"><a name="p53461032104518"></a><a name="p53461032104518"></a>正常运行时返回0，异常退出返回对应错误码。</p>
-</td>
-</tr>
-</tbody>
-</table>
+
+| 数据类型 | 说明 |
+| --- | --- |
+| int | 正常运行时返回0，异常退出返回对应错误码。 |
 
 **使用示例**
 
@@ -5272,125 +2799,27 @@ int krl\_table\_lookup\_8b\_f32\_by\_idx\(size\_t nsq, size\_t ncode, const uint
 **参数说明<a name="section157501312135019"></a>**
 
 <a name="table1623016332509"></a>
-<table><thead align="left"><tr id="row823063355012"><th class="cellrowborder" valign="top" width="15.551555155515551%" id="mcps1.1.5.1.1"><p id="p1230333125010"><a name="p1230333125010"></a><a name="p1230333125010"></a>参数名称</p>
-</th>
-<th class="cellrowborder" valign="top" width="14.601460146014599%" id="mcps1.1.5.1.2"><p id="p089311158912"><a name="p089311158912"></a><a name="p089311158912"></a>数据类型</p>
-</th>
-<th class="cellrowborder" valign="top" width="33.99339933993399%" id="mcps1.1.5.1.3"><p id="p4230193313507"><a name="p4230193313507"></a><a name="p4230193313507"></a>描述</p>
-</th>
-<th class="cellrowborder" valign="top" width="35.85358535853585%" id="mcps1.1.5.1.4"><p id="p19887819256"><a name="p19887819256"></a><a name="p19887819256"></a>取值范围</p>
-</th>
-</tr>
-</thead>
-<tbody><tr id="row92301478154"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p223015479158"><a name="p223015479158"></a><a name="p223015479158"></a>nsq</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p11230154710156"><a name="p11230154710156"></a><a name="p11230154710156"></a>size_t</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p82303471154"><a name="p82303471154"></a><a name="p82303471154"></a>子空间数量。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p923018478155"><a name="p923018478155"></a><a name="p923018478155"></a>[1,65535]</p>
-</td>
-</tr>
-<tr id="row1823023318504"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p11230033165015"><a name="p11230033165015"></a><a name="p11230033165015"></a>ncode</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p953215815518"><a name="p953215815518"></a><a name="p953215815518"></a>size_t</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p18661136253"><a name="p18661136253"></a><a name="p18661136253"></a>底库向量总数。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p79885872519"><a name="p79885872519"></a><a name="p79885872519"></a>[1,2^30-1]</p>
-</td>
-</tr>
-<tr id="row10982132445420"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p4982142445414"><a name="p4982142445414"></a><a name="p4982142445414"></a>codes</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p7532158856"><a name="p7532158856"></a><a name="p7532158856"></a>const uint8_t*</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p992551816390"><a name="p992551816390"></a><a name="p992551816390"></a>码本，底库向量对应的索引。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p85127581355"><a name="p85127581355"></a><a name="p85127581355"></a>限制长度为codes_size，其中<span class="parmname" id="parmname551215813519"><a name="parmname551215813519"></a><a name="parmname551215813519"></a>“codes_size”</span>为码本数组的长度。</p>
-</td>
-</tr>
-<tr id="row103951453161513"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p14723141215409"><a name="p14723141215409"></a><a name="p14723141215409"></a>sim_table</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p4723181210404"><a name="p4723181210404"></a><a name="p4723181210404"></a>const float*</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p710155233915"><a name="p710155233915"></a><a name="p710155233915"></a>码表，存储每维度查询向量与所有质心的距离。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p6723181274010"><a name="p6723181274010"></a><a name="p6723181274010"></a>限制长度为sim_table_size，其中<span class="parmname" id="parmname23951728194513"><a name="parmname23951728194513"></a><a name="parmname23951728194513"></a>“sim_table_size”</span>为码表数组的长度。</p>
-</td>
-</tr>
-<tr id="row106882715416"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p46812710547"><a name="p46812710547"></a><a name="p46812710547"></a>dis</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p45311183519"><a name="p45311183519"></a><a name="p45311183519"></a>float*</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p17661261256"><a name="p17661261256"></a><a name="p17661261256"></a>存储计算所得的距离结果。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p57801052141013"><a name="p57801052141013"></a><a name="p57801052141013"></a>限制长度为dis_size，其中<span class="parmname" id="parmname1048505120457"><a name="parmname1048505120457"></a><a name="parmname1048505120457"></a>“dis_size”</span>为存储距离结果数组的长度。需预先分配内存。</p>
-</td>
-</tr>
-<tr id="row1875218456372"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p275311453374"><a name="p275311453374"></a><a name="p275311453374"></a>dis0</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p7753045173714"><a name="p7753045173714"></a><a name="p7753045173714"></a>float</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p17531445103716"><a name="p17531445103716"></a><a name="p17531445103716"></a>初始距离。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p69179904614"><a name="p69179904614"></a><a name="p69179904614"></a>浮点数。</p>
-</td>
-</tr>
-<tr id="row575095414710"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p075085444712"><a name="p075085444712"></a><a name="p075085444712"></a>idx</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p19750155420479"><a name="p19750155420479"></a><a name="p19750155420479"></a>const size_t*</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p875015418477"><a name="p875015418477"></a><a name="p875015418477"></a>参与计算的底库向量ID数组。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p375065415472"><a name="p375065415472"></a><a name="p375065415472"></a>限制长度为ncode，其中<span class="parmname" id="parmname3464124964815"><a name="parmname3464124964815"></a><a name="parmname3464124964815"></a>“ncode”</span>为底库向量总数。ID需要递增。</p>
-</td>
-</tr>
-<tr id="row14701171851717"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p137414311617"><a name="p137414311617"></a><a name="p137414311617"></a>codes_size</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p06662231878"><a name="p06662231878"></a><a name="p06662231878"></a>size_t</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p16744431269"><a name="p16744431269"></a><a name="p16744431269"></a>码本数组的长度。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p127494317611"><a name="p127494317611"></a><a name="p127494317611"></a>nsq*ncode，其中<span class="parmname" id="parmname137711421694"><a name="parmname137711421694"></a><a name="parmname137711421694"></a>“nsq”</span>为子空间数量，<span class="parmname" id="parmname83779421995"><a name="parmname83779421995"></a><a name="parmname83779421995"></a>“ncode”</span>为底库向量总数。</p>
-</td>
-</tr>
-<tr id="row37001918161712"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p7119655861"><a name="p7119655861"></a><a name="p7119655861"></a>sim_table_size</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p6403112617719"><a name="p6403112617719"></a><a name="p6403112617719"></a>size_t</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p311925516613"><a name="p311925516613"></a><a name="p311925516613"></a>码表数组的长度。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p81191255064"><a name="p81191255064"></a><a name="p81191255064"></a>nsq*256，其中<span class="parmname" id="parmname6479105617916"><a name="parmname6479105617916"></a><a name="parmname6479105617916"></a>“nsq”</span>为子空间数量。</p>
-</td>
-</tr>
-<tr id="row370081812173"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p1753316619720"><a name="p1753316619720"></a><a name="p1753316619720"></a>dis_size</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p64039264714"><a name="p64039264714"></a><a name="p64039264714"></a>size_t</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p54111354134020"><a name="p54111354134020"></a><a name="p54111354134020"></a>存储距离结果数组的长度。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p175331661478"><a name="p175331661478"></a><a name="p175331661478"></a>ncode，其中<span class="parmname" id="parmname89954141011"><a name="parmname89954141011"></a><a name="parmname89954141011"></a>“ncode”</span>为底库向量总数。</p>
-</td>
-</tr>
-</tbody>
-</table>
+
+| 参数名称 | 数据类型 | 描述 | 取值范围 |
+| --- | --- | --- | --- |
+| nsq | size_t | 子空间数量。 | [1,65535] |
+| ncode | size_t | 底库向量总数。 | [1,2^30-1] |
+| codes | const uint8_t* | 码本，底库向量对应的索引。 | 限制长度为codes_size，其中“codes_size”为码本数组的长度。 |
+| sim_table | const float* | 码表，存储每维度查询向量与所有质心的距离。 | 限制长度为sim_table_size，其中“sim_table_size”为码表数组的长度。 |
+| dis | float* | 存储计算所得的距离结果。 | 限制长度为dis_size，其中“dis_size”为存储距离结果数组的长度。需预先分配内存。 |
+| dis0 | float | 初始距离。 | 浮点数。 |
+| idx | const size_t* | 参与计算的底库向量ID数组。 | 限制长度为ncode，其中“ncode”为底库向量总数。ID需要递增。 |
+| codes_size | size_t | 码本数组的长度。 | nsq*ncode，其中“nsq”为子空间数量，“ncode”为底库向量总数。 |
+| sim_table_size | size_t | 码表数组的长度。 | nsq*256，其中“nsq”为子空间数量。 |
+| dis_size | size_t | 存储距离结果数组的长度。 | ncode，其中“ncode”为底库向量总数。 |
 
 **返回值<a name="section49971832106"></a>**
 
 <a name="table17997635100"></a>
-<table><thead align="left"><tr id="row699763141018"><th class="cellrowborder" valign="top" width="40%" id="mcps1.1.3.1.1"><p id="p699793141012"><a name="p699793141012"></a><a name="p699793141012"></a>数据类型</p>
-</th>
-<th class="cellrowborder" valign="top" width="60%" id="mcps1.1.3.1.2"><p id="p1999763141020"><a name="p1999763141020"></a><a name="p1999763141020"></a>说明</p>
-</th>
-</tr>
-</thead>
-<tbody><tr id="row1599716361015"><td class="cellrowborder" valign="top" width="40%" headers="mcps1.1.3.1.1 "><p id="p39970319101"><a name="p39970319101"></a><a name="p39970319101"></a>int</p>
-</td>
-<td class="cellrowborder" valign="top" width="60%" headers="mcps1.1.3.1.2 "><p id="p53461032104518"><a name="p53461032104518"></a><a name="p53461032104518"></a>正常运行时返回0，异常退出返回对应错误码。</p>
-</td>
-</tr>
-</tbody>
-</table>
+
+| 数据类型 | 说明 |
+| --- | --- |
+| int | 正常运行时返回0，异常退出返回对应错误码。 |
 
 **使用示例**
 
@@ -5481,107 +2910,25 @@ int krl\_table\_lookup\_8b\_f32\_with\_handle\(KRLLUT8bHandle\* klh, size\_t dim
 **参数说明<a name="section157501312135019"></a>**
 
 <a name="table1623016332509"></a>
-<table><thead align="left"><tr id="row823063355012"><th class="cellrowborder" valign="top" width="15.551555155515551%" id="mcps1.1.5.1.1"><p id="p1230333125010"><a name="p1230333125010"></a><a name="p1230333125010"></a>参数名称</p>
-</th>
-<th class="cellrowborder" valign="top" width="14.601460146014599%" id="mcps1.1.5.1.2"><p id="p089311158912"><a name="p089311158912"></a><a name="p089311158912"></a>数据类型</p>
-</th>
-<th class="cellrowborder" valign="top" width="33.953395339533955%" id="mcps1.1.5.1.3"><p id="p4230193313507"><a name="p4230193313507"></a><a name="p4230193313507"></a>描述</p>
-</th>
-<th class="cellrowborder" valign="top" width="35.8935893589359%" id="mcps1.1.5.1.4"><p id="p19887819256"><a name="p19887819256"></a><a name="p19887819256"></a>取值范围</p>
-</th>
-</tr>
-</thead>
-<tbody><tr id="row92301478154"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p223015479158"><a name="p223015479158"></a><a name="p223015479158"></a>klh</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p11230154710156"><a name="p11230154710156"></a><a name="p11230154710156"></a>KRLLUT8bHandle*</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.953395339533955%" headers="mcps1.1.5.1.3 "><p id="p82303471154"><a name="p82303471154"></a><a name="p82303471154"></a>KRLLUT8bHandle指针。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.8935893589359%" headers="mcps1.1.5.1.4 "><p id="p923018478155"><a name="p923018478155"></a><a name="p923018478155"></a>限制非空，需要使用krl_create_LUT8b_handle初始化。</p>
-</td>
-</tr>
-<tr id="row166241441532"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p262494414531"><a name="p262494414531"></a><a name="p262494414531"></a>dim</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p126241544125310"><a name="p126241544125310"></a><a name="p126241544125310"></a>size_t</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.953395339533955%" headers="mcps1.1.5.1.3 "><p id="p1562414447536"><a name="p1562414447536"></a><a name="p1562414447536"></a>向量维度。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.8935893589359%" headers="mcps1.1.5.1.4 "><p id="p19624744195313"><a name="p19624744195313"></a><a name="p19624744195313"></a>[1,65535]</p>
-</td>
-</tr>
-<tr id="row1823023318504"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p11230033165015"><a name="p11230033165015"></a><a name="p11230033165015"></a>ncode</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p953215815518"><a name="p953215815518"></a><a name="p953215815518"></a>size_t</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.953395339533955%" headers="mcps1.1.5.1.3 "><p id="p18661136253"><a name="p18661136253"></a><a name="p18661136253"></a>底库向量总数。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.8935893589359%" headers="mcps1.1.5.1.4 "><p id="p79885872519"><a name="p79885872519"></a><a name="p79885872519"></a>[1,2^30-1]</p>
-</td>
-</tr>
-<tr id="row10982132445420"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p4982142445414"><a name="p4982142445414"></a><a name="p4982142445414"></a>codes</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p7532158856"><a name="p7532158856"></a><a name="p7532158856"></a>const uint8_t*</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.953395339533955%" headers="mcps1.1.5.1.3 "><p id="p992551816390"><a name="p992551816390"></a><a name="p992551816390"></a>码本，底库向量对应的索引。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.8935893589359%" headers="mcps1.1.5.1.4 "><p id="p85127581355"><a name="p85127581355"></a><a name="p85127581355"></a>限制长度为codes_size，其中<span class="parmname" id="parmname551215813519"><a name="parmname551215813519"></a><a name="parmname551215813519"></a>“codes_size”</span>为码本数组的长度。</p>
-</td>
-</tr>
-<tr id="row103951453161513"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p14723141215409"><a name="p14723141215409"></a><a name="p14723141215409"></a>sim_table</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p4723181210404"><a name="p4723181210404"></a><a name="p4723181210404"></a>const float*</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.953395339533955%" headers="mcps1.1.5.1.3 "><p id="p710155233915"><a name="p710155233915"></a><a name="p710155233915"></a>码表，存储每维度查询向量与所有质心的距离。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.8935893589359%" headers="mcps1.1.5.1.4 "><p id="p6723181274010"><a name="p6723181274010"></a><a name="p6723181274010"></a>限制长度为sim_table_size，其中<span class="parmname" id="parmname23951728194513"><a name="parmname23951728194513"></a><a name="parmname23951728194513"></a>“sim_table_size”</span>为码表数组的长度。</p>
-</td>
-</tr>
-<tr id="row1875218456372"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p275311453374"><a name="p275311453374"></a><a name="p275311453374"></a>dis0</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p7753045173714"><a name="p7753045173714"></a><a name="p7753045173714"></a>float</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.953395339533955%" headers="mcps1.1.5.1.3 "><p id="p17531445103716"><a name="p17531445103716"></a><a name="p17531445103716"></a>初始距离。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.8935893589359%" headers="mcps1.1.5.1.4 "><p id="p69179904614"><a name="p69179904614"></a><a name="p69179904614"></a>浮点数。</p>
-</td>
-</tr>
-<tr id="row10770205351915"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p137414311617"><a name="p137414311617"></a><a name="p137414311617"></a>codes_size</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p06662231878"><a name="p06662231878"></a><a name="p06662231878"></a>size_t</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.953395339533955%" headers="mcps1.1.5.1.3 "><p id="p16744431269"><a name="p16744431269"></a><a name="p16744431269"></a>码本数组的长度。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.8935893589359%" headers="mcps1.1.5.1.4 "><p id="p127494317611"><a name="p127494317611"></a><a name="p127494317611"></a>dim*ncode，其中<span class="parmname" id="parmname1015643162220"><a name="parmname1015643162220"></a><a name="parmname1015643162220"></a>“dim”</span>为向量维度，<span class="parmname" id="parmname19156153115224"><a name="parmname19156153115224"></a><a name="parmname19156153115224"></a>“ncode”</span>为底库向量总数。</p>
-</td>
-</tr>
-<tr id="row15300105641919"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p7119655861"><a name="p7119655861"></a><a name="p7119655861"></a>sim_table_size</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p6403112617719"><a name="p6403112617719"></a><a name="p6403112617719"></a>size_t</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.953395339533955%" headers="mcps1.1.5.1.3 "><p id="p311925516613"><a name="p311925516613"></a><a name="p311925516613"></a>码表数组的长度。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.8935893589359%" headers="mcps1.1.5.1.4 "><p id="p1350143882216"><a name="p1350143882216"></a><a name="p1350143882216"></a>dim*256，其中<span class="parmname" id="parmname450118384223"><a name="parmname450118384223"></a><a name="parmname450118384223"></a>“dim”</span>为向量维度。</p>
-</td>
-</tr>
-</tbody>
-</table>
+
+| 参数名称 | 数据类型 | 描述 | 取值范围 |
+| --- | --- | --- | --- |
+| klh | KRLLUT8bHandle* | KRLLUT8bHandle指针。 | 限制非空，需要使用krl_create_LUT8b_handle初始化。 |
+| dim | size_t | 向量维度。 | [1,65535] |
+| ncode | size_t | 底库向量总数。 | [1,2^30-1] |
+| codes | const uint8_t* | 码本，底库向量对应的索引。 | 限制长度为codes_size，其中“codes_size”为码本数组的长度。 |
+| sim_table | const float* | 码表，存储每维度查询向量与所有质心的距离。 | 限制长度为sim_table_size，其中“sim_table_size”为码表数组的长度。 |
+| dis0 | float | 初始距离。 | 浮点数。 |
+| codes_size | size_t | 码本数组的长度。 | dim*ncode，其中“dim”为向量维度，“ncode”为底库向量总数。 |
+| sim_table_size | size_t | 码表数组的长度。 | dim*256，其中“dim”为向量维度。 |
 
 **返回值<a name="section49971832106"></a>**
 
 <a name="table17997635100"></a>
-<table><thead align="left"><tr id="row699763141018"><th class="cellrowborder" valign="top" width="40%" id="mcps1.1.3.1.1"><p id="p699793141012"><a name="p699793141012"></a><a name="p699793141012"></a>数据类型</p>
-</th>
-<th class="cellrowborder" valign="top" width="60%" id="mcps1.1.3.1.2"><p id="p1999763141020"><a name="p1999763141020"></a><a name="p1999763141020"></a>说明</p>
-</th>
-</tr>
-</thead>
-<tbody><tr id="row1599716361015"><td class="cellrowborder" valign="top" width="40%" headers="mcps1.1.3.1.1 "><p id="p39970319101"><a name="p39970319101"></a><a name="p39970319101"></a>int</p>
-</td>
-<td class="cellrowborder" valign="top" width="60%" headers="mcps1.1.3.1.2 "><p id="p53461032104518"><a name="p53461032104518"></a><a name="p53461032104518"></a>正常运行时返回0，异常退出返回对应错误码。</p>
-</td>
-</tr>
-</tbody>
-</table>
+
+| 数据类型 | 说明 |
+| --- | --- |
+| int | 正常运行时返回0，异常退出返回对应错误码。 |
 
 **使用示例**
 
@@ -5678,153 +3025,30 @@ int krl\_fast\_table\_lookup\_step\(int nq, int nsq, const uint8\_t\* codes, con
 **参数说明<a name="section157501312135019"></a>**
 
 <a name="table1623016332509"></a>
-<table><thead align="left"><tr id="row823063355012"><th class="cellrowborder" valign="top" width="15.551555155515551%" id="mcps1.1.5.1.1"><p id="p1230333125010"><a name="p1230333125010"></a><a name="p1230333125010"></a>参数名称</p>
-</th>
-<th class="cellrowborder" valign="top" width="14.601460146014599%" id="mcps1.1.5.1.2"><p id="p089311158912"><a name="p089311158912"></a><a name="p089311158912"></a>数据类型</p>
-</th>
-<th class="cellrowborder" valign="top" width="33.99339933993399%" id="mcps1.1.5.1.3"><p id="p4230193313507"><a name="p4230193313507"></a><a name="p4230193313507"></a>描述</p>
-</th>
-<th class="cellrowborder" valign="top" width="35.85358535853585%" id="mcps1.1.5.1.4"><p id="p19887819256"><a name="p19887819256"></a><a name="p19887819256"></a>取值范围</p>
-</th>
-</tr>
-</thead>
-<tbody><tr id="row92301478154"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p223015479158"><a name="p223015479158"></a><a name="p223015479158"></a>nq</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p11230154710156"><a name="p11230154710156"></a><a name="p11230154710156"></a>int</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p82303471154"><a name="p82303471154"></a><a name="p82303471154"></a>查询向量总数。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p923018478155"><a name="p923018478155"></a><a name="p923018478155"></a>[1,16]</p>
-</td>
-</tr>
-<tr id="row166241441532"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p262494414531"><a name="p262494414531"></a><a name="p262494414531"></a>nsq</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p126241544125310"><a name="p126241544125310"></a><a name="p126241544125310"></a>int</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p1562414447536"><a name="p1562414447536"></a><a name="p1562414447536"></a>子空间数量。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p19624744195313"><a name="p19624744195313"></a><a name="p19624744195313"></a>[1,256]且为偶数。</p>
-</td>
-</tr>
-<tr id="row1823023318504"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p14381721205612"><a name="p14381721205612"></a><a name="p14381721205612"></a>codes</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p7438122115569"><a name="p7438122115569"></a><a name="p7438122115569"></a>const uint8_t*</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p570319812427"><a name="p570319812427"></a><a name="p570319812427"></a>码本，使用krl_pack_codes_4b（blocksize=32）处理后底库向量对应的索引。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p51251625162911"><a name="p51251625162911"></a><a name="p51251625162911"></a>限制长度为codes_size，其中<span class="parmname" id="parmname18125825132915"><a name="parmname18125825132915"></a><a name="parmname18125825132915"></a>“codes_size”</span>为码本数组的长度。</p>
-</td>
-</tr>
-<tr id="row10982132445420"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p4982142445414"><a name="p4982142445414"></a><a name="p4982142445414"></a>LUT</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p7532158856"><a name="p7532158856"></a><a name="p7532158856"></a>const uint8_t*</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p36611261054"><a name="p36611261054"></a><a name="p36611261054"></a>各子空间中PQ质心与查询向量的uint8距离表。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p85127581355"><a name="p85127581355"></a><a name="p85127581355"></a>限制长度为LUT_size，其中<span class="parmname" id="parmname551215813519"><a name="parmname551215813519"></a><a name="parmname551215813519"></a>“LUT_size”</span>为距离表数组的长度。</p>
-</td>
-</tr>
-<tr id="row103951453161513"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p14723141215409"><a name="p14723141215409"></a><a name="p14723141215409"></a>dis</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p4723181210404"><a name="p4723181210404"></a><a name="p4723181210404"></a>uint16_t*</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p672341218403"><a name="p672341218403"></a><a name="p672341218403"></a>存储计算所得的距离结果。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p57801052141013"><a name="p57801052141013"></a><a name="p57801052141013"></a>限制长度为dis_size，其中<span class="parmname" id="parmname1048505120457"><a name="parmname1048505120457"></a><a name="parmname1048505120457"></a>“dis_size”</span>为存储距离结果数组的长度。需预先分配内存。</p>
-</td>
-</tr>
-<tr id="row1875218456372"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p275311453374"><a name="p275311453374"></a><a name="p275311453374"></a>threshold</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p7753045173714"><a name="p7753045173714"></a><a name="p7753045173714"></a>const uint16_t*</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p17531445103716"><a name="p17531445103716"></a><a name="p17531445103716"></a>距离阈值。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p748810273302"><a name="p748810273302"></a><a name="p748810273302"></a>限制长度为threshold_size，其中<span class="parmname" id="parmname18488627123013"><a name="parmname18488627123013"></a><a name="parmname18488627123013"></a>“threshold_size”</span>为距离阈值数组的长度。阈值限制为65535。</p>
-</td>
-</tr>
-<tr id="row143744955610"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p34370492563"><a name="p34370492563"></a><a name="p34370492563"></a>lt_mask</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p3437549145616"><a name="p3437549145616"></a><a name="p3437549145616"></a>uint32_t*</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p143715495569"><a name="p143715495569"></a><a name="p143715495569"></a>过滤压缩结果。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p77615321231"><a name="p77615321231"></a><a name="p77615321231"></a>限制长度为lt_mask_size，其中<span class="parmname" id="parmname10988163762914"><a name="parmname10988163762914"></a><a name="parmname10988163762914"></a>“lt_mask_size”</span>为过滤压缩结果数组的长度。需预先分配内存。</p>
-</td>
-</tr>
-<tr id="row12299105712"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p22931165713"><a name="p22931165713"></a><a name="p22931165713"></a>keep_min</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p192916117571"><a name="p192916117571"></a><a name="p192916117571"></a>int</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p8731759124214"><a name="p8731759124214"></a><a name="p8731759124214"></a>是否保留小于阈值的距离结果。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p329412578"><a name="p329412578"></a><a name="p329412578"></a>[0,1]，取值表示是否保留小于阈值的距离结果：</p>
-<a name="ul164886121012"></a><a name="ul164886121012"></a><ul id="ul164886121012"><li>0：保留大于阈值的距离结果。</li><li>1：保留小于阈值的距离结果。</li></ul>
-</td>
-</tr>
-<tr id="row1167140172619"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p11681640172619"><a name="p11681640172619"></a><a name="p11681640172619"></a>codes_size</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p06662231878"><a name="p06662231878"></a><a name="p06662231878"></a>size_t</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p16681940142616"><a name="p16681940142616"></a><a name="p16681940142616"></a>码本数组的长度。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p568184012612"><a name="p568184012612"></a><a name="p568184012612"></a>nsq/2*32，其中<span class="parmname" id="parmname1170114418287"><a name="parmname1170114418287"></a><a name="parmname1170114418287"></a>“nsq”</span>为子空间数量。</p>
-</td>
-</tr>
-<tr id="row1758312172712"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p1258316232715"><a name="p1258316232715"></a><a name="p1258316232715"></a>LUT_size</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p6403112617719"><a name="p6403112617719"></a><a name="p6403112617719"></a>size_t</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p1258316212714"><a name="p1258316212714"></a><a name="p1258316212714"></a>距离表数组的长度。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p1658311212279"><a name="p1658311212279"></a><a name="p1658311212279"></a>nq*nsq*16，其中<span class="parmname" id="parmname299054918285"><a name="parmname299054918285"></a><a name="parmname299054918285"></a>“nq”</span>为查询向量总数，<span class="parmname" id="parmname9990249152811"><a name="parmname9990249152811"></a><a name="parmname9990249152811"></a>“nsq”</span>为子空间数量。</p>
-</td>
-</tr>
-<tr id="row613215113273"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p1613312110277"><a name="p1613312110277"></a><a name="p1613312110277"></a>dis_size</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p1699263912712"><a name="p1699263912712"></a><a name="p1699263912712"></a>size_t</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p21335117279"><a name="p21335117279"></a><a name="p21335117279"></a>存储距离结果数组的长度。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p41335118277"><a name="p41335118277"></a><a name="p41335118277"></a>nq*32，其中<span class="parmname" id="parmname2640145611280"><a name="parmname2640145611280"></a><a name="parmname2640145611280"></a>“nq”</span>为查询向量总数。</p>
-</td>
-</tr>
-<tr id="row9243174820292"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p4243154811296"><a name="p4243154811296"></a><a name="p4243154811296"></a>threshold_size</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p1524318483294"><a name="p1524318483294"></a><a name="p1524318483294"></a>size_t</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p8243184812293"><a name="p8243184812293"></a><a name="p8243184812293"></a>距离阈值数组的长度。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p1824374814291"><a name="p1824374814291"></a><a name="p1824374814291"></a>nq，其中<span class="parmname" id="parmname1180318211305"><a name="parmname1180318211305"></a><a name="parmname1180318211305"></a>“nq”</span>为查询向量总数。</p>
-</td>
-</tr>
-<tr id="row721827152717"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p172182719273"><a name="p172182719273"></a><a name="p172182719273"></a>lt_mask_size</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p119923399274"><a name="p119923399274"></a><a name="p119923399274"></a>size_t</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p92127202712"><a name="p92127202712"></a><a name="p92127202712"></a>过滤压缩结果数组的长度。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p1421327132714"><a name="p1421327132714"></a><a name="p1421327132714"></a>nq/32，其中<span class="parmname" id="parmname5124423292"><a name="parmname5124423292"></a><a name="parmname5124423292"></a>“nq”</span>为查询向量总数。</p>
-</td>
-</tr>
-</tbody>
-</table>
+
+| 参数名称 | 数据类型 | 描述 | 取值范围 |
+| --- | --- | --- | --- |
+| nq | int | 查询向量总数。 | [1,16] |
+| nsq | int | 子空间数量。 | [1,256]且为偶数。 |
+| codes | const uint8_t* | 码本，使用krl_pack_codes_4b（blocksize=32）处理后底库向量对应的索引。 | 限制长度为codes_size，其中“codes_size”为码本数组的长度。 |
+| LUT | const uint8_t* | 各子空间中PQ质心与查询向量的uint8距离表。 | 限制长度为LUT_size，其中“LUT_size”为距离表数组的长度。 |
+| dis | uint16_t* | 存储计算所得的距离结果。 | 限制长度为dis_size，其中“dis_size”为存储距离结果数组的长度。需预先分配内存。 |
+| threshold | const uint16_t* | 距离阈值。 | 限制长度为threshold_size，其中“threshold_size”为距离阈值数组的长度。阈值限制为65535。 |
+| lt_mask | uint32_t* | 过滤压缩结果。 | 限制长度为lt_mask_size，其中“lt_mask_size”为过滤压缩结果数组的长度。需预先分配内存。 |
+| keep_min | int | 是否保留小于阈值的距离结果。 | [0,1]，取值表示是否保留小于阈值的距离结果：<br>0：保留大于阈值的距离结果。<br>1：保留小于阈值的距离结果。 |
+| codes_size | size_t | 码本数组的长度。 | nsq/2*32，其中“nsq”为子空间数量。 |
+| LUT_size | size_t | 距离表数组的长度。 | nq*nsq*16，其中“nq”为查询向量总数，“nsq”为子空间数量。 |
+| dis_size | size_t | 存储距离结果数组的长度。 | nq*32，其中“nq”为查询向量总数。 |
+| threshold_size | size_t | 距离阈值数组的长度。 | nq，其中“nq”为查询向量总数。 |
+| lt_mask_size | size_t | 过滤压缩结果数组的长度。 | nq/32，其中“nq”为查询向量总数。 |
 
 **返回值<a name="section49971832106"></a>**
 
 <a name="table17997635100"></a>
-<table><thead align="left"><tr id="row699763141018"><th class="cellrowborder" valign="top" width="40%" id="mcps1.1.3.1.1"><p id="p699793141012"><a name="p699793141012"></a><a name="p699793141012"></a>数据类型</p>
-</th>
-<th class="cellrowborder" valign="top" width="60%" id="mcps1.1.3.1.2"><p id="p1999763141020"><a name="p1999763141020"></a><a name="p1999763141020"></a>说明</p>
-</th>
-</tr>
-</thead>
-<tbody><tr id="row1599716361015"><td class="cellrowborder" valign="top" width="40%" headers="mcps1.1.3.1.1 "><p id="p39970319101"><a name="p39970319101"></a><a name="p39970319101"></a>int</p>
-</td>
-<td class="cellrowborder" valign="top" width="60%" headers="mcps1.1.3.1.2 "><p id="p53461032104518"><a name="p53461032104518"></a><a name="p53461032104518"></a>正常运行时返回0，异常退出返回对应错误码。</p>
-</td>
-</tr>
-</tbody>
-</table>
+
+| 数据类型 | 说明 |
+| --- | --- |
+| int | 正常运行时返回0，异常退出返回对应错误码。 |
 
 **使用示例**
 
@@ -5936,125 +3160,27 @@ int krl\_L2\_table\_lookup\_fast\_scan\_bs32\(int nsq, const uint8\_t\* codes, c
 **参数说明<a name="section157501312135019"></a>**
 
 <a name="table1623016332509"></a>
-<table><thead align="left"><tr id="row823063355012"><th class="cellrowborder" valign="top" width="15.551555155515551%" id="mcps1.1.5.1.1"><p id="p1230333125010"><a name="p1230333125010"></a><a name="p1230333125010"></a>参数名称</p>
-</th>
-<th class="cellrowborder" valign="top" width="14.601460146014599%" id="mcps1.1.5.1.2"><p id="p089311158912"><a name="p089311158912"></a><a name="p089311158912"></a>数据类型</p>
-</th>
-<th class="cellrowborder" valign="top" width="33.97339733973397%" id="mcps1.1.5.1.3"><p id="p4230193313507"><a name="p4230193313507"></a><a name="p4230193313507"></a>描述</p>
-</th>
-<th class="cellrowborder" valign="top" width="35.873587358735875%" id="mcps1.1.5.1.4"><p id="p19887819256"><a name="p19887819256"></a><a name="p19887819256"></a>取值范围</p>
-</th>
-</tr>
-</thead>
-<tbody><tr id="row166241441532"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p262494414531"><a name="p262494414531"></a><a name="p262494414531"></a>nsq</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p126241544125310"><a name="p126241544125310"></a><a name="p126241544125310"></a>int</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.97339733973397%" headers="mcps1.1.5.1.3 "><p id="p1562414447536"><a name="p1562414447536"></a><a name="p1562414447536"></a>子空间数量。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.873587358735875%" headers="mcps1.1.5.1.4 "><p id="p19624744195313"><a name="p19624744195313"></a><a name="p19624744195313"></a>[1,256]且为偶数。</p>
-</td>
-</tr>
-<tr id="row1823023318504"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p14381721205612"><a name="p14381721205612"></a><a name="p14381721205612"></a>codes</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p7438122115569"><a name="p7438122115569"></a><a name="p7438122115569"></a>const uint8_t*</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.97339733973397%" headers="mcps1.1.5.1.3 "><p id="p18618921124518"><a name="p18618921124518"></a><a name="p18618921124518"></a>码本，使用krl_pack_codes_4b（blocksize=64）处理后底库向量对应的索引。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.873587358735875%" headers="mcps1.1.5.1.4 "><p id="p51251625162911"><a name="p51251625162911"></a><a name="p51251625162911"></a>限制长度为codes_size，其中<span class="parmname" id="parmname18125825132915"><a name="parmname18125825132915"></a><a name="parmname18125825132915"></a>“codes_size”</span>为码本数组的长度。</p>
-</td>
-</tr>
-<tr id="row10982132445420"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p4982142445414"><a name="p4982142445414"></a><a name="p4982142445414"></a>LUT</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p7532158856"><a name="p7532158856"></a><a name="p7532158856"></a>const uint8_t*</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.97339733973397%" headers="mcps1.1.5.1.3 "><p id="p36611261054"><a name="p36611261054"></a><a name="p36611261054"></a>各子空间中PQ质心与查询向量的uint8距离表。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.873587358735875%" headers="mcps1.1.5.1.4 "><p id="p85127581355"><a name="p85127581355"></a><a name="p85127581355"></a>限制长度为LUT_size，其中<span class="parmname" id="parmname551215813519"><a name="parmname551215813519"></a><a name="parmname551215813519"></a>“LUT_size”</span>为距离表数组的长度。</p>
-</td>
-</tr>
-<tr id="row103951453161513"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p14723141215409"><a name="p14723141215409"></a><a name="p14723141215409"></a>dis</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p4723181210404"><a name="p4723181210404"></a><a name="p4723181210404"></a>uint16_t*</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.97339733973397%" headers="mcps1.1.5.1.3 "><p id="p672341218403"><a name="p672341218403"></a><a name="p672341218403"></a>存储计算所得的距离结果。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.873587358735875%" headers="mcps1.1.5.1.4 "><p id="p57801052141013"><a name="p57801052141013"></a><a name="p57801052141013"></a>限制长度为dis_size，其中<span class="parmname" id="parmname1048505120457"><a name="parmname1048505120457"></a><a name="parmname1048505120457"></a>“dis_size”</span>为存储距离结果数组的长度。需预先分配内存。</p>
-</td>
-</tr>
-<tr id="row1875218456372"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p275311453374"><a name="p275311453374"></a><a name="p275311453374"></a>threshold</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p7753045173714"><a name="p7753045173714"></a><a name="p7753045173714"></a>const uint16_t</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.97339733973397%" headers="mcps1.1.5.1.3 "><p id="p17531445103716"><a name="p17531445103716"></a><a name="p17531445103716"></a>距离阈值。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.873587358735875%" headers="mcps1.1.5.1.4 "><p id="p748810273302"><a name="p748810273302"></a><a name="p748810273302"></a>限制为65535。</p>
-</td>
-</tr>
-<tr id="row143744955610"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p34370492563"><a name="p34370492563"></a><a name="p34370492563"></a>lt_mask</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p3437549145616"><a name="p3437549145616"></a><a name="p3437549145616"></a>uint32_t*</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.97339733973397%" headers="mcps1.1.5.1.3 "><p id="p143715495569"><a name="p143715495569"></a><a name="p143715495569"></a>过滤压缩结果。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.873587358735875%" headers="mcps1.1.5.1.4 "><p id="p77615321231"><a name="p77615321231"></a><a name="p77615321231"></a>限制长度为lt_mask_size，其中<span class="parmname" id="parmname10988163762914"><a name="parmname10988163762914"></a><a name="parmname10988163762914"></a>“lt_mask_size”</span>为过滤压缩结果数组的长度。需预先分配内存。</p>
-</td>
-</tr>
-<tr id="row1695419558379"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p11681640172619"><a name="p11681640172619"></a><a name="p11681640172619"></a>codes_size</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p06662231878"><a name="p06662231878"></a><a name="p06662231878"></a>size_t</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.97339733973397%" headers="mcps1.1.5.1.3 "><p id="p16681940142616"><a name="p16681940142616"></a><a name="p16681940142616"></a>码本数组的长度。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.873587358735875%" headers="mcps1.1.5.1.4 "><p id="p568184012612"><a name="p568184012612"></a><a name="p568184012612"></a>nsq/2*64，其中<span class="parmname" id="parmname1170114418287"><a name="parmname1170114418287"></a><a name="parmname1170114418287"></a>“nsq”</span>为子空间数量。</p>
-</td>
-</tr>
-<tr id="row15954175511376"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p1258316232715"><a name="p1258316232715"></a><a name="p1258316232715"></a>LUT_size</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p6403112617719"><a name="p6403112617719"></a><a name="p6403112617719"></a>size_t</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.97339733973397%" headers="mcps1.1.5.1.3 "><p id="p1258316212714"><a name="p1258316212714"></a><a name="p1258316212714"></a>距离表数组的长度。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.873587358735875%" headers="mcps1.1.5.1.4 "><p id="p1658311212279"><a name="p1658311212279"></a><a name="p1658311212279"></a>nsq*16，其中<span class="parmname" id="parmname584361843817"><a name="parmname584361843817"></a><a name="parmname584361843817"></a>“nsq”</span>为子空间数量。</p>
-</td>
-</tr>
-<tr id="row109541655133713"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p1613312110277"><a name="p1613312110277"></a><a name="p1613312110277"></a>dis_size</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p1699263912712"><a name="p1699263912712"></a><a name="p1699263912712"></a>size_t</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.97339733973397%" headers="mcps1.1.5.1.3 "><p id="p21335117279"><a name="p21335117279"></a><a name="p21335117279"></a>存储距离结果数组的长度。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.873587358735875%" headers="mcps1.1.5.1.4 "><p id="p41335118277"><a name="p41335118277"></a><a name="p41335118277"></a>限制为64。</p>
-</td>
-</tr>
-<tr id="row4954455153717"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p172182719273"><a name="p172182719273"></a><a name="p172182719273"></a>lt_mask_size</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p119923399274"><a name="p119923399274"></a><a name="p119923399274"></a>size_t</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.97339733973397%" headers="mcps1.1.5.1.3 "><p id="p92127202712"><a name="p92127202712"></a><a name="p92127202712"></a>过滤压缩结果数组的长度。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.873587358735875%" headers="mcps1.1.5.1.4 "><p id="p1421327132714"><a name="p1421327132714"></a><a name="p1421327132714"></a>限制为2。</p>
-</td>
-</tr>
-</tbody>
-</table>
+
+| 参数名称 | 数据类型 | 描述 | 取值范围 |
+| --- | --- | --- | --- |
+| nsq | int | 子空间数量。 | [1,256]且为偶数。 |
+| codes | const uint8_t* | 码本，使用krl_pack_codes_4b（blocksize=64）处理后底库向量对应的索引。 | 限制长度为codes_size，其中“codes_size”为码本数组的长度。 |
+| LUT | const uint8_t* | 各子空间中PQ质心与查询向量的uint8距离表。 | 限制长度为LUT_size，其中“LUT_size”为距离表数组的长度。 |
+| dis | uint16_t* | 存储计算所得的距离结果。 | 限制长度为dis_size，其中“dis_size”为存储距离结果数组的长度。需预先分配内存。 |
+| threshold | const uint16_t | 距离阈值。 | 限制为65535。 |
+| lt_mask | uint32_t* | 过滤压缩结果。 | 限制长度为lt_mask_size，其中“lt_mask_size”为过滤压缩结果数组的长度。需预先分配内存。 |
+| codes_size | size_t | 码本数组的长度。 | nsq/2*64，其中“nsq”为子空间数量。 |
+| LUT_size | size_t | 距离表数组的长度。 | nsq*16，其中“nsq”为子空间数量。 |
+| dis_size | size_t | 存储距离结果数组的长度。 | 限制为64。 |
+| lt_mask_size | size_t | 过滤压缩结果数组的长度。 | 限制为2。 |
 
 **返回值<a name="section49971832106"></a>**
 
 <a name="table17997635100"></a>
-<table><thead align="left"><tr id="row699763141018"><th class="cellrowborder" valign="top" width="40%" id="mcps1.1.3.1.1"><p id="p699793141012"><a name="p699793141012"></a><a name="p699793141012"></a>数据类型</p>
-</th>
-<th class="cellrowborder" valign="top" width="60%" id="mcps1.1.3.1.2"><p id="p1999763141020"><a name="p1999763141020"></a><a name="p1999763141020"></a>说明</p>
-</th>
-</tr>
-</thead>
-<tbody><tr id="row1599716361015"><td class="cellrowborder" valign="top" width="40%" headers="mcps1.1.3.1.1 "><p id="p39970319101"><a name="p39970319101"></a><a name="p39970319101"></a>int</p>
-</td>
-<td class="cellrowborder" valign="top" width="60%" headers="mcps1.1.3.1.2 "><p id="p53461032104518"><a name="p53461032104518"></a><a name="p53461032104518"></a>正常运行时返回0，异常退出返回对应错误码。</p>
-</td>
-</tr>
-</tbody>
-</table>
+
+| 数据类型 | 说明 |
+| --- | --- |
+| int | 正常运行时返回0，异常退出返回对应错误码。 |
 
 **使用示例**
 
@@ -6155,125 +3281,27 @@ int krl\_IP\_table\_lookup\_fast\_scan\_bs32\(int nsq, const uint8\_t\* codes, c
 **参数说明<a name="section157501312135019"></a>**
 
 <a name="table1623016332509"></a>
-<table><thead align="left"><tr id="row823063355012"><th class="cellrowborder" valign="top" width="15.551555155515551%" id="mcps1.1.5.1.1"><p id="p1230333125010"><a name="p1230333125010"></a><a name="p1230333125010"></a>参数名称</p>
-</th>
-<th class="cellrowborder" valign="top" width="14.601460146014599%" id="mcps1.1.5.1.2"><p id="p089311158912"><a name="p089311158912"></a><a name="p089311158912"></a>数据类型</p>
-</th>
-<th class="cellrowborder" valign="top" width="33.99339933993399%" id="mcps1.1.5.1.3"><p id="p4230193313507"><a name="p4230193313507"></a><a name="p4230193313507"></a>描述</p>
-</th>
-<th class="cellrowborder" valign="top" width="35.85358535853585%" id="mcps1.1.5.1.4"><p id="p19887819256"><a name="p19887819256"></a><a name="p19887819256"></a>取值范围</p>
-</th>
-</tr>
-</thead>
-<tbody><tr id="row166241441532"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p262494414531"><a name="p262494414531"></a><a name="p262494414531"></a>nsq</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p126241544125310"><a name="p126241544125310"></a><a name="p126241544125310"></a>int</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p1562414447536"><a name="p1562414447536"></a><a name="p1562414447536"></a>子空间数量。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p19624744195313"><a name="p19624744195313"></a><a name="p19624744195313"></a>[1,256]且为偶数。</p>
-</td>
-</tr>
-<tr id="row1823023318504"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p14381721205612"><a name="p14381721205612"></a><a name="p14381721205612"></a>codes</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p7438122115569"><a name="p7438122115569"></a><a name="p7438122115569"></a>const uint8_t*</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p18618921124518"><a name="p18618921124518"></a><a name="p18618921124518"></a>码本，使用krl_pack_codes_4b（blocksize=64）处理后底库向量对应的索引。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p51251625162911"><a name="p51251625162911"></a><a name="p51251625162911"></a>限制长度为codes_size，其中<span class="parmname" id="parmname18125825132915"><a name="parmname18125825132915"></a><a name="parmname18125825132915"></a>“codes_size”</span>为码本数组的长度。</p>
-</td>
-</tr>
-<tr id="row10982132445420"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p4982142445414"><a name="p4982142445414"></a><a name="p4982142445414"></a>LUT</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p7532158856"><a name="p7532158856"></a><a name="p7532158856"></a>const uint8_t*</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p36611261054"><a name="p36611261054"></a><a name="p36611261054"></a>各子空间中PQ质心与查询向量的uint8距离表。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p85127581355"><a name="p85127581355"></a><a name="p85127581355"></a>限制长度为LUT_size，其中<span class="parmname" id="parmname551215813519"><a name="parmname551215813519"></a><a name="parmname551215813519"></a>“LUT_size”</span>为距离表数组的长度。</p>
-</td>
-</tr>
-<tr id="row103951453161513"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p14723141215409"><a name="p14723141215409"></a><a name="p14723141215409"></a>dis</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p4723181210404"><a name="p4723181210404"></a><a name="p4723181210404"></a>uint16_t*</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p672341218403"><a name="p672341218403"></a><a name="p672341218403"></a>存储计算所得的距离结果。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p57801052141013"><a name="p57801052141013"></a><a name="p57801052141013"></a>限制长度为dis_size，其中<span class="parmname" id="parmname1048505120457"><a name="parmname1048505120457"></a><a name="parmname1048505120457"></a>“dis_size”</span>为存储距离结果数组的长度。需预先分配内存。</p>
-</td>
-</tr>
-<tr id="row1875218456372"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p275311453374"><a name="p275311453374"></a><a name="p275311453374"></a>threshold</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p7753045173714"><a name="p7753045173714"></a><a name="p7753045173714"></a>const uint16_t</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p17531445103716"><a name="p17531445103716"></a><a name="p17531445103716"></a>距离阈值。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p748810273302"><a name="p748810273302"></a><a name="p748810273302"></a>限制为65535。</p>
-</td>
-</tr>
-<tr id="row143744955610"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p34370492563"><a name="p34370492563"></a><a name="p34370492563"></a>lt_mask</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p3437549145616"><a name="p3437549145616"></a><a name="p3437549145616"></a>uint32_t*</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p143715495569"><a name="p143715495569"></a><a name="p143715495569"></a>过滤压缩结果。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p77615321231"><a name="p77615321231"></a><a name="p77615321231"></a>限制长度为lt_mask_size，其中<span class="parmname" id="parmname10988163762914"><a name="parmname10988163762914"></a><a name="parmname10988163762914"></a>“lt_mask_size”</span>为过滤压缩结果数组的长度。需预先分配内存。</p>
-</td>
-</tr>
-<tr id="row177615011429"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p11681640172619"><a name="p11681640172619"></a><a name="p11681640172619"></a>codes_size</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p06662231878"><a name="p06662231878"></a><a name="p06662231878"></a>size_t</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p16681940142616"><a name="p16681940142616"></a><a name="p16681940142616"></a>码本数组的长度。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p568184012612"><a name="p568184012612"></a><a name="p568184012612"></a>nsq/2*64，其中<span class="parmname" id="parmname1170114418287"><a name="parmname1170114418287"></a><a name="parmname1170114418287"></a>“nsq”</span>为子空间数量。</p>
-</td>
-</tr>
-<tr id="row9760006427"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p1258316232715"><a name="p1258316232715"></a><a name="p1258316232715"></a>LUT_size</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p6403112617719"><a name="p6403112617719"></a><a name="p6403112617719"></a>size_t</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p1258316212714"><a name="p1258316212714"></a><a name="p1258316212714"></a>距离表数组的长度。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p1658311212279"><a name="p1658311212279"></a><a name="p1658311212279"></a>nsq*16，其中<span class="parmname" id="parmname584361843817"><a name="parmname584361843817"></a><a name="parmname584361843817"></a>“nsq”</span>为子空间数量。</p>
-</td>
-</tr>
-<tr id="row1276017012420"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p1613312110277"><a name="p1613312110277"></a><a name="p1613312110277"></a>dis_size</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p1699263912712"><a name="p1699263912712"></a><a name="p1699263912712"></a>size_t</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p21335117279"><a name="p21335117279"></a><a name="p21335117279"></a>存储距离结果数组的长度。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p41335118277"><a name="p41335118277"></a><a name="p41335118277"></a>限制为64。</p>
-</td>
-</tr>
-<tr id="row157604034212"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p172182719273"><a name="p172182719273"></a><a name="p172182719273"></a>lt_mask_size</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p119923399274"><a name="p119923399274"></a><a name="p119923399274"></a>size_t</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p92127202712"><a name="p92127202712"></a><a name="p92127202712"></a>过滤压缩结果数组的长度。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p1421327132714"><a name="p1421327132714"></a><a name="p1421327132714"></a>限制为2。</p>
-</td>
-</tr>
-</tbody>
-</table>
+
+| 参数名称 | 数据类型 | 描述 | 取值范围 |
+| --- | --- | --- | --- |
+| nsq | int | 子空间数量。 | [1,256]且为偶数。 |
+| codes | const uint8_t* | 码本，使用krl_pack_codes_4b（blocksize=64）处理后底库向量对应的索引。 | 限制长度为codes_size，其中“codes_size”为码本数组的长度。 |
+| LUT | const uint8_t* | 各子空间中PQ质心与查询向量的uint8距离表。 | 限制长度为LUT_size，其中“LUT_size”为距离表数组的长度。 |
+| dis | uint16_t* | 存储计算所得的距离结果。 | 限制长度为dis_size，其中“dis_size”为存储距离结果数组的长度。需预先分配内存。 |
+| threshold | const uint16_t | 距离阈值。 | 限制为65535。 |
+| lt_mask | uint32_t* | 过滤压缩结果。 | 限制长度为lt_mask_size，其中“lt_mask_size”为过滤压缩结果数组的长度。需预先分配内存。 |
+| codes_size | size_t | 码本数组的长度。 | nsq/2*64，其中“nsq”为子空间数量。 |
+| LUT_size | size_t | 距离表数组的长度。 | nsq*16，其中“nsq”为子空间数量。 |
+| dis_size | size_t | 存储距离结果数组的长度。 | 限制为64。 |
+| lt_mask_size | size_t | 过滤压缩结果数组的长度。 | 限制为2。 |
 
 **返回值<a name="section49971832106"></a>**
 
 <a name="table17997635100"></a>
-<table><thead align="left"><tr id="row699763141018"><th class="cellrowborder" valign="top" width="40%" id="mcps1.1.3.1.1"><p id="p699793141012"><a name="p699793141012"></a><a name="p699793141012"></a>数据类型</p>
-</th>
-<th class="cellrowborder" valign="top" width="60%" id="mcps1.1.3.1.2"><p id="p1999763141020"><a name="p1999763141020"></a><a name="p1999763141020"></a>说明</p>
-</th>
-</tr>
-</thead>
-<tbody><tr id="row1599716361015"><td class="cellrowborder" valign="top" width="40%" headers="mcps1.1.3.1.1 "><p id="p39970319101"><a name="p39970319101"></a><a name="p39970319101"></a>int</p>
-</td>
-<td class="cellrowborder" valign="top" width="60%" headers="mcps1.1.3.1.2 "><p id="p53461032104518"><a name="p53461032104518"></a><a name="p53461032104518"></a>正常运行时返回0，异常退出返回对应错误码。</p>
-</td>
-</tr>
-</tbody>
-</table>
+
+| 数据类型 | 说明 |
+| --- | --- |
+| int | 正常运行时返回0，异常退出返回对应错误码。 |
 
 **使用示例**
 
@@ -6377,125 +3405,27 @@ int krl\_L2\_table\_lookup\_fast\_scan\_bs64\(int nsq, const uint8\_t\* codes, c
 **参数说明<a name="section157501312135019"></a>**
 
 <a name="table1623016332509"></a>
-<table><thead align="left"><tr id="row823063355012"><th class="cellrowborder" valign="top" width="15.551555155515551%" id="mcps1.1.5.1.1"><p id="p1230333125010"><a name="p1230333125010"></a><a name="p1230333125010"></a>参数名称</p>
-</th>
-<th class="cellrowborder" valign="top" width="14.601460146014599%" id="mcps1.1.5.1.2"><p id="p089311158912"><a name="p089311158912"></a><a name="p089311158912"></a>数据类型</p>
-</th>
-<th class="cellrowborder" valign="top" width="33.97339733973397%" id="mcps1.1.5.1.3"><p id="p4230193313507"><a name="p4230193313507"></a><a name="p4230193313507"></a>描述</p>
-</th>
-<th class="cellrowborder" valign="top" width="35.873587358735875%" id="mcps1.1.5.1.4"><p id="p19887819256"><a name="p19887819256"></a><a name="p19887819256"></a>取值范围</p>
-</th>
-</tr>
-</thead>
-<tbody><tr id="row166241441532"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p262494414531"><a name="p262494414531"></a><a name="p262494414531"></a>nsq</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p126241544125310"><a name="p126241544125310"></a><a name="p126241544125310"></a>int</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.97339733973397%" headers="mcps1.1.5.1.3 "><p id="p1562414447536"><a name="p1562414447536"></a><a name="p1562414447536"></a>子空间数量。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.873587358735875%" headers="mcps1.1.5.1.4 "><p id="p19624744195313"><a name="p19624744195313"></a><a name="p19624744195313"></a>[1,256]且为偶数。</p>
-</td>
-</tr>
-<tr id="row1823023318504"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p14381721205612"><a name="p14381721205612"></a><a name="p14381721205612"></a>codes</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p7438122115569"><a name="p7438122115569"></a><a name="p7438122115569"></a>const uint8_t*</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.97339733973397%" headers="mcps1.1.5.1.3 "><p id="p18618921124518"><a name="p18618921124518"></a><a name="p18618921124518"></a>码本，使用krl_pack_codes_4b（blocksize=64）处理后底库向量对应的索引。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.873587358735875%" headers="mcps1.1.5.1.4 "><p id="p51251625162911"><a name="p51251625162911"></a><a name="p51251625162911"></a>限制长度为codes_size，其中<span class="parmname" id="parmname18125825132915"><a name="parmname18125825132915"></a><a name="parmname18125825132915"></a>“codes_size”</span>为码本数组的长度。</p>
-</td>
-</tr>
-<tr id="row10982132445420"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p4982142445414"><a name="p4982142445414"></a><a name="p4982142445414"></a>LUT</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p7532158856"><a name="p7532158856"></a><a name="p7532158856"></a>const uint8_t*</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.97339733973397%" headers="mcps1.1.5.1.3 "><p id="p36611261054"><a name="p36611261054"></a><a name="p36611261054"></a>各子空间中PQ质心与查询向量的uint8距离表。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.873587358735875%" headers="mcps1.1.5.1.4 "><p id="p85127581355"><a name="p85127581355"></a><a name="p85127581355"></a>限制长度为LUT_size，其中<span class="parmname" id="parmname551215813519"><a name="parmname551215813519"></a><a name="parmname551215813519"></a>“LUT_size”</span>为距离表数组的长度。</p>
-</td>
-</tr>
-<tr id="row103951453161513"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p14723141215409"><a name="p14723141215409"></a><a name="p14723141215409"></a>dis</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p4723181210404"><a name="p4723181210404"></a><a name="p4723181210404"></a>uint16_t*</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.97339733973397%" headers="mcps1.1.5.1.3 "><p id="p672341218403"><a name="p672341218403"></a><a name="p672341218403"></a>存储计算所得的距离结果。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.873587358735875%" headers="mcps1.1.5.1.4 "><p id="p57801052141013"><a name="p57801052141013"></a><a name="p57801052141013"></a>限制长度为dis_size，其中<span class="parmname" id="parmname1048505120457"><a name="parmname1048505120457"></a><a name="parmname1048505120457"></a>“dis_size”</span>为存储距离结果数组的长度。需预先分配内存。</p>
-</td>
-</tr>
-<tr id="row1875218456372"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p275311453374"><a name="p275311453374"></a><a name="p275311453374"></a>threshold</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p7753045173714"><a name="p7753045173714"></a><a name="p7753045173714"></a>const uint16_t</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.97339733973397%" headers="mcps1.1.5.1.3 "><p id="p17531445103716"><a name="p17531445103716"></a><a name="p17531445103716"></a>距离阈值。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.873587358735875%" headers="mcps1.1.5.1.4 "><p id="p748810273302"><a name="p748810273302"></a><a name="p748810273302"></a>限制为65535。</p>
-</td>
-</tr>
-<tr id="row143744955610"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p34370492563"><a name="p34370492563"></a><a name="p34370492563"></a>lt_mask</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p3437549145616"><a name="p3437549145616"></a><a name="p3437549145616"></a>uint32_t*</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.97339733973397%" headers="mcps1.1.5.1.3 "><p id="p143715495569"><a name="p143715495569"></a><a name="p143715495569"></a>过滤压缩结果。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.873587358735875%" headers="mcps1.1.5.1.4 "><p id="p77615321231"><a name="p77615321231"></a><a name="p77615321231"></a>限制长度为lt_mask_size，其中<span class="parmname" id="parmname10988163762914"><a name="parmname10988163762914"></a><a name="parmname10988163762914"></a>“lt_mask_size”</span>为过滤压缩结果数组的长度。需预先分配内存。</p>
-</td>
-</tr>
-<tr id="row1695419558379"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p11681640172619"><a name="p11681640172619"></a><a name="p11681640172619"></a>codes_size</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p06662231878"><a name="p06662231878"></a><a name="p06662231878"></a>size_t</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.97339733973397%" headers="mcps1.1.5.1.3 "><p id="p16681940142616"><a name="p16681940142616"></a><a name="p16681940142616"></a>码本数组的长度。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.873587358735875%" headers="mcps1.1.5.1.4 "><p id="p568184012612"><a name="p568184012612"></a><a name="p568184012612"></a>nsq/2*64，其中<span class="parmname" id="parmname1170114418287"><a name="parmname1170114418287"></a><a name="parmname1170114418287"></a>“nsq”</span>为子空间数量。</p>
-</td>
-</tr>
-<tr id="row15954175511376"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p1258316232715"><a name="p1258316232715"></a><a name="p1258316232715"></a>LUT_size</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p6403112617719"><a name="p6403112617719"></a><a name="p6403112617719"></a>size_t</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.97339733973397%" headers="mcps1.1.5.1.3 "><p id="p1258316212714"><a name="p1258316212714"></a><a name="p1258316212714"></a>距离表数组的长度。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.873587358735875%" headers="mcps1.1.5.1.4 "><p id="p1658311212279"><a name="p1658311212279"></a><a name="p1658311212279"></a>nsq*16，其中<span class="parmname" id="parmname584361843817"><a name="parmname584361843817"></a><a name="parmname584361843817"></a>“nsq”</span>为子空间数量。</p>
-</td>
-</tr>
-<tr id="row109541655133713"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p1613312110277"><a name="p1613312110277"></a><a name="p1613312110277"></a>dis_size</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p1699263912712"><a name="p1699263912712"></a><a name="p1699263912712"></a>size_t</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.97339733973397%" headers="mcps1.1.5.1.3 "><p id="p21335117279"><a name="p21335117279"></a><a name="p21335117279"></a>存储距离结果数组的长度。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.873587358735875%" headers="mcps1.1.5.1.4 "><p id="p41335118277"><a name="p41335118277"></a><a name="p41335118277"></a>限制为64。</p>
-</td>
-</tr>
-<tr id="row4954455153717"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p172182719273"><a name="p172182719273"></a><a name="p172182719273"></a>lt_mask_size</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p119923399274"><a name="p119923399274"></a><a name="p119923399274"></a>size_t</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.97339733973397%" headers="mcps1.1.5.1.3 "><p id="p92127202712"><a name="p92127202712"></a><a name="p92127202712"></a>过滤压缩结果数组的长度。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.873587358735875%" headers="mcps1.1.5.1.4 "><p id="p1421327132714"><a name="p1421327132714"></a><a name="p1421327132714"></a>限制为2。</p>
-</td>
-</tr>
-</tbody>
-</table>
+
+| 参数名称 | 数据类型 | 描述 | 取值范围 |
+| --- | --- | --- | --- |
+| nsq | int | 子空间数量。 | [1,256]且为偶数。 |
+| codes | const uint8_t* | 码本，使用krl_pack_codes_4b（blocksize=64）处理后底库向量对应的索引。 | 限制长度为codes_size，其中“codes_size”为码本数组的长度。 |
+| LUT | const uint8_t* | 各子空间中PQ质心与查询向量的uint8距离表。 | 限制长度为LUT_size，其中“LUT_size”为距离表数组的长度。 |
+| dis | uint16_t* | 存储计算所得的距离结果。 | 限制长度为dis_size，其中“dis_size”为存储距离结果数组的长度。需预先分配内存。 |
+| threshold | const uint16_t | 距离阈值。 | 限制为65535。 |
+| lt_mask | uint32_t* | 过滤压缩结果。 | 限制长度为lt_mask_size，其中“lt_mask_size”为过滤压缩结果数组的长度。需预先分配内存。 |
+| codes_size | size_t | 码本数组的长度。 | nsq/2*64，其中“nsq”为子空间数量。 |
+| LUT_size | size_t | 距离表数组的长度。 | nsq*16，其中“nsq”为子空间数量。 |
+| dis_size | size_t | 存储距离结果数组的长度。 | 限制为64。 |
+| lt_mask_size | size_t | 过滤压缩结果数组的长度。 | 限制为2。 |
 
 **返回值<a name="section49971832106"></a>**
 
 <a name="table17997635100"></a>
-<table><thead align="left"><tr id="row699763141018"><th class="cellrowborder" valign="top" width="40%" id="mcps1.1.3.1.1"><p id="p699793141012"><a name="p699793141012"></a><a name="p699793141012"></a>数据类型</p>
-</th>
-<th class="cellrowborder" valign="top" width="60%" id="mcps1.1.3.1.2"><p id="p1999763141020"><a name="p1999763141020"></a><a name="p1999763141020"></a>说明</p>
-</th>
-</tr>
-</thead>
-<tbody><tr id="row1599716361015"><td class="cellrowborder" valign="top" width="40%" headers="mcps1.1.3.1.1 "><p id="p39970319101"><a name="p39970319101"></a><a name="p39970319101"></a>int</p>
-</td>
-<td class="cellrowborder" valign="top" width="60%" headers="mcps1.1.3.1.2 "><p id="p53461032104518"><a name="p53461032104518"></a><a name="p53461032104518"></a>正常运行时返回0，异常退出返回对应错误码。</p>
-</td>
-</tr>
-</tbody>
-</table>
+
+| 数据类型 | 说明 |
+| --- | --- |
+| int | 正常运行时返回0，异常退出返回对应错误码。 |
 
 **使用示例**
 
@@ -6596,125 +3526,27 @@ int krl\_IP\_table\_lookup\_fast\_scan\_bs64\(int nsq, const uint8\_t\* codes, c
 **参数说明<a name="section157501312135019"></a>**
 
 <a name="table1623016332509"></a>
-<table><thead align="left"><tr id="row823063355012"><th class="cellrowborder" valign="top" width="15.551555155515551%" id="mcps1.1.5.1.1"><p id="p1230333125010"><a name="p1230333125010"></a><a name="p1230333125010"></a>参数名称</p>
-</th>
-<th class="cellrowborder" valign="top" width="14.601460146014599%" id="mcps1.1.5.1.2"><p id="p089311158912"><a name="p089311158912"></a><a name="p089311158912"></a>数据类型</p>
-</th>
-<th class="cellrowborder" valign="top" width="33.99339933993399%" id="mcps1.1.5.1.3"><p id="p4230193313507"><a name="p4230193313507"></a><a name="p4230193313507"></a>描述</p>
-</th>
-<th class="cellrowborder" valign="top" width="35.85358535853585%" id="mcps1.1.5.1.4"><p id="p19887819256"><a name="p19887819256"></a><a name="p19887819256"></a>取值范围</p>
-</th>
-</tr>
-</thead>
-<tbody><tr id="row166241441532"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p262494414531"><a name="p262494414531"></a><a name="p262494414531"></a>nsq</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p126241544125310"><a name="p126241544125310"></a><a name="p126241544125310"></a>int</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p1562414447536"><a name="p1562414447536"></a><a name="p1562414447536"></a>子空间数量。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p19624744195313"><a name="p19624744195313"></a><a name="p19624744195313"></a>[1,256]且为偶数。</p>
-</td>
-</tr>
-<tr id="row1823023318504"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p14381721205612"><a name="p14381721205612"></a><a name="p14381721205612"></a>codes</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p7438122115569"><a name="p7438122115569"></a><a name="p7438122115569"></a>const uint8_t*</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p18618921124518"><a name="p18618921124518"></a><a name="p18618921124518"></a>码本，使用krl_pack_codes_4b（blocksize=64）处理后底库向量对应的索引。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p51251625162911"><a name="p51251625162911"></a><a name="p51251625162911"></a>限制长度为codes_size，其中<span class="parmname" id="parmname18125825132915"><a name="parmname18125825132915"></a><a name="parmname18125825132915"></a>“codes_size”</span>为码本数组的长度。</p>
-</td>
-</tr>
-<tr id="row10982132445420"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p4982142445414"><a name="p4982142445414"></a><a name="p4982142445414"></a>LUT</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p7532158856"><a name="p7532158856"></a><a name="p7532158856"></a>const uint8_t*</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p36611261054"><a name="p36611261054"></a><a name="p36611261054"></a>各子空间中PQ质心与查询向量的uint8距离表。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p85127581355"><a name="p85127581355"></a><a name="p85127581355"></a>限制长度为LUT_size，其中<span class="parmname" id="parmname551215813519"><a name="parmname551215813519"></a><a name="parmname551215813519"></a>“LUT_size”</span>为距离表数组的长度。</p>
-</td>
-</tr>
-<tr id="row103951453161513"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p14723141215409"><a name="p14723141215409"></a><a name="p14723141215409"></a>dis</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p4723181210404"><a name="p4723181210404"></a><a name="p4723181210404"></a>uint16_t*</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p672341218403"><a name="p672341218403"></a><a name="p672341218403"></a>存储计算所得的距离结果。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p57801052141013"><a name="p57801052141013"></a><a name="p57801052141013"></a>限制长度为dis_size，其中<span class="parmname" id="parmname1048505120457"><a name="parmname1048505120457"></a><a name="parmname1048505120457"></a>“dis_size”</span>为存储距离结果数组的长度。需预先分配内存。</p>
-</td>
-</tr>
-<tr id="row1875218456372"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p275311453374"><a name="p275311453374"></a><a name="p275311453374"></a>threshold</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p7753045173714"><a name="p7753045173714"></a><a name="p7753045173714"></a>const uint16_t</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p17531445103716"><a name="p17531445103716"></a><a name="p17531445103716"></a>距离阈值。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p748810273302"><a name="p748810273302"></a><a name="p748810273302"></a>限制为65535。</p>
-</td>
-</tr>
-<tr id="row143744955610"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p34370492563"><a name="p34370492563"></a><a name="p34370492563"></a>lt_mask</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p3437549145616"><a name="p3437549145616"></a><a name="p3437549145616"></a>uint32_t*</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p143715495569"><a name="p143715495569"></a><a name="p143715495569"></a>过滤压缩结果。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p77615321231"><a name="p77615321231"></a><a name="p77615321231"></a>限制长度为lt_mask_size，其中<span class="parmname" id="parmname10988163762914"><a name="parmname10988163762914"></a><a name="parmname10988163762914"></a>“lt_mask_size”</span>为过滤压缩结果数组的长度。需预先分配内存。</p>
-</td>
-</tr>
-<tr id="row177615011429"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p11681640172619"><a name="p11681640172619"></a><a name="p11681640172619"></a>codes_size</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p06662231878"><a name="p06662231878"></a><a name="p06662231878"></a>size_t</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p16681940142616"><a name="p16681940142616"></a><a name="p16681940142616"></a>码本数组的长度。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p568184012612"><a name="p568184012612"></a><a name="p568184012612"></a>nsq/2*64，其中<span class="parmname" id="parmname1170114418287"><a name="parmname1170114418287"></a><a name="parmname1170114418287"></a>“nsq”</span>为子空间数量。</p>
-</td>
-</tr>
-<tr id="row9760006427"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p1258316232715"><a name="p1258316232715"></a><a name="p1258316232715"></a>LUT_size</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p6403112617719"><a name="p6403112617719"></a><a name="p6403112617719"></a>size_t</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p1258316212714"><a name="p1258316212714"></a><a name="p1258316212714"></a>距离表数组的长度。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p1658311212279"><a name="p1658311212279"></a><a name="p1658311212279"></a>nsq*16，其中<span class="parmname" id="parmname584361843817"><a name="parmname584361843817"></a><a name="parmname584361843817"></a>“nsq”</span>为子空间数量。</p>
-</td>
-</tr>
-<tr id="row1276017012420"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p1613312110277"><a name="p1613312110277"></a><a name="p1613312110277"></a>dis_size</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p1699263912712"><a name="p1699263912712"></a><a name="p1699263912712"></a>size_t</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p21335117279"><a name="p21335117279"></a><a name="p21335117279"></a>存储距离结果数组的长度。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p41335118277"><a name="p41335118277"></a><a name="p41335118277"></a>限制为64。</p>
-</td>
-</tr>
-<tr id="row157604034212"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p172182719273"><a name="p172182719273"></a><a name="p172182719273"></a>lt_mask_size</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p119923399274"><a name="p119923399274"></a><a name="p119923399274"></a>size_t</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p92127202712"><a name="p92127202712"></a><a name="p92127202712"></a>过滤压缩结果数组的长度。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p1421327132714"><a name="p1421327132714"></a><a name="p1421327132714"></a>限制为2。</p>
-</td>
-</tr>
-</tbody>
-</table>
+
+| 参数名称 | 数据类型 | 描述 | 取值范围 |
+| --- | --- | --- | --- |
+| nsq | int | 子空间数量。 | [1,256]且为偶数。 |
+| codes | const uint8_t* | 码本，使用krl_pack_codes_4b（blocksize=64）处理后底库向量对应的索引。 | 限制长度为codes_size，其中“codes_size”为码本数组的长度。 |
+| LUT | const uint8_t* | 各子空间中PQ质心与查询向量的uint8距离表。 | 限制长度为LUT_size，其中“LUT_size”为距离表数组的长度。 |
+| dis | uint16_t* | 存储计算所得的距离结果。 | 限制长度为dis_size，其中“dis_size”为存储距离结果数组的长度。需预先分配内存。 |
+| threshold | const uint16_t | 距离阈值。 | 限制为65535。 |
+| lt_mask | uint32_t* | 过滤压缩结果。 | 限制长度为lt_mask_size，其中“lt_mask_size”为过滤压缩结果数组的长度。需预先分配内存。 |
+| codes_size | size_t | 码本数组的长度。 | nsq/2*64，其中“nsq”为子空间数量。 |
+| LUT_size | size_t | 距离表数组的长度。 | nsq*16，其中“nsq”为子空间数量。 |
+| dis_size | size_t | 存储距离结果数组的长度。 | 限制为64。 |
+| lt_mask_size | size_t | 过滤压缩结果数组的长度。 | 限制为2。 |
 
 **返回值<a name="section49971832106"></a>**
 
 <a name="table17997635100"></a>
-<table><thead align="left"><tr id="row699763141018"><th class="cellrowborder" valign="top" width="40%" id="mcps1.1.3.1.1"><p id="p699793141012"><a name="p699793141012"></a><a name="p699793141012"></a>数据类型</p>
-</th>
-<th class="cellrowborder" valign="top" width="60%" id="mcps1.1.3.1.2"><p id="p1999763141020"><a name="p1999763141020"></a><a name="p1999763141020"></a>说明</p>
-</th>
-</tr>
-</thead>
-<tbody><tr id="row1599716361015"><td class="cellrowborder" valign="top" width="40%" headers="mcps1.1.3.1.1 "><p id="p39970319101"><a name="p39970319101"></a><a name="p39970319101"></a>int</p>
-</td>
-<td class="cellrowborder" valign="top" width="60%" headers="mcps1.1.3.1.2 "><p id="p53461032104518"><a name="p53461032104518"></a><a name="p53461032104518"></a>正常运行时返回0，异常退出返回对应错误码。</p>
-</td>
-</tr>
-</tbody>
-</table>
+
+| 数据类型 | 说明 |
+| --- | --- |
+| int | 正常运行时返回0，异常退出返回对应错误码。 |
 
 **使用示例**
 
@@ -6818,125 +3650,27 @@ int krl\_L2\_table\_lookup\_fast\_scan\_bs96\(int nsq, const uint8\_t\* codes, c
 **参数说明<a name="section157501312135019"></a>**
 
 <a name="table1623016332509"></a>
-<table><thead align="left"><tr id="row823063355012"><th class="cellrowborder" valign="top" width="15.551555155515551%" id="mcps1.1.5.1.1"><p id="p1230333125010"><a name="p1230333125010"></a><a name="p1230333125010"></a>参数名称</p>
-</th>
-<th class="cellrowborder" valign="top" width="14.601460146014599%" id="mcps1.1.5.1.2"><p id="p089311158912"><a name="p089311158912"></a><a name="p089311158912"></a>数据类型</p>
-</th>
-<th class="cellrowborder" valign="top" width="33.99339933993399%" id="mcps1.1.5.1.3"><p id="p4230193313507"><a name="p4230193313507"></a><a name="p4230193313507"></a>描述</p>
-</th>
-<th class="cellrowborder" valign="top" width="35.85358535853585%" id="mcps1.1.5.1.4"><p id="p19887819256"><a name="p19887819256"></a><a name="p19887819256"></a>取值范围</p>
-</th>
-</tr>
-</thead>
-<tbody><tr id="row166241441532"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p262494414531"><a name="p262494414531"></a><a name="p262494414531"></a>nsq</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p126241544125310"><a name="p126241544125310"></a><a name="p126241544125310"></a>int</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p1562414447536"><a name="p1562414447536"></a><a name="p1562414447536"></a>子空间数量。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p19624744195313"><a name="p19624744195313"></a><a name="p19624744195313"></a>[1,256]且为偶数。</p>
-</td>
-</tr>
-<tr id="row1823023318504"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p14381721205612"><a name="p14381721205612"></a><a name="p14381721205612"></a>codes</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p7438122115569"><a name="p7438122115569"></a><a name="p7438122115569"></a>const uint8_t*</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p18438121155616"><a name="p18438121155616"></a><a name="p18438121155616"></a>码本，使用krl_pack_codes_4b（blocksize=96）处理后底库向量对应的索引。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p51251625162911"><a name="p51251625162911"></a><a name="p51251625162911"></a>限制长度为codes_size，其中<span class="parmname" id="parmname18125825132915"><a name="parmname18125825132915"></a><a name="parmname18125825132915"></a>“codes_size”</span>为码本数组的长度。</p>
-</td>
-</tr>
-<tr id="row10982132445420"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p4982142445414"><a name="p4982142445414"></a><a name="p4982142445414"></a>LUT</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p7532158856"><a name="p7532158856"></a><a name="p7532158856"></a>const uint8_t*</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p36611261054"><a name="p36611261054"></a><a name="p36611261054"></a>各子空间中PQ质心与查询向量的uint8距离表。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p85127581355"><a name="p85127581355"></a><a name="p85127581355"></a>限制长度为LUT_size，其中<span class="parmname" id="parmname551215813519"><a name="parmname551215813519"></a><a name="parmname551215813519"></a>“LUT_size”</span>为距离表数组的长度。</p>
-</td>
-</tr>
-<tr id="row103951453161513"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p14723141215409"><a name="p14723141215409"></a><a name="p14723141215409"></a>dis</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p4723181210404"><a name="p4723181210404"></a><a name="p4723181210404"></a>uint16_t*</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p672341218403"><a name="p672341218403"></a><a name="p672341218403"></a>存储计算所得的距离结果。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p57801052141013"><a name="p57801052141013"></a><a name="p57801052141013"></a>限制长度为dis_size，其中<span class="parmname" id="parmname1048505120457"><a name="parmname1048505120457"></a><a name="parmname1048505120457"></a>“dis_size”</span>为存储距离结果数组的长度。需预先分配内存。</p>
-</td>
-</tr>
-<tr id="row1875218456372"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p275311453374"><a name="p275311453374"></a><a name="p275311453374"></a>threshold</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p7753045173714"><a name="p7753045173714"></a><a name="p7753045173714"></a>const uint16_t</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p17531445103716"><a name="p17531445103716"></a><a name="p17531445103716"></a>距离阈值。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p748810273302"><a name="p748810273302"></a><a name="p748810273302"></a>限制为65535。</p>
-</td>
-</tr>
-<tr id="row143744955610"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p34370492563"><a name="p34370492563"></a><a name="p34370492563"></a>lt_mask</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p3437549145616"><a name="p3437549145616"></a><a name="p3437549145616"></a>uint32_t*</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p143715495569"><a name="p143715495569"></a><a name="p143715495569"></a>过滤压缩结果。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p77615321231"><a name="p77615321231"></a><a name="p77615321231"></a>限制长度为lt_mask_size，其中<span class="parmname" id="parmname10988163762914"><a name="parmname10988163762914"></a><a name="parmname10988163762914"></a>“lt_mask_size”</span>为过滤压缩结果数组的长度。需预先分配内存。</p>
-</td>
-</tr>
-<tr id="row02162634718"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p11681640172619"><a name="p11681640172619"></a><a name="p11681640172619"></a>codes_size</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p06662231878"><a name="p06662231878"></a><a name="p06662231878"></a>size_t</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p16681940142616"><a name="p16681940142616"></a><a name="p16681940142616"></a>码本数组的长度。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p568184012612"><a name="p568184012612"></a><a name="p568184012612"></a>nsq/2*96，其中<span class="parmname" id="parmname1170114418287"><a name="parmname1170114418287"></a><a name="parmname1170114418287"></a>“nsq”</span>为子空间数量。</p>
-</td>
-</tr>
-<tr id="row11211726184714"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p1258316232715"><a name="p1258316232715"></a><a name="p1258316232715"></a>LUT_size</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p6403112617719"><a name="p6403112617719"></a><a name="p6403112617719"></a>size_t</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p1258316212714"><a name="p1258316212714"></a><a name="p1258316212714"></a>距离表数组的长度。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p1658311212279"><a name="p1658311212279"></a><a name="p1658311212279"></a>nsq*16，其中<span class="parmname" id="parmname584361843817"><a name="parmname584361843817"></a><a name="parmname584361843817"></a>“nsq”</span>为子空间数量。</p>
-</td>
-</tr>
-<tr id="row172114262476"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p1613312110277"><a name="p1613312110277"></a><a name="p1613312110277"></a>dis_size</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p1699263912712"><a name="p1699263912712"></a><a name="p1699263912712"></a>size_t</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p21335117279"><a name="p21335117279"></a><a name="p21335117279"></a>存储距离结果数组的长度。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p41335118277"><a name="p41335118277"></a><a name="p41335118277"></a>限制为96。</p>
-</td>
-</tr>
-<tr id="row11201326164720"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p172182719273"><a name="p172182719273"></a><a name="p172182719273"></a>lt_mask_size</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p119923399274"><a name="p119923399274"></a><a name="p119923399274"></a>size_t</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p92127202712"><a name="p92127202712"></a><a name="p92127202712"></a>过滤压缩结果数组的长度。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p1421327132714"><a name="p1421327132714"></a><a name="p1421327132714"></a>限制为3。</p>
-</td>
-</tr>
-</tbody>
-</table>
+
+| 参数名称 | 数据类型 | 描述 | 取值范围 |
+| --- | --- | --- | --- |
+| nsq | int | 子空间数量。 | [1,256]且为偶数。 |
+| codes | const uint8_t* | 码本，使用krl_pack_codes_4b（blocksize=96）处理后底库向量对应的索引。 | 限制长度为codes_size，其中“codes_size”为码本数组的长度。 |
+| LUT | const uint8_t* | 各子空间中PQ质心与查询向量的uint8距离表。 | 限制长度为LUT_size，其中“LUT_size”为距离表数组的长度。 |
+| dis | uint16_t* | 存储计算所得的距离结果。 | 限制长度为dis_size，其中“dis_size”为存储距离结果数组的长度。需预先分配内存。 |
+| threshold | const uint16_t | 距离阈值。 | 限制为65535。 |
+| lt_mask | uint32_t* | 过滤压缩结果。 | 限制长度为lt_mask_size，其中“lt_mask_size”为过滤压缩结果数组的长度。需预先分配内存。 |
+| codes_size | size_t | 码本数组的长度。 | nsq/2*96，其中“nsq”为子空间数量。 |
+| LUT_size | size_t | 距离表数组的长度。 | nsq*16，其中“nsq”为子空间数量。 |
+| dis_size | size_t | 存储距离结果数组的长度。 | 限制为96。 |
+| lt_mask_size | size_t | 过滤压缩结果数组的长度。 | 限制为3。 |
 
 **返回值<a name="section49971832106"></a>**
 
 <a name="table17997635100"></a>
-<table><thead align="left"><tr id="row699763141018"><th class="cellrowborder" valign="top" width="40%" id="mcps1.1.3.1.1"><p id="p699793141012"><a name="p699793141012"></a><a name="p699793141012"></a>数据类型</p>
-</th>
-<th class="cellrowborder" valign="top" width="60%" id="mcps1.1.3.1.2"><p id="p1999763141020"><a name="p1999763141020"></a><a name="p1999763141020"></a>说明</p>
-</th>
-</tr>
-</thead>
-<tbody><tr id="row1599716361015"><td class="cellrowborder" valign="top" width="40%" headers="mcps1.1.3.1.1 "><p id="p39970319101"><a name="p39970319101"></a><a name="p39970319101"></a>int</p>
-</td>
-<td class="cellrowborder" valign="top" width="60%" headers="mcps1.1.3.1.2 "><p id="p53461032104518"><a name="p53461032104518"></a><a name="p53461032104518"></a>正常运行时返回0，异常退出返回对应错误码。</p>
-</td>
-</tr>
-</tbody>
-</table>
+
+| 数据类型 | 说明 |
+| --- | --- |
+| int | 正常运行时返回0，异常退出返回对应错误码。 |
 
 **使用示例**
 
@@ -7034,125 +3768,27 @@ int krl\_IP\_table\_lookup\_fast\_scan\_bs96\(int nsq, const uint8\_t\* codes, c
 **参数说明<a name="section157501312135019"></a>**
 
 <a name="table1623016332509"></a>
-<table><thead align="left"><tr id="row823063355012"><th class="cellrowborder" valign="top" width="15.551555155515551%" id="mcps1.1.5.1.1"><p id="p1230333125010"><a name="p1230333125010"></a><a name="p1230333125010"></a>参数名称</p>
-</th>
-<th class="cellrowborder" valign="top" width="14.601460146014599%" id="mcps1.1.5.1.2"><p id="p089311158912"><a name="p089311158912"></a><a name="p089311158912"></a>数据类型</p>
-</th>
-<th class="cellrowborder" valign="top" width="33.903390339033905%" id="mcps1.1.5.1.3"><p id="p4230193313507"><a name="p4230193313507"></a><a name="p4230193313507"></a>描述</p>
-</th>
-<th class="cellrowborder" valign="top" width="35.94359435943594%" id="mcps1.1.5.1.4"><p id="p19887819256"><a name="p19887819256"></a><a name="p19887819256"></a>取值范围</p>
-</th>
-</tr>
-</thead>
-<tbody><tr id="row166241441532"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p262494414531"><a name="p262494414531"></a><a name="p262494414531"></a>nsq</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p126241544125310"><a name="p126241544125310"></a><a name="p126241544125310"></a>int</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.903390339033905%" headers="mcps1.1.5.1.3 "><p id="p1562414447536"><a name="p1562414447536"></a><a name="p1562414447536"></a>子空间数量。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.94359435943594%" headers="mcps1.1.5.1.4 "><p id="p19624744195313"><a name="p19624744195313"></a><a name="p19624744195313"></a>[1,256]且为偶数。</p>
-</td>
-</tr>
-<tr id="row1823023318504"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p14381721205612"><a name="p14381721205612"></a><a name="p14381721205612"></a>codes</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p7438122115569"><a name="p7438122115569"></a><a name="p7438122115569"></a>const uint8_t*</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.903390339033905%" headers="mcps1.1.5.1.3 "><p id="p18438121155616"><a name="p18438121155616"></a><a name="p18438121155616"></a>码本，使用krl_pack_codes_4b（blocksize=96）处理后底库向量对应的索引。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.94359435943594%" headers="mcps1.1.5.1.4 "><p id="p51251625162911"><a name="p51251625162911"></a><a name="p51251625162911"></a>限制长度为codes_size，其中<span class="parmname" id="parmname18125825132915"><a name="parmname18125825132915"></a><a name="parmname18125825132915"></a>“codes_size”</span>为码本数组的长度。</p>
-</td>
-</tr>
-<tr id="row10982132445420"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p4982142445414"><a name="p4982142445414"></a><a name="p4982142445414"></a>LUT</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p7532158856"><a name="p7532158856"></a><a name="p7532158856"></a>const uint8_t*</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.903390339033905%" headers="mcps1.1.5.1.3 "><p id="p36611261054"><a name="p36611261054"></a><a name="p36611261054"></a>各子空间中PQ质心与查询向量的uint8距离表。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.94359435943594%" headers="mcps1.1.5.1.4 "><p id="p85127581355"><a name="p85127581355"></a><a name="p85127581355"></a>限制长度为LUT_size，其中<span class="parmname" id="parmname551215813519"><a name="parmname551215813519"></a><a name="parmname551215813519"></a>“LUT_size”</span>为距离表数组的长度。</p>
-</td>
-</tr>
-<tr id="row103951453161513"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p14723141215409"><a name="p14723141215409"></a><a name="p14723141215409"></a>dis</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p4723181210404"><a name="p4723181210404"></a><a name="p4723181210404"></a>uint16_t*</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.903390339033905%" headers="mcps1.1.5.1.3 "><p id="p672341218403"><a name="p672341218403"></a><a name="p672341218403"></a>存储计算所得的距离结果。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.94359435943594%" headers="mcps1.1.5.1.4 "><p id="p57801052141013"><a name="p57801052141013"></a><a name="p57801052141013"></a>限制长度为dis_size，其中<span class="parmname" id="parmname1048505120457"><a name="parmname1048505120457"></a><a name="parmname1048505120457"></a>“dis_size”</span>为存储距离结果数组的长度。需预先分配内存。</p>
-</td>
-</tr>
-<tr id="row1875218456372"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p275311453374"><a name="p275311453374"></a><a name="p275311453374"></a>threshold</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p7753045173714"><a name="p7753045173714"></a><a name="p7753045173714"></a>const uint16_t</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.903390339033905%" headers="mcps1.1.5.1.3 "><p id="p17531445103716"><a name="p17531445103716"></a><a name="p17531445103716"></a>距离阈值。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.94359435943594%" headers="mcps1.1.5.1.4 "><p id="p748810273302"><a name="p748810273302"></a><a name="p748810273302"></a>限制为65535。</p>
-</td>
-</tr>
-<tr id="row143744955610"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p34370492563"><a name="p34370492563"></a><a name="p34370492563"></a>lt_mask</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p3437549145616"><a name="p3437549145616"></a><a name="p3437549145616"></a>uint32_t*</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.903390339033905%" headers="mcps1.1.5.1.3 "><p id="p143715495569"><a name="p143715495569"></a><a name="p143715495569"></a>过滤压缩结果。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.94359435943594%" headers="mcps1.1.5.1.4 "><p id="p77615321231"><a name="p77615321231"></a><a name="p77615321231"></a>限制长度为lt_mask_size，其中<span class="parmname" id="parmname10988163762914"><a name="parmname10988163762914"></a><a name="parmname10988163762914"></a>“lt_mask_size”</span>为过滤压缩结果数组的长度。需预先分配内存。</p>
-</td>
-</tr>
-<tr id="row3115131755217"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p11681640172619"><a name="p11681640172619"></a><a name="p11681640172619"></a>codes_size</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p06662231878"><a name="p06662231878"></a><a name="p06662231878"></a>size_t</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.903390339033905%" headers="mcps1.1.5.1.3 "><p id="p16681940142616"><a name="p16681940142616"></a><a name="p16681940142616"></a>码本数组的长度。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.94359435943594%" headers="mcps1.1.5.1.4 "><p id="p568184012612"><a name="p568184012612"></a><a name="p568184012612"></a>nsq/2*96，其中<span class="parmname" id="parmname1170114418287"><a name="parmname1170114418287"></a><a name="parmname1170114418287"></a>“nsq”</span>为子空间数量。</p>
-</td>
-</tr>
-<tr id="row511551717527"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p1258316232715"><a name="p1258316232715"></a><a name="p1258316232715"></a>LUT_size</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p6403112617719"><a name="p6403112617719"></a><a name="p6403112617719"></a>size_t</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.903390339033905%" headers="mcps1.1.5.1.3 "><p id="p1258316212714"><a name="p1258316212714"></a><a name="p1258316212714"></a>距离表数组的长度。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.94359435943594%" headers="mcps1.1.5.1.4 "><p id="p1658311212279"><a name="p1658311212279"></a><a name="p1658311212279"></a>nsq*16，其中<span class="parmname" id="parmname584361843817"><a name="parmname584361843817"></a><a name="parmname584361843817"></a>“nsq”</span>为子空间数量。</p>
-</td>
-</tr>
-<tr id="row11115201711529"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p1613312110277"><a name="p1613312110277"></a><a name="p1613312110277"></a>dis_size</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p1699263912712"><a name="p1699263912712"></a><a name="p1699263912712"></a>size_t</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.903390339033905%" headers="mcps1.1.5.1.3 "><p id="p21335117279"><a name="p21335117279"></a><a name="p21335117279"></a>存储距离结果数组的长度。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.94359435943594%" headers="mcps1.1.5.1.4 "><p id="p41335118277"><a name="p41335118277"></a><a name="p41335118277"></a>限制为96。</p>
-</td>
-</tr>
-<tr id="row111141217155212"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p172182719273"><a name="p172182719273"></a><a name="p172182719273"></a>lt_mask_size</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p119923399274"><a name="p119923399274"></a><a name="p119923399274"></a>size_t</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.903390339033905%" headers="mcps1.1.5.1.3 "><p id="p92127202712"><a name="p92127202712"></a><a name="p92127202712"></a>过滤压缩结果数组的长度。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.94359435943594%" headers="mcps1.1.5.1.4 "><p id="p1421327132714"><a name="p1421327132714"></a><a name="p1421327132714"></a>限制为3。</p>
-</td>
-</tr>
-</tbody>
-</table>
+
+| 参数名称 | 数据类型 | 描述 | 取值范围 |
+| --- | --- | --- | --- |
+| nsq | int | 子空间数量。 | [1,256]且为偶数。 |
+| codes | const uint8_t* | 码本，使用krl_pack_codes_4b（blocksize=96）处理后底库向量对应的索引。 | 限制长度为codes_size，其中“codes_size”为码本数组的长度。 |
+| LUT | const uint8_t* | 各子空间中PQ质心与查询向量的uint8距离表。 | 限制长度为LUT_size，其中“LUT_size”为距离表数组的长度。 |
+| dis | uint16_t* | 存储计算所得的距离结果。 | 限制长度为dis_size，其中“dis_size”为存储距离结果数组的长度。需预先分配内存。 |
+| threshold | const uint16_t | 距离阈值。 | 限制为65535。 |
+| lt_mask | uint32_t* | 过滤压缩结果。 | 限制长度为lt_mask_size，其中“lt_mask_size”为过滤压缩结果数组的长度。需预先分配内存。 |
+| codes_size | size_t | 码本数组的长度。 | nsq/2*96，其中“nsq”为子空间数量。 |
+| LUT_size | size_t | 距离表数组的长度。 | nsq*16，其中“nsq”为子空间数量。 |
+| dis_size | size_t | 存储距离结果数组的长度。 | 限制为96。 |
+| lt_mask_size | size_t | 过滤压缩结果数组的长度。 | 限制为3。 |
 
 **返回值<a name="section49971832106"></a>**
 
 <a name="table17997635100"></a>
-<table><thead align="left"><tr id="row699763141018"><th class="cellrowborder" valign="top" width="40%" id="mcps1.1.3.1.1"><p id="p699793141012"><a name="p699793141012"></a><a name="p699793141012"></a>数据类型</p>
-</th>
-<th class="cellrowborder" valign="top" width="60%" id="mcps1.1.3.1.2"><p id="p1999763141020"><a name="p1999763141020"></a><a name="p1999763141020"></a>说明</p>
-</th>
-</tr>
-</thead>
-<tbody><tr id="row1599716361015"><td class="cellrowborder" valign="top" width="40%" headers="mcps1.1.3.1.1 "><p id="p39970319101"><a name="p39970319101"></a><a name="p39970319101"></a>int</p>
-</td>
-<td class="cellrowborder" valign="top" width="60%" headers="mcps1.1.3.1.2 "><p id="p53461032104518"><a name="p53461032104518"></a><a name="p53461032104518"></a>正常运行时返回0，异常退出返回对应错误码。</p>
-</td>
-</tr>
-</tbody>
-</table>
+
+| 数据类型 | 说明 |
+| --- | --- |
+| int | 正常运行时返回0，异常退出返回对应错误码。 |
 
 **使用示例**
 
@@ -7252,125 +3888,27 @@ int krl\_L2\_table\_lookup\_fast\_scan\_bs32\_sve2\(int nsq, const uint8\_t\* co
 **参数说明<a name="section157501312135019"></a>**
 
 <a name="table1623016332509"></a>
-<table><thead align="left"><tr id="row823063355012"><th class="cellrowborder" valign="top" width="15.551555155515551%" id="mcps1.1.5.1.1"><p id="p1230333125010"><a name="p1230333125010"></a><a name="p1230333125010"></a>参数名称</p>
-</th>
-<th class="cellrowborder" valign="top" width="14.601460146014599%" id="mcps1.1.5.1.2"><p id="p089311158912"><a name="p089311158912"></a><a name="p089311158912"></a>数据类型</p>
-</th>
-<th class="cellrowborder" valign="top" width="33.97339733973397%" id="mcps1.1.5.1.3"><p id="p4230193313507"><a name="p4230193313507"></a><a name="p4230193313507"></a>描述</p>
-</th>
-<th class="cellrowborder" valign="top" width="35.873587358735875%" id="mcps1.1.5.1.4"><p id="p19887819256"><a name="p19887819256"></a><a name="p19887819256"></a>取值范围</p>
-</th>
-</tr>
-</thead>
-<tbody><tr id="row166241441532"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p262494414531"><a name="p262494414531"></a><a name="p262494414531"></a>nsq</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p126241544125310"><a name="p126241544125310"></a><a name="p126241544125310"></a>int</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.97339733973397%" headers="mcps1.1.5.1.3 "><p id="p1562414447536"><a name="p1562414447536"></a><a name="p1562414447536"></a>子空间数量。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.873587358735875%" headers="mcps1.1.5.1.4 "><p id="p19624744195313"><a name="p19624744195313"></a><a name="p19624744195313"></a>[1,256]且为偶数。</p>
-</td>
-</tr>
-<tr id="row1823023318504"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p14381721205612"><a name="p14381721205612"></a><a name="p14381721205612"></a>codes</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p7438122115569"><a name="p7438122115569"></a><a name="p7438122115569"></a>const uint8_t*</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.97339733973397%" headers="mcps1.1.5.1.3 "><p id="p18618921124518"><a name="p18618921124518"></a><a name="p18618921124518"></a>码本，使用krl_pack_codes_4b（blocksize=64）处理后底库向量对应的索引。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.873587358735875%" headers="mcps1.1.5.1.4 "><p id="p51251625162911"><a name="p51251625162911"></a><a name="p51251625162911"></a>限制长度为codes_size，其中<span class="parmname" id="parmname18125825132915"><a name="parmname18125825132915"></a><a name="parmname18125825132915"></a>“codes_size”</span>为码本数组的长度。</p>
-</td>
-</tr>
-<tr id="row10982132445420"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p4982142445414"><a name="p4982142445414"></a><a name="p4982142445414"></a>LUT</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p7532158856"><a name="p7532158856"></a><a name="p7532158856"></a>const uint8_t*</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.97339733973397%" headers="mcps1.1.5.1.3 "><p id="p36611261054"><a name="p36611261054"></a><a name="p36611261054"></a>各子空间中PQ质心与查询向量的uint8距离表。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.873587358735875%" headers="mcps1.1.5.1.4 "><p id="p85127581355"><a name="p85127581355"></a><a name="p85127581355"></a>限制长度为LUT_size，其中<span class="parmname" id="parmname551215813519"><a name="parmname551215813519"></a><a name="parmname551215813519"></a>“LUT_size”</span>为距离表数组的长度。</p>
-</td>
-</tr>
-<tr id="row103951453161513"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p14723141215409"><a name="p14723141215409"></a><a name="p14723141215409"></a>dis</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p4723181210404"><a name="p4723181210404"></a><a name="p4723181210404"></a>uint16_t*</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.97339733973397%" headers="mcps1.1.5.1.3 "><p id="p672341218403"><a name="p672341218403"></a><a name="p672341218403"></a>存储计算所得的距离结果。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.873587358735875%" headers="mcps1.1.5.1.4 "><p id="p57801052141013"><a name="p57801052141013"></a><a name="p57801052141013"></a>限制长度为dis_size，其中<span class="parmname" id="parmname1048505120457"><a name="parmname1048505120457"></a><a name="parmname1048505120457"></a>“dis_size”</span>为存储距离结果数组的长度。需预先分配内存。</p>
-</td>
-</tr>
-<tr id="row1875218456372"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p275311453374"><a name="p275311453374"></a><a name="p275311453374"></a>threshold</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p7753045173714"><a name="p7753045173714"></a><a name="p7753045173714"></a>const uint16_t</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.97339733973397%" headers="mcps1.1.5.1.3 "><p id="p17531445103716"><a name="p17531445103716"></a><a name="p17531445103716"></a>距离阈值。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.873587358735875%" headers="mcps1.1.5.1.4 "><p id="p748810273302"><a name="p748810273302"></a><a name="p748810273302"></a>限制为65535。</p>
-</td>
-</tr>
-<tr id="row143744955610"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p34370492563"><a name="p34370492563"></a><a name="p34370492563"></a>lt_mask</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p3437549145616"><a name="p3437549145616"></a><a name="p3437549145616"></a>uint32_t*</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.97339733973397%" headers="mcps1.1.5.1.3 "><p id="p143715495569"><a name="p143715495569"></a><a name="p143715495569"></a>过滤压缩结果。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.873587358735875%" headers="mcps1.1.5.1.4 "><p id="p77615321231"><a name="p77615321231"></a><a name="p77615321231"></a>限制长度为lt_mask_size，其中<span class="parmname" id="parmname10988163762914"><a name="parmname10988163762914"></a><a name="parmname10988163762914"></a>“lt_mask_size”</span>为过滤压缩结果数组的长度。需预先分配内存。</p>
-</td>
-</tr>
-<tr id="row1695419558379"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p11681640172619"><a name="p11681640172619"></a><a name="p11681640172619"></a>codes_size</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p06662231878"><a name="p06662231878"></a><a name="p06662231878"></a>size_t</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.97339733973397%" headers="mcps1.1.5.1.3 "><p id="p16681940142616"><a name="p16681940142616"></a><a name="p16681940142616"></a>码本数组的长度。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.873587358735875%" headers="mcps1.1.5.1.4 "><p id="p568184012612"><a name="p568184012612"></a><a name="p568184012612"></a>nsq/2*64，其中<span class="parmname" id="parmname1170114418287"><a name="parmname1170114418287"></a><a name="parmname1170114418287"></a>“nsq”</span>为子空间数量。</p>
-</td>
-</tr>
-<tr id="row15954175511376"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p1258316232715"><a name="p1258316232715"></a><a name="p1258316232715"></a>LUT_size</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p6403112617719"><a name="p6403112617719"></a><a name="p6403112617719"></a>size_t</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.97339733973397%" headers="mcps1.1.5.1.3 "><p id="p1258316212714"><a name="p1258316212714"></a><a name="p1258316212714"></a>距离表数组的长度。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.873587358735875%" headers="mcps1.1.5.1.4 "><p id="p1658311212279"><a name="p1658311212279"></a><a name="p1658311212279"></a>nsq*16，其中<span class="parmname" id="parmname584361843817"><a name="parmname584361843817"></a><a name="parmname584361843817"></a>“nsq”</span>为子空间数量。</p>
-</td>
-</tr>
-<tr id="row109541655133713"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p1613312110277"><a name="p1613312110277"></a><a name="p1613312110277"></a>dis_size</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p1699263912712"><a name="p1699263912712"></a><a name="p1699263912712"></a>size_t</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.97339733973397%" headers="mcps1.1.5.1.3 "><p id="p21335117279"><a name="p21335117279"></a><a name="p21335117279"></a>存储距离结果数组的长度。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.873587358735875%" headers="mcps1.1.5.1.4 "><p id="p41335118277"><a name="p41335118277"></a><a name="p41335118277"></a>限制为64。</p>
-</td>
-</tr>
-<tr id="row4954455153717"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p172182719273"><a name="p172182719273"></a><a name="p172182719273"></a>lt_mask_size</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p119923399274"><a name="p119923399274"></a><a name="p119923399274"></a>size_t</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.97339733973397%" headers="mcps1.1.5.1.3 "><p id="p92127202712"><a name="p92127202712"></a><a name="p92127202712"></a>过滤压缩结果数组的长度。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.873587358735875%" headers="mcps1.1.5.1.4 "><p id="p1421327132714"><a name="p1421327132714"></a><a name="p1421327132714"></a>限制为2。</p>
-</td>
-</tr>
-</tbody>
-</table>
+
+| 参数名称 | 数据类型 | 描述 | 取值范围 |
+| --- | --- | --- | --- |
+| nsq | int | 子空间数量。 | [1,256]且为偶数。 |
+| codes | const uint8_t* | 码本，使用krl_pack_codes_4b（blocksize=64）处理后底库向量对应的索引。 | 限制长度为codes_size，其中“codes_size”为码本数组的长度。 |
+| LUT | const uint8_t* | 各子空间中PQ质心与查询向量的uint8距离表。 | 限制长度为LUT_size，其中“LUT_size”为距离表数组的长度。 |
+| dis | uint16_t* | 存储计算所得的距离结果。 | 限制长度为dis_size，其中“dis_size”为存储距离结果数组的长度。需预先分配内存。 |
+| threshold | const uint16_t | 距离阈值。 | 限制为65535。 |
+| lt_mask | uint32_t* | 过滤压缩结果。 | 限制长度为lt_mask_size，其中“lt_mask_size”为过滤压缩结果数组的长度。需预先分配内存。 |
+| codes_size | size_t | 码本数组的长度。 | nsq/2*64，其中“nsq”为子空间数量。 |
+| LUT_size | size_t | 距离表数组的长度。 | nsq*16，其中“nsq”为子空间数量。 |
+| dis_size | size_t | 存储距离结果数组的长度。 | 限制为64。 |
+| lt_mask_size | size_t | 过滤压缩结果数组的长度。 | 限制为2。 |
 
 **返回值<a name="section49971832106"></a>**
 
 <a name="table17997635100"></a>
-<table><thead align="left"><tr id="row699763141018"><th class="cellrowborder" valign="top" width="40%" id="mcps1.1.3.1.1"><p id="p699793141012"><a name="p699793141012"></a><a name="p699793141012"></a>数据类型</p>
-</th>
-<th class="cellrowborder" valign="top" width="60%" id="mcps1.1.3.1.2"><p id="p1999763141020"><a name="p1999763141020"></a><a name="p1999763141020"></a>说明</p>
-</th>
-</tr>
-</thead>
-<tbody><tr id="row1599716361015"><td class="cellrowborder" valign="top" width="40%" headers="mcps1.1.3.1.1 "><p id="p39970319101"><a name="p39970319101"></a><a name="p39970319101"></a>int</p>
-</td>
-<td class="cellrowborder" valign="top" width="60%" headers="mcps1.1.3.1.2 "><p id="p53461032104518"><a name="p53461032104518"></a><a name="p53461032104518"></a>正常运行时返回0，异常退出返回对应错误码。</p>
-</td>
-</tr>
-</tbody>
-</table>
+
+| 数据类型 | 说明 |
+| --- | --- |
+| int | 正常运行时返回0，异常退出返回对应错误码。 |
 
 **使用示例**
 
@@ -7389,125 +3927,27 @@ int krl\_IP\_table\_lookup\_fast\_scan\_bs32\_sve2\(int nsq, const uint8\_t\* co
 **参数说明<a name="section157501312135019"></a>**
 
 <a name="table1623016332509"></a>
-<table><thead align="left"><tr id="row823063355012"><th class="cellrowborder" valign="top" width="15.551555155515551%" id="mcps1.1.5.1.1"><p id="p1230333125010"><a name="p1230333125010"></a><a name="p1230333125010"></a>参数名称</p>
-</th>
-<th class="cellrowborder" valign="top" width="14.601460146014599%" id="mcps1.1.5.1.2"><p id="p089311158912"><a name="p089311158912"></a><a name="p089311158912"></a>数据类型</p>
-</th>
-<th class="cellrowborder" valign="top" width="33.99339933993399%" id="mcps1.1.5.1.3"><p id="p4230193313507"><a name="p4230193313507"></a><a name="p4230193313507"></a>描述</p>
-</th>
-<th class="cellrowborder" valign="top" width="35.85358535853585%" id="mcps1.1.5.1.4"><p id="p19887819256"><a name="p19887819256"></a><a name="p19887819256"></a>取值范围</p>
-</th>
-</tr>
-</thead>
-<tbody><tr id="row166241441532"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p262494414531"><a name="p262494414531"></a><a name="p262494414531"></a>nsq</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p126241544125310"><a name="p126241544125310"></a><a name="p126241544125310"></a>int</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p1562414447536"><a name="p1562414447536"></a><a name="p1562414447536"></a>子空间数量。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p19624744195313"><a name="p19624744195313"></a><a name="p19624744195313"></a>[1,256]且为偶数。</p>
-</td>
-</tr>
-<tr id="row1823023318504"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p14381721205612"><a name="p14381721205612"></a><a name="p14381721205612"></a>codes</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p7438122115569"><a name="p7438122115569"></a><a name="p7438122115569"></a>const uint8_t*</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p18618921124518"><a name="p18618921124518"></a><a name="p18618921124518"></a>码本，使用krl_pack_codes_4b（blocksize=64）处理后底库向量对应的索引。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p51251625162911"><a name="p51251625162911"></a><a name="p51251625162911"></a>限制长度为codes_size，其中<span class="parmname" id="parmname18125825132915"><a name="parmname18125825132915"></a><a name="parmname18125825132915"></a>“codes_size”</span>为码本数组的长度。</p>
-</td>
-</tr>
-<tr id="row10982132445420"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p4982142445414"><a name="p4982142445414"></a><a name="p4982142445414"></a>LUT</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p7532158856"><a name="p7532158856"></a><a name="p7532158856"></a>const uint8_t*</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p36611261054"><a name="p36611261054"></a><a name="p36611261054"></a>各子空间中PQ质心与查询向量的uint8距离表。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p85127581355"><a name="p85127581355"></a><a name="p85127581355"></a>限制长度为LUT_size，其中<span class="parmname" id="parmname551215813519"><a name="parmname551215813519"></a><a name="parmname551215813519"></a>“LUT_size”</span>为距离表数组的长度。</p>
-</td>
-</tr>
-<tr id="row103951453161513"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p14723141215409"><a name="p14723141215409"></a><a name="p14723141215409"></a>dis</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p4723181210404"><a name="p4723181210404"></a><a name="p4723181210404"></a>uint16_t*</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p672341218403"><a name="p672341218403"></a><a name="p672341218403"></a>存储计算所得的距离结果。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p57801052141013"><a name="p57801052141013"></a><a name="p57801052141013"></a>限制长度为dis_size，其中<span class="parmname" id="parmname1048505120457"><a name="parmname1048505120457"></a><a name="parmname1048505120457"></a>“dis_size”</span>为存储距离结果数组的长度。需预先分配内存。</p>
-</td>
-</tr>
-<tr id="row1875218456372"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p275311453374"><a name="p275311453374"></a><a name="p275311453374"></a>threshold</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p7753045173714"><a name="p7753045173714"></a><a name="p7753045173714"></a>const uint16_t</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p17531445103716"><a name="p17531445103716"></a><a name="p17531445103716"></a>距离阈值。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p748810273302"><a name="p748810273302"></a><a name="p748810273302"></a>限制为65535。</p>
-</td>
-</tr>
-<tr id="row143744955610"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p34370492563"><a name="p34370492563"></a><a name="p34370492563"></a>lt_mask</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p3437549145616"><a name="p3437549145616"></a><a name="p3437549145616"></a>uint32_t*</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p143715495569"><a name="p143715495569"></a><a name="p143715495569"></a>过滤压缩结果。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p77615321231"><a name="p77615321231"></a><a name="p77615321231"></a>限制长度为lt_mask_size，其中<span class="parmname" id="parmname10988163762914"><a name="parmname10988163762914"></a><a name="parmname10988163762914"></a>“lt_mask_size”</span>为过滤压缩结果数组的长度。需预先分配内存。</p>
-</td>
-</tr>
-<tr id="row177615011429"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p11681640172619"><a name="p11681640172619"></a><a name="p11681640172619"></a>codes_size</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p06662231878"><a name="p06662231878"></a><a name="p06662231878"></a>size_t</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p16681940142616"><a name="p16681940142616"></a><a name="p16681940142616"></a>码本数组的长度。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p568184012612"><a name="p568184012612"></a><a name="p568184012612"></a>nsq/2*64，其中<span class="parmname" id="parmname1170114418287"><a name="parmname1170114418287"></a><a name="parmname1170114418287"></a>“nsq”</span>为子空间数量。</p>
-</td>
-</tr>
-<tr id="row9760006427"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p1258316232715"><a name="p1258316232715"></a><a name="p1258316232715"></a>LUT_size</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p6403112617719"><a name="p6403112617719"></a><a name="p6403112617719"></a>size_t</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p1258316212714"><a name="p1258316212714"></a><a name="p1258316212714"></a>距离表数组的长度。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p1658311212279"><a name="p1658311212279"></a><a name="p1658311212279"></a>nsq*16，其中<span class="parmname" id="parmname584361843817"><a name="parmname584361843817"></a><a name="parmname584361843817"></a>“nsq”</span>为子空间数量。</p>
-</td>
-</tr>
-<tr id="row1276017012420"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p1613312110277"><a name="p1613312110277"></a><a name="p1613312110277"></a>dis_size</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p1699263912712"><a name="p1699263912712"></a><a name="p1699263912712"></a>size_t</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p21335117279"><a name="p21335117279"></a><a name="p21335117279"></a>存储距离结果数组的长度。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p41335118277"><a name="p41335118277"></a><a name="p41335118277"></a>限制为64。</p>
-</td>
-</tr>
-<tr id="row157604034212"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p172182719273"><a name="p172182719273"></a><a name="p172182719273"></a>lt_mask_size</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p119923399274"><a name="p119923399274"></a><a name="p119923399274"></a>size_t</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p92127202712"><a name="p92127202712"></a><a name="p92127202712"></a>过滤压缩结果数组的长度。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p1421327132714"><a name="p1421327132714"></a><a name="p1421327132714"></a>限制为2。</p>
-</td>
-</tr>
-</tbody>
-</table>
+
+| 参数名称 | 数据类型 | 描述 | 取值范围 |
+| --- | --- | --- | --- |
+| nsq | int | 子空间数量。 | [1,256]且为偶数。 |
+| codes | const uint8_t* | 码本，使用krl_pack_codes_4b（blocksize=64）处理后底库向量对应的索引。 | 限制长度为codes_size，其中“codes_size”为码本数组的长度。 |
+| LUT | const uint8_t* | 各子空间中PQ质心与查询向量的uint8距离表。 | 限制长度为LUT_size，其中“LUT_size”为距离表数组的长度。 |
+| dis | uint16_t* | 存储计算所得的距离结果。 | 限制长度为dis_size，其中“dis_size”为存储距离结果数组的长度。需预先分配内存。 |
+| threshold | const uint16_t | 距离阈值。 | 限制为65535。 |
+| lt_mask | uint32_t* | 过滤压缩结果。 | 限制长度为lt_mask_size，其中“lt_mask_size”为过滤压缩结果数组的长度。需预先分配内存。 |
+| codes_size | size_t | 码本数组的长度。 | nsq/2*64，其中“nsq”为子空间数量。 |
+| LUT_size | size_t | 距离表数组的长度。 | nsq*16，其中“nsq”为子空间数量。 |
+| dis_size | size_t | 存储距离结果数组的长度。 | 限制为64。 |
+| lt_mask_size | size_t | 过滤压缩结果数组的长度。 | 限制为2。 |
 
 **返回值<a name="section49971832106"></a>**
 
 <a name="table17997635100"></a>
-<table><thead align="left"><tr id="row699763141018"><th class="cellrowborder" valign="top" width="40%" id="mcps1.1.3.1.1"><p id="p699793141012"><a name="p699793141012"></a><a name="p699793141012"></a>数据类型</p>
-</th>
-<th class="cellrowborder" valign="top" width="60%" id="mcps1.1.3.1.2"><p id="p1999763141020"><a name="p1999763141020"></a><a name="p1999763141020"></a>说明</p>
-</th>
-</tr>
-</thead>
-<tbody><tr id="row1599716361015"><td class="cellrowborder" valign="top" width="40%" headers="mcps1.1.3.1.1 "><p id="p39970319101"><a name="p39970319101"></a><a name="p39970319101"></a>int</p>
-</td>
-<td class="cellrowborder" valign="top" width="60%" headers="mcps1.1.3.1.2 "><p id="p53461032104518"><a name="p53461032104518"></a><a name="p53461032104518"></a>正常运行时返回0，异常退出返回对应错误码。</p>
-</td>
-</tr>
-</tbody>
-</table>
+
+| 数据类型 | 说明 |
+| --- | --- |
+| int | 正常运行时返回0，异常退出返回对应错误码。 |
 
 **使用示例**
 
@@ -7526,125 +3966,27 @@ int krl\_L2\_table\_lookup\_fast\_scan\_bs64\_sve2\(int nsq, const uint8\_t\* co
 **参数说明<a name="section157501312135019"></a>**
 
 <a name="table1623016332509"></a>
-<table><thead align="left"><tr id="row823063355012"><th class="cellrowborder" valign="top" width="15.551555155515551%" id="mcps1.1.5.1.1"><p id="p1230333125010"><a name="p1230333125010"></a><a name="p1230333125010"></a>参数名称</p>
-</th>
-<th class="cellrowborder" valign="top" width="14.601460146014599%" id="mcps1.1.5.1.2"><p id="p089311158912"><a name="p089311158912"></a><a name="p089311158912"></a>数据类型</p>
-</th>
-<th class="cellrowborder" valign="top" width="33.97339733973397%" id="mcps1.1.5.1.3"><p id="p4230193313507"><a name="p4230193313507"></a><a name="p4230193313507"></a>描述</p>
-</th>
-<th class="cellrowborder" valign="top" width="35.873587358735875%" id="mcps1.1.5.1.4"><p id="p19887819256"><a name="p19887819256"></a><a name="p19887819256"></a>取值范围</p>
-</th>
-</tr>
-</thead>
-<tbody><tr id="row166241441532"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p262494414531"><a name="p262494414531"></a><a name="p262494414531"></a>nsq</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p126241544125310"><a name="p126241544125310"></a><a name="p126241544125310"></a>int</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.97339733973397%" headers="mcps1.1.5.1.3 "><p id="p1562414447536"><a name="p1562414447536"></a><a name="p1562414447536"></a>子空间数量。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.873587358735875%" headers="mcps1.1.5.1.4 "><p id="p19624744195313"><a name="p19624744195313"></a><a name="p19624744195313"></a>[1,256]且为偶数。</p>
-</td>
-</tr>
-<tr id="row1823023318504"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p14381721205612"><a name="p14381721205612"></a><a name="p14381721205612"></a>codes</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p7438122115569"><a name="p7438122115569"></a><a name="p7438122115569"></a>const uint8_t*</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.97339733973397%" headers="mcps1.1.5.1.3 "><p id="p18618921124518"><a name="p18618921124518"></a><a name="p18618921124518"></a>码本，使用krl_pack_codes_4b（blocksize=64）处理后底库向量对应的索引。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.873587358735875%" headers="mcps1.1.5.1.4 "><p id="p51251625162911"><a name="p51251625162911"></a><a name="p51251625162911"></a>限制长度为codes_size，其中<span class="parmname" id="parmname18125825132915"><a name="parmname18125825132915"></a><a name="parmname18125825132915"></a>“codes_size”</span>为码本数组的长度。</p>
-</td>
-</tr>
-<tr id="row10982132445420"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p4982142445414"><a name="p4982142445414"></a><a name="p4982142445414"></a>LUT</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p7532158856"><a name="p7532158856"></a><a name="p7532158856"></a>const uint8_t*</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.97339733973397%" headers="mcps1.1.5.1.3 "><p id="p36611261054"><a name="p36611261054"></a><a name="p36611261054"></a>各子空间中PQ质心与查询向量的uint8距离表。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.873587358735875%" headers="mcps1.1.5.1.4 "><p id="p85127581355"><a name="p85127581355"></a><a name="p85127581355"></a>限制长度为LUT_size，其中<span class="parmname" id="parmname551215813519"><a name="parmname551215813519"></a><a name="parmname551215813519"></a>“LUT_size”</span>为距离表数组的长度。</p>
-</td>
-</tr>
-<tr id="row103951453161513"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p14723141215409"><a name="p14723141215409"></a><a name="p14723141215409"></a>dis</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p4723181210404"><a name="p4723181210404"></a><a name="p4723181210404"></a>uint16_t*</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.97339733973397%" headers="mcps1.1.5.1.3 "><p id="p672341218403"><a name="p672341218403"></a><a name="p672341218403"></a>存储计算所得的距离结果。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.873587358735875%" headers="mcps1.1.5.1.4 "><p id="p57801052141013"><a name="p57801052141013"></a><a name="p57801052141013"></a>限制长度为dis_size，其中<span class="parmname" id="parmname1048505120457"><a name="parmname1048505120457"></a><a name="parmname1048505120457"></a>“dis_size”</span>为存储距离结果数组的长度。需预先分配内存。</p>
-</td>
-</tr>
-<tr id="row1875218456372"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p275311453374"><a name="p275311453374"></a><a name="p275311453374"></a>threshold</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p7753045173714"><a name="p7753045173714"></a><a name="p7753045173714"></a>const uint16_t</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.97339733973397%" headers="mcps1.1.5.1.3 "><p id="p17531445103716"><a name="p17531445103716"></a><a name="p17531445103716"></a>距离阈值。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.873587358735875%" headers="mcps1.1.5.1.4 "><p id="p748810273302"><a name="p748810273302"></a><a name="p748810273302"></a>限制为65535。</p>
-</td>
-</tr>
-<tr id="row143744955610"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p34370492563"><a name="p34370492563"></a><a name="p34370492563"></a>lt_mask</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p3437549145616"><a name="p3437549145616"></a><a name="p3437549145616"></a>uint32_t*</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.97339733973397%" headers="mcps1.1.5.1.3 "><p id="p143715495569"><a name="p143715495569"></a><a name="p143715495569"></a>过滤压缩结果。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.873587358735875%" headers="mcps1.1.5.1.4 "><p id="p77615321231"><a name="p77615321231"></a><a name="p77615321231"></a>限制长度为lt_mask_size，其中<span class="parmname" id="parmname10988163762914"><a name="parmname10988163762914"></a><a name="parmname10988163762914"></a>“lt_mask_size”</span>为过滤压缩结果数组的长度。需预先分配内存。</p>
-</td>
-</tr>
-<tr id="row1695419558379"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p11681640172619"><a name="p11681640172619"></a><a name="p11681640172619"></a>codes_size</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p06662231878"><a name="p06662231878"></a><a name="p06662231878"></a>size_t</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.97339733973397%" headers="mcps1.1.5.1.3 "><p id="p16681940142616"><a name="p16681940142616"></a><a name="p16681940142616"></a>码本数组的长度。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.873587358735875%" headers="mcps1.1.5.1.4 "><p id="p568184012612"><a name="p568184012612"></a><a name="p568184012612"></a>nsq/2*64，其中<span class="parmname" id="parmname1170114418287"><a name="parmname1170114418287"></a><a name="parmname1170114418287"></a>“nsq”</span>为子空间数量。</p>
-</td>
-</tr>
-<tr id="row15954175511376"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p1258316232715"><a name="p1258316232715"></a><a name="p1258316232715"></a>LUT_size</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p6403112617719"><a name="p6403112617719"></a><a name="p6403112617719"></a>size_t</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.97339733973397%" headers="mcps1.1.5.1.3 "><p id="p1258316212714"><a name="p1258316212714"></a><a name="p1258316212714"></a>距离表数组的长度。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.873587358735875%" headers="mcps1.1.5.1.4 "><p id="p1658311212279"><a name="p1658311212279"></a><a name="p1658311212279"></a>nsq*16，其中<span class="parmname" id="parmname584361843817"><a name="parmname584361843817"></a><a name="parmname584361843817"></a>“nsq”</span>为子空间数量。</p>
-</td>
-</tr>
-<tr id="row109541655133713"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p1613312110277"><a name="p1613312110277"></a><a name="p1613312110277"></a>dis_size</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p1699263912712"><a name="p1699263912712"></a><a name="p1699263912712"></a>size_t</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.97339733973397%" headers="mcps1.1.5.1.3 "><p id="p21335117279"><a name="p21335117279"></a><a name="p21335117279"></a>存储距离结果数组的长度。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.873587358735875%" headers="mcps1.1.5.1.4 "><p id="p41335118277"><a name="p41335118277"></a><a name="p41335118277"></a>限制为64。</p>
-</td>
-</tr>
-<tr id="row4954455153717"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p172182719273"><a name="p172182719273"></a><a name="p172182719273"></a>lt_mask_size</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p119923399274"><a name="p119923399274"></a><a name="p119923399274"></a>size_t</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.97339733973397%" headers="mcps1.1.5.1.3 "><p id="p92127202712"><a name="p92127202712"></a><a name="p92127202712"></a>过滤压缩结果数组的长度。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.873587358735875%" headers="mcps1.1.5.1.4 "><p id="p1421327132714"><a name="p1421327132714"></a><a name="p1421327132714"></a>限制为2。</p>
-</td>
-</tr>
-</tbody>
-</table>
+
+| 参数名称 | 数据类型 | 描述 | 取值范围 |
+| --- | --- | --- | --- |
+| nsq | int | 子空间数量。 | [1,256]且为偶数。 |
+| codes | const uint8_t* | 码本，使用krl_pack_codes_4b（blocksize=64）处理后底库向量对应的索引。 | 限制长度为codes_size，其中“codes_size”为码本数组的长度。 |
+| LUT | const uint8_t* | 各子空间中PQ质心与查询向量的uint8距离表。 | 限制长度为LUT_size，其中“LUT_size”为距离表数组的长度。 |
+| dis | uint16_t* | 存储计算所得的距离结果。 | 限制长度为dis_size，其中“dis_size”为存储距离结果数组的长度。需预先分配内存。 |
+| threshold | const uint16_t | 距离阈值。 | 限制为65535。 |
+| lt_mask | uint32_t* | 过滤压缩结果。 | 限制长度为lt_mask_size，其中“lt_mask_size”为过滤压缩结果数组的长度。需预先分配内存。 |
+| codes_size | size_t | 码本数组的长度。 | nsq/2*64，其中“nsq”为子空间数量。 |
+| LUT_size | size_t | 距离表数组的长度。 | nsq*16，其中“nsq”为子空间数量。 |
+| dis_size | size_t | 存储距离结果数组的长度。 | 限制为64。 |
+| lt_mask_size | size_t | 过滤压缩结果数组的长度。 | 限制为2。 |
 
 **返回值<a name="section49971832106"></a>**
 
 <a name="table17997635100"></a>
-<table><thead align="left"><tr id="row699763141018"><th class="cellrowborder" valign="top" width="40%" id="mcps1.1.3.1.1"><p id="p699793141012"><a name="p699793141012"></a><a name="p699793141012"></a>数据类型</p>
-</th>
-<th class="cellrowborder" valign="top" width="60%" id="mcps1.1.3.1.2"><p id="p1999763141020"><a name="p1999763141020"></a><a name="p1999763141020"></a>说明</p>
-</th>
-</tr>
-</thead>
-<tbody><tr id="row1599716361015"><td class="cellrowborder" valign="top" width="40%" headers="mcps1.1.3.1.1 "><p id="p39970319101"><a name="p39970319101"></a><a name="p39970319101"></a>int</p>
-</td>
-<td class="cellrowborder" valign="top" width="60%" headers="mcps1.1.3.1.2 "><p id="p53461032104518"><a name="p53461032104518"></a><a name="p53461032104518"></a>正常运行时返回0，异常退出返回对应错误码。</p>
-</td>
-</tr>
-</tbody>
-</table>
+
+| 数据类型 | 说明 |
+| --- | --- |
+| int | 正常运行时返回0，异常退出返回对应错误码。 |
 
 **使用示例**
 
@@ -7663,125 +4005,27 @@ int krl\_IP\_table\_lookup\_fast\_scan\_bs64\_sve2\(int nsq, const uint8\_t\* co
 **参数说明<a name="section157501312135019"></a>**
 
 <a name="table1623016332509"></a>
-<table><thead align="left"><tr id="row823063355012"><th class="cellrowborder" valign="top" width="15.551555155515551%" id="mcps1.1.5.1.1"><p id="p1230333125010"><a name="p1230333125010"></a><a name="p1230333125010"></a>参数名称</p>
-</th>
-<th class="cellrowborder" valign="top" width="14.601460146014599%" id="mcps1.1.5.1.2"><p id="p089311158912"><a name="p089311158912"></a><a name="p089311158912"></a>数据类型</p>
-</th>
-<th class="cellrowborder" valign="top" width="33.99339933993399%" id="mcps1.1.5.1.3"><p id="p4230193313507"><a name="p4230193313507"></a><a name="p4230193313507"></a>描述</p>
-</th>
-<th class="cellrowborder" valign="top" width="35.85358535853585%" id="mcps1.1.5.1.4"><p id="p19887819256"><a name="p19887819256"></a><a name="p19887819256"></a>取值范围</p>
-</th>
-</tr>
-</thead>
-<tbody><tr id="row166241441532"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p262494414531"><a name="p262494414531"></a><a name="p262494414531"></a>nsq</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p126241544125310"><a name="p126241544125310"></a><a name="p126241544125310"></a>int</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p1562414447536"><a name="p1562414447536"></a><a name="p1562414447536"></a>子空间数量。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p19624744195313"><a name="p19624744195313"></a><a name="p19624744195313"></a>[1,256]且为偶数。</p>
-</td>
-</tr>
-<tr id="row1823023318504"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p14381721205612"><a name="p14381721205612"></a><a name="p14381721205612"></a>codes</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p7438122115569"><a name="p7438122115569"></a><a name="p7438122115569"></a>const uint8_t*</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p18618921124518"><a name="p18618921124518"></a><a name="p18618921124518"></a>码本，使用krl_pack_codes_4b（blocksize=64）处理后底库向量对应的索引。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p51251625162911"><a name="p51251625162911"></a><a name="p51251625162911"></a>限制长度为codes_size，其中<span class="parmname" id="parmname18125825132915"><a name="parmname18125825132915"></a><a name="parmname18125825132915"></a>“codes_size”</span>为码本数组的长度。</p>
-</td>
-</tr>
-<tr id="row10982132445420"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p4982142445414"><a name="p4982142445414"></a><a name="p4982142445414"></a>LUT</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p7532158856"><a name="p7532158856"></a><a name="p7532158856"></a>const uint8_t*</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p36611261054"><a name="p36611261054"></a><a name="p36611261054"></a>各子空间中PQ质心与查询向量的uint8距离表。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p85127581355"><a name="p85127581355"></a><a name="p85127581355"></a>限制长度为LUT_size，其中<span class="parmname" id="parmname551215813519"><a name="parmname551215813519"></a><a name="parmname551215813519"></a>“LUT_size”</span>为距离表数组的长度。</p>
-</td>
-</tr>
-<tr id="row103951453161513"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p14723141215409"><a name="p14723141215409"></a><a name="p14723141215409"></a>dis</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p4723181210404"><a name="p4723181210404"></a><a name="p4723181210404"></a>uint16_t*</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p672341218403"><a name="p672341218403"></a><a name="p672341218403"></a>存储计算所得的距离结果。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p57801052141013"><a name="p57801052141013"></a><a name="p57801052141013"></a>限制长度为dis_size，其中<span class="parmname" id="parmname1048505120457"><a name="parmname1048505120457"></a><a name="parmname1048505120457"></a>“dis_size”</span>为存储距离结果数组的长度。需预先分配内存。</p>
-</td>
-</tr>
-<tr id="row1875218456372"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p275311453374"><a name="p275311453374"></a><a name="p275311453374"></a>threshold</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p7753045173714"><a name="p7753045173714"></a><a name="p7753045173714"></a>const uint16_t</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p17531445103716"><a name="p17531445103716"></a><a name="p17531445103716"></a>距离阈值。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p748810273302"><a name="p748810273302"></a><a name="p748810273302"></a>限制为65535。</p>
-</td>
-</tr>
-<tr id="row143744955610"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p34370492563"><a name="p34370492563"></a><a name="p34370492563"></a>lt_mask</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p3437549145616"><a name="p3437549145616"></a><a name="p3437549145616"></a>uint32_t*</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p143715495569"><a name="p143715495569"></a><a name="p143715495569"></a>过滤压缩结果。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p77615321231"><a name="p77615321231"></a><a name="p77615321231"></a>限制长度为lt_mask_size，其中<span class="parmname" id="parmname10988163762914"><a name="parmname10988163762914"></a><a name="parmname10988163762914"></a>“lt_mask_size”</span>为过滤压缩结果数组的长度。需预先分配内存。</p>
-</td>
-</tr>
-<tr id="row177615011429"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p11681640172619"><a name="p11681640172619"></a><a name="p11681640172619"></a>codes_size</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p06662231878"><a name="p06662231878"></a><a name="p06662231878"></a>size_t</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p16681940142616"><a name="p16681940142616"></a><a name="p16681940142616"></a>码本数组的长度。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p568184012612"><a name="p568184012612"></a><a name="p568184012612"></a>nsq/2*64，其中<span class="parmname" id="parmname1170114418287"><a name="parmname1170114418287"></a><a name="parmname1170114418287"></a>“nsq”</span>为子空间数量。</p>
-</td>
-</tr>
-<tr id="row9760006427"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p1258316232715"><a name="p1258316232715"></a><a name="p1258316232715"></a>LUT_size</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p6403112617719"><a name="p6403112617719"></a><a name="p6403112617719"></a>size_t</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p1258316212714"><a name="p1258316212714"></a><a name="p1258316212714"></a>距离表数组的长度。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p1658311212279"><a name="p1658311212279"></a><a name="p1658311212279"></a>nsq*16，其中<span class="parmname" id="parmname584361843817"><a name="parmname584361843817"></a><a name="parmname584361843817"></a>“nsq”</span>为子空间数量。</p>
-</td>
-</tr>
-<tr id="row1276017012420"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p1613312110277"><a name="p1613312110277"></a><a name="p1613312110277"></a>dis_size</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p1699263912712"><a name="p1699263912712"></a><a name="p1699263912712"></a>size_t</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p21335117279"><a name="p21335117279"></a><a name="p21335117279"></a>存储距离结果数组的长度。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p41335118277"><a name="p41335118277"></a><a name="p41335118277"></a>限制为64。</p>
-</td>
-</tr>
-<tr id="row157604034212"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p172182719273"><a name="p172182719273"></a><a name="p172182719273"></a>lt_mask_size</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p119923399274"><a name="p119923399274"></a><a name="p119923399274"></a>size_t</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p92127202712"><a name="p92127202712"></a><a name="p92127202712"></a>过滤压缩结果数组的长度。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p1421327132714"><a name="p1421327132714"></a><a name="p1421327132714"></a>限制为2。</p>
-</td>
-</tr>
-</tbody>
-</table>
+
+| 参数名称 | 数据类型 | 描述 | 取值范围 |
+| --- | --- | --- | --- |
+| nsq | int | 子空间数量。 | [1,256]且为偶数。 |
+| codes | const uint8_t* | 码本，使用krl_pack_codes_4b（blocksize=64）处理后底库向量对应的索引。 | 限制长度为codes_size，其中“codes_size”为码本数组的长度。 |
+| LUT | const uint8_t* | 各子空间中PQ质心与查询向量的uint8距离表。 | 限制长度为LUT_size，其中“LUT_size”为距离表数组的长度。 |
+| dis | uint16_t* | 存储计算所得的距离结果。 | 限制长度为dis_size，其中“dis_size”为存储距离结果数组的长度。需预先分配内存。 |
+| threshold | const uint16_t | 距离阈值。 | 限制为65535。 |
+| lt_mask | uint32_t* | 过滤压缩结果。 | 限制长度为lt_mask_size，其中“lt_mask_size”为过滤压缩结果数组的长度。需预先分配内存。 |
+| codes_size | size_t | 码本数组的长度。 | nsq/2*64，其中“nsq”为子空间数量。 |
+| LUT_size | size_t | 距离表数组的长度。 | nsq*16，其中“nsq”为子空间数量。 |
+| dis_size | size_t | 存储距离结果数组的长度。 | 限制为64。 |
+| lt_mask_size | size_t | 过滤压缩结果数组的长度。 | 限制为2。 |
 
 **返回值<a name="section49971832106"></a>**
 
 <a name="table17997635100"></a>
-<table><thead align="left"><tr id="row699763141018"><th class="cellrowborder" valign="top" width="40%" id="mcps1.1.3.1.1"><p id="p699793141012"><a name="p699793141012"></a><a name="p699793141012"></a>数据类型</p>
-</th>
-<th class="cellrowborder" valign="top" width="60%" id="mcps1.1.3.1.2"><p id="p1999763141020"><a name="p1999763141020"></a><a name="p1999763141020"></a>说明</p>
-</th>
-</tr>
-</thead>
-<tbody><tr id="row1599716361015"><td class="cellrowborder" valign="top" width="40%" headers="mcps1.1.3.1.1 "><p id="p39970319101"><a name="p39970319101"></a><a name="p39970319101"></a>int</p>
-</td>
-<td class="cellrowborder" valign="top" width="60%" headers="mcps1.1.3.1.2 "><p id="p53461032104518"><a name="p53461032104518"></a><a name="p53461032104518"></a>正常运行时返回0，异常退出返回对应错误码。</p>
-</td>
-</tr>
-</tbody>
-</table>
+
+| 数据类型 | 说明 |
+| --- | --- |
+| int | 正常运行时返回0，异常退出返回对应错误码。 |
 
 **使用示例**
 
@@ -7800,125 +4044,27 @@ int krl\_L2\_table\_lookup\_fast\_scan\_bs96\_sve2\(int nsq, const uint8\_t\* co
 **参数说明<a name="section157501312135019"></a>**
 
 <a name="table1623016332509"></a>
-<table><thead align="left"><tr id="row823063355012"><th class="cellrowborder" valign="top" width="15.551555155515551%" id="mcps1.1.5.1.1"><p id="p1230333125010"><a name="p1230333125010"></a><a name="p1230333125010"></a>参数名称</p>
-</th>
-<th class="cellrowborder" valign="top" width="14.601460146014599%" id="mcps1.1.5.1.2"><p id="p089311158912"><a name="p089311158912"></a><a name="p089311158912"></a>数据类型</p>
-</th>
-<th class="cellrowborder" valign="top" width="33.99339933993399%" id="mcps1.1.5.1.3"><p id="p4230193313507"><a name="p4230193313507"></a><a name="p4230193313507"></a>描述</p>
-</th>
-<th class="cellrowborder" valign="top" width="35.85358535853585%" id="mcps1.1.5.1.4"><p id="p19887819256"><a name="p19887819256"></a><a name="p19887819256"></a>取值范围</p>
-</th>
-</tr>
-</thead>
-<tbody><tr id="row166241441532"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p262494414531"><a name="p262494414531"></a><a name="p262494414531"></a>nsq</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p126241544125310"><a name="p126241544125310"></a><a name="p126241544125310"></a>int</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p1562414447536"><a name="p1562414447536"></a><a name="p1562414447536"></a>子空间数量。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p19624744195313"><a name="p19624744195313"></a><a name="p19624744195313"></a>[1,256]且为偶数。</p>
-</td>
-</tr>
-<tr id="row1823023318504"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p14381721205612"><a name="p14381721205612"></a><a name="p14381721205612"></a>codes</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p7438122115569"><a name="p7438122115569"></a><a name="p7438122115569"></a>const uint8_t*</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p18438121155616"><a name="p18438121155616"></a><a name="p18438121155616"></a>码本，使用krl_pack_codes_4b（blocksize=96）处理后底库向量对应的索引。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p51251625162911"><a name="p51251625162911"></a><a name="p51251625162911"></a>限制长度为codes_size，其中<span class="parmname" id="parmname18125825132915"><a name="parmname18125825132915"></a><a name="parmname18125825132915"></a>“codes_size”</span>为码本数组的长度。</p>
-</td>
-</tr>
-<tr id="row10982132445420"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p4982142445414"><a name="p4982142445414"></a><a name="p4982142445414"></a>LUT</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p7532158856"><a name="p7532158856"></a><a name="p7532158856"></a>const uint8_t*</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p36611261054"><a name="p36611261054"></a><a name="p36611261054"></a>各子空间中PQ质心与查询向量的uint8距离表。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p85127581355"><a name="p85127581355"></a><a name="p85127581355"></a>限制长度为LUT_size，其中<span class="parmname" id="parmname551215813519"><a name="parmname551215813519"></a><a name="parmname551215813519"></a>“LUT_size”</span>为距离表数组的长度。</p>
-</td>
-</tr>
-<tr id="row103951453161513"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p14723141215409"><a name="p14723141215409"></a><a name="p14723141215409"></a>dis</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p4723181210404"><a name="p4723181210404"></a><a name="p4723181210404"></a>uint16_t*</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p672341218403"><a name="p672341218403"></a><a name="p672341218403"></a>存储计算所得的距离结果。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p57801052141013"><a name="p57801052141013"></a><a name="p57801052141013"></a>限制长度为dis_size，其中<span class="parmname" id="parmname1048505120457"><a name="parmname1048505120457"></a><a name="parmname1048505120457"></a>“dis_size”</span>为存储距离结果数组的长度。需预先分配内存。</p>
-</td>
-</tr>
-<tr id="row1875218456372"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p275311453374"><a name="p275311453374"></a><a name="p275311453374"></a>threshold</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p7753045173714"><a name="p7753045173714"></a><a name="p7753045173714"></a>const uint16_t</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p17531445103716"><a name="p17531445103716"></a><a name="p17531445103716"></a>距离阈值。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p748810273302"><a name="p748810273302"></a><a name="p748810273302"></a>限制为65535。</p>
-</td>
-</tr>
-<tr id="row143744955610"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p34370492563"><a name="p34370492563"></a><a name="p34370492563"></a>lt_mask</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p3437549145616"><a name="p3437549145616"></a><a name="p3437549145616"></a>uint32_t*</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p143715495569"><a name="p143715495569"></a><a name="p143715495569"></a>过滤压缩结果。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p77615321231"><a name="p77615321231"></a><a name="p77615321231"></a>限制长度为lt_mask_size，其中<span class="parmname" id="parmname10988163762914"><a name="parmname10988163762914"></a><a name="parmname10988163762914"></a>“lt_mask_size”</span>为过滤压缩结果数组的长度。需预先分配内存。</p>
-</td>
-</tr>
-<tr id="row02162634718"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p11681640172619"><a name="p11681640172619"></a><a name="p11681640172619"></a>codes_size</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p06662231878"><a name="p06662231878"></a><a name="p06662231878"></a>size_t</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p16681940142616"><a name="p16681940142616"></a><a name="p16681940142616"></a>码本数组的长度。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p568184012612"><a name="p568184012612"></a><a name="p568184012612"></a>nsq/2*96，其中<span class="parmname" id="parmname1170114418287"><a name="parmname1170114418287"></a><a name="parmname1170114418287"></a>“nsq”</span>为子空间数量。</p>
-</td>
-</tr>
-<tr id="row11211726184714"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p1258316232715"><a name="p1258316232715"></a><a name="p1258316232715"></a>LUT_size</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p6403112617719"><a name="p6403112617719"></a><a name="p6403112617719"></a>size_t</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p1258316212714"><a name="p1258316212714"></a><a name="p1258316212714"></a>距离表数组的长度。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p1658311212279"><a name="p1658311212279"></a><a name="p1658311212279"></a>nsq*16，其中<span class="parmname" id="parmname584361843817"><a name="parmname584361843817"></a><a name="parmname584361843817"></a>“nsq”</span>为子空间数量。</p>
-</td>
-</tr>
-<tr id="row172114262476"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p1613312110277"><a name="p1613312110277"></a><a name="p1613312110277"></a>dis_size</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p1699263912712"><a name="p1699263912712"></a><a name="p1699263912712"></a>size_t</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p21335117279"><a name="p21335117279"></a><a name="p21335117279"></a>存储距离结果数组的长度。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p41335118277"><a name="p41335118277"></a><a name="p41335118277"></a>限制为96。</p>
-</td>
-</tr>
-<tr id="row11201326164720"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p172182719273"><a name="p172182719273"></a><a name="p172182719273"></a>lt_mask_size</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p119923399274"><a name="p119923399274"></a><a name="p119923399274"></a>size_t</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p92127202712"><a name="p92127202712"></a><a name="p92127202712"></a>过滤压缩结果数组的长度。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p1421327132714"><a name="p1421327132714"></a><a name="p1421327132714"></a>限制为3。</p>
-</td>
-</tr>
-</tbody>
-</table>
+
+| 参数名称 | 数据类型 | 描述 | 取值范围 |
+| --- | --- | --- | --- |
+| nsq | int | 子空间数量。 | [1,256]且为偶数。 |
+| codes | const uint8_t* | 码本，使用krl_pack_codes_4b（blocksize=96）处理后底库向量对应的索引。 | 限制长度为codes_size，其中“codes_size”为码本数组的长度。 |
+| LUT | const uint8_t* | 各子空间中PQ质心与查询向量的uint8距离表。 | 限制长度为LUT_size，其中“LUT_size”为距离表数组的长度。 |
+| dis | uint16_t* | 存储计算所得的距离结果。 | 限制长度为dis_size，其中“dis_size”为存储距离结果数组的长度。需预先分配内存。 |
+| threshold | const uint16_t | 距离阈值。 | 限制为65535。 |
+| lt_mask | uint32_t* | 过滤压缩结果。 | 限制长度为lt_mask_size，其中“lt_mask_size”为过滤压缩结果数组的长度。需预先分配内存。 |
+| codes_size | size_t | 码本数组的长度。 | nsq/2*96，其中“nsq”为子空间数量。 |
+| LUT_size | size_t | 距离表数组的长度。 | nsq*16，其中“nsq”为子空间数量。 |
+| dis_size | size_t | 存储距离结果数组的长度。 | 限制为96。 |
+| lt_mask_size | size_t | 过滤压缩结果数组的长度。 | 限制为3。 |
 
 **返回值<a name="section49971832106"></a>**
 
 <a name="table17997635100"></a>
-<table><thead align="left"><tr id="row699763141018"><th class="cellrowborder" valign="top" width="40%" id="mcps1.1.3.1.1"><p id="p699793141012"><a name="p699793141012"></a><a name="p699793141012"></a>数据类型</p>
-</th>
-<th class="cellrowborder" valign="top" width="60%" id="mcps1.1.3.1.2"><p id="p1999763141020"><a name="p1999763141020"></a><a name="p1999763141020"></a>说明</p>
-</th>
-</tr>
-</thead>
-<tbody><tr id="row1599716361015"><td class="cellrowborder" valign="top" width="40%" headers="mcps1.1.3.1.1 "><p id="p39970319101"><a name="p39970319101"></a><a name="p39970319101"></a>int</p>
-</td>
-<td class="cellrowborder" valign="top" width="60%" headers="mcps1.1.3.1.2 "><p id="p53461032104518"><a name="p53461032104518"></a><a name="p53461032104518"></a>正常运行时返回0，异常退出返回对应错误码。</p>
-</td>
-</tr>
-</tbody>
-</table>
+
+| 数据类型 | 说明 |
+| --- | --- |
+| int | 正常运行时返回0，异常退出返回对应错误码。 |
 
 **使用示例**
 
@@ -7937,125 +4083,27 @@ int krl\_IP\_table\_lookup\_fast\_scan\_bs96\_sve2\(int nsq, const uint8\_t\* co
 **参数说明<a name="section157501312135019"></a>**
 
 <a name="table1623016332509"></a>
-<table><thead align="left"><tr id="row823063355012"><th class="cellrowborder" valign="top" width="15.551555155515551%" id="mcps1.1.5.1.1"><p id="p1230333125010"><a name="p1230333125010"></a><a name="p1230333125010"></a>参数名称</p>
-</th>
-<th class="cellrowborder" valign="top" width="14.601460146014599%" id="mcps1.1.5.1.2"><p id="p089311158912"><a name="p089311158912"></a><a name="p089311158912"></a>数据类型</p>
-</th>
-<th class="cellrowborder" valign="top" width="33.903390339033905%" id="mcps1.1.5.1.3"><p id="p4230193313507"><a name="p4230193313507"></a><a name="p4230193313507"></a>描述</p>
-</th>
-<th class="cellrowborder" valign="top" width="35.94359435943594%" id="mcps1.1.5.1.4"><p id="p19887819256"><a name="p19887819256"></a><a name="p19887819256"></a>取值范围</p>
-</th>
-</tr>
-</thead>
-<tbody><tr id="row166241441532"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p262494414531"><a name="p262494414531"></a><a name="p262494414531"></a>nsq</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p126241544125310"><a name="p126241544125310"></a><a name="p126241544125310"></a>int</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.903390339033905%" headers="mcps1.1.5.1.3 "><p id="p1562414447536"><a name="p1562414447536"></a><a name="p1562414447536"></a>子空间数量。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.94359435943594%" headers="mcps1.1.5.1.4 "><p id="p19624744195313"><a name="p19624744195313"></a><a name="p19624744195313"></a>[1,256]且为偶数。</p>
-</td>
-</tr>
-<tr id="row1823023318504"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p14381721205612"><a name="p14381721205612"></a><a name="p14381721205612"></a>codes</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p7438122115569"><a name="p7438122115569"></a><a name="p7438122115569"></a>const uint8_t*</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.903390339033905%" headers="mcps1.1.5.1.3 "><p id="p18438121155616"><a name="p18438121155616"></a><a name="p18438121155616"></a>码本，使用krl_pack_codes_4b（blocksize=96）处理后底库向量对应的索引。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.94359435943594%" headers="mcps1.1.5.1.4 "><p id="p51251625162911"><a name="p51251625162911"></a><a name="p51251625162911"></a>限制长度为codes_size，其中<span class="parmname" id="parmname18125825132915"><a name="parmname18125825132915"></a><a name="parmname18125825132915"></a>“codes_size”</span>为码本数组的长度。</p>
-</td>
-</tr>
-<tr id="row10982132445420"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p4982142445414"><a name="p4982142445414"></a><a name="p4982142445414"></a>LUT</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p7532158856"><a name="p7532158856"></a><a name="p7532158856"></a>const uint8_t*</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.903390339033905%" headers="mcps1.1.5.1.3 "><p id="p36611261054"><a name="p36611261054"></a><a name="p36611261054"></a>各子空间中PQ质心与查询向量的uint8距离表。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.94359435943594%" headers="mcps1.1.5.1.4 "><p id="p85127581355"><a name="p85127581355"></a><a name="p85127581355"></a>限制长度为LUT_size，其中<span class="parmname" id="parmname551215813519"><a name="parmname551215813519"></a><a name="parmname551215813519"></a>“LUT_size”</span>为距离表数组的长度。</p>
-</td>
-</tr>
-<tr id="row103951453161513"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p14723141215409"><a name="p14723141215409"></a><a name="p14723141215409"></a>dis</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p4723181210404"><a name="p4723181210404"></a><a name="p4723181210404"></a>uint16_t*</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.903390339033905%" headers="mcps1.1.5.1.3 "><p id="p672341218403"><a name="p672341218403"></a><a name="p672341218403"></a>存储计算所得的距离结果。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.94359435943594%" headers="mcps1.1.5.1.4 "><p id="p57801052141013"><a name="p57801052141013"></a><a name="p57801052141013"></a>限制长度为dis_size，其中<span class="parmname" id="parmname1048505120457"><a name="parmname1048505120457"></a><a name="parmname1048505120457"></a>“dis_size”</span>为存储距离结果数组的长度。需预先分配内存。</p>
-</td>
-</tr>
-<tr id="row1875218456372"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p275311453374"><a name="p275311453374"></a><a name="p275311453374"></a>threshold</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p7753045173714"><a name="p7753045173714"></a><a name="p7753045173714"></a>const uint16_t</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.903390339033905%" headers="mcps1.1.5.1.3 "><p id="p17531445103716"><a name="p17531445103716"></a><a name="p17531445103716"></a>距离阈值。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.94359435943594%" headers="mcps1.1.5.1.4 "><p id="p748810273302"><a name="p748810273302"></a><a name="p748810273302"></a>限制为65535。</p>
-</td>
-</tr>
-<tr id="row143744955610"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p34370492563"><a name="p34370492563"></a><a name="p34370492563"></a>lt_mask</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p3437549145616"><a name="p3437549145616"></a><a name="p3437549145616"></a>uint32_t*</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.903390339033905%" headers="mcps1.1.5.1.3 "><p id="p143715495569"><a name="p143715495569"></a><a name="p143715495569"></a>过滤压缩结果。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.94359435943594%" headers="mcps1.1.5.1.4 "><p id="p77615321231"><a name="p77615321231"></a><a name="p77615321231"></a>限制长度为lt_mask_size，其中<span class="parmname" id="parmname10988163762914"><a name="parmname10988163762914"></a><a name="parmname10988163762914"></a>“lt_mask_size”</span>为过滤压缩结果数组的长度。需预先分配内存。</p>
-</td>
-</tr>
-<tr id="row3115131755217"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p11681640172619"><a name="p11681640172619"></a><a name="p11681640172619"></a>codes_size</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p06662231878"><a name="p06662231878"></a><a name="p06662231878"></a>size_t</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.903390339033905%" headers="mcps1.1.5.1.3 "><p id="p16681940142616"><a name="p16681940142616"></a><a name="p16681940142616"></a>码本数组的长度。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.94359435943594%" headers="mcps1.1.5.1.4 "><p id="p568184012612"><a name="p568184012612"></a><a name="p568184012612"></a>nsq/2*96，其中<span class="parmname" id="parmname1170114418287"><a name="parmname1170114418287"></a><a name="parmname1170114418287"></a>“nsq”</span>为子空间数量。</p>
-</td>
-</tr>
-<tr id="row511551717527"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p1258316232715"><a name="p1258316232715"></a><a name="p1258316232715"></a>LUT_size</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p6403112617719"><a name="p6403112617719"></a><a name="p6403112617719"></a>size_t</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.903390339033905%" headers="mcps1.1.5.1.3 "><p id="p1258316212714"><a name="p1258316212714"></a><a name="p1258316212714"></a>距离表数组的长度。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.94359435943594%" headers="mcps1.1.5.1.4 "><p id="p1658311212279"><a name="p1658311212279"></a><a name="p1658311212279"></a>nsq*16，其中<span class="parmname" id="parmname584361843817"><a name="parmname584361843817"></a><a name="parmname584361843817"></a>“nsq”</span>为子空间数量。</p>
-</td>
-</tr>
-<tr id="row11115201711529"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p1613312110277"><a name="p1613312110277"></a><a name="p1613312110277"></a>dis_size</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p1699263912712"><a name="p1699263912712"></a><a name="p1699263912712"></a>size_t</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.903390339033905%" headers="mcps1.1.5.1.3 "><p id="p21335117279"><a name="p21335117279"></a><a name="p21335117279"></a>存储距离结果数组的长度。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.94359435943594%" headers="mcps1.1.5.1.4 "><p id="p41335118277"><a name="p41335118277"></a><a name="p41335118277"></a>限制为96。</p>
-</td>
-</tr>
-<tr id="row111141217155212"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p172182719273"><a name="p172182719273"></a><a name="p172182719273"></a>lt_mask_size</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p119923399274"><a name="p119923399274"></a><a name="p119923399274"></a>size_t</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.903390339033905%" headers="mcps1.1.5.1.3 "><p id="p92127202712"><a name="p92127202712"></a><a name="p92127202712"></a>过滤压缩结果数组的长度。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.94359435943594%" headers="mcps1.1.5.1.4 "><p id="p1421327132714"><a name="p1421327132714"></a><a name="p1421327132714"></a>限制为3。</p>
-</td>
-</tr>
-</tbody>
-</table>
+
+| 参数名称 | 数据类型 | 描述 | 取值范围 |
+| --- | --- | --- | --- |
+| nsq | int | 子空间数量。 | [1,256]且为偶数。 |
+| codes | const uint8_t* | 码本，使用krl_pack_codes_4b（blocksize=96）处理后底库向量对应的索引。 | 限制长度为codes_size，其中“codes_size”为码本数组的长度。 |
+| LUT | const uint8_t* | 各子空间中PQ质心与查询向量的uint8距离表。 | 限制长度为LUT_size，其中“LUT_size”为距离表数组的长度。 |
+| dis | uint16_t* | 存储计算所得的距离结果。 | 限制长度为dis_size，其中“dis_size”为存储距离结果数组的长度。需预先分配内存。 |
+| threshold | const uint16_t | 距离阈值。 | 限制为65535。 |
+| lt_mask | uint32_t* | 过滤压缩结果。 | 限制长度为lt_mask_size，其中“lt_mask_size”为过滤压缩结果数组的长度。需预先分配内存。 |
+| codes_size | size_t | 码本数组的长度。 | nsq/2*96，其中“nsq”为子空间数量。 |
+| LUT_size | size_t | 距离表数组的长度。 | nsq*16，其中“nsq”为子空间数量。 |
+| dis_size | size_t | 存储距离结果数组的长度。 | 限制为96。 |
+| lt_mask_size | size_t | 过滤压缩结果数组的长度。 | 限制为3。 |
 
 **返回值<a name="section49971832106"></a>**
 
 <a name="table17997635100"></a>
-<table><thead align="left"><tr id="row699763141018"><th class="cellrowborder" valign="top" width="40%" id="mcps1.1.3.1.1"><p id="p699793141012"><a name="p699793141012"></a><a name="p699793141012"></a>数据类型</p>
-</th>
-<th class="cellrowborder" valign="top" width="60%" id="mcps1.1.3.1.2"><p id="p1999763141020"><a name="p1999763141020"></a><a name="p1999763141020"></a>说明</p>
-</th>
-</tr>
-</thead>
-<tbody><tr id="row1599716361015"><td class="cellrowborder" valign="top" width="40%" headers="mcps1.1.3.1.1 "><p id="p39970319101"><a name="p39970319101"></a><a name="p39970319101"></a>int</p>
-</td>
-<td class="cellrowborder" valign="top" width="60%" headers="mcps1.1.3.1.2 "><p id="p53461032104518"><a name="p53461032104518"></a><a name="p53461032104518"></a>正常运行时返回0，异常退出返回对应错误码。</p>
-</td>
-</tr>
-</tbody>
-</table>
+
+| 数据类型 | 说明 |
+| --- | --- |
+| int | 正常运行时返回0，异常退出返回对应错误码。 |
 
 **使用示例**
 
@@ -8074,116 +4122,26 @@ int krl\_table\_lookup\_4b\_f16\(size\_t nsq, size\_t ncode, const uint8\_t\* co
 **参数说明<a name="section157501312135019"></a>**
 
 <a name="table1623016332509"></a>
-<table><thead align="left"><tr id="row823063355012"><th class="cellrowborder" valign="top" width="15.551555155515551%" id="mcps1.1.5.1.1"><p id="p1230333125010"><a name="p1230333125010"></a><a name="p1230333125010"></a>参数名称</p>
-</th>
-<th class="cellrowborder" valign="top" width="14.601460146014599%" id="mcps1.1.5.1.2"><p id="p089311158912"><a name="p089311158912"></a><a name="p089311158912"></a>数据类型</p>
-</th>
-<th class="cellrowborder" valign="top" width="33.99339933993399%" id="mcps1.1.5.1.3"><p id="p4230193313507"><a name="p4230193313507"></a><a name="p4230193313507"></a>描述</p>
-</th>
-<th class="cellrowborder" valign="top" width="35.85358535853585%" id="mcps1.1.5.1.4"><p id="p19887819256"><a name="p19887819256"></a><a name="p19887819256"></a>取值范围</p>
-</th>
-</tr>
-</thead>
-<tbody><tr id="row166241441532"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p262494414531"><a name="p262494414531"></a><a name="p262494414531"></a>nsq</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p126241544125310"><a name="p126241544125310"></a><a name="p126241544125310"></a>size_t</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p1562414447536"><a name="p1562414447536"></a><a name="p1562414447536"></a>子空间数量。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p19624744195313"><a name="p19624744195313"></a><a name="p19624744195313"></a>[1,65535]且为偶数。</p>
-</td>
-</tr>
-<tr id="row8437621111217"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p943722161218"><a name="p943722161218"></a><a name="p943722161218"></a>ncode</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p19437152117123"><a name="p19437152117123"></a><a name="p19437152117123"></a>size_t</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p543720213125"><a name="p543720213125"></a><a name="p543720213125"></a>底库向量总数。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p743792191219"><a name="p743792191219"></a><a name="p743792191219"></a>[1,2^30-1]</p>
-</td>
-</tr>
-<tr id="row1823023318504"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p14381721205612"><a name="p14381721205612"></a><a name="p14381721205612"></a>codes</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p7438122115569"><a name="p7438122115569"></a><a name="p7438122115569"></a>const uint8_t*</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p18438121155616"><a name="p18438121155616"></a><a name="p18438121155616"></a>码本，使用krl_pack_codes_4b（blocksize=64）处理后底库向量对应的索引。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p51251625162911"><a name="p51251625162911"></a><a name="p51251625162911"></a>限制长度为codes_size，其中<span class="parmname" id="parmname18125825132915"><a name="parmname18125825132915"></a><a name="parmname18125825132915"></a>“codes_size”</span>为码本数组的长度。</p>
-</td>
-</tr>
-<tr id="row10982132445420"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p734604031220"><a name="p734604031220"></a><a name="p734604031220"></a>LUT</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p7532158856"><a name="p7532158856"></a><a name="p7532158856"></a>const uint16_t*</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p36611261054"><a name="p36611261054"></a><a name="p36611261054"></a>各子空间中PQ质心与查询向量的fp16距离表。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p85127581355"><a name="p85127581355"></a><a name="p85127581355"></a>限制长度为LUT_size，其中<span class="parmname" id="parmname551215813519"><a name="parmname551215813519"></a><a name="parmname551215813519"></a>“LUT_size”</span>为距离表数组的长度。</p>
-</td>
-</tr>
-<tr id="row103951453161513"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p14723141215409"><a name="p14723141215409"></a><a name="p14723141215409"></a>dis</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p4723181210404"><a name="p4723181210404"></a><a name="p4723181210404"></a>float*</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p672341218403"><a name="p672341218403"></a><a name="p672341218403"></a>存储计算所得的距离结果。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p57801052141013"><a name="p57801052141013"></a><a name="p57801052141013"></a>限制长度为dis_size，其中<span class="parmname" id="parmname1048505120457"><a name="parmname1048505120457"></a><a name="parmname1048505120457"></a>“dis_size”</span>为存储距离结果数组的长度。需预先分配内存。</p>
-</td>
-</tr>
-<tr id="row1875218456372"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p564545281211"><a name="p564545281211"></a><a name="p564545281211"></a>dis0</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p7753045173714"><a name="p7753045173714"></a><a name="p7753045173714"></a>uint16_t</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p17531445103716"><a name="p17531445103716"></a><a name="p17531445103716"></a>初始距离。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p69179904614"><a name="p69179904614"></a><a name="p69179904614"></a>浮点数。</p>
-</td>
-</tr>
-<tr id="row5701164775910"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p137414311617"><a name="p137414311617"></a><a name="p137414311617"></a>codes_size</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p06662231878"><a name="p06662231878"></a><a name="p06662231878"></a>size_t</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p16744431269"><a name="p16744431269"></a><a name="p16744431269"></a>码本数组的长度。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p127494317611"><a name="p127494317611"></a><a name="p127494317611"></a>nsq/2*ncode，其中<span class="parmname" id="parmname4131155510115"><a name="parmname4131155510115"></a><a name="parmname4131155510115"></a>“nsq”</span>为子空间数量，<span class="parmname" id="parmname1013120552111"><a name="parmname1013120552111"></a><a name="parmname1013120552111"></a>“ncode”</span>为底库向量总数。</p>
-</td>
-</tr>
-<tr id="row97004477597"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p1258316232715"><a name="p1258316232715"></a><a name="p1258316232715"></a>LUT_size</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p6403112617719"><a name="p6403112617719"></a><a name="p6403112617719"></a>size_t</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p1258316212714"><a name="p1258316212714"></a><a name="p1258316212714"></a>距离表数组的长度。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p1658311212279"><a name="p1658311212279"></a><a name="p1658311212279"></a>nsq*16，其中<span class="parmname" id="parmname584361843817"><a name="parmname584361843817"></a><a name="parmname584361843817"></a>“nsq”</span>为子空间数量。</p>
-</td>
-</tr>
-<tr id="row67009473597"><td class="cellrowborder" valign="top" width="15.551555155515551%" headers="mcps1.1.5.1.1 "><p id="p1753316619720"><a name="p1753316619720"></a><a name="p1753316619720"></a>dis_size</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.601460146014599%" headers="mcps1.1.5.1.2 "><p id="p64039264714"><a name="p64039264714"></a><a name="p64039264714"></a>size_t</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p54111354134020"><a name="p54111354134020"></a><a name="p54111354134020"></a>存储距离结果数组的长度。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p175331661478"><a name="p175331661478"></a><a name="p175331661478"></a>ncode，其中<span class="parmname" id="parmname89954141011"><a name="parmname89954141011"></a><a name="parmname89954141011"></a>“ncode”</span>为底库向量总数。</p>
-</td>
-</tr>
-</tbody>
-</table>
+
+| 参数名称 | 数据类型 | 描述 | 取值范围 |
+| --- | --- | --- | --- |
+| nsq | size_t | 子空间数量。 | [1,65535]且为偶数。 |
+| ncode | size_t | 底库向量总数。 | [1,2^30-1] |
+| codes | const uint8_t* | 码本，使用krl_pack_codes_4b（blocksize=64）处理后底库向量对应的索引。 | 限制长度为codes_size，其中“codes_size”为码本数组的长度。 |
+| LUT | const uint16_t* | 各子空间中PQ质心与查询向量的fp16距离表。 | 限制长度为LUT_size，其中“LUT_size”为距离表数组的长度。 |
+| dis | float* | 存储计算所得的距离结果。 | 限制长度为dis_size，其中“dis_size”为存储距离结果数组的长度。需预先分配内存。 |
+| dis0 | uint16_t | 初始距离。 | 浮点数。 |
+| codes_size | size_t | 码本数组的长度。 | nsq/2*ncode，其中“nsq”为子空间数量，“ncode”为底库向量总数。 |
+| LUT_size | size_t | 距离表数组的长度。 | nsq*16，其中“nsq”为子空间数量。 |
+| dis_size | size_t | 存储距离结果数组的长度。 | ncode，其中“ncode”为底库向量总数。 |
 
 **返回值<a name="section49971832106"></a>**
 
 <a name="table17997635100"></a>
-<table><thead align="left"><tr id="row699763141018"><th class="cellrowborder" valign="top" width="40%" id="mcps1.1.3.1.1"><p id="p699793141012"><a name="p699793141012"></a><a name="p699793141012"></a>数据类型</p>
-</th>
-<th class="cellrowborder" valign="top" width="60%" id="mcps1.1.3.1.2"><p id="p1999763141020"><a name="p1999763141020"></a><a name="p1999763141020"></a>说明</p>
-</th>
-</tr>
-</thead>
-<tbody><tr id="row1599716361015"><td class="cellrowborder" valign="top" width="40%" headers="mcps1.1.3.1.1 "><p id="p39970319101"><a name="p39970319101"></a><a name="p39970319101"></a>int</p>
-</td>
-<td class="cellrowborder" valign="top" width="60%" headers="mcps1.1.3.1.2 "><p id="p53461032104518"><a name="p53461032104518"></a><a name="p53461032104518"></a>正常运行时返回0，异常退出返回对应错误码。</p>
-</td>
-</tr>
-</tbody>
-</table>
+
+| 数据类型 | 说明 |
+| --- | --- |
+| int | 正常运行时返回0，异常退出返回对应错误码。 |
 
 **使用示例**
 
@@ -8276,117 +4234,25 @@ int krl\_pack\_codes\_4b\(const uint8\_t\* codes, size\_t ncode, size\_t nsq, ui
 **参数说明<a name="section157501312135019"></a>**
 
 <a name="table1623016332509"></a>
-<table><thead align="left"><tr id="row823063355012"><th class="cellrowborder" valign="top" width="15.541554155415543%" id="mcps1.1.5.1.1"><p id="p1230333125010"><a name="p1230333125010"></a><a name="p1230333125010"></a>参数名称</p>
-</th>
-<th class="cellrowborder" valign="top" width="14.611461146114612%" id="mcps1.1.5.1.2"><p id="p089311158912"><a name="p089311158912"></a><a name="p089311158912"></a>数据类型</p>
-</th>
-<th class="cellrowborder" valign="top" width="33.99339933993399%" id="mcps1.1.5.1.3"><p id="p4230193313507"><a name="p4230193313507"></a><a name="p4230193313507"></a>描述</p>
-</th>
-<th class="cellrowborder" valign="top" width="35.85358535853585%" id="mcps1.1.5.1.4"><p id="p19887819256"><a name="p19887819256"></a><a name="p19887819256"></a>取值范围</p>
-</th>
-</tr>
-</thead>
-<tbody><tr id="row1823023318504"><td class="cellrowborder" valign="top" width="15.541554155415543%" headers="mcps1.1.5.1.1 "><p id="p14381721205612"><a name="p14381721205612"></a><a name="p14381721205612"></a>codes</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.611461146114612%" headers="mcps1.1.5.1.2 "><p id="p7438122115569"><a name="p7438122115569"></a><a name="p7438122115569"></a>const uint8_t*</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p18438121155616"><a name="p18438121155616"></a><a name="p18438121155616"></a>底库向量数据。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p13438102185617"><a name="p13438102185617"></a><a name="p13438102185617"></a>限制长度为codes_size，其中<span class="parmname" id="parmname18125825132915"><a name="parmname18125825132915"></a><a name="parmname18125825132915"></a>“codes_size”</span>为底库向量数组的长度。</p>
-</td>
-</tr>
-<tr id="row587315210197"><td class="cellrowborder" valign="top" width="15.541554155415543%" headers="mcps1.1.5.1.1 "><p id="p14873021151914"><a name="p14873021151914"></a><a name="p14873021151914"></a>ncode</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.611461146114612%" headers="mcps1.1.5.1.2 "><p id="p887382119197"><a name="p887382119197"></a><a name="p887382119197"></a>size_t</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p287382118190"><a name="p287382118190"></a><a name="p287382118190"></a>底库向量总数。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p79885872519"><a name="p79885872519"></a><a name="p79885872519"></a>[1,2^30-1]</p>
-</td>
-</tr>
-<tr id="row18840143271918"><td class="cellrowborder" valign="top" width="15.541554155415543%" headers="mcps1.1.5.1.1 "><p id="p4840832111916"><a name="p4840832111916"></a><a name="p4840832111916"></a>nsq</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.611461146114612%" headers="mcps1.1.5.1.2 "><p id="p68401332181920"><a name="p68401332181920"></a><a name="p68401332181920"></a>size_t</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p08401632111917"><a name="p08401632111917"></a><a name="p08401632111917"></a>子空间数量。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p20840123241914"><a name="p20840123241914"></a><a name="p20840123241914"></a>[1,65535]</p>
-</td>
-</tr>
-<tr id="row10982132445420"><td class="cellrowborder" valign="top" width="15.541554155415543%" headers="mcps1.1.5.1.1 "><p id="p734604031220"><a name="p734604031220"></a><a name="p734604031220"></a>blocks</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.611461146114612%" headers="mcps1.1.5.1.2 "><p id="p7532158856"><a name="p7532158856"></a><a name="p7532158856"></a>uint8_t*</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p36611261054"><a name="p36611261054"></a><a name="p36611261054"></a>pack后的底库向量数据。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p85127581355"><a name="p85127581355"></a><a name="p85127581355"></a>限制长度为blocks_size，其中<span class="parmname" id="parmname204555717"><a name="parmname204555717"></a><a name="parmname204555717"></a>“blocks_size”</span>为pack后的底库向量数组的长度。需预先分配内存。</p>
-</td>
-</tr>
-<tr id="row103951453161513"><td class="cellrowborder" valign="top" width="15.541554155415543%" headers="mcps1.1.5.1.1 "><p id="p14723141215409"><a name="p14723141215409"></a><a name="p14723141215409"></a>batchsize</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.611461146114612%" headers="mcps1.1.5.1.2 "><p id="p4723181210404"><a name="p4723181210404"></a><a name="p4723181210404"></a>size_t</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p672341218403"><a name="p672341218403"></a><a name="p672341218403"></a>底库向量分块大小。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p6723181274010"><a name="p6723181274010"></a><a name="p6723181274010"></a>大于0且为16的倍数。需要与查表累和算子相适应。</p>
-<a name="ul1810376145316"></a><a name="ul1810376145316"></a><ul id="ul1810376145316"><li>设置为32：</li></ul>
-<p id="p2989163595213"><a name="p2989163595213"></a><a name="p2989163595213"></a>krl_table_lookup_step</p>
-<a name="ul342518815320"></a><a name="ul342518815320"></a><ul id="ul342518815320"><li>设置为64：</li></ul>
-<p id="p19989135155218"><a name="p19989135155218"></a><a name="p19989135155218"></a>krl_L2_table_lookup_fast_scan_bs64</p>
-<p id="p398933517522"><a name="p398933517522"></a><a name="p398933517522"></a>krl_IP_table_lookup_fast_scan_bs64</p>
-<p id="p1998973515521"><a name="p1998973515521"></a><a name="p1998973515521"></a>krl_table_lookup_4b_f16</p>
-<a name="ul13296171112536"></a><a name="ul13296171112536"></a><ul id="ul13296171112536"><li>设置为96：</li></ul>
-<p id="p3989203517528"><a name="p3989203517528"></a><a name="p3989203517528"></a>krl_L2_table_lookup_fast_scan_bs96</p>
-<p id="p16989173512524"><a name="p16989173512524"></a><a name="p16989173512524"></a>krl_IP_table_lookup_fast_scan_bs96</p>
-</td>
-</tr>
-<tr id="row1875218456372"><td class="cellrowborder" valign="top" width="15.541554155415543%" headers="mcps1.1.5.1.1 "><p id="p564545281211"><a name="p564545281211"></a><a name="p564545281211"></a>dim_cross</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.611461146114612%" headers="mcps1.1.5.1.2 "><p id="p7753045173714"><a name="p7753045173714"></a><a name="p7753045173714"></a>int</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p17531445103716"><a name="p17531445103716"></a><a name="p17531445103716"></a>距离数据是否为8bit</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p69179904614"><a name="p69179904614"></a><a name="p69179904614"></a>[0,1]，取值表示距离数据是否为8bit：</p>
-<a name="ul164886121012"></a><a name="ul164886121012"></a><ul id="ul164886121012"><li>0：距离数据为8bit。</li><li>1:  距离数据为16bit。</li></ul>
-</td>
-</tr>
-<tr id="row67711025367"><td class="cellrowborder" valign="top" width="15.541554155415543%" headers="mcps1.1.5.1.1 "><p id="p137414311617"><a name="p137414311617"></a><a name="p137414311617"></a>codes_size</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.611461146114612%" headers="mcps1.1.5.1.2 "><p id="p06662231878"><a name="p06662231878"></a><a name="p06662231878"></a>size_t</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p16744431269"><a name="p16744431269"></a><a name="p16744431269"></a>底库向量数组的长度。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p127494317611"><a name="p127494317611"></a><a name="p127494317611"></a>ncode*nsq/2，其中<span class="parmname" id="parmname1078717121273"><a name="parmname1078717121273"></a><a name="parmname1078717121273"></a>“ncode”</span>为底库向量总数，<span class="parmname" id="parmname07871121373"><a name="parmname07871121373"></a><a name="parmname07871121373"></a>“nsq”</span>为子空间数量。</p>
-</td>
-</tr>
-<tr id="row4903281565"><td class="cellrowborder" valign="top" width="15.541554155415543%" headers="mcps1.1.5.1.1 "><p id="p292753515619"><a name="p292753515619"></a><a name="p292753515619"></a>blocks_size</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.611461146114612%" headers="mcps1.1.5.1.2 "><p id="p15927335864"><a name="p15927335864"></a><a name="p15927335864"></a>size_t</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p2927183515614"><a name="p2927183515614"></a><a name="p2927183515614"></a>pack后的底库向量数组的长度。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p99271635566"><a name="p99271635566"></a><a name="p99271635566"></a>ceil(ncode/batchsize)*batchsize*ceil(nsq/2)，其中<span class="parmname" id="parmname81372591969"><a name="parmname81372591969"></a><a name="parmname81372591969"></a>“ncode”</span>为底库向量总数，<span class="parmname" id="parmname101371859767"><a name="parmname101371859767"></a><a name="parmname101371859767"></a>“batchsize”</span>为底库向量分块大小，<span class="parmname" id="parmname813745915619"><a name="parmname813745915619"></a><a name="parmname813745915619"></a>“nsq”</span>为子空间数量。</p>
-</td>
-</tr>
-</tbody>
-</table>
+
+| 参数名称 | 数据类型 | 描述 | 取值范围 |
+| --- | --- | --- | --- |
+| codes | const uint8_t* | 底库向量数据。 | 限制长度为codes_size，其中“codes_size”为底库向量数组的长度。 |
+| ncode | size_t | 底库向量总数。 | [1,2^30-1] |
+| nsq | size_t | 子空间数量。 | [1,65535] |
+| blocks | uint8_t* | pack后的底库向量数据。 | 限制长度为blocks_size，其中“blocks_size”为pack后的底库向量数组的长度。需预先分配内存。 |
+| batchsize | size_t | 底库向量分块大小。 | 大于0且为16的倍数。需要与查表累和算子相适应。<br>设置为32：<br>krl_table_lookup_step<br>设置为64：<br>krl_L2_table_lookup_fast_scan_bs64<br>krl_IP_table_lookup_fast_scan_bs64<br>krl_table_lookup_4b_f16<br>设置为96：<br>krl_L2_table_lookup_fast_scan_bs96<br>krl_IP_table_lookup_fast_scan_bs96 |
+| dim_cross | int | 距离数据是否为8bit | [0,1]，取值表示距离数据是否为8bit：<br>0：距离数据为8bit。<br>1:  距离数据为16bit。 |
+| codes_size | size_t | 底库向量数组的长度。 | ncode*nsq/2，其中“ncode”为底库向量总数，“nsq”为子空间数量。 |
+| blocks_size | size_t | pack后的底库向量数组的长度。 | ceil(ncode/batchsize)*batchsize*ceil(nsq/2)，其中“ncode”为底库向量总数，“batchsize”为底库向量分块大小，“nsq”为子空间数量。 |
 
 **返回值<a name="section49971832106"></a>**
 
 <a name="table17997635100"></a>
-<table><thead align="left"><tr id="row699763141018"><th class="cellrowborder" valign="top" width="40%" id="mcps1.1.3.1.1"><p id="p699793141012"><a name="p699793141012"></a><a name="p699793141012"></a>数据类型</p>
-</th>
-<th class="cellrowborder" valign="top" width="60%" id="mcps1.1.3.1.2"><p id="p1999763141020"><a name="p1999763141020"></a><a name="p1999763141020"></a>说明</p>
-</th>
-</tr>
-</thead>
-<tbody><tr id="row1599716361015"><td class="cellrowborder" valign="top" width="40%" headers="mcps1.1.3.1.1 "><p id="p39970319101"><a name="p39970319101"></a><a name="p39970319101"></a>int</p>
-</td>
-<td class="cellrowborder" valign="top" width="60%" headers="mcps1.1.3.1.2 "><p id="p53461032104518"><a name="p53461032104518"></a><a name="p53461032104518"></a>正常运行时返回0，异常退出返回对应错误码。</p>
-</td>
-</tr>
-</tbody>
-</table>
+
+| 数据类型 | 说明 |
+| --- | --- |
+| int | 正常运行时返回0，异常退出返回对应错误码。 |
 
 **使用示例**
 
@@ -8468,89 +4334,23 @@ int krl\_pqfs\_unpack\_codes\(const uint8\_t\* codes, size\_t ncodes, size\_t M,
 **参数说明<a name="section_pqfs_unpack_parm"></a>**
 
 <a name="table_pqfs_unpack_parm"></a>
-<table><thead align="left"><tr id="row_pqfs_unpack_head"><th class="cellrowborder" valign="top" width="15.541554155415543%" id="mcps_pqu_1"><p id="p_pqfs_unpack_th1"><a name="p_pqfs_unpack_th1"></a><a name="p_pqfs_unpack_th1"></a>参数名称</p>
-</th>
-<th class="cellrowborder" valign="top" width="14.611461146114612%" id="mcps_pqu_2"><p id="p_pqfs_unpack_th2"><a name="p_pqfs_unpack_th2"></a><a name="p_pqfs_unpack_th2"></a>数据类型</p>
-</th>
-<th class="cellrowborder" valign="top" width="33.99339933993399%" id="mcps_pqu_3"><p id="p_pqfs_unpack_th3"><a name="p_pqfs_unpack_th3"></a><a name="p_pqfs_unpack_th3"></a>描述</p>
-</th>
-<th class="cellrowborder" valign="top" width="35.85358535853585%" id="mcps_pqu_4"><p id="p_pqfs_unpack_th4"><a name="p_pqfs_unpack_th4"></a><a name="p_pqfs_unpack_th4"></a>取值范围</p>
-</th>
-</tr>
-</thead>
-<tbody><tr id="row_pqfs_unpack_codes"><td class="cellrowborder" valign="top" width="15.541554155415543%" headers="mcps_pqu_1 "><p id="p_pqfs_unpack_codes"><a name="p_pqfs_unpack_codes"></a><a name="p_pqfs_unpack_codes"></a>codes</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.611461146114612%" headers="mcps_pqu_2 "><p id="p_pqfs_unpack_codes_t"><a name="p_pqfs_unpack_codes_t"></a><a name="p_pqfs_unpack_codes_t"></a>const uint8_t*</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps_pqu_3 "><p id="p_pqfs_unpack_codes_d"><a name="p_pqfs_unpack_codes_d"></a><a name="p_pqfs_unpack_codes_d"></a>PQFS 打包后的码本缓冲区。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps_pqu_4 "><p id="p_pqfs_unpack_codes_r"><a name="p_pqfs_unpack_codes_r"></a><a name="p_pqfs_unpack_codes_r"></a>有效长度与 ncodes、M、batchsize 及打包布局一致。</p>
-</td>
-</tr>
-<tr id="row_pqfs_unpack_ncodes"><td class="cellrowborder" valign="top" width="15.541554155415543%" headers="mcps_pqu_1 "><p id="p_pqfs_unpack_ncodes"><a name="p_pqfs_unpack_ncodes"></a><a name="p_pqfs_unpack_ncodes"></a>ncodes</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.611461146114612%" headers="mcps_pqu_2 "><p id="p_pqfs_unpack_ncodes_t"><a name="p_pqfs_unpack_ncodes_t"></a><a name="p_pqfs_unpack_ncodes_t"></a>size_t</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps_pqu_3 "><p id="p_pqfs_unpack_ncodes_d"><a name="p_pqfs_unpack_ncodes_d"></a><a name="p_pqfs_unpack_ncodes_d"></a>需要解包的底库向量条数。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps_pqu_4 "><p id="p_pqfs_unpack_ncodes_r"><a name="p_pqfs_unpack_ncodes_r"></a><a name="p_pqfs_unpack_ncodes_r"></a>非负；为 0 时不读写有效载荷。</p>
-</td>
-</tr>
-<tr id="row_pqfs_unpack_M"><td class="cellrowborder" valign="top" width="15.541554155415543%" headers="mcps_pqu_1 "><p id="p_pqfs_unpack_M"><a name="p_pqfs_unpack_M"></a><a name="p_pqfs_unpack_M"></a>M</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.611461146114612%" headers="mcps_pqu_2 "><p id="p_pqfs_unpack_M_t"><a name="p_pqfs_unpack_M_t"></a><a name="p_pqfs_unpack_M_t"></a>size_t</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps_pqu_3 "><p id="p_pqfs_unpack_M_d"><a name="p_pqfs_unpack_M_d"></a><a name="p_pqfs_unpack_M_d"></a>子空间数量，与 krl_pack_codes_4b 的 nsq 相同。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps_pqu_4 "><p id="p_pqfs_unpack_M_r"><a name="p_pqfs_unpack_M_r"></a><a name="p_pqfs_unpack_M_r"></a>与打包时一致；奇数子空间时实现内部按偶数维度补齐计算。</p>
-</td>
-</tr>
-<tr id="row_pqfs_unpack_blocks"><td class="cellrowborder" valign="top" width="15.541554155415543%" headers="mcps_pqu_1 "><p id="p_pqfs_unpack_blocks"><a name="p_pqfs_unpack_blocks"></a><a name="p_pqfs_unpack_blocks"></a>blocks</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.611461146114612%" headers="mcps_pqu_2 "><p id="p_pqfs_unpack_blocks_t"><a name="p_pqfs_unpack_blocks_t"></a><a name="p_pqfs_unpack_blocks_t"></a>uint8_t*</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps_pqu_3 "><p id="p_pqfs_unpack_blocks_d"><a name="p_pqfs_unpack_blocks_d"></a><a name="p_pqfs_unpack_blocks_d"></a>输出的常规码本（解包后的可读布局）；从第 block_codes 条向量开始写入 ncodes 条。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps_pqu_4 "><p id="p_pqfs_unpack_blocks_r"><a name="p_pqfs_unpack_blocks_r"></a><a name="p_pqfs_unpack_blocks_r"></a>长度至少为 (block_codes + ncodes) * ceil(M/2) 字节。</p>
-</td>
-</tr>
-<tr id="row_pqfs_unpack_block_codes"><td class="cellrowborder" valign="top" width="15.541554155415543%" headers="mcps_pqu_1 "><p id="p_pqfs_unpack_block_codes"><a name="p_pqfs_unpack_block_codes"></a><a name="p_pqfs_unpack_block_codes"></a>block_codes</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.611461146114612%" headers="mcps_pqu_2 "><p id="p_pqfs_unpack_block_codes_t"><a name="p_pqfs_unpack_block_codes_t"></a><a name="p_pqfs_unpack_block_codes_t"></a>size_t</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps_pqu_3 "><p id="p_pqfs_unpack_block_codes_d"><a name="p_pqfs_unpack_block_codes_d"></a><a name="p_pqfs_unpack_block_codes_d"></a>在 blocks 中跳过前若干条向量（以向量条数计），再写入解包结果。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps_pqu_4 "><p id="p_pqfs_unpack_block_codes_r"><a name="p_pqfs_unpack_block_codes_r"></a><a name="p_pqfs_unpack_block_codes_r"></a>非负；前缀区域不会被本函数覆盖。</p>
-</td>
-</tr>
-<tr id="row_pqfs_unpack_batchsize"><td class="cellrowborder" valign="top" width="15.541554155415543%" headers="mcps_pqu_1 "><p id="p_pqfs_unpack_batchsize"><a name="p_pqfs_unpack_batchsize"></a><a name="p_pqfs_unpack_batchsize"></a>batchsize</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.611461146114612%" headers="mcps_pqu_2 "><p id="p_pqfs_unpack_batchsize_t"><a name="p_pqfs_unpack_batchsize_t"></a><a name="p_pqfs_unpack_batchsize_t"></a>size_t</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps_pqu_3 "><p id="p_pqfs_unpack_batchsize_d"><a name="p_pqfs_unpack_batchsize_d"></a><a name="p_pqfs_unpack_batchsize_d"></a>PQFS 打包时使用的分块大小，必须与 krl_pack_codes_4b 调用参数一致。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps_pqu_4 "><p id="p_pqfs_unpack_batchsize_r"><a name="p_pqfs_unpack_batchsize_r"></a><a name="p_pqfs_unpack_batchsize_r"></a>必须大于 0；为 0 时返回参数错误。</p>
-</td>
-</tr>
-</tbody>
-</table>
+
+| 参数名称 | 数据类型 | 描述 | 取值范围 |
+| --- | --- | --- | --- |
+| codes | const uint8_t* | PQFS 打包后的码本缓冲区。 | 有效长度与 ncodes、M、batchsize 及打包布局一致。 |
+| ncodes | size_t | 需要解包的底库向量条数。 | 非负；为 0 时不读写有效载荷。 |
+| M | size_t | 子空间数量，与 krl_pack_codes_4b 的 nsq 相同。 | 与打包时一致；奇数子空间时实现内部按偶数维度补齐计算。 |
+| blocks | uint8_t* | 输出的常规码本（解包后的可读布局）；从第 block_codes 条向量开始写入 ncodes 条。 | 长度至少为 (block_codes + ncodes) * ceil(M/2) 字节。 |
+| block_codes | size_t | 在 blocks 中跳过前若干条向量（以向量条数计），再写入解包结果。 | 非负；前缀区域不会被本函数覆盖。 |
+| batchsize | size_t | PQFS 打包时使用的分块大小，必须与 krl_pack_codes_4b 调用参数一致。 | 必须大于 0；为 0 时返回参数错误。 |
 
 **返回值<a name="section_pqfs_unpack_ret"></a>**
 
 <a name="table_pqfs_unpack_ret"></a>
-<table><thead align="left"><tr id="row_pqfs_unpack_ret_h"><th class="cellrowborder" valign="top" width="40%" id="mcps_pqu_r1"><p id="p_pqfs_unpack_rth1"><a name="p_pqfs_unpack_rth1"></a><a name="p_pqfs_unpack_rth1"></a>数据类型</p>
-</th>
-<th class="cellrowborder" valign="top" width="60%" id="mcps_pqu_r2"><p id="p_pqfs_unpack_rth2"><a name="p_pqfs_unpack_rth2"></a><a name="p_pqfs_unpack_rth2"></a>说明</p>
-</th>
-</tr>
-</thead>
-<tbody><tr id="row_pqfs_unpack_ret_row"><td class="cellrowborder" valign="top" width="40%" headers="mcps_pqu_r1 "><p id="p_pqfs_unpack_ret_int"><a name="p_pqfs_unpack_ret_int"></a><a name="p_pqfs_unpack_ret_int"></a>int</p>
-</td>
-<td class="cellrowborder" valign="top" width="60%" headers="mcps_pqu_r2 "><p id="p_pqfs_unpack_ret_desc"><a name="p_pqfs_unpack_ret_desc"></a><a name="p_pqfs_unpack_ret_desc"></a>正常运行时返回 0；batchsize 为 0 时返回参数非法错误码。</p>
-</td>
-</tr>
-</tbody>
-</table>
+
+| 数据类型 | 说明 |
+| --- | --- |
+| int | 正常运行时返回 0；batchsize 为 0 时返回参数非法错误码。 |
 
 **使用示例**
 
@@ -8610,107 +4410,25 @@ int krl\_repack\_codes\_4b\(const uint8\_t\* codes, size\_t ncode, size\_t nsq, 
 **参数说明<a name="section_repack4b_parm"></a>**
 
 <a name="table_repack4b_parm"></a>
-<table><thead align="left"><tr id="row_repack4b_head"><th class="cellrowborder" valign="top" width="15.541554155415543%" id="mcps_rp4_1"><p id="p_rp4_th1"><a name="p_rp4_th1"></a><a name="p_rp4_th1"></a>参数名称</p>
-</th>
-<th class="cellrowborder" valign="top" width="14.611461146114612%" id="mcps_rp4_2"><p id="p_rp4_th2"><a name="p_rp4_th2"></a><a name="p_rp4_th2"></a>数据类型</p>
-</th>
-<th class="cellrowborder" valign="top" width="33.99339933993399%" id="mcps_rp4_3"><p id="p_rp4_th3"><a name="p_rp4_th3"></a><a name="p_rp4_th3"></a>描述</p>
-</th>
-<th class="cellrowborder" valign="top" width="35.85358535853585%" id="mcps_rp4_4"><p id="p_rp4_th4"><a name="p_rp4_th4"></a><a name="p_rp4_th4"></a>取值范围</p>
-</th>
-</tr>
-</thead>
-<tbody><tr id="row_rp4_codes"><td class="cellrowborder" valign="top" width="15.541554155415543%" headers="mcps_rp4_1 "><p id="p_rp4_codes"><a name="p_rp4_codes"></a><a name="p_rp4_codes"></a>codes</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.611461146114612%" headers="mcps_rp4_2 "><p id="p_rp4_codes_t"><a name="p_rp4_codes_t"></a><a name="p_rp4_codes_t"></a>const uint8_t*</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps_rp4_3 "><p id="p_rp4_codes_d"><a name="p_rp4_codes_d"></a><a name="p_rp4_codes_d"></a>源码本：按向量顺序存放的常规4bit码本（IVFPQ打包输入），或 PQFS 已打包缓冲区。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps_rp4_4 "><p id="p_rp4_codes_r"><a name="p_rp4_codes_r"></a><a name="p_rp4_codes_r"></a>与 dim_cross 及 ncode、nsq 一致的有效数据。</p>
-</td>
-</tr>
-<tr id="row_rp4_ncode"><td class="cellrowborder" valign="top" width="15.541554155415543%" headers="mcps_rp4_1 "><p id="p_rp4_ncode"><a name="p_rp4_ncode"></a><a name="p_rp4_ncode"></a>ncode</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.611461146114612%" headers="mcps_rp4_2 "><p id="p_rp4_ncode_t"><a name="p_rp4_ncode_t"></a><a name="p_rp4_ncode_t"></a>size_t</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps_rp4_3 "><p id="p_rp4_ncode_d"><a name="p_rp4_ncode_d"></a><a name="p_rp4_ncode_d"></a>底库向量条数。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps_rp4_4 "><p id="p_rp4_ncode_r"><a name="p_rp4_ncode_r"></a><a name="p_rp4_ncode_r"></a>与源缓冲区语义一致。</p>
-</td>
-</tr>
-<tr id="row_rp4_nsq"><td class="cellrowborder" valign="top" width="15.541554155415543%" headers="mcps_rp4_1 "><p id="p_rp4_nsq"><a name="p_rp4_nsq"></a><a name="p_rp4_nsq"></a>nsq</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.611461146114612%" headers="mcps_rp4_2 "><p id="p_rp4_nsq_t"><a name="p_rp4_nsq_t"></a><a name="p_rp4_nsq_t"></a>size_t</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps_rp4_3 "><p id="p_rp4_nsq_d"><a name="p_rp4_nsq_d"></a><a name="p_rp4_nsq_d"></a>子空间数量。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps_rp4_4 "><p id="p_rp4_nsq_r"><a name="p_rp4_nsq_r"></a><a name="p_rp4_nsq_r"></a>与源及目标布局一致。</p>
-</td>
-</tr>
-<tr id="row_rp4_blocks"><td class="cellrowborder" valign="top" width="15.541554155415543%" headers="mcps_rp4_1 "><p id="p_rp4_blocks"><a name="p_rp4_blocks"></a><a name="p_rp4_blocks"></a>blocks</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.611461146114612%" headers="mcps_rp4_2 "><p id="p_rp4_blocks_t"><a name="p_rp4_blocks_t"></a><a name="p_rp4_blocks_t"></a>uint8_t*</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps_rp4_3 "><p id="p_rp4_blocks_d"><a name="p_rp4_blocks_d"></a><a name="p_rp4_blocks_d"></a>输出缓冲区。IVFPQ 路径下长度需容纳 after_batchsize 对齐后的打包结果；PQFS 路径下至少为 ceil(ncode / after_batchsize) * after_batchsize * ceil(nsq/2) 字节。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps_rp4_4 "><p id="p_rp4_blocks_r"><a name="p_rp4_blocks_r"></a><a name="p_rp4_blocks_r"></a>过小会返回底层打包错误码。</p>
-</td>
-</tr>
-<tr id="row_rp4_batchsize"><td class="cellrowborder" valign="top" width="15.541554155415543%" headers="mcps_rp4_1 "><p id="p_rp4_batchsize"><a name="p_rp4_batchsize"></a><a name="p_rp4_batchsize"></a>batchsize</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.611461146114612%" headers="mcps_rp4_2 "><p id="p_rp4_batchsize_t"><a name="p_rp4_batchsize_t"></a><a name="p_rp4_batchsize_t"></a>size_t</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps_rp4_3 "><p id="p_rp4_batchsize_d"><a name="p_rp4_batchsize_d"></a><a name="p_rp4_batchsize_d"></a>底库向量分块大小。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps_rp4_4 "><p id="p_rp4_batchsize_r"><a name="p_rp4_batchsize_r"></a><a name="p_rp4_batchsize_r"></a>IVFPQ 路径须使 batchsize * ceil(nsq/2) 不小于目标 packed 缓冲区需求。</p>
-</td>
-</tr>
-<tr id="row_rp4_prev_bs"><td class="cellrowborder" valign="top" width="15.541554155415543%" headers="mcps_rp4_1 "><p id="p_rp4_prev_bs"><a name="p_rp4_prev_bs"></a><a name="p_rp4_prev_bs"></a>prev_batchsize</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.611461146114612%" headers="mcps_rp4_2 "><p id="p_rp4_prev_bs_t"><a name="p_rp4_prev_bs_t"></a><a name="p_rp4_prev_bs_t"></a>size_t</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps_rp4_3 "><p id="p_rp4_prev_bs_d"><a name="p_rp4_prev_bs_d"></a><a name="p_rp4_prev_bs_d"></a>PQFS 源布局的分块大小；IVFPQ 路径下与测试惯例一致可传 after_batchsize。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps_rp4_4 "><p id="p_rp4_prev_bs_r"><a name="p_rp4_prev_bs_r"></a><a name="p_rp4_prev_bs_r"></a>PQFS 路径必须大于 0。</p>
-</td>
-</tr>
-<tr id="row_rp4_after_bs"><td class="cellrowborder" valign="top" width="15.541554155415543%" headers="mcps_rp4_1 "><p id="p_rp4_after_bs"><a name="p_rp4_after_bs"></a><a name="p_rp4_after_bs"></a>after_batchsize</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.611461146114612%" headers="mcps_rp4_2 "><p id="p_rp4_after_bs_t"><a name="p_rp4_after_bs_t"></a><a name="p_rp4_after_bs_t"></a>size_t</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps_rp4_3 "><p id="p_rp4_after_bs_d"><a name="p_rp4_after_bs_d"></a><a name="p_rp4_after_bs_d"></a>目标分块大小。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps_rp4_4 "><p id="p_rp4_after_bs_r"><a name="p_rp4_after_bs_r"></a><a name="p_rp4_after_bs_r"></a>PQFS 路径必须大于 0；宜与目标查表算子的 batch 对齐。</p>
-</td>
-</tr>
-<tr id="row_rp4_dim_cross"><td class="cellrowborder" valign="top" width="15.541554155415543%" headers="mcps_rp4_1 "><p id="p_rp4_dim_cross"><a name="p_rp4_dim_cross"></a><a name="p_rp4_dim_cross"></a>dim_cross</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.611461146114612%" headers="mcps_rp4_2 "><p id="p_rp4_dim_cross_t"><a name="p_rp4_dim_cross_t"></a><a name="p_rp4_dim_cross_t"></a>int</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps_rp4_3 "><p id="p_rp4_dim_cross_d"><a name="p_rp4_dim_cross_d"></a><a name="p_rp4_dim_cross_d"></a>0：IVFPQ 重打包；非0：PQFS 解包再打包。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps_rp4_4 "><p id="p_rp4_dim_cross_r"><a name="p_rp4_dim_cross_r"></a><a name="p_rp4_dim_cross_r"></a>0 或非 0。</p>
-</td>
-</tr>
-</tbody>
-</table>
+
+| 参数名称 | 数据类型 | 描述 | 取值范围 |
+| --- | --- | --- | --- |
+| codes | const uint8_t* | 源码本：按向量顺序存放的常规4bit码本（IVFPQ打包输入），或 PQFS 已打包缓冲区。 | 与 dim_cross 及 ncode、nsq 一致的有效数据。 |
+| ncode | size_t | 底库向量条数。 | 与源缓冲区语义一致。 |
+| nsq | size_t | 子空间数量。 | 与源及目标布局一致。 |
+| blocks | uint8_t* | 输出缓冲区。IVFPQ 路径下长度需容纳 after_batchsize 对齐后的打包结果；PQFS 路径下至少为 ceil(ncode / after_batchsize) \* after_batchsize \* ceil(nsq/2) 字节。 | 过小会返回底层打包错误码。 |
+| batchsize | size_t | 底库向量分块大小。 | IVFPQ 路径须使 batchsize * ceil(nsq/2) 不小于目标 packed 缓冲区需求。 |
+| prev_batchsize | size_t | PQFS 源布局的分块大小；IVFPQ 路径下与测试惯例一致可传 after_batchsize。 | PQFS 路径必须大于 0。 |
+| after_batchsize | size_t | 目标分块大小。 | PQFS 路径必须大于 0；宜与目标查表算子的 batch 对齐。 |
+| dim_cross | int | 0：IVFPQ 重打包；非0：PQFS 解包再打包。 | 0 或非 0。 |
 
 **返回值<a name="section_repack4b_ret"></a>**
 
 <a name="table_repack4b_ret"></a>
-<table><thead align="left"><tr id="row_repack4b_ret_h"><th class="cellrowborder" valign="top" width="40%" id="mcps_rp4_r1"><p id="p_rp4_rth1"><a name="p_rp4_rth1"></a><a name="p_rp4_rth1"></a>数据类型</p>
-</th>
-<th class="cellrowborder" valign="top" width="60%" id="mcps_rp4_r2"><p id="p_rp4_rth2"><a name="p_rp4_rth2"></a><a name="p_rp4_rth2"></a>说明</p>
-</th>
-</tr>
-</thead>
-<tbody><tr id="row_repack4b_ret_row"><td class="cellrowborder" valign="top" width="40%" headers="mcps_rp4_r1 "><p id="p_rp4_ret_int"><a name="p_rp4_ret_int"></a><a name="p_rp4_ret_int"></a>int</p>
-</td>
-<td class="cellrowborder" valign="top" width="60%" headers="mcps_rp4_r2 "><p id="p_rp4_ret_desc"><a name="p_rp4_ret_desc"></a><a name="p_rp4_ret_desc"></a>正常运行时返回 0；PQFS 路径下 prev_batchsize 或 after_batchsize 为 0 时返回参数非法错误码；缓冲区不足等情况返回底层打包错误码。</p>
-</td>
-</tr>
-</tbody>
-</table>
+
+| 数据类型 | 说明 |
+| --- | --- |
+| int | 正常运行时返回 0；PQFS 路径下 prev_batchsize 或 after_batchsize 为 0 时返回参数非法错误码；缓冲区不足等情况返回底层打包错误码。 |
 
 **使用示例**
 
@@ -8773,116 +4491,26 @@ int krl\_reorder\_2\_vector\(const KRLDistanceHandle\* kdh, int64\_t base\_k, fl
 **参数说明<a name="section157501312135019"></a>**
 
 <a name="table1623016332509"></a>
-<table><thead align="left"><tr id="row823063355012"><th class="cellrowborder" valign="top" width="15.541554155415543%" id="mcps1.1.5.1.1"><p id="p1230333125010"><a name="p1230333125010"></a><a name="p1230333125010"></a>参数名称</p>
-</th>
-<th class="cellrowborder" valign="top" width="14.611461146114612%" id="mcps1.1.5.1.2"><p id="p089311158912"><a name="p089311158912"></a><a name="p089311158912"></a>数据类型</p>
-</th>
-<th class="cellrowborder" valign="top" width="29.532953295329534%" id="mcps1.1.5.1.3"><p id="p4230193313507"><a name="p4230193313507"></a><a name="p4230193313507"></a>描述</p>
-</th>
-<th class="cellrowborder" valign="top" width="40.31403140314032%" id="mcps1.1.5.1.4"><p id="p19887819256"><a name="p19887819256"></a><a name="p19887819256"></a>取值范围</p>
-</th>
-</tr>
-</thead>
-<tbody><tr id="row1823023318504"><td class="cellrowborder" valign="top" width="15.541554155415543%" headers="mcps1.1.5.1.1 "><p id="p14381721205612"><a name="p14381721205612"></a><a name="p14381721205612"></a>kdh</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.611461146114612%" headers="mcps1.1.5.1.2 "><p id="p7438122115569"><a name="p7438122115569"></a><a name="p7438122115569"></a>const KRLDistanceHandle*</p>
-</td>
-<td class="cellrowborder" valign="top" width="29.532953295329534%" headers="mcps1.1.5.1.3 "><p id="p18438121155616"><a name="p18438121155616"></a><a name="p18438121155616"></a>KRLDistanceHandle指针。</p>
-</td>
-<td class="cellrowborder" valign="top" width="40.31403140314032%" headers="mcps1.1.5.1.4 "><p id="p13438102185617"><a name="p13438102185617"></a><a name="p13438102185617"></a>限制非空。需使用krl_create_reorder_handle初始化。</p>
-</td>
-</tr>
-<tr id="row587315210197"><td class="cellrowborder" valign="top" width="15.541554155415543%" headers="mcps1.1.5.1.1 "><p id="p14873021151914"><a name="p14873021151914"></a><a name="p14873021151914"></a>base_k</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.611461146114612%" headers="mcps1.1.5.1.2 "><p id="p887382119197"><a name="p887382119197"></a><a name="p887382119197"></a>int64_t</p>
-</td>
-<td class="cellrowborder" valign="top" width="29.532953295329534%" headers="mcps1.1.5.1.3 "><p id="p287382118190"><a name="p287382118190"></a><a name="p287382118190"></a>使用低精度检索算法得到的候选点数量。</p>
-</td>
-<td class="cellrowborder" valign="top" width="40.31403140314032%" headers="mcps1.1.5.1.4 "><p id="p1487318214195"><a name="p1487318214195"></a><a name="p1487318214195"></a>[k,codes_num]，其中<span class="parmname" id="parmname03911818344"><a name="parmname03911818344"></a><a name="parmname03911818344"></a>“k”</span>为最近邻点数量，<span class="parmname" id="parmname23948153415"><a name="parmname23948153415"></a><a name="parmname23948153415"></a>“codes_num”</span>为每个查询向量计算的底库向量数量。</p>
-</td>
-</tr>
-<tr id="row18840143271918"><td class="cellrowborder" valign="top" width="15.541554155415543%" headers="mcps1.1.5.1.1 "><p id="p4840832111916"><a name="p4840832111916"></a><a name="p4840832111916"></a>base_dis</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.611461146114612%" headers="mcps1.1.5.1.2 "><p id="p68401332181920"><a name="p68401332181920"></a><a name="p68401332181920"></a>float*</p>
-</td>
-<td class="cellrowborder" valign="top" width="29.532953295329534%" headers="mcps1.1.5.1.3 "><p id="p08401632111917"><a name="p08401632111917"></a><a name="p08401632111917"></a>使用低精度检索算法得到的低精度距离。</p>
-</td>
-<td class="cellrowborder" valign="top" width="40.31403140314032%" headers="mcps1.1.5.1.4 "><p id="p20840123241914"><a name="p20840123241914"></a><a name="p20840123241914"></a>限制长度为base_k，其中<span class="parmname" id="parmname95721316125517"><a name="parmname95721316125517"></a><a name="parmname95721316125517"></a>“base_k”</span>为使用低精度检索算法得到的候选点数量。</p>
-</td>
-</tr>
-<tr id="row10982132445420"><td class="cellrowborder" valign="top" width="15.541554155415543%" headers="mcps1.1.5.1.1 "><p id="p734604031220"><a name="p734604031220"></a><a name="p734604031220"></a>base_idx</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.611461146114612%" headers="mcps1.1.5.1.2 "><p id="p7532158856"><a name="p7532158856"></a><a name="p7532158856"></a>int64_t*</p>
-</td>
-<td class="cellrowborder" valign="top" width="29.532953295329534%" headers="mcps1.1.5.1.3 "><p id="p36611261054"><a name="p36611261054"></a><a name="p36611261054"></a>使用低精度检索算法得到的候选点ID。</p>
-</td>
-<td class="cellrowborder" valign="top" width="40.31403140314032%" headers="mcps1.1.5.1.4 "><p id="p85127581355"><a name="p85127581355"></a><a name="p85127581355"></a>限制长度为base_k，其中<span class="parmname" id="parmname17965921181220"><a name="parmname17965921181220"></a><a name="parmname17965921181220"></a>“base_k”</span>为使用低精度检索算法得到的候选点数量。[-1,codes_num]，其中<span class="parmname" id="parmname880205993515"><a name="parmname880205993515"></a><a name="parmname880205993515"></a>“codes_num”</span>为每个查询向量计算的底库向量数量。ID需单调递增。若存在无需计算的占位符-1，则需要置于向量末尾。</p>
-</td>
-</tr>
-<tr id="row103951453161513"><td class="cellrowborder" valign="top" width="15.541554155415543%" headers="mcps1.1.5.1.1 "><p id="p14723141215409"><a name="p14723141215409"></a><a name="p14723141215409"></a>query_vector</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.611461146114612%" headers="mcps1.1.5.1.2 "><p id="p4723181210404"><a name="p4723181210404"></a><a name="p4723181210404"></a>const float*</p>
-</td>
-<td class="cellrowborder" valign="top" width="29.532953295329534%" headers="mcps1.1.5.1.3 "><p id="p672341218403"><a name="p672341218403"></a><a name="p672341218403"></a>查询向量数据。</p>
-</td>
-<td class="cellrowborder" valign="top" width="40.31403140314032%" headers="mcps1.1.5.1.4 "><p id="p6723181274010"><a name="p6723181274010"></a><a name="p6723181274010"></a>限制长度为query_vector_size，其中<span class="parmname" id="parmname14495193514370"><a name="parmname14495193514370"></a><a name="parmname14495193514370"></a>“query_vector_size”</span>为查询向量数组的长度。</p>
-</td>
-</tr>
-<tr id="row1875218456372"><td class="cellrowborder" valign="top" width="15.541554155415543%" headers="mcps1.1.5.1.1 "><p id="p564545281211"><a name="p564545281211"></a><a name="p564545281211"></a>k</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.611461146114612%" headers="mcps1.1.5.1.2 "><p id="p7753045173714"><a name="p7753045173714"></a><a name="p7753045173714"></a>int64_t</p>
-</td>
-<td class="cellrowborder" valign="top" width="29.532953295329534%" headers="mcps1.1.5.1.3 "><p id="p164563717334"><a name="p164563717334"></a><a name="p164563717334"></a>计算所得的最近邻点数量。</p>
-</td>
-<td class="cellrowborder" valign="top" width="40.31403140314032%" headers="mcps1.1.5.1.4 "><p id="p10984160193814"><a name="p10984160193814"></a><a name="p10984160193814"></a>[1,base_k]，其中<span class="parmname" id="parmname134564943817"><a name="parmname134564943817"></a><a name="parmname134564943817"></a>“base_k”</span>为使用低精度检索算法得到的候选点数量。</p>
-</td>
-</tr>
-<tr id="row1959261153015"><td class="cellrowborder" valign="top" width="15.541554155415543%" headers="mcps1.1.5.1.1 "><p id="p159201112305"><a name="p159201112305"></a><a name="p159201112305"></a>dis</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.611461146114612%" headers="mcps1.1.5.1.2 "><p id="p95921611183016"><a name="p95921611183016"></a><a name="p95921611183016"></a>float*</p>
-</td>
-<td class="cellrowborder" valign="top" width="29.532953295329534%" headers="mcps1.1.5.1.3 "><p id="p5592171115307"><a name="p5592171115307"></a><a name="p5592171115307"></a>存储计算所得的最近邻点与查询向量间的距离。</p>
-</td>
-<td class="cellrowborder" valign="top" width="40.31403140314032%" headers="mcps1.1.5.1.4 "><p id="p5592141183018"><a name="p5592141183018"></a><a name="p5592141183018"></a>限制长度为k，其中<span class="parmname" id="parmname1754134103818"><a name="parmname1754134103818"></a><a name="parmname1754134103818"></a>“k”</span>为最近邻点数量。需预先分配内存。</p>
-</td>
-</tr>
-<tr id="row8439920305"><td class="cellrowborder" valign="top" width="15.541554155415543%" headers="mcps1.1.5.1.1 "><p id="p1243209163013"><a name="p1243209163013"></a><a name="p1243209163013"></a>idx</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.611461146114612%" headers="mcps1.1.5.1.2 "><p id="p174410973020"><a name="p174410973020"></a><a name="p174410973020"></a>int64_t*</p>
-</td>
-<td class="cellrowborder" valign="top" width="29.532953295329534%" headers="mcps1.1.5.1.3 "><p id="p344169173011"><a name="p344169173011"></a><a name="p344169173011"></a>存储计算所得的最近邻点ID。</p>
-</td>
-<td class="cellrowborder" valign="top" width="40.31403140314032%" headers="mcps1.1.5.1.4 "><p id="p14445915305"><a name="p14445915305"></a><a name="p14445915305"></a>限制长度为k，其中<span class="parmname" id="parmname4523545103814"><a name="parmname4523545103814"></a><a name="parmname4523545103814"></a>“k”</span>为最近邻点数量。需预先分配内存。</p>
-</td>
-</tr>
-<tr id="row76471455191816"><td class="cellrowborder" valign="top" width="15.541554155415543%" headers="mcps1.1.5.1.1 "><p id="p16648125510182"><a name="p16648125510182"></a><a name="p16648125510182"></a>query_vector_size</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.611461146114612%" headers="mcps1.1.5.1.2 "><p id="p11648125510182"><a name="p11648125510182"></a><a name="p11648125510182"></a>size_t</p>
-</td>
-<td class="cellrowborder" valign="top" width="29.532953295329534%" headers="mcps1.1.5.1.3 "><p id="p06484557186"><a name="p06484557186"></a><a name="p06484557186"></a>查询向量数组的长度。</p>
-</td>
-<td class="cellrowborder" valign="top" width="40.31403140314032%" headers="mcps1.1.5.1.4 "><p id="p176481955171818"><a name="p176481955171818"></a><a name="p176481955171818"></a>dim，其中<span class="parmname" id="parmname1554714318208"><a name="parmname1554714318208"></a><a name="parmname1554714318208"></a>“dim”</span>为向量维度。</p>
-</td>
-</tr>
-</tbody>
-</table>
+
+| 参数名称 | 数据类型 | 描述 | 取值范围 |
+| --- | --- | --- | --- |
+| kdh | const KRLDistanceHandle* | KRLDistanceHandle指针。 | 限制非空。需使用krl_create_reorder_handle初始化。 |
+| base_k | int64_t | 使用低精度检索算法得到的候选点数量。 | [k,codes_num]，其中“k”为最近邻点数量，“codes_num”为每个查询向量计算的底库向量数量。 |
+| base_dis | float* | 使用低精度检索算法得到的低精度距离。 | 限制长度为base_k，其中“base_k”为使用低精度检索算法得到的候选点数量。 |
+| base_idx | int64_t* | 使用低精度检索算法得到的候选点ID。 | 限制长度为base_k，其中“base_k”为使用低精度检索算法得到的候选点数量。[-1,codes_num]，其中“codes_num”为每个查询向量计算的底库向量数量。ID需单调递增。若存在无需计算的占位符-1，则需要置于向量末尾。 |
+| query_vector | const float* | 查询向量数据。 | 限制长度为query_vector_size，其中“query_vector_size”为查询向量数组的长度。 |
+| k | int64_t | 计算所得的最近邻点数量。 | [1,base_k]，其中“base_k”为使用低精度检索算法得到的候选点数量。 |
+| dis | float* | 存储计算所得的最近邻点与查询向量间的距离。 | 限制长度为k，其中“k”为最近邻点数量。需预先分配内存。 |
+| idx | int64_t* | 存储计算所得的最近邻点ID。 | 限制长度为k，其中“k”为最近邻点数量。需预先分配内存。 |
+| query_vector_size | size_t | 查询向量数组的长度。 | dim，其中“dim”为向量维度。 |
 
 **返回值<a name="section49971832106"></a>**
 
 <a name="table17997635100"></a>
-<table><thead align="left"><tr id="row699763141018"><th class="cellrowborder" valign="top" width="40%" id="mcps1.1.3.1.1"><p id="p699793141012"><a name="p699793141012"></a><a name="p699793141012"></a>数据类型</p>
-</th>
-<th class="cellrowborder" valign="top" width="60%" id="mcps1.1.3.1.2"><p id="p1999763141020"><a name="p1999763141020"></a><a name="p1999763141020"></a>说明</p>
-</th>
-</tr>
-</thead>
-<tbody><tr id="row1599716361015"><td class="cellrowborder" valign="top" width="40%" headers="mcps1.1.3.1.1 "><p id="p39970319101"><a name="p39970319101"></a><a name="p39970319101"></a>int</p>
-</td>
-<td class="cellrowborder" valign="top" width="60%" headers="mcps1.1.3.1.2 "><p id="p53461032104518"><a name="p53461032104518"></a><a name="p53461032104518"></a>正常运行时返回0，异常退出返回对应错误码。</p>
-</td>
-</tr>
-</tbody>
-</table>
+
+| 数据类型 | 说明 |
+| --- | --- |
+| int | 正常运行时返回0，异常退出返回对应错误码。 |
 
 **使用示例**
 
@@ -8995,107 +4623,25 @@ int krl\_reorder\_2\_vector\_continuous\(const KRLDistanceHandle\* kdh, int64\_t
 **参数说明<a name="section157501312135019"></a>**
 
 <a name="table1623016332509"></a>
-<table><thead align="left"><tr id="row823063355012"><th class="cellrowborder" valign="top" width="15.541554155415543%" id="mcps1.1.5.1.1"><p id="p1230333125010"><a name="p1230333125010"></a><a name="p1230333125010"></a>参数名称</p>
-</th>
-<th class="cellrowborder" valign="top" width="14.611461146114612%" id="mcps1.1.5.1.2"><p id="p089311158912"><a name="p089311158912"></a><a name="p089311158912"></a>数据类型</p>
-</th>
-<th class="cellrowborder" valign="top" width="33.99339933993399%" id="mcps1.1.5.1.3"><p id="p4230193313507"><a name="p4230193313507"></a><a name="p4230193313507"></a>描述</p>
-</th>
-<th class="cellrowborder" valign="top" width="35.85358535853585%" id="mcps1.1.5.1.4"><p id="p19887819256"><a name="p19887819256"></a><a name="p19887819256"></a>取值范围</p>
-</th>
-</tr>
-</thead>
-<tbody><tr id="row1823023318504"><td class="cellrowborder" valign="top" width="15.541554155415543%" headers="mcps1.1.5.1.1 "><p id="p14381721205612"><a name="p14381721205612"></a><a name="p14381721205612"></a>kdh</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.611461146114612%" headers="mcps1.1.5.1.2 "><p id="p7438122115569"><a name="p7438122115569"></a><a name="p7438122115569"></a>const KRLDistanceHandle*</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p18438121155616"><a name="p18438121155616"></a><a name="p18438121155616"></a>KRLDistanceHandle指针。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p13438102185617"><a name="p13438102185617"></a><a name="p13438102185617"></a>限制非空，需使用krl_create_reorder_handle初始化。</p>
-</td>
-</tr>
-<tr id="row587315210197"><td class="cellrowborder" valign="top" width="15.541554155415543%" headers="mcps1.1.5.1.1 "><p id="p14873021151914"><a name="p14873021151914"></a><a name="p14873021151914"></a>base_k</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.611461146114612%" headers="mcps1.1.5.1.2 "><p id="p887382119197"><a name="p887382119197"></a><a name="p887382119197"></a>int64_t</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p287382118190"><a name="p287382118190"></a><a name="p287382118190"></a>使用低精度检索算法得到的候选点数量。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p1487318214195"><a name="p1487318214195"></a><a name="p1487318214195"></a>[k,codes_num]，其中<span class="parmname" id="parmname03911818344"><a name="parmname03911818344"></a><a name="parmname03911818344"></a>“k”</span>为最近邻点数量，<span class="parmname" id="parmname23948153415"><a name="parmname23948153415"></a><a name="parmname23948153415"></a>“codes_num”</span>为每个查询向量计算的底库向量数量。</p>
-</td>
-</tr>
-<tr id="row18840143271918"><td class="cellrowborder" valign="top" width="15.541554155415543%" headers="mcps1.1.5.1.1 "><p id="p4840832111916"><a name="p4840832111916"></a><a name="p4840832111916"></a>begin_id</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.611461146114612%" headers="mcps1.1.5.1.2 "><p id="p68401332181920"><a name="p68401332181920"></a><a name="p68401332181920"></a>int64_t</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p08401632111917"><a name="p08401632111917"></a><a name="p08401632111917"></a>参与计算的底库向量的起始ID</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p20840123241914"><a name="p20840123241914"></a><a name="p20840123241914"></a>[0,codes_num-base_k]，其中<span class="parmname" id="parmname465311317415"><a name="parmname465311317415"></a><a name="parmname465311317415"></a>“codes_num”</span>为每个查询向量计算的底库向量数量，<span class="parmname" id="parmname1943364604117"><a name="parmname1943364604117"></a><a name="parmname1943364604117"></a>“base_k”</span>为使用低精度检索算法得到的候选点数量。</p>
-</td>
-</tr>
-<tr id="row103951453161513"><td class="cellrowborder" valign="top" width="15.541554155415543%" headers="mcps1.1.5.1.1 "><p id="p14723141215409"><a name="p14723141215409"></a><a name="p14723141215409"></a>query_vector</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.611461146114612%" headers="mcps1.1.5.1.2 "><p id="p4723181210404"><a name="p4723181210404"></a><a name="p4723181210404"></a>const float*</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p672341218403"><a name="p672341218403"></a><a name="p672341218403"></a>查询向量数据。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p6723181274010"><a name="p6723181274010"></a><a name="p6723181274010"></a>限制长度为query_vector_size，其中<span class="parmname" id="parmname14495193514370"><a name="parmname14495193514370"></a><a name="parmname14495193514370"></a>“query_vector_size”</span>为查询向量数组的长度。</p>
-</td>
-</tr>
-<tr id="row1875218456372"><td class="cellrowborder" valign="top" width="15.541554155415543%" headers="mcps1.1.5.1.1 "><p id="p564545281211"><a name="p564545281211"></a><a name="p564545281211"></a>k</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.611461146114612%" headers="mcps1.1.5.1.2 "><p id="p7753045173714"><a name="p7753045173714"></a><a name="p7753045173714"></a>int64_t</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p164563717334"><a name="p164563717334"></a><a name="p164563717334"></a>计算所得的最近邻点数量。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p10984160193814"><a name="p10984160193814"></a><a name="p10984160193814"></a>[1,base_k]，其中<span class="parmname" id="parmname134564943817"><a name="parmname134564943817"></a><a name="parmname134564943817"></a>“base_k”</span>为使用低精度检索算法得到的候选点数量。</p>
-</td>
-</tr>
-<tr id="row1959261153015"><td class="cellrowborder" valign="top" width="15.541554155415543%" headers="mcps1.1.5.1.1 "><p id="p159201112305"><a name="p159201112305"></a><a name="p159201112305"></a>dis</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.611461146114612%" headers="mcps1.1.5.1.2 "><p id="p95921611183016"><a name="p95921611183016"></a><a name="p95921611183016"></a>float*</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p5592171115307"><a name="p5592171115307"></a><a name="p5592171115307"></a>存储计算所得的最近邻点与查询向量间的距离。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p5592141183018"><a name="p5592141183018"></a><a name="p5592141183018"></a>限制长度为k，其中<span class="parmname" id="parmname1754134103818"><a name="parmname1754134103818"></a><a name="parmname1754134103818"></a>“k”</span>为最近邻点数量。需预先分配内存。</p>
-</td>
-</tr>
-<tr id="row8439920305"><td class="cellrowborder" valign="top" width="15.541554155415543%" headers="mcps1.1.5.1.1 "><p id="p1243209163013"><a name="p1243209163013"></a><a name="p1243209163013"></a>idx</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.611461146114612%" headers="mcps1.1.5.1.2 "><p id="p174410973020"><a name="p174410973020"></a><a name="p174410973020"></a>int64_t*</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p344169173011"><a name="p344169173011"></a><a name="p344169173011"></a>存储计算所得的最近邻点ID。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p14445915305"><a name="p14445915305"></a><a name="p14445915305"></a>限制长度为k，其中<span class="parmname" id="parmname4523545103814"><a name="parmname4523545103814"></a><a name="parmname4523545103814"></a>“k”</span>为最近邻点数量。需预先分配内存。</p>
-</td>
-</tr>
-<tr id="row355263412118"><td class="cellrowborder" valign="top" width="15.541554155415543%" headers="mcps1.1.5.1.1 "><p id="p16648125510182"><a name="p16648125510182"></a><a name="p16648125510182"></a>query_vector_size</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.611461146114612%" headers="mcps1.1.5.1.2 "><p id="p11648125510182"><a name="p11648125510182"></a><a name="p11648125510182"></a>size_t</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p06484557186"><a name="p06484557186"></a><a name="p06484557186"></a>查询向量数组的长度。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p176481955171818"><a name="p176481955171818"></a><a name="p176481955171818"></a>dim，其中<span class="parmname" id="parmname1554714318208"><a name="parmname1554714318208"></a><a name="parmname1554714318208"></a>“dim”</span>为向量维度。</p>
-</td>
-</tr>
-</tbody>
-</table>
+
+| 参数名称 | 数据类型 | 描述 | 取值范围 |
+| --- | --- | --- | --- |
+| kdh | const KRLDistanceHandle* | KRLDistanceHandle指针。 | 限制非空，需使用krl_create_reorder_handle初始化。 |
+| base_k | int64_t | 使用低精度检索算法得到的候选点数量。 | [k,codes_num]，其中“k”为最近邻点数量，“codes_num”为每个查询向量计算的底库向量数量。 |
+| begin_id | int64_t | 参与计算的底库向量的起始ID | [0,codes_num-base_k]，其中“codes_num”为每个查询向量计算的底库向量数量，“base_k”为使用低精度检索算法得到的候选点数量。 |
+| query_vector | const float* | 查询向量数据。 | 限制长度为query_vector_size，其中“query_vector_size”为查询向量数组的长度。 |
+| k | int64_t | 计算所得的最近邻点数量。 | [1,base_k]，其中“base_k”为使用低精度检索算法得到的候选点数量。 |
+| dis | float* | 存储计算所得的最近邻点与查询向量间的距离。 | 限制长度为k，其中“k”为最近邻点数量。需预先分配内存。 |
+| idx | int64_t* | 存储计算所得的最近邻点ID。 | 限制长度为k，其中“k”为最近邻点数量。需预先分配内存。 |
+| query_vector_size | size_t | 查询向量数组的长度。 | dim，其中“dim”为向量维度。 |
 
 **返回值<a name="section49971832106"></a>**
 
 <a name="table17997635100"></a>
-<table><thead align="left"><tr id="row699763141018"><th class="cellrowborder" valign="top" width="40%" id="mcps1.1.3.1.1"><p id="p699793141012"><a name="p699793141012"></a><a name="p699793141012"></a>数据类型</p>
-</th>
-<th class="cellrowborder" valign="top" width="60%" id="mcps1.1.3.1.2"><p id="p1999763141020"><a name="p1999763141020"></a><a name="p1999763141020"></a>说明</p>
-</th>
-</tr>
-</thead>
-<tbody><tr id="row1599716361015"><td class="cellrowborder" valign="top" width="40%" headers="mcps1.1.3.1.1 "><p id="p39970319101"><a name="p39970319101"></a><a name="p39970319101"></a>int</p>
-</td>
-<td class="cellrowborder" valign="top" width="60%" headers="mcps1.1.3.1.2 "><p id="p53461032104518"><a name="p53461032104518"></a><a name="p53461032104518"></a>正常运行时返回0，异常退出返回对应错误码。</p>
-</td>
-</tr>
-</tbody>
-</table>
+
+| 数据类型 | 说明 |
+| --- | --- |
+| int | 正常运行时返回0，异常退出返回对应错误码。 |
 
 **使用示例**
 
@@ -9196,53 +4742,19 @@ int krl\_store\_LUT8Handle\(FILE\* f, const KRLLUT8bHandle\* klh\);
 **参数说明<a name="section157501312135019"></a>**
 
 <a name="table1623016332509"></a>
-<table><thead align="left"><tr id="row823063355012"><th class="cellrowborder" valign="top" width="15.541554155415543%" id="mcps1.1.5.1.1"><p id="p1230333125010"><a name="p1230333125010"></a><a name="p1230333125010"></a>参数名称</p>
-</th>
-<th class="cellrowborder" valign="top" width="14.611461146114612%" id="mcps1.1.5.1.2"><p id="p089311158912"><a name="p089311158912"></a><a name="p089311158912"></a>数据类型</p>
-</th>
-<th class="cellrowborder" valign="top" width="33.99339933993399%" id="mcps1.1.5.1.3"><p id="p4230193313507"><a name="p4230193313507"></a><a name="p4230193313507"></a>描述</p>
-</th>
-<th class="cellrowborder" valign="top" width="35.85358535853585%" id="mcps1.1.5.1.4"><p id="p19887819256"><a name="p19887819256"></a><a name="p19887819256"></a>取值范围</p>
-</th>
-</tr>
-</thead>
-<tbody><tr id="row1823023318504"><td class="cellrowborder" valign="top" width="15.541554155415543%" headers="mcps1.1.5.1.1 "><p id="p14381721205612"><a name="p14381721205612"></a><a name="p14381721205612"></a>f</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.611461146114612%" headers="mcps1.1.5.1.2 "><p id="p7438122115569"><a name="p7438122115569"></a><a name="p7438122115569"></a>FILE*</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p1018720320568"><a name="p1018720320568"></a><a name="p1018720320568"></a>写入的文件句柄。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p4187123185620"><a name="p4187123185620"></a><a name="p4187123185620"></a>限制非空。</p>
-</td>
-</tr>
-<tr id="row587315210197"><td class="cellrowborder" valign="top" width="15.541554155415543%" headers="mcps1.1.5.1.1 "><p id="p14873021151914"><a name="p14873021151914"></a><a name="p14873021151914"></a>klh</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.611461146114612%" headers="mcps1.1.5.1.2 "><p id="p887382119197"><a name="p887382119197"></a><a name="p887382119197"></a>const KRLLUT8bHandle*</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p287382118190"><a name="p287382118190"></a><a name="p287382118190"></a>KRLLUT8bHandle指针。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p1487318214195"><a name="p1487318214195"></a><a name="p1487318214195"></a>限制非空。</p>
-</td>
-</tr>
-</tbody>
-</table>
+
+| 参数名称 | 数据类型 | 描述 | 取值范围 |
+| --- | --- | --- | --- |
+| f | FILE* | 写入的文件句柄。 | 限制非空。 |
+| klh | const KRLLUT8bHandle* | KRLLUT8bHandle指针。 | 限制非空。 |
 
 **返回值<a name="section49971832106"></a>**
 
 <a name="table17997635100"></a>
-<table><thead align="left"><tr id="row699763141018"><th class="cellrowborder" valign="top" width="40%" id="mcps1.1.3.1.1"><p id="p699793141012"><a name="p699793141012"></a><a name="p699793141012"></a>数据类型</p>
-</th>
-<th class="cellrowborder" valign="top" width="60%" id="mcps1.1.3.1.2"><p id="p1999763141020"><a name="p1999763141020"></a><a name="p1999763141020"></a>说明</p>
-</th>
-</tr>
-</thead>
-<tbody><tr id="row1599716361015"><td class="cellrowborder" valign="top" width="40%" headers="mcps1.1.3.1.1 "><p id="p39970319101"><a name="p39970319101"></a><a name="p39970319101"></a>int</p>
-</td>
-<td class="cellrowborder" valign="top" width="60%" headers="mcps1.1.3.1.2 "><p id="p53461032104518"><a name="p53461032104518"></a><a name="p53461032104518"></a>正常运行时返回0，异常退出返回对应错误码。</p>
-</td>
-</tr>
-</tbody>
-</table>
+
+| 数据类型 | 说明 |
+| --- | --- |
+| int | 正常运行时返回0，异常退出返回对应错误码。 |
 
 **使用示例**
 
@@ -9353,53 +4865,19 @@ int krl\_build\_LUT8Handle\_fromfile\(FILE\* f, KRLLUT8bHandle\*\* klh\);
 **参数说明<a name="section157501312135019"></a>**
 
 <a name="table1623016332509"></a>
-<table><thead align="left"><tr id="row823063355012"><th class="cellrowborder" valign="top" width="15.541554155415543%" id="mcps1.1.5.1.1"><p id="p1230333125010"><a name="p1230333125010"></a><a name="p1230333125010"></a>参数名称</p>
-</th>
-<th class="cellrowborder" valign="top" width="14.611461146114612%" id="mcps1.1.5.1.2"><p id="p089311158912"><a name="p089311158912"></a><a name="p089311158912"></a>数据类型</p>
-</th>
-<th class="cellrowborder" valign="top" width="33.99339933993399%" id="mcps1.1.5.1.3"><p id="p4230193313507"><a name="p4230193313507"></a><a name="p4230193313507"></a>描述</p>
-</th>
-<th class="cellrowborder" valign="top" width="35.85358535853585%" id="mcps1.1.5.1.4"><p id="p19887819256"><a name="p19887819256"></a><a name="p19887819256"></a>取值范围</p>
-</th>
-</tr>
-</thead>
-<tbody><tr id="row1823023318504"><td class="cellrowborder" valign="top" width="15.541554155415543%" headers="mcps1.1.5.1.1 "><p id="p14381721205612"><a name="p14381721205612"></a><a name="p14381721205612"></a>f</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.611461146114612%" headers="mcps1.1.5.1.2 "><p id="p7438122115569"><a name="p7438122115569"></a><a name="p7438122115569"></a>FILE*</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p6717120145712"><a name="p6717120145712"></a><a name="p6717120145712"></a>读取的文件句柄。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p4187123185620"><a name="p4187123185620"></a><a name="p4187123185620"></a>限制非空。</p>
-</td>
-</tr>
-<tr id="row587315210197"><td class="cellrowborder" valign="top" width="15.541554155415543%" headers="mcps1.1.5.1.1 "><p id="p14873021151914"><a name="p14873021151914"></a><a name="p14873021151914"></a>klh</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.611461146114612%" headers="mcps1.1.5.1.2 "><p id="p887382119197"><a name="p887382119197"></a><a name="p887382119197"></a>KRLLUT8bHandle*</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p287382118190"><a name="p287382118190"></a><a name="p287382118190"></a>KRLLUT8bHandle指针。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p1487318214195"><a name="p1487318214195"></a><a name="p1487318214195"></a>限制非空。</p>
-</td>
-</tr>
-</tbody>
-</table>
+
+| 参数名称 | 数据类型 | 描述 | 取值范围 |
+| --- | --- | --- | --- |
+| f | FILE* | 读取的文件句柄。 | 限制非空。 |
+| klh | KRLLUT8bHandle* | KRLLUT8bHandle指针。 | 限制非空。 |
 
 **返回值<a name="section49971832106"></a>**
 
 <a name="table17997635100"></a>
-<table><thead align="left"><tr id="row699763141018"><th class="cellrowborder" valign="top" width="40%" id="mcps1.1.3.1.1"><p id="p699793141012"><a name="p699793141012"></a><a name="p699793141012"></a>数据类型</p>
-</th>
-<th class="cellrowborder" valign="top" width="60%" id="mcps1.1.3.1.2"><p id="p1999763141020"><a name="p1999763141020"></a><a name="p1999763141020"></a>说明</p>
-</th>
-</tr>
-</thead>
-<tbody><tr id="row1599716361015"><td class="cellrowborder" valign="top" width="40%" headers="mcps1.1.3.1.1 "><p id="p39970319101"><a name="p39970319101"></a><a name="p39970319101"></a>int</p>
-</td>
-<td class="cellrowborder" valign="top" width="60%" headers="mcps1.1.3.1.2 "><p id="p53461032104518"><a name="p53461032104518"></a><a name="p53461032104518"></a>正常运行时返回0，异常退出返回对应错误码。</p>
-</td>
-</tr>
-</tbody>
-</table>
+
+| 数据类型 | 说明 |
+| --- | --- |
+| int | 正常运行时返回0，异常退出返回对应错误码。 |
 
 **使用示例**
 
@@ -9510,53 +4988,19 @@ int krl\_store\_distanceHandle\(FILE\* f, const KRLDistanceHandle\* kdh\);
 **参数说明<a name="section157501312135019"></a>**
 
 <a name="table1623016332509"></a>
-<table><thead align="left"><tr id="row823063355012"><th class="cellrowborder" valign="top" width="15.541554155415543%" id="mcps1.1.5.1.1"><p id="p1230333125010"><a name="p1230333125010"></a><a name="p1230333125010"></a>参数名称</p>
-</th>
-<th class="cellrowborder" valign="top" width="14.611461146114612%" id="mcps1.1.5.1.2"><p id="p089311158912"><a name="p089311158912"></a><a name="p089311158912"></a>数据类型</p>
-</th>
-<th class="cellrowborder" valign="top" width="33.99339933993399%" id="mcps1.1.5.1.3"><p id="p4230193313507"><a name="p4230193313507"></a><a name="p4230193313507"></a>描述</p>
-</th>
-<th class="cellrowborder" valign="top" width="35.85358535853585%" id="mcps1.1.5.1.4"><p id="p19887819256"><a name="p19887819256"></a><a name="p19887819256"></a>取值范围</p>
-</th>
-</tr>
-</thead>
-<tbody><tr id="row1823023318504"><td class="cellrowborder" valign="top" width="15.541554155415543%" headers="mcps1.1.5.1.1 "><p id="p14381721205612"><a name="p14381721205612"></a><a name="p14381721205612"></a>f</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.611461146114612%" headers="mcps1.1.5.1.2 "><p id="p7438122115569"><a name="p7438122115569"></a><a name="p7438122115569"></a>FILE*</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p1018720320568"><a name="p1018720320568"></a><a name="p1018720320568"></a>写入的文件句柄。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p4187123185620"><a name="p4187123185620"></a><a name="p4187123185620"></a>限制非空。</p>
-</td>
-</tr>
-<tr id="row587315210197"><td class="cellrowborder" valign="top" width="15.541554155415543%" headers="mcps1.1.5.1.1 "><p id="p123371053104616"><a name="p123371053104616"></a><a name="p123371053104616"></a>kdh</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.611461146114612%" headers="mcps1.1.5.1.2 "><p id="p9468096466"><a name="p9468096466"></a><a name="p9468096466"></a>const KRLDistanceHandle*</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p287382118190"><a name="p287382118190"></a><a name="p287382118190"></a>KRLDistanceHandle指针。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p1487318214195"><a name="p1487318214195"></a><a name="p1487318214195"></a>限制非空。</p>
-</td>
-</tr>
-</tbody>
-</table>
+
+| 参数名称 | 数据类型 | 描述 | 取值范围 |
+| --- | --- | --- | --- |
+| f | FILE* | 写入的文件句柄。 | 限制非空。 |
+| kdh | const KRLDistanceHandle* | KRLDistanceHandle指针。 | 限制非空。 |
 
 **返回值<a name="section49971832106"></a>**
 
 <a name="table17997635100"></a>
-<table><thead align="left"><tr id="row699763141018"><th class="cellrowborder" valign="top" width="40%" id="mcps1.1.3.1.1"><p id="p699793141012"><a name="p699793141012"></a><a name="p699793141012"></a>数据类型</p>
-</th>
-<th class="cellrowborder" valign="top" width="60%" id="mcps1.1.3.1.2"><p id="p1999763141020"><a name="p1999763141020"></a><a name="p1999763141020"></a>说明</p>
-</th>
-</tr>
-</thead>
-<tbody><tr id="row1599716361015"><td class="cellrowborder" valign="top" width="40%" headers="mcps1.1.3.1.1 "><p id="p39970319101"><a name="p39970319101"></a><a name="p39970319101"></a>int</p>
-</td>
-<td class="cellrowborder" valign="top" width="60%" headers="mcps1.1.3.1.2 "><p id="p53461032104518"><a name="p53461032104518"></a><a name="p53461032104518"></a>正常运行时返回0，异常退出返回对应错误码。</p>
-</td>
-</tr>
-</tbody>
-</table>
+
+| 数据类型 | 说明 |
+| --- | --- |
+| int | 正常运行时返回0，异常退出返回对应错误码。 |
 
 **使用示例**
 
@@ -9666,100 +5110,35 @@ int krl\_build\_distanceHandle\_fromfile\(FILE\* f, KRLDistanceHandle\*\* kdh\);
 **参数说明<a name="section157501312135019"></a>**
 
 <a name="table1623016332509"></a>
-<table><thead align="left"><tr id="row823063355012"><th class="cellrowborder" valign="top" width="15.541554155415543%" id="mcps1.1.5.1.1"><p id="p1230333125010"><a name="p1230333125010"></a><a name="p1230333125010"></a>参数名称</p>
-</th>
-<th class="cellrowborder" valign="top" width="14.611461146114612%" id="mcps1.1.5.1.2"><p id="p089311158912"><a name="p089311158912"></a><a name="p089311158912"></a>数据类型</p>
-</th>
-<th class="cellrowborder" valign="top" width="33.99339933993399%" id="mcps1.1.5.1.3"><p id="p4230193313507"><a name="p4230193313507"></a><a name="p4230193313507"></a>描述</p>
-</th>
-<th class="cellrowborder" valign="top" width="35.85358535853585%" id="mcps1.1.5.1.4"><p id="p19887819256"><a name="p19887819256"></a><a name="p19887819256"></a>取值范围</p>
-</th>
-</tr>
-</thead>
-<tbody><tr id="row1823023318504"><td class="cellrowborder" valign="top" width="15.541554155415543%" headers="mcps1.1.5.1.1 "><p id="p14381721205612"><a name="p14381721205612"></a><a name="p14381721205612"></a>f</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.611461146114612%" headers="mcps1.1.5.1.2 "><p id="p7438122115569"><a name="p7438122115569"></a><a name="p7438122115569"></a>FILE*</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p6717120145712"><a name="p6717120145712"></a><a name="p6717120145712"></a>读取的文件句柄。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p4187123185620"><a name="p4187123185620"></a><a name="p4187123185620"></a>限制非空。</p>
-</td>
-</tr>
-<tr id="row587315210197"><td class="cellrowborder" valign="top" width="15.541554155415543%" headers="mcps1.1.5.1.1 "><p id="p123371053104616"><a name="p123371053104616"></a><a name="p123371053104616"></a>kdh</p>
-</td>
-<td class="cellrowborder" valign="top" width="14.611461146114612%" headers="mcps1.1.5.1.2 "><p id="p9468096466"><a name="p9468096466"></a><a name="p9468096466"></a>const KRLDistanceHandle*</p>
-</td>
-<td class="cellrowborder" valign="top" width="33.99339933993399%" headers="mcps1.1.5.1.3 "><p id="p287382118190"><a name="p287382118190"></a><a name="p287382118190"></a>KRLDistanceHandle指针。</p>
-</td>
-<td class="cellrowborder" valign="top" width="35.85358535853585%" headers="mcps1.1.5.1.4 "><p id="p1487318214195"><a name="p1487318214195"></a><a name="p1487318214195"></a>限制非空。</p>
-</td>
-</tr>
-</tbody>
-</table>
+
+| 参数名称 | 数据类型 | 描述 | 取值范围 |
+| --- | --- | --- | --- |
+| f | FILE* | 读取的文件句柄。 | 限制非空。 |
+| kdh | const KRLDistanceHandle* | KRLDistanceHandle指针。 | 限制非空。 |
 
 **返回值<a name="section49971832106"></a>**
 
 <a name="table17997635100"></a>
-<table><thead align="left"><tr id="row699763141018"><th class="cellrowborder" valign="top" width="40%" id="mcps1.1.3.1.1"><p id="p699793141012"><a name="p699793141012"></a><a name="p699793141012"></a>数据类型</p>
-</th>
-<th class="cellrowborder" valign="top" width="60%" id="mcps1.1.3.1.2"><p id="p1999763141020"><a name="p1999763141020"></a><a name="p1999763141020"></a>说明</p>
-</th>
-</tr>
-</thead>
-<tbody><tr id="row1599716361015"><td class="cellrowborder" valign="top" width="40%" headers="mcps1.1.3.1.1 "><p id="p39970319101"><a name="p39970319101"></a><a name="p39970319101"></a>int</p>
-</td>
-<td class="cellrowborder" valign="top" width="60%" headers="mcps1.1.3.1.2 "><p id="p53461032104518"><a name="p53461032104518"></a><a name="p53461032104518"></a>正常运行时返回0，异常退出返回对应错误码。</p>
-</td>
-</tr>
-</tbody>
-</table>
+
+| 数据类型 | 说明 |
+| --- | --- |
+| int | 正常运行时返回0，异常退出返回对应错误码。 |
 
 ## 错误码
 
+本章节介绍错误码。
+
 <a name="table17997635100"></a>
-<table><thead align="left"><tr id="row699763141018"><th class="cellrowborder" valign="top" width="40%" id="mcps1.1.3.1.1"><p id="p699793141012"><a name="p699793141012"></a><a name="p699793141012"></a>错误码</p>
-</th>
-<th class="cellrowborder" valign="top" width="60%" id="mcps1.1.3.1.2"><p id="p1999763141020"><a name="p1999763141020"></a><a name="p1999763141020"></a>说明</p>
-</th>
-</tr>
-</thead>
-<tbody><tr id="row1599716361015"><td class="cellrowborder" valign="top" width="40%" headers="mcps1.1.3.1.1 "><p id="p39970319101"><a name="p39970319101"></a><a name="p39970319101"></a>0</p>
-</td>
-<td class="cellrowborder" valign="top" width="60%" headers="mcps1.1.3.1.2 "><p id="p53461032104518"><a name="p53461032104518"></a><a name="p53461032104518"></a>正常运行时返回0。</p>
-</td>
-</tr>
-<tr id="row2932411194415"><td class="cellrowborder" valign="top" width="40%" headers="mcps1.1.3.1.1 "><p id="p99338112449"><a name="p99338112449"></a><a name="p99338112449"></a>-1</p>
-</td>
-<td class="cellrowborder" valign="top" width="60%" headers="mcps1.1.3.1.2 "><p id="p8763115484411"><a name="p8763115484411"></a><a name="p8763115484411"></a>非法指针。</p>
-</td>
-</tr>
-<tr id="row1410418141442"><td class="cellrowborder" valign="top" width="40%" headers="mcps1.1.3.1.1 "><p id="p810461414413"><a name="p810461414413"></a><a name="p810461414413"></a>-2</p>
-</td>
-<td class="cellrowborder" valign="top" width="60%" headers="mcps1.1.3.1.2 "><p id="p7104191418447"><a name="p7104191418447"></a><a name="p7104191418447"></a>内存分配失败。</p>
-</td>
-</tr>
-<tr id="row628451718442"><td class="cellrowborder" valign="top" width="40%" headers="mcps1.1.3.1.1 "><p id="p2028411717447"><a name="p2028411717447"></a><a name="p2028411717447"></a>-3</p>
-</td>
-<td class="cellrowborder" valign="top" width="60%" headers="mcps1.1.3.1.2 "><p id="p728431784411"><a name="p728431784411"></a><a name="p728431784411"></a>非法入参。</p>
-</td>
-</tr>
-<tr id="row3524122294419"><td class="cellrowborder" valign="top" width="40%" headers="mcps1.1.3.1.1 "><p id="p20524162216440"><a name="p20524162216440"></a><a name="p20524162216440"></a>-4</p>
-</td>
-<td class="cellrowborder" valign="top" width="60%" headers="mcps1.1.3.1.2 "><p id="p18524122210449"><a name="p18524122210449"></a><a name="p18524122210449"></a>双重释放。</p>
-</td>
-</tr>
-<tr id="row8864111915443"><td class="cellrowborder" valign="top" width="40%" headers="mcps1.1.3.1.1 "><p id="p0864219184413"><a name="p0864219184413"></a><a name="p0864219184413"></a>-5</p>
-</td>
-<td class="cellrowborder" valign="top" width="60%" headers="mcps1.1.3.1.2 "><p id="p786412199445"><a name="p786412199445"></a><a name="p786412199445"></a>不安全内存操作。</p>
-</td>
-</tr>
-<tr id="row114641147134412"><td class="cellrowborder" valign="top" width="40%" headers="mcps1.1.3.1.1 "><p id="p746415479447"><a name="p746415479447"></a><a name="p746415479447"></a>-6</p>
-</td>
-<td class="cellrowborder" valign="top" width="60%" headers="mcps1.1.3.1.2 "><p id="p14640472441"><a name="p14640472441"></a><a name="p14640472441"></a>IO失败。</p>
-</td>
-</tr>
-</tbody>
-</table>
+
+| 错误码 | 说明 |
+| --- | --- |
+| 0 | 正常运行时返回0。 |
+| -1 | 非法指针。 |
+| -2 | 内存分配失败。 |
+| -3 | 非法入参。 |
+| -4 | 双重释放。 |
+| -5 | 不安全内存操作。 |
+| -6 | IO失败。 |
 
 **使用示例**
 
@@ -9855,3 +5234,9 @@ int main() {
     return 0;
 }
 ```
+
+## 修订记录
+
+|文档版本|发布日期|修改说明|
+|--|--|--|
+|01|2026-06-30|第一次正式发布。|
