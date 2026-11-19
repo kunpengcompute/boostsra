@@ -185,7 +185,7 @@ KDNN主要在以下场景中使用：
 
 ## License
 
-本项目的文档适用CC-BY 4.0许可证，具体请参见[LICENSE](LICENSE)文件。 
+本项目的文档适用CC-BY 4.0许可证，具体请参见[LICENSE](../../LICENSE)文件。 
 
 ## 贡献声明
 

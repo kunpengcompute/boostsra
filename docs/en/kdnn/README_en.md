@@ -187,7 +187,7 @@ If you do not want your model or dataset to be mentioned in this project, or if 
 
 ## License
 
-The documents of this project are licensed under CC-BY 4.0. For details, see [LICENSE](LICENSE).
+The documents of this project are licensed under CC-BY 4.0. For details, see [LICENSE](../../LICENSE).
 
 ## Contribution Statement
 
