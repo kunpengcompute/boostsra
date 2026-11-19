@@ -1,6 +1,8 @@
 # API Reference
 
-<!-- md-trans-meta sourceCommit=4eb6b6efe8cf09750f757775bf08ea189a284a2d translatedAt=2026-11-03T08:58:34.403Z pushedAt=2026-11-04T01:07:09.483Z -->
+<!-- md-trans-meta sourceCommit=a57b2897e93fc31c514b6c959fb73385dfbd7e2e translatedAt=2026-11-12T08:58:34.403Z pushedAt=2026-11-13T01:07:09.483Z -->
+
+This document describes the operators supported by KDNN and provides detailed instructions, for developers who need to understand the types and functions of KDNN operators.
 
 ## KDNN Operators
 
@@ -8,7 +10,7 @@
 
 [**Table 1** Operators available in KDNN](#operators-available-in-kdnn) lists the operators available in KDNN.
 
-**Table 1** Operators available in KDNN <a id="operators-available-in-kdnn"></a>
+**Table 1** Operators available in KDNN<a id="operators-available-in-kdnn"></a>
 
 <a name="zh-cn_topic_0000001831166845_zh-cn_topic_0000001135499637_table2979mcpsimp"></a>
 <table><thead align="left"><tr id="zh-cn_topic_0000001831166845_zh-cn_topic_0000001135499637_row2986mcpsimp"><th class="cellrowborder" valign="top" width="39.989999999999995%" id="mcps1.2.3.1.1"><p id="zh-cn_topic_0000001831166845_zh-cn_topic_0000001135499637_p2988mcpsimp"><a name="zh-cn_topic_0000001831166845_zh-cn_topic_0000001135499637_p2988mcpsimp"></a><a name="zh-cn_topic_0000001831166845_zh-cn_topic_0000001135499637_p2988mcpsimp"></a>Operator</p>
@@ -119,7 +121,7 @@
 </tr>
 <tr id="row169821152185911"><td class="cellrowborder" valign="top" width="39.989999999999995%" headers="mcps1.2.3.1.1 "><p id="p18983125255920"><a name="p18983125255920"></a><a name="p18983125255920"></a>SparseGemm</p>
 </td>
-<td class="cellrowborder" valign="top" width="60.01%" headers="mcps1.2.3.1.2 "><p id="p189839529591"><a name="p189839529591"></a><a name="p189839529591"></a> Sparse matrix multiplication operator</p>
+<td class="cellrowborder" valign="top" width="60.01%" headers="mcps1.2.3.1.2 "><p id="p189839529591"><a name="p189839529591"></a><a name="p189839529591"></a>Sparse matrix multiplication operator</p>
 </td>
 </tr>
 </tbody>
@@ -137,7 +139,7 @@ Performs operations of the same type on each element in a tensor, including abs,
 
 **Formula<a name="section18781135743213"></a>**
 
-![formula image](figures/zh-cn_formulaimage_0000002549751371.png)
+![Eltwise operator formula](figures/zh-cn_formulaimage_0000002549751371.png)
 
 [**Table 1** Operation types](#operation-types) describes the operations supported by the Eltwise operator.
 
@@ -431,13 +433,13 @@ Performs layer normalization.
 
 The formula of the layer normalization operator in the case of three dimensions is as follows:
 
-![](figures/zh-cn_formulaimage_0000002518231564.png)
+![Layer normalization operator formula in the 3D case](figures/zh-cn_formulaimage_0000002518231564.png)
 
 The mean and variance can be calculated at run time or provided by the user. To calculate the two values at run time, use the following formulas:
 
-![](figures/zh-cn_formulaimage_0000002549751331.png)
+![Formula for calculating the mean at run time](figures/zh-cn_formulaimage_0000002549751331.png)
 
-![](figures/zh-cn_formulaimage_0000002549871327.png)
+![Formula for calculating the variance at run time](figures/zh-cn_formulaimage_0000002549871327.png)
 
 [**Table 1** Formula parameters](#formula-parameters-1) describes the parameters in the formulas.
 
@@ -627,7 +629,7 @@ Calculates the matrix inner product.
 
 In a 2D case, the formula for calculating the matrix inner product is as follows:
 
-![](figures/zh-cn_formulaimage_0000002518231570.png)
+![Matrix inner product formula in the 2D case](figures/zh-cn_formulaimage_0000002518231570.png)
 
 High-dimensional tensors are flattened into 2D tensors for calculation.
 
@@ -887,7 +889,7 @@ Performs the Softmax function operation along a data dimension.
 
 **Formula<a name="section11971945184214"></a>**
 
-![](figures/zh-cn_formulaimage_0000002549871357.png)
+![Softmax operator formula](figures/zh-cn_formulaimage_0000002549871357.png)
 
 **Table 1** Formula parameters<a id="formula-parameters-3"></a>
 
@@ -1047,7 +1049,7 @@ Calculates the sum of N tensors.
 
 **Formula<a name="section14477516144410"></a>**
 
-![](figures/zh-cn_formulaimage_0000002518391498.png)
+![Sum operator formula](figures/zh-cn_formulaimage_0000002518391498.png)
 
 **Table 1** Formula parameters<a id="formula-parameters-4"></a>
 
@@ -1194,13 +1196,13 @@ Performs matrix multiplication.
 
 **Formula<a name="section1277182184518"></a>**
 
-- 2D Tensor
+- 2D tensor
 
-    ![](figures/zh-cn_formulaimage_0000002518391492.png)
+    ![Formula for 2D tensors](figures/zh-cn_formulaimage_0000002518391492.png)
 
 - High-dimensional tensor
 
-    ![](figures/zh-cn_formulaimage_0000002549871349.png)
+    ![Formula for high-dimensional tensors](figures/zh-cn_formulaimage_0000002549871349.png)
 
     **Table 1** Formula parameters<a id="formula-parameters-5"></a>
 
@@ -1370,7 +1372,7 @@ Performs convolution.
 
 General 2D convolution calculation formula:
 
-![](figures/zh-cn_formulaimage_0000002549871359.png)
+![General 2D convolution formula](figures/zh-cn_formulaimage_0000002549871359.png)
 
 **Table 1** Parameter description<a id="parameter-description"></a>
 
@@ -1439,7 +1441,7 @@ General 2D convolution calculation formula:
 </td>
 <td class="cellrowborder" valign="top" width="14.62%" headers="mcps1.2.6.1.4 "><p id="p1545113432118"><a name="p1545113432118"></a><a name="p1545113432118"></a>-</p>
 </td>
-<td class="cellrowborder" valign="top" width="60%" headers="mcps1.2.3.1.2 "><p id="p1763913519208"><a name="p1763913519208"></a><a name="p1763913519208"></a>Input tensor</p>
+<td class="cellrowborder" valign="top" width="36.07%" headers="mcps1.2.6.1.5 "><p id="p1763913519208"><a name="p1763913519208"></a><a name="p1763913519208"></a>Input tensor</p>
 </td>
 </tr>
 <tr id="row545934132110"><td class="cellrowborder" valign="top" width="20%" headers="mcps1.2.6.1.1 "><p id="p1363912562011"><a name="p1363912562011"></a><a name="p1363912562011"></a>weights</p>
@@ -1450,7 +1452,7 @@ General 2D convolution calculation formula:
 </td>
 <td class="cellrowborder" valign="top" width="14.62%" headers="mcps1.2.6.1.4 "><p id="p44433442114"><a name="p44433442114"></a><a name="p44433442114"></a>-</p>
 </td>
-<td class="cellrowborder" valign="top" width="60%" headers="mcps1.2.3.1.2 "><p id="p176394514207"><a name="p176394514207"></a><a name="p176394514207"></a>Weight tensor</p>
+<td class="cellrowborder" valign="top" width="36.07%" headers="mcps1.2.6.1.5 "><p id="p176394514207"><a name="p176394514207"></a><a name="p176394514207"></a>Weight tensor</p>
 </td>
 </tr>
 <tr id="row3452341217"><td class="cellrowborder" valign="top" width="20%" headers="mcps1.2.6.1.1 "><p id="p263910518206"><a name="p263910518206"></a><a name="p263910518206"></a>bias</p>
@@ -1461,7 +1463,7 @@ General 2D convolution calculation formula:
 </td>
 <td class="cellrowborder" valign="top" width="14.62%" headers="mcps1.2.6.1.4 "><p id="p24483472115"><a name="p24483472115"></a><a name="p24483472115"></a>-</p>
 </td>
-<td class="cellrowborder" valign="top" width="60%" headers="mcps1.2.3.1.2 "><p id="p16396511206"><a name="p16396511206"></a><a name="p16396511206"></a>Bias tensor</p>
+<td class="cellrowborder" valign="top" width="36.07%" headers="mcps1.2.6.1.5 "><p id="p16396511206"><a name="p16396511206"></a><a name="p16396511206"></a>Bias tensor</p>
 </td>
 </tr>
 <tr id="row144533472114"><td class="cellrowborder" valign="top" width="20%" headers="mcps1.2.6.1.1 "><p id="p10639135182018"><a name="p10639135182018"></a><a name="p10639135182018"></a>dst</p>
@@ -3366,9 +3368,9 @@ Concatenates _N_ tensors over the specified <code>concat\_dimension</code> dimen
 
 **Formula<a name="section986511368520"></a>**
 
-![](figures/zh-cn_image_0000002549871307.png)
+![Concat operator formula](figures/zh-cn_image_0000002549871307.png)
 
-Wherein: ![](figures/zh-cn_image_0000002518231540.png)
+Wherein: ![Parameter c in the Concat formula](figures/zh-cn_image_0000002518231540.png)
 
 **Table 1** Formula parameters<a id="formula-parameters-6"></a>
 
@@ -3422,7 +3424,7 @@ The Concat primitive does not distinguish between forward and backward propagati
 </th>
 <th class="cellrowborder" valign="top" width="13.81%" id="mcps1.2.6.1.3"><p id="p6292710115619"><a name="p6292710115619"></a><a name="p6292710115619"></a>...</p>
 </th>
-<th class="cellrowborder" valign="top" width="18.75%" id="mcps1.2.6.1.4"><p id="p1899102143815"><a name="p1899102143815"></a><a name="p1899102143815"></a>srcN Data Type</p>
+<th class="cellrowborder" valign="top" width="25.19%" id="mcps1.2.6.1.4"><p id="p1899102143815"><a name="p1899102143815"></a><a name="p1899102143815"></a>srcN Data Type</p>
 </th>
 <th class="cellrowborder" valign="top" width="20.62%" id="mcps1.2.6.1.5"><p id="p17812544561"><a name="p17812544561"></a><a name="p17812544561"></a>dst Data Type</p>
 </th>
@@ -3663,7 +3665,7 @@ A maximum of 5 dimensions are supported. Input tensors must have the same number
 </tbody>
 </table>
 
->![](public_sys-resources/icon-note.gif) **NOTE**
+>![note](public_sys-resources/icon-note.gif) **NOTE**
 >Concat requires that the memory layout of input and output tensors be the same and the corresponding data types be the same.
 
 #### Resampling
@@ -3855,9 +3857,9 @@ Resampling requires that the memory layout of the input and output tensors be th
 
 For details, see the following cases:
 
-- 5D: mb4\_ic8\_id4od8\_ih4oh8\_iw4ow8, 4×8×4×4×4 (input), 4×8×8×8×8 (output)
-- 4D: mb4\_ic8\_ih4oh8\_iw4ow8, 4x8x4x4 (input), output 4x8x8x8 (output)
-- 3D: mb4_ic8_iw4ow8, 4x8x4 (input), 4x8x8 (output)
+- 5D: mb4\_ic8\_id4od8\_ih4oh8\_iw4ow8, 4x8x4x4x4 (input), 4x8x8x8x8 (output)
+- 4D: mb4\_ic8\_ih4oh8\_iw4ow8, 4x8x4x4 (input), 4x8x8x8 (output)
+- 3D: mb4\_ic8\_iw4ow8, 4x8x4 (input), 4x8x8 (output)
 
 Note that if the value of <code>id</code>, <code>ih</code>, <code>iw</code>, <code>od</code>, <code>oh</code>, or <code>ow</code> is too large, the precision may be affected due to a limitation of the test system. This is not a functional problem because other platforms have the same issue. To avoid this issue, you are advised to set the preceding parameters to a value less than 20000.
 
@@ -3873,17 +3875,17 @@ Shuffles tensor data along a shuffle axis (dimension).
 
 The formula is:
 
-![](figures/zh-cn_formulaimage_0000002549751319.png)
+![Shuffle operator formula](figures/zh-cn_formulaimage_0000002549751319.png)
 
 where <code>c'</code> and <code>c</code> relate through the following equations:
 
-![](figures/zh-cn_formulaimage_0000002518391476.png)
+![Equation of c′ and c](figures/zh-cn_formulaimage_0000002518391476.png)
 
-![](figures/zh-cn_formulaimage_0000002518231558.png)
+![Equation of c′ and c](figures/zh-cn_formulaimage_0000002518231558.png)
 
-In the formulas:
+In the equations:
 
-![](figures/zh-cn_formulaimage_0000002518391466.png)
+![Magnitude relationship in the equations](figures/zh-cn_formulaimage_0000002518391466.png)
 
 **Table 1** Formula parameters<a id="formula-parameters-8"></a>
 
@@ -4137,7 +4139,7 @@ Reorders tensors into arbitrary memory layout formats and data types.
 
 The formula is as follows:
 
-![](figures/zh-cn_formulaimage_0000002549751327.png)
+![Reorder operator formula](figures/zh-cn_formulaimage_0000002549751327.png)
 
 ##### Feature Scope
 
@@ -4377,7 +4379,7 @@ Performs batch normalization on tensors.
 
 **Formula<a name="section1926583913127"></a>**
 
-The formula is ![](figures/zh-cn_formulaimage_0000002518391534.png).
+The formula is ![Batch Normalization operator formula](figures/zh-cn_formulaimage_0000002518391534.png).
 
 For details, see parameter description in [Layer Normalization](#en-us_topic_0000002518231486).
 
@@ -4451,7 +4453,7 @@ The cross-channel formula is as follows: ![](figures/zh-cn_formulaimage_00000025
 
 The single-channel formula is as follows:
 
-![](figures/zh-cn_formulaimage_0000002518231578.png)
+![Single-channel formula](figures/zh-cn_formulaimage_0000002518231578.png)
 
 **Table 1** Formula parameters<a id="formula-parameters-9"></a>
 
@@ -4568,7 +4570,7 @@ Performs a specified algorithm operation on each target element in one or more d
 
 **Formula<a name="section357614211117"></a>**
 
-The formula is ![](figures/zh-cn_formulaimage_0000002549871367.png), where <code>reduce_op</code> includes the operations listed in [Table 1 reduce_op algorithm operations](#table1429931423412).
+The formula is ![Reduction operator formula](figures/zh-cn_formulaimage_0000002549871367.png), where <code>reduce_op</code> includes the operations listed in [Table 1 reduce_op algorithm operations](#table1429931423412).
 
 **Table 1** reduce\_op algorithm operations <a id="table1429931423412"></a>
 
@@ -4706,9 +4708,9 @@ An improved version of the Rectified Linear Unit (ReLU) activation function, per
 
 **Formula<a name="section2679111817111"></a>**
 
-The forward formula is as follows: ![](figures/zh-cn_formulaimage_0000002549751333.png)
+The forward formula is as follows: ![Forward formula](figures/zh-cn_formulaimage_0000002549751333.png)
 
-The backward formula is as follows: ![](figures/zh-cn_formulaimage_0000002549871345.png)
+The backward formula is as follows: ![Backward formula](figures/zh-cn_formulaimage_0000002549871345.png)
 
 ##### Feature Scope
 
@@ -4817,7 +4819,7 @@ Returns the element-wise operation results between tensors source0 and source1, 
 
 **Formula<a name="section47591642191011"></a>**
 
-The formula is ![](figures/zh-cn_formulaimage_0000002549871363.png).
+The formula is ![Binary operator formula](figures/zh-cn_formulaimage_0000002549871363.png).
 
 **Table 1** Operator operation<a id="operator-operation"></a>
 
@@ -4987,7 +4989,7 @@ Processes sequential or time-series data to train machine learning models that c
 
 The RNN formula is as follows:
 
-![](figures/zh-cn_formulaimage_0000002549871329.png)
+![RNN formula](figures/zh-cn_formulaimage_0000002549871329.png)
 
 ##### Feature Scope
 
@@ -5085,14 +5087,14 @@ Performs group normalization by channel.
 
 The formula is as follows:
 
-![](figures/zh-cn_formulaimage_0000002518231582.png)
+![Group Normalization formula](figures/zh-cn_formulaimage_0000002518231582.png)
 
 where the shape of the input src is defined by \(N, C, H, W\), and G indicates the number of groups.
 
-- ![](figures/zh-cn_formulaimage_0000002549751349.png)
-- ![](figures/zh-cn_formulaimage_0000002518231586.png)
-- ![](figures/zh-cn_formulaimage_0000002549871353.png): scaling and shift coefficients
-- ![](figures/zh-cn_formulaimage_0000002549751343.png): mean and variance
+- ![CG](figures/zh-cn_formulaimage_0000002549751349.png)
+- ![cg](figures/zh-cn_formulaimage_0000002518231586.png)
+- ![Scaling and shift coefficients](figures/zh-cn_formulaimage_0000002549871353.png): scaling and shift coefficients
+- ![Mean and variance](figures/zh-cn_formulaimage_0000002549751343.png): mean and variance
 
 ##### Feature Scope
 
@@ -5193,7 +5195,7 @@ Computes the product of a sparse matrix and a dense matrix. The operator is desi
 
 The SparseGemm operator computes the following matrix multiplication:
 
-![](figures/zh-cn_formulaimage_0000002518231626.png)
+![SparseGemm operator formula](figures/zh-cn_formulaimage_0000002518231626.png)
 
 where,
 
@@ -5276,7 +5278,7 @@ The main features are as follows:
 
 - Normalized output: The softmax function normalizes the input to ensure that the output is a valid probability distribution. Even if the input is any real number, the output sum of the softmax function is still 1. It is commonly used at the output layer of multi-classification problems.
 - Non-linear: The softmax function is a non-linear function. It can perform non-linear transformation on the input to increase the representation capability of the model, thereby better fitting complex data patterns.
-- Translation invariance: The softmax function performs translation invariance on the input. That is, when each element in the input vector adds (or subtracts) the same constant, the softmax output is not changed.
+- Translation invariance: The softmax function is translation-invariant with respect to the input. That is, when each element in the input vector adds (or subtracts) the same constant, the softmax output is not changed.
 
 In a neural network, the softmax function is usually used at the output layer to convert the original output of the neural network into a vector representing class probabilities. During training, the difference between the softmax output and the actual label can be used as a loss function. Through backward propagation, network parameters are updated to minimize the loss and improve model performance.
 
@@ -5439,11 +5441,5 @@ def get\_version\(\) -\> Dict\[bytes, bytes\]
 {'productName': b'Kunpeng Boostkit', 'productVersion': b'24.0.0', 'componentName': b'BoostKit-kail', 'componentVersion': b'1.0.0', 'componentAppendInfo': b'gcc', 'softwareName': b'boostKit-kail-dnn-ext', 'softwareVersion': b'1.0.0'}
 ```
 
->![](public_sys-resources/icon-note.gif) **NOTE**
+>![icon-note](public_sys-resources/icon-note.gif) **NOTE**
 >The version number and compile time are subject to the running results in your environment. The preceding results are for reference only.
-
-## Change History
-
-| Version | Date | Description |
-| :--- | :--- | :--- |
-| 01 | 2026-09-30 | This is the first official release. |

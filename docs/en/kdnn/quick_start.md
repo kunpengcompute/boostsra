@@ -1,10 +1,12 @@
 # Quick Start
 
-<!-- md-trans-meta sourceCommit=4eb6b6efe8cf09750f757775bf08ea189a284a2d translatedAt=2026-11-03T08:58:34.403Z pushedAt=2026-11-04T01:07:09.483Z -->
+<!-- md-trans-meta sourceCommit=24bb37cb43d173905925eb7242ca1677ac105f2f translatedAt=2026-11-12T08:58:34.403Z pushedAt=2026-11-13T01:07:09.483Z -->
+
+This document describes how to get started with KDNN, covering prerequisites for installation, functional verification, and a single-operator API calling example, for users who need a quick start.
 
 ## Prerequisites
 
-When running the functional verification and example invocation steps using this guide, please first refer to the [Installation Guide](./installation_guide.md) to complete the KDNN installation.
+Before running the functional verification and example invocation steps in this document, please first refer to [Installation Guide](./installation_guide.md) to complete KDNN installation.
 
 ## Function Verification
 
@@ -23,9 +25,3 @@ The built executable program is `out/test/dnn/oneDNN-3.4/build/tests/benchdnn/be
 ```bash
 ./benchdnn --mode=P --matmul --perf-template=Gflops:%0Gflops% --stag=ab --wtag=ab --dtag=ab 128x2048:2048x1024_n"googlenet_v1:ip1*1"
 ```
-
-## Change History
-
-| Version | Date | Description |
-| :--- | :--- | :--- |
-| 01 | 2026-09-30 | This is the first official release. |

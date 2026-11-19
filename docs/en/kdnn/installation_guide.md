@@ -1,6 +1,8 @@
 # Installation Guide
 
-<!-- md-trans-meta sourceCommit=b76f8f29f3d3c3deedd8513f6590a2d3ea38d9ec translatedAt=2026-11-03T08:58:34.403Z pushedAt=2026-11-04T01:07:09.483Z -->
+<!-- md-trans-meta sourceCommit=70b760869851b56a048ef4b90762bd2b70891b51 translatedAt=2026-11-12T08:58:34.403Z pushedAt=2026-11-13T01:07:09.483Z -->
+
+This document provides the KDNN installation guide, covering the complete steps of environment verification, dependency installation, software package acquisition, and installation verification. It is intended for users who need to install KDNN in a Kunpeng processor environment.
 
 ## Verified Environments
 
@@ -25,7 +27,7 @@ To use KDNN smoothly and securely, ensure that your environment is one of the ve
 </thead>
 <tbody><tr id="row056323751218"><td class="cellrowborder" valign="top" width="12.15%" headers="mcps1.2.7.1.1 "><p id="p7180194317123"><a name="p7180194317123"></a><a name="p7180194317123"></a>KDNN</p>
 </td>
-<td class="cellrowborder" valign="top" width="19.97%" headers="mcps1.2.7.1.2 "><p id="p16180743171218"><a name="p16180743171218"></a><a name="p16180743171218"></a>openEuler 22.03 LTS SP3</p>
+<td class="cellrowborder" valign="top" width="19.97%" headers="mcps1.2.7.1.2 "><p id="p16180743171218"><a name="p16180743171218"></a><a name="p16180743171218"></a>openEuler 24.03 LTS SP3</p>
 </td>
 <td class="cellrowborder" valign="top" width="22.32%" headers="mcps1.2.7.1.3 "><p id="p818014317128"><a name="p818014317128"></a><a name="p818014317128"></a>New Kunpeng 920 processor model</p>
 </td>
@@ -139,7 +141,7 @@ Use Yum repositories to install the base software on which the system depends, i
 
 3. Install one of the following compilers based on your target environment.
 
-    - GCC 10.3.1 (for openEuler 22.03 LTS SP3):
+    - GCC 10.3.1 (for openEuler 24.03 LTS SP3):
 
         ```bash
         yum install gcc gcc-c++
@@ -161,7 +163,7 @@ Use Yum repositories to install the base software on which the system depends, i
 
         Obtain the `BiShengCompiler-4.2.0-aarch64-linux.tar.gz` installation package from the [BiSheng Compiler release page](https://mirrors.huaweicloud.com/kunpeng/archive/compiler/bisheng_compiler), and replace `<bisheng-package>` with the actual file name.
 
-        ```bash
+        ```output
         tar -xzf <bisheng-package>.tar.gz -C /opt
         export PATH=/opt/<bisheng-directory>/bin:$PATH
         export LD_LIBRARY_PATH=/opt/<bisheng-directory>/lib:$LD_LIBRARY_PATH
@@ -305,7 +307,7 @@ This section describes how to install KDNN using an RPM package and verify the i
 
     Or
 
-    ```bash
+    ```python
     >>> from libkdnn_ext import random_choice, softmax, get_version
     ```
 
@@ -326,5 +328,5 @@ If KDNN is no longer needed, uninstall it. Using parameters supported by the RPM
 ## Change History
 
 | Version | Date | Description |
-| ------- | ---- | -------- |
+| ---- | ---- | ---- |
 | 01 | 2026-09-30 | This is the first official release. |
