@@ -1,10 +1,12 @@
 # Best Practices
 
-<!-- md-trans-meta sourceCommit=b76f8f29f3d3c3deedd8513f6590a2d3ea38d9ec translatedAt=2026-11-03T08:58:34.403Z pushedAt=2026-11-04T01:07:09.483Z -->
+<!-- md-trans-meta sourceCommit=24bb37cb43d173905925eb7242ca1677ac105f2f translatedAt=2026-11-12T08:58:34.403Z pushedAt=2026-11-13T01:07:09.483Z -->
+
+This document describes how to adapt the TensorFlow matrix operators (MatMul and FusedMatMul, which correspond to the Gemm operator of KDNN) to KDNN v3.2.0.
 
 ## Adapting TensorFlow for KDNN
 
-This document describes how to adapt the TensorFlow matrix operators (MatMul and FusedMatMul, which correspond to the Gemm operator of KDNN) to KDNN v3.1.0. Follow the instructions in this section. Improper operations may introduce undefined behavior. Exercise caution when performing this operation.
+This section describes how to adapt the TensorFlow matrix operators (MatMul and FusedMatMul, which correspond to the Gemm operator of KDNN) to KDNN v3.2.0. Follow the instructions in this section. Improper operations may introduce undefined behavior. Exercise caution when performing this operation.
 
 1. Install basic software.
 
@@ -126,7 +128,7 @@ This section describes how to adapt oneDNN for KDNN v3.1.0. Misoperations may in
 
     You can use all interfaces of oneDNN v3.4.0 by linking against <code>libdnnl.so</code>.
 
-    >![NOTE](public_sys-resources/icon-note.gif) **NOTE**
+    >![note](public_sys-resources/icon-note.gif) **NOTE**
     >In the compile command, <code>--compiler=clang</code> indicates that the BiSheng Compiler is used. By default, GCC is used.
 
 **Verification After Adaptation <a name="section193111321616"></a>**
@@ -147,10 +149,10 @@ After compiling oneDNN, use the test cases included in the software package to v
 
     If all results returned <code>passed</code> and the following information is displayed, oneDNN is successfully adapted.
 
-    ![](figures/zh-cn_image_0000002549872587.png)
+    ![oneDNN adaptation diagram](figures/zh-cn_image_0000002549872587.png)
 
 ## Change History
 
-| Version |  Date | Description |
-| ---------- | -------- | -------- |
+| Version | Date | Description |
+| ---- | ---- | ---- |
 | 01 | 2026-09-30 | This is the first official release. |

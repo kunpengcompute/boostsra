@@ -1,8 +1,10 @@
 # Introduction to KDNN
 
-<!-- md-trans-meta sourceCommit=4eb6b6efe8cf09750f757775bf08ea189a284a2d translatedAt=2026-11-03T08:58:34.403Z pushedAt=2026-11-04T01:07:09.483Z -->
+<!-- md-trans-meta sourceCommit=24bb37cb43d173905925eb7242ca1677ac105f2f translatedAt=2026-11-12T08:58:34.403Z pushedAt=2026-11-13T01:07:09.483Z -->
 
 [简体中文](../../zh/kdnn/README.md)|English
+
+This document introduces KDNN (Kunpeng Deep Neural Network Library). It provides KDNN's features, version updates, compatibility information, and learning documentation, and is intended for developers who need to use deep neural network operators on the Kunpeng platform.
 
 ## Latest News
 
@@ -89,7 +91,7 @@ To use KDNN smoothly and securely, ensure that your environment is one of the ve
 </thead>
 <tbody><tr id="row165716316236"><td class="cellrowborder" valign="top" width="12.15%" headers="mcps1.2.7.1.1 "><p id="p4571531192317"><a name="p4571531192317"></a><a name="p4571531192317"></a>KDNN</p>
 </td>
-<td class="cellrowborder" valign="top" width="19.97%" headers="mcps1.2.7.1.2 "><p id="p45713315237"><a name="p45713315237"></a><a name="p45713315237"></a>openEuler 22.03 LTS SP3</p>
+<td class="cellrowborder" valign="top" width="19.97%" headers="mcps1.2.7.1.2 "><p id="p45713315237"><a name="p45713315237"></a><a name="p45713315237"></a>openEuler 24.03 LTS SP3</p>
 </td>
 <td class="cellrowborder" valign="top" width="22.32%" headers="mcps1.2.7.1.3 "><p id="p2057631172312"><a name="p2057631172312"></a><a name="p2057631172312"></a>New Kunpeng 920 processor model</p>
 </td>

@@ -1,5 +1,7 @@
 # 用户指南
 
+本文档介绍KRL的安装、配置与性能测试方法，适用于需要部署和使用KRL进行向量检索的用户。
+
 ## 已验证环境
 
 为保证您可以顺利安全地使用KRL，请确保所使用的环境信息在已验证环境范围内。
@@ -7,42 +9,11 @@
 **表 1** KRL已验证环境<a id="KRL已验证环境"></a>
 
 <a name="table113653362525"></a>
-<table><thead align="left"><tr id="row2036563612525"><th class="cellrowborder" valign="top" width="21.77%" id="mcps1.2.6.1.1"><p id="p10365836165218"><a name="p10365836165218"></a><a name="p10365836165218"></a>操作系统</p>
-</th>
-<th class="cellrowborder" valign="top" width="23.5%" id="mcps1.2.6.1.2"><p id="p53652363523"><a name="p53652363523"></a><a name="p53652363523"></a>CPU类型</p>
-</th>
-<th class="cellrowborder" valign="top" width="18.44%" id="mcps1.2.6.1.3"><p id="p136510367522"><a name="p136510367522"></a><a name="p136510367522"></a>内存</p>
-</th>
-<th class="cellrowborder" valign="top" width="16.900000000000002%" id="mcps1.2.6.1.4"><p id="p20365836185215"><a name="p20365836185215"></a><a name="p20365836185215"></a>编译器</p>
-</th>
-<th class="cellrowborder" valign="top" width="19.39%" id="mcps1.2.6.1.5"><p id="p6365123615524"><a name="p6365123615524"></a><a name="p6365123615524"></a>CMake</p>
-</th>
-</tr>
-</thead>
-<tbody><tr id="row10365113685217"><td class="cellrowborder" valign="top" width="21.77%" headers="mcps1.2.6.1.1 "><p id="p1636573614523"><a name="p1636573614523"></a><a name="p1636573614523"></a>openEuler 22.03 LTS SP3</p>
-</td>
-<td class="cellrowborder" valign="top" width="23.5%" headers="mcps1.2.6.1.2 "><p id="p173654366528"><a name="p173654366528"></a><a name="p173654366528"></a>鲲鹏920 7282C处理器</p>
-</td>
-<td class="cellrowborder" valign="top" width="18.44%" headers="mcps1.2.6.1.3 "><p id="p636533625218"><a name="p636533625218"></a><a name="p636533625218"></a>16 * 32G</p>
-</td>
-<td class="cellrowborder" valign="top" width="16.900000000000002%" headers="mcps1.2.6.1.4 "><p id="p103651036185219"><a name="p103651036185219"></a><a name="p103651036185219"></a>GCC 12.3.1</p>
-</td>
-<td class="cellrowborder" valign="top" width="19.39%" headers="mcps1.2.6.1.5 "><p id="p285111515577"><a name="p285111515577"></a><a name="p285111515577"></a>&gt;=3.22.0</p>
-</td>
-</tr>
-<tr id="row10335834165819"><td class="cellrowborder" valign="top" width="21.77%" headers="mcps1.2.6.1.1 "><p id="p7336183465815"><a name="p7336183465815"></a><a name="p7336183465815"></a>openEuler 24.03 LTS SP3</p>
-</td>
-<td class="cellrowborder" valign="top" width="23.5%" headers="mcps1.2.6.1.2 "><p id="p15336103415817"><a name="p15336103415817"></a><a name="p15336103415817"></a>鲲鹏950 7592C处理器</p>
-</td>
-<td class="cellrowborder" valign="top" width="18.44%" headers="mcps1.2.6.1.3 "><p id="p233663465818"><a name="p233663465818"></a><a name="p233663465818"></a>24 * 64G</p>
-</td>
-<td class="cellrowborder" valign="top" width="16.900000000000002%" headers="mcps1.2.6.1.4 "><p id="p12971140142310"><a name="p12971140142310"></a><a name="p12971140142310"></a>GCC 12.3.1</p>
-</td>
-<td class="cellrowborder" valign="top" width="19.39%" headers="mcps1.2.6.1.5 "><p id="p102524252319"><a name="p102524252319"></a><a name="p102524252319"></a>&gt;=3.22.0</p>
-</td>
-</tr>
-</tbody>
-</table>
+
+| 操作系统 | CPU类型 | 内存 | 编译器 | CMake |
+| --- | --- | --- | --- | --- |
+| openEuler 22.03 LTS SP3 | 鲲鹏920 7282C处理器 | 16 \* 32G | GCC 12.3.1 | >=3.22.0 |
+| openEuler 24.03 LTS SP3 | 鲲鹏950 7592C处理器 | 24 \* 64G | GCC 12.3.1 | >=3.22.0 |
 
 ## 安装KRL
 
@@ -60,19 +31,25 @@
 这里通过对比校验文件中记录的校验值和手动方式计算的zip包校验值，判断软件包是否完整。若两个值相同，说明zip包完整，否则，zip完整性被破坏，请重新获取zip发布包。
 
 在校验发布包完整性之前，需要准备如下文件：
+
 - zip包：BoostKit-boostsra-krl_xxx.zip。
 - 校验文件：同名的.sha256文件。
 
 文件完整性校验操作步骤如下：
 
-1. 计算文件的sha256校验值。linux执行命令如下：
+1. 计算文件的sha256校验值。
+   linux执行命令如下：
+
     ```bash
     sha256sum BoostKit-boostsra-krl_xxx.zip
     ```
+
     windows执行命令如下：
+
     ```bash
     certutil -hashfile BoostKit-boostsra-krl_xxx.zip sha256
     ```
+
     命令执行完成后，输出校验值。
 
 2. 对比步骤 1 计算的校验值与刚刚复制的 SHA256 值是否一致。
@@ -82,7 +59,7 @@
 
 1. 用户解压zip文件后可获取RPM安装包。
 
-    >![](public_sys-resources/icon-note.gif) **说明：** 
+    >![note](public_sys-resources/icon-note.gif) **说明：** 
     >- KRL软件包结构如下所示。
     >
     > ```text
@@ -173,7 +150,7 @@ Faiss可对接KRL增强HNSW、PQFS、IVFPQ、IVFPQFS、IVFFLAT算法性能。用
     make install
     ```
 
-    >![](public_sys-resources/icon-note.gif) **说明：** 
+    >![note](public_sys-resources/icon-note.gif) **说明：** 
     >可通过**make install PREFIX=/path/to/openblas/install**设置“/path/to/openblas/install”以指定安装路径，默认安装路径为“/opt/OpenBLAS”。
 
 5. 解压BoostKit-boostsra-krl\_1.1.0.zip后可获取到使能KRL所需补丁文件0001-faiss-1.8.0-add-krl.patch。安装补丁文件。
@@ -200,7 +177,7 @@ Faiss可对接KRL增强HNSW、PQFS、IVFPQ、IVFPQFS、IVFFLAT算法性能。用
     make -C build install
     ```
 
-    >![](public_sys-resources/icon-note.gif) **说明：** 
+    >![note](public_sys-resources/icon-note.gif) **说明：** 
     >- **KRL_PATH**设置为“/usr/local/sra_krl”。
     >- 可通过在编译时添加编译选项 **-DCMAKE\_INSTALL\_PREFIX=/path/to/faiss/install**设置“/path/to/faiss/install”以指定安装路径，默认安装路径为“/usr/local”。
     >- 编译选项 **-DMKL\_LIBRARIES**需指定为步骤[3](#li84129301112)中OpenBLAS的安装路径。
@@ -261,7 +238,7 @@ Faiss可对接KRL增强HNSW、PQFS、IVFPQ、IVFPQFS、IVFFLAT算法性能。用
     make ivfpq_test
     ```
 
-    >![](public_sys-resources/icon-note.gif) **说明：** 
+    >![note](public_sys-resources/icon-note.gif) **说明：** 
     >测试时不同的算法需要选择不同的编译指令：
     >- HNSW算法：**make hnsw\_test**
     >- PQFS算法：**make pqfs\_test**
@@ -280,10 +257,16 @@ Faiss可对接KRL增强HNSW、PQFS、IVFPQ、IVFPQFS、IVFFLAT算法性能。用
 
    **图 1** 优化前运行结果<a name="fig9931619182"></a><a id="优化前运行结果"></a>
 
-   ![](./figures/quick_start-origin运行结果.jpg "优化前运行结果")
+   !["优化前运行结果"](./figures/quick_start-origin运行结果.jpg)
 
    优化后结果如[**图 2** 优化后运行结果](#优化后运行结果)所示。
 
    **图 2** 优化后运行结果<a name="fig9931619183"></a><a id="优化后运行结果"></a>
 
-   ![](./figures/quick_start-运行结果.jpg "优化后运行结果")
+   !["优化后运行结果"](./figures/quick_start-运行结果.jpg)
+
+## 修订记录
+
+|文档版本|发布日期|修改说明|
+|--|--|--|
+|01|2026-06-30|第一次正式发布。|

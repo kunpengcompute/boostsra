@@ -1,8 +1,10 @@
 # 最佳实践
 
+本文档介绍最佳实践，提供通过C++调用KBest算法接口以及KBest对接Milvus的完整使用示例，适用于需要调用KBest算法接口的用户。
+
 ## 性能测试
 
-本节以使用sift-128-euclidean.hdf5数据集，线程数32为例，提供通过C++调用KBest算法接口的完整使用示例。调用前，请确保已安装KBest。
+本章节以使用sift-128-euclidean.hdf5数据集，线程数32为例，提供通过C++调用KBest算法接口的完整使用示例。调用前，请确保已安装KBest。
 
 **获取数据集与测试程序<a name="section5124167418"></a>**
 
@@ -63,9 +65,8 @@
     numactl -C 0-31 -m 0 ./kbest_test kbest sift-128-euclidean
     ```
 
-测试结果如下所示：
-
-<img src="figures/best_practices-c++.jpg" alt="best_practices-c++" width="800"/>
+   测试结果如下所示：
+   ![运行可执行文件的回显](./figures/best_practices-c++.jpg)
 
 ## KBest对接Milvus
 
@@ -84,3 +85,9 @@ KBest算法可对接Milvus数据库（2.4.5版本）使用，在保证高召回�
 3. 使用ann-benchmarks测试。
 
     请参见《[Milvus数据库ann-benchmarks 测试指导](https://www.hikunpeng.com/document/detail/zh/kunpengdbs/testguide/tstg/kunpeng_ann_marks_001.html)》进行测试。
+
+## 修订记录
+
+|文档版本|发布日期|修改说明|
+|--|--|--|
+|01|2025-12-30|第一次正式发布。|
