@@ -1,8 +1,10 @@
 # Introduction to KDNN
 
-<!-- md-trans-meta sourceCommit=4eb6b6efe8cf09750f757775bf08ea189a284a2d translatedAt=2026-11-03T08:58:34.403Z pushedAt=2026-11-04T01:07:09.483Z -->
+<!-- md-trans-meta sourceCommit=24bb37cb43d173905925eb7242ca1677ac105f2f translatedAt=2026-11-12T08:58:34.403Z pushedAt=2026-11-13T01:07:09.483Z -->
 
 [简体中文](../../zh/kdnn/README.md)|English
+
+This document introduces KDNN (Kunpeng Deep Neural Network Library). It provides KDNN's features, version updates, compatibility information, and learning documentation, and is intended for developers who need to use deep neural network operators on the Kunpeng platform.
 
 ## Latest News
 
@@ -64,7 +66,7 @@ KDNN is mainly used in the following scenarios:
 
 ## Release Notes
 
-For details about the KDNN version updates, see [Release Notes](./release_notes.md).
+For details about the KDNN version updates, see [Release Notes](release_notes.md).
 
 ## Compatibility Information
 
@@ -89,7 +91,7 @@ To use KDNN smoothly and securely, ensure that your environment is one of the ve
 </thead>
 <tbody><tr id="row165716316236"><td class="cellrowborder" valign="top" width="12.15%" headers="mcps1.2.7.1.1 "><p id="p4571531192317"><a name="p4571531192317"></a><a name="p4571531192317"></a>KDNN</p>
 </td>
-<td class="cellrowborder" valign="top" width="19.97%" headers="mcps1.2.7.1.2 "><p id="p45713315237"><a name="p45713315237"></a><a name="p45713315237"></a>openEuler 22.03 LTS SP3</p>
+<td class="cellrowborder" valign="top" width="19.97%" headers="mcps1.2.7.1.2 "><p id="p45713315237"><a name="p45713315237"></a><a name="p45713315237"></a>openEuler 24.03 LTS SP3</p>
 </td>
 <td class="cellrowborder" valign="top" width="22.32%" headers="mcps1.2.7.1.3 "><p id="p2057631172312"><a name="p2057631172312"></a><a name="p2057631172312"></a>New Kunpeng 920 processor model</p>
 </td>
@@ -139,27 +141,27 @@ To use KDNN smoothly and securely, ensure that your environment is one of the ve
 </th>
 </tr>
 </thead>
-<tbody><tr id="row183211844195812"><td class="cellrowborder" valign="top" width="28.012801280128013%" headers="mcps1.1.4.1.2 "><p id="p132119442580"><a name="p132119442580"></a>Release Notes</p>
+<tbody><tr id="row183211844195812"><td class="cellrowborder" valign="top" width="28.012801280128013%" headers="mcps1.1.4.1.2 "><p id="p132119442580"><a name="p132119442580"></a><a name="p132119442580"></a><a href="release_notes.md">Release Notes</a></p>
 </td>
 <td class="cellrowborder" valign="top" width="57.18571857185718%" headers="mcps1.1.4.1.3 "><p id="p13321194412589"><a name="p13321194412589"></a><a name="p13321194412589"></a>Provides basic information and feature updates for each KDNN version.</p>
 </td>
 </tr>
-<tr id="row4533125512117"><td class="cellrowborder" valign="top" width="28.012801280128013%" headers="mcps1.1.4.1.2 "><p id="p032144418580"><a name="p032144418580"></a>Quick Start</p>
+<tr id="row4533125512117"><td class="cellrowborder" valign="top" width="28.012801280128013%" headers="mcps1.1.4.1.2 "><p id="p032144418580"><a name="p032144418580"></a><a name="p032144418580"></a><a href="quick_start.md">Quick Start</a></p>
 </td>
 <td class="cellrowborder" valign="top" width="57.18571857185718%" headers="mcps1.1.4.1.3 "><p id="p83216449586"><a name="p83216449586"></a><a name="p83216449586"></a>Provides guidance for getting started with KDNN.</p>
 </td>
 </tr>
-<tr id="row6321164455815"><td class="cellrowborder" valign="top" width="28.012801280128013%" headers="mcps1.1.4.1.2 "><p id="p14321104418585"><a name="p14321104418585"></a>Installation Guide</p>
+<tr id="row6321164455815"><td class="cellrowborder" valign="top" width="28.012801280128013%" headers="mcps1.1.4.1.2 "><p id="p14321104418585"><a name="p14321104418585"></a><a name="p14321104418585"></a><a href="installation_guide.md">Installation Guide</a></p>
 </td>
 <td class="cellrowborder" valign="top" width="57.18571857185718%" headers="mcps1.1.4.1.3 "><p id="p1332134420587"><a name="p1332134420587"></a><a name="p1332134420587"></a>Provides detailed instructions for compiling and installing KDNN.</p>
 </td>
 </tr>
-<tr id="row13219448585"><td class="cellrowborder" valign="top" width="28.012801280128013%" headers="mcps1.1.4.1.2 "><p id="p5321124418587"><a name="p5321124418587"></a>API Reference</p>
+<tr id="row13219448585"><td class="cellrowborder" valign="top" width="28.012801280128013%" headers="mcps1.1.4.1.2 "><p id="p5321124418587"><a name="p5321124418587"></a><a name="p5321124418587"></a><a href="api_reference.md">API Reference</a></p>
 </td>
 <td class="cellrowborder" valign="top" width="57.18571857185718%" headers="mcps1.1.4.1.3 "><p id="p53214445588"><a name="p53214445588"></a><a name="p53214445588"></a>Provides definitions, descriptions, and calling examples of KDNN APIs.</p>
 </td>
 </tr>
-<tr id="row1632118447589"><td class="cellrowborder" valign="top" width="28.012801280128013%" headers="mcps1.1.4.1.2 "><p id="p183213445582"><a name="p183213445582"></a>Best Practices</p>
+<tr id="row1632118447589"><td class="cellrowborder" valign="top" width="28.012801280128013%" headers="mcps1.1.4.1.2 "><p id="p183213445582"><a name="p183213445582"></a><a name="p183213445582"></a><a href="best_practices.md">Best Practices</a></p>
 </td>
 <td class="cellrowborder" valign="top" width="57.18571857185718%" headers="mcps1.1.4.1.3 "><p id="p232174455818"><a name="p232174455818"></a><a name="p232174455818"></a>Provides best practices of using KDNN.</p>
 </td>
@@ -185,7 +187,7 @@ If you do not want your model or dataset to be mentioned in this project, or if 
 
 ## License
 
-The documents of this project are licensed under CC-BY 4.0. For details, see [LICENSE](LICENSE).
+The documents of this project are licensed under CC-BY 4.0. For details, see [LICENSE](../../LICENSE).
 
 ## Contribution Statement
 
